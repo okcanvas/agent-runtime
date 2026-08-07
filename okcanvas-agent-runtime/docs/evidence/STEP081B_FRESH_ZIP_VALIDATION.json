@@ -1,0 +1,79 @@
+{
+  "acceptance": {
+    "passed_checks": 18,
+    "state": "PASSED",
+    "total_checks": 18
+  },
+  "architecture": {
+    "passed_checks": 38,
+    "state": "PASSED",
+    "total_checks": 38
+  },
+  "candidate_zip": "okcanvas-agent-runtime-step081b-candidate2.zip",
+  "candidate_zip_sha256": "800699c5ceee1a40de6fa97264e33eddfdb980840c4b6c6c7fad009bce7c6f5b",
+  "canonical_root_count": 1,
+  "canonical_roots": [
+    "okcanvas-agent-runtime"
+  ],
+  "compliance": {
+    "passed_checks": 16,
+    "state": "PASSED",
+    "total_checks": 16
+  },
+  "forbidden_entries": [],
+  "forbidden_entry_count": 0,
+  "fresh_evidence_files": [
+    "docs/evidence/STEP081B_FRESH_ACCEPTANCE.json",
+    "docs/evidence/STEP081B_FRESH_ARCHITECTURE_VALIDATION.json",
+    "docs/evidence/STEP081B_FRESH_COMPLIANCE_VALIDATION.json",
+    "docs/evidence/STEP081B_FRESH_INSTALLATION_VALIDATION.json",
+    "docs/evidence/STEP081B_FRESH_NON_PYTHON_VALIDATION.json",
+    "docs/evidence/STEP081B_FRESH_PYTHON_REGRESSION.json",
+    "docs/evidence/STEP081B_FRESH_WINDOWS_SUBPROCESS_PORTABILITY_VALIDATION.json",
+    "docs/evidence/step081b-fresh-python-regression/"
+  ],
+  "installation": {
+    "passed_checks": 16,
+    "state": "PASSED",
+    "total_checks": 16
+  },
+  "non_python": {
+    "direct_reference_import_violations": [],
+    "node_tests_passed": true,
+    "npm_pack_dry_run_passed": true,
+    "reference_result_count": 4,
+    "state": "PASSED"
+  },
+  "python_protected_payload_identity": {
+    "extra": [],
+    "missing": [],
+    "protected_file_count": 2738,
+    "result": "EXACT_MATCH",
+    "sha_mismatches": [],
+    "source_candidate": "okcanvas-agent-runtime-step081b-candidate1.zip",
+    "source_candidate_sha256": "1c0a700a422274accd1a5bbb7306cd415bc51b3c69b04795f49d1f6be9cb19c6"
+  },
+  "python_regression": {
+    "completed_chunk_count": 12,
+    "error_tests": 0,
+    "expected_chunk_count": 12,
+    "failed_tests": 0,
+    "passed_tests": 911,
+    "skipped_tests": 0,
+    "state": "PASSED",
+    "test_file_count": 228,
+    "total_tests": 911
+  },
+  "schema_version": "okcanvas-step081b-fresh-zip-validation-v1",
+  "state": "PASSED",
+  "step": "STEP081B_LIVE_ARCHITECTURE_VALIDATOR_PROCESS_ISOLATION_AND_DIAGNOSTIC_EVIDENCE",
+  "synthetic_step081b_live_evidence_excluded": true,
+  "validation_phase": "FULL_FRESH_VALIDATION_COMPLETE",
+  "version": "2.61.2",
+  "windows_subprocess_portability": {
+    "passed_checks": 7,
+    "state": "PASSED",
+    "total_checks": 7
+  },
+  "zip_entry_count": 3510
+}

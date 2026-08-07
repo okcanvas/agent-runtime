@@ -1,0 +1,23 @@
+{
+  "schema_version": "okcanvas-step057-windows-default-agent-env-allowlist-failure-v1",
+  "step_id": "STEP057",
+  "state": "CORRECTED_PACKAGE_RERUN_PENDING",
+  "observed_command": "sh_run_api",
+  "observed_error": "Local environment file is invalid: .env.local:6: unsupported environment variable OKCANVAS_DEFAULT_AGENT_ID",
+  "root_cause": "The canonical .env.local.example used OKCANVAS_DEFAULT_AGENT_ID and OKCANVAS_SESSION_ROOT, but scripts/windows_entrypoint.py omitted both from the shared local-environment allowlist used by sh_run_api.cmd and sh_tui.cmd. Parsing stopped at the first missing key.",
+  "correction": {
+    "default_value": "conversational-coding-agent",
+    "runtime_authority_changed": false,
+    "session_contract_changed": false,
+    "secret_exposure_changed": false,
+    "allowed_keys_added": [
+      "OKCANVAS_DEFAULT_AGENT_ID",
+      "OKCANVAS_SESSION_ROOT"
+    ]
+  },
+  "windows_rerun_required": [
+    "sh_run_api.cmd",
+    "sh_tui.cmd",
+    "sh_run_step057_acceptance.cmd"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": "okcanvas-step024b-windows-live-acceptance-summary-v1",
+  "reported_at": "2026-07-29T21:59:00+09:00",
+  "source": "user-reported-console-output",
+  "command": "sh_run_step024_live_acceptance.cmd",
+  "state": "PASSED",
+  "live_sdk": true,
+  "output_recovered": true,
+  "acceptance_id": "20260729T125745214142Z-cdc8def8",
+  "acceptance_workspace": {
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T12:57:58.817351Z",
+    "created_at": "2026-07-29T12:57:45.215163Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resources_closed": true,
+    "step_id": "STEP024"
+  },
+  "artifact_count": 1,
+  "artifact_error": null,
+  "artifact_id": "artifact_8c53926bb41847b2b19192d4d92e87cd",
+  "evaluation_id": "eval_1e25e927622a40b89f63d8816a0a9e95",
+  "submission_id": "submission_2936c14d00474bb488390876cf06db38",
+  "task_id": "task_d4c080fee17845d8a73dc01d0828a82c",
+  "run_id": "run_409c68a7dafe44859aaf68e02076ed80",
+  "outcome_http_status": 200,
+  "outcome": {
+    "status": "SUCCEEDED",
+    "attempt": 1,
+    "input_tokens": 789,
+    "output_tokens": 267,
+    "total_tokens": 1056,
+    "trace_id": "trace_b536af92bf184e4181bcb442ec536545"
+  },
+  "checks": {
+    "artifact_verified": true,
+    "business_agent_catalogued": true,
+    "business_output_contract_valid": true,
+    "canonical_run_completed": true,
+    "deterministic_evaluation_passed": true,
+    "exact_confirmation_scheduled_once": true,
+    "gateway_called_once": true,
+    "governed_preflight_created": true,
+    "keys_not_in_product_db": true,
+    "no_tool_or_mcp_events": true,
+    "preflight_created_no_task_or_run": true,
+    "raw_input_not_in_product_db": true,
+    "recommendations_sorted": true,
+    "references_unchanged": true,
+    "replenishment_formula_exact": true,
+    "run_succeeded": true,
+    "single_task_and_run_created": true,
+    "successful_payload_deleted": true
+  },
+  "event_types": [
+    "run.created",
+    "run.started",
+    "agent.definition.resolved",
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "agent.completed",
+    "agent.output.recovered",
+    "artifact.created",
+    "run.completed",
+    "payload.retention.applied"
+  ],
+  "result": {
+    "snapshot_id": "case001-shortage",
+    "status": "ACTION_REQUIRED",
+    "reviewed_skus": 3,
+    "total_reorder_units": 19,
+    "recommendations": [
+      {
+        "sku": "ergonomic-keyboard",
+        "reorder_units": 12,
+        "action": "REORDER"
+      },
+      {
+        "sku": "desk-lamp",
+        "reorder_units": 7,
+        "action": "REORDER"
+      },
+      {
+        "sku": "usb-c-dock",
+        "reorder_units": 0,
+        "action": "NO_ACTION"
+      }
+    ]
+  },
+  "observations": [
+    "The installed SDK and configured model completed one Product Run successfully.",
+    "The official invalid_final_output recovery path was used and no additional model turn was observed by the acceptance contract.",
+    "A redacted non-fatal tracing client HTTP 400 line was printed; the supplied output does not contain enough response detail to classify its cause. It did not change Product Run, Artifact, Evaluation, retention, or cleanup acceptance."
+  ]
+}

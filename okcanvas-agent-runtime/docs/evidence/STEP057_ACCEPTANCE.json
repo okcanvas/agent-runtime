@@ -1,0 +1,87 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260731T125513065621Z-0af9d44c",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-31T12:55:14.217865Z",
+    "created_at": "2026-07-31T12:55:13.066008Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [
+      {
+        "closed": true,
+        "error": null,
+        "name": "loopback-control-api"
+      }
+    ],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP057"
+  },
+  "checks": {
+    "canonical_conversational_agent_is_session_enabled": true,
+    "cleanup_completed": true,
+    "cli_restart_resumed_exact_session": true,
+    "credentials_not_printed_or_persisted": true,
+    "evaluation_default_remains_off": true,
+    "explicit_evaluation_passed": true,
+    "final_product_counts_exact": true,
+    "first_cli_created_runtime_session": true,
+    "governed_session_preflights_used": true,
+    "new_command_created_isolated_session": true,
+    "new_session_does_not_leak_prior_memory": true,
+    "node_cli_session_api_only": true,
+    "node_processes_exited_successfully": true,
+    "npm_installable_structure_preserved": true,
+    "persisted_sse_and_session_events_exact": true,
+    "raw_requests_not_in_product_or_evaluation_db": true,
+    "references_unchanged": true,
+    "same_process_turn_two_received_turn_one_history": true,
+    "same_session_bound_first_three_turns": true,
+    "semantic_name_memory_visible_to_user": true,
+    "session_commands_visible_and_safe": true,
+    "session_handles_closed": true,
+    "session_history_only_in_session_store": true,
+    "session_metadata_counts_exact": true,
+    "successful_payloads_deleted": true
+  },
+  "final_counts": {
+    "artifacts": 4,
+    "evaluations": 1,
+    "events": 48,
+    "invocations": 4,
+    "runs": 4,
+    "submissions": 4,
+    "tasks": 4
+  },
+  "node_cli": {
+    "canonical_agent": "conversational-coding-agent",
+    "direct_runtime_access": false,
+    "evaluation_default_enabled": false,
+    "language": "TypeScript",
+    "process_count": 2,
+    "runtime": "Node.js >=22",
+    "runtime_dependencies": 0,
+    "session_enabled": true,
+    "turn_count": 4
+  },
+  "process_returncodes": [
+    0,
+    0
+  ],
+  "protected_payload_file_count": 0,
+  "schema_version": "okcanvas-step057-acceptance-v1",
+  "sessions": {
+    "created": 2,
+    "new_item_count": 2,
+    "new_session_id": "session_5c04bfaf4aa74981bd0bba994b79f561",
+    "new_turn_count": 1,
+    "resumed_item_count": 6,
+    "resumed_session_id": "session_301cd6d7c2004572967e4136ff68661b",
+    "resumed_turn_count": 3
+  },
+  "state": "PASSED",
+  "transcript_tail": "새 Runtime Session: session_301cd6d7c2004572967e4136ff68661b\n============================================================\n OKCanvas Agent CLI · Node.js/TypeScript persistent client\n============================================================\nRuntime 2.39.1 · Agent conversational-coding-agent · Session 301cd6d7 · Debug OFF\n- 프로젝트 파일·Shell·인터넷 접근 없음\n- Runtime Session 대화 기억 사용 · 같은 Session의 이전 Turn 참조 가능\n- 현재는 입력한 대화 텍스트만 분석 가능\n/help 명령으로 사용법을 확인하세요. 같은 Session에서 계속 질문할 수 있습니다.\n\nconversational-coding-agent [301cd6d7]> Remember that my name is KEVIN-57.\n실행 준비 중...\n\nAgent\n─────\nI will remember that your name is KEVIN-57.\n\n완료 · 30 tokens · session turn 1 · 다시 질문하거나 /details를 입력하세요.\n\nconversational-coding-agent [301cd6d7]> What is my name?\n실행 준비 중...\n\nAgent\n─────\nYour name is KEVIN-57.\n\n완료 · 32 tokens · session turn 2 · 다시 질문하거나 /details를 입력하세요.\n\nconversational-coding-agent [301cd6d7]> /session\nSession: session_301cd6d7c2004572967e4136ff68661b\nState: ACTIVE\nAgent: conversational-coding-agent@1.0.0\nTurns: 2\nItems: 4\nActive Run: none\nUpdated: 2026-07-31T12:55:13.622671Z\n\nconversational-coding-agent [301cd6d7]> /sessions\n* 1. session_301cd6d7c2004572967e4136ff68661b · ACTIVE · turns 2 · items 4\n\nconversational-coding-agent [301cd6d7]> /history\n이 CLI 프로세스의 대화\n────────────────────\nYou: Remember that my name is KEVIN-57.\nAgent: I will remember that your name is KEVIN-57.\nYou: What is my name?\nAgent: Your name is KEVIN-57.\n\nconversational-coding-agent [301cd6d7]> /quit\n\n종료 · 이 프로세스에서 2개 요청을 실행했습니다.\nRuntime Session 재개: session_301cd6d7c2004572967e4136ff68661b · turns 2\n============================================================\n OKCanvas Agent CLI · Node.js/TypeScript persistent client\n============================================================\nRuntime 2.39.1 · Agent conversational-coding-agent · Session 301cd6d7 · Debug OFF\n- 프로젝트 파일·Shell·인터넷 접근 없음\n- Runtime Session 대화 기억 사용 · 같은 Session의 이전 Turn 참조 가능\n- 현재는 입력한 대화 텍스트만 분석 가능\n/help 명령으로 사용법을 확인하세요. 같은 Session에서 계속 질문할 수 있습니다.\n\nconversational-coding-agent [301cd6d7]> What is my name after restarting the CLI?\n실행 준비 중...\n\nAgent\n─────\nYour name is KEVIN-57.\n\n완료 · 34 tokens · session turn 3 · 다시 질문하거나 /details를 입력하세요.\n\nconversational-coding-agent [301cd6d7]> /session\nSession: session_301cd6d7c2004572967e4136ff68661b\nState: ACTIVE\nAgent: conversational-coding-agent@1.0.0\nTurns: 3\nItems: 6\nActive Run: none\nUpdated: 2026-07-31T12:55:13.834801Z\n\nconversational-coding-agent [301cd6d7]> /evaluate node-cli-session-conversation-v1\nEvaluation 실행 중: node-cli-session-conversation-v1\n\n[Evaluation]\n  node-cli-session-conversation-v1 · PASSED\n  PASS  agent_definition_matches\n  PASS  execution_succeeded\n  PASS  forbidden_result_absent\n  PASS  forbidden_tools_absent\n  PASS  latency_budget\n  PASS  required_result\n  PASS  required_tools\n  PASS  token_budget\n\nconversational-coding-agent [301cd6d7]> /history\n이 CLI 프로세스의 대화\n────────────────────\nYou: What is my name after restarting the CLI?\nAgent: Your name is KEVIN-57.\n\nconversational-coding-agent [301cd6d7]> /new\n새 Runtime Session을 시작했습니다: session_5c04bfaf4aa74981bd0bba994b79f561\n\nconversational-coding-agent [5c04bfaf]> What is my name in this new conversation?\n실행 준비 중...\n\nAgent\n─────\nI do not know your name in this Session.\n\n완료 · 36 tokens · session turn 1 · 다시 질문하거나 /details를 입력하세요.\n\nconversational-coding-agent [5c04bfaf]> /sessions\n* 1. session_5c04bfaf4aa74981bd0bba994b79f561 · ACTIVE · turns 1 · items 2\n  2. session_301cd6d7c2004572967e4136ff68661b · ACTIVE · turns 3 · items 6\n\nconversational-coding-agent [5c04bfaf]> /quit\n\n종료 · 이 프로세스에서 2개 요청을 실행했습니다.\n"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-step062-windows-node-acceptance-failure-summary-v1",
+  "step": "STEP062_BOUNDED_MULTI_AGENT_ORCHESTRATION_FOUNDATION",
+  "version": "2.42.0",
+  "state": "FAILED",
+  "reported_environment": "Windows CMD",
+  "command": "sh_run_step062_acceptance",
+  "passed_checks": 27,
+  "total_checks": 29,
+  "failed_checks": [
+    "node_typescript_build_pass",
+    "node_tests_pass"
+  ],
+  "confirmed_unaffected_checks": 27,
+  "node_build_output_tail_observed": "��ġ ������ �ƴմϴ�.",
+  "node_build_output_tail_cp949_interpretation": "배치 파일이 아닙니다.",
+  "node_test_output_tail": "Could not find 'D:\\NODE_AGENTS\\okcanvas-agent-runtime\\clients\\okcanvas-agent-cli\\test\\*.test.mjs'",
+  "code_audit_findings": {
+    "npm_batch_invoked_directly_from_python": true,
+    "package_test_script_contains_windows_unexpanded_glob": true,
+    "orchestration_feature_checks_failed": 0
+  },
+  "scope": "Windows Node acceptance launcher portability only"
+}

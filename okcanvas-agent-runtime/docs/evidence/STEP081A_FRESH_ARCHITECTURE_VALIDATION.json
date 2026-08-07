@@ -1,0 +1,438 @@
+{
+  "checks": {
+    "admin_route_inventory_exact": true,
+    "all_legacy_files_relocated": true,
+    "client_to_runtime_absent": true,
+    "compatibility_alias_metadata_current": true,
+    "compatibility_alias_targets_complete": true,
+    "coverage_root_packages_exact": true,
+    "declarative_module_references_current": true,
+    "declarative_path_references_current": true,
+    "dependency_direction_violations_absent": true,
+    "eager_import_cycles_absent": true,
+    "executable_legacy_path_coupling_absent": true,
+    "hatch_root_packages_exact": true,
+    "identity_exact": true,
+    "internal_import_targets_complete": true,
+    "legacy_src_package_absent": true,
+    "other_http_route_inventory_exact": true,
+    "physical_manifest_hash_valid": true,
+    "physical_manifest_identity_exact": true,
+    "physical_module_inventory_current": true,
+    "project_root_path_sot_exact": true,
+    "protocol_to_runtime_absent": true,
+    "pytest_root_import_path_exact": true,
+    "python_ast_parse_clean": true,
+    "relocated_resources_byte_identical": true,
+    "relocation_manifest_hash_valid": true,
+    "relocation_manifest_identity_exact": true,
+    "required_root_packages_present": true,
+    "route_method_path_duplicates_absent": true,
+    "runtime_info_feature_groups_exact": true,
+    "service_route_inventory_exact": true,
+    "source_inventory_first_level_exact": true,
+    "source_inventory_hash_valid": true,
+    "source_inventory_identity_exact": true,
+    "source_inventory_resources_exact": true,
+    "transport_app_state_reads_absent": true,
+    "transport_concrete_authority_absent": true,
+    "transport_to_client_absent": true,
+    "websocket_runtime_disabled": true
+  },
+  "details": {
+    "alias_count": 301,
+    "alias_target_failures": [],
+    "ast_failures": [],
+    "canonical_module_count": 323,
+    "declarative_module_reference_failures": [],
+    "declarative_path_reference_failures": [],
+    "dependency_direction_violations": [],
+    "eager_import_edge_count": 756,
+    "eager_missing_imports": [],
+    "executable_legacy_path_coupling": [],
+    "import_cycles": [],
+    "import_edge_count": 763,
+    "legacy_first_level_entry_count": 65,
+    "legacy_python_file_count": 262,
+    "legacy_resource_file_count": 10,
+    "legacy_source_file_count": 272,
+    "missing_imports": [],
+    "physical_manifest_drift": [],
+    "project_root_contract_failures": [],
+    "relocation_target_failures": [],
+    "resource_hash_failures": [],
+    "route_inventory": {
+      "admin_route_count": 48,
+      "duplicates": [],
+      "http_route_count": 86,
+      "other_http_route_count": 5,
+      "routes": [
+        {
+          "method": "GET",
+          "path": "/console"
+        },
+        {
+          "method": "GET",
+          "path": "/console/"
+        },
+        {
+          "method": "GET",
+          "path": "/healthz"
+        },
+        {
+          "method": "GET",
+          "path": "/runner"
+        },
+        {
+          "method": "GET",
+          "path": "/runner/"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/agent-definitions"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/agent-definitions/{agent_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/commerce-snapshot-ingress/preflight"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/evaluation-baselines"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluation-baselines/{baseline_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluation-cases"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluation-cases/{case_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluation-comparisons"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/evaluation-suite-runs"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluation-suite-runs/{suite_run_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluation-suites"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluation-suites/{suite_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluations"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/evaluations/{evaluation_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/local-attachments"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/operations/summary"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/protected-payloads/cleanup-expired"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/run-submission-policy"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/run-submissions/preflight"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/run-submissions/reconcile-orphaned-running"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/run-submissions/reconcile-terminal-outcomes"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/run-submissions/recover-stale"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/run-submissions/{submission_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/run-submissions/{submission_id}/confirm"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/run-submissions/{submission_id}/prepare-approval"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runs"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/runs"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runs/{run_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runs/{run_id}/artifact"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/runs/{run_id}/cancel"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/runs/{run_id}/evaluations"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runs/{run_id}/events"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runs/{run_id}/events/stream"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runs/{run_id}/invocations"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runs/{run_id}/outcome"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runs/{run_id}/sdk-stream"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/runtime-scenarios"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/agent-definitions"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/agent-definitions/{agent_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/capabilities"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/error-contract"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/local-attachments"
+        },
+        {
+          "method": "DELETE",
+          "path": "/v1/service/local-attachments/{attachment_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/project-snapshots"
+        },
+        {
+          "method": "DELETE",
+          "path": "/v1/service/project-snapshots/{project_snapshot_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/run-submissions"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/run-submissions/preflight"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/run-submissions/{submission_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/run-submissions/{submission_id}/confirm"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/run-submissions/{submission_id}/prepare-approval"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/runs"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/runs/{run_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/runs/{run_id}/artifacts"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/runs/{run_id}/artifacts/{artifact_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/runs/{run_id}/cancel"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/runs/{run_id}/events"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/runs/{run_id}/events/stream"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/runs/{run_id}/invocations"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/runs/{run_id}/outcome"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/sandbox-runtime"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/sessions"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/sessions"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/sessions/{session_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/sessions/{session_id}/clear"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/skills"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/skills/{skill_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/tool-approvals"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/service/tool-approvals/{approval_id}/decision"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/tool-approvals/{approval_id}/inbox"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/service/whoami"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/sessions"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/sessions"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/sessions/{session_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/sessions/{session_id}/clear"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/sessions/{session_id}/rotate-history-key"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/tasks"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/tasks/{task_id}"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/tool-approvals"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/tool-approvals/{approval_id}"
+        },
+        {
+          "method": "POST",
+          "path": "/v1/tool-approvals/{approval_id}/decision"
+        },
+        {
+          "method": "GET",
+          "path": "/v1/tool-approvals/{approval_id}/inbox"
+        }
+      ],
+      "service_route_count": 33,
+      "websocket_route_count": 0
+    },
+    "runtime_info": {
+      "field_count": 803,
+      "group_paths": [
+        "okcanvas_agent_runtime/core/runtime_info/foundation.py",
+        "okcanvas_agent_runtime/core/runtime_info/product.py",
+        "okcanvas_agent_runtime/core/runtime_info/agent_session.py",
+        "okcanvas_agent_runtime/core/runtime_info/model.py",
+        "okcanvas_agent_runtime/core/runtime_info/clients.py",
+        "okcanvas_agent_runtime/core/runtime_info/validation.py"
+      ],
+      "missing_group_paths": []
+    },
+    "transport_app_state_reads": []
+  },
+  "passed_checks": 38,
+  "schema_version": "okcanvas-step081-architecture-validation-v1",
+  "state": "PASSED",
+  "step": "STEP081A_WINDOWS_NPM_COMMAND_RESOLUTION_AND_ACCEPTANCE_PORTABILITY",
+  "total_checks": 38,
+  "version": "2.61.1"
+}

@@ -1,0 +1,46 @@
+STEP037A_GENERIC_FUNCTION_TOOL_RUNTIME_IMPLEMENTATION_PLAN
+Status: CODE_AUDITED_IMPLEMENTATION_PLAN_COMPLETE_STEP037_WINDOWS_LIVE_RERUN_PENDING
+Date: 2026-07-30
+
+Executable baseline
+- STEP037_INTERACTIVE_AGENT_RUNNER_FOUNDATION
+- version 2.17.0
+- Runtime source/spec/test/script behavior unchanged
+- runtime tree files: 396
+- runtime tree SHA-256 before/after: 923a1ef4a9c08ce5d4b70d9570df324d1e4aafbeea58fa2a5a99c64e9b449428
+
+Code findings
+- official SDK Function Tool approval is already used for local_text_metrics
+- literal local_text_metrics branches prevent a reusable Tool Runtime
+- generic gateway currently attaches no local Function Tools and treats Tool hooks as MCP-only
+- current Tool YAML policy lacks complete definition/input/output/factory identity
+
+Fixed STEP038 architecture
+- one closed product-owned Function Tool Runtime Registry
+- immutable specs/tools/<tool-id> definition, policy, input/output schemas
+- local_text_fingerprint: read-only, approval NEVER
+- local_text_metrics: read-only, approval ALWAYS, existing RunState semantics preserved
+- complete Tool identity in Runtime binding and exact confirmation
+- safe canonical Tool Events without raw arguments or results
+- Runner displays mode; Approval Operator alone decides
+
+Plan validation
+- plan checks: 17/17 PASS
+- executable Runtime tree unchanged: PASS
+- STEP037 Windows gate preserved: PASS
+- compileall: PASS
+- full pytest: 416 passed
+- STEP037 deterministic acceptance: 24/24 PASS, cleanup COMPLETED
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+Canonical package extraction
+- canonical root: 1
+- files: 2,241
+- forbidden files: 0
+- executable Runtime tree: 396 files, byte-identical to STEP037
+- compileall: PASS
+- full pytest: 416 passed
+- STEP037: 24/24 PASS, cleanup COMPLETED
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0

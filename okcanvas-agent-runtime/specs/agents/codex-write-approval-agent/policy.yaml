@@ -1,0 +1,16 @@
+id: codex-write-approval-agent
+mode: persisted-whole-run-approval
+tools:
+  allow:
+    - codex_workspace_write
+handoffs: []
+max_turns_prepare: 1
+tool_use_behavior: stop_on_first_tool
+runstate_persistence: atomic-json
+approval_decisions:
+  - APPROVE
+  - REJECT
+exactly_once_scope: normal-resume-with-terminal-replay-block
+crash_recovery_after_execution_claim: fail-closed-manual-review
+external_projects: forbidden
+live_accepted: false

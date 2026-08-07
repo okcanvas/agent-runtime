@@ -1,0 +1,1589 @@
+{
+  "schema_version": "okcanvas-constitution-traceability-v1",
+  "constitution_sha256": "262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa",
+  "entries": [
+    {
+      "clause_id": "GOV-001",
+      "title": "헌법의 최고 우선순위",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-002",
+      "title": "적용 범위",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-003",
+      "title": "추측 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-004",
+      "title": "단일 진실 원천",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-005",
+      "title": "조항 ID 의무",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [
+        "GATE-TRACEABILITY-COMPLETE"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-006",
+      "title": "기준선 gate",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-007",
+      "title": "작업 중 발견사항 기록",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-008",
+      "title": "부분 완료 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [
+        "GATE-CLAUSE-COVERAGE-100"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-009",
+      "title": "행동 보존 원칙",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "GOV-010",
+      "title": "헌법 개정 절차",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [
+        "GATE-AMENDMENT-VALID"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ARC-001",
+      "title": "최상위 시스템 축",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ARC-002",
+      "title": "Transport 비권위성",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ARC-003",
+      "title": "Product Event 권위",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ARC-004",
+      "title": "단방향 의존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ARC-005",
+      "title": "기능과 배치의 일치",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-001",
+      "title": "Root Python package",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-002",
+      "title": "중복 package 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-003",
+      "title": "Link 의존 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-004",
+      "title": "Path SOT",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [
+        "GATE-NO-HARDCODED-OLD-PACKAGE-PATH"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-005",
+      "title": "Target top-level directories",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-006",
+      "title": "Runtime package canonical zones",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [
+        "GATE-NO-UNCLASSIFIED-TOPLEVEL-PACKAGE"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-007",
+      "title": "빈 placeholder 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-008",
+      "title": "대형 모듈 분해 우선",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-009",
+      "title": "RuntimeInfo 분리",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-010",
+      "title": "Vertical 격리",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-011",
+      "title": "Interface asset 격리",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "LAY-012",
+      "title": "Hatch package 제한",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [
+        "GATE-WHEEL-CONTENTS-EXACT"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-001",
+      "title": "Clients 의존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [
+        "GATE-CLIENT-NO-SERVER-IMPORT"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-002",
+      "title": "Protocols 독립",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [
+        "GATE-PROTOCOLS-RUNTIME-INDEPENDENT"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-003",
+      "title": "Transport 의존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [
+        "GATE-TRANSPORT-IMPORT-DIRECTION"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-004",
+      "title": "Application 의존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [
+        "GATE-APPLICATION-NO-CONCRETE-ADAPTER"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-005",
+      "title": "Agent 의존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [
+        "GATE-AGENT-NO-TRANSPORT-FRAMEWORK"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-006",
+      "title": "Capabilities 의존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-007",
+      "title": "Domain 의존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [
+        "GATE-DOMAIN-ISOLATION"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-008",
+      "title": "Adapters 의존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-009",
+      "title": "Bootstrap 예외",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [
+        "GATE-BOOTSTRAP-WIRING-ONLY"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-010",
+      "title": "Service/Admin transport 독립",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [
+        "GATE-SERVICE-NO-CONTROL-API-IMPORT"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-011",
+      "title": "Transport-store 직접 접근 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [
+        "GATE-TRANSPORT-NO-STORE-COORDINATOR"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DEP-012",
+      "title": "순환 의존 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [
+        "GATE-MODULE-CYCLES-ZERO"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CLI-001",
+      "title": "제품 Client 위치",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CLI-002",
+      "title": "개발 Client 분리",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CLI-003",
+      "title": "Service API 전용",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [
+        "GATE-PRODUCT-CLIENT-SERVICE-API-ONLY"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CLI-004",
+      "title": "Server resource 비접근",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CLI-005",
+      "title": "Credential 분리",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [
+        "GATE-CLIENT-CREDENTIAL-BOUNDARY"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CLI-006",
+      "title": "Protocol-generated types",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "PRO-001",
+      "title": "Protocol SOT",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "PRO-002",
+      "title": "Versioning",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "PRO-003",
+      "title": "Transport-neutral DTO",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "PRO-004",
+      "title": "Canonical event identity",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "PRO-005",
+      "title": "Ephemeral 구분",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TRA-001",
+      "title": "Transport 역할",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TRA-002",
+      "title": "Transport business logic 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [
+        "GATE-TRANSPORT-NO-BUSINESS-LOGIC"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TRA-003",
+      "title": "Service prefix",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TRA-004",
+      "title": "Admin prefix 목표",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TRA-005",
+      "title": "Use case 재사용",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [
+        "GATE-DUPLICATE-USE-CASE-REMOVED"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TRA-006",
+      "title": "Composition root 분리",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "REST-001",
+      "title": "REST 책임",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "REST-002",
+      "title": "Idempotency",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "REST-003",
+      "title": "Audit 우선 명령",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "REST-004",
+      "title": "Store projection 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SSE-001",
+      "title": "Persisted SSE 권위",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SSE-002",
+      "title": "Replay",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SSE-003",
+      "title": "Restart recovery",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SSE-004",
+      "title": "Subscription port",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [
+        "GATE-SSE-SUBSCRIPTION-PORT"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SSE-005",
+      "title": "WebSocket 독립",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SSE-006",
+      "title": "Sequence 보존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "WS-001",
+      "title": "선택적 adapter",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "WS-002",
+      "title": "새 권한 경로 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [
+        "GATE-WEBSOCKET-NO-AUTHORITY-ESCALATION"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "WS-003",
+      "title": "연결 인증",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "WS-004",
+      "title": "Idempotent command",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "WS-005",
+      "title": "Persist-before-broadcast",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "WS-006",
+      "title": "Recovery path",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "WS-007",
+      "title": "Ephemeral telemetry",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "WS-008",
+      "title": "비활성 기본값",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "APP-001",
+      "title": "Application use cases",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "APP-002",
+      "title": "Transaction orchestration",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "APP-003",
+      "title": "Authorization intent",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "APP-004",
+      "title": "Port 우선",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "APP-005",
+      "title": "Transport 중복 제거",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "AGT-001",
+      "title": "Agent transport 독립",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "AGT-002",
+      "title": "Agent state write",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "AGT-003",
+      "title": "Agent topology",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CAP-001",
+      "title": "Capability 통합 위치",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CAP-002",
+      "title": "Tool subtype",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CAP-003",
+      "title": "Skill 구분",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CAP-004",
+      "title": "Sub-agent 구분",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CAP-005",
+      "title": "MCP 계층",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CAP-006",
+      "title": "구조와 권한 분리",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DOM-001",
+      "title": "Domain framework 독립",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "DOM-002",
+      "title": "Event 불변성",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ADP-001",
+      "title": "OpenAI adapter",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ADP-002",
+      "title": "Persistence adapter",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ADP-003",
+      "title": "Sandbox adapter",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ADP-004",
+      "title": "Storage adapter",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "ADP-005",
+      "title": "MCP/Codex adapter",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "BOOT-001",
+      "title": "유일한 wiring 위치",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "BOOT-002",
+      "title": "Route 비소유",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [
+        "GATE-BOOTSTRAP-WIRING-ONLY"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SEC-001",
+      "title": "Tenant/principal 일관성",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SEC-002",
+      "title": "Secret 비저장",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "SEC-003",
+      "title": "Transport privilege parity",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CMP-001",
+      "title": "Compatibility facade",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [
+        "GATE-COMPAT-SYMBOL-IDENTITY"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CMP-002",
+      "title": "Import equivalence",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CMP-003",
+      "title": "Deprecation inventory",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CMP-004",
+      "title": "Major removal gate",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CMP-005",
+      "title": "Root launcher 호환",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "CMP-006",
+      "title": "Launcher registry",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [
+        "GATE-LAUNCHER-REGISTRY-COMPLETE"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "HIS-001",
+      "title": "보호 경로",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "HIS-002",
+      "title": "원본 증거 보존",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "HIS-003",
+      "title": "Index 우선",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "HIS-004",
+      "title": "Reference 불변성",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [
+        "GATE-REFERENCE-INTEGRITY"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TST-001",
+      "title": "Test inventory",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TST-002",
+      "title": "Test 이동 전제",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TST-003",
+      "title": "Acceptance registry",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TST-004",
+      "title": "전체 회귀",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TST-005",
+      "title": "Windows live",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TST-006",
+      "title": "Fresh ZIP",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TST-007",
+      "title": "Wheel/editable install",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [
+        "GATE-WHEEL-CONTENTS-EXACT",
+        "GATE-EDITABLE-INSTALL"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "TST-008",
+      "title": "Path coupling zero",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [
+        "GATE-NO-HARDCODED-OLD-PACKAGE-PATH"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-001",
+      "title": "One-shot 금지",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-002",
+      "title": "Wave 0",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 0,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-003",
+      "title": "Wave 1",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 1,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-004",
+      "title": "Wave 2",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 2,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-005",
+      "title": "Wave 3",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 3,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-006",
+      "title": "Wave 4",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 4,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-007",
+      "title": "Wave 5",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": 5,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-008",
+      "title": "64 package map 의무",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [
+        "GATE-MIGRATION-MAP-COMPLETE"
+      ],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    },
+    {
+      "clause_id": "MIG-009",
+      "title": "하위 단계 독립 검증",
+      "current_state": "RATIFIED_CONTINUOUS",
+      "target_wave": null,
+      "required_gates": [],
+      "implementation_paths": [],
+      "test_paths": [],
+      "evidence_paths": [],
+      "issue_ids": [],
+      "completion_status": "CONTINUOUS"
+    }
+  ]
+}

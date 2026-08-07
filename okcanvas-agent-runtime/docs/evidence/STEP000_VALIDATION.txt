@@ -1,0 +1,72 @@
+STEP000_REFERENCE_BASELINE validation evidence
+Date: 2026-07-28
+
+Environment
+-----------
+Python 3.13.5
+pytest 9.0.2
+uv 0.10.0
+
+Uploaded source archive SHA-256
+------------------------------
+aad353f1ecc765dd2cf7367f3c5b6944a6955d95719c37ccbd546a3c8f212360  openai-agents-demos-main.zip
+6c2c4b72bb66eeab675f88a34638104f5ffee81bf41ad4e4f7557db0f2703c09  openai-agents-python-main (1).zip
+d2e7a5411d9d3ba6c798c7ec7f52c0f6bdfab4f606ee90685c8007311f81de0d  openai-cs-agents-demo-main.zip
+60c0b934838f76ea8d4aee2153ae272aaf07500178d5a3f4f295791d4cf7b26b  openai-agents-streaming-api-main.zip
+
+Command
+-------
+python scripts/verify_reference.py
+
+Result
+------
+PASS openai-agents-python files=1419 bytes=17945765 tree_sha256=65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a
+PASS temporal-openai-agents-demos files=36 bytes=774434 tree_sha256=0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a
+PASS openai-cs-agents-demo files=43 bytes=1409011 tree_sha256=121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d
+PASS openai-agents-streaming-api files=38 bytes=246327 tree_sha256=d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9
+PASS reference baseline: 4/4
+
+Command
+-------
+python -m compileall -q src scripts tests
+
+Result
+------
+PASS, exit code 0
+
+Command
+-------
+PYTHONPATH=src python -m okcanvas_agent_runtime info --pretty
+
+Result
+------
+{
+  "codex_enabled": false,
+  "mcp_enabled": false,
+  "model_calls_enabled": false,
+  "project": "okcanvas-agent-runtime",
+  "step": "STEP000_REFERENCE_BASELINE",
+  "version": "0.0.0",
+  "workspace_write_enabled": false
+}
+
+Command
+-------
+pytest -q
+
+Result
+------
+....                                                                     [100%]
+4 passed in 0.06s
+
+Command
+-------
+uv lock --offline
+
+Result
+------
+PASS, exit code 0; uv.lock created.
+
+Not executed
+------------
+OpenAI model calls, Codex CLI, MCP, sandbox, Docker, Windows worker, Java/Vue/PostgreSQL/browser/PDF validation.

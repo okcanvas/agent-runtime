@@ -1,0 +1,39 @@
+STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES
+version=2.60.1
+phase=DETERMINISTIC_ACCEPTED_FRESH_ZIP_PASSED_WINDOWS_LIVE_PENDING
+
+STEP080A deterministic Acceptance: 37/37 PASS
+Architecture constitution bundle validation: 16/16 PASS
+Acceptance launcher registry: 6/6 PASS
+STEP constitution compliance validator: 8/8 PASS
+Focused STEP080A/capability/service regression: 49/49 PASS
+Historical capability regression: 31/31 PASS
+Full Python per-file regression: 885/885 PASS
+Python test files: 223
+Skipped: 0
+Node tests: 14/14 PASS
+Committed TypeScript release: PASS
+Reference integrity: 4/4 PASS
+Direct /reference imports: 0
+npm pack dry-run: 23 files PASS
+Python compileall: PASS
+
+Failures found and closed during deterministic validation:
+1. OR-ISSUE-016: Service capabilities referenced architecture_constitution without resolving it; the real route raised NameError. Fixed by resolving the immutable snapshot at router composition and recurrence-gated by executable FastAPI route tests.
+2. Pinned reference tree was temporarily polluted when the local compatibility harness imported SDK source and generated __pycache__. Product reference integrity correctly failed. All cache files were removed and every subsequent compatibility run used PYTHONDONTWRITEBYTECODE=1. No cache or external stub is packaged.
+3. Historical baseline tests retained STEP080/version/package/policy SHA expectations. They were aligned to the current STEP080A package while preserving historical feature assertions and required Roadmap/HANDOFF sentences.
+
+Dependency boundary:
+The Linux execution image does not contain the installed external OpenAI/MCP/Griffe distributions used by the canonical Windows sh_setup environment. Product regression discovery used the pinned openai-agents-python-0.19.0 source plus test-only external stubs located outside the repository, with PYTHONDONTWRITEBYTECODE=1. The stubs are not packaged. The accepted STEP080 package is the real-dependency predecessor, while STEP080A changes governance, metadata, Service capability projection, runtime fingerprinting and launchers. Canonical Windows deterministic/live rerun remains required.
+
+Fresh candidate ZIP validation:
+Candidate SHA-256: 29e9e2238c64313e906001e5517f199d133ce44cb85836ae0894e791742abdb6
+Canonical roots: 1
+ZIP entries: 3244
+Forbidden files: 0
+Fresh STEP080A Acceptance: 37/37 PASS
+Fresh Python regression: 885/885 PASS across 223 files, skipped 0
+Fresh Node tests: 14/14 PASS
+Fresh Reference integrity: 4/4 PASS
+Fresh direct /reference imports: 0
+Fresh npm pack: 23 files PASS

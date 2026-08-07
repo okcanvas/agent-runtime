@@ -1,0 +1,21 @@
+{
+  "schema_version": "okcanvas-evaluation-case-v1",
+  "case_id": "sqlite-session-native-guardrail-v1",
+  "version": "1.0.0",
+  "agent_definition_id": "session-guardrail-language-agent",
+  "required_result": {
+    "status": "PASS"
+  },
+  "forbidden_result": {
+    "status": "FAIL"
+  },
+  "required_tools": [],
+  "forbidden_tools": [
+    "web_search",
+    "shell",
+    "local_text_metrics",
+    "local_text_fingerprint"
+  ],
+  "max_total_tokens": 2000,
+  "max_duration_ms": 30000
+}

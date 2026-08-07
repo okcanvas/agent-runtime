@@ -1,0 +1,10 @@
+mode: governed-local-tool-approval
+local_tools:
+  - local_text_metrics
+needs_approval: true
+mcp: false
+handoffs: false
+session: false
+writes: false
+network: false
+shell: false

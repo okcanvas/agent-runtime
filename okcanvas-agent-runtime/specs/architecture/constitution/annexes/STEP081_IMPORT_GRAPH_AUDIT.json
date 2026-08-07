@@ -1,0 +1,2158 @@
+{
+  "module_count": 258,
+  "parse_errors": [],
+  "package_stats": [
+    {
+      "package": "execution",
+      "files": 9,
+      "loc": 5038,
+      "bytes": 244129,
+      "fan_in": 22,
+      "fan_out": 81
+    },
+    {
+      "package": "run_submission",
+      "files": 8,
+      "loc": 3428,
+      "bytes": 148505,
+      "fan_in": 7,
+      "fan_out": 31
+    },
+    {
+      "package": "control_api",
+      "files": 8,
+      "loc": 2964,
+      "bytes": 112367,
+      "fan_in": 7,
+      "fan_out": 41
+    },
+    {
+      "package": "runtime",
+      "files": 12,
+      "loc": 2606,
+      "bytes": 104195,
+      "fan_in": 15,
+      "fan_out": 54
+    },
+    {
+      "package": "sessions",
+      "files": 14,
+      "loc": 2366,
+      "bytes": 97311,
+      "fan_in": 8,
+      "fan_out": 4
+    },
+    {
+      "package": "sandbox_runtime",
+      "files": 7,
+      "loc": 1974,
+      "bytes": 96237,
+      "fan_in": 4,
+      "fan_out": 3
+    },
+    {
+      "package": "tool_approval",
+      "files": 8,
+      "loc": 1813,
+      "bytes": 82161,
+      "fan_in": 4,
+      "fan_out": 28
+    },
+    {
+      "package": "evaluation",
+      "files": 5,
+      "loc": 1449,
+      "bytes": 62165,
+      "fan_in": 5,
+      "fan_out": 9
+    },
+    {
+      "package": "service_clients",
+      "files": 6,
+      "loc": 1419,
+      "bytes": 66151,
+      "fan_in": 2,
+      "fan_out": 24
+    },
+    {
+      "package": "cli",
+      "files": 1,
+      "loc": 1135,
+      "bytes": 49019,
+      "fan_in": 1,
+      "fan_out": 20
+    },
+    {
+      "package": "persistence",
+      "files": 2,
+      "loc": 1057,
+      "bytes": 42335,
+      "fan_in": 3,
+      "fan_out": 4
+    },
+    {
+      "package": "capabilities",
+      "files": 6,
+      "loc": 956,
+      "bytes": 39902,
+      "fan_in": 3,
+      "fan_out": 9
+    },
+    {
+      "package": "tui_client",
+      "files": 5,
+      "loc": 860,
+      "bytes": 29980,
+      "fan_in": 1,
+      "fan_out": 2
+    },
+    {
+      "package": "orchestration",
+      "files": 6,
+      "loc": 839,
+      "bytes": 34534,
+      "fan_in": 5,
+      "fan_out": 21
+    },
+    {
+      "package": "project_snapshots",
+      "files": 7,
+      "loc": 803,
+      "bytes": 34877,
+      "fan_in": 14,
+      "fan_out": 5
+    },
+    {
+      "package": "model",
+      "files": 1,
+      "loc": 800,
+      "bytes": 50940,
+      "fan_in": 1,
+      "fan_out": 2
+    },
+    {
+      "package": "reference_catalog",
+      "files": 5,
+      "loc": 776,
+      "bytes": 28242,
+      "fan_in": 4,
+      "fan_out": 4
+    },
+    {
+      "package": "commerce_snapshot_ingress",
+      "files": 6,
+      "loc": 758,
+      "bytes": 29414,
+      "fan_in": 1,
+      "fan_out": 6
+    },
+    {
+      "package": "invocations",
+      "files": 7,
+      "loc": 734,
+      "bytes": 29893,
+      "fan_in": 6,
+      "fan_out": 8
+    },
+    {
+      "package": "attachments",
+      "files": 7,
+      "loc": 732,
+      "bytes": 33048,
+      "fan_in": 17,
+      "fan_out": 5
+    },
+    {
+      "package": "workspace",
+      "files": 4,
+      "loc": 715,
+      "bytes": 23469,
+      "fan_in": 9,
+      "fan_out": 3
+    },
+    {
+      "package": "function_tools",
+      "files": 6,
+      "loc": 710,
+      "bytes": 27730,
+      "fan_in": 12,
+      "fan_out": 4
+    },
+    {
+      "package": "agent_definitions",
+      "files": 4,
+      "loc": 528,
+      "bytes": 24345,
+      "fan_in": 27,
+      "fan_out": 6
+    },
+    {
+      "package": "skills",
+      "files": 5,
+      "loc": 519,
+      "bytes": 22909,
+      "fan_in": 8,
+      "fan_out": 4
+    },
+    {
+      "package": "protected_payload",
+      "files": 4,
+      "loc": 493,
+      "bytes": 19880,
+      "fan_in": 9,
+      "fan_out": 6
+    },
+    {
+      "package": "hosted_search",
+      "files": 5,
+      "loc": 482,
+      "bytes": 19182,
+      "fan_in": 3,
+      "fan_out": 3
+    },
+    {
+      "package": "mcp_definitions",
+      "files": 4,
+      "loc": 411,
+      "bytes": 17434,
+      "fan_in": 9,
+      "fan_out": 2
+    },
+    {
+      "package": "product",
+      "files": 5,
+      "loc": 386,
+      "bytes": 9787,
+      "fan_in": 28,
+      "fan_out": 3
+    },
+    {
+      "package": "approval_operator",
+      "files": 2,
+      "loc": 325,
+      "bytes": 11778,
+      "fan_in": 1,
+      "fan_out": 2
+    },
+    {
+      "package": "agent_tools",
+      "files": 5,
+      "loc": 295,
+      "bytes": 11952,
+      "fan_in": 2,
+      "fan_out": 5
+    },
+    {
+      "package": "streaming",
+      "files": 5,
+      "loc": 290,
+      "bytes": 9297,
+      "fan_in": 2,
+      "fan_out": 1
+    },
+    {
+      "package": "guardrails",
+      "files": 5,
+      "loc": 277,
+      "bytes": 12511,
+      "fan_in": 4,
+      "fan_out": 3
+    },
+    {
+      "package": "acceptance",
+      "files": 2,
+      "loc": 275,
+      "bytes": 10981,
+      "fan_in": 0,
+      "fan_out": 1
+    },
+    {
+      "package": "model_routing",
+      "files": 5,
+      "loc": 268,
+      "bytes": 10251,
+      "fan_in": 4,
+      "fan_out": 3
+    },
+    {
+      "package": "contracts",
+      "files": 1,
+      "loc": 257,
+      "bytes": 9477,
+      "fan_in": 33,
+      "fan_out": 1
+    },
+    {
+      "package": "mcp_clients",
+      "files": 2,
+      "loc": 257,
+      "bytes": 9005,
+      "fan_in": 1,
+      "fan_out": 2
+    },
+    {
+      "package": "handoffs",
+      "files": 5,
+      "loc": 238,
+      "bytes": 10053,
+      "fan_in": 2,
+      "fan_out": 5
+    },
+    {
+      "package": "evidence",
+      "files": 4,
+      "loc": 237,
+      "bytes": 7587,
+      "fan_in": 7,
+      "fan_out": 5
+    },
+    {
+      "package": "walking_skeleton",
+      "files": 3,
+      "loc": 220,
+      "bytes": 11182,
+      "fan_in": 1,
+      "fan_out": 1
+    },
+    {
+      "package": "business",
+      "files": 2,
+      "loc": 182,
+      "bytes": 6670,
+      "fan_in": 2,
+      "fan_out": 3
+    },
+    {
+      "package": "approval_contracts",
+      "files": 1,
+      "loc": 149,
+      "bytes": 5165,
+      "fan_in": 2,
+      "fan_out": 1
+    },
+    {
+      "package": "model_retry",
+      "files": 5,
+      "loc": 149,
+      "bytes": 6160,
+      "fan_in": 4,
+      "fan_out": 3
+    },
+    {
+      "package": "mcp_servers",
+      "files": 2,
+      "loc": 142,
+      "bytes": 4825,
+      "fan_in": 0,
+      "fan_out": 1
+    },
+    {
+      "package": "reasoning_evidence",
+      "files": 5,
+      "loc": 139,
+      "bytes": 6327,
+      "fan_in": 3,
+      "fan_out": 3
+    },
+    {
+      "package": "validation",
+      "files": 2,
+      "loc": 133,
+      "bytes": 3957,
+      "fan_in": 2,
+      "fan_out": 2
+    },
+    {
+      "package": "provider_identity",
+      "files": 5,
+      "loc": 132,
+      "bytes": 5267,
+      "fan_in": 3,
+      "fan_out": 3
+    },
+    {
+      "package": "trace_export",
+      "files": 5,
+      "loc": 129,
+      "bytes": 5258,
+      "fan_in": 8,
+      "fan_out": 3
+    },
+    {
+      "package": "codex_write_contracts",
+      "files": 1,
+      "loc": 126,
+      "bytes": 5122,
+      "fan_in": 7,
+      "fan_out": 2
+    },
+    {
+      "package": "codex_contracts",
+      "files": 1,
+      "loc": 121,
+      "bytes": 4483,
+      "fan_in": 11,
+      "fan_out": 1
+    },
+    {
+      "package": "response_storage",
+      "files": 5,
+      "loc": 110,
+      "bytes": 4210,
+      "fan_in": 3,
+      "fan_out": 3
+    },
+    {
+      "package": "agents",
+      "files": 4,
+      "loc": 104,
+      "bytes": 3478,
+      "fan_in": 3,
+      "fan_out": 3
+    },
+    {
+      "package": "config",
+      "files": 1,
+      "loc": 98,
+      "bytes": 3547,
+      "fan_in": 25,
+      "fan_out": 0
+    },
+    {
+      "package": "operations_console",
+      "files": 2,
+      "loc": 97,
+      "bytes": 4116,
+      "fan_in": 1,
+      "fan_out": 8
+    },
+    {
+      "package": "codex_errors",
+      "files": 1,
+      "loc": 17,
+      "bytes": 361,
+      "fan_in": 3,
+      "fan_out": 1
+    },
+    {
+      "package": "codex_write_errors",
+      "files": 1,
+      "loc": 17,
+      "bytes": 358,
+      "fan_in": 2,
+      "fan_out": 1
+    },
+    {
+      "package": "errors",
+      "files": 1,
+      "loc": 17,
+      "bytes": 337,
+      "fan_in": 32,
+      "fan_out": 1
+    },
+    {
+      "package": "replenishment_limits",
+      "files": 1,
+      "loc": 9,
+      "bytes": 298,
+      "fan_in": 2,
+      "fan_out": 0
+    },
+    {
+      "package": "__root__",
+      "files": 1,
+      "loc": 6,
+      "bytes": 115,
+      "fan_in": 43,
+      "fan_out": 0
+    },
+    {
+      "package": "baseline",
+      "files": 1,
+      "loc": 6,
+      "bytes": 239,
+      "fan_in": 4,
+      "fan_out": 0
+    },
+    {
+      "package": "__main__",
+      "files": 1,
+      "loc": 4,
+      "bytes": 48,
+      "fan_in": 0,
+      "fan_out": 1
+    },
+    {
+      "package": "api",
+      "files": 1,
+      "loc": 2,
+      "bytes": 45,
+      "fan_in": 0,
+      "fan_out": 0
+    },
+    {
+      "package": "interactive_runner",
+      "files": 1,
+      "loc": 2,
+      "bytes": 60,
+      "fan_in": 0,
+      "fan_out": 0
+    },
+    {
+      "package": "policy",
+      "files": 1,
+      "loc": 2,
+      "bytes": 48,
+      "fan_in": 9,
+      "fan_out": 0
+    },
+    {
+      "package": "tools",
+      "files": 1,
+      "loc": 2,
+      "bytes": 47,
+      "fan_in": 0,
+      "fan_out": 0
+    }
+  ],
+  "package_edges": [
+    {
+      "from": "runtime",
+      "to": "config",
+      "imports": 11
+    },
+    {
+      "from": "runtime",
+      "to": "contracts",
+      "imports": 10
+    },
+    {
+      "from": "control_api",
+      "to": "product",
+      "imports": 8
+    },
+    {
+      "from": "service_clients",
+      "to": "control_api",
+      "imports": 7
+    },
+    {
+      "from": "execution",
+      "to": "contracts",
+      "imports": 7
+    },
+    {
+      "from": "execution",
+      "to": "attachments",
+      "imports": 6
+    },
+    {
+      "from": "execution",
+      "to": "function_tools",
+      "imports": 6
+    },
+    {
+      "from": "run_submission",
+      "to": "attachments",
+      "imports": 6
+    },
+    {
+      "from": "runtime",
+      "to": "codex_contracts",
+      "imports": 5
+    },
+    {
+      "from": "runtime",
+      "to": "evidence",
+      "imports": 5
+    },
+    {
+      "from": "runtime",
+      "to": "workspace",
+      "imports": 5
+    },
+    {
+      "from": "run_submission",
+      "to": "execution",
+      "imports": 5
+    },
+    {
+      "from": "run_submission",
+      "to": "project_snapshots",
+      "imports": 5
+    },
+    {
+      "from": "orchestration",
+      "to": "execution",
+      "imports": 4
+    },
+    {
+      "from": "control_api",
+      "to": "execution",
+      "imports": 4
+    },
+    {
+      "from": "runtime",
+      "to": "trace_export",
+      "imports": 4
+    },
+    {
+      "from": "execution",
+      "to": "agent_definitions",
+      "imports": 4
+    },
+    {
+      "from": "execution",
+      "to": "sessions",
+      "imports": 4
+    },
+    {
+      "from": "execution",
+      "to": "project_snapshots",
+      "imports": 4
+    },
+    {
+      "from": "execution",
+      "to": "product",
+      "imports": 4
+    },
+    {
+      "from": "execution",
+      "to": "config",
+      "imports": 4
+    },
+    {
+      "from": "execution",
+      "to": "orchestration",
+      "imports": 4
+    },
+    {
+      "from": "tool_approval",
+      "to": "execution",
+      "imports": 4
+    },
+    {
+      "from": "cli",
+      "to": "runtime",
+      "imports": 3
+    },
+    {
+      "from": "orchestration",
+      "to": "contracts",
+      "imports": 3
+    },
+    {
+      "from": "persistence",
+      "to": "product",
+      "imports": 3
+    },
+    {
+      "from": "control_api",
+      "to": "evaluation",
+      "imports": 3
+    },
+    {
+      "from": "control_api",
+      "to": "agent_definitions",
+      "imports": 3
+    },
+    {
+      "from": "evaluation",
+      "to": "execution",
+      "imports": 3
+    },
+    {
+      "from": "evaluation",
+      "to": "product",
+      "imports": 3
+    },
+    {
+      "from": "runtime",
+      "to": "codex_write_contracts",
+      "imports": 3
+    },
+    {
+      "from": "runtime",
+      "to": "agents",
+      "imports": 3
+    },
+    {
+      "from": "execution",
+      "to": "invocations",
+      "imports": 3
+    },
+    {
+      "from": "execution",
+      "to": "mcp_definitions",
+      "imports": 3
+    },
+    {
+      "from": "execution",
+      "to": "hosted_search",
+      "imports": 3
+    },
+    {
+      "from": "commerce_snapshot_ingress",
+      "to": "run_submission",
+      "imports": 3
+    },
+    {
+      "from": "tool_approval",
+      "to": "function_tools",
+      "imports": 3
+    },
+    {
+      "from": "tool_approval",
+      "to": "product",
+      "imports": 3
+    },
+    {
+      "from": "tool_approval",
+      "to": "contracts",
+      "imports": 3
+    },
+    {
+      "from": "run_submission",
+      "to": "protected_payload",
+      "imports": 3
+    },
+    {
+      "from": "orchestration",
+      "to": "agent_definitions",
+      "imports": 2
+    },
+    {
+      "from": "control_api",
+      "to": "config",
+      "imports": 2
+    },
+    {
+      "from": "control_api",
+      "to": "attachments",
+      "imports": 2
+    },
+    {
+      "from": "control_api",
+      "to": "service_clients",
+      "imports": 2
+    },
+    {
+      "from": "control_api",
+      "to": "project_snapshots",
+      "imports": 2
+    },
+    {
+      "from": "service_clients",
+      "to": "product",
+      "imports": 2
+    },
+    {
+      "from": "service_clients",
+      "to": "agent_definitions",
+      "imports": 2
+    },
+    {
+      "from": "evaluation",
+      "to": "agent_definitions",
+      "imports": 2
+    },
+    {
+      "from": "protected_payload",
+      "to": "attachments",
+      "imports": 2
+    },
+    {
+      "from": "protected_payload",
+      "to": "project_snapshots",
+      "imports": 2
+    },
+    {
+      "from": "capabilities",
+      "to": "agent_definitions",
+      "imports": 2
+    },
+    {
+      "from": "runtime",
+      "to": "codex_write_errors",
+      "imports": 2
+    },
+    {
+      "from": "runtime",
+      "to": "errors",
+      "imports": 2
+    },
+    {
+      "from": "runtime",
+      "to": "codex_errors",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "response_storage",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "handoffs",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "guardrails",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "trace_export",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "model_retry",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "skills",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "reasoning_evidence",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "sandbox_runtime",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "provider_identity",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "agent_tools",
+      "imports": 2
+    },
+    {
+      "from": "execution",
+      "to": "model_routing",
+      "imports": 2
+    },
+    {
+      "from": "invocations",
+      "to": "agent_definitions",
+      "imports": 2
+    },
+    {
+      "from": "tool_approval",
+      "to": "run_submission",
+      "imports": 2
+    },
+    {
+      "from": "tool_approval",
+      "to": "invocations",
+      "imports": 2
+    },
+    {
+      "from": "tool_approval",
+      "to": "config",
+      "imports": 2
+    },
+    {
+      "from": "tool_approval",
+      "to": "agent_definitions",
+      "imports": 2
+    },
+    {
+      "from": "tool_approval",
+      "to": "protected_payload",
+      "imports": 2
+    },
+    {
+      "from": "run_submission",
+      "to": "agent_definitions",
+      "imports": 2
+    },
+    {
+      "from": "run_submission",
+      "to": "product",
+      "imports": 2
+    },
+    {
+      "from": "codex_errors",
+      "to": "codex_contracts",
+      "imports": 1
+    },
+    {
+      "from": "approval_contracts",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "persistence",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "execution",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "model",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "evidence",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "tui_client",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "approval_contracts",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "config",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "evaluation",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "approval_operator",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "codex_contracts",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "mcp_definitions",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "codex_write_contracts",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "agent_definitions",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "reference_catalog",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "product",
+      "imports": 1
+    },
+    {
+      "from": "cli",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "codex_contracts",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "errors",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "__main__",
+      "to": "cli",
+      "imports": 1
+    },
+    {
+      "from": "codex_write_contracts",
+      "to": "codex_contracts",
+      "imports": 1
+    },
+    {
+      "from": "codex_write_contracts",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "model",
+      "to": "config",
+      "imports": 1
+    },
+    {
+      "from": "model",
+      "to": "baseline",
+      "imports": 1
+    },
+    {
+      "from": "contracts",
+      "to": "replenishment_limits",
+      "imports": 1
+    },
+    {
+      "from": "codex_write_errors",
+      "to": "codex_write_contracts",
+      "imports": 1
+    },
+    {
+      "from": "trace_export",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "trace_export",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "trace_export",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "model_retry",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "skills",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "response_storage",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "reasoning_evidence",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "provider_identity",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "config",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "trace_export",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "model_routing",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "orchestration",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "product",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "product",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "product",
+      "to": "invocations",
+      "imports": 1
+    },
+    {
+      "from": "skills",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "skills",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "skills",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "skills",
+      "to": "agent_definitions",
+      "imports": 1
+    },
+    {
+      "from": "persistence",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "project_snapshots",
+      "to": "protected_payload",
+      "imports": 1
+    },
+    {
+      "from": "project_snapshots",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "project_snapshots",
+      "to": "validation",
+      "imports": 1
+    },
+    {
+      "from": "project_snapshots",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "project_snapshots",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "model_routing",
+      "to": "model_retry",
+      "imports": 1
+    },
+    {
+      "from": "model_routing",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "model_routing",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "acceptance",
+      "to": "workspace",
+      "imports": 1
+    },
+    {
+      "from": "streaming",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "workspace",
+      "to": "codex_write_contracts",
+      "imports": 1
+    },
+    {
+      "from": "workspace",
+      "to": "codex_contracts",
+      "imports": 1
+    },
+    {
+      "from": "workspace",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "agent_tools",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "agent_tools",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "agent_tools",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "agent_tools",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "agent_tools",
+      "to": "agent_definitions",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "skills",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "persistence",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "operations_console",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "streaming",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "tool_approval",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "run_submission",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "baseline",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "mcp_definitions",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "commerce_snapshot_ingress",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "reference_catalog",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "protected_payload",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "sessions",
+      "imports": 1
+    },
+    {
+      "from": "control_api",
+      "to": "walking_skeleton",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "tool_approval",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "run_submission",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "capabilities",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "execution",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "project_snapshots",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "baseline",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "config",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "skills",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "sandbox_runtime",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "sessions",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "protected_payload",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "attachments",
+      "imports": 1
+    },
+    {
+      "from": "service_clients",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "operations_console",
+      "to": "persistence",
+      "imports": 1
+    },
+    {
+      "from": "operations_console",
+      "to": "agent_definitions",
+      "imports": 1
+    },
+    {
+      "from": "operations_console",
+      "to": "reference_catalog",
+      "imports": 1
+    },
+    {
+      "from": "operations_console",
+      "to": "baseline",
+      "imports": 1
+    },
+    {
+      "from": "operations_console",
+      "to": "mcp_definitions",
+      "imports": 1
+    },
+    {
+      "from": "operations_console",
+      "to": "tool_approval",
+      "imports": 1
+    },
+    {
+      "from": "operations_console",
+      "to": "evaluation",
+      "imports": 1
+    },
+    {
+      "from": "operations_console",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "evaluation",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "guardrails",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "guardrails",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "guardrails",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "provider_identity",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "provider_identity",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "provider_identity",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "response_storage",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "response_storage",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "response_storage",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "evidence",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "evidence",
+      "to": "codex_contracts",
+      "imports": 1
+    },
+    {
+      "from": "evidence",
+      "to": "codex_errors",
+      "imports": 1
+    },
+    {
+      "from": "evidence",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "evidence",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "walking_skeleton",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "protected_payload",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "protected_payload",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "capabilities",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "capabilities",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "capabilities",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "capabilities",
+      "to": "guardrails",
+      "imports": 1
+    },
+    {
+      "from": "capabilities",
+      "to": "skills",
+      "imports": 1
+    },
+    {
+      "from": "capabilities",
+      "to": "mcp_definitions",
+      "imports": 1
+    },
+    {
+      "from": "capabilities",
+      "to": "function_tools",
+      "imports": 1
+    },
+    {
+      "from": "reasoning_evidence",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "reasoning_evidence",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "reasoning_evidence",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "hosted_search",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "hosted_search",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "hosted_search",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "runtime",
+      "to": "approval_contracts",
+      "imports": 1
+    },
+    {
+      "from": "runtime",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "mcp_clients",
+      "to": "mcp_definitions",
+      "imports": 1
+    },
+    {
+      "from": "mcp_clients",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "validation",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "validation",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "execution",
+      "to": "capabilities",
+      "imports": 1
+    },
+    {
+      "from": "execution",
+      "to": "streaming",
+      "imports": 1
+    },
+    {
+      "from": "execution",
+      "to": "mcp_clients",
+      "imports": 1
+    },
+    {
+      "from": "execution",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "execution",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "execution",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "execution",
+      "to": "business",
+      "imports": 1
+    },
+    {
+      "from": "reference_catalog",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "reference_catalog",
+      "to": "evidence",
+      "imports": 1
+    },
+    {
+      "from": "reference_catalog",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "reference_catalog",
+      "to": "product",
+      "imports": 1
+    },
+    {
+      "from": "business",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "business",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "business",
+      "to": "replenishment_limits",
+      "imports": 1
+    },
+    {
+      "from": "model_retry",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "model_retry",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "model_retry",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "commerce_snapshot_ingress",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "commerce_snapshot_ingress",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "commerce_snapshot_ingress",
+      "to": "business",
+      "imports": 1
+    },
+    {
+      "from": "mcp_definitions",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "mcp_definitions",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "approval_operator",
+      "to": "tool_approval",
+      "imports": 1
+    },
+    {
+      "from": "approval_operator",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "agents",
+      "to": "contracts",
+      "imports": 1
+    },
+    {
+      "from": "agents",
+      "to": "codex_write_contracts",
+      "imports": 1
+    },
+    {
+      "from": "agents",
+      "to": "codex_contracts",
+      "imports": 1
+    },
+    {
+      "from": "mcp_servers",
+      "to": "reference_catalog",
+      "imports": 1
+    },
+    {
+      "from": "tui_client",
+      "to": "config",
+      "imports": 1
+    },
+    {
+      "from": "tui_client",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "invocations",
+      "to": "orchestration",
+      "imports": 1
+    },
+    {
+      "from": "invocations",
+      "to": "product",
+      "imports": 1
+    },
+    {
+      "from": "invocations",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "invocations",
+      "to": "workspace",
+      "imports": 1
+    },
+    {
+      "from": "invocations",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "invocations",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "tool_approval",
+      "to": "sessions",
+      "imports": 1
+    },
+    {
+      "from": "tool_approval",
+      "to": "skills",
+      "imports": 1
+    },
+    {
+      "from": "tool_approval",
+      "to": "trace_export",
+      "imports": 1
+    },
+    {
+      "from": "tool_approval",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "tool_approval",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "agent_definitions",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "agent_definitions",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "agent_definitions",
+      "to": "guardrails",
+      "imports": 1
+    },
+    {
+      "from": "agent_definitions",
+      "to": "skills",
+      "imports": 1
+    },
+    {
+      "from": "agent_definitions",
+      "to": "function_tools",
+      "imports": 1
+    },
+    {
+      "from": "agent_definitions",
+      "to": "capabilities",
+      "imports": 1
+    },
+    {
+      "from": "handoffs",
+      "to": "runtime",
+      "imports": 1
+    },
+    {
+      "from": "handoffs",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "handoffs",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "handoffs",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "handoffs",
+      "to": "agent_definitions",
+      "imports": 1
+    },
+    {
+      "from": "attachments",
+      "to": "protected_payload",
+      "imports": 1
+    },
+    {
+      "from": "attachments",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "attachments",
+      "to": "validation",
+      "imports": 1
+    },
+    {
+      "from": "attachments",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "attachments",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "run_submission",
+      "to": "config",
+      "imports": 1
+    },
+    {
+      "from": "run_submission",
+      "to": "sessions",
+      "imports": 1
+    },
+    {
+      "from": "run_submission",
+      "to": "mcp_definitions",
+      "imports": 1
+    },
+    {
+      "from": "run_submission",
+      "to": "model_routing",
+      "imports": 1
+    },
+    {
+      "from": "run_submission",
+      "to": "function_tools",
+      "imports": 1
+    },
+    {
+      "from": "run_submission",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "run_submission",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "run_submission",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "sandbox_runtime",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "sandbox_runtime",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "sandbox_runtime",
+      "to": "workspace",
+      "imports": 1
+    },
+    {
+      "from": "function_tools",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "function_tools",
+      "to": "__root__",
+      "imports": 1
+    },
+    {
+      "from": "function_tools",
+      "to": "workspace",
+      "imports": 1
+    },
+    {
+      "from": "function_tools",
+      "to": "sandbox_runtime",
+      "imports": 1
+    },
+    {
+      "from": "sessions",
+      "to": "agent_definitions",
+      "imports": 1
+    },
+    {
+      "from": "sessions",
+      "to": "errors",
+      "imports": 1
+    },
+    {
+      "from": "sessions",
+      "to": "policy",
+      "imports": 1
+    },
+    {
+      "from": "sessions",
+      "to": "__root__",
+      "imports": 1
+    }
+  ],
+  "module_cycles": [],
+  "external_imports": [
+    [
+      "__future__",
+      190
+    ],
+    [
+      "typing",
+      107
+    ],
+    [
+      "pathlib",
+      89
+    ],
+    [
+      "dataclasses",
+      81
+    ],
+    [
+      "json",
+      76
+    ],
+    [
+      "hashlib",
+      72
+    ],
+    [
+      "re",
+      36
+    ],
+    [
+      "agents",
+      28
+    ],
+    [
+      "datetime",
+      26
+    ],
+    [
+      "os",
+      24
+    ],
+    [
+      "pydantic",
+      23
+    ],
+    [
+      "uuid",
+      22
+    ],
+    [
+      "collections",
+      18
+    ],
+    [
+      "enum",
+      17
+    ],
+    [
+      "cryptography",
+      13
+    ],
+    [
+      "importlib",
+      12
+    ],
+    [
+      "asyncio",
+      9
+    ],
+    [
+      "fastapi",
+      8
+    ],
+    [
+      "sqlite3",
+      7
+    ],
+    [
+      "contextlib",
+      7
+    ],
+    [
+      "secrets",
+      7
+    ],
+    [
+      "time",
+      7
+    ],
+    [
+      "hmac",
+      7
+    ],
+    [
+      "base64",
+      6
+    ],
+    [
+      "sys",
+      5
+    ],
+    [
+      "binascii",
+      5
+    ],
+    [
+      "shutil",
+      5
+    ],
+    [
+      "tempfile",
+      5
+    ],
+    [
+      "subprocess",
+      5
+    ],
+    [
+      "urllib",
+      5
+    ],
+    [
+      "httpx",
+      5
+    ],
+    [
+      "io",
+      3
+    ],
+    [
+      "ipaddress",
+      3
+    ],
+    [
+      "unicodedata",
+      2
+    ],
+    [
+      "zipfile",
+      2
+    ],
+    [
+      "openai",
+      2
+    ],
+    [
+      "argparse",
+      1
+    ],
+    [
+      "baseline",
+      1
+    ],
+    [
+      "stat",
+      1
+    ],
+    [
+      "math",
+      1
+    ],
+    [
+      "inspect",
+      1
+    ],
+    [
+      "mcp",
+      1
+    ],
+    [
+      "getpass",
+      1
+    ],
+    [
+      "struct",
+      1
+    ],
+    [
+      "tarfile",
+      1
+    ]
+  ]
+}

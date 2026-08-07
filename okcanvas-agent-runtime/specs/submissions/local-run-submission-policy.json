@@ -1,0 +1,18 @@
+{
+  "schema_version": "okcanvas-run-submission-policy-v1",
+  "policy_id": "local-run-submission",
+  "version": "1.1.0",
+  "authority_scope": "LOCAL_RUN_SUBMITTER",
+  "idempotency_required": true,
+  "idempotency_key_min_length": 16,
+  "idempotency_key_max_length": 128,
+  "input_max_chars": 100000,
+  "confirmation_mode": "fingerprint-challenge",
+  "read_only_execution_mode": "IMMEDIATE_AFTER_CONFIRMATION",
+  "local_tool_execution_mode": "APPROVAL_INTERRUPTED",
+  "write_mcp_execution_mode": "PROPOSAL_ONLY",
+  "handoff_or_session_execution_mode": "PROPOSAL_ONLY",
+  "protected_payload_mode": "AES_256_GCM_FILE_V1",
+  "direct_run_api_default_enabled": false,
+  "console_mutation_enabled": false
+}

@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "non_python_validator_uses_npm_pack_helper": true,
+    "portable_resolver_present": true,
+    "step081_acceptance_uses_npm_pack_helper": true,
+    "subprocess_oserror_is_bounded": true,
+    "typescript_manifest_uses_portable_runner": true,
+    "unsafe_direct_batch_invocations_absent": true,
+    "windows_batch_uses_cmd_call": true
+  },
+  "passed_checks": 7,
+  "schema_version": "okcanvas-windows-subprocess-portability-validation-v1",
+  "state": "PASSED",
+  "total_checks": 7,
+  "violations": []
+}

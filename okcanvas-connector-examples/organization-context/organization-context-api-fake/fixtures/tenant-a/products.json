@@ -1,0 +1,2282 @@
+[
+  {
+    "aliases": [
+      "P001",
+      "OKC Agent Runtime"
+    ],
+    "name": "OKCanvas Agent Runtime",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-001",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-001",
+    "product_manager_employee_id": "employee-0008",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P002",
+      "OKC Agent CLI"
+    ],
+    "name": "OKCanvas Agent CLI",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-002",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-002",
+    "product_manager_employee_id": "employee-0015",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P003",
+      "OKC Organization Context Connector"
+    ],
+    "name": "OKCanvas Organization Context Connector",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-003",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-003",
+    "product_manager_employee_id": "employee-0022",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P004",
+      "OKC Groupware"
+    ],
+    "name": "OKCanvas Groupware",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-004",
+    "product_family": "OpenRill",
+    "product_id": "product-004",
+    "product_manager_employee_id": "employee-0029",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P005",
+      "OpenRill Runtime"
+    ],
+    "name": "OpenRill Runtime",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-005",
+    "product_family": "PlanVM",
+    "product_id": "product-005",
+    "product_manager_employee_id": "employee-0036",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P006",
+      "DataBridge 제품 006"
+    ],
+    "name": "DataBridge 제품 006",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-006",
+    "product_family": "DataBridge",
+    "product_id": "product-006",
+    "product_manager_employee_id": "employee-0043",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P007",
+      "OKC Agent Platform 제품 007"
+    ],
+    "name": "OKCanvas Agent Platform 제품 007",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-007",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-007",
+    "product_manager_employee_id": "employee-0002",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P008",
+      "OKC Groupware 제품 008"
+    ],
+    "name": "OKCanvas Groupware 제품 008",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-008",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-008",
+    "product_manager_employee_id": "employee-0009",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P009",
+      "OKC Mattermost 제품 009"
+    ],
+    "name": "OKCanvas Mattermost 제품 009",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-009",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-009",
+    "product_manager_employee_id": "employee-0016",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P010",
+      "OpenRill 제품 010"
+    ],
+    "name": "OpenRill 제품 010",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-010",
+    "product_family": "OpenRill",
+    "product_id": "product-010",
+    "product_manager_employee_id": "employee-0023",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P011",
+      "PlanVM 제품 011"
+    ],
+    "name": "PlanVM 제품 011",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-011",
+    "product_family": "PlanVM",
+    "product_id": "product-011",
+    "product_manager_employee_id": "employee-0030",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P012",
+      "DataBridge 제품 012"
+    ],
+    "name": "DataBridge 제품 012",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-012",
+    "product_family": "DataBridge",
+    "product_id": "product-012",
+    "product_manager_employee_id": "employee-0037",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P013",
+      "OKC Agent Platform 제품 013"
+    ],
+    "name": "OKCanvas Agent Platform 제품 013",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-013",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-013",
+    "product_manager_employee_id": "employee-0044",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P014",
+      "OKC Groupware 제품 014"
+    ],
+    "name": "OKCanvas Groupware 제품 014",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-014",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-014",
+    "product_manager_employee_id": "employee-0003",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P015",
+      "OKC Mattermost 제품 015"
+    ],
+    "name": "OKCanvas Mattermost 제품 015",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-015",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-015",
+    "product_manager_employee_id": "employee-0010",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P016",
+      "OpenRill 제품 016"
+    ],
+    "name": "OpenRill 제품 016",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-016",
+    "product_family": "OpenRill",
+    "product_id": "product-016",
+    "product_manager_employee_id": "employee-0017",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P017",
+      "PlanVM 제품 017"
+    ],
+    "name": "PlanVM 제품 017",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-017",
+    "product_family": "PlanVM",
+    "product_id": "product-017",
+    "product_manager_employee_id": "employee-0024",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P018",
+      "DataBridge 제품 018"
+    ],
+    "name": "DataBridge 제품 018",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-018",
+    "product_family": "DataBridge",
+    "product_id": "product-018",
+    "product_manager_employee_id": "employee-0031",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P019",
+      "OKC Agent Platform 제품 019"
+    ],
+    "name": "OKCanvas Agent Platform 제품 019",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-019",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-019",
+    "product_manager_employee_id": "employee-0038",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P020",
+      "OKC Groupware 제품 020"
+    ],
+    "name": "OKCanvas Groupware 제품 020",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-020",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-020",
+    "product_manager_employee_id": "employee-0045",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P021",
+      "OKC Mattermost 제품 021"
+    ],
+    "name": "OKCanvas Mattermost 제품 021",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-021",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-021",
+    "product_manager_employee_id": "employee-0004",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P022",
+      "OpenRill 제품 022"
+    ],
+    "name": "OpenRill 제품 022",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-022",
+    "product_family": "OpenRill",
+    "product_id": "product-022",
+    "product_manager_employee_id": "employee-0011",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P023",
+      "PlanVM 제품 023"
+    ],
+    "name": "PlanVM 제품 023",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-023",
+    "product_family": "PlanVM",
+    "product_id": "product-023",
+    "product_manager_employee_id": "employee-0018",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P024",
+      "DataBridge 제품 024"
+    ],
+    "name": "DataBridge 제품 024",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-024",
+    "product_family": "DataBridge",
+    "product_id": "product-024",
+    "product_manager_employee_id": "employee-0025",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P025",
+      "OKC Agent Platform 제품 025"
+    ],
+    "name": "OKCanvas Agent Platform 제품 025",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-025",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-025",
+    "product_manager_employee_id": "employee-0032",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P026",
+      "OKC Groupware 제품 026"
+    ],
+    "name": "OKCanvas Groupware 제품 026",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-026",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-026",
+    "product_manager_employee_id": "employee-0039",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P027",
+      "OKC Mattermost 제품 027"
+    ],
+    "name": "OKCanvas Mattermost 제품 027",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-027",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-027",
+    "product_manager_employee_id": "employee-0046",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P028",
+      "OpenRill 제품 028"
+    ],
+    "name": "OpenRill 제품 028",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-028",
+    "product_family": "OpenRill",
+    "product_id": "product-028",
+    "product_manager_employee_id": "employee-0005",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P029",
+      "PlanVM 제품 029"
+    ],
+    "name": "PlanVM 제품 029",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-029",
+    "product_family": "PlanVM",
+    "product_id": "product-029",
+    "product_manager_employee_id": "employee-0012",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P030",
+      "DataBridge 제품 030"
+    ],
+    "name": "DataBridge 제품 030",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-030",
+    "product_family": "DataBridge",
+    "product_id": "product-030",
+    "product_manager_employee_id": "employee-0019",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P031",
+      "OKC Agent Platform 제품 031"
+    ],
+    "name": "OKCanvas Agent Platform 제품 031",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-031",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-031",
+    "product_manager_employee_id": "employee-0026",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P032",
+      "OKC Groupware 제품 032"
+    ],
+    "name": "OKCanvas Groupware 제품 032",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-032",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-032",
+    "product_manager_employee_id": "employee-0033",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P033",
+      "OKC Mattermost 제품 033"
+    ],
+    "name": "OKCanvas Mattermost 제품 033",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-033",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-033",
+    "product_manager_employee_id": "employee-0040",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P034",
+      "OpenRill 제품 034"
+    ],
+    "name": "OpenRill 제품 034",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-034",
+    "product_family": "OpenRill",
+    "product_id": "product-034",
+    "product_manager_employee_id": "employee-0047",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P035",
+      "PlanVM 제품 035"
+    ],
+    "name": "PlanVM 제품 035",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-035",
+    "product_family": "PlanVM",
+    "product_id": "product-035",
+    "product_manager_employee_id": "employee-0006",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P036",
+      "DataBridge 제품 036"
+    ],
+    "name": "DataBridge 제품 036",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-036",
+    "product_family": "DataBridge",
+    "product_id": "product-036",
+    "product_manager_employee_id": "employee-0013",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P037",
+      "OKC Agent Platform 제품 037"
+    ],
+    "name": "OKCanvas Agent Platform 제품 037",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-037",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-037",
+    "product_manager_employee_id": "employee-0020",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P038",
+      "OKC Groupware 제품 038"
+    ],
+    "name": "OKCanvas Groupware 제품 038",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-038",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-038",
+    "product_manager_employee_id": "employee-0027",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P039",
+      "OKC Mattermost 제품 039"
+    ],
+    "name": "OKCanvas Mattermost 제품 039",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-039",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-039",
+    "product_manager_employee_id": "employee-0034",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P040",
+      "OpenRill 제품 040"
+    ],
+    "name": "OpenRill 제품 040",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-040",
+    "product_family": "OpenRill",
+    "product_id": "product-040",
+    "product_manager_employee_id": "employee-0041",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P041",
+      "PlanVM 제품 041"
+    ],
+    "name": "PlanVM 제품 041",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-041",
+    "product_family": "PlanVM",
+    "product_id": "product-041",
+    "product_manager_employee_id": "employee-0048",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P042",
+      "DataBridge 제품 042"
+    ],
+    "name": "DataBridge 제품 042",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-042",
+    "product_family": "DataBridge",
+    "product_id": "product-042",
+    "product_manager_employee_id": "employee-0007",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P043",
+      "OKC Agent Platform 제품 043"
+    ],
+    "name": "OKCanvas Agent Platform 제품 043",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-043",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-043",
+    "product_manager_employee_id": "employee-0014",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P044",
+      "OKC Groupware 제품 044"
+    ],
+    "name": "OKCanvas Groupware 제품 044",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-044",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-044",
+    "product_manager_employee_id": "employee-0021",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P045",
+      "OKC Mattermost 제품 045"
+    ],
+    "name": "OKCanvas Mattermost 제품 045",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-045",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-045",
+    "product_manager_employee_id": "employee-0028",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P046",
+      "OpenRill 제품 046"
+    ],
+    "name": "OpenRill 제품 046",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-046",
+    "product_family": "OpenRill",
+    "product_id": "product-046",
+    "product_manager_employee_id": "employee-0035",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P047",
+      "PlanVM 제품 047"
+    ],
+    "name": "PlanVM 제품 047",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-047",
+    "product_family": "PlanVM",
+    "product_id": "product-047",
+    "product_manager_employee_id": "employee-0042",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P048",
+      "DataBridge 제품 048"
+    ],
+    "name": "DataBridge 제품 048",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-048",
+    "product_family": "DataBridge",
+    "product_id": "product-048",
+    "product_manager_employee_id": "employee-0001",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P049",
+      "OKC Agent Platform 제품 049"
+    ],
+    "name": "OKCanvas Agent Platform 제품 049",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-049",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-049",
+    "product_manager_employee_id": "employee-0008",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P050",
+      "OKC Groupware 제품 050"
+    ],
+    "name": "OKCanvas Groupware 제품 050",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-050",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-050",
+    "product_manager_employee_id": "employee-0015",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P051",
+      "OKC Mattermost 제품 051"
+    ],
+    "name": "OKCanvas Mattermost 제품 051",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-051",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-051",
+    "product_manager_employee_id": "employee-0022",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P052",
+      "OpenRill 제품 052"
+    ],
+    "name": "OpenRill 제품 052",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-052",
+    "product_family": "OpenRill",
+    "product_id": "product-052",
+    "product_manager_employee_id": "employee-0029",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P053",
+      "PlanVM 제품 053"
+    ],
+    "name": "PlanVM 제품 053",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-053",
+    "product_family": "PlanVM",
+    "product_id": "product-053",
+    "product_manager_employee_id": "employee-0036",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P054",
+      "DataBridge 제품 054"
+    ],
+    "name": "DataBridge 제품 054",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-054",
+    "product_family": "DataBridge",
+    "product_id": "product-054",
+    "product_manager_employee_id": "employee-0043",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P055",
+      "OKC Agent Platform 제품 055"
+    ],
+    "name": "OKCanvas Agent Platform 제품 055",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-055",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-055",
+    "product_manager_employee_id": "employee-0002",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P056",
+      "OKC Groupware 제품 056"
+    ],
+    "name": "OKCanvas Groupware 제품 056",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-056",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-056",
+    "product_manager_employee_id": "employee-0009",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P057",
+      "OKC Mattermost 제품 057"
+    ],
+    "name": "OKCanvas Mattermost 제품 057",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-057",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-057",
+    "product_manager_employee_id": "employee-0016",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P058",
+      "OpenRill 제품 058"
+    ],
+    "name": "OpenRill 제품 058",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-058",
+    "product_family": "OpenRill",
+    "product_id": "product-058",
+    "product_manager_employee_id": "employee-0023",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P059",
+      "PlanVM 제품 059"
+    ],
+    "name": "PlanVM 제품 059",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-059",
+    "product_family": "PlanVM",
+    "product_id": "product-059",
+    "product_manager_employee_id": "employee-0030",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P060",
+      "DataBridge 제품 060"
+    ],
+    "name": "DataBridge 제품 060",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-060",
+    "product_family": "DataBridge",
+    "product_id": "product-060",
+    "product_manager_employee_id": "employee-0037",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P061",
+      "OKC Agent Platform 제품 061"
+    ],
+    "name": "OKCanvas Agent Platform 제품 061",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-061",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-061",
+    "product_manager_employee_id": "employee-0044",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P062",
+      "OKC Groupware 제품 062"
+    ],
+    "name": "OKCanvas Groupware 제품 062",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-062",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-062",
+    "product_manager_employee_id": "employee-0003",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P063",
+      "OKC Mattermost 제품 063"
+    ],
+    "name": "OKCanvas Mattermost 제품 063",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-063",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-063",
+    "product_manager_employee_id": "employee-0010",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P064",
+      "OpenRill 제품 064"
+    ],
+    "name": "OpenRill 제품 064",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-064",
+    "product_family": "OpenRill",
+    "product_id": "product-064",
+    "product_manager_employee_id": "employee-0017",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P065",
+      "PlanVM 제품 065"
+    ],
+    "name": "PlanVM 제품 065",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-065",
+    "product_family": "PlanVM",
+    "product_id": "product-065",
+    "product_manager_employee_id": "employee-0024",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P066",
+      "DataBridge 제품 066"
+    ],
+    "name": "DataBridge 제품 066",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-066",
+    "product_family": "DataBridge",
+    "product_id": "product-066",
+    "product_manager_employee_id": "employee-0031",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P067",
+      "OKC Agent Platform 제품 067"
+    ],
+    "name": "OKCanvas Agent Platform 제품 067",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-067",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-067",
+    "product_manager_employee_id": "employee-0038",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P068",
+      "OKC Groupware 제품 068"
+    ],
+    "name": "OKCanvas Groupware 제품 068",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-068",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-068",
+    "product_manager_employee_id": "employee-0045",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P069",
+      "OKC Mattermost 제품 069"
+    ],
+    "name": "OKCanvas Mattermost 제품 069",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-069",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-069",
+    "product_manager_employee_id": "employee-0004",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P070",
+      "OpenRill 제품 070"
+    ],
+    "name": "OpenRill 제품 070",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-070",
+    "product_family": "OpenRill",
+    "product_id": "product-070",
+    "product_manager_employee_id": "employee-0011",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P071",
+      "PlanVM 제품 071"
+    ],
+    "name": "PlanVM 제품 071",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-071",
+    "product_family": "PlanVM",
+    "product_id": "product-071",
+    "product_manager_employee_id": "employee-0018",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P072",
+      "DataBridge 제품 072"
+    ],
+    "name": "DataBridge 제품 072",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-072",
+    "product_family": "DataBridge",
+    "product_id": "product-072",
+    "product_manager_employee_id": "employee-0025",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P073",
+      "OKC Agent Platform 제품 073"
+    ],
+    "name": "OKCanvas Agent Platform 제품 073",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-073",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-073",
+    "product_manager_employee_id": "employee-0032",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P074",
+      "OKC Groupware 제품 074"
+    ],
+    "name": "OKCanvas Groupware 제품 074",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-074",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-074",
+    "product_manager_employee_id": "employee-0039",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P075",
+      "OKC Mattermost 제품 075"
+    ],
+    "name": "OKCanvas Mattermost 제품 075",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-075",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-075",
+    "product_manager_employee_id": "employee-0046",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P076",
+      "OpenRill 제품 076"
+    ],
+    "name": "OpenRill 제품 076",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-076",
+    "product_family": "OpenRill",
+    "product_id": "product-076",
+    "product_manager_employee_id": "employee-0005",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P077",
+      "PlanVM 제품 077"
+    ],
+    "name": "PlanVM 제품 077",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-077",
+    "product_family": "PlanVM",
+    "product_id": "product-077",
+    "product_manager_employee_id": "employee-0012",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P078",
+      "DataBridge 제품 078"
+    ],
+    "name": "DataBridge 제품 078",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-078",
+    "product_family": "DataBridge",
+    "product_id": "product-078",
+    "product_manager_employee_id": "employee-0019",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P079",
+      "OKC Agent Platform 제품 079"
+    ],
+    "name": "OKCanvas Agent Platform 제품 079",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-079",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-079",
+    "product_manager_employee_id": "employee-0026",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P080",
+      "OKC Groupware 제품 080"
+    ],
+    "name": "OKCanvas Groupware 제품 080",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-080",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-080",
+    "product_manager_employee_id": "employee-0033",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P081",
+      "OKC Mattermost 제품 081"
+    ],
+    "name": "OKCanvas Mattermost 제품 081",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-081",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-081",
+    "product_manager_employee_id": "employee-0040",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P082",
+      "OpenRill 제품 082"
+    ],
+    "name": "OpenRill 제품 082",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-082",
+    "product_family": "OpenRill",
+    "product_id": "product-082",
+    "product_manager_employee_id": "employee-0047",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P083",
+      "PlanVM 제품 083"
+    ],
+    "name": "PlanVM 제품 083",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-083",
+    "product_family": "PlanVM",
+    "product_id": "product-083",
+    "product_manager_employee_id": "employee-0006",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P084",
+      "DataBridge 제품 084"
+    ],
+    "name": "DataBridge 제품 084",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-084",
+    "product_family": "DataBridge",
+    "product_id": "product-084",
+    "product_manager_employee_id": "employee-0013",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P085",
+      "OKC Agent Platform 제품 085"
+    ],
+    "name": "OKCanvas Agent Platform 제품 085",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-085",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-085",
+    "product_manager_employee_id": "employee-0020",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P086",
+      "OKC Groupware 제품 086"
+    ],
+    "name": "OKCanvas Groupware 제품 086",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-086",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-086",
+    "product_manager_employee_id": "employee-0027",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P087",
+      "OKC Mattermost 제품 087"
+    ],
+    "name": "OKCanvas Mattermost 제품 087",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-087",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-087",
+    "product_manager_employee_id": "employee-0034",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P088",
+      "OpenRill 제품 088"
+    ],
+    "name": "OpenRill 제품 088",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-088",
+    "product_family": "OpenRill",
+    "product_id": "product-088",
+    "product_manager_employee_id": "employee-0041",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P089",
+      "PlanVM 제품 089"
+    ],
+    "name": "PlanVM 제품 089",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-089",
+    "product_family": "PlanVM",
+    "product_id": "product-089",
+    "product_manager_employee_id": "employee-0048",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P090",
+      "DataBridge 제품 090"
+    ],
+    "name": "DataBridge 제품 090",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-090",
+    "product_family": "DataBridge",
+    "product_id": "product-090",
+    "product_manager_employee_id": "employee-0007",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P091",
+      "OKC Agent Platform 제품 091"
+    ],
+    "name": "OKCanvas Agent Platform 제품 091",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-091",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-091",
+    "product_manager_employee_id": "employee-0014",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P092",
+      "OKC Groupware 제품 092"
+    ],
+    "name": "OKCanvas Groupware 제품 092",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-092",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-092",
+    "product_manager_employee_id": "employee-0021",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P093",
+      "OKC Mattermost 제품 093"
+    ],
+    "name": "OKCanvas Mattermost 제품 093",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-093",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-093",
+    "product_manager_employee_id": "employee-0028",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P094",
+      "OpenRill 제품 094"
+    ],
+    "name": "OpenRill 제품 094",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-094",
+    "product_family": "OpenRill",
+    "product_id": "product-094",
+    "product_manager_employee_id": "employee-0035",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P095",
+      "PlanVM 제품 095"
+    ],
+    "name": "PlanVM 제품 095",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-095",
+    "product_family": "PlanVM",
+    "product_id": "product-095",
+    "product_manager_employee_id": "employee-0042",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P096",
+      "DataBridge 제품 096"
+    ],
+    "name": "DataBridge 제품 096",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-096",
+    "product_family": "DataBridge",
+    "product_id": "product-096",
+    "product_manager_employee_id": "employee-0001",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "PLANNED",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P097",
+      "OKC Agent Platform 제품 097"
+    ],
+    "name": "OKCanvas Agent Platform 제품 097",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-097",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-097",
+    "product_manager_employee_id": "employee-0008",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "MAINTENANCE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P098",
+      "OKC Groupware 제품 098"
+    ],
+    "name": "OKCanvas Groupware 제품 098",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-098",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-098",
+    "product_manager_employee_id": "employee-0015",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "MAINTENANCE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P099",
+      "OKC Mattermost 제품 099"
+    ],
+    "name": "OKCanvas Mattermost 제품 099",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-099",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-099",
+    "product_manager_employee_id": "employee-0022",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "MAINTENANCE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P100",
+      "OpenRill 제품 100"
+    ],
+    "name": "OpenRill 제품 100",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-100",
+    "product_family": "OpenRill",
+    "product_id": "product-100",
+    "product_manager_employee_id": "employee-0029",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "MAINTENANCE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P101",
+      "PlanVM 제품 101"
+    ],
+    "name": "PlanVM 제품 101",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-101",
+    "product_family": "PlanVM",
+    "product_id": "product-101",
+    "product_manager_employee_id": "employee-0036",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "MAINTENANCE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P102",
+      "DataBridge 제품 102"
+    ],
+    "name": "DataBridge 제품 102",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-102",
+    "product_family": "DataBridge",
+    "product_id": "product-102",
+    "product_manager_employee_id": "employee-0043",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "MAINTENANCE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P103",
+      "OKC Agent Platform 제품 103"
+    ],
+    "name": "OKCanvas Agent Platform 제품 103",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-103",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-103",
+    "product_manager_employee_id": "employee-0002",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "MAINTENANCE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P104",
+      "OKC Groupware 제품 104"
+    ],
+    "name": "OKCanvas Groupware 제품 104",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-104",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-104",
+    "product_manager_employee_id": "employee-0009",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "MAINTENANCE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P105",
+      "OKC Mattermost 제품 105"
+    ],
+    "name": "OKCanvas Mattermost 제품 105",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-105",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-105",
+    "product_manager_employee_id": "employee-0016",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "END_OF_SALE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P106",
+      "OpenRill 제품 106"
+    ],
+    "name": "OpenRill 제품 106",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-106",
+    "product_family": "OpenRill",
+    "product_id": "product-106",
+    "product_manager_employee_id": "employee-0023",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "END_OF_SALE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P107",
+      "PlanVM 제품 107"
+    ],
+    "name": "PlanVM 제품 107",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-107",
+    "product_family": "PlanVM",
+    "product_id": "product-107",
+    "product_manager_employee_id": "employee-0030",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "END_OF_SALE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P108",
+      "DataBridge 제품 108"
+    ],
+    "name": "DataBridge 제품 108",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-108",
+    "product_family": "DataBridge",
+    "product_id": "product-108",
+    "product_manager_employee_id": "employee-0037",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "END_OF_SALE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P109",
+      "OKC Agent Platform 제품 109"
+    ],
+    "name": "OKCanvas Agent Platform 제품 109",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-109",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-109",
+    "product_manager_employee_id": "employee-0044",
+    "product_type": "SOFTWARE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "END_OF_SALE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P110",
+      "OKC Groupware 제품 110"
+    ],
+    "name": "OKCanvas Groupware 제품 110",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-110",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-110",
+    "product_manager_employee_id": "employee-0003",
+    "product_type": "SERVICE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "END_OF_SALE",
+    "support_status": "SUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  },
+  {
+    "aliases": [
+      "P111",
+      "OKC Mattermost 제품 111"
+    ],
+    "name": "OKCanvas Mattermost 제품 111",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-111",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-111",
+    "product_manager_employee_id": "employee-0010",
+    "product_type": "MODULE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "END_OF_SUPPORT",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.1.0"
+  },
+  {
+    "aliases": [
+      "P112",
+      "OpenRill 제품 112"
+    ],
+    "name": "OpenRill 제품 112",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-112",
+    "product_family": "OpenRill",
+    "product_id": "product-112",
+    "product_manager_employee_id": "employee-0017",
+    "product_type": "CONNECTOR",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "END_OF_SUPPORT",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.2.0"
+  },
+  {
+    "aliases": [
+      "P113",
+      "PlanVM 제품 113"
+    ],
+    "name": "PlanVM 제품 113",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-113",
+    "product_family": "PlanVM",
+    "product_id": "product-113",
+    "product_manager_employee_id": "employee-0024",
+    "product_type": "SOFTWARE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "END_OF_SUPPORT",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.3.0"
+  },
+  {
+    "aliases": [
+      "P114",
+      "DataBridge 제품 114"
+    ],
+    "name": "DataBridge 제품 114",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-114",
+    "product_family": "DataBridge",
+    "product_id": "product-114",
+    "product_manager_employee_id": "employee-0031",
+    "product_type": "SERVICE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "END_OF_SUPPORT",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.4.0"
+  },
+  {
+    "aliases": [
+      "P115",
+      "OKC Agent Platform 제품 115"
+    ],
+    "name": "OKCanvas Agent Platform 제품 115",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-115",
+    "product_family": "OKCanvas Agent Platform",
+    "product_id": "product-115",
+    "product_manager_employee_id": "employee-0038",
+    "product_type": "MODULE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "END_OF_SUPPORT",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.5.0"
+  },
+  {
+    "aliases": [
+      "P116",
+      "OKC Groupware 제품 116"
+    ],
+    "name": "OKCanvas Groupware 제품 116",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-116",
+    "product_family": "OKCanvas Groupware",
+    "product_id": "product-116",
+    "product_manager_employee_id": "employee-0045",
+    "product_type": "CONNECTOR",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "RETIRED",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "2.6.0"
+  },
+  {
+    "aliases": [
+      "P117",
+      "OKC Mattermost 제품 117"
+    ],
+    "name": "OKCanvas Mattermost 제품 117",
+    "owning_department_id": "department.platform-development",
+    "product_code": "PRD-117",
+    "product_family": "OKCanvas Mattermost",
+    "product_id": "product-117",
+    "product_manager_employee_id": "employee-0004",
+    "product_type": "SOFTWARE",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "RETIRED",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "3.7.0"
+  },
+  {
+    "aliases": [
+      "P118",
+      "OpenRill 제품 118"
+    ],
+    "name": "OpenRill 제품 118",
+    "owning_department_id": "department.service-development",
+    "product_code": "PRD-118",
+    "product_family": "OpenRill",
+    "product_id": "product-118",
+    "product_manager_employee_id": "employee-0011",
+    "product_type": "SERVICE",
+    "release_status": "GENERAL_AVAILABILITY",
+    "row_version": 1,
+    "status": "RETIRED",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "4.8.0"
+  },
+  {
+    "aliases": [
+      "P119",
+      "PlanVM 제품 119"
+    ],
+    "name": "PlanVM 제품 119",
+    "owning_department_id": "department.quality-assurance",
+    "product_code": "PRD-119",
+    "product_family": "PlanVM",
+    "product_id": "product-119",
+    "product_manager_employee_id": "employee-0018",
+    "product_type": "MODULE",
+    "release_status": "BETA",
+    "row_version": 1,
+    "status": "RETIRED",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "5.9.0"
+  },
+  {
+    "aliases": [
+      "P120",
+      "DataBridge 제품 120"
+    ],
+    "name": "DataBridge 제품 120",
+    "owning_department_id": "department.product-planning",
+    "product_code": "PRD-120",
+    "product_family": "DataBridge",
+    "product_id": "product-120",
+    "product_manager_employee_id": "employee-0025",
+    "product_type": "CONNECTOR",
+    "release_status": "PLANNED",
+    "row_version": 1,
+    "status": "RETIRED",
+    "support_status": "UNSUPPORTED",
+    "tenant_id": "tenant-a",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "people": [
+    {
+      "aliases": [
+        "Demo Platform Lead",
+        "플랫폼팀장"
+      ],
+      "allowed_principal_ids": [],
+      "allowed_roles": [
+        "agent-user"
+      ],
+      "classification": "INTERNAL",
+      "display_name": "데모 플랫폼팀장",
+      "person_id": "person.demo-lead",
+      "principal_id": "step084-lead",
+      "source_reference": "org://demo/directory/people/demo-lead",
+      "source_title": "STEP084 Demo Directory",
+      "source_version": "2026.08",
+      "status": "ACTIVE",
+      "summary": "STEP084 검증용 플랫폼팀 책임자이다.",
+      "tenant_id": "step084-tenant",
+      "title": "팀장",
+      "unit_id": "unit.platform",
+      "valid_from": "2026-01-01",
+      "valid_until": null
+    }
+  ],
+  "schema_version": "okcanvas-organization-directory-v1",
+  "units": [
+    {
+      "aliases": [
+        "Platform Team",
+        "플랫폼 엔지니어링"
+      ],
+      "allowed_principal_ids": [],
+      "allowed_roles": [
+        "agent-user"
+      ],
+      "classification": "INTERNAL",
+      "name": "플랫폼팀",
+      "parent_unit_id": null,
+      "source_reference": "org://demo/directory/platform",
+      "source_title": "STEP084 Demo Directory",
+      "source_version": "2026.08",
+      "summary": "STEP084 검증용 플랫폼 제품 개발 조직이다.",
+      "tenant_id": "step084-tenant",
+      "unit_id": "unit.platform",
+      "unit_type": "TEAM",
+      "valid_from": "2026-01-01",
+      "valid_until": null
+    }
+  ]
+}

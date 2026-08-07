@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-28",
+  "project_step": "STEP000_REFERENCE_BASELINE",
+  "references": [
+    {
+      "id": "openai-agents-python",
+      "classification": "PRIMARY_SDK_SOURCE",
+      "version": "0.19.0",
+      "source_url": "https://github.com/openai/openai-agents-python",
+      "sha256": "6c2c4b72bb66eeab675f88a34638104f5ffee81bf41ad4e4f7557db0f2703c09",
+      "tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "dest": "openai-agents-python-0.19.0",
+      "file_count": 1419,
+      "byte_count": 17945765,
+      "notes": "Primary implementation reference for Agent, Runner, RunState, sessions, MCP, sandbox, and experimental Codex integration."
+    },
+    {
+      "id": "temporal-openai-agents-demos",
+      "classification": "DURABILITY_EXAMPLE",
+      "version": "unversioned-snapshot",
+      "source_url": "https://github.com/temporal-community/openai-agents-demos",
+      "sha256": "aad353f1ecc765dd2cf7367f3c5b6944a6955d95719c37ccbd546a3c8f212360",
+      "tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "dest": "temporal-openai-agents-demos",
+      "file_count": 36,
+      "byte_count": 774434,
+      "notes": "Temporal workflow/activity integration example. Not a product baseline."
+    },
+    {
+      "id": "openai-cs-agents-demo",
+      "classification": "UX_AND_HANDOFF_EXAMPLE",
+      "version": "unversioned-snapshot",
+      "source_url": "https://github.com/openai/openai-cs-agents-demo",
+      "sha256": "d2e7a5411d9d3ba6c798c7ec7f52c0f6bdfab4f606ee90685c8007311f81de0d",
+      "tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "dest": "openai-cs-agents-demo",
+      "file_count": 43,
+      "byte_count": 1409011,
+      "notes": "Customer-support UI and handoff example. In-memory state and demo-grade boundaries."
+    },
+    {
+      "id": "openai-agents-streaming-api",
+      "classification": "ADAPTER_AND_NEGATIVE_EXAMPLE",
+      "version": "unversioned-snapshot",
+      "source_url": "https://github.com/ahmad2b/openai-agents-streaming-api",
+      "sha256": "60c0b934838f76ea8d4aee2153ae272aaf07500178d5a3f4f295791d4cf7b26b",
+      "tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "dest": "openai-agents-streaming-api",
+      "file_count": 38,
+      "byte_count": 246327,
+      "notes": "REST/SSE adapter ideas and negative examples. Must not be used as a production base."
+    }
+  ]
+}

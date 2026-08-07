@@ -1,0 +1,116 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021208527954Z-f0bf76f2",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:12:08.872169Z",
+    "created_at": "2026-07-30T02:12:08.528249Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP024"
+  },
+  "artifact_count": 1,
+  "artifact_error": null,
+  "artifact_id": "artifact_cc61d548fc4a42f8a4bea8eab6b1d9eb",
+  "checks": {
+    "artifact_verified": true,
+    "business_agent_catalogued": true,
+    "business_output_contract_valid": true,
+    "canonical_run_completed": true,
+    "deterministic_evaluation_passed": true,
+    "exact_confirmation_scheduled_once": true,
+    "gateway_called_once": true,
+    "governed_preflight_created": true,
+    "keys_not_in_product_db": true,
+    "no_tool_or_mcp_events": true,
+    "preflight_created_no_task_or_run": true,
+    "raw_input_not_in_product_db": true,
+    "recommendations_sorted": true,
+    "references_unchanged": true,
+    "replenishment_formula_exact": true,
+    "run_succeeded": true,
+    "single_task_and_run_created": true,
+    "successful_payload_deleted": true
+  },
+  "evaluation_id": "eval_f252d43843dc466bb1a1607e48f1fcfc",
+  "event_types": [
+    "run.created",
+    "run.started",
+    "agent.definition.resolved",
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "agent.completed",
+    "artifact.created",
+    "run.completed",
+    "payload.retention.applied"
+  ],
+  "live_sdk": false,
+  "outcome": {
+    "agent_definition_id": "store-replenishment-review-agent",
+    "agent_definition_version": "1.0.0",
+    "attempt": 1,
+    "completed_at": "2026-07-30T02:12:08.761875Z",
+    "created_at": "2026-07-30T02:12:08.719595Z",
+    "input_tokens": 180,
+    "output_tokens": 220,
+    "run_id": "run_cff6e279cada4ba582a833e13a9289e4",
+    "schema_version": "okcanvas-control-run-v1",
+    "started_at": "2026-07-30T02:12:08.730736Z",
+    "status": "SUCCEEDED",
+    "task_id": "task_db123ce2d76a407083de0f6d904d43d3",
+    "total_tokens": 400,
+    "trace_id": "trace_step024"
+  },
+  "outcome_http_status": 200,
+  "output_recovered": false,
+  "result": {
+    "recommendations": [
+      {
+        "action": "REORDER",
+        "reorder_units": 12,
+        "sku": "ergonomic-keyboard"
+      },
+      {
+        "action": "REORDER",
+        "reorder_units": 7,
+        "sku": "desk-lamp"
+      },
+      {
+        "action": "NO_ACTION",
+        "reorder_units": 0,
+        "sku": "usb-c-dock"
+      }
+    ],
+    "reviewed_skus": 3,
+    "snapshot_id": "case001-shortage",
+    "status": "ACTION_REQUIRED",
+    "total_reorder_units": 19
+  },
+  "run_id": "run_cff6e279cada4ba582a833e13a9289e4",
+  "schema_version": "okcanvas-step024-acceptance-v1",
+  "state": "PASSED",
+  "submission_id": "submission_91458f2071a24e2f9e6e1c7b8047841d",
+  "task_id": "task_db123ce2d76a407083de0f6d904d43d3",
+  "terminal": {
+    "agent_definition_id": "store-replenishment-review-agent",
+    "agent_definition_version": "1.0.0",
+    "attempt": 1,
+    "completed_at": "2026-07-30T02:12:08.761875Z",
+    "created_at": "2026-07-30T02:12:08.719595Z",
+    "input_tokens": 180,
+    "output_tokens": 220,
+    "run_id": "run_cff6e279cada4ba582a833e13a9289e4",
+    "schema_version": "okcanvas-control-run-v1",
+    "started_at": "2026-07-30T02:12:08.730736Z",
+    "status": "SUCCEEDED",
+    "task_id": "task_db123ce2d76a407083de0f6d904d43d3",
+    "total_tokens": 400,
+    "trace_id": "trace_step024"
+  }
+}

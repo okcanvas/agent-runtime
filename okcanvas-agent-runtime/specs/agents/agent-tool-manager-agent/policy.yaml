@@ -1,0 +1,4 @@
+mode: governed-agent-as-tool-v1
+read_only: true
+workspace_access: none
+session_mode: disabled

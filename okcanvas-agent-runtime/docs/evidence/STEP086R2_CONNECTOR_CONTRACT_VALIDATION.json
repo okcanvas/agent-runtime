@@ -1,0 +1,97 @@
+{
+  "checks": {
+    "access_policy_headers_exact": true,
+    "credential_reference_stays_internal": true,
+    "delegated_role_header_transmitted": true,
+    "delegation_fingerprint_retained": true,
+    "example_is_not_mcp": true,
+    "example_repository_optional": true,
+    "external_connector_path_exact": true,
+    "identity_exact": true,
+    "read_only_and_future_write_separate": true,
+    "runtime_external_connector_status_exact": true,
+    "step086r1_windows_parent_accepted": true
+  },
+  "delegated_headers": {
+    "X-OKCanvas-Delegation-ID": "delegation_e8408bf3cc72d0a202c87fdb4f7e580e",
+    "X-OKCanvas-Principal-ID": "user-001",
+    "X-OKCanvas-Roles": "agent-user,employee",
+    "X-OKCanvas-Tenant-ID": "tenant-a"
+  },
+  "deployment": {
+    "actual_external_provider_implemented_in_runtime": false,
+    "boundary": {
+      "boundary_sha256": "a47cb45a0ef955cc8357dd0986afdd7ee4302d3ceaadb9df35ef74e328f5c6a7",
+      "connector_examples_repository": "okcanvas-connector-examples",
+      "connector_examples_required": false,
+      "external_connector_repository": "okcanvas-connectors",
+      "external_groupware_connector_path": "okcanvas-connectors/groupware-mcp-server",
+      "future_write_agent_id": "groupware-action-agent",
+      "future_write_mcp_server_id": "groupware-action",
+      "groupware_api_fake_example_path": "okcanvas-connector-examples/groupware/groupware-api-fake",
+      "groupware_api_fake_is_mcp_server": false,
+      "mcp_client_declaration_location": "runtime-internal",
+      "mcp_provider_deployment": "external-connector-service",
+      "mcp_provider_implementation_in_runtime": false,
+      "organization_specific_adapter_in_runtime": false,
+      "read_agent_definition_location": "runtime-internal",
+      "read_agent_permanently_read_only": true,
+      "schema_version": "okcanvas-groupware-deployment-boundary-v2",
+      "test_fixture_location": "runtime-internal",
+      "write_extension_strategy": "separate-agent-separate-mcp-separate-credential"
+    },
+    "connector_example_required": false,
+    "external_connector_live_groupware_verified": false,
+    "external_connector_project_selected": true,
+    "fixture_contract_expected_count": 3,
+    "provider_contract": {
+      "contract_sha256": "f12f58d53909e6402864cff9c5fa54f659a093489fc0bcc1c898cdb397cbf5cd",
+      "credential_reference_transmitted": false,
+      "external_connector_project_path": "okcanvas-connectors/groupware-mcp-server",
+      "provider_deployment": "external-connector-service",
+      "provider_implemented_in_runtime": false,
+      "required_identity_fields": [
+        "tenant_id",
+        "principal_id",
+        "roles",
+        "delegation_id"
+      ],
+      "required_identity_headers": [
+        "X-OKCanvas-Tenant-ID",
+        "X-OKCanvas-Principal-ID",
+        "X-OKCanvas-Roles",
+        "X-OKCanvas-Delegation-ID"
+      ],
+      "schema_version": "okcanvas-groupware-read-provider-contract-v2",
+      "server_id": "groupware-read",
+      "tools": [
+        {
+          "input_schema_version": "okcanvas-groupware-search-notices-input-v1",
+          "mutates": false,
+          "output_schema_version": "okcanvas-groupware-search-notices-result-v1",
+          "tool_name": "search_notices"
+        },
+        {
+          "input_schema_version": "okcanvas-groupware-search-mail-input-v1",
+          "mutates": false,
+          "output_schema_version": "okcanvas-groupware-search-mail-result-v1",
+          "tool_name": "search_mail"
+        },
+        {
+          "input_schema_version": "okcanvas-groupware-list-calendar-events-input-v1",
+          "mutates": false,
+          "output_schema_version": "okcanvas-groupware-list-calendar-events-result-v1",
+          "tool_name": "list_calendar_events"
+        }
+      ],
+      "transport": "remote-streamable-http"
+    },
+    "schema_version": "okcanvas-groupware-deployment-foundation-v2"
+  },
+  "passed_checks": 11,
+  "schema_version": "okcanvas-step086r2-connector-contract-validation-v1",
+  "state": "PASSED",
+  "step": "STEP086R2_DELEGATED_ROLE_HEADER_AND_EXTERNAL_CONNECTOR_CONTRACT_CLOSURE",
+  "total_checks": 11,
+  "version": "2.66.2"
+}

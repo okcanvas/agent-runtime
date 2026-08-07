@@ -1,0 +1,75 @@
+STEP065_STRICT_SESSION_HISTORY_KEY_ROTATION_AND_RECOVERY_V1
+Version: 2.45.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+PREDECESSOR
+- STEP064A Windows live accepted: 19/19
+- embedded corrected STEP064: 29/29
+
+CODE-AUDITED PRODUCT BOUNDARY
+- explicit one-Session history-key rotation only
+- target/current key: OKCANVAS_SESSION_HISTORY_KEY
+- source/previous key: OKCANVAS_SESSION_HISTORY_PREVIOUS_KEY
+- current, previous and protected-payload keys pairwise distinct
+- no raw key in HTTP, SQLite catalog, Product events or Artifacts
+- pinned SDK 0.19.0 SQLiteSession source SHA-256:
+  55e998777c4d15e667b819965b1bd5d66c7391969e4cd270fdd1a6498dccbf16
+- exact physical schema: agent_sessions / agent_messages / message_data
+- maximum physical history rows: 256
+- product-owned durable intent: product_session_key_rotation
+- maintenance lease: active_run_id=session_rotation_<uuid>
+- physical history rewrite: one BEGIN IMMEDIATE transaction
+- every target envelope authenticated before history commit
+- process interruption after history commit resumes by physical key-ID inspection
+- mixed/plaintext/malformed/unknown history fails closed
+- incomplete rotation may be explicitly cleared without decrypting
+- policy mode is validated before intent/lease creation
+- automatic, batch, startup and background rotation disabled
+
+SOURCE VALIDATION
+- STEP065 acceptance: 26/26 PASS
+- focused rotation tests: 11/11 PASS
+- historical Session/encryption/compaction group: 41/41 PASS
+- Python full regression, independently terminated groups:
+  - 107 passed
+  - 84 passed
+  - 72 passed
+  - 45 passed
+  - 17 passed
+  - 69 passed
+  - 111 passed
+  - 154 passed
+  - total 659/659 PASS
+- Python compileall: PASS
+- committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0 PASS
+
+CURRENT PRODUCT HASHES
+- de621f11729a3ab0aa88d2c93aa857c1db21f74813edf244ec2fc5e938823ab0  src/okcanvas_agent_runtime/sessions/rotation.py
+- 721a35f40a4d3129814f779ca3605e036803be701556460e19392a26b7a1c0cf  src/okcanvas_agent_runtime/sessions/rotation_policy.py
+- aae6ea45004e66a55db3b30c6c547a27e8977f8b1e5da3b174efec426076ae14  src/okcanvas_agent_runtime/sessions/service.py
+- 8ec01d1af5c71932e5b6dfa4ec0a0aca752f9c952525701aa01fcf2d5d274135  specs/runtime/sqlite-session-key-rotation-policy.json
+- 9c98bfbbaa539866d83ca8222f454145959d703dc175b5778576b0d888836ac3  src/okcanvas_agent_runtime/control_api/app.py
+- b5a069b3a769d419abe4bd636a15f67efb0785b966a4bbc6acbde1e066d939eb  src/okcanvas_agent_runtime/control_api/contracts.py
+
+NETWORK/MODEL
+- no real OpenAI model call was required or made
+- no remote Session backend was used
+
+PACKAGE RE-EXTRACTION VALIDATION
+- candidate ZIP SHA-256: 405da5ce207779cbeb52deb04f1a0763c7797aec43e1a6edc21f4e4343b00f25
+- canonical ZIP root: 1 (`okcanvas-agent-runtime`)
+- ZIP entries: 2,840
+- forbidden cache/venv/node_modules/temp files: 0
+- extracted STEP065 acceptance: 26/26 PASS
+- extracted focused rotation tests: 11/11 PASS
+- extracted historical Session/encryption/compaction tests: 41/41 PASS
+- extracted full Python regression groups: 107 + 84 + 72 + 45 + 17 + 69 + 111 + 154 = 659/659 PASS
+- extracted committed TypeScript release integrity: PASS
+- extracted Node tests: 14/14 PASS
+- extracted Reference integrity: 4/4 PASS
+- extracted direct /reference imports: 0 PASS
+- final ZIP will differ from the candidate only by this completed validation record

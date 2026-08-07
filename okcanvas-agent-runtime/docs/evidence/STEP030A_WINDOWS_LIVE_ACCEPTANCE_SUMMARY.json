@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP030A",
+  "baseline": "STEP030A_WINDOWS_VENV_LAUNCHER_FIX",
+  "project_version": "2.10.1",
+  "status": "WINDOWS_LIVE_ACCEPTED",
+  "reported_local_date": "2026-07-30",
+  "command": "sh_run_step030a_acceptance",
+  "state": "PASSED",
+  "checks": {
+    "step030_launcher_uses_project_venv": true,
+    "step030_launcher_rejects_missing_venv": true,
+    "step030_launcher_has_no_bare_python": true,
+    "all_runtime_launchers_use_project_venv": true,
+    "step030_entrypoint_route_preserved": true,
+    "setup_installs_project_into_venv": true,
+    "fastapi_is_declared_project_dependency": true,
+    "step030a_baseline_exact": true
+  },
+  "launcher_count": 35,
+  "launcher_violations": [],
+  "fixed_launcher": "sh_run_step030_acceptance.cmd",
+  "note": "This Windows result closed the packaged project-venv launcher correction before STEP030 Product acceptance was rerun."
+}

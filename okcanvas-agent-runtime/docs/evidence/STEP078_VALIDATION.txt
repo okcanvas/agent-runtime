@@ -1,0 +1,48 @@
+STEP078_PRODUCT_OWNED_ATOMIC_SERVICE_SUBMISSION_OWNERSHIP_TRANSFER
+version=2.58.0
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+WORKING TREE VALIDATION
+STEP078 deterministic acceptance=34/34 PASS
+focused regression=71/71 PASS
+historical regression=33/33 PASS
+full Python regression=854/854 PASS
+Python test files=216
+Node tests=14/14 PASS
+Reference integrity=4/4 PASS
+direct reference imports=0
+npm pack dry-run=23 files PASS
+Docker calls=0
+external network calls=0
+model calls=0
+
+FULL PYTHON EXECUTION NOTE
+The 216 test files were executed in bounded exhaustive groups because one combined command exceeded the execution harness limit. Every file was included exactly once. Results: 120 + 113 + 117 + 108 + 160 + 65 + 97 + 74 = 854 passing tests.
+
+CANDIDATE ZIP FRESH VALIDATION
+candidate ZIP roots=1 (okcanvas-agent-runtime)
+candidate ZIP entries=3156
+candidate forbidden files=0
+fresh STEP078 acceptance=34/34 PASS
+fresh focused regression=71/71 PASS
+fresh historical regression=33/33 PASS
+fresh full Python regression=854/854 PASS
+fresh Python test files=216
+fresh Node tests=14/14 PASS
+fresh Reference integrity=4/4 PASS
+fresh direct reference imports=0
+fresh npm pack dry-run=23 files PASS
+
+PRE-FINAL ARCHIVE FRESH VALIDATION
+archive SHA-256=f191235e0c1e7e03f1963503d088a15fc72e31c05cee3da361c85031461f9ac4
+archive roots=1 (okcanvas-agent-runtime)
+archive entries=3156
+archive forbidden files=0
+fresh STEP078 acceptance=34/34 PASS
+fresh focused regression=71/71 PASS
+fresh historical regression=33/33 PASS
+fresh full Python regression=854/854 PASS
+fresh Python test files=216
+
+FINAL DISTRIBUTION RULE
+After embedding this validation record, package_source.py is run once more. The final archive is not modified afterward. Its exact SHA-256 is supplied by the adjacent .sha256 file. Final extraction must pass STEP078 acceptance and have a byte-identical src/, scripts/, tests/, specs/, clients/ and reference/ payload to this fully regressed tree.

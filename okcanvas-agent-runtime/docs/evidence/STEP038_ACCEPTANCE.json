@@ -1,0 +1,167 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260731T125533942933Z-6e59deda",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-31T12:55:34.716016Z",
+    "created_at": "2026-07-31T12:55:33.943208Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP038"
+  },
+  "approve": {
+    "approval_id": "approval_279504f4465f45e089c51b4a4ab280da",
+    "evaluation_state": "PASSED",
+    "event_types": [
+      "run.created",
+      "run.started",
+      "agent.definition.resolved",
+      "agent.started",
+      "model.started",
+      "model.completed",
+      "tool.approval.requested",
+      "run.interrupted",
+      "tool.approval.decided",
+      "run.resumed",
+      "agent.started",
+      "tool.started",
+      "tool.completed",
+      "agent.completed",
+      "artifact.created",
+      "run.completed",
+      "payload.retention.applied"
+    ],
+    "replayed": true,
+    "run_id": "run_0b408a62c583435590da73c5fa016c7a",
+    "submission_id": "submission_ccddbef6891c4d0e89da2b6c3f5a0b29",
+    "tool_execution_count": 1
+  },
+  "checks": {
+    "agent_and_evaluation_catalogs_include_both_modes": true,
+    "approval_prepared_twice": true,
+    "approval_tool_mode_exact": true,
+    "approved_artifact_and_evaluation_passed": true,
+    "approved_decision_replay_exact": true,
+    "approved_tool_executed_exactly_once": true,
+    "final_evaluation_count_exact": true,
+    "final_product_counts_exact": true,
+    "function_tool_registry_contains_expected_modes_and_project_inspection": true,
+    "raw_inputs_and_outputs_not_in_tool_events": true,
+    "raw_inputs_not_in_product_or_evaluation_db": true,
+    "read_only_artifact_verified": true,
+    "read_only_evaluation_passed": true,
+    "read_only_preflight_scheduled_existing_path": true,
+    "read_only_run_succeeded": true,
+    "read_only_tool_executed_once": true,
+    "read_only_tool_mode_exact": true,
+    "references_unchanged": true,
+    "rejected_decision_replay_exact": true,
+    "rejected_tool_never_executed": true,
+    "shared_registry_serves_both_execution_modes": true,
+    "successful_payloads_deleted_rejected_retained": true,
+    "tool_contracts_runtime_bound": true,
+    "tool_event_metadata_is_safe": true
+  },
+  "final_counts": {
+    "approvals": 2,
+    "artifacts": 2,
+    "evaluations": 2,
+    "runs": 3,
+    "submissions": 3,
+    "tasks": 3
+  },
+  "gateway_counts": {
+    "approval_prepare": 2,
+    "approval_resume": 2,
+    "generic": 1
+  },
+  "protected_payload_file_count": 1,
+  "read_only": {
+    "evaluation_state": "PASSED",
+    "event_types": [
+      "run.created",
+      "run.started",
+      "agent.definition.resolved",
+      "agent.started",
+      "model.started",
+      "tool.started",
+      "tool.completed",
+      "model.completed",
+      "agent.completed",
+      "artifact.created",
+      "run.completed",
+      "payload.retention.applied"
+    ],
+    "gateway_calls": 1,
+    "run_id": "run_cb72e77f968d41fa8ff8c23d357ba7c9",
+    "submission_id": "submission_fa83c7ec760b4a3f8551bda38836aa38",
+    "tool_execution_count": 1
+  },
+  "registry_count": 3,
+  "reject": {
+    "approval_id": "approval_d2e5c51a1b20421aacbd5c31677aa677",
+    "event_types": [
+      "run.created",
+      "run.started",
+      "agent.definition.resolved",
+      "agent.started",
+      "model.started",
+      "model.completed",
+      "tool.approval.requested",
+      "run.interrupted",
+      "tool.approval.decided",
+      "run.resumed",
+      "agent.started",
+      "agent.completed",
+      "run.cancelled",
+      "payload.retention.applied"
+    ],
+    "replayed": true,
+    "run_id": "run_a692ae862b19418da03eb434006a816c",
+    "submission_id": "submission_91a391d7668d4bf99bb9c7694f39e825",
+    "tool_execution_count": 0
+  },
+  "schema_version": "okcanvas-step038-acceptance-v1",
+  "sdk_factory_probe": {
+    "error_type": "FunctionToolExecutionError",
+    "installed_sdk_available": false
+  },
+  "state": "PASSED",
+  "tools": [
+    {
+      "approval_mode": "NEVER",
+      "filesystem_access": "none",
+      "network_access": "none",
+      "read_only": true,
+      "runtime_version": "1.0.0",
+      "shell_access": "none",
+      "strict_json_schema": true,
+      "tool_id": "local_text_fingerprint"
+    },
+    {
+      "approval_mode": "ALWAYS",
+      "filesystem_access": "none",
+      "network_access": "none",
+      "read_only": true,
+      "runtime_version": "1.0.0",
+      "shell_access": "none",
+      "strict_json_schema": true,
+      "tool_id": "local_text_metrics"
+    },
+    {
+      "approval_mode": "NEVER",
+      "filesystem_access": "read-only",
+      "network_access": "none",
+      "read_only": true,
+      "runtime_version": "1.0.0",
+      "shell_access": "none",
+      "strict_json_schema": true,
+      "tool_id": "project_readonly_inspect"
+    }
+  ]
+}

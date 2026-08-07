@@ -1,0 +1,31 @@
+{
+  "schema_version": "okcanvas-step058-windows-live-acceptance-summary-v1",
+  "step_id": "STEP058",
+  "step_name": "STEP058_NODE_CLI_TOOL_AND_SUB_AGENT_WORKFLOW_VISIBILITY",
+  "version": "2.38.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-31T11:03:35.326457Z",
+  "checks_passed": 18,
+  "checks_total": 18,
+  "gateway_calls": [
+    "local-text-fingerprint-agent",
+    "handoff-triage-agent",
+    "agent-tool-manager-agent"
+  ],
+  "final_counts": {
+    "tasks": 3,
+    "runs": 3,
+    "submissions": 3,
+    "invocations": 5,
+    "events": 35,
+    "artifacts": 3,
+    "evaluations": 0
+  },
+  "protected_payload_file_count": 0,
+  "node_process_returncode": 0,
+  "runtime_dependencies": 0,
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1,
+  "source": "user-reported complete sh_run_step058_acceptance output"
+}

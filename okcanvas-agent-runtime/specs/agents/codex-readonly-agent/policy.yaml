@@ -1,0 +1,13 @@
+id: codex-readonly-agent
+mode: read-only
+tools:
+  allow:
+    - codex_engineer
+handoffs: []
+workspace_write: false
+web_search_requested: false
+arbitrary_command_network_denial_live_verified: false
+approval_policy: never
+thread_persistence: explicit-file
+accepted_workspace_class:
+  - controlled-disposable-fixture

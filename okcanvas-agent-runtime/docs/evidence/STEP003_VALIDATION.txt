@@ -1,0 +1,61 @@
+STEP003_DISPOSABLE_WORKSPACE_WRITE_AND_INDEPENDENT_VALIDATION
+Status: IMPLEMENTED_NOT_LIVE_ACCEPTED
+Version: 0.3.0
+Date: 2026-07-28
+
+Executed in the artifact build environment:
+
+1. PYTHONPATH=src python scripts/sync_agent_contracts.py
+   PASS
+
+2. python -m compileall -q src scripts tests
+   PASS
+
+3. pytest -q
+   PASS: 65 tests
+
+4. PYTHONPATH=src python scripts/verify_reference.py
+   PASS: 4/4 immutable references
+
+5. PYTHONPATH=src python scripts/verify_codex_fixture.py
+   PASS: intentional STEP002 quantity defect reproduced
+   fixture tree SHA-256: 8c1023ce21afe7fc4b6cef0a0ed835a8e811424756debb5e9c3fe5f5fc3967d0
+
+6. PYTHONPATH=src python scripts/verify_codex_write_fixture.py
+   PASS:
+   - baseline independent pytest validation: 1 failed
+   - known minimal repair in temporary copy: 1 passed
+   - source fixture unchanged
+   - source fixture tree SHA-256 before/after:
+     e9d003aa7910bfd15fea88a8a4c70d41ddaabe3518fb9b363d2c36aea3c4dae7
+
+7. PYTHONPATH=src python -m okcanvas_agent_runtime info --pretty
+   PASS:
+   - step: STEP003_DISPOSABLE_WORKSPACE_WRITE_AND_INDEPENDENT_VALIDATION
+   - version: 0.3.0
+   - workspace_write_implemented: true
+   - workspace_write_live_accepted: false
+   - independent_validation_implemented: true
+   - workspace_write_enabled: false
+
+Implemented and test-covered boundaries:
+
+- Codex sandbox_mode=workspace-write only in a disposable Git copy.
+- Four explicit whole-run opt-ins.
+- Exact existing-file allowlist and expected-file checks.
+- No symlinks, dirty baseline, new files, staged changes, deletion, rename/copy,
+  binary changes, commits, web search, MCP, or out-of-allowlist modifications.
+- External JSONL, write envelope, and patch SHA-256 evidence.
+- Independent pytest validator outside Codex.
+- Baseline-failure and post-repair-success acceptance sequence.
+- Source fixture immutability.
+- Post-run Agent and Codex token budgets.
+
+Not executed and not claimed:
+
+- Actual OpenAI/Codex workspace-write call.
+- Actual Windows STEP003 live acceptance.
+- External/user project mutation.
+- Patch promotion.
+- Command-level Codex HITL.
+- MCP, API/SSE/UI, Windows validation worker, Java/Vue/PostgreSQL/browser/PDF validation.

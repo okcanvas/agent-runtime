@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-mcp-server-v2",
+  "server_id": "organization-search",
+  "version": "1.0.0",
+  "name": "Organization Search MCP",
+  "kind": "remote-streamable-http",
+  "url": "https://mcp.example.invalid/mcp",
+  "authorization_mode": "bearer-env",
+  "authorization_env": "OKCANVAS_MCP_ORGANIZATION_SEARCH_BEARER",
+  "allowed_tools": [
+    "search_documents",
+    "read_document"
+  ],
+  "read_only": true,
+  "cache_tools_list": true,
+  "connect_timeout_seconds": 10.0,
+  "cleanup_timeout_seconds": 5.0,
+  "tool_timeout_seconds": 15.0,
+  "http_timeout_seconds": 15.0,
+  "sse_read_timeout_seconds": 120.0,
+  "max_retry_attempts": 0,
+  "retry_backoff_seconds_base": 1.0,
+  "max_result_chars": 24000
+}

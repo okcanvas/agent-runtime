@@ -1,0 +1,41 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-17",
+  "partition_number": 17,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:11:00.258197+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 13,
+  "test_count": 72,
+  "passed_tests": 72,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 9.365,
+  "exit_code": 0,
+  "files_sha256": "3307f01782ade8bfe36bcc8c0d2a1d2a1877db2f6db0b03a643dbfaf884af002",
+  "log_sha256": "0aa717fa27fe0c1ae0a9429edcb5aa38bdc540332df43dd0d5f1ea581f69fea7",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step086r1_groupware_subagent_and_external_mcp_boundary_alignment.py",
+    "tests/test_step086r2_delegated_role_header_and_external_connector_contract_closure.py",
+    "tests/test_step087_main_assistant_stateless_groupware_subagent_delegation.py",
+    "tests/test_step087r1_live_agent_tool_turn_budget_closure.py",
+    "tests/test_step087r2_session_referential_continuation_routing.py",
+    "tests/test_step088_organization_context_session_delegation.py",
+    "tests/test_step088r1_organization_context_bounded_response_diagnostics.py",
+    "tests/test_step089_organization_context_short_expression_routing.py",
+    "tests/test_step090_organization_context_ambiguous_result_normalization.py",
+    "tests/test_step091_organization_context_mcp_output_adapter_and_tool_choice.py",
+    "tests/test_step091b1_typed_persistence_ports_and_transaction_ownership.py",
+    "tests/test_step091b2_postgresql_product_and_submission_atomic_store.py",
+    "tests/test_step091b3_postgresql_approval_evaluation_and_session_metadata.py"
+  ]
+}

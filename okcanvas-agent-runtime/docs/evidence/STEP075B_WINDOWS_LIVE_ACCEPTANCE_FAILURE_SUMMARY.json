@@ -1,0 +1,50 @@
+{
+  "acceptance_workspace_state": "PRESERVED",
+  "agent_failure": {
+    "code": "SDK_RUN_FAILED",
+    "detail_type": "UserError",
+    "retryable": true
+  },
+  "deterministic_acceptance": {
+    "passed_checks": 34,
+    "total_checks": 34
+  },
+  "live_acceptance": {
+    "passed_checks": 13,
+    "total_checks": 29
+  },
+  "model": "gpt-4.1",
+  "model_calls": 1,
+  "product_database_relative_path": "databases/product.sqlite3",
+  "root_cause": {
+    "product_source": "src/okcanvas_agent_runtime/sandbox_runtime/read_only_workspace.py",
+    "status": "CODE_AND_UPSTREAM_DOCUMENTATION_CONFIRMED",
+    "summary": "The Product copied a host directory into /workspace with docker container cp, while /workspace is a user-created tmpfs mount. Docker documents tmpfs and user-created mounts as docker cp corner cases and recommends tar streaming through docker exec instead.",
+    "upstream_documentation": "https://docs.docker.com/reference/cli/docker/container/cp/#corner-cases"
+  },
+  "run_failure": {
+    "code": "SDK_RUN_FAILED",
+    "detail_type": "UserError",
+    "retryable": true
+  },
+  "run_id": "run_8a9c26eb90de4e5b9248e2805e268612",
+  "schema_version": "okcanvas-step075b-windows-live-failure-summary-v1",
+  "state": "FAILED",
+  "step": "STEP075B_WINDOWS_DOCKER_COMMAND_OPERATION_EVIDENCE",
+  "terminal_status": "FAILED",
+  "tool_failure": {
+    "cleanup_attempted": true,
+    "cleanup_completed": true,
+    "code": "DOCKER_COMMAND_FAILED",
+    "detail_type": "SandboxDockerError",
+    "operation": "container.copy_snapshot",
+    "orphan_count": 0,
+    "output_truncated": false,
+    "raw_arguments_persisted": false,
+    "raw_message_persisted": false,
+    "raw_output_persisted": false,
+    "return_code": 1,
+    "stderr_category": "UNKNOWN"
+  },
+  "version": "2.55.2"
+}

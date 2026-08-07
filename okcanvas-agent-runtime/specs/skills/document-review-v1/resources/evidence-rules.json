@@ -1,0 +1,8 @@
+{
+  "evidence_source": "supplied-local-attachment-only",
+  "external_lookup_allowed": false,
+  "hidden_metadata_allowed": false,
+  "guessing_allowed": false,
+  "unreadable_content_action": "add-to-unverified",
+  "output_url_ownership": "none"
+}

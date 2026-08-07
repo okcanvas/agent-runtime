@@ -1,0 +1,13 @@
+{
+  "catalog_id": "organization-context-step084-fixture",
+  "directory_file": "directory.json",
+  "directory_sha256": "a12f13a60c52b81dc5fff776bf2bb9422e2463e97b234e0e86a4e252bdacd88a",
+  "effective_at": "2026-08-04T00:00:00Z",
+  "glossary_file": "glossary.json",
+  "glossary_sha256": "52c459246b5523b74726f0b82019751549059c49bf406ad64f75c3c9a391a378",
+  "knowledge_file": "knowledge.json",
+  "knowledge_sha256": "71d09a427c37a03f79a7698909d8ac6217b75464413a921c4804ad643ba43d4d",
+  "schema_version": "okcanvas-organization-context-manifest-v1",
+  "state": "READY",
+  "version": "1.0.0"
+}

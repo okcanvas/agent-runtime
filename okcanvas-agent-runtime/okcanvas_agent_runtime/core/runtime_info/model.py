@@ -1,0 +1,49 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from okcanvas_agent_runtime.core.runtime_info.agent_session import AgentSessionRuntimeInfoFields
+
+@dataclass(frozen=True)
+class ModelRuntimeInfoFields(AgentSessionRuntimeInfoFields):
+    immutable_model_routing_policy_implemented: bool = True
+    immutable_model_provider_id: str = 'openai'
+    immutable_model_api: str = 'responses'
+    immutable_model_transport: str = 'http'
+    immutable_model_official_base_url_forced: bool = True
+    immutable_model_provider_prefixes_allowed: bool = False
+    immutable_model_automatic_fallback_enabled: bool = False
+    immutable_model_runtime_binding_bound: bool = True
+    immutable_model_provider_close_implemented: bool = True
+    immutable_model_route_deterministic_accepted: bool = True
+    immutable_model_route_windows_live_accepted: bool = True
+    immutable_model_retry_policy_implemented: bool = True
+    immutable_model_runner_managed_max_retries: int = 0
+    immutable_model_provider_managed_max_retries: int = 0
+    immutable_model_conversation_locked_compatibility_retries: bool = False
+    immutable_model_retryable_category_count: int = 0
+    immutable_model_retry_runtime_binding_bound: bool = True
+    immutable_model_retry_deterministic_accepted: bool = True
+    immutable_model_retry_windows_live_accepted: bool = True
+    immutable_reasoning_evidence_policy_implemented: bool = True
+    immutable_reasoning_summary_requested: bool = False
+    immutable_reasoning_response_include_count: int = 0
+    immutable_reasoning_content_persisted: bool = False
+    immutable_reasoning_summary_persisted: bool = False
+    immutable_reasoning_item_ids_persisted: bool = False
+    immutable_reasoning_provider_data_persisted: bool = False
+    immutable_reasoning_token_count_persisted: bool = True
+    immutable_reasoning_runtime_binding_bound: bool = True
+    immutable_reasoning_deterministic_accepted: bool = True
+    immutable_reasoning_windows_live_accepted: bool = True
+    immutable_response_storage_policy_implemented: bool = True
+    immutable_response_store_requested: bool = False
+    immutable_response_storage_runtime_binding_bound: bool = True
+    immutable_response_storage_deterministic_accepted: bool = True
+    immutable_response_storage_windows_live_accepted: bool = True
+    immutable_provider_identifier_policy_implemented: bool = True
+    immutable_provider_response_id_persisted: bool = False
+    immutable_provider_request_id_persisted: bool = False
+    immutable_provider_identifier_presence_persisted: bool = True
+    immutable_provider_identifier_runtime_binding_bound: bool = True
+    immutable_provider_identifier_deterministic_accepted: bool = True
+    immutable_provider_identifier_windows_live_accepted: bool = True

@@ -1,0 +1,123 @@
+STEP056_TUI_CLIENT_FOUNDATION
+version=2.36.0
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+validation_date=2026-07-31
+
+SOURCE TREE VALIDATION
+- python compileall src/scripts/tests: PASS
+- focused new TUI tests: 13/13 PASS
+- current baseline and launcher focused regression: 46/46 PASS
+- full pytest collected: 544 tests across 168 test files
+- full pytest split execution: 152 + 172 + 142 + 78 = 544/544 PASS
+
+DETERMINISTIC ACCEPTANCE
+- STEP056: 21/21 PASS
+- loopback HTTP: PASS
+- remote URL rejection: PASS
+- exact confirmation local mismatch creates Task/Run 0/0: PASS
+- persisted SSE sequences: 1..10 exact
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/2/1/10/1/1
+- protected payload files: 1
+- client close: PASS
+- cleanup: COMPLETED in one attempt
+
+SOURCE REGRESSION ACCEPTANCE
+- STEP055: 35/35 PASS, cleanup COMPLETED
+- STEP054: 30/30 PASS, cleanup COMPLETED
+- STEP050: 31/31 PASS, cleanup COMPLETED
+- STEP045: 28/28 PASS, cleanup COMPLETED
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 62
+- launcher violations: 0
+
+REFERENCE
+- immutable Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+CANDIDATE ZIP
+- canonical archive root: 1
+- ZIP entries: 2602
+- prohibited files: 0
+- immutable Reference .vscode files preserved: 2
+
+INDEPENDENT CANDIDATE EXTRACTION
+- python compileall: PASS
+- pytest collected: 544
+- pytest split execution: 152 + 94 + 78 + 142 + 78 = 544/544 PASS
+- STEP056: 21/21 PASS, cleanup COMPLETED
+- STEP055: 35/35 PASS, cleanup COMPLETED
+- STEP054: 30/30 PASS, cleanup COMPLETED
+- STEP053: 30/30 PASS, cleanup COMPLETED
+- STEP052: 25/25 PASS, cleanup COMPLETED
+- STEP051: 25/25 PASS, cleanup COMPLETED
+- STEP050: 31/31 PASS, cleanup COMPLETED
+- STEP049: 33/33 PASS, cleanup COMPLETED
+- STEP048: 32/32 PASS, cleanup COMPLETED
+- STEP047: 29/29 PASS, cleanup COMPLETED
+- STEP046: 27/27 PASS, cleanup COMPLETED
+- STEP045: 28/28 PASS, cleanup COMPLETED
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS, cleanup COMPLETED
+- STEP042: 29/29 PASS, cleanup COMPLETED
+- STEP041: 24/24 PASS, cleanup COMPLETED
+- STEP039: 20/20 PASS, cleanup COMPLETED
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 62
+- launcher violations: 0
+- immutable Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+FINAL PACKAGE RULE
+- regenerate after recording this validation
+- compare candidate and final entry hashes
+- only STEP056_VALIDATION.txt may differ
+
+FINAL TESTED ZIP EXTRACTION
+- candidate-to-tested-final entry comparison: 2602/2602 names identical
+- candidate-to-tested-final changed entries: STEP056_VALIDATION.txt only
+- python compileall: PASS
+- pytest collected: 544
+- pytest split execution: 152 + 94 + 50 + 28 + 142 + 78 = 544/544 PASS
+- STEP056: 21/21 PASS, cleanup COMPLETED
+- STEP055: 35/35 PASS, cleanup COMPLETED
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 62
+- launcher violations: 0
+- immutable Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+DEPLOYMENT ZIP
+- regenerated after this final extraction record
+- executable code, tests, policies, Acceptance and immutable Reference remain byte-identical to the tested-final ZIP
+- only STEP056_VALIDATION.txt changes after the tested-final ZIP
+
+POST-PACKAGE WINDOWS STARTUP CORRECTION
+- Reported manual command: sh_run_api
+- Product key parser: correctly rejected a value that did not decode to exactly 32 bytes
+- Root cause: local placeholder/invalid key plus incomplete .env.local.cmd.example and late launcher diagnostics
+- Corrected: pre-uvicorn Control API environment validation, non-secret generation hint, aligned env examples
+- Regression: invalid key does not invoke uvicorn and secret/placeholder value is not echoed
+- STEP056 remains WINDOWS_LIVE_RERUN_PENDING until corrected package manual API/TUI/acceptance results are reported
+
+CORRECTED PACKAGE VALIDATION
+- compileall src/scripts/tests: PASS
+- focused environment/protected-payload/TUI tests: 44/44 PASS
+- full pytest body: 548/548 PASS
+- clean split exits: 202 + 189 + 157 = 548/548 PASS
+- STEP056 deterministic acceptance: 21/21 PASS; cleanup COMPLETED
+- STEP055 regression acceptance: 35/35 PASS; cleanup COMPLETED
+- STEP030A Windows launcher audit: 8/8 PASS; launchers 62; violations 0
+- immutable Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+- invalid protected-payload key regression: uvicorn not invoked; configured value not echoed; generation hint emitted
+
+INDEPENDENT CORRECTED CANDIDATE ZIP VALIDATION
+- canonical root: 1
+- compileall: PASS
+- all 168 test files: 202 + 189 + 157 = 548/548 PASS
+- STEP056: 21/21 PASS; cleanup COMPLETED
+- STEP030A: 8/8 PASS; launchers 62; violations 0
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+- .env.local.cmd.example contains Run-submitter, protected-payload root/state/key and generation command
+- Windows entrypoint rejects invalid protected-payload keys before uvicorn without echoing configured values

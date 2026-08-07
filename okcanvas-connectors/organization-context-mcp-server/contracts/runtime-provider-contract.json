@@ -1,0 +1,12 @@
+{
+  "agent_grounding_integration": "IMPLEMENTED_STATELESS_CHILD_MCP",
+  "credential_reference_transmitted": false,
+  "endpoint_template": "/tenants/{tenant_id}/mcp",
+  "external_connector_project_path": "okcanvas-connectors/organization-context-mcp-server",
+  "pre_routing_integration": "IMPLEMENTED_RUNTIME_POLICY_CALL",
+  "production_source_of_truth": "DATABASE",
+  "read_only": true,
+  "schema_version": "okcanvas-organization-context-provider-contract-v2",
+  "tool_count": 8,
+  "transport": "MCP_STREAMABLE_HTTP"
+}

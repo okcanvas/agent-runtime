@@ -1,0 +1,31 @@
+{
+  "current_documents": [
+    "README.md",
+    "HANDOFF.md",
+    "PLANS.md",
+    "okcanvas-agent-runtime/README.md",
+    "okcanvas-agent-runtime/HANDOFF.md",
+    "okcanvas-agent-runtime/PLANS.md",
+    "docs/plans/OKCANVAS_AGENT_RUNTIME_PRODUCTIZATION_MASTER_PLAN.md"
+  ],
+  "historical_evidence_policy": "IMMUTABLE_DO_NOT_REWRITE_HISTORICAL_STEP_IDENTITY",
+  "identity_markers": {
+    "runtime_step_label": "Current Runtime",
+    "runtime_version_label": "Runtime Version",
+    "workspace_step_label": "Current Workspace",
+    "workspace_version_label": "Workspace Version"
+  },
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "parent_workspace_step": "WORKSPACE_STEP008R4R7A_CURRENT_DOCUMENT_SOT_ALIGNMENT_AND_PER_FILE_IDENTITY_GATE",
+  "parent_workspace_version": "0.8.4-r7a",
+  "promotion": "NOT_READY",
+  "runtime_product_source_changed": false,
+  "runtime_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.75.0",
+  "schema_version": "okcanvas-agent-platform-current-baseline-v1",
+  "source_release_sha256": "ae940c8cdd46e4255be4c56c76579ee16b555c38ac2dd262178456026f19b721",
+  "state": "IMPLEMENTED_STATIC_VALIDATED_TEST_EXECUTION_DEFERRED_BY_USER_MINIO_PENDING",
+  "test_execution": "DEFERRED_BY_USER_UNTIL_MINIO_READY",
+  "workspace_step": "WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING",
+  "workspace_version": "0.8.4-r7a1"
+}

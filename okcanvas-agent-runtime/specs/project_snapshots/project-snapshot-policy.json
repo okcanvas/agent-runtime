@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-project-snapshot-policy-v1",
+  "policy_id": "bounded-project-zip-snapshot-v1",
+  "version": "1.0.0",
+  "max_archive_bytes": 16777216,
+  "max_files": 3000,
+  "max_total_bytes": 33554432,
+  "max_file_bytes": 524288,
+  "max_path_chars": 512,
+  "slot_ttl_seconds": 3600,
+  "allowed_compression_methods": [
+    "stored",
+    "deflated"
+  ],
+  "encrypted_entries_allowed": false,
+  "symbolic_links_allowed": false
+}

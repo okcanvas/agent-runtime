@@ -1,0 +1,39 @@
+{
+  "schema_version": "okcanvas-step059-windows-real-openai-function-tool-failure-summary-v1",
+  "step_id": "STEP059",
+  "reported_at": "2026-07-31T12:35:00Z",
+  "state": "REAL_OPENAI_FUNCTION_TOOL_CONSTRUCTION_FAILED",
+  "manual_run": {
+    "agent_id": "project-readonly-coding-agent",
+    "model": "gpt-5.6-sol",
+    "event_sequence": [
+      "run.created",
+      "run.started",
+      "agent.definition.resolved",
+      "agent.failed",
+      "run.failed",
+      "payload.retention.applied"
+    ],
+    "tool_started_observed": false,
+    "model_started_observed": false,
+    "artifact_created": false
+  },
+  "deterministic_acceptance": {
+    "state": "PASSED",
+    "checks": "16/16",
+    "limitation": "The fake function_tool decorator accepted output_type and output_json_schema together and therefore did not model the installed SDK mutual-exclusion contract."
+  },
+  "confirmed_root_cause": {
+    "product_path": "src/okcanvas_agent_runtime/function_tools/factories.py",
+    "upstream_path": "reference/upstream/openai-agents-python-0.19.0/src/agents/tool.py",
+    "product_behavior": "build_sdk_function_tool passed both output_type and output_json_schema.",
+    "upstream_contract": "output_type and output_json_schema cannot both be provided.",
+    "upstream_exception_type": "UserError",
+    "failure_phase": "FunctionTool construction before Agent/LLM lifecycle hooks"
+  },
+  "correction": {
+    "step_id": "STEP059A",
+    "version": "2.39.1",
+    "strategy": "Bind output_type only; let the SDK generate the strict output schema and validate the Tool result from the Pydantic model."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-03",
+  "partition_number": 3,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:05:44.849573+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 36,
+  "passed_tests": 36,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 7.404,
+  "exit_code": 0,
+  "files_sha256": "504b606433ffb58c45b32dd4a1715fbbe3ad1cd187ee8fd346a02108d8e88c37",
+  "log_sha256": "80ddec94029bba071f5923addfedeb12408c0e0b5af7fe85c69840b19b8b6bf1",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_control_api_sse.py",
+    "tests/test_encrypted_runstate_store.py",
+    "tests/test_evaluation_service.py",
+    "tests/test_evaluation_suite_control_api.py",
+    "tests/test_evaluation_suite_service.py",
+    "tests/test_evidence_writer.py",
+    "tests/test_function_tool_runtime_catalog.py",
+    "tests/test_generic_agent_cli.py",
+    "tests/test_generic_agent_execution_service.py",
+    "tests/test_generic_business_output_execution.py",
+    "tests/test_generic_function_tool_execution.py",
+    "tests/test_generic_mcp_execution_service.py",
+    "tests/test_generic_mcp_gateway_contract.py",
+    "tests/test_generic_openai_gateway_business_contract.py"
+  ]
+}

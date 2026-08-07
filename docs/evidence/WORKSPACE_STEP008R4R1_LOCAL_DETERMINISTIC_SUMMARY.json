@@ -1,0 +1,25 @@
+{
+  "connector": "11/11",
+  "connector_example": "17/17",
+  "example": "19/19",
+  "manifest_drift": {
+    "changed": 0,
+    "missing": 0,
+    "unexpected": 0
+  },
+  "parent_windows_acceptance_retained": {
+    "deterministic": "25/25 PASSED",
+    "live_openai": "29/29 PASSED"
+  },
+  "product_runtime_python_sha256": "84da080a4fc9f1f2a52a16677fdf4f7dedf71a2c96c2e259e4dc6431ac10f706",
+  "product_runtime_python_unchanged": true,
+  "runtime_step090r1": "25/25",
+  "schema_version": "okcanvas-workspace-step008r4r1-local-deterministic-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP008R4R1_FINAL_PROMOTION_DOCUMENT_PRODUCTIZATION_PLAN_AND_STORAGE_AUDIT_ALIGNMENT",
+  "step091a_decision": "STEP091B1_TYPED_PERSISTENCE_PORTS_AND_TRANSACTION_OWNERSHIP",
+  "step091a_mode": "READ_ONLY",
+  "version": "0.8.4-r1",
+  "workspace_acceptance": "25/25",
+  "workspace_tests": "105/105"
+}

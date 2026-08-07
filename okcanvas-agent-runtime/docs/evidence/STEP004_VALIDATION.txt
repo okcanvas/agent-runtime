@@ -1,0 +1,39 @@
+STEP004 static implementation validation
+
+Baseline:
+- STEP004_APPROVAL_PERSISTED_RUNSTATE_AND_RESUME
+- okcanvas-agent-runtime 0.4.0
+- Status: IMPLEMENTED_NOT_LIVE_ACCEPTED
+
+Executed:
+- python -m compileall -q src scripts tests
+- PYTHONPATH=src pytest -q
+  Result: 79 passed
+- PYTHONPATH=src python scripts/verify_reference.py
+  Result: 4/4 PASS
+- PYTHONPATH=src python scripts/verify_codex_fixture.py
+  Result: intentional 15,000 != 25,000 defect reproduced
+- PYTHONPATH=src python scripts/verify_codex_write_fixture.py
+  Result: baseline one failure, known minimal repair one pass, source fixture unchanged
+- PYTHONPATH=src python -m okcanvas_agent_runtime info --pretty
+  Result: version/step/capability flags consistent
+- codex-approval-prepare with missing SDK/models/key
+  Result: exit 3, SDK_NOT_INSTALLED, workspace unchanged, no approval or RunState artifacts
+
+Validated by tests:
+- SDK Function Tool uses needs_approval=true;
+- Agent tool_use_behavior is stop_on_first_tool;
+- RunState strict mapping serialization boundary;
+- prepare persists one interruption without invoking the executor;
+- approval executes the STEP003 service once;
+- terminal second resume is rejected;
+- rejection executes zero writes and leaves the workspace unchanged;
+- tampered RunState SHA is rejected before SDK resume;
+- STEP004 local Evidence is excluded from source packaging;
+- Windows launcher sets the STEP004 live gate.
+
+Not executed:
+- live OpenAI approval interruption;
+- cross-process live RunState restoration;
+- live approved Codex write through the approval Tool;
+- live rejection resume.

@@ -1,0 +1,31 @@
+{
+  "limitations": [
+    "real PostgreSQL server not executed",
+    "PostgreSQL production-live not accepted",
+    "Production DB migration not executed",
+    "distributed Session history not implemented",
+    "API/Worker split and distributed lease not implemented"
+  ],
+  "retained": [
+    "sqlite-local-v1 remains default",
+    "postgresql-hybrid-v1 remains explicit opt-in",
+    "STEP091B3 Product/Approval/Evaluation/Session metadata semantics unchanged",
+    "encrypted SDK Session history remains local SQLite",
+    "STEP091C ArtifactBlobStorePort boundary retained",
+    "Organization Context Router/Agent/Skill/MCP semantics unchanged"
+  ],
+  "runtime_step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.74.1",
+  "schema_version": "okcanvas-workspace-step008r4r6-runtime-product-source-change-v1",
+  "scope": [
+    "dedicated real PostgreSQL isolated-schema acceptance harness",
+    "operator-confirmed DSN and destructive-schema safety boundary",
+    "live DDL, transaction, row-lock, concurrency and restart checks",
+    "secret-safe PostgreSQL live evidence",
+    "Windows deterministic/live launcher registry expansion"
+  ],
+  "source_snapshot_digest": "27fe06e25e7012dadc738280b0356acfa98b3e700f0675ee14247c6cafcc9dee",
+  "state": "CHANGED_AS_PLANNED",
+  "workspace_step": "WORKSPACE_STEP008R4R6_RUNTIME_STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "workspace_version": "0.8.4-r6"
+}

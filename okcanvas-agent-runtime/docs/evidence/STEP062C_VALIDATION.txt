@@ -1,0 +1,61 @@
+STEP062C_COMMITTED_NODE_DIST_RELEASE_INTEGRITY_ACCEPTANCE_FIX
+Version: 2.42.3
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+Validation date: 2026-08-01
+
+TRIGGER
+- Third real Windows STEP062B acceptance: 17/22 FAILED.
+- Exact remaining executable failure: TypeScript compiler command not found on PATH.
+- Node tests passed.
+- The CLI package declares zero runtime dependencies and zero development dependencies.
+- package-lock contains only the root package; node_modules is intentionally absent.
+
+CODE-AUDITED CORRECTION
+- Product execution uses committed clients/okcanvas-agent-cli/dist/cli.js.
+- Release creation uses TypeScript; packaged Windows acceptance does not require external tsc.
+- TypeScript 5.8.3 rebuilt the current source with `tsc -p tsconfig.json`.
+- All 21 dist files were byte-identical before and after the build.
+- typescript-release-manifest.json binds 11 inputs, 21 outputs and 2 Node test files by SHA-256.
+- Windows acceptance verifies manifest, package/lock zero-dependency contract, source maps, dist shape,
+  Node syntax and explicit Node tests.
+- npm batch, npm install, registry/network and PATH tsc are not used by current acceptance.
+- Removed zero-byte clients/okcanvas-agent-cli/src/config.ts.tmp residue.
+
+PRESERVED PRODUCT BOUNDARY
+- STEP062 orchestration Runtime, Agents, policy, bindings, Invocation ledger, usage, Artifact,
+  cancellation and declaration-order aggregation are unchanged.
+- STEP063 remains unselected.
+
+SOURCE WORKSPACE VALIDATION
+- STEP062: 29/29 PASS.
+- STEP062A: 18/18 PASS.
+- STEP062B: 22/22 PASS.
+- STEP062C: 26/26 PASS.
+- Python compileall: PASS.
+- Full Python pytest: 614/614 PASS (137 + 108 + 167 + 84 + 118).
+- Committed TypeScript release validation: PASS; inputs=11 outputs=21 tests=2.
+- TypeScript 5.8.3 reproducibility rebuild: 21/21 output hashes unchanged.
+- Node tests: 14/14 PASS.
+- npm pack dry-run: 23 files, runtime dependencies 0.
+- Immutable Reference integrity: 4/4 PASS.
+- Direct executable imports from /reference: 0.
+
+CANDIDATE ZIP VALIDATION
+- Candidate SHA-256: 4bfc72c56366d8f209d8599e10051ba422f3f2d1025e25379300a24c7cae59db.
+- Canonical archive root count: 1.
+- Archive entries: 2,793.
+- Forbidden cache/venv/node_modules/local/temp files: 0.
+- Fresh extraction STEP062C: 26/26 PASS.
+- Fresh extraction corrected STEP062B: 22/22 PASS.
+- Fresh extraction corrected STEP062A: 18/18 PASS.
+- Fresh extraction corrected STEP062: 29/29 PASS.
+- Fresh extraction Python compileall: PASS.
+- Fresh extraction full Python pytest: 614/614 PASS (137 + 108 + 167 + 84 + 118).
+- Fresh extraction Node tests: 14/14 PASS.
+- Fresh extraction immutable Reference integrity: 4/4 PASS.
+- Fresh extraction direct /reference imports: 0.
+
+FINAL RELEASE RULE
+- The final ZIP is rebuilt only to include this completed validation record.
+- It must be compared entry-by-entry with the tested candidate.
+- Only docs/evidence/STEP062C_VALIDATION.txt may differ.

@@ -1,0 +1,52 @@
+STEP075E_INTERNAL_SNAPSHOT_METADATA_EXCLUSION_AND_HASH_DOMAIN_FIX
+version 2.55.5
+state IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Source validation
+- STEP075E acceptance: 30/30 PASS
+- Focused STEP075E/075D/075C/075B/075A/075/Sandbox/provider: 127/127 PASS
+- Historical Skill/trace/service: 47/47 PASS
+- Full Python: 831/831 PASS across 211 test files
+- Python compileall: PASS
+- Committed TypeScript integrity: PASS
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+- Deterministic Docker calls: 0
+- External network calls: 0
+- Model calls: 0
+
+Identity
+- Sandbox policy SHA-256: eca4831968a99223a357edb2da27ee277f120e204e633eeaebf37d8a1651720a
+- Provider contract SHA-256: 83868e3f4d261d4d8e1b98b033f2c735e90da00125ec3a1fe9673e6abb85aaf5
+- Foundation SHA-256: 90403093a14d9cadaf0aaf1abf3bf4c71127293e7da54950e7d0f8df00008a9f
+- Sandbox Runtime SHA-256: 27d4b62c15b6e1aeea7114fd9014c76423ebf07e7342c0309804a3f5a119e9a8
+- Sample Runtime binding SHA-256: 5985e5bb74eb4fecb360d4485890511d7d133deb289771be2b1bfb415a8ae6af
+- Service policy SHA-256: 245c481f8a60b95d85c4063f7e658761aac87e342a4499a1992df3975653a96b
+
+Windows live acceptance remains pending.
+
+Candidate ZIP independent extraction
+- Candidate SHA-256: 76bf3eaa6adf4f1f3ecc9919473d26aa1d1a6ec5e0c6592149d8afec8c2ca1c5
+- Canonical root: 1
+- ZIP entries: 3,091
+- Forbidden files: 0
+- STEP075E acceptance: 30/30 PASS
+- Full Python: 831/831 PASS across 211 test files
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+
+Final-package fresh extraction
+- STEP075E acceptance: 30/30 PASS
+- Full Python: 831/831 PASS across 211 test files
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+- Canonical root: 1
+- ZIP entries: 3,091
+- Forbidden files: 0
+- Published SHA-256 is external in the adjacent .zip.sha256 artifact.

@@ -1,0 +1,14 @@
+{
+  "schema_version": "okcanvas-step050-windows-live-acceptance-summary-v1",
+  "state": "PASSED",
+  "windows_live_accepted": true,
+  "checks_passed": 31,
+  "check_count": 31,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1,
+  "session": {"after_clean_1": [1,4], "after_mcp_failure": [1,4], "after_clean_2": [2,8]},
+  "gateway_counts": {"run":0,"run_streamed":3,"model_calls":3,"mcp_runtime_created":3,"mcp_manager_enters":3,"mcp_manager_exits":3,"mcp_tool_calls":3,"session_instances":6,"session_closes":6},
+  "final_counts": {"tasks":3,"runs":3,"submissions":3,"invocations":3,"events":39,"artifacts":2,"evaluations":1},
+  "protected_payload_file_count": 1,
+  "references_unchanged": true
+}

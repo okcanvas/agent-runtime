@@ -1,0 +1,37 @@
+STEP002B_WINDOWS_ENV_LOADER_FIX VALIDATION
+Date: 2026-07-28
+Version: 0.2.2
+
+Confirmed original defect
+- STEP002A sh_doctor.cmd and sh_run_step002_live_acceptance.cmd used:
+  if exist ".env.local.cmd" call ".env.local.cmd"
+- Therefore malformed, wrapped, or plain-text lines in the local file were executed by cmd.exe.
+
+Implemented correction
+- Batch launchers no longer call or execute local environment files.
+- scripts/windows_entrypoint.py parses .env.local or legacy .env.local.cmd as data.
+- Only OPENAI_API_KEY, OKCANVAS_AGENT_MODEL, OKCANVAS_CODEX_MODEL, and CODEX_PATH are allowed.
+- UTF-8, UTF-16 BOM, and CP949 are supported.
+- Unknown variables, prose, duplicates, malformed quoting, and dual local files fail closed.
+- Secrets are passed only through the child environment, not command arguments.
+
+Validation
+- python -m compileall -q src scripts tests: PASS
+- pytest -q: PASS, 49 tests
+- PYTHONPATH=src python scripts/verify_reference.py: PASS, 4/4
+- PYTHONPATH=src python scripts/verify_codex_fixture.py: PASS; intentional 15000 != 25000 failure reproduced and fixture unchanged
+- Valid .env.local containing a value with '&': parsed without command execution
+- Doctor received API key/model configuration: PASS
+- Secret sentinel absent from stdout/stderr and child argv: PASS
+- Malformed .env.local.cmd prose line: rejected at exact line 2, exit 2
+- Secret following malformed line absent from stdout/stderr: PASS
+- UTF-16 BOM local environment file: PASS
+
+Not executed and not claimed
+- Windows cmd.exe execution in this Linux packaging environment
+- Live OpenAI model call
+- Live Codex subprocess
+- STEP002 live acceptance
+- Workspace write
+- MCP
+- Packaging archive root is fixed to okcanvas-agent-runtime independent of the local working-directory name: PASS

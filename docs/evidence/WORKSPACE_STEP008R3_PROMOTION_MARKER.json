@@ -1,0 +1,25 @@
+{
+  "limitations": {
+    "live_openai_model_called": false,
+    "production_database_executed": false
+  },
+  "local_deterministic": {
+    "runtime": "25/25 PASSED",
+    "runtime_full_suite": "245 files / 1020 tests PASSED",
+    "workspace": "25/25 PASSED",
+    "workspace_tests": "95/95 PASSED"
+  },
+  "promotion": "NOT_READY",
+  "required_windows_commands": [
+    "sh_run_workspace_step008_acceptance.cmd",
+    "sh_run_workspace_step008_live_acceptance.cmd"
+  ],
+  "runtime_step": "STEP090R1_ORGANIZATION_CONTEXT_MCP_TOOL_OUTPUT_PROTOCOL_AND_SHORT_LIST_TOOL_CHOICE_CLOSURE",
+  "runtime_version": "2.70.1",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "LOCAL_DETERMINISTIC_ACCEPTED",
+  "step": "WORKSPACE_STEP008R3_ORGANIZATION_CONTEXT_MCP_TOOL_OUTPUT_PROTOCOL_AND_SHORT_LIST_TOOL_CHOICE_LIVE_CLOSURE",
+  "version": "0.8.3",
+  "windows_deterministic": "PENDING",
+  "windows_live_openai": "PENDING"
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "okcanvas-step072a-windows-acceptance-summary-v1",
+  "step": "STEP072A_WINDOWS_PYCACHE_OVERLAY_ISOLATION_FIX",
+  "version": "2.52.1",
+  "observed_at": "2026-08-01",
+  "deterministic": {
+    "state": "FAILED",
+    "passed_checks": 23,
+    "total_checks": 24,
+    "failed_checks": [
+      "focused_step072a_tests_pass"
+    ],
+    "focused_tests": {
+      "passed": 44,
+      "failed": 1,
+      "failed_test": "tests/test_step072a_windows_pycache_overlay_isolation_fix.py::test_python_timestamp_size_collision_is_reproduced_and_isolated"
+    },
+    "failure_class": "windows-text-newline-translation",
+    "observed_file_size": 19,
+    "expected_utf8_payload_size": 18,
+    "root_cause": "Path.write_text translated LF to CRLF on Windows while the assertion compared the filesystem size with the un-translated UTF-8 payload length."
+  },
+  "live": {
+    "state": "FAILED",
+    "passed_checks": 5,
+    "total_checks": 15,
+    "bytecode_isolation_environment_present": true,
+    "bytecode_isolation_active_in_interpreter": true,
+    "bytecode_isolation_prefix_outside_project": true,
+    "provider_trace_export_diagnostic_absent": true,
+    "sdk_trace_export_observed": false,
+    "readiness_issue_codes": [
+      "OPENAI_API_KEY_MISSING",
+      "OKCANVAS_AGENT_MODEL_MISSING"
+    ],
+    "failure_class": "local-environment-loader-bypassed",
+    "root_cause": "sh_run_step072a_live_acceptance.cmd invoked the live Python script directly through the bytecode-isolation wrapper, bypassing windows_entrypoint.py, which is the data-only .env.local loader."
+  },
+  "security": {
+    "api_key_value_recorded": false,
+    "raw_attachment_recorded": false,
+    "provider_response_recorded": false
+  },
+  "source": "User-reported real Windows command output"
+}

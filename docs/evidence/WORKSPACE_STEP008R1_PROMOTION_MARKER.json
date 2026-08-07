@@ -1,0 +1,91 @@
+{
+  "continuation_files": [
+    "HANDOFF.md",
+    "docs/plans/WORKSPACE_STEP008R1_ORGANIZATION_CONTEXT_SHORT_EXPRESSION_WINDOWS_LIVE_ACCEPTANCE_CLOSURE.md",
+    "docs/issues/WORKSPACE-ISSUE-033-STEP008-LACKED-SHORT-EXPRESSION-LIVE-ACCEPTANCE.md",
+    "docs/issues/ISSUE_REGISTRY.md",
+    "docs/issues/STEP008R1_IMPLEMENTATION_FAILURE_LOG.md"
+  ],
+  "limitations": {
+    "production_database_executed": false,
+    "real_enterprise_organization_context_called": false,
+    "step008r1_live_openai": "PENDING",
+    "step008r1_windows_deterministic": "PENDING"
+  },
+  "live_harness": {
+    "actual_windows_run": "PENDING",
+    "launcher": "sh_run_workspace_step008_live_acceptance.cmd",
+    "prompts": [
+      "김민수 정보",
+      "김선임 연락처",
+      "김민수 직책",
+      "과장들 목록"
+    ],
+    "raw_error_persisted": false,
+    "raw_tool_arguments_persisted": false,
+    "raw_tool_results_persisted": false
+  },
+  "parent_evidence": {
+    "step007r1_live_rerun_on_step008_source": {
+      "actual_openai_model_called": true,
+      "completed_at": "2026-08-06T06:44:26+09:00",
+      "failure": "SECOND_TURN_MODEL_BEHAVIOR_ERROR",
+      "model": "gpt-4.1",
+      "passed_checks": 19,
+      "state": "FAILED",
+      "total_checks": 24
+    },
+    "step008_windows_deterministic": {
+      "completed_at": "2026-08-06T06:33:03+09:00",
+      "passed_checks": 21,
+      "state": "PASSED",
+      "total_checks": 21
+    }
+  },
+  "product_decision": {
+    "add_employee_directory_product_skill": false,
+    "child_agent_skills_remain_empty": true,
+    "request_hint_is_entity_evidence": false,
+    "root_agent_skills_remain_empty": true
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-promotion-marker-v1",
+  "state": "LOCAL_DETERMINISTIC_ACCEPTED",
+  "step": "WORKSPACE_STEP008R1_ORGANIZATION_CONTEXT_SHORT_EXPRESSION_WINDOWS_LIVE_ACCEPTANCE_CLOSURE",
+  "validation": {
+    "connector_acceptance": {
+      "passed_checks": 11,
+      "state": "PASSED",
+      "total_checks": 11
+    },
+    "connector_example_integration": {
+      "passed_checks": 17,
+      "state": "PASSED",
+      "total_checks": 17
+    },
+    "example_acceptance": {
+      "passed_checks": 19,
+      "state": "PASSED",
+      "total_checks": 19
+    },
+    "runtime_step089": {
+      "passed_checks": 23,
+      "state": "PASSED",
+      "total_checks": 23
+    },
+    "workspace_manifest_drift": {
+      "changed": 0,
+      "missing": 0,
+      "unexpected": 0
+    },
+    "workspace_step008r1_acceptance": {
+      "passed_checks": 24,
+      "state": "PASSED",
+      "total_checks": 24
+    },
+    "workspace_unit_tests": {
+      "passed": 94,
+      "total": 94
+    }
+  },
+  "version": "0.8.1"
+}

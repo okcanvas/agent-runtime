@@ -1,0 +1,43 @@
+{
+  "schema_version": "okcanvas-step060-windows-live-acceptance-summary-v1",
+  "step": "STEP060_QUERY_DIRECTED_PROJECT_RETRIEVAL_AND_EVIDENCE_BUDGET",
+  "version": "2.40.0",
+  "evidence_source": "user-reported Windows deterministic acceptance and real OpenAI rerun",
+  "reported_date": "2026-07-31",
+  "state": "PASSED",
+  "deterministic_acceptance": {
+    "launcher": "sh_run_step060_acceptance.cmd",
+    "passed_checks": 20,
+    "total_checks": 20,
+    "cleanup_state": "COMPLETED",
+    "cleanup_count": 1,
+    "protected_payload_files": 0,
+    "final_counts": {
+      "tasks": 1,
+      "runs": 1,
+      "submissions": 1,
+      "invocations": 1,
+      "events": 12,
+      "artifacts": 1,
+      "evaluations": 0
+    },
+    "evidence_files": 1,
+    "evidence_characters": 608,
+    "implementation_file_selected": "src/okcanvas_agent_runtime/control_api/app.py",
+    "unrelated_docs_and_auth_excluded": true,
+    "workspace_byte_identical": true,
+    "references_unchanged": true
+  },
+  "real_openai_rerun": {
+    "agent_id": "project-readonly-coding-agent",
+    "question": "Health API가 어디에서 등록되는지 파일과 라인 근거로 알려줘",
+    "artifact_status": "PASS",
+    "exact_evidence": "src/okcanvas_agent_runtime/control_api/app.py:485-487",
+    "unrelated_findings_present": false,
+    "total_tokens": 2688,
+    "token_gate": 5000,
+    "token_gate_passed": true
+  },
+  "line_range_note": "The deterministic acceptance fixture reports a different line range because it is a generated fixture workspace; the real repository evidence is app.py:485-487.",
+  "closure": "STEP060_WINDOWS_LIVE_ACCEPTED"
+}

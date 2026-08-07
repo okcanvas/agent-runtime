@@ -1,0 +1,57 @@
+STEP024B_DETERMINISTIC_BUSINESS_OUTPUT_RECOVERY
+Version: 2.4.2
+Status: WINDOWS_LIVE_ACCEPTED
+Date: 2026-07-29
+
+Problem confirmed by code path:
+- OpenAI Agents SDK validates structured final output inside Runner.run().
+- StoreReplenishmentReviewResult contains product-only Pydantic model validators for arithmetic,
+  totals, status, uniqueness, and ordering.
+- A final response that passes provider JSON Schema but fails those validators raises before a
+  Product Artifact exists, after model.completed.
+
+Implemented:
+- official SDK invalid_final_output handler for StoreReplenishmentReviewResult only;
+- product-owned deterministic replenishment calculator;
+- no additional model call;
+- agent.output.recovered canonical Event;
+- raw model output not persisted;
+- invalid source snapshots return bounded INSUFFICIENT_DATA rather than guessed numbers;
+- failed /outcome responses include safe detail_type;
+- existing product contract JSON round-trip remains authoritative before Artifact persistence.
+
+Deterministic validation retained from the STEP024B source baseline:
+- python -m compileall: PASS
+- pytest: 317 passed
+- STEP020 acceptance: PASSED / cleanup COMPLETED
+- STEP023 acceptance: PASSED / cleanup COMPLETED
+- STEP024 acceptance: PASSED / cleanup COMPLETED
+- STEP024B acceptance: PASSED / cleanup COMPLETED
+- STEP024B checks: 7/7 true
+- recovered quantities: 12, 7, 0; total 19
+- direct /reference import scan: PASS
+- immutable reference verification: 4/4 PASS
+- closure source regression after Evidence/document updates: compileall PASS, 318 tests passed
+
+Windows installed-SDK acceptance reported on 2026-07-29:
+- state: PASSED
+- live_sdk: true
+- output_recovered: true
+- Product Run: SUCCEEDED
+- /outcome HTTP status: 200
+- all STEP024 checks: 18/18 true
+- Artifact count: 1 and Artifact verified
+- deterministic recorded-Run Evaluation: PASSED
+- exact quantities: 12, 7, 0; total 19
+- no Tool or MCP Event
+- protected payload deleted after success
+- reference trees unchanged
+- Acceptance Workspace cleanup: COMPLETED
+
+One redacted non-fatal tracing client HTTP 400 line was printed. The supplied output does not expose
+its response detail, so its cause is not guessed. It did not alter Product Run, Artifact, Evaluation,
+payload-retention, reference-integrity, or cleanup acceptance.
+
+Conclusion:
+- store_replenishment_agent_live_accepted = true
+- STEP024B is the maintained Windows-live-accepted business-Agent baseline.

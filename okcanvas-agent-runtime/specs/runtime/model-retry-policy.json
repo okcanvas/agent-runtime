@@ -1,0 +1,10 @@
+{
+  "schema_version": "okcanvas-model-retry-policy-v1",
+  "policy_id": "local-openai-zero-retry-v1",
+  "version": "1.0.0",
+  "runner_managed_max_retries": 0,
+  "provider_managed_max_retries": 0,
+  "retryable_categories": [],
+  "conversation_locked_compatibility_retries": false,
+  "automatic_model_fallback": false
+}

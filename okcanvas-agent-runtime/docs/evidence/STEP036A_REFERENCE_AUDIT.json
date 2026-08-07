@@ -1,0 +1,38 @@
+{
+  "schema_version": "okcanvas-step036a-reference-audit-v1",
+  "state": "PASSED",
+  "baseline": "STEP036A_REFERENCE_WIDE_RUNTIME_CAPABILITY_AUDIT_AND_MASTER_PLAN",
+  "runtime_step_unchanged": "STEP036_RECORDED_RUN_RUNTIME_BINDING_VERIFICATION",
+  "runtime_version_unchanged": "2.16.0",
+  "reference_count": 4,
+  "total_reference_files": 1536,
+  "primary_sdk": {
+    "source_files": 302,
+    "example_files": 307,
+    "test_files": 297
+  },
+  "p0_step_count": 9,
+  "runtime_tree_sha256_before": "67bacac0323405612ed3a5f49ff9f9187dd26f2f583dda09d7a2eec157c13275",
+  "runtime_tree_sha256_after": "67bacac0323405612ed3a5f49ff9f9187dd26f2f583dda09d7a2eec157c13275",
+  "checks": {
+    "four_reference_trees_classified": true,
+    "all_manifest_file_counts_exact": true,
+    "total_reference_files_exact": true,
+    "primary_sdk_source_count_exact": true,
+    "primary_examples_count_exact": true,
+    "primary_tests_count_exact": true,
+    "every_inventory_file_has_sha256": true,
+    "every_inventory_file_has_category": true,
+    "runtime_source_and_tests_unchanged": true,
+    "reference_code_map_expanded": true,
+    "audit_document_present": true,
+    "master_plan_present": true,
+    "p0_order_exact": true,
+    "routing_classified_as_handoff": true,
+    "parallelism_classified_as_application_orchestration": true,
+    "step036_executable_baseline_preserved": true,
+    "sub_agent_invocation_scope_inserted_before_handoff": true,
+    "physical_workspace_is_capability_conditional": true
+  },
+  "revised_by": "STEP036B_SUB_AGENT_INVOCATION_AND_WORKSPACE_ISOLATION_CONSTITUTION"
+}

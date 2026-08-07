@@ -1,0 +1,59 @@
+{
+  "agent_definition_count": 27,
+  "checks": {
+    "codex_agent_specs_not_silently_catalog_registered": true,
+    "codex_removal_blocked_before_migration": true,
+    "codex_tool_specs_not_silently_catalog_registered": true,
+    "developer_cli_retains_legacy_and_codex_services": true,
+    "forbidden_developer_services_absent_from_product_transport": true,
+    "generic_agent_catalog_count_retained": true,
+    "generic_function_tool_catalog_count_retained": true,
+    "generic_runtime_required_in_product_bootstrap": true,
+    "identity_exact": true,
+    "new_execution_plane_forbidden": true,
+    "policy_schema_exact": true,
+    "repository_read_write_separated": true,
+    "write_approval_required": true
+  },
+  "developer_only_planes": [
+    {
+      "classification": "DEVELOPER_ONLY_COMPATIBILITY",
+      "plane_id": "legacy-language-runtime",
+      "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.service.AgentRuntimeService",
+      "write_access": false
+    },
+    {
+      "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+      "plane_id": "codex-read-runtime",
+      "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_service.CodexReadOnlyService",
+      "write_access": false
+    },
+    {
+      "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+      "plane_id": "codex-write-runtime",
+      "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_write_service.CodexWriteService",
+      "write_access": true
+    },
+    {
+      "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+      "plane_id": "codex-write-approval-runtime",
+      "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_approval_service.CodexWriteApprovalService",
+      "write_access": true
+    }
+  ],
+  "passed_checks": 13,
+  "product_control_plane": {
+    "bootstrap_factory": "okcanvas_agent_runtime.bootstrap.application.create_app",
+    "catalog_bound": true,
+    "plane_id": "generic-agent-runtime",
+    "service_class": "okcanvas_agent_runtime.application.execution.service.GenericAgentExecutionService",
+    "task_run_event_artifact_owned": true,
+    "tool_mcp_session_handoff_guardrail_supported": true
+  },
+  "schema_version": "okcanvas-step082b-execution-plane-validation-v1",
+  "state": "PASSED",
+  "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+  "tool_definition_count": 4,
+  "total_checks": 13,
+  "version": "2.62.2"
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "aliases": [
+      "CEO"
+    ],
+    "authority_level": 100,
+    "name": "대표이사",
+    "position_id": "position.chief-executive",
+    "position_type": "RESPONSIBILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "본부 리더"
+    ],
+    "authority_level": 90,
+    "name": "본부장",
+    "position_id": "position.division-head",
+    "position_type": "RESPONSIBILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "실 리더"
+    ],
+    "authority_level": 80,
+    "name": "실장",
+    "position_id": "position.office-head",
+    "position_type": "RESPONSIBILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "TL",
+      "팀 리더"
+    ],
+    "authority_level": 70,
+    "name": "팀장",
+    "position_id": "position.team-leader",
+    "position_type": "RESPONSIBILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PL",
+      "파트 리더"
+    ],
+    "authority_level": 60,
+    "name": "파트장",
+    "position_id": "position.part-leader",
+    "position_type": "RESPONSIBILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PM",
+      "Product Manager"
+    ],
+    "authority_level": 55,
+    "name": "제품 관리자",
+    "position_id": "position.product-manager",
+    "position_type": "RESPONSIBILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "Principal"
+    ],
+    "authority_level": 60,
+    "name": "수석",
+    "position_id": "position.principal",
+    "position_type": "GRADE",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "Lead"
+    ],
+    "authority_level": 50,
+    "name": "책임",
+    "position_id": "position.lead",
+    "position_type": "GRADE",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "Senior"
+    ],
+    "authority_level": 40,
+    "name": "선임",
+    "position_id": "position.senior",
+    "position_type": "GRADE",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "Associate"
+    ],
+    "authority_level": 30,
+    "name": "주임",
+    "position_id": "position.associate",
+    "position_type": "GRADE",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "Staff"
+    ],
+    "authority_level": 20,
+    "name": "사원",
+    "position_id": "position.staff",
+    "position_type": "GRADE",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "Contractor"
+    ],
+    "authority_level": 10,
+    "name": "계약직",
+    "position_id": "position.contractor",
+    "position_type": "EMPLOYMENT",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  }
+]

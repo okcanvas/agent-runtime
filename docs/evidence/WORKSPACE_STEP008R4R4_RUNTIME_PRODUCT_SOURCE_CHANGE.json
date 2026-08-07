@@ -1,0 +1,28 @@
+{
+  "limitations": [
+    "real Object Storage server not executed",
+    "Artifact orphan inventory and garbage collection not implemented",
+    "API/Worker split and distributed lease not implemented"
+  ],
+  "retained": [
+    "sqlite-local-v1 remains default",
+    "postgresql-hybrid-v1 remains explicit opt-in",
+    "Organization Context Router/Agent/Skill/MCP semantics unchanged",
+    "Tool Approval, Evaluation and encrypted Session history remain local"
+  ],
+  "runtime_step": "STEP091C_ARTIFACT_BLOB_STORE_AND_OBJECT_STORAGE_BOUNDARY",
+  "runtime_version": "2.73.0",
+  "schema_version": "okcanvas-workspace-step008r4r4-runtime-product-source-change-v1",
+  "scope": [
+    "ArtifactBlobStorePort and typed blob records",
+    "ArtifactService binary/metadata coordination",
+    "local-filesystem-artifact-v1 opaque references",
+    "SDK-neutral object-storage-artifact-v1 adapter",
+    "Bootstrap Artifact backend composition",
+    "ProductStore Artifact metadata-only registration"
+  ],
+  "source_snapshot_digest": "428873d1a1764b576c388de60ff1582da5fba4699053de10206343aee86032ab",
+  "state": "CHANGED_AS_PLANNED",
+  "workspace_step": "WORKSPACE_STEP008R4R4_RUNTIME_STEP091C_ARTIFACT_BLOB_STORE_AND_OBJECT_STORAGE_BOUNDARY",
+  "workspace_version": "0.8.4-r4"
+}

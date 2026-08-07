@@ -1,0 +1,26 @@
+STEP003C_DISPOSABLE_WORKSPACE_WRITE_LIVE_ACCEPTANCE
+Status: COMPLETE
+Version: 0.3.3
+
+Live evidence:
+- Windows 11 / Python 3.12.5
+- OpenAI Agents SDK 0.19.0
+- Codex CLI 0.145.0
+- write run SUCCEEDED
+- exactly src/inventory/pricing.py modified
+- baseline validator: 1 failed as expected
+- post validator: 1 passed
+- original fixture unchanged
+- Git HEAD unchanged
+- patch SHA retained
+- token budgets accepted
+- cleanup COMPLETED on attempt 1
+- final acceptance state PASSED
+
+Boundary:
+- workspace_write_live_accepted=true
+- workspace_write_enabled=false
+- no external repository writing
+- no MCP or arbitrary shell
+
+Deterministic package checks must still pass after extraction.

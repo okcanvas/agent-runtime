@@ -1,0 +1,38 @@
+{
+  "schema_version": "okcanvas-organization-context-example-step002-acceptance-v1",
+  "step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP002_JSON_REFERENCE_DATASET_AND_UNIFIED_RESOLUTION",
+  "version": "0.2.0",
+  "state": "PASSED",
+  "checks": {
+    "typescript_build_dependency_closed": true,
+    "deterministic_identity": true,
+    "production_db_sot_and_example_json_sot_explicit": true,
+    "json_fixture_validation_passed": true,
+    "reference_dataset_minimums_exact": true,
+    "glossary_compatibility_retained": true,
+    "unified_employee_context_resolved": true,
+    "same_name_employee_ambiguity_preserved": true,
+    "similar_client_ambiguity_preserved": true,
+    "entity_relationships_returned": true,
+    "tenant_isolation_proven": true,
+    "catalog_revision_contract_present": true,
+    "request_capture_redacts_authorization": true,
+    "example_controls_present": true,
+    "no_mcp_export": true,
+    "construction_guide_scope_present": true
+  },
+  "passed_checks": 16,
+  "total_checks": 16,
+  "dataset_counts": {
+    "departments": 13,
+    "positions": 12,
+    "employees": 48,
+    "products": 120,
+    "clients": 120,
+    "glossary": 80,
+    "projects": 24,
+    "systems": 10,
+    "capabilities": 30,
+    "relations": 892
+  }
+}

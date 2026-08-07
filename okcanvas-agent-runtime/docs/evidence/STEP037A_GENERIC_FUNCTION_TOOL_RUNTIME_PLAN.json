@@ -1,0 +1,79 @@
+{
+  "schema_version": "okcanvas-step037a-generic-function-tool-runtime-plan-v1",
+  "state": "PASSED",
+  "baseline": "STEP037A_GENERIC_FUNCTION_TOOL_RUNTIME_IMPLEMENTATION_PLAN",
+  "runtime_step_unchanged": "STEP037_INTERACTIVE_AGENT_RUNNER_FOUNDATION",
+  "runtime_version_unchanged": "2.17.0",
+  "step037_windows_live_status": "PENDING",
+  "runtime_code_changed": false,
+  "runtime_tree_file_count": 396,
+  "runtime_tree_sha256_before": "923a1ef4a9c08ce5d4b70d9570df324d1e4aafbeea58fa2a5a99c64e9b449428",
+  "runtime_tree_sha256_after": "923a1ef4a9c08ce5d4b70d9570df324d1e4aafbeea58fa2a5a99c64e9b449428",
+  "planned_tools": [
+    {
+      "tool_id": "local_text_fingerprint",
+      "approval_mode": "NEVER",
+      "read_only": true,
+      "purpose": "non-approval Function Tool proof"
+    },
+    {
+      "tool_id": "local_text_metrics",
+      "approval_mode": "ALWAYS",
+      "read_only": true,
+      "purpose": "existing native approval/RunState path migrated to shared Registry"
+    }
+  ],
+  "v1_restrictions": [
+    "no mixed MCP and Function Tool Agent",
+    "no mixed approval modes in one Agent",
+    "no multiple approval interruptions",
+    "no Shell or hosted Tools",
+    "no dynamic Tool Search or plugin import",
+    "no raw Tool argument or result persistence",
+    "no approval decisions in Interactive Runner"
+  ],
+  "checks": {
+    "current_literal_tool_branches_identified": true,
+    "sdk_function_tool_implementation_inspected": true,
+    "sdk_tool_context_inspected": true,
+    "sdk_native_approval_and_runstate_inspected": true,
+    "closed_tool_registry_defined": true,
+    "immutable_tool_definition_layout_defined": true,
+    "read_only_nonapproval_tool_proof_defined": true,
+    "existing_approval_tool_migration_defined": true,
+    "runtime_binding_closure_defined": true,
+    "safe_event_contract_defined": true,
+    "runner_authority_separation_preserved": true,
+    "failure_contracts_defined": true,
+    "deterministic_acceptance_matrix_defined": true,
+    "implementation_file_map_defined": true,
+    "explicit_non_scope_defined": true,
+    "step037_windows_gate_preserved": true,
+    "executable_runtime_tree_unchanged": true
+  },
+  "plan_checks_passed": 17,
+  "plan_checks_total": 17,
+  "validation": {
+    "plan_checks": "17/17 PASS",
+    "executable_tree_byte_identical_to_step037": true,
+    "compileall": "PASS",
+    "pytest": "416 passed",
+    "step037_deterministic_acceptance": "24/24 PASS",
+    "step037_cleanup_state": "COMPLETED",
+    "reference_integrity": "4/4 PASS",
+    "direct_reference_imports": 0
+  },
+  "canonical_package_validation": {
+    "canonical_root_count": 1,
+    "file_count": 2241,
+    "forbidden_files": 0,
+    "runtime_tree_file_count": 396,
+    "runtime_tree_sha256": "923a1ef4a9c08ce5d4b70d9570df324d1e4aafbeea58fa2a5a99c64e9b449428",
+    "compileall": "PASS",
+    "pytest": "416 passed",
+    "step037_acceptance": "24/24 PASS",
+    "step037_cleanup_state": "COMPLETED",
+    "reference_integrity": "4/4 PASS",
+    "direct_reference_imports": 0
+  }
+}

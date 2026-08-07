@@ -1,0 +1,38 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T095418077453Z-c7df92c0",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T09:54:18.115681Z",
+    "created_at": "2026-07-29T09:54:18.077703Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP005"
+  },
+  "artifact_sha256": "11a49f853eb8befe94fef278d487125cd20930b9e41c4c0934394443e7f00878",
+  "database_bytes": 53248,
+  "event_sequences": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "event_types": [
+    "run.created",
+    "run.started",
+    "agent.started",
+    "run.completed"
+  ],
+  "run_status": "SUCCEEDED",
+  "schema_version": "okcanvas-step005-core-store-acceptance-v1",
+  "schema_versions": [
+    1
+  ],
+  "state": "PASSED",
+  "task_status": "SUCCEEDED"
+}

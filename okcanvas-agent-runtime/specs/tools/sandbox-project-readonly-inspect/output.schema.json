@@ -1,0 +1,171 @@
+{
+  "$defs": {
+    "ProjectEvidenceOutput": {
+      "additionalProperties": false,
+      "properties": {
+        "excerpt": {
+          "maxLength": 1600,
+          "title": "Excerpt",
+          "type": "string"
+        },
+        "line_end": {
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "line_start": {
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "path": {
+          "maxLength": 512,
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "line_start",
+        "line_end",
+        "excerpt"
+      ],
+      "title": "ProjectEvidenceOutput",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "apply_patch_enabled": {
+      "title": "Apply Patch Enabled",
+      "type": "boolean"
+    },
+    "bytes_considered": {
+      "maximum": 33554432,
+      "minimum": 0,
+      "title": "Bytes Considered",
+      "type": "integer"
+    },
+    "cleanup_state": {
+      "pattern": "^COMPLETED$",
+      "title": "Cleanup State",
+      "type": "string"
+    },
+    "docker_call_count": {
+      "maximum": 64,
+      "minimum": 1,
+      "title": "Docker Call Count",
+      "type": "integer"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/ProjectEvidenceOutput"
+      },
+      "maxItems": 4,
+      "minItems": 1,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "evidence_characters": {
+      "maximum": 5000,
+      "minimum": 1,
+      "title": "Evidence Characters",
+      "type": "integer"
+    },
+    "files_considered": {
+      "maximum": 3000,
+      "minimum": 1,
+      "title": "Files Considered",
+      "type": "integer"
+    },
+    "image_binding_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Image Binding Sha256",
+      "type": "string"
+    },
+    "inspected_files": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 4,
+      "minItems": 1,
+      "title": "Inspected Files",
+      "type": "array"
+    },
+    "network_mode": {
+      "pattern": "^none$",
+      "title": "Network Mode",
+      "type": "string"
+    },
+    "orphan_count": {
+      "maximum": 0,
+      "minimum": 0,
+      "title": "Orphan Count",
+      "type": "integer"
+    },
+    "query_terms_considered": {
+      "maximum": 12,
+      "minimum": 0,
+      "title": "Query Terms Considered",
+      "type": "integer"
+    },
+    "selected_file_hashes_verified": {
+      "title": "Selected File Hashes Verified",
+      "type": "boolean"
+    },
+    "shell_enabled": {
+      "title": "Shell Enabled",
+      "type": "boolean"
+    },
+    "snapshot_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Snapshot Sha256",
+      "type": "string"
+    },
+    "truncated": {
+      "title": "Truncated",
+      "type": "boolean"
+    },
+    "workspace_access": {
+      "pattern": "^sandbox-readonly-v1$",
+      "title": "Workspace Access",
+      "type": "string"
+    },
+    "workspace_label": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Workspace Label",
+      "type": "string"
+    },
+    "workspace_materialized": {
+      "title": "Workspace Materialized",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "workspace_label",
+    "snapshot_sha256",
+    "files_considered",
+    "bytes_considered",
+    "inspected_files",
+    "evidence",
+    "evidence_characters",
+    "query_terms_considered",
+    "truncated",
+    "workspace_access",
+    "workspace_materialized",
+    "docker_call_count",
+    "selected_file_hashes_verified",
+    "cleanup_state",
+    "orphan_count",
+    "image_binding_sha256",
+    "network_mode",
+    "shell_enabled",
+    "apply_patch_enabled"
+  ],
+  "title": "SandboxProjectReadonlyInspectOutput",
+  "type": "object"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091d-runtime-test-partition-v1",
+  "step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-08",
+  "partition_number": 8,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T04:33:33.543503+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 22,
+  "passed_tests": 22,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 5.008,
+  "exit_code": 0,
+  "files_sha256": "6b56373456eb79ee32763fb37205d3fc346f0fc735a482e74c8c10bc411257e4",
+  "log_sha256": "5d47138aadf0cc03c3165cdbccf07a7cfa9752d52110026a10f16bd70251f394",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step009_mcp_baseline.py",
+    "tests/test_step009a_acceptance_evidence.py",
+    "tests/test_step011_catalog_api_baseline.py",
+    "tests/test_step012_recorded_run_evaluation_baseline.py",
+    "tests/test_step012a_windows_sqlite_handle_release_baseline.py",
+    "tests/test_step013_evaluation_suite_baseline.py",
+    "tests/test_step014_acceptance_workspace_baseline.py",
+    "tests/test_step015_operations_console_baseline.py",
+    "tests/test_step016_operations_console_live_view_baseline.py",
+    "tests/test_step017_run_submission_boundary_baseline.py",
+    "tests/test_step017_submission_boundary_control_api.py",
+    "tests/test_step018_governed_run_submission_baseline.py",
+    "tests/test_step019_governed_recovery_retention_baseline.py",
+    "tests/test_step020_environment_wiring.py"
+  ]
+}

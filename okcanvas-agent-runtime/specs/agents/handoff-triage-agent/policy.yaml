@@ -1,0 +1,13 @@
+agent_id: handoff-triage-agent
+definition_version: 1.0.0
+status: active
+allowed_tools: []
+handoffs:
+  - handoff-specialist-agent
+agent_tools: []
+workspace_access: none
+network_access: openai_model_api_only
+approval_required: explicit_live_call_opt_in
+max_turns: 2
+output_contract: CodingAgentResult
+session_mode: disabled

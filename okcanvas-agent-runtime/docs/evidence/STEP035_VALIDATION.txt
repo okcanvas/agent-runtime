@@ -1,0 +1,67 @@
+STEP035_TERMINAL_OUTCOME_RETENTION_RECONCILIATION
+Version: 2.15.0
+Date: 2026-07-30
+
+CODE-AUDITED DEFECT
+- Product Task/Run can become terminal before the governed completion observer updates submission and protected-payload retention.
+- STEP034 applies only while Product state is RUNNING and cannot repair this later observer-loss window.
+
+IMPLEMENTED BOUNDARY
+- Explicit local-operator endpoint: POST /v1/run-submissions/reconcile-terminal-outcomes.
+- Exact phrase: RECONCILE_TERMINAL_RUN_OUTCOMES_AFTER_PROCESS_RESTART.
+- SUCCEEDED deletes the success payload.
+- FAILED and CANCELLED retain payloads for the configured investigation window.
+- Same Task, Run, terminal Event, and successful Artifact remain authoritative.
+- No scheduler, model, MCP, Tool, replacement Task/Run, or Evaluation.
+- Old claim metadata is cleared and replay is a no-op.
+- Retention Event emission is idempotent.
+
+REFERENCE REVIEW
+- reference/upstream/openai-agents-python-0.19.0/src/agents/result.py
+- reference/upstream/openai-agents-python-0.19.0/src/agents/run.py
+- reference/upstream/openai-agents-python-0.19.0/src/agents/run_state.py
+- SDK resume was rejected; Product-owned terminal/retention reconciliation was adopted.
+
+WORKTREE VALIDATION
+- compileall: PASS.
+- full pytest: 405 passed.
+- STEP035: 21/21 PASS, cleanup COMPLETED.
+- STEP034: 20/20 PASS, cleanup COMPLETED.
+- STEP033: 20/20 PASS, cleanup COMPLETED.
+- STEP032: 19/19 PASS, cleanup COMPLETED.
+- STEP031: 19/19 PASS, cleanup COMPLETED.
+- STEP030: 15/15 PASS.
+- STEP029: 18/18 PASS.
+- STEP028: 15/15 PASS.
+- STEP027: 24/24 PASS.
+- STEP026: 22/22 PASS.
+- STEP025: 21/21 PASS.
+- STEP024B: 7/7 PASS.
+- STEP024: 18/18 PASS.
+- STEP020: PASS.
+- STEP023: 15/15 PASS.
+- STEP030A: 8/8 PASS across 40 current Windows launchers, zero violations.
+- Reference integrity: 4/4 PASS.
+- Direct /reference imports: 0.
+
+WINDOWS LIVE STATUS
+- STEP034: WINDOWS_LIVE_ACCEPTED, 20/20, cleanup COMPLETED.
+- STEP035: Windows live accepted, 21/21, cleanup COMPLETED.
+
+PACKAGE POLICY
+- One canonical root: okcanvas-agent-runtime.
+- .env.local and .env.local.cmd excluded.
+- .venv, caches, local databases, protected payloads, artifacts, and local live Evidence excluded.
+- Reference snapshots retained and immutable.
+
+INDEPENDENT ZIP EXTRACTION VALIDATION
+- canonical root count: 1.
+- extracted file count: 2,205.
+- forbidden files/directories: 0.
+- compileall: PASS.
+- full pytest: 405 passed.
+- STEP035: 21/21 PASS, cleanup COMPLETED.
+- STEP034: 20/20 PASS, cleanup COMPLETED.
+- STEP030A: 8/8 PASS across 40 launchers, zero violations.
+- Reference integrity: 4/4 PASS.
+- Direct /reference imports: 0.

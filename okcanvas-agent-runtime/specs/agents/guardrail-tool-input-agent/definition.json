@@ -1,0 +1,18 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "guardrail-tool-input-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Tool Input Guardrail Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": ["local_text_fingerprint"],
+  "mcp_servers": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "guardrails": ["deny-local-text-tool-input"],
+  "workspace_access": "none",
+  "max_turns": 2,
+  "workflow_name": "OKCanvas Native Tool Input Guardrail",
+  "session_mode": "disabled"
+}

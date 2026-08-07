@@ -1,0 +1,52 @@
+{
+  "schema_version": "okcanvas-step061-windows-live-acceptance-summary-v1",
+  "step": "STEP061_OPENAI_AGENTS_EXAMPLES_COVERAGE_MATRIX_AND_NEXT_SCOPE_SELECTION",
+  "version": "2.41.0",
+  "state": "PASSED",
+  "reported_environment": "Windows CMD",
+  "command": "sh_run_step061_acceptance",
+  "passed_checks": 20,
+  "total_checks": 20,
+  "decision_counts": {
+    "ADOPT": 16,
+    "ADAPT": 16,
+    "DEFER": 171,
+    "REJECT": 9
+  },
+  "area_count": 15,
+  "classified_example_count": 212,
+  "next_selected_step": "STEP062_BOUNDED_MULTI_AGENT_ORCHESTRATION_FOUNDATION",
+  "checks": {
+    "baseline_version_and_step_exact": true,
+    "matrix_schema_and_version_exact": true,
+    "filesystem_python_file_count_exact": true,
+    "excluded_runner_support_files_exact": true,
+    "classified_example_count_exact": true,
+    "entry_paths_unique": true,
+    "area_set_and_count_exact": true,
+    "decision_counts_exact": true,
+    "source_sha256_integrity_exact": true,
+    "source_line_counts_exact": true,
+    "adopt_adapt_evidence_paths_exist": true,
+    "key_example_decisions_exact": true,
+    "sandbox_track_exact": true,
+    "step060_windows_closure_exact": true,
+    "next_step_single_and_exact": true,
+    "orchestration_not_implemented_in_step061": true,
+    "matrix_markdown_has_212_rows": true,
+    "step061_docs_present": true,
+    "runtime_info_matrix_counts_exact": true,
+    "references_unchanged": true
+  },
+  "key_decisions": {
+    "parallelization_deferred": true,
+    "deterministic_deferred": true,
+    "sqlite_session_adopted": true,
+    "stdio_mcp_adopted": true,
+    "codex_adapted": true,
+    "previous_response_rejected": true,
+    "hosted_multi_agent_beta_rejected": true,
+    "web_search_deferred": true
+  },
+  "source": "user-reported terminal output on 2026-08-01"
+}

@@ -1,0 +1,70 @@
+STEP064_BOUNDED_ENCRYPTED_SQLITE_SESSION_COMPACTION_V1
+Version: 2.44.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+Validation date: 2026-08-01
+
+CODE AUDIT
+- Fresh audit began from the STEP063A Windows-live-accepted ZIP.
+- Pinned SDK source/examples were inspected, not inferred.
+- Direct Runner-integrated compaction was rejected because it can invalidate the existing
+  Product failed-Turn rollback item-count boundary.
+- Final design runs only after committed Turn release and before Product Run terminal state.
+- A database-backed lease blocks a concurrent Turn or clear during encrypted replacement.
+
+IMMUTABLE POLICY
+- policy: local-strict-encrypted-compacted-sqlite-session-v1
+- policy SHA-256: 379e868d22b7b6c216fe2988d875846ed021f53cd8cb86f5630c399f68519d99
+- provider/API/model: OpenAI / responses.compact / gpt-4.1
+- mode: INPUT_ONLY
+- trigger: 10 non-user/non-compaction candidate items
+- maximum input: 256 total items
+- store: false
+- previous_response_id: forbidden
+- exact previous history restored on failure
+- raw history in Product events: false
+
+PREDECESSOR PRESERVATION
+- STEP063A Windows live evidence: 20/20 PASS
+- corrected STEP063: 33/33 PASS
+- STEP063 encryption source SHA-256 unchanged:
+  b2127cf828e1e4d44663295edac0b4451d8b452a352e73789b3272d6e7a781b0
+
+SOURCE VALIDATION
+- STEP064 acceptance: 29/29 PASS
+- focused STEP064 tests: 11/11 PASS
+- historical SQLite Session runtime/compositions: 29/29 PASS
+- full Python regression (7 deterministic groups): 643/643 PASS
+  group totals: 85 + 71 + 88 + 121 + 103 + 88 + 87
+- Python compileall: PASS
+- committed TypeScript release integrity: PASS
+  inputs=11 outputs=21 tests=2 external_tsc_required=false
+- Node tests: 14/14 PASS
+- npm pack --dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0 PASS
+
+LIVE BOUNDARY
+- No real OpenAI responses.compact request was made.
+- Provider request arguments and replacement behavior were tested through fake installed-SDK
+  and AsyncOpenAI-compatible boundaries.
+- Compaction token usage is not available through the pinned wrapper and is not fabricated.
+
+PACKAGE VALIDATION
+- Candidate ZIP SHA-256: 1f3012aaa706cbbb3ebe0298be6b1fa28225af34a8c7120510dcd6ca37a54708
+- canonical ZIP root: 1 (`okcanvas-agent-runtime`)
+- ZIP entries: 2,819
+- forbidden cache/venv/node_modules/local/temp entries: 0
+- clean candidate extraction STEP064 acceptance: 29/29 PASS
+- clean candidate extraction full Python regression: 643/643 PASS
+  group totals: 85 + 71 + 88 + 121 + 103 + 88 + 87
+- clean candidate extraction focused compaction: 11/11 PASS
+- clean candidate extraction historical Session compositions: 29/29 PASS
+- clean candidate extraction Node tests: 14/14 PASS
+- clean candidate extraction committed TypeScript release integrity: PASS
+- clean candidate extraction Reference integrity: 4/4 PASS
+- clean candidate extraction direct /reference imports: 0 PASS
+- Final ZIP differs from the candidate only by this completed validation evidence file.
+
+WINDOWS CLOSURE
+- Command: sh_run_step064_acceptance.cmd
+- STEP065 remains unselected.

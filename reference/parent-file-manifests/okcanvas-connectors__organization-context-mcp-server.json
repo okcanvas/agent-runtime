@@ -1,0 +1,172 @@
+{
+  "file_count": 33,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "a1f1705694c9608d6a3e226f71ceb611ccfdbf54d78c60178b91cdb138573685",
+      "size": 60
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "e7347d10d1d9617d9ffaf8c33f2c57f913223925fd1d6f5ef1f2b0c0b25d739c",
+      "size": 726
+    },
+    {
+      "path": "README.md",
+      "sha256": "e2b37f095b0ba70b33022feb755b406f0ac789f98833d7b57eddbb6414e8cc30",
+      "size": 1049
+    },
+    {
+      "path": "contracts/connector-binding-contract.json",
+      "sha256": "75340d9aa36116a3389d1a1ce4611f5c27f4d416ab88e0acf720d91d61e5633f",
+      "size": 959
+    },
+    {
+      "path": "contracts/organization-context-http-api-v1.json",
+      "sha256": "55daa34ba05dac4dae114d862dde5638b904d2c3b7d49dd23fb47fe84d9aaa8f",
+      "size": 911
+    },
+    {
+      "path": "contracts/runtime-provider-contract.json",
+      "sha256": "252d6f38d0c04522862a94230dfee60880c4b748d75c346e2ae1423e5d4f4563",
+      "size": 519
+    },
+    {
+      "path": "docs/evidence/CONNECTOR_ORGANIZATION_CONTEXT_STEP001R1_ACCEPTANCE.json",
+      "sha256": "f41caba8e203fb7f8bfd54ec4274cd50c1266cee1461d58587bf0803270d5315",
+      "size": 868
+    },
+    {
+      "path": "docs/evidence/CONNECTOR_ORGANIZATION_CONTEXT_STEP001R1_OPTIONAL_EXAMPLE_INTEGRATION.json",
+      "sha256": "75766d8ab78fd7cd67400ffa0f0057eb73aeb1d017e4352afe6c281916bed83a",
+      "size": 848
+    },
+    {
+      "path": "docs/evidence/CONNECTOR_ORGANIZATION_CONTEXT_STEP001_ACCEPTANCE.json",
+      "sha256": "31cf9a6fc38468c37fbdb16b665d13e8526cc5db0a5fe03456524fe51bea6db3",
+      "size": 875
+    },
+    {
+      "path": "docs/evidence/CONNECTOR_ORGANIZATION_CONTEXT_STEP001_OPTIONAL_EXAMPLE_INTEGRATION.json",
+      "sha256": "50721bc6f9ac31f6cdddee67b30348c8d18dd7ae8fabd54a0e2f0c49ce99f094",
+      "size": 854
+    },
+    {
+      "path": "docs/evidence/CONNECTOR_ORGANIZATION_CONTEXT_STEP002R1_ACCEPTANCE.json",
+      "sha256": "ae26df5c3d1ca4b1e5506fe3b9c1f7e9f6f2871f398d7e4739382127758767c9",
+      "size": 932
+    },
+    {
+      "path": "docs/evidence/CONNECTOR_ORGANIZATION_CONTEXT_STEP002R2_ACCEPTANCE.json",
+      "sha256": "4e95be69dbeacd402a255138abc929ae65d1d5f508e2502d376ec5bc2972490a",
+      "size": 980
+    },
+    {
+      "path": "docs/evidence/CONNECTOR_ORGANIZATION_CONTEXT_STEP002_ACCEPTANCE.json",
+      "sha256": "5bf4d4f9316439b701fe3abe33c5de466c3bdb77eca1bd3064501ecd0aa79279",
+      "size": 946
+    },
+    {
+      "path": "docs/issues/CONNECTOR-ORGANIZATION-CONTEXT-ISSUE-001-FAKE-MUST-NOT-REPLACE-MCP.md",
+      "sha256": "23c3f41878f476cc508a198742b22fb8d8bee6a507fb27e59d22be5899ba9468",
+      "size": 368
+    },
+    {
+      "path": "organization_context_mcp_server/__init__.py",
+      "sha256": "ff026ee4ade812cadd6ea66020532e0cd83de5c46cdeaf74e28c326002012aaa",
+      "size": 99
+    },
+    {
+      "path": "organization_context_mcp_server/__main__.py",
+      "sha256": "5a4a739b4765622bfc0420f1c6077505c0e4aaf49933c9383ec09a63d5452c76",
+      "size": 397
+    },
+    {
+      "path": "organization_context_mcp_server/app.py",
+      "sha256": "64f997ecd989341c00cfc438100c334ba5da2a4a4131116fa00ffcfb82f547d9",
+      "size": 1976
+    },
+    {
+      "path": "organization_context_mcp_server/baseline.py",
+      "sha256": "2806a39736c8d11115266274e11578a7e4f12a6054cf198d5ed897ee4e1449cd",
+      "size": 119
+    },
+    {
+      "path": "organization_context_mcp_server/config.py",
+      "sha256": "b9134a9198b44aed4386b9280a59ed7dd1ac5cc826240cfb96b2998f4e94bf9e",
+      "size": 1715
+    },
+    {
+      "path": "organization_context_mcp_server/contracts.py",
+      "sha256": "edf75fd748f891307eab0c983a64459e90d563b678c75d4a692a05dc30316fa2",
+      "size": 2560
+    },
+    {
+      "path": "organization_context_mcp_server/identity.py",
+      "sha256": "92ec47be8633e88f0bb7cd44aebba4635712d974d22272e9f689b494cdf6807f",
+      "size": 2858
+    },
+    {
+      "path": "organization_context_mcp_server/mcp_protocol.py",
+      "sha256": "5781b5534ea6b921a5378591d62faf1adabd6740576d797e4c9653f073750ee1",
+      "size": 9230
+    },
+    {
+      "path": "organization_context_mcp_server/organization_context_client.py",
+      "sha256": "3ec2b01b389ccc96a61b49ebb15be9e41219df00c48f389e67ead16895b091f4",
+      "size": 8381
+    },
+    {
+      "path": "organization_context_mcp_server/service.py",
+      "sha256": "ee807c7ffbc21e5d35bec7afc44edbda536b20e326def5b30074a27b5ab499ca",
+      "size": 8551
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "76b3a493a77187a343b1e562f0391f76271cf26e7f2da2cc3897783dbcd2a56a",
+      "size": 744
+    },
+    {
+      "path": "scripts/package_source.py",
+      "sha256": "db4dedc8864aa7094f16485fa8b350d863ef645d673b901fd80cb8cee4dda681",
+      "size": 2228
+    },
+    {
+      "path": "scripts/run_acceptance.py",
+      "sha256": "67fb04a9c6a8c567177166c6b1727aefc7df7ec6c0210546636519a1fb96223d",
+      "size": 3945
+    },
+    {
+      "path": "scripts/run_optional_example_integration.py",
+      "sha256": "4519fe64cff4f1c16f8340088a05004613da8e2bff16f12841e4a493b7166428",
+      "size": 10541
+    },
+    {
+      "path": "tests/test_client_and_error_mapping.py",
+      "sha256": "3c5399c81ba2f02740d36380e12ccdd0afff976a5c1108e6e872db25ebaa8944",
+      "size": 3774
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "sha256": "1c442016f0196c7584489d0dc4b204f68424f9095880f2e9b5e7bbb2ab09d5c5",
+      "size": 1362
+    },
+    {
+      "path": "tests/test_identity.py",
+      "sha256": "8fce5eae36dc3faa8c4a19b3e947dcdd5677ef80d69726ba148af5f9e9796493",
+      "size": 1495
+    },
+    {
+      "path": "tests/test_mcp_protocol.py",
+      "sha256": "4c1099b953d9426ff31993692208f5154b366addc37384c17c30805584a4e280",
+      "size": 2866
+    },
+    {
+      "path": "tests/test_optional_example_boundary.py",
+      "sha256": "74ebfda3e77f634bdd2219d3f55c89c72fd2afb6126ea2e46419a25f29b7c9ca",
+      "size": 442
+    }
+  ],
+  "project_path": "okcanvas-connectors/organization-context-mcp-server",
+  "schema_version": "okcanvas-parent-file-manifest-v1"
+}

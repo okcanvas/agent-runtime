@@ -1,0 +1,1454 @@
+{
+  "architecture": {
+    "alias_count": 301,
+    "canonical_module_count": 324,
+    "passed_checks": 40,
+    "total_checks": 40
+  },
+  "architecture_validation": {
+    "checks": {
+      "admin_route_inventory_exact": true,
+      "all_legacy_files_relocated": true,
+      "client_to_runtime_absent": true,
+      "compatibility_alias_metadata_current": true,
+      "compatibility_alias_targets_complete": true,
+      "coverage_root_packages_exact": true,
+      "declarative_module_references_current": true,
+      "declarative_path_references_current": true,
+      "dependency_direction_violations_absent": true,
+      "eager_import_cycles_absent": true,
+      "executable_legacy_path_coupling_absent": true,
+      "hatch_root_packages_exact": true,
+      "identity_exact": true,
+      "internal_import_targets_complete": true,
+      "legacy_src_package_absent": true,
+      "other_http_route_inventory_exact": true,
+      "physical_manifest_hash_valid": true,
+      "physical_manifest_identity_exact": true,
+      "physical_module_inventory_current": true,
+      "project_root_path_sot_exact": true,
+      "protocol_to_runtime_absent": true,
+      "pytest_root_import_path_exact": true,
+      "python_ast_parse_clean": true,
+      "relocated_resources_byte_identical": true,
+      "relocation_manifest_hash_valid": true,
+      "relocation_manifest_identity_exact": true,
+      "required_root_packages_present": true,
+      "route_method_path_duplicates_absent": true,
+      "router_registration_evidence_exact": true,
+      "runtime_info_feature_groups_exact": true,
+      "runtime_module_origins_exact": true,
+      "service_route_inventory_exact": true,
+      "source_inventory_first_level_exact": true,
+      "source_inventory_hash_valid": true,
+      "source_inventory_identity_exact": true,
+      "source_inventory_resources_exact": true,
+      "transport_app_state_reads_absent": true,
+      "transport_concrete_authority_absent": true,
+      "transport_to_client_absent": true,
+      "websocket_runtime_disabled": true
+    },
+    "details": {
+      "alias_count": 301,
+      "alias_target_failures": [],
+      "ast_failures": [],
+      "canonical_module_count": 324,
+      "declarative_module_reference_failures": [],
+      "declarative_path_reference_failures": [],
+      "dependency_direction_violations": [],
+      "eager_import_edge_count": 758,
+      "eager_missing_imports": [],
+      "executable_legacy_path_coupling": [],
+      "import_cycles": [],
+      "import_edge_count": 765,
+      "legacy_first_level_entry_count": 65,
+      "legacy_python_file_count": 262,
+      "legacy_resource_file_count": 10,
+      "legacy_source_file_count": 272,
+      "missing_imports": [],
+      "physical_manifest_drift": [],
+      "project_root_contract_failures": [],
+      "relocation_target_failures": [],
+      "resource_hash_failures": [],
+      "route_inventory": {
+        "admin_route_count": 48,
+        "duplicates": [],
+        "http_route_count": 86,
+        "missing_runtime_v1_routes": [],
+        "object_origins": {
+          "admin_routes": "/mnt/data/step081d_work/okcanvas_agent_runtime/transport/admin/rest/routes.py",
+          "create_app": "/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/application.py",
+          "service_routes": "/mnt/data/step081d_work/okcanvas_agent_runtime/transport/service/rest/routes.py"
+        },
+        "other_http_route_count": 5,
+        "router_registration_evidence": [
+          {
+            "duplicate_method_paths": [],
+            "expected_route_count": 33,
+            "fallback_applied": false,
+            "missing_after_include": [],
+            "missing_after_reconciliation": [],
+            "owner": "service",
+            "registered_route_count": 33
+          },
+          {
+            "duplicate_method_paths": [],
+            "expected_route_count": 48,
+            "fallback_applied": false,
+            "missing_after_include": [],
+            "missing_after_reconciliation": [],
+            "owner": "admin",
+            "registered_route_count": 48
+          }
+        ],
+        "routes": [
+          {
+            "method": "GET",
+            "path": "/console"
+          },
+          {
+            "method": "GET",
+            "path": "/console/"
+          },
+          {
+            "method": "GET",
+            "path": "/healthz"
+          },
+          {
+            "method": "GET",
+            "path": "/runner"
+          },
+          {
+            "method": "GET",
+            "path": "/runner/"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/agent-definitions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/agent-definitions/{agent_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/commerce-snapshot-ingress/preflight"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/evaluation-baselines"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-baselines/{baseline_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-cases"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-cases/{case_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-comparisons"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/evaluation-suite-runs"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-suite-runs/{suite_run_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-suites"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-suites/{suite_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluations"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluations/{evaluation_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/local-attachments"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/operations/summary"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/protected-payloads/cleanup-expired"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/run-submission-policy"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/preflight"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/reconcile-orphaned-running"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/reconcile-terminal-outcomes"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/recover-stale"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/run-submissions/{submission_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/{submission_id}/confirm"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/{submission_id}/prepare-approval"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/runs"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/artifact"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/runs/{run_id}/cancel"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/runs/{run_id}/evaluations"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/events"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/events/stream"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/invocations"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/outcome"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/sdk-stream"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runtime-scenarios"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/agent-definitions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/agent-definitions/{agent_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/capabilities"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/error-contract"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/local-attachments"
+          },
+          {
+            "method": "DELETE",
+            "path": "/v1/service/local-attachments/{attachment_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/project-snapshots"
+          },
+          {
+            "method": "DELETE",
+            "path": "/v1/service/project-snapshots/{project_snapshot_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/run-submissions"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/run-submissions/preflight"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/run-submissions/{submission_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/run-submissions/{submission_id}/confirm"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/run-submissions/{submission_id}/prepare-approval"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/artifacts"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/artifacts/{artifact_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/runs/{run_id}/cancel"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/events"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/events/stream"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/invocations"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/outcome"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/sandbox-runtime"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/sessions"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/sessions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/sessions/{session_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/sessions/{session_id}/clear"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/skills"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/skills/{skill_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/tool-approvals"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/tool-approvals/{approval_id}/decision"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/tool-approvals/{approval_id}/inbox"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/whoami"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/sessions"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/sessions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/sessions/{session_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/sessions/{session_id}/clear"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/sessions/{session_id}/rotate-history-key"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tasks"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tasks/{task_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tool-approvals"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tool-approvals/{approval_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/tool-approvals/{approval_id}/decision"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tool-approvals/{approval_id}/inbox"
+          }
+        ],
+        "runtime": {
+          "admin_route_count": 48,
+          "duplicates": [],
+          "http_route_count": 86,
+          "object_origins": {
+            "admin_routes": "/mnt/data/step081d_work/okcanvas_agent_runtime/transport/admin/rest/routes.py",
+            "create_app": "/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/application.py",
+            "service_routes": "/mnt/data/step081d_work/okcanvas_agent_runtime/transport/service/rest/routes.py"
+          },
+          "other_http_route_count": 5,
+          "router_registration_evidence": [
+            {
+              "duplicate_method_paths": [],
+              "expected_route_count": 33,
+              "fallback_applied": false,
+              "missing_after_include": [],
+              "missing_after_reconciliation": [],
+              "owner": "service",
+              "registered_route_count": 33
+            },
+            {
+              "duplicate_method_paths": [],
+              "expected_route_count": 48,
+              "fallback_applied": false,
+              "missing_after_include": [],
+              "missing_after_reconciliation": [],
+              "owner": "admin",
+              "registered_route_count": 48
+            }
+          ],
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/console"
+            },
+            {
+              "method": "GET",
+              "path": "/console/"
+            },
+            {
+              "method": "GET",
+              "path": "/healthz"
+            },
+            {
+              "method": "GET",
+              "path": "/runner"
+            },
+            {
+              "method": "GET",
+              "path": "/runner/"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/agent-definitions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/agent-definitions/{agent_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/commerce-snapshot-ingress/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/evaluation-baselines"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-baselines/{baseline_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-cases"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-cases/{case_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-comparisons"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/evaluation-suite-runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suite-runs/{suite_run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suites"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suites/{suite_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluations/{evaluation_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/local-attachments"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/operations/summary"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/protected-payloads/cleanup-expired"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/run-submission-policy"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/reconcile-orphaned-running"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/reconcile-terminal-outcomes"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/recover-stale"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/run-submissions/{submission_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/{submission_id}/confirm"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/{submission_id}/prepare-approval"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/artifact"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs/{run_id}/cancel"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs/{run_id}/evaluations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/events"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/events/stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/invocations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/outcome"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/sdk-stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runtime-scenarios"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/agent-definitions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/agent-definitions/{agent_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/capabilities"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/error-contract"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/local-attachments"
+            },
+            {
+              "method": "DELETE",
+              "path": "/v1/service/local-attachments/{attachment_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/project-snapshots"
+            },
+            {
+              "method": "DELETE",
+              "path": "/v1/service/project-snapshots/{project_snapshot_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/run-submissions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/preflight"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/run-submissions/{submission_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/{submission_id}/confirm"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/{submission_id}/prepare-approval"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/artifacts"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/artifacts/{artifact_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/runs/{run_id}/cancel"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/events"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/events/stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/invocations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/outcome"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sandbox-runtime"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sessions/{session_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/sessions/{session_id}/clear"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/skills"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/skills/{skill_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/tool-approvals"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/tool-approvals/{approval_id}/decision"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/tool-approvals/{approval_id}/inbox"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/whoami"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/sessions/{session_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions/{session_id}/clear"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions/{session_id}/rotate-history-key"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tasks"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tasks/{task_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals/{approval_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/tool-approvals/{approval_id}/decision"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals/{approval_id}/inbox"
+            }
+          ],
+          "runtime_versions": {
+            "fastapi": "0.128.2",
+            "pydantic": "2.13.4",
+            "python": "3.13.5",
+            "starlette": "0.50.0"
+          },
+          "service_route_count": 33,
+          "source_identity": {
+            "all_under_project_root": true,
+            "modules": [
+              {
+                "module": "okcanvas_agent_runtime",
+                "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/__init__.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_runtime.bootstrap.application",
+                "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/application.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_runtime.bootstrap.router_registration",
+                "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/router_registration.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_runtime.transport.admin.rest.routes",
+                "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/transport/admin/rest/routes.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_runtime.transport.service.rest.routes",
+                "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/transport/service/rest/routes.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_protocols",
+                "origin": "/mnt/data/step081d_work/okcanvas_agent_protocols/__init__.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_clients",
+                "origin": "/mnt/data/step081d_work/okcanvas_agent_clients/__init__.py",
+                "under_project_root": true
+              }
+            ],
+            "project_root": "/mnt/data/step081d_work",
+            "sys_path_head": [
+              "/mnt/data/step081d_work",
+              "/mnt/data/step081d_work/scripts",
+              "/opt/pyvenv-overrides",
+              "/opt/pyvenv-libs",
+              "/opt/python-hooks",
+              "/usr/lib/python313.zip",
+              "/usr/lib/python3.13",
+              "/usr/lib/python3.13/lib-dynload"
+            ]
+          },
+          "websocket_route_count": 0
+        },
+        "runtime_versions": {
+          "fastapi": "0.128.2",
+          "pydantic": "2.13.4",
+          "python": "3.13.5",
+          "starlette": "0.50.0"
+        },
+        "service_route_count": 33,
+        "source": {
+          "admin_route_count": 48,
+          "duplicates": [],
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/v1/agent-definitions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/agent-definitions/{agent_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/commerce-snapshot-ingress/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/evaluation-baselines"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-baselines/{baseline_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-cases"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-cases/{case_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-comparisons"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/evaluation-suite-runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suite-runs/{suite_run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suites"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suites/{suite_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluations/{evaluation_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/local-attachments"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/operations/summary"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/protected-payloads/cleanup-expired"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/run-submission-policy"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/reconcile-orphaned-running"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/reconcile-terminal-outcomes"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/recover-stale"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/run-submissions/{submission_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/{submission_id}/confirm"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/{submission_id}/prepare-approval"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/artifact"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs/{run_id}/cancel"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs/{run_id}/evaluations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/events"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/events/stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/invocations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/outcome"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/sdk-stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runtime-scenarios"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/agent-definitions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/agent-definitions/{agent_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/capabilities"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/error-contract"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/local-attachments"
+            },
+            {
+              "method": "DELETE",
+              "path": "/v1/service/local-attachments/{attachment_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/project-snapshots"
+            },
+            {
+              "method": "DELETE",
+              "path": "/v1/service/project-snapshots/{project_snapshot_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/run-submissions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/preflight"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/run-submissions/{submission_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/{submission_id}/confirm"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/{submission_id}/prepare-approval"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/artifacts"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/artifacts/{artifact_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/runs/{run_id}/cancel"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/events"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/events/stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/invocations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/outcome"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sandbox-runtime"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sessions/{session_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/sessions/{session_id}/clear"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/skills"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/skills/{skill_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/tool-approvals"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/tool-approvals/{approval_id}/decision"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/tool-approvals/{approval_id}/inbox"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/whoami"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/sessions/{session_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions/{session_id}/clear"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions/{session_id}/rotate-history-key"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tasks"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tasks/{task_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals/{approval_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/tool-approvals/{approval_id}/decision"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals/{approval_id}/inbox"
+            }
+          ],
+          "service_route_count": 33,
+          "websocket_decorators": []
+        },
+        "source_identity": {
+          "all_under_project_root": true,
+          "modules": [
+            {
+              "module": "okcanvas_agent_runtime",
+              "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/__init__.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_runtime.bootstrap.application",
+              "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/application.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_runtime.bootstrap.router_registration",
+              "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/router_registration.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_runtime.transport.admin.rest.routes",
+              "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/transport/admin/rest/routes.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_runtime.transport.service.rest.routes",
+              "origin": "/mnt/data/step081d_work/okcanvas_agent_runtime/transport/service/rest/routes.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_protocols",
+              "origin": "/mnt/data/step081d_work/okcanvas_agent_protocols/__init__.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_clients",
+              "origin": "/mnt/data/step081d_work/okcanvas_agent_clients/__init__.py",
+              "under_project_root": true
+            }
+          ],
+          "project_root": "/mnt/data/step081d_work",
+          "sys_path_head": [
+            "/mnt/data/step081d_work",
+            "/mnt/data/step081d_work/scripts",
+            "/opt/pyvenv-overrides",
+            "/opt/pyvenv-libs",
+            "/opt/python-hooks",
+            "/usr/lib/python313.zip",
+            "/usr/lib/python3.13",
+            "/usr/lib/python3.13/lib-dynload"
+          ]
+        },
+        "unexpected_runtime_v1_routes": [],
+        "websocket_route_count": 0
+      },
+      "runtime_info": {
+        "field_count": 812,
+        "group_paths": [
+          "okcanvas_agent_runtime/core/runtime_info/foundation.py",
+          "okcanvas_agent_runtime/core/runtime_info/product.py",
+          "okcanvas_agent_runtime/core/runtime_info/agent_session.py",
+          "okcanvas_agent_runtime/core/runtime_info/model.py",
+          "okcanvas_agent_runtime/core/runtime_info/clients.py",
+          "okcanvas_agent_runtime/core/runtime_info/validation.py"
+        ],
+        "missing_group_paths": []
+      },
+      "transport_app_state_reads": []
+    },
+    "passed_checks": 40,
+    "schema_version": "okcanvas-step081-architecture-validation-v1",
+    "state": "PASSED",
+    "step": "STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION",
+    "total_checks": 40,
+    "version": "2.61.4"
+  },
+  "architecture_validation_process": {
+    "completed": true,
+    "json_parsed": true,
+    "parse_error": null,
+    "returncode": 0,
+    "schema_version": "okcanvas-json-subprocess-validator-v1",
+    "script": "scripts/validate_step081_architecture.py",
+    "stderr": "",
+    "stdout": "/v1/runs/{run_id}/cancel\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/runs/{run_id}/evaluations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/events\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/events/stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/invocations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/outcome\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/sdk-stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runtime-scenarios\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/agent-definitions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/agent-definitions/{agent_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/capabilities\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/error-contract\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/local-attachments\"\n          },\n          {\n            \"method\": \"DELETE\",\n            \"path\": \"/v1/service/local-attachments/{attachment_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/project-snapshots\"\n          },\n          {\n            \"method\": \"DELETE\",\n            \"path\": \"/v1/service/project-snapshots/{project_snapshot_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/run-submissions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/preflight\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}/confirm\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}/prepare-approval\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/artifacts\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/artifacts/{artifact_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/runs/{run_id}/cancel\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/events\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/events/stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/invocations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/outcome\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sandbox-runtime\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sessions/{session_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/sessions/{session_id}/clear\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/skills\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/skills/{skill_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/tool-approvals\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/tool-approvals/{approval_id}/decision\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/tool-approvals/{approval_id}/inbox\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/whoami\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/sessions/{session_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions/{session_id}/clear\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions/{session_id}/rotate-history-key\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tasks\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tasks/{task_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals/{approval_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/tool-approvals/{approval_id}/decision\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals/{approval_id}/inbox\"\n          }\n        ],\n        \"runtime_versions\": {\n          \"fastapi\": \"0.128.2\",\n          \"pydantic\": \"2.13.4\",\n          \"python\": \"3.13.5\",\n          \"starlette\": \"0.50.0\"\n        },\n        \"service_route_count\": 33,\n        \"source_identity\": {\n          \"all_under_project_root\": true,\n          \"modules\": [\n            {\n              \"module\": \"okcanvas_agent_runtime\",\n              \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/__init__.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_runtime.bootstrap.application\",\n              \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/application.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_runtime.bootstrap.router_registration\",\n              \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/router_registration.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_runtime.transport.admin.rest.routes\",\n              \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/transport/admin/rest/routes.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_runtime.transport.service.rest.routes\",\n              \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/transport/service/rest/routes.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_protocols\",\n              \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_protocols/__init__.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_clients\",\n              \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_clients/__init__.py\",\n              \"under_project_root\": true\n            }\n          ],\n          \"project_root\": \"/mnt/data/step081d_work\",\n          \"sys_path_head\": [\n            \"/mnt/data/step081d_work\",\n            \"/mnt/data/step081d_work/scripts\",\n            \"/opt/pyvenv-overrides\",\n            \"/opt/pyvenv-libs\",\n            \"/opt/python-hooks\",\n            \"/usr/lib/python313.zip\",\n            \"/usr/lib/python3.13\",\n            \"/usr/lib/python3.13/lib-dynload\"\n          ]\n        },\n        \"websocket_route_count\": 0\n      },\n      \"runtime_versions\": {\n        \"fastapi\": \"0.128.2\",\n        \"pydantic\": \"2.13.4\",\n        \"python\": \"3.13.5\",\n        \"starlette\": \"0.50.0\"\n      },\n      \"service_route_count\": 33,\n      \"source\": {\n        \"admin_route_count\": 48,\n        \"duplicates\": [],\n        \"routes\": [\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/agent-definitions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/agent-definitions/{agent_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/commerce-snapshot-ingress/preflight\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/evaluation-baselines\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-baselines/{baseline_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-cases\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-cases/{case_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-comparisons\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/evaluation-suite-runs\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-suite-runs/{suite_run_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-suites\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-suites/{suite_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluations/{evaluation_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/local-attachments\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/operations/summary\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/protected-payloads/cleanup-expired\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/run-submission-policy\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/preflight\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/reconcile-orphaned-running\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/reconcile-terminal-outcomes\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/recover-stale\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/run-submissions/{submission_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/{submission_id}/confirm\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/{submission_id}/prepare-approval\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/runs\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/artifact\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/runs/{run_id}/cancel\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/runs/{run_id}/evaluations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/events\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/events/stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/invocations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/outcome\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/sdk-stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runtime-scenarios\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/agent-definitions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/agent-definitions/{agent_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/capabilities\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/error-contract\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/local-attachments\"\n          },\n          {\n            \"method\": \"DELETE\",\n            \"path\": \"/v1/service/local-attachments/{attachment_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/project-snapshots\"\n          },\n          {\n            \"method\": \"DELETE\",\n            \"path\": \"/v1/service/project-snapshots/{project_snapshot_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/run-submissions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/preflight\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}/confirm\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}/prepare-approval\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/artifacts\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/artifacts/{artifact_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/runs/{run_id}/cancel\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/events\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/events/stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/invocations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/outcome\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sandbox-runtime\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sessions/{session_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/sessions/{session_id}/clear\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/skills\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/skills/{skill_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/tool-approvals\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/tool-approvals/{approval_id}/decision\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/tool-approvals/{approval_id}/inbox\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/whoami\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/sessions/{session_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions/{session_id}/clear\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions/{session_id}/rotate-history-key\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tasks\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tasks/{task_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals/{approval_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/tool-approvals/{approval_id}/decision\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals/{approval_id}/inbox\"\n          }\n        ],\n        \"service_route_count\": 33,\n        \"websocket_decorators\": []\n      },\n      \"source_identity\": {\n        \"all_under_project_root\": true,\n        \"modules\": [\n          {\n            \"module\": \"okcanvas_agent_runtime\",\n            \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/__init__.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_runtime.bootstrap.application\",\n            \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/application.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_runtime.bootstrap.router_registration\",\n            \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/bootstrap/router_registration.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_runtime.transport.admin.rest.routes\",\n            \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/transport/admin/rest/routes.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_runtime.transport.service.rest.routes\",\n            \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_runtime/transport/service/rest/routes.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_protocols\",\n            \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_protocols/__init__.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_clients\",\n            \"origin\": \"/mnt/data/step081d_work/okcanvas_agent_clients/__init__.py\",\n            \"under_project_root\": true\n          }\n        ],\n        \"project_root\": \"/mnt/data/step081d_work\",\n        \"sys_path_head\": [\n          \"/mnt/data/step081d_work\",\n          \"/mnt/data/step081d_work/scripts\",\n          \"/opt/pyvenv-overrides\",\n          \"/opt/pyvenv-libs\",\n          \"/opt/python-hooks\",\n          \"/usr/lib/python313.zip\",\n          \"/usr/lib/python3.13\",\n          \"/usr/lib/python3.13/lib-dynload\"\n        ]\n      },\n      \"unexpected_runtime_v1_routes\": [],\n      \"websocket_route_count\": 0\n    },\n    \"runtime_info\": {\n      \"field_count\": 812,\n      \"group_paths\": [\n        \"okcanvas_agent_runtime/core/runtime_info/foundation.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/product.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/agent_session.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/model.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/clients.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/validation.py\"\n      ],\n      \"missing_group_paths\": []\n    },\n    \"transport_app_state_reads\": []\n  },\n  \"passed_checks\": 40,\n  \"schema_version\": \"okcanvas-step081-architecture-validation-v1\",\n  \"state\": \"PASSED\",\n  \"step\": \"STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION\",\n  \"total_checks\": 40,\n  \"version\": \"2.61.4\"\n}\n"
+  },
+  "canonical_import_failures": [],
+  "checks": {
+    "all_canonical_modules_import": true,
+    "architecture_validator_passed": true,
+    "constitution_bundle_passed": true,
+    "direct_reference_imports_absent": true,
+    "focused_regression_passed": true,
+    "identity_exact": true,
+    "launcher_registry_passed": true,
+    "node_release_manifest_passed": true,
+    "node_tests_passed": true,
+    "npm_pack_dry_run_passed": true,
+    "python_compileall_passed": true,
+    "reference_integrity_passed": true,
+    "step081_compliance_passed": true,
+    "step081a_failure_issue_recorded": true,
+    "step081b_failure_issue_recorded": true,
+    "step081d_documents_present": true,
+    "windows_live_remains_external": true,
+    "windows_subprocess_portability_passed": true
+  },
+  "compile_output": "",
+  "completed_at": "2026-08-03T21:55:22.296069Z",
+  "compliance_validation": {
+    "actual_changed_file_count": 1317,
+    "checks": {
+      "all_clauses_traced": true,
+      "all_constitution_gates_closed": true,
+      "architecture_passed": true,
+      "baseline_inventory_self_hash_exact": true,
+      "baseline_zip_exact": true,
+      "changed_files_exact": true,
+      "execution_override_recorded": true,
+      "fresh_zip_passed": true,
+      "full_python_passed": true,
+      "identity_exact": true,
+      "installation_passed": true,
+      "issues_complete": true,
+      "non_python_passed": true,
+      "record_self_hash_exact": true,
+      "windows_only_pending": true,
+      "windows_subprocess_portability_passed": true,
+      "workspace_residue_classified": true
+    },
+    "classified_workspace_residue": [],
+    "declared_changed_file_count": 1317,
+    "passed_checks": 17,
+    "schema_version": "okcanvas-step081d-compliance-validation-v1",
+    "stale_declared_changed_files": [],
+    "state": "PASSED",
+    "summary": {
+      "applied_clause_count": 127,
+      "changed_file_count": 1317,
+      "constitution_sha256": "262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa",
+      "gate_result_count": 32,
+      "pending_external_gate_count": 1,
+      "state": "DETERMINISTIC_COMPLETE_WINDOWS_PENDING",
+      "step": "STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION",
+      "traceability_entry_count": 127,
+      "version": "2.61.4"
+    },
+    "total_checks": 17,
+    "unregistered_changed_files": []
+  },
+  "compliance_validation_process": {
+    "completed": true,
+    "json_parsed": true,
+    "parse_error": null,
+    "returncode": 0,
+    "schema_version": "okcanvas-json-subprocess-validator-v1",
+    "script": "scripts/validate_step081_compliance.py",
+    "stderr": "",
+    "stdout": "{\n  \"actual_changed_file_count\": 1317,\n  \"checks\": {\n    \"all_clauses_traced\": true,\n    \"all_constitution_gates_closed\": true,\n    \"architecture_passed\": true,\n    \"baseline_inventory_self_hash_exact\": true,\n    \"baseline_zip_exact\": true,\n    \"changed_files_exact\": true,\n    \"execution_override_recorded\": true,\n    \"fresh_zip_passed\": true,\n    \"full_python_passed\": true,\n    \"identity_exact\": true,\n    \"installation_passed\": true,\n    \"issues_complete\": true,\n    \"non_python_passed\": true,\n    \"record_self_hash_exact\": true,\n    \"windows_only_pending\": true,\n    \"windows_subprocess_portability_passed\": true,\n    \"workspace_residue_classified\": true\n  },\n  \"classified_workspace_residue\": [],\n  \"declared_changed_file_count\": 1317,\n  \"passed_checks\": 17,\n  \"schema_version\": \"okcanvas-step081d-compliance-validation-v1\",\n  \"stale_declared_changed_files\": [],\n  \"state\": \"PASSED\",\n  \"summary\": {\n    \"applied_clause_count\": 127,\n    \"changed_file_count\": 1317,\n    \"constitution_sha256\": \"262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa\",\n    \"gate_result_count\": 32,\n    \"pending_external_gate_count\": 1,\n    \"state\": \"DETERMINISTIC_COMPLETE_WINDOWS_PENDING\",\n    \"step\": \"STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION\",\n    \"traceability_entry_count\": 127,\n    \"version\": \"2.61.4\"\n  },\n  \"total_checks\": 17,\n  \"unregistered_changed_files\": []\n}\n"
+  },
+  "direct_reference_import_violations": [],
+  "focused_output": "..............................................................           [100%]\n62 passed in 13.31s",
+  "node_output": "TAP version 13\n# Subtest: accepts explicit loopback URLs\nok 1 - accepts explicit loopback URLs\n  ---\n  duration_ms: 0.699187\n  type: 'test'\n  ...\n# Subtest: rejects remote URLs\nok 2 - rejects remote URLs\n  ---\n  duration_ms: 1.040422\n  type: 'test'\n  ...\n# Subtest: debug flag is explicit and off by default\nok 3 - debug flag is explicit and off by default\n  ---\n  duration_ms: 0.231564\n  type: 'test'\n  ...\n# Subtest: session resume argument is explicit\nok 4 - session resume argument is explicit\n  ---\n  duration_ms: 0.113488\n  type: 'test'\n  ...\n# Subtest: foundation capability boundary is explicit\nok 5 - foundation capability boundary is explicit\n  ---\n  duration_ms: 1.917071\n  type: 'test'\n  ...\n# Subtest: structured CodingAgentResult renders as friendly text\nok 6 - structured CodingAgentResult renders as friendly text\n  ---\n  duration_ms: 0.375377\n  type: 'test'\n  ...\n# Subtest: finding evidence rendering is bounded and removes line breaks\nok 7 - finding evidence rendering is bounded and removes line breaks\n  ---\n  duration_ms: 0.181009\n  type: 'test'\n  ...\n# Subtest: debug preflight exposes governed diagnostics without changing confirmation flow\nok 8 - debug preflight exposes governed diagnostics without changing confirmation flow\n  ---\n  duration_ms: 0.178214\n  type: 'test'\n  ...\n# Subtest: event and evaluation diagnostics are bounded\nok 9 - event and evaluation diagnostics are bounded\n  ---\n  duration_ms: 0.254698\n  type: 'test'\n  ...\n# Subtest: session-enabled text-only Agent is CLI compatible\nok 10 - session-enabled text-only Agent is CLI compatible\n  ---\n  duration_ms: 0.110223\n  type: 'test'\n  ...\n# Subtest: safe read-only Tool and isolated Sub Agent graphs are CLI compatible\nok 11 - safe read-only Tool and isolated Sub Agent graphs are CLI compatible\n  ---\n  duration_ms: 0.217352\n  type: 'test'\n  ...\n# Subtest: normal progress and invocation tree expose Tool and Sub Agent work without raw payloads\nok 12 - normal progress and invocation tree expose Tool and Sub Agent work without raw payloads\n  ---\n  duration_ms: 0.547432\n  type: 'test'\n  ...\n# Subtest: bounded project read-only Tool is CLI compatible and clearly labeled\nok 13 - bounded project read-only Tool is CLI compatible and clearly labeled\n  ---\n  duration_ms: 0.456727\n  type: 'test'\n  ...\n# Subtest: bounded orchestration is visible and renders child results\nok 14 - bounded orchestration is visible and renders child results\n  ---\n  duration_ms: 0.387164\n  type: 'test'\n  ...\n1..14\n# tests 14\n# suites 0\n# pass 14\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 52.313799",
+  "node_release_output": "COMMITTED_TYPESCRIPT_RELEASE_VERIFIED inputs=11 outputs=21 tests=2 external_tsc_required=false",
+  "npm_pack_output": "[\n  {\n    \"id\": \"@okcanvas/agent-cli@0.5.0\",\n    \"name\": \"@okcanvas/agent-cli\",\n    \"version\": \"0.5.0\",\n    \"size\": 24233,\n    \"unpackedSize\": 110227,\n    \"shasum\": \"9f9ddbd62c446f8595fe72c696e43836e65dd11f\",\n    \"integrity\": \"sha512-lQwy95nt9oTFCtZgfvmJrGc4ZNkSRTwly5jdcQjGr1ps3DItFaX98SiAzDC5KW2nIUjX8UV7VCaQ9YmJKWyz0w==\",\n    \"filename\": \"okcanvas-agent-cli-0.5.0.tgz\",\n    \"files\": [\n      {\n        \"path\": \"README.md\",\n        \"size\": 569,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/api-client.d.ts\",\n        \"size\": 1058,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/api-client.js\",\n        \"size\": 6996,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/api-client.js.map\",\n        \"size\": 6612,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/app.d.ts\",\n        \"size\": 1168,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/app.js\",\n        \"size\": 22091,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/app.js.map\",\n        \"size\": 18904,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/cli.d.ts\",\n        \"size\": 31,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/cli.js\",\n        \"size\": 1855,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/cli.js.map\",\n        \"size\": 1172,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/config.d.ts\",\n        \"size\": 680,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/config.js\",\n        \"size\": 6902,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/config.js.map\",\n        \"size\": 6152,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/render.d.ts\",\n        \"size\": 1654,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/render.js\",\n        \"size\": 13720,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/render.js.map\",\n        \"size\": 14071,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/sse.d.ts\",\n        \"size\": 144,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/sse.js\",\n        \"size\": 1706,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/sse.js.map\",\n        \"size\": 1925,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/types.d.ts\",\n        \"size\": 2155,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/types.js\",\n        \"size\": 44,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/types.js.map\",\n        \"size\": 102,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"package.json\",\n        \"size\": 516,\n        \"mode\": 420\n      }\n    ],\n    \"entryCount\": 23,\n    \"bundled\": []\n  }\n]",
+  "passed_checks": 18,
+  "reference_results": [
+    {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    },
+    {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    }
+  ],
+  "schema_version": "okcanvas-step081d-acceptance-v1",
+  "started_at": "2026-08-03T21:54:59.537691Z",
+  "state": "PASSED",
+  "step": "STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION",
+  "total_checks": 18,
+  "version": "2.61.4",
+  "windows_subprocess_portability": {
+    "checks": {
+      "non_python_validator_uses_npm_pack_helper": true,
+      "portable_resolver_present": true,
+      "step081_acceptance_uses_npm_pack_helper": true,
+      "subprocess_oserror_is_bounded": true,
+      "typescript_manifest_uses_portable_runner": true,
+      "unsafe_direct_batch_invocations_absent": true,
+      "windows_batch_uses_cmd_call": true
+    },
+    "passed_checks": 7,
+    "schema_version": "okcanvas-windows-subprocess-portability-validation-v1",
+    "state": "PASSED",
+    "total_checks": 7,
+    "violations": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-sqlite-session-guardrail-policy-v1",
+  "policy_id": "local-sqlite-session-native-guardrail-v1",
+  "version": "1.0.0",
+  "session_mode": "sqlite-v1",
+  "allowed_guardrail_kinds": [
+    "INPUT",
+    "OUTPUT"
+  ],
+  "max_per_kind": 1,
+  "commit_successful_turn": true,
+  "rollback_tripped_turn": true,
+  "history_copy_to_product": false,
+  "workspace_access": "none"
+}

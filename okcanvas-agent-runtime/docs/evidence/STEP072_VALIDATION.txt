@@ -1,0 +1,60 @@
+STEP072_IMMUTABLE_OPENAI_TRACE_EXPORT_DISABLED_V1
+Version: 2.52.0
+Validation state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Predecessor closure
+- STEP071 deterministic Windows acceptance: 28/28 PASS
+- STEP071 real provider Windows acceptance: 28/28 PASS
+- Model: gpt-4.1
+- Model calls: 1
+- Token usage: input 827, output 318, total 1,145
+- Run terminal status: SUCCEEDED
+- Acceptance workspace cleanup: COMPLETED
+- Observed non-fatal SDK trace diagnostic: HTTP 400
+
+STEP072 scope
+- Add one immutable provider trace-export-disabled policy.
+- Apply it to all seven OpenAI Agents SDK RunConfig construction paths.
+- Bind policy and Product-owned implementation SHA to Agent Runtime binding.
+- Preserve Product-local trace ID, Events, usage and Artifacts.
+- Add a Windows live wrapper that captures shutdown diagnostics.
+
+Validation results are appended only after commands execute.
+
+Deterministic validation
+- STEP072 acceptance: 29/29 PASS
+- Focused STEP072 and gateway tests: 28/28 PASS
+- Historical STEP068-STEP071 Skill/attachment/service tests: 41/41 PASS
+- Full Python regression split: 172 + 130 + 167 + 108 + 167 = 744/744 PASS
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0 PASS
+- Deterministic external network calls: 0
+- Deterministic model calls: 0
+
+Policy identity
+- Policy SHA-256: 6567645dc74b2850bad374f4e73eab50958c6e3e63440b0361dcadcea0b249cc
+- Trace-export Runtime SHA-256: a3618bb359b582fda1215885354352aa42ea00e31fc81a44c2319ab772615e13
+- Skill package SHA-256 retained: 60fbfca861141837d4486499687fde4257b83bcb68362b6b0a0b6f40b8df07b5
+
+Windows live gate
+- Required commands: sh_run_step072_acceptance.cmd then sh_run_step072_live_acceptance.cmd
+- Required model: gpt-4.1
+- Required result: one successful model call and no SDK trace-export diagnostic
+- STEP073 remains unselected.
+
+Candidate ZIP independent extraction validation
+- Candidate SHA-256: 9fdbadb5b5f4be9e6f169ff841b779b7c0569f5082595e91acf2b4f306eb2dbe
+- Canonical ZIP root: 1
+- ZIP entries: 2,967
+- Forbidden files: 0
+- STEP072 acceptance: 29/29 PASS
+- Full Python regression split: 172 + 130 + 167 + 108 + 167 = 744/744 PASS
+- Python compileall: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0 PASS

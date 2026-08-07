@@ -1,0 +1,58 @@
+{
+  "issue_040": {
+    "deterministic_closure": false,
+    "status": "FIX_IMPLEMENTED_TEST_EXECUTION_DEFERRED_BY_USER"
+  },
+  "issue_041": {
+    "deterministic_closure": false,
+    "git_policy_static_validation": true,
+    "status": "FIX_IMPLEMENTED_STATIC_VALIDATED_TEST_EXECUTION_DEFERRED_BY_USER"
+  },
+  "issue_042": {
+    "deterministic_closure": false,
+    "full_tree_git_scan": true,
+    "status": "FIX_IMPLEMENTED_STATIC_VALIDATED_TEST_EXECUTION_DEFERRED_BY_USER"
+  },
+  "promotion": "NOT_READY",
+  "runtime_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.75.0",
+  "schema_version": "okcanvas-workspace-step008r4r7a1-static-validation-summary-v1",
+  "source_release_sha256": "ae940c8cdd46e4255be4c56c76579ee16b555c38ac2dd262178456026f19b721",
+  "state": "STATIC_VALIDATION_PASSED_TEST_EXECUTION_DEFERRED_BY_USER",
+  "static_checks": {
+    "current_document_count": 7,
+    "current_document_sot_validator_passed": true,
+    "durable_evidence_log_trackable": true,
+    "environment_example_trackable": true,
+    "expected_final_workspace_manifest_file_count": 4728,
+    "expected_package_file_count": 4729,
+    "first_party_json_files": 847,
+    "first_party_json_parse_failures": 0,
+    "first_party_python_ast_failures": 0,
+    "first_party_python_ast_files": 977,
+    "full_tree_existing_ignored_files_after_fix": 0,
+    "git_attribute_sentinels": 8,
+    "git_ignore_sentinels": 13,
+    "git_repository_policy_validator_passed": true,
+    "local_environment_ignored": true,
+    "product_artifact_package_trackable": true,
+    "retained_upstream_vscode_trackable": true,
+    "runtime_parent_manifest_file_count": 4284,
+    "runtime_product_file_count": 351,
+    "runtime_product_source_sha256": "c998c1623535f24b6e9543ce7086f8c339f783dd07b2d8bee2c2a34337a86265",
+    "runtime_product_source_unchanged_vs_parent_r7a": true,
+    "runtime_retained_cli_dist_trackable": true,
+    "runtime_root_artifacts_ignored": true,
+    "workspace_root_vscode_ignored": true
+  },
+  "test_execution": {
+    "deterministic": false,
+    "live_openai": false,
+    "object_storage_live": false,
+    "reason": "DEFERRED_BY_USER_UNTIL_MINIO_READY",
+    "unit": false,
+    "windows": false
+  },
+  "workspace_step": "WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING",
+  "workspace_version": "0.8.4-r7a1"
+}

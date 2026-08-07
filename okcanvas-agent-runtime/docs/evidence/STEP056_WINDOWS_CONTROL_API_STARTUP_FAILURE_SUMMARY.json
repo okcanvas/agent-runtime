@@ -1,0 +1,27 @@
+{
+  "schema_version": "okcanvas-step056-windows-control-api-startup-failure-summary-v1",
+  "step_id": "STEP056",
+  "reported_at": "2026-07-31",
+  "state": "CORRECTED_WINDOWS_LIVE_RERUN_PENDING",
+  "command": "sh_run_api",
+  "failure": {
+    "type": "ProtectedPayloadKeyError",
+    "message": "Protected payload key must decode to exactly 32 bytes",
+    "phase": "Control API factory startup before socket listen"
+  },
+  "code_audit": {
+    "product_key_contract": "64 hex characters or URL-safe base64 decoding to exactly 32 bytes",
+    "launcher_environment_file": ".env.local",
+    "example_cmd_gap": ".env.local.cmd.example omitted governed Run submitter/protected-payload settings",
+    "startup_diagnostic_gap": "invalid placeholder passed environment parsing and failed inside app construction with a traceback"
+  },
+  "correction": {
+    "windows_entrypoint_preflight": true,
+    "invalid_key_rejected_before_uvicorn": true,
+    "secret_value_not_echoed": true,
+    "key_generation_hint_added": true,
+    "dotenv_examples_aligned": true,
+    "readme_setup_expanded": true
+  },
+  "windows_live_acceptance": false
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@okcanvas/agent-cli",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Persistent Node.js/TypeScript terminal client for OKCanvas Agent Runtime",
+  "type": "module",
+  "bin": {
+    "okcanvas-agent": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "node dist/cli.js",
+    "test": "node --test",
+    "check": "npm run build && npm test"
+  },
+  "license": "UNLICENSED"
+}

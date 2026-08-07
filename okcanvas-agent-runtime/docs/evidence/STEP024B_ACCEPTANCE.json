@@ -1,0 +1,50 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021207423103Z-81bebb13",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:12:07.500286Z",
+    "created_at": "2026-07-30T02:12:07.423408Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP024B"
+  },
+  "checks": {
+    "direct_formula_exact": true,
+    "invalid_input_fail_closed": true,
+    "invalid_input_not_leaked": true,
+    "model_output_not_persisted": true,
+    "recovery_event_recorded": true,
+    "references_unchanged": true,
+    "sdk_invalid_output_recovered": true
+  },
+  "event_types": [
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "agent.completed",
+    "agent.output.recovered"
+  ],
+  "recommendations": [
+    {
+      "reorder_units": 12,
+      "sku": "ergonomic-keyboard"
+    },
+    {
+      "reorder_units": 7,
+      "sku": "desk-lamp"
+    },
+    {
+      "reorder_units": 0,
+      "sku": "usb-c-dock"
+    }
+  ],
+  "schema_version": "okcanvas-step024b-acceptance-v1",
+  "state": "PASSED",
+  "total_reorder_units": 19
+}

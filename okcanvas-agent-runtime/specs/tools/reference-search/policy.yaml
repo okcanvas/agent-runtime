@@ -1,0 +1,29 @@
+id: reference_catalog
+mode: immutable-read-only
+manifest: reference/MANIFEST.json
+code_map: reference/CODE_MAP.md
+root: reference/upstream
+verify_tree_before_access: true
+path_style: posix-relative-only
+absolute_paths: forbidden
+traversal: forbidden
+symbolic_links: forbidden
+mutation: forbidden
+search:
+  min_query_characters: 2
+  max_query_characters: 200
+  default_max_results: 20
+  hard_max_results: 100
+  default_max_file_bytes: 1048576
+  default_max_matches_per_file: 3
+read:
+  default_max_lines: 400
+  default_max_file_bytes: 2097152
+evidence:
+  canonical_events:
+    - reference.search.completed
+    - reference.file.read
+  persist_raw_query: false
+mcp_enabled: false
+http_enabled: false
+model_calls: false

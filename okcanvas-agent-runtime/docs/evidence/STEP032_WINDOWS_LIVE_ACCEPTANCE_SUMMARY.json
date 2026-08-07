@@ -1,0 +1,33 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP032",
+  "baseline": "STEP032_AGENT_OUTPUT_CONTRACT_RUNTIME_REGISTRY",
+  "project_version": "2.12.0",
+  "status": "WINDOWS_LIVE_ACCEPTED",
+  "reported_local_date": "2026-07-30",
+  "command": "sh_run_step032_acceptance",
+  "state": "PASSED",
+  "acceptance_id": "20260729T232415235499Z-a2fa23ba",
+  "check_count": 19,
+  "all_checks_true": true,
+  "contract_count": 2,
+  "coding_valid": {
+    "handler_present": false,
+    "runner_calls": 1
+  },
+  "coding_invalid": {
+    "handler_present": false,
+    "runner_calls": 1,
+    "error_code": "SDK_RUN_FAILED",
+    "recovered": false
+  },
+  "replenishment_invalid": {
+    "handler_present": true,
+    "runner_calls": 1,
+    "total_reorder_units": 19,
+    "recovery_strategy": "deterministic-invalid-final-output-fallback"
+  },
+  "no_tool_or_mcp_events": true,
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED"
+}

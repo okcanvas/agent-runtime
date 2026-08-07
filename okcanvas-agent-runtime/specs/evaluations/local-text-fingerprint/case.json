@@ -1,0 +1,12 @@
+{
+  "schema_version": "okcanvas-evaluation-case-v1",
+  "case_id": "local-text-fingerprint",
+  "version": "1.0.0",
+  "agent_definition_id": "local-text-fingerprint-agent",
+  "required_result": {"status": "PASS"},
+  "forbidden_result": {"status": "FAIL"},
+  "required_tools": ["local_text_fingerprint"],
+  "forbidden_tools": ["local_text_metrics", "web_search", "shell"],
+  "max_total_tokens": 2000,
+  "max_duration_ms": 30000
+}

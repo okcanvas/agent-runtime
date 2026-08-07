@@ -1,0 +1,50 @@
+STEP081_ROOT_PACKAGE_AND_ARCHITECTURE_RESTRUCTURING
+version=2.61.0
+state=DETERMINISTIC_AND_FRESH_ZIP_ACCEPTED_WINDOWS_LIVE_PENDING
+
+baseline_step=STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES
+baseline_version=2.60.1
+baseline_zip_sha256=11a554e6a0fda3e728002ce915e9b3729622928919f30c5d30390814d2d29702
+
+legacy_source_root_removed=true
+root_packages=okcanvas_agent_runtime,okcanvas_agent_protocols,okcanvas_agent_clients
+legacy_source_files=272
+python_relocations=262
+resource_relocations=10
+missing_relocations=0
+canonical_modules=323
+compatibility_aliases=301
+runtime_info_fields=797
+
+architecture=38/38 PASS
+missing_internal_imports=0
+import_cycles=0
+dependency_direction_violations=0
+admin_routes=48
+service_routes=33
+other_routes=5
+duplicate_routes=0
+websocket_routes=0
+
+python_test_files=226
+python_regression=900/900 PASS
+python_failed=0
+python_errors=0
+python_skipped=0
+python_timeouts=0
+node_tests=14/14 PASS
+reference_integrity=4/4 PASS
+direct_reference_imports=0
+npm_pack=PASS
+installation_validation=16/16 PASS
+constitution_bundle=16/16 PASS
+constitution_compliance=15/15 PASS
+step081_acceptance=14/14 PASS
+fresh_zip_python=900/900 PASS
+fresh_zip_architecture=38/38 PASS
+fresh_zip_installation=16/16 PASS
+fresh_zip_acceptance=14/14 PASS
+
+pending_external_gate=GATE-WINDOWS-LIVE
+windows_live_required_checks=73
+promotion_allowed=false

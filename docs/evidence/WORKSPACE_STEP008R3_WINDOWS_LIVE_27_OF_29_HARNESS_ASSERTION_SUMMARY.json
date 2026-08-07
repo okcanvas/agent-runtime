@@ -1,0 +1,36 @@
+{
+  "promotion": "R4_WINDOWS_RERUN_REQUIRED",
+  "schema_version": "okcanvas-step008r3-windows-live-harness-assertion-summary-v1",
+  "source_logs": {
+    "deterministic_sha256": "798ca4716a4a346608000550124c6fa8bd1a50f3629b80602432717395db8303",
+    "live_sha256": "5b23425ad60a8824f1a7db8c7d834d6128f9bcf1974a1b278f334845c95771cc"
+  },
+  "windows_deterministic": {
+    "checks": "25/25",
+    "state": "PASSED"
+  },
+  "windows_live": {
+    "all_product_runs_succeeded": true,
+    "ambiguous_candidate_ids": [
+      "employee-0017",
+      "employee-0034"
+    ],
+    "checks": "27/29",
+    "false_checks": [
+      "short_expression_output_contracts_observed",
+      "root_session_continuity_committed"
+    ],
+    "formal_state": "FAILED",
+    "model": "gpt-4.1",
+    "proven_assertion_defects": [
+      "language-specific empty-result substring check rejected structured zero-candidate success",
+      "post-compaction current item_count was incorrectly used as commit-history evidence"
+    ],
+    "tool_sequence": [
+      "resolve_organization_context",
+      "resolve_organization_context",
+      "resolve_organization_context",
+      "search_organization_context"
+    ]
+  }
+}

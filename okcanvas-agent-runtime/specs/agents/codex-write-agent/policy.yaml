@@ -1,0 +1,16 @@
+id: codex-write-agent
+mode: disposable-workspace-write
+upstream_stability: experimental
+max_turns: 2
+network_access: false
+web_search: false
+mcp: false
+approval_policy: never-after-explicit-whole-run-opt-in
+exact_file_allowlist_required: true
+new_files: forbidden
+deletions: forbidden
+binary_changes: forbidden
+staging: forbidden
+commits: forbidden
+independent_validation_required: true
+live_accepted: true

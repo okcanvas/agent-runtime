@@ -1,0 +1,13 @@
+id: codex_engineer
+implementation: agents.extensions.experimental.codex.codex_tool
+stability: experimental
+sandbox_mode: read-only
+approval_policy: never
+workspace_write: false
+web_search_requested: false
+workspace_write_network_access_requested: false
+arbitrary_command_network_denial_live_verified: false
+environment_inheritance: allowlist
+skip_git_repo_check: false
+persist_session: false
+thread_state: explicit-context-and-file

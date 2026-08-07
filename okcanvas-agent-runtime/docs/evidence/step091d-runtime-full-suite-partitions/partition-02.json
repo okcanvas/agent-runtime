@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091d-runtime-test-partition-v1",
+  "step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-02",
+  "partition_number": 2,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T04:31:35.695094+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 46,
+  "passed_tests": 46,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 13.095,
+  "exit_code": 0,
+  "files_sha256": "c6a2074c1009713b52dad91e4ab73f14fe65961d23dc3449760d77856cadbf87",
+  "log_sha256": "05a10091813134223405962e0f525b61ca7afd6a3e14651ebd7af778f7f52bf6",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_codex_approval_gateway_contract.py",
+    "tests/test_codex_approval_service.py",
+    "tests/test_codex_event_journal.py",
+    "tests/test_codex_gateway_contract.py",
+    "tests/test_codex_readiness.py",
+    "tests/test_codex_readonly_service.py",
+    "tests/test_codex_subprocess_environment.py",
+    "tests/test_codex_workspace_hash.py",
+    "tests/test_codex_write_agent_declaration.py",
+    "tests/test_codex_write_gateway_contract.py",
+    "tests/test_codex_write_service.py",
+    "tests/test_commerce_snapshot_ingress.py",
+    "tests/test_contracts.py",
+    "tests/test_control_api.py"
+  ]
+}

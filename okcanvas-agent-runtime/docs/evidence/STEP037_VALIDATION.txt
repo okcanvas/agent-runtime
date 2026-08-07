@@ -1,0 +1,67 @@
+STEP037_INTERACTIVE_AGENT_RUNNER_FOUNDATION
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Version: 2.17.0
+
+Implemented:
+- separate /runner static surface
+- separate local-admin and Run-submitter key handling
+- governed preflight and exact confirmation only
+- Local Tool approval preparation without approval decision
+- persisted canonical Event SSE
+- verified read-only Run Artifact API
+- compatible recorded-Run Evaluation
+- Operations Console remains read-only
+
+Deterministic acceptance:
+- state PASSED
+- checks 24/24
+- gateway calls 1
+- submissions/tasks/runs/artifacts 1/1/1/1
+- persisted Events 14
+- Evaluation count 1, state PASSED
+- protected payload deleted after success
+- cleanup COMPLETED
+
+Final source-tree regression:
+- compileall PASS
+- pytest 416 passed
+- STEP037 24/24 PASS
+- STEP036 18/18 PASS
+- STEP035 21/21 PASS
+- STEP034 20/20 PASS
+- STEP033 20/20 PASS
+- STEP032 19/19 PASS
+- STEP031 19/19 PASS
+- STEP030A 8/8 PASS across 42 Windows launchers; violations 0
+- STEP030 through STEP024 all PASS
+- STEP024B 7/7 PASS
+- STEP020 approve/reject PASS
+- STEP023 15/15 PASS
+- Reference integrity 4/4 PASS
+- direct /reference executable imports 0
+
+Canonical ZIP extraction validation:
+- canonical root exactly okcanvas-agent-runtime
+- archive entries 2,236
+- forbidden files 0
+- compileall PASS
+- pytest 416 passed
+- STEP037 24/24 PASS, cleanup COMPLETED
+- STEP036 18/18 PASS, cleanup COMPLETED
+- STEP030A 8/8 PASS across 42 launchers, violations 0
+- Reference integrity 4/4 PASS
+- direct /reference executable imports 0
+
+Windows gate:
+sh_setup.cmd
+sh_run_step037_acceptance.cmd
+
+Require:
+- state PASSED
+- all 24 checks true
+- gateway_call_count 1
+- final Submission/Task/Run/Artifact counts 1/1/1/1
+- event_count 14
+- one recorded Evaluation
+- successful protected payload deleted
+- cleanup COMPLETED

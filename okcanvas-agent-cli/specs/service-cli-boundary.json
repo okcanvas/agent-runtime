@@ -1,0 +1,25 @@
+{
+  "api_prefix": "/v1/service/",
+  "authority": "EXTERNAL_BEARER",
+  "automatic_assistant_routing": true,
+  "durable_event_stream": "PERSISTED_SSE",
+  "forbidden_headers": [
+    "X-OKCanvas-Admin-Key",
+    "X-OKCanvas-Run-Submitter-Key"
+  ],
+  "forbidden_paths": [
+    "/v1/agent-definitions",
+    "/v1/run-submissions"
+  ],
+  "implementation_state": "PRODUCT_READY",
+  "request_execution_implemented": true,
+  "schema_version": "okcanvas-agent-service-cli-boundary-v2",
+  "session_execution_implemented": true,
+  "step": "CLI_STEP001R1_WINDOWS_NODE_TEST_RUNNER_PATH_SPACE_CLOSURE",
+  "transport": [
+    "HTTP",
+    "SSE"
+  ],
+  "version": "0.2.1",
+  "windows_node_test_runner_path_space_safe": true
+}

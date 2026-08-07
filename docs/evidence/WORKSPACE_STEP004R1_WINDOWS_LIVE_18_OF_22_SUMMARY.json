@@ -1,0 +1,41 @@
+{
+  "deterministic": {
+    "bytecode_isolation_active": true,
+    "execution_platform": "windows",
+    "passed_checks": 30,
+    "state": "PASSED",
+    "total_checks": 30
+  },
+  "diagnosis": {
+    "fake_product_token_mismatch": true,
+    "mock_specific_session_item_count_assumption": true,
+    "session_referential_restatement_routing_missing": true,
+    "stdout_had_trailing_environment_info_line": true
+  },
+  "live": {
+    "actual_connector_process_executed": true,
+    "actual_node_example_process_executed": true,
+    "actual_openai_model_called": true,
+    "both_runtime_runs_succeeded": true,
+    "environment_source": ".env.local",
+    "failed_checks": [
+      "actual_connector_and_node_example_reached",
+      "continuation_skipped_child_and_mcp",
+      "enterprise_citation_persisted",
+      "root_session_continuity_committed"
+    ],
+    "first_answer_grounded": false,
+    "harness_cleanup_completed": true,
+    "model": "gpt-4.1",
+    "observed_fake_request_count": 2,
+    "openai_api_key_present": true,
+    "passed_checks": 18,
+    "second_turn_reinvoked_groupware_child": true,
+    "secret_values_persisted": false,
+    "state": "FAILED",
+    "total_checks": 22
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-step004r1-windows-live-result-summary-v1",
+  "step": "WORKSPACE_STEP004R1_WINDOWS_LIVE_HARNESS_CLEANUP_AND_WORKSPACE_BYTECODE_ISOLATION_CLOSURE",
+  "version": "0.4.1"
+}

@@ -1,0 +1,277 @@
+{
+  "schema_version": "okcanvas-sdk-example-inventory-v1",
+  "sdk_package": "openai-agents",
+  "sdk_version": "0.19.0",
+  "records": [
+    {
+      "example_id": "tool-search",
+      "relative_path": "tools/tool_search.py",
+      "family": "tool",
+      "pattern": "deferred Tool discovery and namespaces",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Adopt namespace/loading/caller metadata only; runtime Tool Search remains disabled.",
+      "sha256": "c06389cc75b499c40ec7c433ce556d91321934079a6d45edb9f9ad2dff8f20bc"
+    },
+    {
+      "example_id": "programmatic-tool-calling",
+      "relative_path": "tools/programmatic_tool_calling.py",
+      "family": "tool",
+      "pattern": "model-generated JavaScript Tool orchestration",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Record allowed caller structure; generated program execution remains disabled.",
+      "sha256": "f1beed8d0c4b6cc065e5d7da18185dcfd8dd9652edcd0655ccdc023e0d2ad980"
+    },
+    {
+      "example_id": "web-search",
+      "relative_path": "tools/web_search.py",
+      "family": "tool",
+      "pattern": "hosted Web Search",
+      "product_status": "ACTIVE",
+      "rationale": "Already implemented through the Product-owned hosted Web Search policy.",
+      "sha256": "67724928f8fe65de2f4f7c9cadf9e9918017a1b212e92f941c16fbc23e02a1f7"
+    },
+    {
+      "example_id": "web-search-filters",
+      "relative_path": "tools/web_search_filters.py",
+      "family": "tool",
+      "pattern": "hosted Web Search domain filters",
+      "product_status": "ACTIVE",
+      "rationale": "Current policy already requires exact allowed domains and bounded evidence.",
+      "sha256": "3a98e390d08162be2cde3517fbe1b7c9de216ba93a9972ba42e033691efe20c3"
+    },
+    {
+      "example_id": "file-search",
+      "relative_path": "tools/file_search.py",
+      "family": "tool",
+      "pattern": "hosted vector-store File Search",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Future capability requires tenant-owned vector-store lifecycle before activation.",
+      "sha256": "5257ce35c447595b465f74addd7bba195e3c5a7b8908e3071072d5970fa12234"
+    },
+    {
+      "example_id": "code-interpreter",
+      "relative_path": "tools/code_interpreter.py",
+      "family": "tool",
+      "pattern": "hosted Code Interpreter",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Future data-analysis capability requires model/account live probe and lifecycle policy.",
+      "sha256": "2caa8103ede50101d5542d54b00ce442469a55e9cc7b57808d745401f1aa680a"
+    },
+    {
+      "example_id": "image-generation",
+      "relative_path": "tools/image_generator.py",
+      "family": "tool",
+      "pattern": "hosted image generation",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Future hosted Tool; no current Product use case or artifact lifecycle.",
+      "sha256": "b0137b436eaca52f583fc20b8e66308e9a1e01cc20eccb1097ca3d35ac3c5539"
+    },
+    {
+      "example_id": "shell",
+      "relative_path": "tools/shell.py",
+      "family": "tool",
+      "pattern": "hosted or local Shell Tool",
+      "product_status": "DISABLED",
+      "rationale": "Conflicts with the current no-Shell security boundary.",
+      "sha256": "c599290b925c45f0f4491e9f38f1cd88a4131c94af527d13af33be86023b63e1"
+    },
+    {
+      "example_id": "shell-hitl",
+      "relative_path": "tools/shell_human_in_the_loop.py",
+      "family": "tool",
+      "pattern": "Shell Tool with approval",
+      "product_status": "DISABLED",
+      "rationale": "Approval alone does not satisfy command, workspace, network, and output governance.",
+      "sha256": "64dc076afe4992ab0843715012069ac37fc8c1f7120621fa62c4c8206b073d22"
+    },
+    {
+      "example_id": "apply-patch",
+      "relative_path": "tools/apply_patch.py",
+      "family": "tool",
+      "pattern": "Apply Patch Tool",
+      "product_status": "DISABLED",
+      "rationale": "Would duplicate the governed Codex write path and its approval/evidence contract.",
+      "sha256": "3fb41d2041c013d6e1c9d41b46745e7fb05c6df68c459f7113e87595e6831816"
+    },
+    {
+      "example_id": "computer-use",
+      "relative_path": "tools/computer_use.py",
+      "family": "tool",
+      "pattern": "Computer Use Tool",
+      "product_status": "DISABLED",
+      "rationale": "No browser action, screenshot, approval, or side-effect lifecycle is currently accepted.",
+      "sha256": "30815172e92175449367235a1f7bc3497aec0efd02fb9473c8856d5860fc178f"
+    },
+    {
+      "example_id": "container-inline-skill",
+      "relative_path": "tools/container_shell_inline_skill.py",
+      "family": "skill",
+      "pattern": "inline executable Shell Skill",
+      "product_status": "DISABLED",
+      "rationale": "Current Product Skills are instruction/static-resource packages and cannot add execution authority.",
+      "sha256": "e0fe7d931c5dad57be254d66bd9d1b3a0b517c272f6c1ba9c95ff90f89a191a0"
+    },
+    {
+      "example_id": "container-skill-reference",
+      "relative_path": "tools/container_shell_skill_reference.py",
+      "family": "skill",
+      "pattern": "hosted Shell Skill reference",
+      "product_status": "DISABLED",
+      "rationale": "Hosted executable Skill references are outside the current immutable server-owned Skill contract.",
+      "sha256": "d009b25d3dceaf2b39e968e888349dab364bd4e93e0ba223dbaae925b578ea1f"
+    },
+    {
+      "example_id": "local-shell-skill",
+      "relative_path": "tools/local_shell_skill.py",
+      "family": "skill",
+      "pattern": "local executable Shell Skill",
+      "product_status": "DISABLED",
+      "rationale": "Local Skill execution would expose host filesystem and Shell authority.",
+      "sha256": "8b100b261f9fa6b18cfb0572d138217d01545f213d305a8eae11e804bd50d1ec"
+    },
+    {
+      "example_id": "csv-workbench-skill",
+      "relative_path": "tools/skills/csv-workbench/SKILL.md",
+      "family": "skill",
+      "pattern": "SKILL.md package guidance",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "File-layout conventions may inform future packages, but scripts and Shell execution remain forbidden.",
+      "sha256": "96bbebd83d3468312bc25729100d4b05d7e8eadf0b9d46339dc329a4e1a6c374"
+    },
+    {
+      "example_id": "agents-as-tools",
+      "relative_path": "agent_patterns/agents_as_tools.py",
+      "family": "sub-agent",
+      "pattern": "Agent-as-Tool",
+      "product_status": "ACTIVE",
+      "rationale": "Implemented with one bounded terminal child and structured output.",
+      "sha256": "9e86cc3a1570a329ebdf531f13c23748813e834397d5452f6cd2840aea877565"
+    },
+    {
+      "example_id": "conditional-agent-tools",
+      "relative_path": "agent_patterns/agents_as_tools_conditional.py",
+      "family": "sub-agent",
+      "pattern": "context-dependent Agent-as-Tool enabling",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Future topology can model enablement, but runtime dynamic exposure is not active.",
+      "sha256": "511e3da26270d1df3a8454e0c8df774d8bc41815db245fa2105ca6a5a137c6a7"
+    },
+    {
+      "example_id": "routing",
+      "relative_path": "agent_patterns/routing.py",
+      "family": "sub-agent",
+      "pattern": "LLM routing to specialist Agents",
+      "product_status": "ACTIVE",
+      "rationale": "Native Handoff exists under a stricter single-target policy.",
+      "sha256": "b9b57061f5238335743ca54137df0210fd07f146613afb3783bf2a4c5650a71b"
+    },
+    {
+      "example_id": "deterministic-orchestration",
+      "relative_path": "agent_patterns/deterministic.py",
+      "family": "sub-agent",
+      "pattern": "Product-controlled sequential orchestration",
+      "product_status": "ACTIVE",
+      "rationale": "Product-owned orchestration already performs deterministic child execution and aggregation.",
+      "sha256": "184792d552a8049dab1901675e672c40fcc787cda35d2091ebbad465ecbd4db3"
+    },
+    {
+      "example_id": "parallelization",
+      "relative_path": "agent_patterns/parallelization.py",
+      "family": "sub-agent",
+      "pattern": "parallel child execution",
+      "product_status": "ACTIVE",
+      "rationale": "Bounded Product orchestration already supports exact declared parallel children.",
+      "sha256": "b17a2e276e2c2d05c3bdf0f1eac2464d3dd78f64776c0f413b5ce509fcee251a"
+    },
+    {
+      "example_id": "input-guardrail",
+      "relative_path": "agent_patterns/input_guardrails.py",
+      "family": "guardrail",
+      "pattern": "Agent input guardrail",
+      "product_status": "ACTIVE",
+      "rationale": "Implemented through the immutable Guardrail catalog.",
+      "sha256": "1562f3f62834b74af52b07b1bc87bf59aeef51d5fc935129e971e8719bad68ee"
+    },
+    {
+      "example_id": "output-guardrail",
+      "relative_path": "agent_patterns/output_guardrails.py",
+      "family": "guardrail",
+      "pattern": "Agent output guardrail",
+      "product_status": "ACTIVE",
+      "rationale": "Implemented through the immutable Guardrail catalog.",
+      "sha256": "132b2f2021e327cd2cc8936526d5639de34ceb231f3bf4da9fb8b6fe5ea3df73"
+    },
+    {
+      "example_id": "tool-guardrails",
+      "relative_path": "basic/tool_guardrails.py",
+      "family": "guardrail",
+      "pattern": "Function Tool input/output guardrails",
+      "product_status": "ACTIVE",
+      "rationale": "Implemented for exact declared Function Tool targets.",
+      "sha256": "aac7521ff958405534ff2120c8e92a43b8ff3978ec1700fe71f179579ea3db35"
+    },
+    {
+      "example_id": "mcp-prefetched-tools",
+      "relative_path": "mcp/get_all_mcp_tools_example/main.py",
+      "family": "mcp",
+      "pattern": "MCP tools prefetched into Agent.tools",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Current Product binds MCPServer objects directly; prefetched conversion is a future alternate adapter.",
+      "sha256": "0e18f9ad5a4735f8350147246c83b27f61a8d713015a4a5d67c27a6d7ffa8469"
+    },
+    {
+      "example_id": "mcp-tool-filter",
+      "relative_path": "mcp/tool_filter_example/main.py",
+      "family": "mcp",
+      "pattern": "static MCP Tool filter",
+      "product_status": "ACTIVE",
+      "rationale": "Current MCP factory applies a second product-owned static Tool allowlist.",
+      "sha256": "d58051019e38c058f9130a7f4746618e305a8ca5832a127d07116b67d0dd0419"
+    },
+    {
+      "example_id": "mcp-manager",
+      "relative_path": "mcp/manager_example/app.py",
+      "family": "mcp",
+      "pattern": "MCP server lifecycle manager",
+      "product_status": "ACTIVE",
+      "rationale": "Current MCP runtime uses strict MCPServerManager lifecycle with bounded cleanup.",
+      "sha256": "1a49c00d12a129bf6464ec0849a3799ec58e7417ae3168cacfbf91e0c0d0db47"
+    },
+    {
+      "example_id": "mcp-remote-streamable-http",
+      "relative_path": "mcp/streamable_http_remote_example/main.py",
+      "family": "mcp",
+      "pattern": "remote Streamable HTTP MCP",
+      "product_status": "ACTIVE",
+      "rationale": "Implemented only for one exact allowlisted HTTPS endpoint with strict client policy.",
+      "sha256": "b7c69ada99fefc74f9d98966ffc29ccfc37aced507113d5417967412e5f7292b"
+    },
+    {
+      "example_id": "sandbox-capability-composition",
+      "relative_path": "sandbox/sandbox_agent_capabilities.py",
+      "family": "workspace",
+      "pattern": "Sandbox manifest, filesystem, Skills, Shell, and Apply Patch composition",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Useful topology reference; current Product Sandbox intentionally exposes only bounded read commands.",
+      "sha256": "fa551692db874beca455df69d62b3c0c463dc96540b57b064cb1ed75bfe091ac"
+    },
+    {
+      "example_id": "sandbox-agents-as-tools",
+      "relative_path": "sandbox/sandbox_agents_as_tools.py",
+      "family": "sub-agent",
+      "pattern": "Sandbox Agent-as-Tool composition",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Future composition requires explicit workspace inheritance and child isolation contracts.",
+      "sha256": "7faa28a264219ab9694252e88c10f4bb0c2dc9842ebbae13e3e045ce59735c28"
+    },
+    {
+      "example_id": "sandbox-handoffs",
+      "relative_path": "sandbox/handoffs.py",
+      "family": "sub-agent",
+      "pattern": "Sandbox Handoff composition",
+      "product_status": "STRUCTURE_ONLY",
+      "rationale": "Future composition requires explicit workspace transfer semantics.",
+      "sha256": "8d064d2d6c32e820805ed454d42f4d8d86f75c29a59958b6f5ebf457d81e7da5"
+    }
+  ]
+}

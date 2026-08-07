@@ -1,0 +1,46 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T195533818899Z-f7a7022f",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T19:55:34.779621Z",
+    "created_at": "2026-07-30T19:55:33.819217Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [
+      {
+        "closed": true,
+        "error": null,
+        "name": "loopback-control-api"
+      }
+    ],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP023"
+  },
+  "approval_total": 2,
+  "approve_state": "SUCCEEDED",
+  "checks": {
+    "admin_key_not_persisted": true,
+    "approve_replay_idempotent": true,
+    "approve_succeeded": true,
+    "approve_tool_executed_once": true,
+    "exact_confirmation_challenges_present": true,
+    "keys_not_in_compact_output": true,
+    "loopback_http_used": true,
+    "no_pending_approvals_remain": true,
+    "references_unchanged": true,
+    "reject_cancelled": true,
+    "reject_tool_not_executed": true,
+    "safe_inbox_contract": true,
+    "submitter_key_not_persisted": true,
+    "two_pending_approvals_listed": true,
+    "wrong_confirmation_blocked": true
+  },
+  "product_db_sha256": "c49fd198c67804cc9b900317c63b52dcff65a0f003d07ce5b8cfeccc91127e02",
+  "reject_state": "CANCELLED",
+  "schema_version": "okcanvas-step023-acceptance-v1",
+  "state": "PASSED"
+}

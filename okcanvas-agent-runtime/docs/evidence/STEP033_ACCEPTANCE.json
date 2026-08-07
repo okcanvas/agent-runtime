@@ -1,0 +1,131 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021116043779Z-80e5c71f",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:11:16.283237Z",
+    "created_at": "2026-07-30T02:11:16.044071Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP033"
+  },
+  "binding_count": 3,
+  "bindings": {
+    "coding": {
+      "execution_engine_sha256": "9fbe3da168cffe0a27949e7c57fa4fd98715963d0b76188b25334c7f5b1123d5",
+      "execution_path": "generic-agent-execution-v1",
+      "local_tools": [],
+      "mcp_servers": [],
+      "output_contract": "CodingAgentResult",
+      "output_contract_runtime_sha256": "c956a59791b62d9272532fbd3a35c801ad7e2e1c6b933b133dde1c64c1e8c189",
+      "runtime_binding_sha256": "12f7bc8685c68ef5a12b5dd9fe2917ae6ec670c06b314bb1cf3c595d4446b99b",
+      "schema_version": "okcanvas-agent-runtime-binding-v1",
+      "sdk_package": "openai-agents",
+      "sdk_version": "0.19.0"
+    },
+    "local_text_metrics": {
+      "execution_engine_sha256": "c8b5ba529fd9461552f1049c8711c889e630a535fc730ee67134fbafc4af2dc2",
+      "execution_path": "governed-local-tool-approval-v1",
+      "local_tools": [
+        {
+          "implementation_sha256": "081bc8a9f6e4f7fbcb1a5400aced4096199a332ce9975d6e91219021498c45e1",
+          "policy_sha256": "e63aeffc51393ffe5b00a6397f1a74a5fad1a55f6a5a2f033edbb61dfd9d342a",
+          "runtime_version": "1.0.0",
+          "tool_name": "local_text_metrics"
+        }
+      ],
+      "mcp_servers": [],
+      "output_contract": "CodingAgentResult",
+      "output_contract_runtime_sha256": "c956a59791b62d9272532fbd3a35c801ad7e2e1c6b933b133dde1c64c1e8c189",
+      "runtime_binding_sha256": "60342963d6a791f81ccaf0620ec9571e7bb6011cd79d2f78d6afd049244b4a08",
+      "schema_version": "okcanvas-agent-runtime-binding-v1",
+      "sdk_package": "openai-agents",
+      "sdk_version": "0.19.0"
+    },
+    "reference_research": {
+      "execution_engine_sha256": "9fbe3da168cffe0a27949e7c57fa4fd98715963d0b76188b25334c7f5b1123d5",
+      "execution_path": "generic-agent-execution-v1",
+      "local_tools": [],
+      "mcp_servers": [
+        {
+          "definition_sha256": "91260edde91cb825f9486174709c0873db71e64437ae8b70b9301487a788fe70",
+          "module": "okcanvas_agent_runtime.mcp_servers.reference_catalog",
+          "module_sha256": "9e0a448504f8cad0c639d84ad0d82dd0221b51966b4056d3cebc7c5b82066524",
+          "server_id": "reference-catalog",
+          "version": "1.0.0"
+        }
+      ],
+      "output_contract": "CodingAgentResult",
+      "output_contract_runtime_sha256": "c956a59791b62d9272532fbd3a35c801ad7e2e1c6b933b133dde1c64c1e8c189",
+      "runtime_binding_sha256": "51b8193f3eab4f98c38b78d260fca34503b152dd0e03081f25125d8edcdf0532",
+      "schema_version": "okcanvas-agent-runtime-binding-v1",
+      "sdk_package": "openai-agents",
+      "sdk_version": "0.19.0"
+    }
+  },
+  "checks": {
+    "local_tool_drift_called_no_gateway_or_model": true,
+    "local_tool_drift_created_no_product_or_approval_state": true,
+    "local_tool_policy_and_implementation_bound": true,
+    "local_tool_policy_drift_blocks_prepare": true,
+    "mcp_definition_and_module_bound": true,
+    "mcp_drift_blocks_confirmation": true,
+    "mcp_drift_called_no_scheduler_or_model": true,
+    "mcp_drift_created_no_product_state": true,
+    "output_contract_runtime_bound": true,
+    "output_runtime_drift_blocks_confirmation": true,
+    "output_runtime_drift_called_no_scheduler_or_model": true,
+    "output_runtime_drift_conflicts_idempotent_replay": true,
+    "output_runtime_drift_created_no_product_state": true,
+    "references_unchanged": true,
+    "runtime_binding_in_confirmation_fingerprint": true,
+    "runtime_binding_persisted_in_ledger": true,
+    "runtime_binding_persisted_in_protected_payload": true,
+    "runtime_binding_sha_is_non_secret": true,
+    "sdk_version_bound": true,
+    "three_current_execution_paths_bound": true
+  },
+  "local_tool_drift": {
+    "approval_count": 0,
+    "model_gateway_calls": 0,
+    "prepare_failure": "ToolApprovalIntegrityError",
+    "product_counts": {
+      "run_rows": 0,
+      "runs": 0,
+      "task_rows": 0,
+      "tasks": 0
+    },
+    "tool_gateway_prepare_calls": 0,
+    "tool_gateway_resume_calls": 0
+  },
+  "mcp_drift": {
+    "confirmation_failure": "RunSubmissionIntegrityError",
+    "gateway_calls": 0,
+    "product_counts": {
+      "run_rows": 0,
+      "runs": 0,
+      "task_rows": 0,
+      "tasks": 0
+    },
+    "scheduler_calls": 0
+  },
+  "output_runtime_drift": {
+    "confirmation_failure": "RunSubmissionIntegrityError",
+    "gateway_calls": 0,
+    "product_counts": {
+      "run_rows": 0,
+      "runs": 0,
+      "task_rows": 0,
+      "tasks": 0
+    },
+    "replay_failure": "RunSubmissionIdempotencyConflict",
+    "scheduler_calls": 0
+  },
+  "schema_version": "okcanvas-step033-acceptance-v1",
+  "state": "PASSED"
+}

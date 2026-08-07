@@ -1,0 +1,52 @@
+STEP036_RECORDED_RUN_RUNTIME_BINDING_VERIFICATION
+Version: 2.16.0
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Code-audited defect
+- recorded-Run Evaluation verified Agent definition and Artifact but ignored the recorded executable Runtime binding from STEP033.
+
+Implemented
+- current AgentRuntimeBinding is re-resolved during Evaluation;
+- recorded runtime_binding_sha256 and capability metadata must match;
+- mismatch returns RUNTIME_BINDING_DRIFT and persists no Evaluation;
+- subject_runtime_binding_sha256 is persisted and exposed;
+- existing Evaluation SQLite schemas receive an additive column migration;
+- pre-STEP033 unbound Runs fail closed;
+- no model, MCP, Tool, resume, or new business Agent is added.
+
+Deterministic acceptance
+- STEP036: 18/18 PASS, cleanup COMPLETED;
+- three reference-research Agent seed Runs succeeded;
+- seed gateway calls: 3;
+- valid Evaluation count: 1;
+- Artifact count: 3;
+- tampered recorded binding: HTTP 409 / RUNTIME_BINDING_DRIFT;
+- current Runtime drift: HTTP 409 / RUNTIME_BINDING_DRIFT;
+- References unchanged.
+
+Windows closure
+- run sh_setup.cmd;
+- run sh_run_step036_acceptance.cmd;
+- require 18/18 checks and cleanup COMPLETED.
+
+Full regression
+- compileall: PASS;
+- pytest: 413 passed;
+- STEP035..STEP024: all retained acceptance counts PASS;
+- STEP012: 16/16 PASS;
+- STEP013: 21/21 PASS;
+- STEP020 and STEP023: PASS;
+- STEP030A: 8/8, launcher_count=41, violations=0;
+- Reference integrity: 4/4 PASS;
+- direct /reference executable imports: 0.
+
+Independent ZIP extraction
+- one canonical root;
+- file_count=2213;
+- forbidden_files=0;
+- pytest=413 passed;
+- STEP036=18/18 PASS, cleanup COMPLETED;
+- STEP035=21/21 PASS, cleanup COMPLETED;
+- STEP030A=8/8 PASS, launcher_count=41;
+- Reference=4/4 PASS;
+- direct executable reference imports=0.

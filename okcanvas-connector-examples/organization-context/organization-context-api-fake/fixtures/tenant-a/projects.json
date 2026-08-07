@@ -1,0 +1,362 @@
+[
+  {
+    "aliases": [
+      "PJ01",
+      "구축01"
+    ],
+    "client_id": "client-0005",
+    "name": "OKCanvas Agent Platform 구축 01",
+    "owning_department_id": "department.enterprise-sales",
+    "project_code": "PJ-2026001",
+    "project_id": "project-001",
+    "project_manager_employee_id": "employee-0004",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ02",
+      "구축02"
+    ],
+    "client_id": "client-0009",
+    "name": "OKCanvas Groupware 구축 02",
+    "owning_department_id": "department.public-sales",
+    "project_code": "PJ-2026002",
+    "project_id": "project-002",
+    "project_manager_employee_id": "employee-0007",
+    "row_version": 1,
+    "status": "PLANNED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ03",
+      "구축03"
+    ],
+    "client_id": "client-0013",
+    "name": "OKCanvas Mattermost 구축 03",
+    "owning_department_id": "department.partner-sales",
+    "project_code": "PJ-2026003",
+    "project_id": "project-003",
+    "project_manager_employee_id": "employee-0010",
+    "row_version": 1,
+    "status": "ON_HOLD",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ04",
+      "구축04"
+    ],
+    "client_id": "client-0017",
+    "name": "OpenRill 구축 04",
+    "owning_department_id": "department.product-planning",
+    "project_code": "PJ-2026004",
+    "project_id": "project-004",
+    "project_manager_employee_id": "employee-0013",
+    "row_version": 1,
+    "status": "COMPLETED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ05",
+      "구축05"
+    ],
+    "client_id": "client-0021",
+    "name": "PlanVM 구축 05",
+    "owning_department_id": "department.platform-development",
+    "project_code": "PJ-2026005",
+    "project_id": "project-005",
+    "project_manager_employee_id": "employee-0016",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ06",
+      "구축06"
+    ],
+    "client_id": "client-0025",
+    "name": "DataBridge 구축 06",
+    "owning_department_id": "department.service-development",
+    "project_code": "PJ-2026006",
+    "project_id": "project-006",
+    "project_manager_employee_id": "employee-0019",
+    "row_version": 1,
+    "status": "PLANNED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ07",
+      "구축07"
+    ],
+    "client_id": "client-0029",
+    "name": "OKCanvas Agent Platform 구축 07",
+    "owning_department_id": "department.quality-assurance",
+    "project_code": "PJ-2026007",
+    "project_id": "project-007",
+    "project_manager_employee_id": "employee-0022",
+    "row_version": 1,
+    "status": "ON_HOLD",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ08",
+      "구축08"
+    ],
+    "client_id": "client-0033",
+    "name": "OKCanvas Groupware 구축 08",
+    "owning_department_id": "department.customer-support",
+    "project_code": "PJ-2026008",
+    "project_id": "project-008",
+    "project_manager_employee_id": "employee-0025",
+    "row_version": 1,
+    "status": "COMPLETED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ09",
+      "구축09"
+    ],
+    "client_id": "client-0037",
+    "name": "OKCanvas Mattermost 구축 09",
+    "owning_department_id": "department.executive",
+    "project_code": "PJ-2026009",
+    "project_id": "project-009",
+    "project_manager_employee_id": "employee-0028",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ10",
+      "구축10"
+    ],
+    "client_id": "client-0041",
+    "name": "OpenRill 구축 10",
+    "owning_department_id": "department.management-support",
+    "project_code": "PJ-2026010",
+    "project_id": "project-010",
+    "project_manager_employee_id": "employee-0031",
+    "row_version": 1,
+    "status": "PLANNED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ11",
+      "구축11"
+    ],
+    "client_id": "client-0045",
+    "name": "PlanVM 구축 11",
+    "owning_department_id": "department.human-resources",
+    "project_code": "PJ-2026011",
+    "project_id": "project-011",
+    "project_manager_employee_id": "employee-0034",
+    "row_version": 1,
+    "status": "ON_HOLD",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ12",
+      "구축12"
+    ],
+    "client_id": "client-0049",
+    "name": "DataBridge 구축 12",
+    "owning_department_id": "department.finance",
+    "project_code": "PJ-2026012",
+    "project_id": "project-012",
+    "project_manager_employee_id": "employee-0037",
+    "row_version": 1,
+    "status": "COMPLETED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ13",
+      "구축13"
+    ],
+    "client_id": "client-0053",
+    "name": "OKCanvas Agent Platform 구축 13",
+    "owning_department_id": "department.strategy-planning",
+    "project_code": "PJ-2026013",
+    "project_id": "project-013",
+    "project_manager_employee_id": "employee-0040",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ14",
+      "구축14"
+    ],
+    "client_id": "client-0057",
+    "name": "OKCanvas Groupware 구축 14",
+    "owning_department_id": "department.enterprise-sales",
+    "project_code": "PJ-2026014",
+    "project_id": "project-014",
+    "project_manager_employee_id": "employee-0043",
+    "row_version": 1,
+    "status": "PLANNED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ15",
+      "구축15"
+    ],
+    "client_id": "client-0061",
+    "name": "OKCanvas Mattermost 구축 15",
+    "owning_department_id": "department.public-sales",
+    "project_code": "PJ-2026015",
+    "project_id": "project-015",
+    "project_manager_employee_id": "employee-0046",
+    "row_version": 1,
+    "status": "ON_HOLD",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ16",
+      "구축16"
+    ],
+    "client_id": "client-0065",
+    "name": "OpenRill 구축 16",
+    "owning_department_id": "department.partner-sales",
+    "project_code": "PJ-2026016",
+    "project_id": "project-016",
+    "project_manager_employee_id": "employee-0001",
+    "row_version": 1,
+    "status": "COMPLETED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ17",
+      "구축17"
+    ],
+    "client_id": "client-0069",
+    "name": "PlanVM 구축 17",
+    "owning_department_id": "department.product-planning",
+    "project_code": "PJ-2026017",
+    "project_id": "project-017",
+    "project_manager_employee_id": "employee-0004",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ18",
+      "구축18"
+    ],
+    "client_id": "client-0073",
+    "name": "DataBridge 구축 18",
+    "owning_department_id": "department.platform-development",
+    "project_code": "PJ-2026018",
+    "project_id": "project-018",
+    "project_manager_employee_id": "employee-0007",
+    "row_version": 1,
+    "status": "PLANNED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ19",
+      "구축19"
+    ],
+    "client_id": "client-0077",
+    "name": "OKCanvas Agent Platform 구축 19",
+    "owning_department_id": "department.service-development",
+    "project_code": "PJ-2026019",
+    "project_id": "project-019",
+    "project_manager_employee_id": "employee-0010",
+    "row_version": 1,
+    "status": "ON_HOLD",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ20",
+      "구축20"
+    ],
+    "client_id": "client-0081",
+    "name": "OKCanvas Groupware 구축 20",
+    "owning_department_id": "department.quality-assurance",
+    "project_code": "PJ-2026020",
+    "project_id": "project-020",
+    "project_manager_employee_id": "employee-0013",
+    "row_version": 1,
+    "status": "COMPLETED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ21",
+      "구축21"
+    ],
+    "client_id": "client-0085",
+    "name": "OKCanvas Mattermost 구축 21",
+    "owning_department_id": "department.customer-support",
+    "project_code": "PJ-2026021",
+    "project_id": "project-021",
+    "project_manager_employee_id": "employee-0016",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ22",
+      "구축22"
+    ],
+    "client_id": "client-0089",
+    "name": "OpenRill 구축 22",
+    "owning_department_id": "department.executive",
+    "project_code": "PJ-2026022",
+    "project_id": "project-022",
+    "project_manager_employee_id": "employee-0019",
+    "row_version": 1,
+    "status": "PLANNED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ23",
+      "구축23"
+    ],
+    "client_id": "client-0093",
+    "name": "PlanVM 구축 23",
+    "owning_department_id": "department.management-support",
+    "project_code": "PJ-2026023",
+    "project_id": "project-023",
+    "project_manager_employee_id": "employee-0022",
+    "row_version": 1,
+    "status": "ON_HOLD",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "PJ24",
+      "구축24"
+    ],
+    "client_id": "client-0097",
+    "name": "DataBridge 구축 24",
+    "owning_department_id": "department.human-resources",
+    "project_code": "PJ-2026024",
+    "project_id": "project-024",
+    "project_manager_employee_id": "employee-0025",
+    "row_version": 1,
+    "status": "COMPLETED",
+    "tenant_id": "tenant-a"
+  }
+]

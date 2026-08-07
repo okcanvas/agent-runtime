@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>OKCanvas Agent Runtime · Operations</title>
+  <link rel="stylesheet" href="/console/assets/console.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">LOCAL OPERATIONS</p>
+      <h1>OKCanvas Agent Runtime</h1>
+    </div>
+    <div class="top-actions">
+      <span id="connectionBadge" class="badge neutral">연결 전</span>
+      <button id="refreshButton" class="secondary" type="button">새로고침</button>
+      <button id="logoutButton" class="ghost" type="button">키 지우기</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="authPanel" class="panel auth-panel">
+      <div>
+        <p class="eyebrow">READ-ONLY CONSOLE</p>
+        <h2>로컬 관리자 키 입력</h2>
+        <p>키는 현재 브라우저 탭의 sessionStorage에만 보관되며 URL이나 서버 HTML에 포함되지 않습니다.</p>
+      </div>
+      <form id="authForm">
+        <label for="adminKey">X-OKCanvas-Admin-Key</label>
+        <div class="input-row">
+          <input id="adminKey" type="password" autocomplete="off" minlength="16" required>
+          <button type="submit">연결</button>
+        </div>
+        <p id="authError" class="error" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div id="consoleRoot" hidden>
+      <section class="notice">
+        <strong>읽기 전용</strong>
+        <span>이 콘솔은 실행·취소·승인 결정·평가 생성·Baseline 생성 기능을 제공하지 않습니다.</span>
+      </section>
+
+      <nav class="tabs" aria-label="운영 콘솔 섹션">
+        <button class="tab active" data-tab="overview" type="button">개요</button>
+        <button class="tab" data-tab="runs" type="button">실행</button>
+        <button class="tab" data-tab="approvals" type="button">승인 대기</button>
+        <button class="tab" data-tab="agents" type="button">에이전트</button>
+        <button class="tab" data-tab="evaluations" type="button">평가</button>
+        <button class="tab" data-tab="references" type="button">Reference</button>
+      </nav>
+
+      <section id="tab-overview" class="tab-panel active">
+        <div id="runtimeLine" class="runtime-line"></div>
+        <div id="summaryCards" class="card-grid"></div>
+        <div class="two-column">
+          <article class="panel">
+            <div class="section-heading"><h2>최근 실행</h2><span id="recentRunCount"></span></div>
+            <div class="table-wrap"><table><thead><tr><th>상태</th><th>Agent</th><th>Run</th><th>Token</th><th>생성</th></tr></thead><tbody id="recentRunsBody"></tbody></table></div>
+          </article>
+          <article class="panel">
+            <div class="section-heading"><h2>상태 분포</h2></div>
+            <div id="statusDistribution" class="status-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tab-runs" class="tab-panel">
+        <article class="panel">
+          <div class="section-heading">
+            <h2>실행 목록</h2>
+            <label>상태 <select id="runStatusFilter"><option value="">전체</option><option>CREATED</option><option>RUNNING</option><option>INTERRUPTED</option><option>SUCCEEDED</option><option>FAILED</option><option>CANCELLED</option></select></label>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>상태</th><th>Agent</th><th>Run</th><th>Task</th><th>Token</th><th>Trace</th><th>생성</th></tr></thead><tbody id="runsBody"></tbody></table></div>
+        </article>
+        <article id="runDetail" class="panel detail-panel" hidden>
+          <div class="section-heading run-detail-heading">
+            <div><h2>Run Events</h2><span id="runDetailTitle" class="mono"></span></div>
+            <div class="run-live-controls">
+              <span id="runStatusBadge" class="badge neutral">-</span>
+              <span id="runLiveBadge" class="badge neutral">연결 안 됨</span>
+              <span id="runCursor" class="mono">cursor 0</span>
+              <label class="follow-toggle"><input id="runAutoFollow" type="checkbox" checked> 최신 이벤트 따라가기</label>
+              <button id="reconnectRunButton" class="secondary" type="button">재연결</button>
+              <button id="stopRunButton" class="secondary" type="button">중지</button>
+            </div>
+          </div>
+          <div id="runEvents" class="event-list"></div>
+        </article>
+      </section>
+
+      <section id="tab-approvals" class="tab-panel">
+        <article class="panel">
+          <div class="section-heading">
+            <div>
+              <h2>Local Tool Approval Inbox</h2>
+              <span>조회 전용이며 승인·거절은 이 화면에서 수행하지 않습니다.</span>
+            </div>
+            <label>상태
+              <select id="approvalStateFilter">
+                <option value="">전체</option>
+                <option>PENDING</option>
+                <option>APPROVING</option>
+                <option>REJECTING</option>
+                <option>SUCCEEDED</option>
+                <option>REJECTED</option>
+                <option>FAILED</option>
+              </select>
+            </label>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>상태</th><th>Tool</th><th>Run</th><th>Task</th><th>결정</th><th>실행 횟수</th><th>생성</th></tr></thead><tbody id="approvalsBody"></tbody></table></div>
+        </article>
+      </section>
+
+      <section id="tab-agents" class="tab-panel">
+        <article class="panel"><div class="section-heading"><h2>Run Submission Boundary</h2></div><div id="submissionPolicyGrid" class="entity-grid"></div></article>
+        <article class="panel"><div class="section-heading"><h2>Agent Definitions</h2></div><div id="agentsGrid" class="entity-grid"></div></article>
+        <article class="panel"><div class="section-heading"><h2>MCP Servers</h2></div><div id="mcpGrid" class="entity-grid"></div></article>
+      </section>
+
+      <section id="tab-evaluations" class="tab-panel">
+        <div class="two-column">
+          <article class="panel"><div class="section-heading"><h2>Evaluation Cases</h2></div><div id="casesGrid" class="entity-grid"></div></article>
+          <article class="panel"><div class="section-heading"><h2>Evaluation Suites</h2></div><div id="suitesGrid" class="entity-grid"></div></article>
+        </div>
+        <article class="panel"><div class="section-heading"><h2>최근 평가</h2></div><div class="table-wrap"><table><thead><tr><th>상태</th><th>Case</th><th>Run</th><th>Token</th><th>Latency</th><th>생성</th></tr></thead><tbody id="evaluationsBody"></tbody></table></div></article>
+      </section>
+
+      <section id="tab-references" class="tab-panel">
+        <article class="panel"><div class="section-heading"><h2>Immutable Reference Integrity</h2><button id="verifyReferencesButton" class="secondary" type="button">다시 검증</button></div><div id="referencesGrid" class="entity-grid"></div></article>
+      </section>
+    </div>
+  </main>
+
+  <footer><span id="lastUpdated">아직 조회하지 않음</span></footer>
+  <script src="/console/assets/persisted-sse.js" defer></script>
+  <script src="/console/assets/console.js" defer></script>
+</body>
+</html>

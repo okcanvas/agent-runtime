@@ -1,0 +1,19 @@
+{
+  "schema_version": "okcanvas-organization-context-example-step001r1-acceptance-v1",
+  "step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP001R1_GROUPWARE_CONSTRUCTION_GUIDE_PATTERN_ALIGNMENT",
+  "version": "0.1.1",
+  "state": "PASSED",
+  "checks": {
+    "typescript_build_dependency_closed": true,
+    "deterministic_identity": true,
+    "product_api_passed": true,
+    "organization_unit_disambiguation": true,
+    "revision_contract_present": true,
+    "request_capture_redacts_authorization": true,
+    "example_controls_present": true,
+    "no_mcp_export": true,
+    "construction_guide_scope_present": true
+  },
+  "passed_checks": 9,
+  "total_checks": 9
+}

@@ -1,0 +1,29 @@
+{
+  "limitations": [
+    "real PostgreSQL server not executed",
+    "distributed Session history not implemented",
+    "Production DB migration not executed",
+    "API/Worker split and distributed lease not implemented"
+  ],
+  "retained": [
+    "sqlite-local-v1 remains default",
+    "postgresql-hybrid-v1 remains explicit opt-in",
+    "encrypted SDK Session history remains local SQLite",
+    "STEP091C ArtifactBlobStorePort boundary retained",
+    "Organization Context Router/Agent/Skill/MCP semantics unchanged"
+  ],
+  "runtime_step": "STEP091B3_POSTGRESQL_APPROVAL_EVALUATION_AND_SESSION_METADATA",
+  "runtime_version": "2.74.0",
+  "schema_version": "okcanvas-workspace-step008r4r5-runtime-product-source-change-v1",
+  "scope": [
+    "PostgreSQL Tool Approval store and Product transaction-domain reuse",
+    "PostgreSQL Evaluation result/suite/baseline store",
+    "PostgreSQL Product Session lifecycle metadata and active-Run fencing",
+    "PostgreSQL Session key-rotation checkpoint metadata",
+    "validated same-DSN PostgreSQL hybrid storage topology"
+  ],
+  "source_snapshot_digest": "05564d225c7dc7873fb821342f7f0be209e0e16120ca028a594c09a5ef9ba08c",
+  "state": "CHANGED_AS_PLANNED",
+  "workspace_step": "WORKSPACE_STEP008R4R5_RUNTIME_STEP091B3_POSTGRESQL_APPROVAL_EVALUATION_AND_SESSION_METADATA",
+  "workspace_version": "0.8.4-r5"
+}

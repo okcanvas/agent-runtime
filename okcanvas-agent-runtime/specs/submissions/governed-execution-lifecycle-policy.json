@@ -1,0 +1,13 @@
+{
+  "schema_version": "okcanvas-governed-execution-lifecycle-policy-v1",
+  "policy_id": "governed-execution-lifecycle",
+  "version": "1.0.0",
+  "claim_lease_seconds": 30,
+  "max_claim_attempts": 3,
+  "unconfirmed_payload_ttl_hours": 24,
+  "failed_payload_retention_days": 7,
+  "cleanup_batch_limit": 100,
+  "recovery_mode": "explicit-local-operator",
+  "active_running_run_recovery_enabled": false,
+  "distributed_worker_lease_enabled": false
+}

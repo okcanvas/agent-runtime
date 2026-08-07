@@ -1,0 +1,12 @@
+{
+  "schema_version": "okcanvas-step030-windows-launcher-failure-v1",
+  "observed_date_local": "2026-07-30",
+  "command": "sh_run_step030_acceptance",
+  "state": "ACCEPTANCE_NOT_STARTED",
+  "exception_type": "ModuleNotFoundError",
+  "missing_module": "fastapi",
+  "failing_file": "scripts/run_step030_acceptance.py",
+  "root_cause": "sh_run_step030_acceptance.cmd invoked PATH python instead of .venv\\Scripts\\python.exe",
+  "product_acceptance_result": null,
+  "secrets_included": false
+}

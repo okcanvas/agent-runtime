@@ -1,0 +1,53 @@
+# OKCanvas Agent Platform - deterministic repository byte policy.
+# The accepted workspace is overwhelmingly LF. Force canonical LF checkout to
+# prevent Windows core.autocrlf from creating manifest/hash drift.
+* text=auto eol=lf
+
+# Windows CMD scripts are also LF in the accepted baseline, except for four
+# retained launchers whose historical Windows byte contract is CRLF.
+*.cmd text eol=lf
+okcanvas-agent-runtime/sh_run_step086_acceptance.cmd text eol=crlf
+okcanvas-agent-runtime/sh_run_step086r2_acceptance.cmd text eol=crlf
+okcanvas-agent-runtime/sh_run_step088r1_acceptance.cmd text eol=crlf
+okcanvas-agent-runtime/sh_run_step090r1_acceptance.cmd text eol=crlf
+
+# Explicitly keep common source/config formats normalized to LF.
+*.py text eol=lf
+*.pyi text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.xml text eol=lf
+*.sql text eol=lf
+
+# Never apply text normalization to binary artifacts.
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
+*.webp -text
+*.ico -text
+*.pdf -text
+*.zip -text
+*.gz -text
+*.tar -text
+*.jar -text
+*.woff -text
+*.woff2 -text
+*.ttf -text
+*.bin -text

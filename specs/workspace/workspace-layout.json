@@ -1,0 +1,20 @@
+{
+  "forbidden_runtime_children": [
+    "okcanvas-connectors",
+    "okcanvas-connector-examples"
+  ],
+  "required_directories": [
+    "docs",
+    "reference",
+    "scripts",
+    "specs",
+    "tests",
+    "okcanvas-agent-runtime",
+    "okcanvas-agent-cli",
+    "okcanvas-connectors",
+    "okcanvas-connector-examples"
+  ],
+  "schema_version": "okcanvas-agent-platform-workspace-layout-v1",
+  "workspace_root": "okcanvas-agent-platform",
+  "workspace_root_is_product": false
+}

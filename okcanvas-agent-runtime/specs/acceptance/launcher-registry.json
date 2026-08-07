@@ -1,0 +1,2202 @@
+{
+  "current_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "current_step_token": "091D",
+  "records": [
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step001_live_acceptance.py",
+      "step_token": "001"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step002_live_acceptance.py",
+      "step_token": "002"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step003_live_acceptance.py",
+      "step_token": "003"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step004_live_acceptance.py",
+      "step_token": "004"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step006_acceptance.py",
+      "step_token": "006"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step007_acceptance.py",
+      "step_token": "007"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step007_live_acceptance.py",
+      "step_token": "007"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step008_acceptance.py",
+      "step_token": "008"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step009_acceptance.py",
+      "step_token": "009"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step009_live_acceptance.py",
+      "step_token": "009"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step010_acceptance.py",
+      "step_token": "010"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step011_acceptance.py",
+      "step_token": "011"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step012_acceptance.py",
+      "step_token": "012"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step013_acceptance.py",
+      "step_token": "013"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step014_acceptance.py",
+      "step_token": "014"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step015_acceptance.py",
+      "step_token": "015"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step016_acceptance.py",
+      "step_token": "016"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step017_acceptance.py",
+      "step_token": "017"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step018_acceptance.py",
+      "step_token": "018"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step019_acceptance.py",
+      "step_token": "019"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step020_acceptance.py",
+      "step_token": "020"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step021_acceptance.py",
+      "step_token": "021"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step022_acceptance.py",
+      "step_token": "022"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step023_acceptance.py",
+      "step_token": "023"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step024_acceptance.py",
+      "step_token": "024"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step024b_acceptance.py",
+      "step_token": "024B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step025_acceptance.py",
+      "step_token": "025"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step026_acceptance.py",
+      "step_token": "026"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step027_acceptance.py",
+      "step_token": "027"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step028_acceptance.py",
+      "step_token": "028"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step029_acceptance.py",
+      "step_token": "029"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step030_acceptance.py",
+      "step_token": "030"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step030a_acceptance.py",
+      "step_token": "030A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step031_acceptance.py",
+      "step_token": "031"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step032_acceptance.py",
+      "step_token": "032"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step033_acceptance.py",
+      "step_token": "033"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step034_acceptance.py",
+      "step_token": "034"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step035_acceptance.py",
+      "step_token": "035"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step036_acceptance.py",
+      "step_token": "036"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step037_acceptance.py",
+      "step_token": "037"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step038_acceptance.py",
+      "step_token": "038"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step039_acceptance.py",
+      "step_token": "039"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step040_acceptance.py",
+      "step_token": "040"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step041_acceptance.py",
+      "step_token": "041"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step042_acceptance.py",
+      "step_token": "042"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step043_acceptance.py",
+      "step_token": "043"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step044_acceptance.py",
+      "step_token": "044"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step045_acceptance.py",
+      "step_token": "045"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step046_acceptance.py",
+      "step_token": "046"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step047_acceptance.py",
+      "step_token": "047"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step048_acceptance.py",
+      "step_token": "048"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step049_acceptance.py",
+      "step_token": "049"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step050_acceptance.py",
+      "step_token": "050"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step051_acceptance.py",
+      "step_token": "051"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step052_acceptance.py",
+      "step_token": "052"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step053_acceptance.py",
+      "step_token": "053"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step054_acceptance.py",
+      "step_token": "054"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step055_acceptance.py",
+      "step_token": "055"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step056_acceptance.py",
+      "step_token": "056"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step056b_acceptance.py",
+      "step_token": "056B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step056c_acceptance.py",
+      "step_token": "056C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step057_acceptance.py",
+      "step_token": "057"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step058_acceptance.py",
+      "step_token": "058"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step059_acceptance.py",
+      "step_token": "059"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step059a_acceptance.py",
+      "step_token": "059A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step059a_deterministic_acceptance.py",
+      "step_token": "059A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step059b_acceptance.py",
+      "step_token": "059B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step059b_deterministic_acceptance.py",
+      "step_token": "059B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step060_acceptance.py",
+      "step_token": "060"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step061_acceptance.py",
+      "step_token": "061"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step062_acceptance.py",
+      "step_token": "062"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step062a_acceptance.py",
+      "step_token": "062A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step062b_acceptance.py",
+      "step_token": "062B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step062c_acceptance.py",
+      "step_token": "062C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step063_acceptance.py",
+      "step_token": "063"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step063a_acceptance.py",
+      "step_token": "063A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step064_acceptance.py",
+      "step_token": "064"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step064a_acceptance.py",
+      "step_token": "064A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step065_acceptance.py",
+      "step_token": "065"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step066_acceptance.py",
+      "step_token": "066"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step067_acceptance.py",
+      "step_token": "067"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step068_acceptance.py",
+      "step_token": "068"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step069_acceptance.py",
+      "step_token": "069"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step070_acceptance.py",
+      "step_token": "070"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step071_acceptance.py",
+      "step_token": "071"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step071_live_acceptance.py",
+      "step_token": "071"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step072_acceptance.py",
+      "step_token": "072"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step072_live_acceptance.py",
+      "step_token": "072"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step072a_acceptance.py",
+      "step_token": "072A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step072a_live_acceptance.py",
+      "step_token": "072A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step072b_acceptance.py",
+      "step_token": "072B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step072b_live_acceptance.py",
+      "step_token": "072B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step073_acceptance.py",
+      "step_token": "073"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step074_acceptance.py",
+      "step_token": "074"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step074_live_acceptance.py",
+      "step_token": "074"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step075_acceptance.py",
+      "step_token": "075"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step075_live_acceptance.py",
+      "step_token": "075"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step075a_acceptance.py",
+      "step_token": "075A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step075a_live_acceptance.py",
+      "step_token": "075A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step075b_acceptance.py",
+      "step_token": "075B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step075b_live_acceptance.py",
+      "step_token": "075B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step075c_acceptance.py",
+      "step_token": "075C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step075c_live_acceptance.py",
+      "step_token": "075C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step075d_acceptance.py",
+      "step_token": "075D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step075d_live_acceptance.py",
+      "step_token": "075D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step075e_acceptance.py",
+      "step_token": "075E"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step075e_live_acceptance.py",
+      "step_token": "075E"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step075f_acceptance.py",
+      "step_token": "075F"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step075f_live_acceptance.py",
+      "step_token": "075F"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step075g_acceptance.py",
+      "step_token": "075G"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step075g_live_acceptance.py",
+      "step_token": "075G"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step076_acceptance.py",
+      "step_token": "076"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step076_live_acceptance.py",
+      "step_token": "076"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step077_acceptance.py",
+      "step_token": "077"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step077_live_acceptance.py",
+      "step_token": "077"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step078_acceptance.py",
+      "step_token": "078"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step078_live_acceptance.py",
+      "step_token": "078"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step079_acceptance.py",
+      "step_token": "079"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step079_live_acceptance.py",
+      "step_token": "079"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step079a_acceptance.py",
+      "step_token": "079A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step079a_live_acceptance.py",
+      "step_token": "079A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step080_acceptance.py",
+      "step_token": "080"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step080_live_acceptance.py",
+      "step_token": "080"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step080a_acceptance.py",
+      "step_token": "080A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step080a_live_acceptance.py",
+      "step_token": "080A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step081_acceptance.py",
+      "step_token": "081"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step081_live_acceptance.py",
+      "step_token": "081"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step081a_acceptance.py",
+      "step_token": "081A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step081a_live_acceptance.py",
+      "step_token": "081A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step081b_acceptance.py",
+      "step_token": "081B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step081b_live_acceptance.py",
+      "step_token": "081B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step081c_acceptance.py",
+      "step_token": "081C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step081c_live_acceptance.py",
+      "step_token": "081C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step081d_acceptance.py",
+      "step_token": "081D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step081d_live_acceptance.py",
+      "step_token": "081D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step082b_acceptance.py",
+      "step_token": "082B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step083_acceptance.py",
+      "step_token": "083"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step084_acceptance.py",
+      "step_token": "084"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step085_acceptance.py",
+      "step_token": "085"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step086_acceptance.py",
+      "step_token": "086"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step086r1_acceptance.py",
+      "step_token": "086R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step086r2_acceptance.py",
+      "step_token": "086R2"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step087_acceptance.py",
+      "step_token": "087"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step087r1_acceptance.py",
+      "step_token": "087R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step087r2_acceptance.py",
+      "step_token": "087R2"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step088_acceptance.py",
+      "step_token": "088"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step088r1_acceptance.py",
+      "step_token": "088R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step089_acceptance.py",
+      "step_token": "089"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step002_live_acceptance.cmd",
+      "step_token": "002"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step003_live_acceptance.cmd",
+      "step_token": "003"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step004_live_acceptance.cmd",
+      "step_token": "004"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step007_live_acceptance.cmd",
+      "step_token": "007"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step008_acceptance.cmd",
+      "step_token": "008"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step009_live_acceptance.cmd",
+      "step_token": "009"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step011_acceptance.cmd",
+      "step_token": "011"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step012_acceptance.cmd",
+      "step_token": "012"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step013_acceptance.cmd",
+      "step_token": "013"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step014_acceptance.cmd",
+      "step_token": "014"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step015_acceptance.cmd",
+      "step_token": "015"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step016_acceptance.cmd",
+      "step_token": "016"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step017_acceptance.cmd",
+      "step_token": "017"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step018_acceptance.cmd",
+      "step_token": "018"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step019_acceptance.cmd",
+      "step_token": "019"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step020_acceptance.cmd",
+      "step_token": "020"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step020_live_acceptance.cmd",
+      "step_token": "020"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step021_acceptance.cmd",
+      "step_token": "021"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step022_acceptance.cmd",
+      "step_token": "022"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step023_acceptance.cmd",
+      "step_token": "023"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step024_acceptance.cmd",
+      "step_token": "024"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step024_live_acceptance.cmd",
+      "step_token": "024"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step024b_acceptance.cmd",
+      "step_token": "024B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step025_acceptance.cmd",
+      "step_token": "025"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step026_acceptance.cmd",
+      "step_token": "026"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step027_acceptance.cmd",
+      "step_token": "027"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step028_acceptance.cmd",
+      "step_token": "028"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step029_acceptance.cmd",
+      "step_token": "029"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step030_acceptance.cmd",
+      "step_token": "030"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step030a_acceptance.cmd",
+      "step_token": "030A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step031_acceptance.cmd",
+      "step_token": "031"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step032_acceptance.cmd",
+      "step_token": "032"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step033_acceptance.cmd",
+      "step_token": "033"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step034_acceptance.cmd",
+      "step_token": "034"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step035_acceptance.cmd",
+      "step_token": "035"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step036_acceptance.cmd",
+      "step_token": "036"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step037_acceptance.cmd",
+      "step_token": "037"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step038_acceptance.cmd",
+      "step_token": "038"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step039_acceptance.cmd",
+      "step_token": "039"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step040_acceptance.cmd",
+      "step_token": "040"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step041_acceptance.cmd",
+      "step_token": "041"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step042_acceptance.cmd",
+      "step_token": "042"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step043_acceptance.cmd",
+      "step_token": "043"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step044_acceptance.cmd",
+      "step_token": "044"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step045_acceptance.cmd",
+      "step_token": "045"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step046_acceptance.cmd",
+      "step_token": "046"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step047_acceptance.cmd",
+      "step_token": "047"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step048_acceptance.cmd",
+      "step_token": "048"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step049_acceptance.cmd",
+      "step_token": "049"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step050_acceptance.cmd",
+      "step_token": "050"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step051_acceptance.cmd",
+      "step_token": "051"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step052_acceptance.cmd",
+      "step_token": "052"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step053_acceptance.cmd",
+      "step_token": "053"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step054_acceptance.cmd",
+      "step_token": "054"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step055_acceptance.cmd",
+      "step_token": "055"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step056_acceptance.cmd",
+      "step_token": "056"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step056b_acceptance.cmd",
+      "step_token": "056B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step056c_acceptance.cmd",
+      "step_token": "056C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step057_acceptance.cmd",
+      "step_token": "057"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step058_acceptance.cmd",
+      "step_token": "058"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step059_acceptance.cmd",
+      "step_token": "059"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step059a_acceptance.cmd",
+      "step_token": "059A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step059b_acceptance.cmd",
+      "step_token": "059B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step060_acceptance.cmd",
+      "step_token": "060"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step061_acceptance.cmd",
+      "step_token": "061"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step062_acceptance.cmd",
+      "step_token": "062"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step062a_acceptance.cmd",
+      "step_token": "062A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step062b_acceptance.cmd",
+      "step_token": "062B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step062c_acceptance.cmd",
+      "step_token": "062C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step063_acceptance.cmd",
+      "step_token": "063"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step063a_acceptance.cmd",
+      "step_token": "063A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step064_acceptance.cmd",
+      "step_token": "064"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step064a_acceptance.cmd",
+      "step_token": "064A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step065_acceptance.cmd",
+      "step_token": "065"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step066_acceptance.cmd",
+      "step_token": "066"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step067_acceptance.cmd",
+      "step_token": "067"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step068_acceptance.cmd",
+      "step_token": "068"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step069_acceptance.cmd",
+      "step_token": "069"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step070_acceptance.cmd",
+      "step_token": "070"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step071_acceptance.cmd",
+      "step_token": "071"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step071_live_acceptance.cmd",
+      "step_token": "071"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step072_acceptance.cmd",
+      "step_token": "072"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step072_live_acceptance.cmd",
+      "step_token": "072"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step072a_acceptance.cmd",
+      "step_token": "072A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step072a_live_acceptance.cmd",
+      "step_token": "072A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step072b_acceptance.cmd",
+      "step_token": "072B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step072b_live_acceptance.cmd",
+      "step_token": "072B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step073_acceptance.cmd",
+      "step_token": "073"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step074_acceptance.cmd",
+      "step_token": "074"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step074_live_acceptance.cmd",
+      "step_token": "074"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step075_acceptance.cmd",
+      "step_token": "075"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step075_live_acceptance.cmd",
+      "step_token": "075"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step075a_acceptance.cmd",
+      "step_token": "075A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step075a_live_acceptance.cmd",
+      "step_token": "075A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step075b_acceptance.cmd",
+      "step_token": "075B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step075b_live_acceptance.cmd",
+      "step_token": "075B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step075c_acceptance.cmd",
+      "step_token": "075C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step075c_live_acceptance.cmd",
+      "step_token": "075C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step075d_acceptance.cmd",
+      "step_token": "075D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step075d_live_acceptance.cmd",
+      "step_token": "075D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step075e_acceptance.cmd",
+      "step_token": "075E"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step075e_live_acceptance.cmd",
+      "step_token": "075E"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step075f_acceptance.cmd",
+      "step_token": "075F"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step075f_live_acceptance.cmd",
+      "step_token": "075F"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step075g_acceptance.cmd",
+      "step_token": "075G"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step075g_live_acceptance.cmd",
+      "step_token": "075G"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step076_acceptance.cmd",
+      "step_token": "076"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step076_live_acceptance.cmd",
+      "step_token": "076"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step077_acceptance.cmd",
+      "step_token": "077"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step077_live_acceptance.cmd",
+      "step_token": "077"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step078_acceptance.cmd",
+      "step_token": "078"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step078_live_acceptance.cmd",
+      "step_token": "078"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step079_acceptance.cmd",
+      "step_token": "079"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step079_live_acceptance.cmd",
+      "step_token": "079"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step079a_acceptance.cmd",
+      "step_token": "079A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step079a_live_acceptance.cmd",
+      "step_token": "079A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step080_acceptance.cmd",
+      "step_token": "080"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step080_live_acceptance.cmd",
+      "step_token": "080"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step080a_acceptance.cmd",
+      "step_token": "080A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step080a_live_acceptance.cmd",
+      "step_token": "080A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step081_acceptance.cmd",
+      "step_token": "081"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step081_live_acceptance.cmd",
+      "step_token": "081"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step081a_acceptance.cmd",
+      "step_token": "081A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step081a_live_acceptance.cmd",
+      "step_token": "081A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step081b_acceptance.cmd",
+      "step_token": "081B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step081b_live_acceptance.cmd",
+      "step_token": "081B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step081c_acceptance.cmd",
+      "step_token": "081C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step081c_live_acceptance.cmd",
+      "step_token": "081C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step081d_acceptance.cmd",
+      "step_token": "081D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step081d_live_acceptance.cmd",
+      "step_token": "081D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step082b_acceptance.cmd",
+      "step_token": "082B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step083_acceptance.cmd",
+      "step_token": "083"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step084_acceptance.cmd",
+      "step_token": "084"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step085_acceptance.cmd",
+      "step_token": "085"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step086_acceptance.cmd",
+      "step_token": "086"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step086r1_acceptance.cmd",
+      "step_token": "086R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step086r2_acceptance.cmd",
+      "step_token": "086R2"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step087_acceptance.cmd",
+      "step_token": "087"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step087r1_acceptance.cmd",
+      "step_token": "087R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step087r2_acceptance.cmd",
+      "step_token": "087R2"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step088_acceptance.cmd",
+      "step_token": "088"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step088r1_acceptance.cmd",
+      "step_token": "088R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step089_acceptance.cmd",
+      "step_token": "089"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step090_acceptance.py",
+      "step_token": "090"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step090_acceptance.cmd",
+      "step_token": "090"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step090r1_acceptance.py",
+      "step_token": "090R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step090r1_acceptance.cmd",
+      "step_token": "090R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step091b1_acceptance.py",
+      "step_token": "091B1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step091b1_acceptance.cmd",
+      "step_token": "091B1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step091b2_acceptance.py",
+      "step_token": "091B2"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step091b2_acceptance.cmd",
+      "step_token": "091B2"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step091c_acceptance.py",
+      "step_token": "091C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step091c_acceptance.cmd",
+      "step_token": "091C"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step091b3_acceptance.py",
+      "step_token": "091B3"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step091b3_acceptance.cmd",
+      "step_token": "091B3"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step091b3r1_acceptance.py",
+      "step_token": "091B3R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step091b3r1_acceptance.cmd",
+      "step_token": "091B3R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step091b3r1_postgresql_live_acceptance.py",
+      "step_token": "091B3R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step091b3r1_postgresql_live_acceptance.cmd",
+      "step_token": "091B3R1"
+    },
+    {
+      "classification": "CURRENT",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step091d_acceptance.py",
+      "step_token": "091D"
+    },
+    {
+      "classification": "CURRENT",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step091d_acceptance.cmd",
+      "step_token": "091D"
+    },
+    {
+      "classification": "CURRENT",
+      "kind": "python-script",
+      "mode": "LIVE",
+      "path": "scripts/run_step091d_object_storage_live_acceptance.py",
+      "step_token": "091D"
+    },
+    {
+      "classification": "CURRENT",
+      "kind": "windows-launcher",
+      "mode": "LIVE",
+      "path": "sh_run_step091d_object_storage_live_acceptance.cmd",
+      "step_token": "091D"
+    }
+  ],
+  "required_current_records": [
+    {
+      "kind": "python-script",
+      "mode": "DETERMINISTIC"
+    },
+    {
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC"
+    },
+    {
+      "kind": "python-script",
+      "mode": "LIVE"
+    },
+    {
+      "kind": "windows-launcher",
+      "mode": "LIVE"
+    }
+  ],
+  "schema_version": "okcanvas-acceptance-launcher-registry-v2"
+}

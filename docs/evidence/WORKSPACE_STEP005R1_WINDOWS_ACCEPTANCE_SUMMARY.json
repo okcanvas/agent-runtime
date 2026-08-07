@@ -1,0 +1,38 @@
+{
+  "completed_at": "2026-08-05T07:46:43.097499Z",
+  "connector": {
+    "passed_checks": 8,
+    "pytest_passed": 8,
+    "state": "PASSED"
+  },
+  "connector_example": {
+    "passed_checks": 10,
+    "state": "PASSED"
+  },
+  "example": {
+    "node_tests_passed": 5,
+    "passed_checks": 9,
+    "state": "PASSED"
+  },
+  "execution_platform": "windows",
+  "limitations": {
+    "openai_model_called": false,
+    "real_enterprise_organization_context_called": false,
+    "runtime_organization_context_wired": false
+  },
+  "manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "passed_checks": 27,
+  "schema_version": "okcanvas-agent-platform-workspace-step005r1-windows-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP005R1_GROUPWARE_ACCEPTANCE_PATTERN_ALIGNMENT",
+  "total_checks": 27,
+  "version": "0.5.1",
+  "workspace_unit_tests": {
+    "failed": 0,
+    "passed": 63
+  }
+}

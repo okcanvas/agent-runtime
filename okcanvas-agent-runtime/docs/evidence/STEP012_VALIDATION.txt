@@ -1,0 +1,29 @@
+STEP012_RECORDED_RUN_EVALUATION_APPLICATION_SERVICE
+Version: 1.2.0
+Status: COMPLETE
+Date: 2026-07-29
+
+Observed validation:
+- python -m compileall -q src scripts tests: PASS
+- PYTHONPATH=src pytest -q: 199 passed
+- STEP005 Core Store acceptance: PASSED
+- STEP006 Reference Catalog acceptance: PASSED
+- STEP007 Generic Agent execution acceptance: PASSED
+- STEP008 Control API/SSE acceptance: PASSED
+- STEP009 read-only MCP deterministic acceptance: PASSED
+- STEP010 deterministic Evaluation acceptance: PASSED
+- STEP011 Catalog API acceptance: PASSED
+- STEP012 recorded Run Evaluation acceptance: 16/16 checks PASS
+- direct Reference import verification: PASS
+- immutable Reference verification: 4/4 PASS
+
+Accepted boundary:
+- completed Product Run -> canonical Events -> verified final-output Artifact -> deterministic Evaluation Result;
+- no model, MCP, Codex, or SDK Runner invocation during evaluation;
+- Artifact storage-root containment, SHA, byte length, media type, and output contract verified;
+- Agent definition ID/version/SHA and Usage evidence verified;
+- non-terminal Run, Artifact mutation, contract failure, and definition drift fail closed;
+- raw model output is not persisted in the Evaluation database.
+
+Tooling note:
+- ruff was not installed in the verification environment, so a ruff claim is not made.

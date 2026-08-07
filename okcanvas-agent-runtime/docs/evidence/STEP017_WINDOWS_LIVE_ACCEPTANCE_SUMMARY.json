@@ -1,0 +1,33 @@
+{
+  "schema_version": "okcanvas-step017-windows-live-acceptance-summary-v1",
+  "source": "user-reported Windows command output",
+  "command": "sh_run_step017_acceptance",
+  "acceptance_id": "20260729T060449733941Z-1c102fa5",
+  "state": "PASSED",
+  "checks_passed": 16,
+  "checks_total": 16,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1,
+  "resources_closed": true,
+  "compact_evidence_exported": true,
+  "preserved_path": null,
+  "task_count": 0,
+  "run_count": 0,
+  "submission_count": 1,
+  "verified_boundaries": {
+    "console_remains_read_only": true,
+    "direct_run_api_disabled": true,
+    "fingerprint_confirmation_required": true,
+    "idempotency_conflict_blocked": true,
+    "idempotent_replay_same_submission": true,
+    "local_tool_requires_approval_interruption": true,
+    "no_protected_payload_claim": true,
+    "preflight_creates_no_task_or_run": true,
+    "raw_idempotency_key_not_persisted": true,
+    "raw_payload_not_persisted": true,
+    "read_authority_cannot_submit": true,
+    "read_only_agent_immediate_after_confirmation": true,
+    "references_unchanged": true
+  },
+  "completed_at": "2026-07-29T06:04:51.842105Z"
+}

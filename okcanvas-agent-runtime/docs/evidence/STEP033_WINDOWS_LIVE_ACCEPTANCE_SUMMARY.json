@@ -1,0 +1,33 @@
+{
+  "schema_version": "okcanvas-step033-windows-live-acceptance-summary-v1",
+  "step_id": "STEP033",
+  "reported_at": "2026-07-30T00:09:26.582860Z",
+  "state": "PASSED",
+  "checks_passed": 20,
+  "checks_total": 20,
+  "binding_count": 3,
+  "output_runtime_drift": {
+    "replay_failure": "RunSubmissionIdempotencyConflict",
+    "confirmation_failure": "RunSubmissionIntegrityError",
+    "gateway_calls": 0,
+    "scheduler_calls": 0,
+    "product_counts_zero": true
+  },
+  "mcp_drift": {
+    "confirmation_failure": "RunSubmissionIntegrityError",
+    "gateway_calls": 0,
+    "scheduler_calls": 0,
+    "product_counts_zero": true
+  },
+  "local_tool_drift": {
+    "prepare_failure": "ToolApprovalIntegrityError",
+    "model_gateway_calls": 0,
+    "tool_gateway_prepare_calls": 0,
+    "tool_gateway_resume_calls": 0,
+    "approval_count": 0,
+    "product_counts_zero": true
+  },
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "source": "user-reported Windows output from sh_run_step033_acceptance.cmd"
+}

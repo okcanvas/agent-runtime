@@ -1,0 +1,5 @@
+schema_version: okcanvas-agent-policy-v1
+agent_id: session-continuity-agent
+capability_mode: language-only
+session_mode: sqlite-v1
+workspace_access: none

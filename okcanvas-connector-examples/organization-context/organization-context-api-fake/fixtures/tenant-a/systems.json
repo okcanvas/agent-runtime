@@ -1,0 +1,82 @@
+[
+  {
+    "description": "인사·근태",
+    "name": "ESS",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "ess",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "결재·공지",
+    "name": "Groupware",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "groupware",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "거래처·영업",
+    "name": "CRM",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "crm",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "재무·구매",
+    "name": "ERP",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "erp",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "제품 수명주기",
+    "name": "PLM",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "plm",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "프로젝트",
+    "name": "Project Management",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "project-management",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "고객지원",
+    "name": "Support",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "support",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "품질",
+    "name": "Quality",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "quality",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "전략",
+    "name": "Strategy",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "strategy",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "description": "조직·권한",
+    "name": "Identity",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "identity",
+    "tenant_id": "tenant-a"
+  }
+]

@@ -1,0 +1,5 @@
+mode: governed-sqlite-session-agent-as-tool-v1
+read_only: true
+workspace_access: none
+session_mode: sqlite-v1
+child_session_mode: disabled

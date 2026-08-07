@@ -1,0 +1,1885 @@
+{
+  "schema_version": "okcanvas-step081-client-transport-agent-full-reaudit-v1",
+  "baseline": {
+    "step": "STEP080_PRODUCT_OWNED_CAPABILITY_TOPOLOGY_AND_TOOL_DISCOVERY_FOUNDATION",
+    "version": "2.60.0"
+  },
+  "current_routes": {
+    "control_rest_routes": 53,
+    "service_rest_routes": 33,
+    "duplicated_admin_service_shapes": 21,
+    "websocket_routes": 0
+  },
+  "current_transports": {
+    "service_rest": true,
+    "service_persisted_sse": true,
+    "service_websocket": false,
+    "admin_persisted_sse": true,
+    "admin_native_sdk_ephemeral_sse": true,
+    "openai_provider_responses_websocket_enabled": false,
+    "transport_import_files": [
+      {
+        "path": "src/okcanvas_agent_runtime/control_api/auth.py",
+        "libraries": [
+          "fastapi"
+        ]
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/control_api/app.py",
+        "libraries": [
+          "fastapi"
+        ]
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/service_clients/auth.py",
+        "libraries": [
+          "fastapi"
+        ]
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/service_clients/routes.py",
+        "libraries": [
+          "fastapi"
+        ]
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/commerce_snapshot_ingress/service.py",
+        "libraries": [
+          "httpx"
+        ]
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/commerce_snapshot_ingress/http_adapter.py",
+        "libraries": [
+          "httpx"
+        ]
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/approval_operator/client.py",
+        "libraries": [
+          "httpx"
+        ]
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/tui_client/client.py",
+        "libraries": [
+          "httpx"
+        ]
+      }
+    ]
+  },
+  "current_clients": {
+    "service_products": {
+      "agent_cli": "README_ONLY",
+      "agent_web": "README_ONLY",
+      "agent_desktop": "README_ONLY"
+    },
+    "development_clients": [
+      "clients/okcanvas-agent-cli",
+      "src/okcanvas_agent_runtime/tui_client",
+      "src/okcanvas_agent_runtime/approval_operator",
+      "src/okcanvas_agent_runtime/operations_console",
+      "src/okcanvas_agent_runtime/interactive_runner"
+    ],
+    "endpoint_references": [
+      {
+        "path": "clients/README.md",
+        "paths": [
+          "/v1/service/"
+        ],
+        "sse": false,
+        "websocket": false
+      },
+      {
+        "path": "clients/okcanvas-agent-cli/README.md",
+        "paths": [
+          "/v1/service/"
+        ],
+        "sse": false,
+        "websocket": false
+      },
+      {
+        "path": "clients/okcanvas-agent-cli/dist/api-client.js",
+        "paths": [
+          "/v1/agent-definitions",
+          "/v1/agent-definitions/",
+          "/v1/run-submissions/",
+          "/v1/run-submissions/preflight",
+          "/v1/runs/",
+          "/v1/sessions",
+          "/v1/sessions/",
+          "/v1/sessions?limit=200"
+        ],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "clients/okcanvas-agent-cli/dist/sse.js",
+        "paths": [],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "clients/okcanvas-agent-cli/dist/sse.d.ts",
+        "paths": [],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "clients/okcanvas-agent-cli/src/sse.ts",
+        "paths": [],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "clients/okcanvas-agent-cli/src/api-client.ts",
+        "paths": [
+          "/v1/agent-definitions",
+          "/v1/agent-definitions/",
+          "/v1/run-submissions/",
+          "/v1/run-submissions/preflight",
+          "/v1/runs/",
+          "/v1/sessions",
+          "/v1/sessions/",
+          "/v1/sessions?limit=200"
+        ],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "agent-cli/README.md",
+        "paths": [
+          "/v1/service/"
+        ],
+        "sse": false,
+        "websocket": false
+      },
+      {
+        "path": "agent-web/README.md",
+        "paths": [
+          "/v1/service/"
+        ],
+        "sse": false,
+        "websocket": false
+      },
+      {
+        "path": "agent-desktop/README.md",
+        "paths": [
+          "/v1/service/"
+        ],
+        "sse": false,
+        "websocket": false
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/tui_client/client.py",
+        "paths": [
+          "/v1/agent-definitions",
+          "/v1/agent-definitions/{agent_id}",
+          "/v1/evaluation-cases",
+          "/v1/run-submissions/preflight",
+          "/v1/run-submissions/{submission_id}/confirm",
+          "/v1/runs/{run_id}",
+          "/v1/runs/{run_id}/artifact",
+          "/v1/runs/{run_id}/evaluations",
+          "/v1/runs/{run_id}/events/stream",
+          "/v1/runs/{run_id}/invocations"
+        ],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/approval_operator/client.py",
+        "paths": [
+          "/v1/tool-approvals",
+          "/v1/tool-approvals/{approval_id}/decision",
+          "/v1/tool-approvals/{approval_id}/inbox"
+        ],
+        "sse": false,
+        "websocket": false
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/operations_console/assets/console.js",
+        "paths": [
+          "/v1/agent-definitions",
+          "/v1/evaluation-cases",
+          "/v1/evaluation-suites",
+          "/v1/evaluations?limit=100",
+          "/v1/operations/summary",
+          "/v1/run-submission-policy",
+          "/v1/runs/",
+          "/v1/runs?limit=100",
+          "/v1/tool-approvals?limit=100"
+        ],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/operations_console/assets/index.html",
+        "paths": [],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/interactive_runner/assets/runner.js",
+        "paths": [
+          "/v1/agent-definitions",
+          "/v1/evaluation-cases",
+          "/v1/run-submission-policy",
+          "/v1/run-submissions/",
+          "/v1/run-submissions/preflight",
+          "/v1/runs/",
+          "/v1/runtime-scenarios",
+          "/v1/sessions",
+          "/v1/sessions/"
+        ],
+        "sse": true,
+        "websocket": false
+      },
+      {
+        "path": "src/okcanvas_agent_runtime/interactive_runner/assets/index.html",
+        "paths": [],
+        "sse": true,
+        "websocket": false
+      }
+    ]
+  },
+  "current_boundary_facts": {
+    "service_router_imports_control_api_modules": [
+      "okcanvas_agent_runtime.control_api.contracts",
+      "okcanvas_agent_runtime.control_api.errors",
+      "okcanvas_agent_runtime.control_api.mappers",
+      "okcanvas_agent_runtime.control_api.sse"
+    ],
+    "control_app_is_composition_root_and_route_container": true,
+    "service_routes_directly_receive_stores_coordinator_and_runtime_services": true,
+    "persisted_sse_reads_product_store_directly": true,
+    "public_service_clients_import_runtime_modules": false,
+    "public_service_clients_implemented": false
+  },
+  "service_transport_imports": [
+    "okcanvas_agent_runtime.agent_definitions",
+    "okcanvas_agent_runtime.agent_definitions.errors",
+    "okcanvas_agent_runtime.attachments",
+    "okcanvas_agent_runtime.baseline",
+    "okcanvas_agent_runtime.capabilities",
+    "okcanvas_agent_runtime.config",
+    "okcanvas_agent_runtime.control_api.contracts",
+    "okcanvas_agent_runtime.control_api.errors",
+    "okcanvas_agent_runtime.control_api.mappers",
+    "okcanvas_agent_runtime.control_api.sse",
+    "okcanvas_agent_runtime.execution.contracts",
+    "okcanvas_agent_runtime.product.errors",
+    "okcanvas_agent_runtime.product.models",
+    "okcanvas_agent_runtime.project_snapshots.errors",
+    "okcanvas_agent_runtime.protected_payload",
+    "okcanvas_agent_runtime.run_submission",
+    "okcanvas_agent_runtime.sandbox_runtime",
+    "okcanvas_agent_runtime.sessions",
+    "okcanvas_agent_runtime.skills",
+    "okcanvas_agent_runtime.tool_approval"
+  ],
+  "key_files": [
+    {
+      "path": "src/okcanvas_agent_runtime/control_api/app.py",
+      "lines": 1716,
+      "bytes": 74375,
+      "sha256": "af9a3a3b842758ddc308bba290d3f802d297719efcbe22ae058b8e620abb3da7"
+    },
+    {
+      "path": "src/okcanvas_agent_runtime/service_clients/routes.py",
+      "lines": 850,
+      "bytes": 43972,
+      "sha256": "945d9a6bd2488a6bad1b4a522b88a7615125a37cf8711d032eae2d74766feb68"
+    },
+    {
+      "path": "src/okcanvas_agent_runtime/control_api/sse.py",
+      "lines": 48,
+      "bytes": 1514,
+      "sha256": "000516bf09dd1d34bd62af6d93e9cd17bbff2bd51f276b432285bbcc5963dadb"
+    },
+    {
+      "path": "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+      "lines": 1631,
+      "bytes": 81578,
+      "sha256": "7351c1a722aad6e3498738a01cd5c5d08e46f9b3c978cc2c5562e8ce68ec9bce"
+    },
+    {
+      "path": "src/okcanvas_agent_runtime/execution/service.py",
+      "lines": 1570,
+      "bytes": 77275,
+      "sha256": "cc15da1d21b3ba1f0dd9a8e0fb10e3bf4335dc5d95427227e12146c10edeb7c1"
+    },
+    {
+      "path": "src/okcanvas_agent_runtime/run_submission/store.py",
+      "lines": 1616,
+      "bytes": 71556,
+      "sha256": "428273b8c4619154c092f2bfd3a8fae294df12101655a728d9df6e644d1c3ab7"
+    },
+    {
+      "path": "src/okcanvas_agent_runtime/model.py",
+      "lines": 799,
+      "bytes": 50940,
+      "sha256": "918d3ae6f181e6d6ac39ae27c04f98e8d9e11f679a340263bee567a638b2dc8f"
+    }
+  ],
+  "source_layout_coupling": {
+    "literal_src_package": {
+      "file_count": 111,
+      "match_count": 399,
+      "by_top_level": {
+        "AGENTS.md": 1,
+        "docs": 31,
+        "pyproject.toml": 1,
+        "scripts": 37,
+        "specs": 4,
+        "tests": 37
+      },
+      "files": [
+        {
+          "path": "docs/plans/STEP037A_GENERIC_FUNCTION_TOOL_RUNTIME_IMPLEMENTATION_PLAN.md",
+          "matches": 17
+        },
+        {
+          "path": "scripts/run_step076_acceptance.py",
+          "matches": 16
+        },
+        {
+          "path": "scripts/run_step069_acceptance.py",
+          "matches": 14
+        },
+        {
+          "path": "scripts/run_step068_acceptance.py",
+          "matches": 13
+        },
+        {
+          "path": "scripts/run_step070_acceptance.py",
+          "matches": 11
+        },
+        {
+          "path": "scripts/run_step067_acceptance.py",
+          "matches": 10
+        },
+        {
+          "path": "scripts/run_step064_acceptance.py",
+          "matches": 8
+        },
+        {
+          "path": "scripts/run_step072_acceptance.py",
+          "matches": 8
+        },
+        {
+          "path": "docs/evidence/STEP069_VALIDATION.txt",
+          "matches": 7
+        },
+        {
+          "path": "scripts/run_step063_acceptance.py",
+          "matches": 7
+        },
+        {
+          "path": "scripts/run_step078_acceptance.py",
+          "matches": 7
+        },
+        {
+          "path": "tests/test_step043_sqlite_session_runtime_baseline.py",
+          "matches": 7
+        },
+        {
+          "path": "tests/test_step072_immutable_openai_trace_export_disabled.py",
+          "matches": 7
+        },
+        {
+          "path": "scripts/run_step065_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step066_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step075_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step075a_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step075b_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step077_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step079_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "tests/test_step040_sub_agent_invocation_scope_baseline.py",
+          "matches": 6
+        },
+        {
+          "path": "tests/test_step041_native_handoff_runtime_baseline.py",
+          "matches": 6
+        },
+        {
+          "path": "tests/test_step042_agent_as_tool_runtime_baseline.py",
+          "matches": 6
+        },
+        {
+          "path": "tests/test_step044_native_guardrail_runtime_baseline.py",
+          "matches": 6
+        },
+        {
+          "path": "docs/36B-SUB-AGENT-INVOCATION-WORKSPACE-ISOLATION-AUDIT.md",
+          "matches": 5
+        },
+        {
+          "path": "docs/evidence/STEP065_VALIDATION.txt",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step062_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step064a_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step074_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step075f_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step075g_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "tests/test_step049_sqlite_session_native_agent_tool_composition_baseline.py",
+          "matches": 5
+        },
+        {
+          "path": "tests/test_step051_immutable_model_route_baseline.py",
+          "matches": 5
+        },
+        {
+          "path": "tests/test_step052_immutable_zero_retry_baseline.py",
+          "matches": 5
+        },
+        {
+          "path": "tests/test_step055_immutable_provider_identifier_minimization_baseline.py",
+          "matches": 5
+        },
+        {
+          "path": "docs/evidence/STEP060_ACCEPTANCE.json",
+          "matches": 4
+        },
+        {
+          "path": "docs/evidence/STEP064A_ACCEPTANCE.json",
+          "matches": 4
+        },
+        {
+          "path": "docs/evidence/STEP064A_VALIDATION.txt",
+          "matches": 4
+        },
+        {
+          "path": "docs/issues/OR-ISSUE-002-STEP075A-WINDOWS-DOCKER-COMMAND-OPERATION-EVIDENCE.md",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step061_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step063a_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step073_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step075c_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step075e_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step047_sqlite_session_native_handoff_composition_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step048_sqlite_session_native_guardrail_composition_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step050_sqlite_session_native_mcp_composition_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step053_immutable_reasoning_evidence_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step054_immutable_response_storage_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step062_bounded_multi_agent_orchestration_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step064a_pytest_async_plugin_independence_fix.py",
+          "matches": 4
+        },
+        {
+          "path": "docs/evidence/STEP063A_ACCEPTANCE.json",
+          "matches": 3
+        },
+        {
+          "path": "docs/evidence/STEP063A_VALIDATION.txt",
+          "matches": 3
+        },
+        {
+          "path": "scripts/run_step075d_acceptance.py",
+          "matches": 3
+        },
+        {
+          "path": "scripts/run_step080_acceptance.py",
+          "matches": 3
+        },
+        {
+          "path": "tests/test_step020_governed_local_tool_approval_baseline.py",
+          "matches": 3
+        },
+        {
+          "path": "tests/test_step039_native_sdk_streaming_baseline.py",
+          "matches": 3
+        },
+        {
+          "path": "tests/test_step064_bounded_encrypted_sqlite_session_compaction.py",
+          "matches": 3
+        },
+        {
+          "path": "docs/evidence/STEP060_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+          "matches": 2
+        },
+        {
+          "path": "docs/plans/STEP005_CORE_TASK_RUN_EVENT_ARTIFACT_STORE.md",
+          "matches": 2
+        },
+        {
+          "path": "pyproject.toml",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step060_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step072b_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step079a_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_project_readonly_inspection.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_step045_integrated_walking_skeleton_baseline.py",
+          "matches": 2
+        },
+        {
+          "path": "AGENTS.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/02-ARCHITECTURE.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/07-TARGET-PLATFORM-ARCHITECTURE.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/38-WINDOWS-PYTHON-LAUNCHER-PORTABILITY.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/decisions/ADR-005-SPECIFICATION-NAMESPACE.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP055_VALIDATION.txt",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP059A_WINDOWS_ACTUAL_SDK_TOOL_CONTEXT_IMPORT_FAILURE_SUMMARY.json",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP059_WINDOWS_REAL_OPENAI_FUNCTION_TOOL_FAILURE_SUMMARY.json",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP060_VALIDATION.txt",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP061_VALIDATION.txt",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP075B_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP075_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+          "matches": 1
+        },
+        {
+          "path": "docs/issues/OR-ISSUE-001-STEP075-WINDOWS-DOCKER-TMPFS-NORMALIZATION.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/issues/OR-ISSUE-010-SERVICE-SUBMISSION-OWNERSHIP-POST-COMMIT-WINDOW.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP002A_LIVE_ACCEPTANCE_HARNESS_HARDENING.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP006_READ_ONLY_REFERENCE_CATALOG_SERVICE.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP036A_REFERENCE_WIDE_RUNTIME_CAPABILITY_MASTER_PLAN.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP037_INTERACTIVE_AGENT_RUNNER_FOUNDATION.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP056_TUI_CLIENT_FOUNDATION.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP072A_WINDOWS_PYCACHE_OVERLAY_ISOLATION_FIX.md",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step019_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059a_deterministic_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059b_deterministic_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062c_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step071_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step072a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "specs/README.md",
+          "matches": 1
+        },
+        {
+          "path": "specs/agents/README.md",
+          "matches": 1
+        },
+        {
+          "path": "specs/mcp/README.md",
+          "matches": 1
+        },
+        {
+          "path": "specs/tools/README.md",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step023_minimal_local_approval_operator_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step046_sqlite_session_approval_composition_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step059a_actual_sdk_function_tool_output_contract_alignment.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step059b_actual_sdk_tool_context_export_alignment.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step060_query_directed_project_retrieval_evidence_budget_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step061_openai_agents_examples_coverage_matrix_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step063_strict_encrypted_sqlite_session_history.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step063a_windows_symlink_integrity_test_portability_fix.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step068_bounded_local_pdf_image_input_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step069_multi_user_service_client_contract_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step073_product_owned_sandbox_runtime_foundation.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075a_windows_docker_tmpfs_normalization_and_failure_evidence_fix.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075b_windows_docker_command_operation_evidence.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075c_windows_tmpfs_tar_stream_materialization_fix.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075d_python_subprocess_stdin_input_contract_fix.py",
+          "matches": 1
+        }
+      ]
+    },
+    "root_src_directory": {
+      "file_count": 92,
+      "match_count": 99,
+      "by_top_level": {
+        "scripts": 77,
+        "tests": 15
+      },
+      "files": [
+        {
+          "path": "scripts/run_step032_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step045_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step056_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_step018_governed_run_submission_baseline.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_step034_orphaned_running_reconciliation_baseline.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_step035_terminal_outcome_reconciliation_baseline.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_tool_approval_inbox.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step003_live_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step020_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step022_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step024b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step030a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step033_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step034_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step035_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step036_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step037_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step038_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step039_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step040_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step041_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step042_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step043_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step044_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step046_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step047_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step048_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step049_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step050_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step051_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step052_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step053_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step054_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step055_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step056b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step056c_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step057_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step058_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059a_deterministic_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step060_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step061_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062c_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step063_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step063a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step064_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step064a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step065_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step066_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step067_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step068_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step069_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step070_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step071_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step072_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step072a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step072b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step073_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step074_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step074_live_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075c_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075d_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075e_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075f_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075g_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step076_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step077_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step078_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step079_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step079a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step080_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/verify_no_reference_imports.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/windows_entrypoint.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_operations_console_api.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_operations_console_live_view.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_output_contract_runtime_registry.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step015_operations_console_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step016_operations_console_live_view_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step017_run_submission_boundary_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step032_agent_output_contract_runtime_registry_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step036_recorded_run_runtime_binding_verification_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step037_interactive_runner_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step056_tui_client_foundation_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075_product_owned_readonly_sandbox_workspace_agent.py",
+          "matches": 1
+        }
+      ]
+    },
+    "pythonpath_src": {
+      "file_count": 9,
+      "match_count": 9,
+      "by_top_level": {
+        "fixtures": 2,
+        "pyproject.toml": 1,
+        "sh_run_step044_acceptance.cmd": 1,
+        "sh_run_step045_acceptance.cmd": 1,
+        "sh_run_step046_acceptance.cmd": 1,
+        "sh_run_step047_acceptance.cmd": 1,
+        "sh_run_step049_acceptance.cmd": 1,
+        "tests": 1
+      },
+      "files": [
+        {
+          "path": "fixtures/codex_readonly_repo/pyproject.toml",
+          "matches": 1
+        },
+        {
+          "path": "fixtures/codex_write_repo/pyproject.toml",
+          "matches": 1
+        },
+        {
+          "path": "pyproject.toml",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step044_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step045_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step046_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step047_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step049_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_pytest_validator.py",
+          "matches": 1
+        }
+      ]
+    }
+  },
+  "flat_layout_probe": {
+    "probe_root": "/mnt/data/step081_flat_layout_probe",
+    "changes": [
+      "moved src/okcanvas_agent_runtime to repository-root okcanvas_agent_runtime",
+      "changed Hatch package path to okcanvas_agent_runtime",
+      "changed pytest pythonpath to [.]",
+      "changed coverage source to okcanvas_agent_runtime"
+    ],
+    "compileall": "PASS",
+    "package_import": "PASS version 2.60.0",
+    "control_api_factory_import": "PASS",
+    "capability_foundation_agent_topology_count": 27,
+    "focused_tests": {
+      "files": [
+        "tests/test_control_api.py",
+        "tests/test_control_api_sse.py",
+        "tests/test_step069_multi_user_service_client_contract.py",
+        "tests/test_agent_definition_catalog.py"
+      ],
+      "result": "......................                                                   [100%]\n22 passed in 5.19s",
+      "passed": 22
+    },
+    "wheel_build": "NOT_EXECUTED_HATCHLING_UNAVAILABLE_IN_AUDIT_ENVIRONMENT",
+    "conclusion": "Python import semantics and core runtime behavior are compatible with a root package; remaining work is physical-path contract migration."
+  },
+  "module_cycles": 0,
+  "top_level_project_entries": [
+    {
+      "name": "agent-cli",
+      "type": "directory"
+    },
+    {
+      "name": "agent-desktop",
+      "type": "directory"
+    },
+    {
+      "name": "agent-web",
+      "type": "directory"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "file"
+    },
+    {
+      "name": "clients",
+      "type": "directory"
+    },
+    {
+      "name": "docs",
+      "type": "directory"
+    },
+    {
+      "name": "fixtures",
+      "type": "directory"
+    },
+    {
+      "name": "HANDOFF.md",
+      "type": "file"
+    },
+    {
+      "name": "PLANS.md",
+      "type": "file"
+    },
+    {
+      "name": "pyproject.toml",
+      "type": "file"
+    },
+    {
+      "name": "README.md",
+      "type": "file"
+    },
+    {
+      "name": "reference",
+      "type": "directory"
+    },
+    {
+      "name": "requirements-direct.txt",
+      "type": "file"
+    },
+    {
+      "name": "scripts",
+      "type": "directory"
+    },
+    {
+      "name": "sh_approval_operator.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_codex_doctor.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_doctor.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_init_local_env.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_api.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step002_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step003_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step004_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step007_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step008_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step009_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step011_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step012_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step013_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step014_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step015_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step016_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step017_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step018_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step019_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step020_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step020_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step021_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step022_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step022_live_closure.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step023_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step024_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step024_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step024b_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step025_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step026_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step027_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step028_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step029_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step030_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step030a_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step031_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step032_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step033_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step034_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step035_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step036_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step037_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step038_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step039_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step040_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step041_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step042_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step043_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step044_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step045_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step046_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step047_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step048_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step049_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step050_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step051_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step052_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step053_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step054_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step055_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step056_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step056b_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step056c_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step057_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step058_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step059_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step059a_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step059b_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step060_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step061_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step062_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step062a_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step062b_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step062c_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step063_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step063a_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step064_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step064a_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step065_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step066_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step067_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step068_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step069_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step070_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step071_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step071_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step072_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step072_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step072a_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step072a_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step072b_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step072b_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step073_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step074_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step074_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075a_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075a_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075b_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075b_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075c_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075c_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075d_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075d_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075e_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075e_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075f_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075f_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075g_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step075g_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step076_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step076_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step077_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step077_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step078_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step078_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step079_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step079_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step079a_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step079a_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step080_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_run_step080_live_acceptance.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_setup.cmd",
+      "type": "file"
+    },
+    {
+      "name": "sh_tui.cmd",
+      "type": "file"
+    },
+    {
+      "name": "specs",
+      "type": "directory"
+    },
+    {
+      "name": "src",
+      "type": "directory"
+    },
+    {
+      "name": "tests",
+      "type": "directory"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F-001",
+      "severity": "HIGH",
+      "finding": "Public Service transport imports admin Control API contracts/errors/mappers/SSE."
+    },
+    {
+      "id": "F-002",
+      "severity": "HIGH",
+      "finding": "Service routes directly manipulate ownership, stores, encrypted ingress slots and execution coordinator."
+    },
+    {
+      "id": "F-003",
+      "severity": "HIGH",
+      "finding": "Persisted SSE adapter directly polls ProductStore instead of an application event-subscription port."
+    },
+    {
+      "id": "F-004",
+      "severity": "HIGH",
+      "finding": "Control API app.py is both composition root and a 53-route container."
+    },
+    {
+      "id": "F-005",
+      "severity": "MEDIUM",
+      "finding": "21 REST resource shapes are duplicated between admin and service surfaces."
+    },
+    {
+      "id": "F-006",
+      "severity": "HIGH",
+      "finding": "Planned service clients are README-only; implemented clients are development/admin clients."
+    },
+    {
+      "id": "F-007",
+      "severity": "MEDIUM",
+      "finding": "Python clients and static UI source are located inside the server runtime package."
+    },
+    {
+      "id": "F-008",
+      "severity": "MEDIUM",
+      "finding": "No client-facing WebSocket transport exists; provider Responses WebSocket is separately disabled and must not be confused with client transport."
+    },
+    {
+      "id": "F-009",
+      "severity": "MEDIUM",
+      "finding": "service_clients is a server router package, so its name reverses responsibility."
+    },
+    {
+      "id": "F-010",
+      "severity": "MEDIUM",
+      "finding": "Physical src-layout is heavily hard-coded even though Python imports are package-name based."
+    },
+    {
+      "id": "F-011",
+      "severity": "POSITIVE",
+      "finding": "AST import graph has zero module cycles, making staged migration feasible."
+    },
+    {
+      "id": "F-012",
+      "severity": "POSITIVE",
+      "finding": "Disposable root-package probe compiled, imported and passed 22 focused tests."
+    }
+  ],
+  "decision": {
+    "root_package_without_src": "RECOMMENDED",
+    "immediate_broad_move": "NOT_RECOMMENDED",
+    "client_transport_agent_axis": "REQUIRED",
+    "persisted_sse_authoritative": true,
+    "websocket_optional_adapter": true,
+    "transport_may_access_store_directly": false
+  }
+}

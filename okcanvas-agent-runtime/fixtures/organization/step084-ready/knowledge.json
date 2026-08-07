@@ -1,0 +1,31 @@
+{
+  "records": [
+    {
+      "aliases": [
+        "연차 정책",
+        "반차 정책"
+      ],
+      "allowed_principal_ids": [],
+      "allowed_roles": [
+        "agent-user"
+      ],
+      "classification": "INTERNAL",
+      "keywords": [
+        "휴가",
+        "연차",
+        "반차",
+        "결재"
+      ],
+      "knowledge_id": "knowledge.leave-policy",
+      "source_reference": "org://demo/policies/leave",
+      "source_title": "STEP084 Demo HR Policy",
+      "source_version": "2026.08",
+      "summary": "휴가와 반차는 잔여 일수를 확인한 뒤 조직 결재 절차를 통해 신청한다.",
+      "tenant_id": "step084-tenant",
+      "title": "휴가 신청 정책",
+      "valid_from": "2026-01-01",
+      "valid_until": null
+    }
+  ],
+  "schema_version": "okcanvas-organization-knowledge-v1"
+}

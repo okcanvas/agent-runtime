@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-01",
+  "partition_number": 1,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:05:22.350972+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 49,
+  "passed_tests": 49,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 9.363,
+  "exit_code": 0,
+  "files_sha256": "e107a7fa04aaf5c6ab84f0b9ec5a6fadb94a8db7936b8abfd7b09769fe6ce755",
+  "log_sha256": "6382ae1f076bb7a328f5cb5292dd0944e5fbf7fb50ed8c0581bdf82dc05c2192",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_acceptance_workspace.py",
+    "tests/test_active_reference_constitution.py",
+    "tests/test_agent_as_tool_runtime.py",
+    "tests/test_agent_declaration.py",
+    "tests/test_agent_definition_catalog.py",
+    "tests/test_agent_invocation_scope.py",
+    "tests/test_agent_runtime_binding.py",
+    "tests/test_approval_operator_cli.py",
+    "tests/test_approval_operator_client.py",
+    "tests/test_baseline_version.py",
+    "tests/test_bounded_multi_agent_orchestration.py",
+    "tests/test_catalog_control_api.py",
+    "tests/test_cli.py",
+    "tests/test_codex_agent_declaration.py"
+  ]
+}

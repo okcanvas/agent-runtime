@@ -1,0 +1,19 @@
+{
+  "schema_version": "okcanvas-step012a-acceptance-v1",
+  "state": "DETERMINISTIC_PASSED_WINDOWS_RERUN_PENDING",
+  "checks": {
+    "all_store_operations_use_owned_connection_boundary": true,
+    "commit_on_success": true,
+    "rollback_on_failure": true,
+    "close_in_finally": true,
+    "four_operation_connections_explicitly_closed": true,
+    "step012_acceptance_16_of_16": true,
+    "full_test_suite_passed": true,
+    "direct_reference_import_forbidden": true,
+    "references_unchanged": true,
+    "windows_rerun_completed": false
+  },
+  "connection_close_count": 4,
+  "pytest_count": 201,
+  "final_windows_command": "sh_run_step012_acceptance.cmd"
+}

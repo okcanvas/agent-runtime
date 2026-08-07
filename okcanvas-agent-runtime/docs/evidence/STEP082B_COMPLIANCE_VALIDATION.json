@@ -1,0 +1,40 @@
+{
+  "actual_changed_file_count": 1360,
+  "checks": {
+    "acceptance_passed": true,
+    "all_clauses_traced": true,
+    "all_constitution_gates_closed": true,
+    "architecture_passed": true,
+    "baseline_inventory_self_hash_exact": true,
+    "changed_files_exact": true,
+    "fresh_zip_passed": true,
+    "full_python_passed": true,
+    "identity_exact": true,
+    "installation_passed": true,
+    "issues_complete": true,
+    "non_python_passed": true,
+    "record_complete": true,
+    "record_self_hash_exact": true,
+    "windows_product_rerun_separate_from_constitution_gate": true
+  },
+  "declared_changed_file_count": 1360,
+  "passed_checks": 15,
+  "schema_version": "okcanvas-step082b-compliance-validation-v1",
+  "stale_declared_changed_files": [],
+  "state": "PASSED",
+  "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+  "summary": {
+    "applied_clause_count": 127,
+    "changed_file_count": 1360,
+    "constitution_sha256": "262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa",
+    "gate_result_count": 32,
+    "pending_external_gate_count": 0,
+    "state": "COMPLETE",
+    "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+    "traceability_entry_count": 127,
+    "version": "2.62.2"
+  },
+  "total_checks": 15,
+  "unregistered_changed_files": [],
+  "version": "2.62.2"
+}

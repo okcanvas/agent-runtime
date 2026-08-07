@@ -1,0 +1,39 @@
+{
+  "completed_chunk_count": 11,
+  "corrective_scope": [
+    "architecture_constitution_windows_live_accepted",
+    "windows_npm_pack_acceptance_portability_windows_live_accepted",
+    "architecture_live_validator_process_isolation_windows_live_accepted"
+  ],
+  "error_tests": 0,
+  "failed_chunk": {
+    "counts": {
+      "errors": 0,
+      "failures": 3,
+      "skipped": 0,
+      "tests": 94
+    },
+    "end_file_index": 219,
+    "file_count": 20,
+    "first_file": "tests/test_step075f_sandbox_answer_completeness_and_bounded_repair.py",
+    "last_file": "tests/test_step082b_coding_execution_plane_and_distribution_boundary.py",
+    "log_path": "docs/evidence/step082b-local/python-regression/chunk-200-219.txt",
+    "return_code": 1,
+    "start_file_index": 200,
+    "summary": [
+      "91",
+      ""
+    ],
+    "timed_out": false
+  },
+  "failed_tests": 3,
+  "failure_classification": "STALE_PROMOTED_WINDOWS_LIVE_FLAG_ASSERTIONS",
+  "issue_id": "OR-ISSUE-058",
+  "passed_tests": 861,
+  "schema_version": "okcanvas-step082b-python-regression-failure-summary-v1",
+  "state": "FAILED",
+  "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+  "test_file_count": 231,
+  "total_tests": 864,
+  "version": "2.62.2"
+}

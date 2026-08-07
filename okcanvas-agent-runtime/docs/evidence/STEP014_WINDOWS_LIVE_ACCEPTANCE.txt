@@ -1,0 +1,10 @@
+STEP014_ACCEPTANCE_WORKSPACE_AND_EVIDENCE_LIFECYCLE
+Windows live acceptance: REPORTED PASSED by the user on 2026-07-29.
+
+Accepted baseline:
+- resource close completed
+- compact evidence exported
+- PASS workspace cleanup completed
+- no Windows file-lock cleanup regression reported
+
+This report contains the user-confirmed result, not a raw machine log.

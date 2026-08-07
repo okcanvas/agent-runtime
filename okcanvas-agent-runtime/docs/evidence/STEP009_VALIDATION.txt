@@ -1,0 +1,39 @@
+STEP009_FIRST_READ_ONLY_MCP_INTEGRATION
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_LIVE_PENDING
+Project version: 0.9.0
+
+Reference-grounded implementation:
+- ADOPT MCPServerStdio, MCPServerManager and static Tool filtering from installed openai-agents contracts.
+- ADAPT FastMCP declaration to one product-owned local stdio server.
+- REJECT direct /reference imports, generic filesystem/write Tools, arbitrary server commands and Tool payload persistence.
+
+Validation performed:
+- python -m compileall -q src scripts tests: PASS
+- pytest -q: 168 passed
+- STEP005 Core Store acceptance: PASS
+- STEP006 Reference Catalog acceptance: PASS
+- STEP007 deterministic Generic Agent acceptance: PASS
+- STEP008 deterministic ASGI/SSE acceptance: PASS
+- STEP009 deterministic MCP acceptance: PASS (13/13 checks)
+- scripts/verify_no_reference_imports.py: PASS
+- scripts/verify_reference.py: PASS (4/4)
+- RuntimeInfo and MCP server definition CLI: PASS
+
+STEP009 deterministic checks:
+- server ID explicit allowlist: PASS
+- exact two-Tool allowlist: PASS
+- read-only declaration: PASS
+- search result maximum 8: PASS
+- line-range maximum 80: PASS
+- result character limit: PASS
+- RunState path discovery: PASS
+- exact line read: PASS
+- MCP tool.started/tool.completed Events: PASS
+- MCP Event source: PASS
+- raw request/API key/reference source content absent from SQLite: PASS
+- Reference trees unchanged: PASS
+
+Not claimed:
+- actual stdio protocol connection using installed mcp package in this build environment;
+- actual model invocation of both MCP Tools;
+- remote MCP, write-capable MCP, multiple MCP servers or reconnect after process loss.

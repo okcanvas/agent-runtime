@@ -1,0 +1,104 @@
+{
+  "file_count": 19,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "88e6ec8976a799b7cc4fff5050fc7e9081b7e082c199e907b268262a6568be59",
+      "size": 26
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "27cd63900af10786790f40bc2bf465854abb8e338be252419bcded2d49abb033",
+      "size": 1794
+    },
+    {
+      "path": "README.md",
+      "sha256": "f9deac86785dd60ba35b7f68e5a4002f8b0cea8e9a08c63d14b193bc26569e26",
+      "size": 1554
+    },
+    {
+      "path": "docs/evidence/EXAMPLE_STEP001_ACCEPTANCE.json",
+      "sha256": "82bb987e749bd20c54453aa9f9d5e482019f2f85db7ca95dae96bcf02d12fd30",
+      "size": 475
+    },
+    {
+      "path": "docs/issues/EXAMPLE-ISSUE-001-FAKE-MUST-NOT-BYPASS-CONNECTOR.md",
+      "sha256": "8d0fe093d8ab71473c0a60266dd8a9ea439f9f9618405d942f432722cc3b4ca5",
+      "size": 414
+    },
+    {
+      "path": "docs/issues/EXAMPLE-ISSUE-002-IMPORT-SIDE-EFFECT-KEPT-TEST-PROCESS-ALIVE.md",
+      "sha256": "3b7639a2667f6e44ad66b3427d1503e74bff48122b83604e255bcefc6f98a537",
+      "size": 451
+    },
+    {
+      "path": "docs/issues/EXAMPLE-ISSUE-003-UNDECLARED-TYPESCRIPT-BUILD-DEPENDENCY.md",
+      "sha256": "7b070e0e8e611fd40cdde4ae4350bfef15960d4519f6b568f715fdce1017f9ed",
+      "size": 892
+    },
+    {
+      "path": "node-shims.d.ts",
+      "sha256": "730fa789b29693aa1e6acfb076800ded00211f064dd45a0d1c1262c91d81e633",
+      "size": 2263
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "246bb890cb432e793aa2ee88797ccc3f61f01477eb1e9ba1e8a5f05fb60acba4",
+      "size": 805
+    },
+    {
+      "path": "package.json",
+      "sha256": "8d8d88ca8e272c6a31b56a89a6c8545374b5057e1b4c834b5e768dc306029792",
+      "size": 753
+    },
+    {
+      "path": "scripts/package-source.mjs",
+      "sha256": "5eda68930af3b2c16a6a4786f1f21b30b747aeb797081bfceb691c6c0f3486b9",
+      "size": 3431
+    },
+    {
+      "path": "scripts/run-acceptance.ts",
+      "sha256": "1404e4d35164fbc630a88b95d4e9ec32d0d59f4382753c02db2f8d9be6264c2f",
+      "size": 3547
+    },
+    {
+      "path": "src/main.ts",
+      "sha256": "c6629a598d90d1ffd4b8164366df3e41ef8299441de767b19cb67a2a4f66966a",
+      "size": 289
+    },
+    {
+      "path": "src/server.ts",
+      "sha256": "c88284403c9e468fbc068dffbf7a65eb3bdea2072d556d93c3bbf562c2701dc9",
+      "size": 7874
+    },
+    {
+      "path": "src/state.ts",
+      "sha256": "54ca478574f65e84e19799935e9bfd7fa6a58703ae8ecda52a7a46c0a0170d11",
+      "size": 2735
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "ff346587682bd428f02743cc550e49815eaf41f2dd312df0b330face14bb8852",
+      "size": 1211
+    },
+    {
+      "path": "test/server.test.ts",
+      "sha256": "c9b9ba76b8a221861c098903f33d9c8aecf4dcfb31441134b365fba8bb0b90b1",
+      "size": 3699
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "75004f10a5734742ee8d24c1e65d135f62fac52eead4d324a65d22c4e5799736",
+      "size": 458
+    },
+    {
+      "path": "vendor/typescript-5.8.3.tgz",
+      "sha256": "4b867378e82e75791492505f2ed1b986a6c04b2196f78179d01670862444550a",
+      "size": 4250406
+    }
+  ],
+  "project_path": "okcanvas-connector-examples/groupware/groupware-api-fake",
+  "schema_version": "okcanvas-parent-project-file-manifest-v1",
+  "step": "EXAMPLE_STEP001R1_TYPESCRIPT_BUILD_DEPENDENCY_CLOSURE",
+  "version": "0.1.1"
+}

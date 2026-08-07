@@ -1,0 +1,25 @@
+{
+  "architecture_validation_detail_present": false,
+  "architecture_validation_process_detail_present": false,
+  "classification": "RUNTIME_SUCCEEDED_ARCHITECTURE_REVALIDATION_EVIDENCE_FAILED",
+  "failure_diagnostics_empty": true,
+  "false_checks": [
+    "step081_static_architecture_gate_complete",
+    "step081_transport_topology_runtime_bound"
+  ],
+  "model": "gpt-4.1",
+  "model_calls": 2,
+  "outcome_classification": "RUNTIME_FAILED",
+  "passed_checks": 75,
+  "reported_command": "sh_run_step081a_live_acceptance",
+  "sandbox_cleanup_state": "COMPLETED",
+  "sandbox_orphan_count": 0,
+  "schema_version": "okcanvas-step081a-windows-live-75-of-77-failure-summary-v1",
+  "source_log_sha256": "13454e8b25a2238433f02210670bb450a13d6d44f7257fd3bb07f0e957fabe84",
+  "state": "FAILED",
+  "step": "STEP081A_WINDOWS_NPM_COMMAND_RESOLUTION_AND_ACCEPTANCE_PORTABILITY",
+  "terminal_status": "SUCCEEDED",
+  "tool_calls": 1,
+  "total_checks": 77,
+  "version": "2.61.1"
+}

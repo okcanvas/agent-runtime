@@ -1,0 +1,24 @@
+{
+  "snapshot_id": "case003-tie-ordering",
+  "safety_stock_units": 4,
+  "items": [
+    {
+      "sku": "zeta-stand",
+      "available_units": 3,
+      "forecast_units": 6,
+      "inbound_units": 2
+    },
+    {
+      "sku": "beta-mouse",
+      "available_units": 10,
+      "forecast_units": 4,
+      "inbound_units": 0
+    },
+    {
+      "sku": "alpha-hub",
+      "available_units": 1,
+      "forecast_units": 4,
+      "inbound_units": 2
+    }
+  ]
+}

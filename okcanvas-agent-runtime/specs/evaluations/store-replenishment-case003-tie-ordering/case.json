@@ -1,0 +1,64 @@
+{
+  "schema_version": "okcanvas-evaluation-case-v1",
+  "case_id": "store-replenishment-case003-tie-ordering",
+  "version": "1.0.0",
+  "agent_definition_id": "store-replenishment-review-agent",
+  "required_result": {
+    "schema_version": "okcanvas-store-replenishment-review-v1",
+    "status": "ACTION_REQUIRED",
+    "snapshot_id": "case003-tie-ordering",
+    "summary": "2 SKUs require replenishment for the supplied forecast and safety stock target.",
+    "reviewed_skus": 3,
+    "total_reorder_units": 10,
+    "recommendations": [
+      {
+        "sku": "alpha-hub",
+        "available_units": 1,
+        "forecast_units": 4,
+        "inbound_units": 2,
+        "safety_stock_units": 4,
+        "projected_units": -1,
+        "reorder_units": 5,
+        "action": "REORDER",
+        "risk": "SHORTAGE",
+        "reason": "Available and inbound units are 5 units below forecast demand plus safety stock."
+      },
+      {
+        "sku": "zeta-stand",
+        "available_units": 3,
+        "forecast_units": 6,
+        "inbound_units": 2,
+        "safety_stock_units": 4,
+        "projected_units": -1,
+        "reorder_units": 5,
+        "action": "REORDER",
+        "risk": "SHORTAGE",
+        "reason": "Available and inbound units are 5 units below forecast demand plus safety stock."
+      },
+      {
+        "sku": "beta-mouse",
+        "available_units": 10,
+        "forecast_units": 4,
+        "inbound_units": 0,
+        "safety_stock_units": 4,
+        "projected_units": 6,
+        "reorder_units": 0,
+        "action": "NO_ACTION",
+        "risk": "COVERED",
+        "reason": "Available and inbound units cover forecast demand and the safety stock target."
+      }
+    ],
+    "unverified": []
+  },
+  "forbidden_result": {
+    "status": "INSUFFICIENT_DATA"
+  },
+  "required_tools": [],
+  "forbidden_tools": [
+    "web_search",
+    "write_file",
+    "shell"
+  ],
+  "max_total_tokens": 3000,
+  "max_duration_ms": 60000
+}

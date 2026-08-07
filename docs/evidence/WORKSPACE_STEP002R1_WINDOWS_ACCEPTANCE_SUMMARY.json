@@ -1,0 +1,24 @@
+{
+  "evidence_origin": "USER_SUPPLIED_REAL_WINDOWS_LOG_IN_STEP003_CONTINUATION",
+  "passed_checks": 19,
+  "results": {
+    "connector_example": "6/6 PASS",
+    "connector_pytest": "10/10 PASS",
+    "connector_to_example": "7/7 PASS",
+    "groupware_connector": "7/7 PASS",
+    "product_cli_node_tests": "11/11 PASS",
+    "product_service_cli": "11/11 PASS",
+    "workspace_unit_tests": "26/26 PASS"
+  },
+  "retained_claims": {
+    "retained_product_source_bytes": true,
+    "subproject_acceptance_did_not_mutate_source": true,
+    "utf8_cp949_output_safe": true,
+    "windows_node_path_with_spaces_safe": true
+  },
+  "schema_version": "okcanvas-agent-platform-retained-windows-evidence-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP002R1_PRODUCT_SERVICE_CLI_WINDOWS_NODE_PATH_SPACE_CLOSURE",
+  "total_checks": 19,
+  "version": "0.2.1"
+}

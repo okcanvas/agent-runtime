@@ -1,0 +1,85 @@
+STEP062_BOUNDED_MULTI_AGENT_ORCHESTRATION_FOUNDATION
+Project version: 2.42.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+Accepted predecessor evidence
+- STEP061 Windows live acceptance: user-reported 20/20 PASS.
+- STEP061 classified exactly 212 SDK examples across 15 areas.
+- STEP061 ADOPT/ADAPT/DEFER/REJECT: 16/16/171/9.
+- STEP061 selected exactly STEP062_BOUNDED_MULTI_AGENT_ORCHESTRATION_FOUNDATION.
+- STEP061 References unchanged.
+
+STEP062 implementation
+- one logical root manager with zero model calls;
+- exactly two fixed read-only language-only specialist Agents;
+- both child SDK Runner.run calls start directly and concurrently;
+- exact maximum child count/parallelism/depth: 2/2/1;
+- one Product Run and one trace group with two immutable ORCHESTRATION_CHILD Invocations;
+- failure mode: ALL_REQUIRED_FAIL_FAST;
+- cancellation mode: CANCEL_PENDING_SIBLINGS;
+- aggregation mode: DECLARATION_ORDER_STRUCTURED;
+- child output contract: CodingAgentResult;
+- root output contract: BoundedOrchestrationResult;
+- completion order may differ, but aggregate child order is declaration order;
+- successful root usage is exactly zero and Run usage is the sum of child usage;
+- success creates exactly one verified aggregate Artifact;
+- child execution failure produces FAILED/CANCELLED child outcomes and zero Artifact;
+- Session, Function Tool, MCP, Handoff, Agent-as-Tool, workspace access, and native child streaming are disabled;
+- no dynamic planner, LLM judge, arbitrary fan-out, retry, or nested orchestration;
+- Control API and Node CLI expose the immutable orchestration declaration and lifecycle.
+
+Validation executed in this container
+- Python compileall over src/scripts/tests: PASS.
+- Initial monolithic pytest run: environment command timeout after reaching 84%; not counted as acceptance.
+- Final split Python pytest over all test files: 598/598 PASS with normal exit codes.
+  - chunk 1: 141 PASS;
+  - chunk 2: 167 PASS;
+  - chunk 3: 115 PASS;
+  - chunk 4: 173 PASS;
+  - chunk 5: 2 PASS.
+- STEP062 deterministic acceptance: 29/29 PASS.
+- STEP062 focused tests inside acceptance: 7/7 PASS.
+- TypeScript build: PASS.
+- Node tests: 14/14 PASS.
+- npm pack dry-run: PASS, 23 files, 24,355 bytes packed, 110,393 bytes unpacked.
+- Reference integrity: 4/4 PASS.
+
+Environment boundary
+- No real OpenAI/model call was executed for STEP062 in this container.
+- Direct SDK orchestration behavior was validated with the installed-compatible fake SDK boundary used by the focused tests.
+- The Windows launcher sh_run_step062_acceptance.cmd has not been executed in this Linux container.
+
+Required Windows closure
+- Run sh_run_step062_acceptance.cmd.
+- Require 29/29 PASS.
+
+Packaging audit correction
+- A candidate-only change updated scripts/package_source.py's default output name to STEP062.
+- Fresh-extraction regression found that STEP043 intentionally preserves the historical STEP058
+  default filename as a source-level contract.
+- The candidate was discarded, the out-of-scope change was reverted, and the historical test passed.
+- STEP062 packaging uses an explicit output path instead of changing that default.
+
+Independent corrected candidate ZIP self-extraction validation
+- canonical root: exactly one (`okcanvas-agent-runtime`);
+- ZIP entries: 2,767;
+- forbidden cache/local-state/dependency files: 0;
+- Python compileall: PASS;
+- STEP062 deterministic acceptance: 29/29 PASS;
+- Python pytest: 598/598 PASS in five normal-exit chunks (139/105/133/78/143);
+- TypeScript build: PASS;
+- Node tests: 14/14 PASS;
+- Reference integrity: 4/4 PASS;
+- direct `/reference` imports: 0.
+
+Final self-extracted ZIP validation
+- canonical root: exactly one (`okcanvas-agent-runtime`);
+- ZIP entries: 2,767;
+- forbidden cache/local-state/dependency files: 0;
+- Python compileall: PASS;
+- STEP062 deterministic acceptance: 29/29 PASS;
+- Python pytest: 598/598 PASS in five normal-exit chunks (139/105/133/78/143);
+- TypeScript build: PASS;
+- Node tests: 14/14 PASS;
+- Reference integrity: 4/4 PASS;
+- direct `/reference` imports: 0.

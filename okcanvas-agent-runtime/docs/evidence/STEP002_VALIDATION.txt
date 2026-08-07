@@ -1,0 +1,206 @@
+STEP002 deterministic validation
+date=2026-07-28
+
+$ python -m compileall -q src scripts tests
+PASS
+
+$ pytest -q
+...................................                                      [100%]
+35 passed in 0.22s
+
+$ PYTHONPATH=src python scripts/verify_reference.py
+PASS openai-agents-python files=1419 bytes=17945765 tree_sha256=65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a
+PASS temporal-openai-agents-demos files=36 bytes=774434 tree_sha256=0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a
+PASS openai-cs-agents-demo files=43 bytes=1409011 tree_sha256=121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d
+PASS openai-agents-streaming-api files=38 bytes=246327 tree_sha256=d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9
+PASS reference baseline: 4/4
+
+$ PYTHONPATH=src python scripts/verify_codex_fixture.py
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________________ test_quantity_is_applied_to_each_line _____________________
+
+    def test_quantity_is_applied_to_each_line() -> None:
+        lines = [
+            {"unit_price": 10_000, "quantity": 2},
+            {"unit_price": 5_000, "quantity": 1},
+        ]
+>       assert calculate_total(lines) == 25_000
+E       AssertionError: assert 15000 == 25000
+E        +  where 15000 = calculate_total([{'quantity': 2, 'unit_price': 10000}, {'quantity': 1, 'unit_price': 5000}])
+
+fixtures/codex_readonly_repo/tests/test_pricing.py:9: AssertionError
+=========================== short test summary info ============================
+FAILED fixtures/codex_readonly_repo/tests/test_pricing.py::test_quantity_is_applied_to_each_line - AssertionError: assert 15000 == 25000
+ +  where 15000 = calculate_total([{'quantity': 2, 'unit_price': 10000}, {'quantity': 1, 'unit_price': 5000}])
+1 failed in 0.04s
+PASS: intentional quantity defect reproduced; tree_sha256=8c1023ce21afe7fc4b6cef0a0ed835a8e811424756debb5e9c3fe5f5fc3967d0; files=7
+
+$ PYTHONPATH=src python -m okcanvas_agent_runtime info --pretty
+{
+  "arbitrary_shell_enabled": false,
+  "codex_integration_stability": "experimental-upstream",
+  "codex_live_accepted": false,
+  "codex_readonly_implemented": true,
+  "handoffs_enabled": false,
+  "live_call_requires_explicit_opt_in": true,
+  "mcp_enabled": false,
+  "model_calls_supported": true,
+  "openai_agents_version": "0.19.0",
+  "project": "okcanvas-agent-runtime",
+  "specification_root": "specs",
+  "step": "STEP002_CODEX_READ_ONLY_IMPLEMENTED_NOT_LIVE_ACCEPTED",
+  "version": "0.2.0",
+  "workspace_write_enabled": false
+}
+
+$ PYTHONPATH=src python -m okcanvas_agent_runtime codex-doctor --pretty
+{
+  "agent_model_configured": false,
+  "api_key_configured": false,
+  "codex_cli_installed": false,
+  "codex_cli_path": null,
+  "codex_cli_version": null,
+  "codex_model_configured": false,
+  "experimental_codex_importable": false,
+  "issues": [
+    {
+      "code": "SDK_NOT_INSTALLED",
+      "message": "openai-agents==0.19.0 is not installed"
+    },
+    {
+      "code": "CODEX_CLI_NOT_INSTALLED",
+      "message": "Codex CLI was not found; set CODEX_PATH or add codex to PATH"
+    },
+    {
+      "code": "AGENT_MODEL_NOT_CONFIGURED",
+      "message": "Agent model is not configured"
+    },
+    {
+      "code": "CODEX_MODEL_NOT_CONFIGURED",
+      "message": "Codex model is not configured"
+    },
+    {
+      "code": "API_KEY_MISSING",
+      "message": "OPENAI_API_KEY is not configured"
+    }
+  ],
+  "ready": false,
+  "sdk_installed": false,
+  "sdk_version": null
+}
+EXPECTED_EXIT=3
+
+$ unconfirmed codex-readonly
+{
+  "schema_version": "okcanvas-codex-readonly-run-v1",
+  "run_id": "codexrun_76e964c0637c4e35a0cbc3d1fd33dc05",
+  "request_id": "req_53927bf155b54781b7d928f78d470096",
+  "state": "FAILED",
+  "started_at": "2026-07-28T11:54:47.890359Z",
+  "completed_at": "2026-07-28T11:54:47.890412Z",
+  "duration_ms": 0,
+  "agent_model": null,
+  "codex_model": null,
+  "sdk_version": null,
+  "codex_cli_version": null,
+  "trace_id": null,
+  "response_id": null,
+  "thread_id": null,
+  "resumed_thread": false,
+  "workspace": "/mnt/data/okcanvas-agent-runtime-work/okcanvas-agent-runtime/fixtures/codex_readonly_repo",
+  "input_sha256": "09cbad3beca70ddbcc89819d841b26bc8be195122240185d5388f152f88a107c",
+  "live_call": false,
+  "before": null,
+  "after": null,
+  "mutation_detected": false,
+  "event_file": null,
+  "event_count": 0,
+  "event_sha256": null,
+  "event_types": [],
+  "item_types": [],
+  "required_files": [],
+  "verified_inspected_files": [],
+  "result": null,
+  "agent_usage": {
+    "requests": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "codex_usage": {
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "output_tokens": 0
+  },
+  "error": {
+    "code": "LIVE_OPT_IN_REQUIRED",
+    "message": "Codex execution requires the explicit confirmation flag",
+    "retryable": false,
+    "detail_type": null
+  }
+}
+EXPECTED_EXIT=2
+PASS no event file created
+
+$ confirmed controlled Git workspace without installed SDK/Codex
+{
+  "schema_version": "okcanvas-codex-readonly-run-v1",
+  "run_id": "codexrun_696177811a554860ba145879a888c2ab",
+  "request_id": "req_f348eb3bf7e04ca09b4d86b96da08252",
+  "state": "FAILED",
+  "started_at": "2026-07-28T11:54:48.598244Z",
+  "completed_at": "2026-07-28T11:54:48.598558Z",
+  "duration_ms": 0,
+  "agent_model": "agent-model",
+  "codex_model": "codex-model",
+  "sdk_version": null,
+  "codex_cli_version": null,
+  "trace_id": null,
+  "response_id": null,
+  "thread_id": null,
+  "resumed_thread": false,
+  "workspace": "/tmp/tmp.0bZQbwCvYh/repo",
+  "input_sha256": "e3bb45ae87b77c9024b84e50f95e162de07bcfe674ba8b190cb95f866b7549ad",
+  "live_call": false,
+  "before": null,
+  "after": null,
+  "mutation_detected": false,
+  "event_file": null,
+  "event_count": 0,
+  "event_sha256": null,
+  "event_types": [],
+  "item_types": [],
+  "required_files": [],
+  "verified_inspected_files": [],
+  "result": null,
+  "agent_usage": {
+    "requests": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "codex_usage": {
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "output_tokens": 0
+  },
+  "error": {
+    "code": "SDK_NOT_INSTALLED",
+    "message": "openai-agents==0.19.0 is not installed",
+    "retryable": false,
+    "detail_type": null
+  }
+}
+EXPECTED_EXIT=3
+PASS readiness failed before event creation; secret absent
+
+$ PYTHONPATH=src python scripts/run_step002_live_acceptance.py
+Refusing live execution: set OKCANVAS_STEP002_LIVE_ACCEPTANCE=1, OPENAI_API_KEY, OKCANVAS_AGENT_MODEL, and OKCANVAS_CODEX_MODEL explicitly
+EXPECTED_EXIT=2
+
+LIVE SDK/CODEX/MODEL CALL: NOT EXECUTED

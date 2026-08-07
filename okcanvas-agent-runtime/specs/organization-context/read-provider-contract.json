@@ -1,0 +1,36 @@
+{
+  "credential_reference_transmitted": false,
+  "external_connector_project_path": "okcanvas-connectors/organization-context-mcp-server",
+  "production_service_sot": "DATABASE",
+  "provider_deployment": "external-connector-service",
+  "provider_implemented_in_runtime": false,
+  "required_identity_fields": [
+    "tenant_id",
+    "principal_id",
+    "roles",
+    "delegation_id"
+  ],
+  "required_identity_headers": [
+    "X-OKCanvas-Tenant-ID",
+    "X-OKCanvas-Principal-ID",
+    "X-OKCanvas-Roles",
+    "X-OKCanvas-Delegation-ID"
+  ],
+  "schema_version": "okcanvas-organization-context-read-provider-contract-v1",
+  "server_id": "organization-context-read",
+  "tools": [
+    {
+      "mutates": false,
+      "tool_name": "resolve_organization_context"
+    },
+    {
+      "mutates": false,
+      "tool_name": "search_organization_context"
+    },
+    {
+      "mutates": false,
+      "tool_name": "get_organization_entity"
+    }
+  ],
+  "transport": "remote-streamable-http"
+}

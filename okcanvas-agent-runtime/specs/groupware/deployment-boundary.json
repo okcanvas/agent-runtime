@@ -1,0 +1,19 @@
+{
+  "connector_examples_repository": "okcanvas-connector-examples",
+  "connector_examples_required": false,
+  "external_connector_repository": "okcanvas-connectors",
+  "external_groupware_connector_path": "okcanvas-connectors/groupware-mcp-server",
+  "future_write_agent_id": "groupware-action-agent",
+  "future_write_mcp_server_id": "groupware-action",
+  "groupware_api_fake_example_path": "okcanvas-connector-examples/groupware/groupware-api-fake",
+  "groupware_api_fake_is_mcp_server": false,
+  "mcp_client_declaration_location": "runtime-internal",
+  "mcp_provider_deployment": "external-connector-service",
+  "mcp_provider_implementation_in_runtime": false,
+  "organization_specific_adapter_in_runtime": false,
+  "read_agent_definition_location": "runtime-internal",
+  "read_agent_permanently_read_only": true,
+  "schema_version": "okcanvas-groupware-deployment-boundary-v2",
+  "test_fixture_location": "runtime-internal",
+  "write_extension_strategy": "separate-agent-separate-mcp-separate-credential"
+}

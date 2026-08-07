@@ -1,0 +1,46 @@
+{
+  "schema_version": "okcanvas-capability-discovery-policy-v1",
+  "policy_id": "product-capability-discovery-v1",
+  "version": "1.0.0",
+  "sdk_package": "openai-agents",
+  "sdk_version": "0.19.0",
+  "tool_search": {
+    "runtime_enabled": false,
+    "execution": "server",
+    "max_namespaces_per_agent": 8,
+    "max_deferred_tools_per_agent": 64,
+    "allowed_surface_kinds": [
+      "function-tool",
+      "hosted-mcp"
+    ]
+  },
+  "programmatic_tool_calling": {
+    "runtime_enabled": false,
+    "default_allowed_callers": [
+      "direct"
+    ],
+    "max_callable_tools": 32
+  },
+  "namespaces": [
+    {
+      "namespace_id": "local-text",
+      "description": "Bounded local text analysis Function Tools.",
+      "member_ids": [
+        "local_text_fingerprint",
+        "local_text_metrics"
+      ],
+      "loading": "EAGER",
+      "activation": "STRUCTURE_ONLY"
+    },
+    {
+      "namespace_id": "project-inspection",
+      "description": "Bounded project evidence inspection Function Tools.",
+      "member_ids": [
+        "project_readonly_inspect",
+        "sandbox_project_readonly_inspect"
+      ],
+      "loading": "EAGER",
+      "activation": "STRUCTURE_ONLY"
+    }
+  ]
+}

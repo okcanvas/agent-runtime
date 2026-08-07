@@ -1,0 +1,30 @@
+STEP017_LOCAL_RUN_SUBMISSION_AND_APPROVAL_BOUNDARY_DESIGN
+Version: 1.7.0
+Status: COMPLETE_WINDOWS_LIVE_ACCEPTED
+Date: 2026-07-29
+
+Validation:
+- compileall: PASS
+- full pytest suite: 238 passed
+- STEP017 deterministic acceptance: 16/16 PASS
+- read-only Agent classification: IMMEDIATE_AFTER_CONFIRMATION
+- local Tool classification: APPROVAL_INTERRUPTED
+- write MCP/Handoff/Session policy: PROPOSAL_ONLY
+- exact fingerprint confirmation: PASS
+- same-key/same-fingerprint replay: PASS
+- same-key/different-fingerprint conflict: PASS
+- read authority rejected for submission: PASS
+- raw input not persisted: PASS
+- raw idempotency key not persisted: PASS
+- preflight Task/Run/model calls: zero
+- direct POST /v1/runs default denial: PASS
+- console mutation: disabled; GET-only retained
+- Windows launchers STEP013/015/016/017 use safe windows_entrypoint.py: PASS
+- direct /reference import prohibition: PASS
+- immutable Reference integrity: 4/4 PASS
+- Windows STEP017 acceptance: 16/16 PASS; cleanup COMPLETED
+
+Reference decisions:
+- ADOPT RunState serialization/resume and approve/reject as the future local-Tool approval boundary.
+- ADAPT Product preflight authority, fingerprint confirmation, and idempotency around immutable Agent/MCP definitions.
+- REJECT raw prompt/key persistence, authentication-as-authorization, direct /reference import, and console mutation in STEP017.

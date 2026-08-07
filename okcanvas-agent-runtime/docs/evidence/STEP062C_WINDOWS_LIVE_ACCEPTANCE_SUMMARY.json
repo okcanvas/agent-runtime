@@ -1,0 +1,21 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step": "STEP062C_COMMITTED_NODE_DIST_RELEASE_INTEGRITY_ACCEPTANCE_FIX",
+  "version": "2.42.3",
+  "state": "PASSED",
+  "passed_checks": 26,
+  "total_checks": 26,
+  "corrected_step062b": {"state": "PASSED", "passed_checks": 22, "total_checks": 22},
+  "corrected_step062a": {"state": "PASSED", "passed_checks": 18, "total_checks": 18},
+  "corrected_step062": {"state": "PASSED", "passed_checks": 29, "total_checks": 29},
+  "release_validation_output": "COMMITTED_TYPESCRIPT_RELEASE_VERIFIED inputs=11 outputs=21 tests=2 external_tsc_required=false",
+  "manifest_input_count": 11,
+  "manifest_output_count": 21,
+  "manifest_test_count": 2,
+  "focused_test_output": "7 passed in 2.40s",
+  "node_tests_passed": true,
+  "references_unchanged": true,
+  "step063_unselected_at_acceptance": true,
+  "reported_by_user": true,
+  "supersedes_prior_failed_step062c_run": true
+}

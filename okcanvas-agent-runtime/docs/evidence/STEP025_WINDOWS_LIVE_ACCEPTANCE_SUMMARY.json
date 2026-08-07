@@ -1,0 +1,101 @@
+{
+  "schema_version": "okcanvas-step025-windows-live-acceptance-summary-v1",
+  "reported_at": "2026-07-30T05:15:00+09:00",
+  "source": "user-reported-console-output",
+  "command": "sh_run_step025_acceptance.cmd",
+  "state": "PASSED",
+  "acceptance_id": "20260729T201455906532Z-bd18771c",
+  "acceptance_workspace": {
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T20:14:58.389405Z",
+    "created_at": "2026-07-29T20:14:55.913398Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resources_closed": true,
+    "step_id": "STEP025"
+  },
+  "artifact_count": 1,
+  "artifact_error": null,
+  "artifact_id": "artifact_a4d73ac03515445cb8b9c9d87bbb3f1a",
+  "evaluation_id": "eval_6ac6037cc2134c88898a397ff4bd84dd",
+  "submission_id": "submission_a13937ed5de0471fab6cca57b8d1d90f",
+  "task_id": "task_d9981ec06eae48b0ab9aaa5c7f3f4f61",
+  "run_id": "run_4c5376061fdf4cfda75086f3e6c97d90",
+  "outcome_http_status": 200,
+  "outcome": {
+    "status": "SUCCEEDED",
+    "attempt": 1,
+    "input_tokens": 180,
+    "output_tokens": 220,
+    "total_tokens": 400,
+    "trace_id": "trace_step025"
+  },
+  "source_result": {
+    "adapter_id": "controlled-commerce-http",
+    "adapter_version": "1.0.0",
+    "read_count": 1,
+    "write_count": 0
+  },
+  "checks": {
+    "adapter_identity_bound": true,
+    "artifact_contract_and_formula_exact": true,
+    "canonical_snapshot_hash_bound": true,
+    "credentials_not_in_sqlite": true,
+    "deterministic_evaluation_passed": true,
+    "exact_confirmation_scheduled_once": true,
+    "gateway_called_once": true,
+    "governed_preflight_created": true,
+    "idempotent_replay_avoided_second_read": true,
+    "loopback_source_read_exactly_once": true,
+    "no_tool_or_mcp_events": true,
+    "preflight_created_no_task_or_run": true,
+    "protected_payload_created_before_confirmation": true,
+    "references_unchanged": true,
+    "run_succeeded": true,
+    "single_submission_task_and_run": true,
+    "source_request_hash_bound": true,
+    "source_snapshot_not_in_events": true,
+    "source_snapshot_not_in_sqlite": true,
+    "source_write_never_called": true,
+    "successful_payload_deleted": true
+  },
+  "event_types": [
+    "run.created",
+    "run.started",
+    "agent.definition.resolved",
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "agent.completed",
+    "artifact.created",
+    "run.completed",
+    "payload.retention.applied"
+  ],
+  "result": {
+    "snapshot_id": "case001-shortage",
+    "status": "ACTION_REQUIRED",
+    "total_reorder_units": 19,
+    "recommendations": [
+      {
+        "sku": "ergonomic-keyboard",
+        "reorder_units": 12
+      },
+      {
+        "sku": "desk-lamp",
+        "reorder_units": 7
+      },
+      {
+        "sku": "usb-c-dock",
+        "reorder_units": 0
+      }
+    ]
+  },
+  "observations": [
+    "The Windows acceptance exercised the controlled loopback HTTP source, governed preflight, exact confirmation, Product Run, Artifact, recorded-Run Evaluation, protected-payload deletion, and Acceptance Workspace cleanup.",
+    "The source was read exactly once, no source write method was called, and idempotent replay caused no second read.",
+    "A Starlette TestClient deprecation warning about the installed httpx compatibility layer was printed. It did not change any STEP025 Product acceptance check; dependency migration remains a separate maintenance concern."
+  ]
+}

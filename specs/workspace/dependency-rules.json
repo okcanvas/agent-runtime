@@ -1,0 +1,66 @@
+{
+  "rules": [
+    {
+      "allowed_protocols": [
+        "HTTP",
+        "SSE"
+      ],
+      "source": "okcanvas-agent-cli",
+      "source_imports_allowed": false,
+      "target": "okcanvas-agent-runtime"
+    },
+    {
+      "allowed_protocols": [
+        "MCP_STREAMABLE_HTTP"
+      ],
+      "source": "okcanvas-agent-runtime",
+      "source_imports_allowed": false,
+      "target": "okcanvas-connectors/groupware-mcp-server"
+    },
+    {
+      "allowed_protocols": [
+        "GROUPWARE_REST_API"
+      ],
+      "source": "okcanvas-connectors/groupware-mcp-server",
+      "source_imports_allowed": false,
+      "target": "actual-groupware"
+    },
+    {
+      "allowed_protocols": [
+        "GROUPWARE_REST_API"
+      ],
+      "production_dependency": false,
+      "source": "okcanvas-connectors/groupware-mcp-server",
+      "source_imports_allowed": false,
+      "target": "okcanvas-connector-examples/groupware/groupware-api-fake"
+    },
+    {
+      "allowed_protocols": [
+        "MCP_STREAMABLE_HTTP"
+      ],
+      "implementation_state": "DEFERRED_NOT_WIRED",
+      "source": "okcanvas-agent-runtime",
+      "source_imports_allowed": false,
+      "target": "okcanvas-connectors/organization-context-mcp-server"
+    },
+    {
+      "allowed_protocols": [
+        "ORGANIZATION_CONTEXT_REST_API"
+      ],
+      "source": "okcanvas-connectors/organization-context-mcp-server",
+      "source_imports_allowed": false,
+      "target": "actual-organization-context-service"
+    },
+    {
+      "allowed_protocols": [
+        "ORGANIZATION_CONTEXT_REST_API"
+      ],
+      "production_dependency": false,
+      "source": "okcanvas-connectors/organization-context-mcp-server",
+      "source_imports_allowed": false,
+      "target": "okcanvas-connector-examples/organization-context/organization-context-api-fake"
+    }
+  ],
+  "schema_version": "okcanvas-agent-platform-dependency-rules-v1",
+  "workspace_root_environment_allowed": false
+}

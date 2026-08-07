@@ -1,0 +1,40 @@
+STEP002C_CODEX_READ_ONLY_LIVE_ACCEPTANCE VALIDATION
+Date: 2026-07-28
+Version: 0.2.3
+Status: COMPLETE
+
+User-executed connected acceptance evidence
+- Source log SHA-256: 172196b24d9e0d9492f936e28292b0c5a98d48e9448b67095ce225b558774a0b
+- Doctor ready: true
+- Doctor issues: none
+- SDK: openai-agents 0.19.0
+- Codex CLI: codex-cli 0.145.0
+- First run: SUCCEEDED
+- Second run: SUCCEEDED
+- Same thread preserved: true
+- Second run resumed: true
+- First workspace unchanged: true
+- Second workspace unchanged: true
+- Required files found: true
+- Acceptance state: PASSED
+- Acceptance checks: 10/10 true
+- Combined Agent tokens: 168949
+- Total acceptance duration: 128359 ms
+
+Packaged deterministic validation
+- python -m compileall -q src scripts tests: PASS
+- pytest -q: PASS, 52 tests
+- PYTHONPATH=src python scripts/verify_reference.py: PASS, 4/4
+- PYTHONPATH=src python scripts/verify_codex_fixture.py: PASS as intentional-failure verifier; exact assertion 15000 != 25000 reproduced
+- PYTHONPATH=src python -m okcanvas_agent_runtime info --pretty: PASS
+- Runtime step: STEP002C_CODEX_READ_ONLY_LIVE_ACCEPTANCE
+- Runtime version: 0.2.3
+- Runtime codex_live_accepted: true
+- Raw acceptance log secret-pattern scan: PASS, no sk-* token found
+
+Important limitation
+- pytest was unavailable inside the Codex subprocess environment during the connected acceptance.
+- The first run reproduced the faulty result directly.
+- The second run directly invoked the test function and observed AssertionError.
+- STEP002 accepts read-only investigation, relevant-file discovery, event evidence, thread resume, and no mutation.
+- Authoritative build/test validation remains outside Codex and is mandatory for STEP003.

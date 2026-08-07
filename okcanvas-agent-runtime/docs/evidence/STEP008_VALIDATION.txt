@@ -1,0 +1,77 @@
+STEP008_CONTROL_API_AND_PERSISTED_SSE validation
+Date: 2026-07-29
+Project version: 0.8.0
+Status: IMPLEMENTED_ASGI_ACCEPTED_NETWORK_LIVE_PENDING
+
+Reference constitution
+- /reference was inspected before implementation.
+- Exact upstream paths and ADAPT/REJECT/DEFER decisions are recorded in docs/plans/STEP008_CONTROL_API_AND_PERSISTED_SSE.md.
+- Runtime import from /reference is forbidden.
+
+Executed
+
+1. Direct reference-import boundary
+$ PYTHONPATH=src:. python scripts/verify_no_reference_imports.py
+PASS: ok=true, violations=[]
+
+2. Immutable Reference verification
+$ PYTHONPATH=src:. python scripts/verify_reference.py
+PASS: 4/4
+- openai-agents-python: 1419 files
+- temporal-openai-agents-demos: 36 files
+- openai-cs-agents-demo: 43 files
+- openai-agents-streaming-api: 38 files
+
+3. Core product store acceptance
+$ PYTHONPATH=src:. python scripts/verify_core_store.py
+PASS: Task/Run SUCCEEDED, event sequence 1..4, Artifact SHA verified
+
+4. STEP006 Reference Catalog acceptance
+$ PYTHONPATH=src:. python scripts/run_step006_acceptance.py
+PASS: 12/12 checks
+
+5. STEP007 deterministic generic execution acceptance
+$ PYTHONPATH=src:. python scripts/run_step007_acceptance.py
+PASS: Task/Run/Event/Artifact/Trace/Usage contracts
+
+6. STEP008 deterministic ASGI acceptance
+$ PYTHONPATH=src:. python scripts/run_step008_acceptance.py
+PASS: 17/17 checks plus immutable reference comparison
+- unauthorized access rejected
+- POST /v1/runs returned 202 with durable IDs
+- Task and Run succeeded
+- persisted Events monotonic
+- Last-Event-ID resume worked
+- terminal SSE closed after run.completed
+- heartbeat emitted for non-terminal Run
+- cancellation persisted run.cancelled
+- canonical 422 validation error
+- SDK event classes absent from public payload
+- raw request, API key, admin key absent from SQLite
+
+7. Python compilation and regression
+$ python -m compileall -q src scripts tests
+PASS
+$ pytest -q
+PASS: 152 passed
+
+8. Codex fixture baselines
+$ PYTHONPATH=src:. python scripts/verify_codex_fixture.py
+PASS: intentional quantity defect reproduced
+$ PYTHONPATH=src:. python scripts/verify_codex_write_fixture.py
+PASS: baseline 1 failed, known minimal repair 1 passed, source fixture unchanged
+
+9. Runtime information
+$ PYTHONPATH=src:. python -m okcanvas_agent_runtime info --pretty
+PASS: STEP008_CONTROL_API_AND_PERSISTED_SSE / 0.8.0
+
+Not executed / incomplete
+- real TCP/uvicorn network acceptance;
+- actual STEP007 live model acceptance;
+- active Run recovery after process restart;
+- tenant or organization authorization;
+- distributed worker lease;
+- ruff: command unavailable in this environment;
+- uv lock --offline: openai-agents==0.19.0 was not available in the local cache.
+
+These unexecuted checks are not claimed as passed.

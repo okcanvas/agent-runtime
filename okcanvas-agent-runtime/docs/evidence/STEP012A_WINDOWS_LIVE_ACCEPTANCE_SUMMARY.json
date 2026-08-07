@@ -1,0 +1,30 @@
+{
+  "schema_version": "okcanvas-step012a-windows-live-acceptance-v1",
+  "state": "PASSED",
+  "started_at": "2026-07-29T01:41:24.342933Z",
+  "completed_at": "2026-07-29T01:41:25.331987Z",
+  "run_id": "run_0fbd481db18a4c898c0ee9cd9ee663dd",
+  "artifact_id": "artifact_d8592988703643769962e57c6752f457",
+  "evaluation_id": "eval_04fd2ed069f54921af5c52da640df708",
+  "history_count": 2,
+  "checks": {
+    "api_auth_required": true,
+    "api_evaluation_created": true,
+    "artifact_verified": true,
+    "canonical_events_loaded": true,
+    "definition_identity_verified": true,
+    "history_survives_restart": true,
+    "non_terminal_run_rejected": true,
+    "output_contract_validated": true,
+    "product_event_journal_unchanged": true,
+    "raw_output_not_persisted": true,
+    "recorded_run_loaded": true,
+    "references_unchanged": true,
+    "tamper_created_no_result": true,
+    "tampered_artifact_rejected": true,
+    "tool_calls_reconstructed": true,
+    "usage_reconstructed": true
+  },
+  "windows_cleanup_completed": true,
+  "source": "user-executed sh_run_step012_acceptance.cmd"
+}

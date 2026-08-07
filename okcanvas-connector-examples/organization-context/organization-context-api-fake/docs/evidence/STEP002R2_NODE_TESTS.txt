@@ -1,0 +1,102 @@
+
+> @okcanvas/organization-context-api-fake-example@0.2.2 pretest
+> npm run setup
+
+
+> @okcanvas/organization-context-api-fake-example@0.2.2 setup
+> npm ci --ignore-scripts --offline
+
+
+added 1 package, and audited 2 packages in 310ms
+
+found 0 vulnerabilities
+
+> @okcanvas/organization-context-api-fake-example@0.2.2 test
+> npm run build && node --test dist/test/*.test.js
+
+
+> @okcanvas/organization-context-api-fake-example@0.2.2 build
+> tsc -p tsconfig.json
+
+TAP version 13
+# Subtest: loads the committed JSON reference dataset with validated minimum counts
+ok 1 - loads the committed JSON reference dataset with validated minimum counts
+  ---
+  duration_ms: 32.770378
+  type: 'test'
+  ...
+# Subtest: resolves department-scoped glossary alias deterministically
+ok 2 - resolves department-scoped glossary alias deterministically
+  ---
+  duration_ms: 19.919403
+  type: 'test'
+  ...
+# Subtest: returns glossary ambiguity when organization unit is absent
+ok 3 - returns glossary ambiguity when organization unit is absent
+  ---
+  duration_ms: 18.279216
+  type: 'test'
+  ...
+# Subtest: resolves an employee using name department and position context
+ok 4 - resolves an employee using name department and position context
+  ---
+  duration_ms: 13.118626
+  type: 'test'
+  ...
+# Subtest: keeps employee scalar facts and relationship facts consistent
+ok 5 - keeps employee scalar facts and relationship facts consistent
+  ---
+  duration_ms: 12.093717
+  type: 'test'
+  ...
+# Subtest: preserves same-name employee ambiguity without guessing
+ok 6 - preserves same-name employee ambiguity without guessing
+  ---
+  duration_ms: 13.574794
+  type: 'test'
+  ...
+# Subtest: preserves similar-client ambiguity and resolves a stable client code
+ok 7 - preserves similar-client ambiguity and resolves a stable client code
+  ---
+  duration_ms: 17.135995
+  type: 'test'
+  ...
+# Subtest: returns one entity with resolved relationship summaries
+ok 8 - returns one entity with resolved relationship summaries
+  ---
+  duration_ms: 9.500641
+  type: 'test'
+  ...
+# Subtest: isolates tenant-specific meanings
+ok 9 - isolates tenant-specific meanings
+  ---
+  duration_ms: 7.557599
+  type: 'test'
+  ...
+# Subtest: supports immediate-publish glossary CRUD, CAS, change feed and tombstone
+ok 10 - supports immediate-publish glossary CRUD, CAS, change feed and tombstone
+  ---
+  duration_ms: 13.056955
+  type: 'test'
+  ...
+# Subtest: captures delegated identity without authorization value and supports faults
+ok 11 - captures delegated identity without authorization value and supports faults
+  ---
+  duration_ms: 22.196771
+  type: 'test'
+  ...
+# Subtest: bounds resolve to top-score detailed candidates and search to compact summaries
+ok 12 - bounds resolve to top-score detailed candidates and search to compact summaries
+  ---
+  duration_ms: 19.028432
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 263.318976

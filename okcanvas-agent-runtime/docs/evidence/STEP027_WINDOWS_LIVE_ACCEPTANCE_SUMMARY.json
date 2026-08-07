@@ -1,0 +1,456 @@
+{
+  "schema_version": "okcanvas-step027-windows-live-acceptance-summary-v1",
+  "step_id": "STEP027",
+  "baseline": "STEP027_COMMERCE_SNAPSHOT_INGRESS_FAILURE_MATRIX_PRODUCT_ACCEPTANCE",
+  "project_version": "2.7.0",
+  "status": "WINDOWS_LIVE_ACCEPTED",
+  "reported_command": "sh_run_step027_acceptance.cmd",
+  "reported_at": "2026-07-30",
+  "source": "user-reported Windows stdout",
+  "result": {
+    "acceptance_workspace": {
+      "acceptance_id": "20260729T211750449674Z-34eee004",
+      "cleanup_attempts": 1,
+      "cleanup_error": null,
+      "cleanup_state": "COMPLETED",
+      "compact_evidence_exported": true,
+      "completed_at": "2026-07-29T21:17:56.762425Z",
+      "created_at": "2026-07-29T21:17:50.457489Z",
+      "preserved_path": null,
+      "product_runtime_state": false,
+      "resource_close_results": [],
+      "resources_closed": true,
+      "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+      "step_id": "STEP027"
+    },
+    "artifact_count": 0,
+    "case_results": [
+      {
+        "case_id": "auth-rejected",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_SOURCE_AUTH_FAILED",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_SOURCE_AUTH_FAILED",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "redirect",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_RESPONSE_REJECTED",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_RESPONSE_REJECTED",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "wrong-content-type",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_RESPONSE_REJECTED",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_RESPONSE_REJECTED",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "oversized",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_RESPONSE_TOO_LARGE",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_RESPONSE_TOO_LARGE",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "malformed-json",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_INVALID",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_INVALID",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "invalid-utf8",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_INVALID",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_INVALID",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "empty-body",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_INVALID",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_INVALID",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "too-many-items",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_INVALID",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_INVALID",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "upstream-503",
+        "category": "loopback-http-response",
+        "code": "COMMERCE_SNAPSHOT_RESPONSE_REJECTED",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_RESPONSE_REJECTED",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      },
+      {
+        "case_id": "transport-unavailable",
+        "category": "transport-failure",
+        "code": "COMMERCE_SNAPSHOT_SOURCE_UNAVAILABLE",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_SOURCE_UNAVAILABLE",
+        "expected_http_status": 503,
+        "expected_retryable": true,
+        "http_status": 503,
+        "retryable": true
+      },
+      {
+        "case_id": "missing-configuration",
+        "category": "pre-network-rejection",
+        "code": "COMMERCE_SNAPSHOT_SOURCE_NOT_CONFIGURED",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_SOURCE_NOT_CONFIGURED",
+        "expected_http_status": 503,
+        "expected_retryable": false,
+        "http_status": 503,
+        "retryable": false
+      },
+      {
+        "case_id": "remote-origin",
+        "category": "pre-network-rejection",
+        "code": "COMMERCE_SNAPSHOT_SOURCE_NOT_CONFIGURED",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_SOURCE_NOT_CONFIGURED",
+        "expected_http_status": 503,
+        "expected_retryable": false,
+        "http_status": 503,
+        "retryable": false
+      },
+      {
+        "case_id": "invalid-snapshot-key",
+        "category": "pre-network-rejection",
+        "code": "COMMERCE_SNAPSHOT_REQUEST_INVALID",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_REQUEST_INVALID",
+        "expected_http_status": 422,
+        "expected_retryable": false,
+        "http_status": 422,
+        "retryable": false
+      },
+      {
+        "case_id": "unknown-adapter",
+        "category": "pre-network-rejection",
+        "code": "COMMERCE_SNAPSHOT_DEFINITION_INVALID",
+        "counts_after": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "counts_before": {
+          "artifacts": 0,
+          "evaluations": 0,
+          "events": 0,
+          "runs": 0,
+          "submissions": 0,
+          "tasks": 0
+        },
+        "expected_code": "COMMERCE_SNAPSHOT_DEFINITION_INVALID",
+        "expected_http_status": 502,
+        "expected_retryable": false,
+        "http_status": 502,
+        "retryable": false
+      }
+    ],
+    "checks": {
+      "all_error_codes_exact": true,
+      "all_failure_contracts_exact": true,
+      "all_http_statuses_exact": true,
+      "all_retryable_flags_exact": true,
+      "authentication_failure_is_not_retryable": true,
+      "configuration_and_request_failures_before_transport": true,
+      "final_product_counts_zero": true,
+      "fourteen_failure_cases_executed": true,
+      "initial_product_counts_zero": true,
+      "invalid_request_returns_422": true,
+      "missing_and_remote_configuration_return_503": true,
+      "model_gateway_never_called": true,
+      "network_cases_read_once_each": true,
+      "network_total_reads_exact": true,
+      "no_artifact_files_created": true,
+      "no_case_created_persistent_state": true,
+      "no_protected_payload_files_created": true,
+      "redirect_not_followed": true,
+      "references_unchanged": true,
+      "source_credential_not_in_sqlite": true,
+      "source_failure_bodies_not_in_sqlite": true,
+      "source_write_never_called": true,
+      "transport_failure_attempted_once": true,
+      "transport_unavailable_is_retryable": true
+    },
+    "failure_case_count": 14,
+    "final_counts": {
+      "artifacts": 0,
+      "evaluations": 0,
+      "events": 0,
+      "runs": 0,
+      "submissions": 0,
+      "tasks": 0
+    },
+    "gateway_call_count": 0,
+    "protected_payload_file_count": 0,
+    "schema_version": "okcanvas-step027-acceptance-v1",
+    "source": {
+      "adapter_id": "controlled-commerce-http",
+      "adapter_version": "1.0.0",
+      "network_read_count": 9,
+      "network_reads_by_key": {
+        "auth-rejected": 1,
+        "empty-body": 1,
+        "invalid-utf8": 1,
+        "malformed-json": 1,
+        "oversized": 1,
+        "redirect": 1,
+        "too-many-items": 1,
+        "upstream-503": 1,
+        "wrong-content-type": 1
+      },
+      "redirect_target_reads": 0,
+      "transport_attempt_count": 1,
+      "write_count": 0
+    },
+    "state": "PASSED"
+  },
+  "observations": [
+    "All 24 product acceptance checks were true.",
+    "The Starlette/TestClient deprecation warning did not alter Product state or acceptance outcome."
+  ]
+}

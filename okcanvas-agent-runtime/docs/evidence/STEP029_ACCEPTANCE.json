@@ -1,0 +1,157 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021156699698Z-3936746c",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:11:57.537048Z",
+    "created_at": "2026-07-30T02:11:56.700005Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP029"
+  },
+  "artifact_count": 0,
+  "case_count": 4,
+  "case_results": [
+    {
+      "case_id": "string-safety-stock",
+      "code": "COMMERCE_SNAPSHOT_INVALID",
+      "counts_after": {
+        "artifacts": 0,
+        "evaluations": 0,
+        "events": 0,
+        "runs": 0,
+        "submissions": 0,
+        "tasks": 0
+      },
+      "counts_before": {
+        "artifacts": 0,
+        "evaluations": 0,
+        "events": 0,
+        "runs": 0,
+        "submissions": 0,
+        "tasks": 0
+      },
+      "http_status": 502,
+      "retryable": false
+    },
+    {
+      "case_id": "boolean-available",
+      "code": "COMMERCE_SNAPSHOT_INVALID",
+      "counts_after": {
+        "artifacts": 0,
+        "evaluations": 0,
+        "events": 0,
+        "runs": 0,
+        "submissions": 0,
+        "tasks": 0
+      },
+      "counts_before": {
+        "artifacts": 0,
+        "evaluations": 0,
+        "events": 0,
+        "runs": 0,
+        "submissions": 0,
+        "tasks": 0
+      },
+      "http_status": 502,
+      "retryable": false
+    },
+    {
+      "case_id": "float-forecast",
+      "code": "COMMERCE_SNAPSHOT_INVALID",
+      "counts_after": {
+        "artifacts": 0,
+        "evaluations": 0,
+        "events": 0,
+        "runs": 0,
+        "submissions": 0,
+        "tasks": 0
+      },
+      "counts_before": {
+        "artifacts": 0,
+        "evaluations": 0,
+        "events": 0,
+        "runs": 0,
+        "submissions": 0,
+        "tasks": 0
+      },
+      "http_status": 502,
+      "retryable": false
+    },
+    {
+      "case_id": "string-inbound",
+      "code": "COMMERCE_SNAPSHOT_INVALID",
+      "counts_after": {
+        "artifacts": 0,
+        "evaluations": 0,
+        "events": 0,
+        "runs": 0,
+        "submissions": 0,
+        "tasks": 0
+      },
+      "counts_before": {
+        "artifacts": 0,
+        "evaluations": 0,
+        "events": 0,
+        "runs": 0,
+        "submissions": 0,
+        "tasks": 0
+      },
+      "http_status": 502,
+      "retryable": false
+    }
+  ],
+  "checks": {
+    "all_error_codes_exact": true,
+    "all_failures_not_retryable": true,
+    "all_http_statuses_502": true,
+    "all_integer_fields_strictly_rejected": true,
+    "credential_not_in_sqlite": true,
+    "four_scalar_coercion_cases_executed": true,
+    "invalid_source_snapshots_not_in_sqlite": true,
+    "model_gateway_never_called": true,
+    "no_artifact_files_created": true,
+    "no_case_created_persistent_state": true,
+    "no_protected_payload_files_created": true,
+    "product_counts_remained_zero": true,
+    "product_counts_started_zero": true,
+    "references_unchanged": true,
+    "requested_paths_exact": true,
+    "source_read_once_per_case": true,
+    "source_total_reads_exact": true,
+    "source_write_never_called": true
+  },
+  "final_counts": {
+    "artifacts": 0,
+    "evaluations": 0,
+    "events": 0,
+    "runs": 0,
+    "submissions": 0,
+    "tasks": 0
+  },
+  "gateway_call_count": 0,
+  "protected_payload_file_count": 0,
+  "schema_version": "okcanvas-step029-acceptance-v1",
+  "source": {
+    "read_count": 4,
+    "reads_by_key": {
+      "boolean-available": 1,
+      "float-forecast": 1,
+      "string-inbound": 1,
+      "string-safety-stock": 1
+    },
+    "requested_paths": [
+      "string-safety-stock",
+      "boolean-available",
+      "float-forecast",
+      "string-inbound"
+    ],
+    "write_count": 0
+  },
+  "state": "PASSED"
+}

@@ -1,0 +1,88 @@
+{
+  "bounded_contract": {
+    "get": "SINGLE_ENTITY_WITH_DETAILS_AND_RELATIONS",
+    "resolve": "TOP_SCORE_CANDIDATES_WITH_DETAILS",
+    "search": "RANKED_ENTITY_SUMMARIES",
+    "search_max_records": 20
+  },
+  "connector": {
+    "passed_checks": 11,
+    "pytest": {
+      "passed": 9,
+      "total": 9
+    },
+    "step": "CONNECTOR_ORGANIZATION_CONTEXT_STEP002R2_BOUNDED_CONTEXT_RESPONSE_ALIGNMENT",
+    "total_checks": 11,
+    "version": "0.2.2"
+  },
+  "connector_example": {
+    "passed_checks": 17,
+    "total_checks": 17
+  },
+  "example": {
+    "node_tests": {
+      "passed": 11,
+      "total": 11
+    },
+    "passed_checks": 18,
+    "step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP002R1_BOUNDED_RESOLUTION_RESPONSE_CONTRACT",
+    "total_checks": 18,
+    "version": "0.2.1"
+  },
+  "limitations": {
+    "production_database_executed": false,
+    "real_enterprise_organization_context_called": false,
+    "windows_step007r1_deterministic_executed": false,
+    "windows_step007r1_live_executed": false
+  },
+  "live_preflight": {
+    "category": "LIVE_ENVIRONMENT_NOT_READY",
+    "expected": true,
+    "state": "FAILED"
+  },
+  "passed_checks": 33,
+  "response_measurements": {
+    "compact_search_after_chars": 6924,
+    "exact_employee_after_chars": 2582,
+    "exact_employee_before_chars": 34994,
+    "runtime_max_result_chars": 32000,
+    "same_name_after_chars": 4853,
+    "similar_client_after_chars": 5807
+  },
+  "runtime": {
+    "architecture": {
+      "passed": 40,
+      "total": 40
+    },
+    "focused_regression": {
+      "passed": 122,
+      "total": 122
+    },
+    "passed_checks": 24,
+    "step": "STEP088R1_ORGANIZATION_CONTEXT_BOUNDED_RESPONSE_AND_SAFE_MCP_DIAGNOSTIC_CLOSURE",
+    "total_checks": 24,
+    "version": "2.68.1"
+  },
+  "safe_diagnostic": {
+    "category": "MCP_RESULT_LIMIT_EXCEEDED",
+    "raw_arguments_persisted": false,
+    "raw_error_persisted": false,
+    "raw_results_persisted": false,
+    "schema_version": "okcanvas-mcp-tool-failed-v1"
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-local-deterministic-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP007R1_ORGANIZATION_CONTEXT_BOUNDED_RESPONSE_AND_LIVE_FAILURE_DIAGNOSTIC_CLOSURE",
+  "total_checks": 33,
+  "validation_mode": "LOCAL_DETERMINISTIC_BOUNDED_ORGANIZATION_CONTEXT_RESPONSE_AND_LIVE_DIAGNOSTIC_CLOSURE",
+  "version": "0.7.1",
+  "workspace_manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "workspace_unit_tests": {
+    "passed": 85,
+    "total": 85
+  }
+}

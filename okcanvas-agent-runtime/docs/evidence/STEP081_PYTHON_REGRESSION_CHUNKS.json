@@ -1,0 +1,108 @@
+{
+  "chunks": [
+    {
+      "end": 19,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_0_19.txt",
+      "passed": 70,
+      "skipped": 0,
+      "start": 0
+    },
+    {
+      "end": 39,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_20_39.txt",
+      "passed": 57,
+      "skipped": 0,
+      "start": 20
+    },
+    {
+      "end": 59,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_40_59.txt",
+      "passed": 53,
+      "skipped": 0,
+      "start": 40
+    },
+    {
+      "end": 79,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_60_79.txt",
+      "passed": 85,
+      "skipped": 0,
+      "start": 60
+    },
+    {
+      "end": 99,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_80_99.txt",
+      "passed": 72,
+      "skipped": 0,
+      "start": 80
+    },
+    {
+      "end": 119,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_100_119.txt",
+      "passed": 43,
+      "skipped": 0,
+      "start": 100
+    },
+    {
+      "end": 139,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_120_139.txt",
+      "passed": 71,
+      "skipped": 0,
+      "start": 120
+    },
+    {
+      "end": 159,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_140_159.txt",
+      "passed": 56,
+      "skipped": 0,
+      "start": 140
+    },
+    {
+      "end": 179,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_160_179.txt",
+      "passed": 111,
+      "skipped": 0,
+      "start": 160
+    },
+    {
+      "end": 199,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_180_199.txt",
+      "passed": 152,
+      "skipped": 0,
+      "start": 180
+    },
+    {
+      "end": 219,
+      "file_count": 20,
+      "log": "docs/evidence/step081_python_chunks/chunk_200_219.txt",
+      "passed": 86,
+      "skipped": 0,
+      "start": 200
+    },
+    {
+      "end": 224,
+      "file_count": 5,
+      "log": "docs/evidence/step081_python_chunks/chunk_220_224.txt",
+      "passed": 40,
+      "skipped": 0,
+      "start": 220
+    }
+  ],
+  "failed_tests": 0,
+  "passed_tests": 896,
+  "schema_version": "okcanvas-step081-python-regression-chunks-v1",
+  "skipped_tests": 0,
+  "state": "PASSED",
+  "step": "STEP081_ROOT_PACKAGE_AND_ARCHITECTURE_RESTRUCTURING",
+  "test_file_count": 225,
+  "version": "2.61.0"
+}

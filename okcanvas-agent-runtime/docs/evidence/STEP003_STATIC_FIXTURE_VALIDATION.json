@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-step003-static-fixture-validation-v1",
+  "checks": {
+    "baseline_failed_once": true,
+    "known_minimal_repair_passed": true,
+    "source_fixture_unchanged": true
+  },
+  "baseline": {
+    "state": "FAILED",
+    "exit_code": 1,
+    "passed": 0,
+    "failed": 1,
+    "errors": 0
+  },
+  "repaired": {
+    "state": "PASSED",
+    "exit_code": 0,
+    "passed": 1,
+    "failed": 0,
+    "errors": 0
+  },
+  "source_fixture_sha256_before": "e9d003aa7910bfd15fea88a8a4c70d41ddaabe3518fb9b363d2c36aea3c4dae7",
+  "source_fixture_sha256_after": "e9d003aa7910bfd15fea88a8a4c70d41ddaabe3518fb9b363d2c36aea3c4dae7"
+}

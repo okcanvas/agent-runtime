@@ -1,0 +1,78 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260731T144842762663Z-0aa62e84",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-31T14:48:43.415735Z",
+    "created_at": "2026-07-31T14:48:42.762942Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [
+      {
+        "closed": true,
+        "error": null,
+        "name": "loopback-control-api"
+      }
+    ],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP060"
+  },
+  "checks": {
+    "aggregate_evidence_character_budget_enforced": true,
+    "cleanup_completed": true,
+    "direct_answer_contains_exact_relative_evidence": true,
+    "evidence_file_budget_enforced": true,
+    "exact_route_and_handler_in_primary_excerpt": true,
+    "excluded_dependency_not_read": true,
+    "final_product_counts_exact": true,
+    "implementation_registration_ranked_first": true,
+    "korean_query_reduced_to_precise_terms": true,
+    "narrow_answer_avoids_unrelated_audit": true,
+    "node_process_exited_successfully": true,
+    "per_excerpt_budget_enforced": true,
+    "primary_line_range_contains_registration": true,
+    "query_directed_tool_executed_once": true,
+    "raw_request_not_persisted": true,
+    "references_unchanged": true,
+    "successful_payload_deleted": true,
+    "tool_result_not_persisted_in_events": true,
+    "unrelated_docs_and_auth_excluded": true,
+    "workspace_unchanged": true
+  },
+  "final_counts": {
+    "artifacts": 1,
+    "evaluations": 0,
+    "events": 12,
+    "invocations": 1,
+    "runs": 1,
+    "submissions": 1,
+    "tasks": 1
+  },
+  "process_returncode": 0,
+  "protected_payload_file_count": 0,
+  "retrieval": {
+    "evidence_characters": 608,
+    "evidence_files": 1,
+    "files_considered": 5,
+    "inspected_files": [
+      "src/okcanvas_agent_runtime/control_api/app.py"
+    ],
+    "max_evidence_characters": 5000,
+    "max_evidence_files": 4,
+    "max_excerpt_characters": 1600,
+    "max_excerpt_lines": 16,
+    "primary_evidence": {
+      "line_end": 35,
+      "line_start": 20,
+      "path": "src/okcanvas_agent_runtime/control_api/app.py"
+    },
+    "query": "Health API가 어디에서 등록되는지 파일과 라인 근거로 알려줘",
+    "query_terms_considered": 2
+  },
+  "schema_version": "okcanvas-step060-acceptance-v1",
+  "state": "PASSED",
+  "transcript_tail": "============================================================\n OKCanvas Agent CLI · Node.js/TypeScript persistent client\n============================================================\nRuntime 2.40.0 · Agent project-readonly-coding-agent · Debug OFF\n- 설정된 프로젝트의 텍스트 파일을 제한적으로 읽기 가능\n- 파일 쓰기·Shell·Git 명령·인터넷 접근 없음\n- 서버 대화 기억 없음 · 각 요청은 독립 실행\n- 승인 없는 read-only Function Tool 사용 가능: project_readonly_inspect\n/help 명령으로 사용법을 확인하세요. 종료할 때까지 계속 질문할 수 있습니다.\n\nproject-readonly-coding-agent> Health API가 어디에서 등록되는지 파일과 라인 근거로 알려줘\n실행 준비 중...\n\n[진행]\n  ↳ Tool project_readonly_inspect 실행\n  ✓ Tool project_readonly_inspect 완료\n\nAgent\n─────\nHealth API는 src/okcanvas_agent_runtime/control_api/app.py:20-35에서 등록됩니다.\n\n확인 사항\n1. Health API registration: The FastAPI GET /healthz decorator and health handler are adjacent. [src/okcanvas_agent_runtime/control_api/app.py:20-35]\n\n완료 · 160 tokens · 다시 질문하거나 /details를 입력하세요.\n\nproject-readonly-coding-agent> /details\nRun: run_0a8d632d9d5c4d3eacec5053df4479e8\nStatus: SUCCEEDED\nTokens: 160\nAgent: project-readonly-coding-agent@1.1.0\nCapability: read-only Tool project_readonly_inspect\nSession: disabled\nInvocations: 1\nROOT · project-readonly-coding-agent · SUCCEEDED · 160 tokens\nArtifact: artifact_50c93f8855c541b0bd438a0a14847f38\nArtifact SHA-256: 97104f7673bf7640d85995e1b7bb35626c25dc448dda3db55bc699422a2a18a1\nEvaluation: not requested\n\nproject-readonly-coding-agent> /quit\n\n종료 · 이 프로세스에서 1개 요청을 실행했습니다.\n\n"
+}

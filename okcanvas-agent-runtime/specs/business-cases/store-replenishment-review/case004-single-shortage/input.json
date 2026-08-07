@@ -1,0 +1,24 @@
+{
+  "snapshot_id": "case004-single-shortage",
+  "safety_stock_units": 2,
+  "items": [
+    {
+      "sku": "tape-roll",
+      "available_units": 5,
+      "forecast_units": 3,
+      "inbound_units": 1
+    },
+    {
+      "sku": "packing-labels",
+      "available_units": 8,
+      "forecast_units": 9,
+      "inbound_units": 2
+    },
+    {
+      "sku": "shipping-box",
+      "available_units": 20,
+      "forecast_units": 10,
+      "inbound_units": 0
+    }
+  ]
+}

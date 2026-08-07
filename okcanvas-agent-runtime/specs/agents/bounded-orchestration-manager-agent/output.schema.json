@@ -1,0 +1,227 @@
+{
+  "$defs": {
+    "AgentStatus": {
+      "enum": [
+        "PASS",
+        "PARTIAL",
+        "FAIL"
+      ],
+      "title": "AgentStatus",
+      "type": "string"
+    },
+    "BoundedOrchestrationChildResult": {
+      "additionalProperties": false,
+      "properties": {
+        "agent_definition_id": {
+          "maxLength": 64,
+          "minLength": 2,
+          "pattern": "^[a-z][a-z0-9-]+$",
+          "title": "Agent Definition Id",
+          "type": "string"
+        },
+        "ordinal": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Ordinal",
+          "type": "integer"
+        },
+        "result": {
+          "$ref": "#/$defs/CodingAgentResult"
+        },
+        "state": {
+          "const": "SUCCEEDED",
+          "default": "SUCCEEDED",
+          "title": "State",
+          "type": "string"
+        },
+        "usage": {
+          "$ref": "#/$defs/UsageSummary"
+        }
+      },
+      "required": [
+        "ordinal",
+        "agent_definition_id",
+        "result",
+        "usage"
+      ],
+      "title": "BoundedOrchestrationChildResult",
+      "type": "object"
+    },
+    "CodingAgentResult": {
+      "additionalProperties": false,
+      "properties": {
+        "findings": {
+          "items": {
+            "$ref": "#/$defs/CodingFinding"
+          },
+          "maxItems": 100,
+          "title": "Findings",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/$defs/AgentStatus"
+        },
+        "summary": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "unverified": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Unverified",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "summary"
+      ],
+      "title": "CodingAgentResult",
+      "type": "object"
+    },
+    "CodingFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "$ref": "#/$defs/FindingConfidence"
+        },
+        "detail": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Detail",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "severity": {
+          "$ref": "#/$defs/FindingSeverity"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "severity",
+        "confidence",
+        "title",
+        "detail"
+      ],
+      "title": "CodingFinding",
+      "type": "object"
+    },
+    "FindingConfidence": {
+      "enum": [
+        "CONFIRMED",
+        "INFERENCE"
+      ],
+      "title": "FindingConfidence",
+      "type": "string"
+    },
+    "FindingSeverity": {
+      "enum": [
+        "INFO",
+        "WARNING",
+        "ERROR"
+      ],
+      "title": "FindingSeverity",
+      "type": "string"
+    },
+    "UsageSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "cached_input_tokens": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Cached Input Tokens",
+          "type": "integer"
+        },
+        "input_tokens": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Input Tokens",
+          "type": "integer"
+        },
+        "output_tokens": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Output Tokens",
+          "type": "integer"
+        },
+        "reasoning_tokens": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Reasoning Tokens",
+          "type": "integer"
+        },
+        "requests": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Requests",
+          "type": "integer"
+        },
+        "total_tokens": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Total Tokens",
+          "type": "integer"
+        }
+      },
+      "title": "UsageSummary",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "child_count": {
+      "maximum": 2,
+      "minimum": 2,
+      "title": "Child Count",
+      "type": "integer"
+    },
+    "children": {
+      "items": {
+        "$ref": "#/$defs/BoundedOrchestrationChildResult"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "title": "Children",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "okcanvas-bounded-orchestration-result-v1",
+      "default": "okcanvas-bounded-orchestration-result-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/AgentStatus"
+    },
+    "summary": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "summary",
+    "child_count",
+    "children"
+  ],
+  "title": "BoundedOrchestrationResult",
+  "type": "object"
+}

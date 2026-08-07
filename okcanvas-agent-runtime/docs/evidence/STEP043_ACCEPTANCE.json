@@ -1,0 +1,129 @@
+{
+  "schema_version": "okcanvas-step043-acceptance-v1",
+  "state": "PASSED",
+  "checks": {
+    "session_api_auth_required": true,
+    "session_created_for_exact_agent_and_binding": true,
+    "session_catalog_lists_created_session": true,
+    "two_governed_preflights_bound_same_session": true,
+    "native_streaming_runner_used_twice": true,
+    "same_sdk_session_identity_used_twice": true,
+    "turn_one_started_without_history": true,
+    "turn_two_received_turn_one_history": true,
+    "both_product_runs_succeeded": true,
+    "turn_one_session_metadata_exact": true,
+    "turn_two_session_metadata_exact": true,
+    "canonical_turn_events_exact": true,
+    "session_history_not_copied_to_product_events": true,
+    "session_history_not_copied_to_product_or_evaluation_db": true,
+    "sdk_session_history_persisted_before_clear": true,
+    "two_root_invocations_succeeded_without_workspace": true,
+    "turn_two_artifact_proves_continuity": true,
+    "recorded_evaluation_passed": true,
+    "successful_payloads_deleted": true,
+    "one_active_turn_enforced": true,
+    "failed_exclusivity_probe_did_not_increment_turn": true,
+    "explicit_clear_marks_session_and_removes_history": true,
+    "cleared_session_cannot_preflight": true,
+    "session_and_workspace_lifecycles_separate": true,
+    "product_counts_exact": true,
+    "api_keys_not_persisted": true,
+    "session_handles_closed": true,
+    "references_unchanged": true,
+    "cleanup_completed": true
+  },
+  "session": {
+    "session_id": "session_d1d0ed97343c4cc1b3f18a51d0aec9f1",
+    "runtime_binding_sha256": "2dec8ffb90bf281f3820e9c4512724041eccf0c0a7d4e41685858ad963067ba8",
+    "after_turn_1": {
+      "schema_version": "okcanvas-product-session-v1",
+      "session_id": "session_d1d0ed97343c4cc1b3f18a51d0aec9f1",
+      "state": "ACTIVE",
+      "agent_definition_id": "session-continuity-agent",
+      "agent_definition_version": "1.0.0",
+      "agent_definition_sha256": "cc4dfb9cbc3feea823c46fb4e1c7d791abcf7db5c3416cebc39341832997ef2f",
+      "runtime_binding_sha256": "2dec8ffb90bf281f3820e9c4512724041eccf0c0a7d4e41685858ad963067ba8",
+      "active_run_id": null,
+      "turn_count": 1,
+      "item_count": 2,
+      "created_at": "2026-07-31T12:57:17.994207Z",
+      "updated_at": "2026-07-31T12:57:18.071896Z",
+      "cleared_at": null
+    },
+    "after_turn_2": {
+      "schema_version": "okcanvas-product-session-v1",
+      "session_id": "session_d1d0ed97343c4cc1b3f18a51d0aec9f1",
+      "state": "ACTIVE",
+      "agent_definition_id": "session-continuity-agent",
+      "agent_definition_version": "1.0.0",
+      "agent_definition_sha256": "cc4dfb9cbc3feea823c46fb4e1c7d791abcf7db5c3416cebc39341832997ef2f",
+      "runtime_binding_sha256": "2dec8ffb90bf281f3820e9c4512724041eccf0c0a7d4e41685858ad963067ba8",
+      "active_run_id": null,
+      "turn_count": 2,
+      "item_count": 4,
+      "created_at": "2026-07-31T12:57:17.994207Z",
+      "updated_at": "2026-07-31T12:57:18.168797Z",
+      "cleared_at": null
+    },
+    "cleared": {
+      "schema_version": "okcanvas-product-session-v1",
+      "session_id": "session_d1d0ed97343c4cc1b3f18a51d0aec9f1",
+      "state": "CLEARED",
+      "agent_definition_id": "session-continuity-agent",
+      "agent_definition_version": "1.0.0",
+      "agent_definition_sha256": "cc4dfb9cbc3feea823c46fb4e1c7d791abcf7db5c3416cebc39341832997ef2f",
+      "runtime_binding_sha256": "2dec8ffb90bf281f3820e9c4512724041eccf0c0a7d4e41685858ad963067ba8",
+      "active_run_id": null,
+      "turn_count": 2,
+      "item_count": 0,
+      "created_at": "2026-07-31T12:57:17.994207Z",
+      "updated_at": "2026-07-31T12:57:18.233178Z",
+      "cleared_at": "2026-07-31T12:57:18.233178Z"
+    },
+    "history_items_after_clear": 0
+  },
+  "runs": {
+    "turn_1": {
+      "run_id": "run_4c26dfd46c184386a1873ab4beb23eaf",
+      "submission_id": "submission_e3abcc591df14dd79cfd9cbf1667fe19",
+      "event_count": 12
+    },
+    "turn_2": {
+      "run_id": "run_acdf967959284842a2253bd5abcc064c",
+      "submission_id": "submission_5d24885960bd444f9f92442d1e8491fa",
+      "event_count": 12
+    }
+  },
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 2,
+    "session_instances": 5,
+    "session_closes": 5
+  },
+  "final_counts": {
+    "tasks": 2,
+    "runs": 2,
+    "submissions": 2,
+    "invocations": 2,
+    "events": 24,
+    "artifacts": 2,
+    "evaluations": 1
+  },
+  "artifact_id": "artifact_027bc85fc51c4da0b76b80e049aa0656",
+  "evaluation_id": "eval_f7362687124e43fa83c1d8b4519d26fa",
+  "acceptance_workspace": {
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "acceptance_id": "20260731T125717796725Z-f97e15da",
+    "step_id": "STEP043",
+    "created_at": "2026-07-31T12:57:17.796999Z",
+    "completed_at": "2026-07-31T12:57:18.322031Z",
+    "resources_closed": true,
+    "resource_close_results": [],
+    "compact_evidence_exported": true,
+    "cleanup_state": "COMPLETED",
+    "cleanup_attempts": 1,
+    "preserved_path": null,
+    "cleanup_error": null,
+    "product_runtime_state": false
+  }
+}

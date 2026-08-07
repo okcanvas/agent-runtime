@@ -1,0 +1,19 @@
+{
+  "schema_version": "okcanvas-commerce-snapshot-adapter-v1",
+  "adapter_id": "controlled-commerce-http",
+  "version": "1.0.0",
+  "name": "Controlled read-only commerce snapshot HTTP source",
+  "kind": "http-json-get-v1",
+  "base_url_env": "OKCANVAS_COMMERCE_SNAPSHOT_BASE_URL",
+  "credential_env": "OKCANVAS_COMMERCE_SNAPSHOT_BEARER_TOKEN",
+  "auth_scheme": "bearer",
+  "method": "GET",
+  "path_template": "/v1/inventory-snapshots/{snapshot_key}",
+  "loopback_only": true,
+  "follow_redirects": false,
+  "connect_timeout_seconds": 2.0,
+  "read_timeout_seconds": 5.0,
+  "max_response_bytes": 65536,
+  "max_items": 100,
+  "max_retry_attempts": 0
+}

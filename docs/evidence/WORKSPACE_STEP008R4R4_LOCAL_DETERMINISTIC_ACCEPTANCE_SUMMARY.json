@@ -1,0 +1,33 @@
+{
+  "artifact_blob_store_implemented": true,
+  "connector_checks": 11,
+  "connector_example_checks": 17,
+  "example_checks": 19,
+  "live_openai_r4r4_executed": false,
+  "object_storage_adapter_implemented": true,
+  "object_storage_live_server_executed": false,
+  "postgresql_live_server_executed": false,
+  "production_database_executed": false,
+  "runtime_full_partitions": 12,
+  "runtime_full_passed_tests": 1034,
+  "runtime_full_test_files": 248,
+  "runtime_passed_checks": 26,
+  "runtime_source_snapshot_digest": "428873d1a1764b576c388de60ff1582da5fba4699053de10206343aee86032ab",
+  "runtime_source_unchanged_during_gate": true,
+  "runtime_step": "STEP091C_ARTIFACT_BLOB_STORE_AND_OBJECT_STORAGE_BOUNDARY",
+  "runtime_total_checks": 26,
+  "runtime_version": "2.73.0",
+  "schema_version": "okcanvas-workspace-step008r4r4-local-deterministic-acceptance-summary-v1",
+  "state": "PASSED",
+  "windows_r4r4_executed": false,
+  "workspace_manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "workspace_passed_checks": 30,
+  "workspace_step": "WORKSPACE_STEP008R4R4_RUNTIME_STEP091C_ARTIFACT_BLOB_STORE_AND_OBJECT_STORAGE_BOUNDARY",
+  "workspace_total_checks": 30,
+  "workspace_unit_tests": 120,
+  "workspace_version": "0.8.4-r4"
+}

@@ -1,0 +1,17 @@
+STEP024A_LIVE_BUSINESS_OUTPUT_DIAGNOSTICS_AND_ROUND_TRIP_VALIDATION
+Baseline version: 2.4.1
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Validated:
+- configured business output is forced through a contract-specific Pydantic JSON round trip;
+- a constructed empty business result is rejected as OUTPUT_CONTRACT_INVALID;
+- invalid serialized output creates no final-output Artifact;
+- deterministic STEP024 acceptance passes 18/18 and cleanup is COMPLETED;
+- acceptance Evidence records terminal Run, safe outcome, Artifact count, and Artifact validation error;
+- evaluation is not attempted when the Product Run failed;
+- direct /reference imports remain forbidden;
+- immutable reference verification remains 4/4 PASS;
+- full regression baseline: 313 tests passed.
+
+The original Windows live failure is not yet reclassified because the old harness masked the
+underlying Run outcome with a placeholder `{}`. A revised Windows live rerun is required.

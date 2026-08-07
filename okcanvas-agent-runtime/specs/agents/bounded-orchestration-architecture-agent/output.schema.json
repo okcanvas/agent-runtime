@@ -1,0 +1,103 @@
+{
+  "$defs": {
+    "AgentStatus": {
+      "enum": [
+        "PASS",
+        "PARTIAL",
+        "FAIL"
+      ],
+      "title": "AgentStatus",
+      "type": "string"
+    },
+    "CodingFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "$ref": "#/$defs/FindingConfidence"
+        },
+        "detail": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Detail",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "severity": {
+          "$ref": "#/$defs/FindingSeverity"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "severity",
+        "confidence",
+        "title",
+        "detail"
+      ],
+      "title": "CodingFinding",
+      "type": "object"
+    },
+    "FindingConfidence": {
+      "enum": [
+        "CONFIRMED",
+        "INFERENCE"
+      ],
+      "title": "FindingConfidence",
+      "type": "string"
+    },
+    "FindingSeverity": {
+      "enum": [
+        "INFO",
+        "WARNING",
+        "ERROR"
+      ],
+      "title": "FindingSeverity",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/CodingFinding"
+      },
+      "maxItems": 100,
+      "title": "Findings",
+      "type": "array"
+    },
+    "status": {
+      "$ref": "#/$defs/AgentStatus"
+    },
+    "summary": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "summary"
+  ],
+  "title": "CodingAgentResult",
+  "type": "object"
+}

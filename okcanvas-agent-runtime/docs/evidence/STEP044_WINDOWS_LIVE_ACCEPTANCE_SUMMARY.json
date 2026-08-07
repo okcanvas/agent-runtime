@@ -1,0 +1,37 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP044",
+  "step_name": "STEP044_NATIVE_GUARDRAIL_RUNTIME_V1",
+  "version": "2.24.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "source": "user-reported sh_run_step044_acceptance.cmd output",
+  "checks_passed": 23,
+  "checks_total": 23,
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 5,
+    "model_calls": 4,
+    "tool_executions": {
+      "guardrail-tool-input-agent": 0,
+      "guardrail-tool-output-agent": 1
+    },
+    "guardrail_runs": {
+      "INPUT": 3,
+      "OUTPUT": 2,
+      "TOOL_INPUT": 1,
+      "TOOL_OUTPUT": 1
+    }
+  },
+  "final_counts": {
+    "tasks": 5,
+    "runs": 5,
+    "submissions": 5,
+    "invocations": 5,
+    "events": 48,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 4,
+  "references_unchanged": true,
+  "cleanup_completed": true
+}

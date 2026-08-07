@@ -1,0 +1,22 @@
+{
+  "schema_version": "okcanvas-step056b-windows-manual-product-use-summary-v1",
+  "step_id": "STEP056B",
+  "state": "WINDOWS_MANUAL_PRODUCT_USE_CONFIRMED_ACCEPTANCE_NOT_REPORTED",
+  "reported_on": "2026-07-31",
+  "evidence": {
+    "launcher": "sh_tui.cmd",
+    "runtime_version": "2.36.1",
+    "persistent_prompt_returned": true,
+    "agent": "agent-tool-specialist-agent",
+    "request": "REST API 설계 원칙을 정리해줘",
+    "run_confirmed_with_local_yes_no": true,
+    "friendly_answer_rendered": true,
+    "tokens_reported": 831,
+    "prompt_returned_after_answer": true
+  },
+  "limitations_observed": [
+    "developer diagnostics were not visible in the Node client",
+    "the first compatible catalog Agent was selected implicitly"
+  ],
+  "acceptance_status": "COMPLETE_SH_RUN_STEP056B_ACCEPTANCE_OUTPUT_NOT_REPORTED"
+}

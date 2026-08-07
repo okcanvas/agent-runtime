@@ -1,0 +1,57 @@
+{
+  "schema_version": "okcanvas-step081c-windows-deterministic-failure-summary-v1",
+  "step": "STEP081C_WINDOWS_DETERMINISTIC_ARCHITECTURE_DIAGNOSTIC_AND_TOPOLOGY_NORMALIZATION",
+  "version": "2.61.3",
+  "state": "FAILED",
+  "passed_checks": 15,
+  "total_checks": 18,
+  "api_or_billing_required": false,
+  "architecture": {
+    "state": "FAILED",
+    "passed_checks": 36,
+    "total_checks": 38,
+    "false_checks": [
+      "admin_route_inventory_exact",
+      "service_route_inventory_exact"
+    ],
+    "source_admin_route_count": 48,
+    "source_service_route_count": 33,
+    "runtime_admin_route_count": 0,
+    "runtime_service_route_count": 0,
+    "runtime_other_http_route_count": 5,
+    "missing_runtime_v1_route_count": 81
+  },
+  "compliance": {
+    "state": "FAILED",
+    "passed_checks": 15,
+    "total_checks": 16,
+    "actual_changed_file_count": 1278,
+    "declared_changed_file_count": 1264,
+    "unregistered_changed_file_count": 14,
+    "unregistered_changed_files": [
+      "docs/evidence/step081b-python-regression/chunk-000-019.txt",
+      "docs/evidence/step081b-python-regression/chunk-020-039.txt",
+      "docs/evidence/step081b-python-regression/chunk-040-059.txt",
+      "docs/evidence/step081b-python-regression/chunk-060-079.txt",
+      "docs/evidence/step081b-python-regression/chunk-080-099.txt",
+      "docs/evidence/step081b-python-regression/chunk-100-119.txt",
+      "docs/evidence/step081b-python-regression/chunk-120-139.txt",
+      "docs/evidence/step081b-python-regression/chunk-140-159.txt",
+      "docs/evidence/step081b-python-regression/chunk-160-179.txt",
+      "docs/evidence/step081b-python-regression/chunk-180-199.txt",
+      "docs/evidence/step081b-python-regression/chunk-200-219.txt",
+      "docs/evidence/step081b-python-regression/chunk-220-227.txt",
+      "okcanvas-agent-runtime-step076-product-owned-immutable-project-snapshot-binding.zip",
+      "yarn.lock"
+    ]
+  },
+  "focused_regression": {
+    "state": "FAILED",
+    "passed": 55,
+    "failed": 2
+  },
+  "node_tests": "PASSED_14_OF_14",
+  "reference_integrity": "PASSED_4_OF_4",
+  "npm_pack": "PASSED",
+  "windows_subprocess_portability": "PASSED_7_OF_7"
+}

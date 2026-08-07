@@ -1,0 +1,37 @@
+{
+  "base_validation": {
+    "checks": {
+      "non_python_validator_uses_npm_pack_helper": true,
+      "portable_resolver_present": true,
+      "step081_acceptance_uses_npm_pack_helper": true,
+      "subprocess_oserror_is_bounded": true,
+      "typescript_manifest_uses_portable_runner": true,
+      "unsafe_direct_batch_invocations_absent": true,
+      "windows_batch_uses_cmd_call": true
+    },
+    "passed_checks": 7,
+    "schema_version": "okcanvas-windows-subprocess-portability-validation-v1",
+    "state": "PASSED",
+    "total_checks": 7,
+    "violations": []
+  },
+  "checks": {
+    "non_python_validator_uses_npm_pack_helper": true,
+    "portable_resolver_present": true,
+    "step081_acceptance_uses_npm_pack_helper": true,
+    "step086r1_acceptance_uses_portable_validators": true,
+    "step086r1_groupware_validator_bootstraps_repository_root": true,
+    "step086r1_non_python_uses_npm_pack_helper": true,
+    "subprocess_oserror_is_bounded": true,
+    "typescript_manifest_uses_portable_runner": true,
+    "unsafe_direct_batch_invocations_absent": true,
+    "windows_batch_uses_cmd_call": true
+  },
+  "passed_checks": 10,
+  "schema_version": "okcanvas-step086r1-windows-subprocess-portability-validation-v1",
+  "state": "PASSED",
+  "step": "STEP086R1_GROUPWARE_SUBAGENT_AND_EXTERNAL_MCP_BOUNDARY_ALIGNMENT",
+  "total_checks": 10,
+  "version": "2.66.1",
+  "violations": []
+}

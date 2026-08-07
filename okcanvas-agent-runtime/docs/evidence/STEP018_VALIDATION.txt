@@ -1,0 +1,55 @@
+STEP018_PROTECTED_PAYLOAD_AND_GOVERNED_READ_ONLY_RUN_SUBMISSION
+Version: 1.8.0
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING
+Date: 2026-07-29
+
+Reference inspection
+- openai-agents-python-0.19.0/.agents/references/runstate-schema.md
+- openai-agents-python-0.19.0/src/agents/run_state.py
+- openai-agents-python-0.19.0/src/agents/sandbox/entries/mounts/patterns.py
+- openai-agents-python-0.19.0/src/agents/tracing/traces.py
+- Runtime imports from reference/upstream: forbidden and verified absent
+
+Implementation validation
+- AES-256-GCM protected payload file: PASS
+- Atomic protected payload write and path containment: PASS
+- Encrypted file SHA/length/key identity/AES-GCM authentication: PASS
+- Raw request absent from SQLite and plaintext envelope: PASS
+- Encryption/admin/submitter keys absent from SQLite and payload files: PASS
+- Separate local Run-submitter authority: PASS
+- Preflight creates no Task or Run: PASS
+- Exact confirmation required: PASS
+- Immutable policy/Agent/model/payload identity revalidation: PASS
+- Atomic Task/Run/run.created/submission binding: PASS
+- Idempotent and concurrent confirmation: one Task/Run, one execution claim
+- Existing generic Agent execution and Artifact completion: PASS
+- Tampered protected payload: fail closed, no second Run
+- Direct Run API disabled by default: PASS
+- Operations console remains read-only: PASS
+
+Regression validation
+- compileall: PASS
+- pytest: 250 passed
+- STEP005 Core Store verifier: PASS
+- STEP006 acceptance: 12/12 PASS
+- STEP007 acceptance: 12/12 PASS
+- STEP008 acceptance: 17/17 PASS
+- STEP009 acceptance: 13/13 PASS
+- STEP010 acceptance: 7/7 PASS
+- STEP011 acceptance: 13/13 PASS
+- STEP012 acceptance: 16/16 PASS
+- STEP013 acceptance: 21/21 PASS
+- STEP014 acceptance: 12/12 PASS
+- STEP015 acceptance: 18/18 PASS
+- STEP016 acceptance: 19/19 PASS
+- STEP017 acceptance: 16/16 PASS
+- STEP018 acceptance: 22/22 PASS
+- Direct /reference import verification: PASS
+- Reference integrity: 4/4 PASS
+
+Known limitations
+- Windows STEP018 live acceptance has not yet been reported.
+- Protected payload automatic expiry/deletion is not implemented.
+- A process crash after EXECUTION_CLAIMED is fail-closed; automatic reclaim is not implemented.
+- Scheduling exactly-once is not claimed across processes or distributed workers.
+- Local Tool approval execution and console mutation remain disabled.

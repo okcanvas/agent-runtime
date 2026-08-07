@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091d-runtime-test-partition-v1",
+  "step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-04",
+  "partition_number": 4,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T04:32:35.544682+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 40,
+  "passed_tests": 40,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 14.842,
+  "exit_code": 0,
+  "files_sha256": "c207b6a0ca70721e235d2d8210c8eb09e905070b1c2c39310d6d0aa184432980",
+  "log_sha256": "526192b22e0fe5ca8880ebf171aeb67bedd53d2de55b848034736b446202da57",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_generic_openai_gateway_contract.py",
+    "tests/test_git_diff.py",
+    "tests/test_governed_local_tool_approval.py",
+    "tests/test_governed_recovery_and_retention.py",
+    "tests/test_governed_run_submission_concurrency.py",
+    "tests/test_governed_run_submission_control_api.py",
+    "tests/test_guardrail_runtime.py",
+    "tests/test_interactive_runner.py",
+    "tests/test_live_acceptance_gate.py",
+    "tests/test_local_env_initializer.py",
+    "tests/test_mcp_definition_catalog.py",
+    "tests/test_mcp_factory_contract.py",
+    "tests/test_model_retry_policy.py",
+    "tests/test_model_routing_policy.py"
+  ]
+}

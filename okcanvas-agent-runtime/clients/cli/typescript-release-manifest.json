@@ -1,0 +1,58 @@
+{
+  "schema_version": "okcanvas-node-typescript-release-manifest-v1",
+  "package_name": "@okcanvas/agent-cli",
+  "package_version": "0.5.0",
+  "artifact_mode": "committed-typescript-dist",
+  "release_build": {
+    "tool": "typescript",
+    "version": "5.8.3",
+    "command": "tsc -p tsconfig.json",
+    "dist_reproduced_byte_identical": true
+  },
+  "acceptance": {
+    "external_typescript_compiler_required": false,
+    "npm_install_required": false,
+    "network_required": false,
+    "validation": "manifest-sha256+source-map-contract+dist-syntax+node-tests"
+  },
+  "inputs": {
+    "package-lock.json": "41520c6c13d41f46c02201ec0b1be92897e0daa1bb58ccc38db9c7e863ca75a8",
+    "package.json": "15c6a08a677559fa286296c745bb0cdf0f4d0ef8bea650d03cf11701aa69a33a",
+    "src/api-client.ts": "94cb2a3b806fd5062b26127f7e10b0c4167e79eab4984026d080b2bb8f81e64e",
+    "src/app.ts": "694e828b3931cb37a3269c35356a2ff2e3ec6a09c9121a96e8640e4102f6fb31",
+    "src/cli.ts": "08be5bb324d4027f1e716c1fb59e31f7c4976dc8bb8c9ca6084a156081c215d9",
+    "src/config.ts": "e89d82bc95b301a1ee3ba1e24b02de12be498c9f11750defc12d19a70b66f2e7",
+    "src/node-shims.d.ts": "46f7cc522a18a57310e493ed1c5561f442c1fc8445fea34dc758cfd77a3dfc94",
+    "src/render.ts": "40c82971fc485c08ff983432a1fcf5bc5ee44ea6220430d5ef626cebd4f6f2f4",
+    "src/sse.ts": "31d373417cfebaeac719770944006651cd4660e63c1b6a16f47cfc560a257d68",
+    "src/types.ts": "2fb03861d9f4e36452ab1d3a4b2b6b901bde0e0aa33ff2803e6cac78e771c664",
+    "tsconfig.json": "6757ba020b40bc40da37317f76c1fe1b67eb476f38ee6a5885a7474fb1e7d2f3"
+  },
+  "outputs": {
+    "dist/api-client.d.ts": "4b4c8170a060a12fa9d9d86dcf32788010840f51694b6cac8fc68ce4914049a6",
+    "dist/api-client.js": "543121a01457d890dbe4212ec614b69b6fed8cf66135e0b77eba8748c225eb42",
+    "dist/api-client.js.map": "041a7156d4c256996c43d630eb3441d6bbc08f1c06d059db67c6a757b3b87e33",
+    "dist/app.d.ts": "5ec7a666ed318ccde56ae753dd689fab519766b9cb1a90c50bbc69fd9936a7ab",
+    "dist/app.js": "ce85b70b1a7bbec8e1b30a03bd07f5104f421122a2ec77ff611ed41021abee5f",
+    "dist/app.js.map": "b47e7859f12e12c25a62034655ffea73bee65d5c1ec2b5a6a12cbf2fafc91ce9",
+    "dist/cli.d.ts": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012",
+    "dist/cli.js": "01db9a4643ed0b51ffdc59eb7224393b10b286baa165e19ec1810710945a8c3e",
+    "dist/cli.js.map": "86ea652a4f108a65a222463c98c92dac6ff3dbf4131fa30caf6286499081ab05",
+    "dist/config.d.ts": "c8c144539feaee91302d66da74b5a8c82747fe17d30baadcd65f4a0dccf89ca1",
+    "dist/config.js": "6108ec02aa7d13499c4891f6f3b8f3191733ffde9a8347f8ac2ef540671b5984",
+    "dist/config.js.map": "6c501f4f9aed5f70258e954f950ab5b5dbb50c817f1982af9116c0dda7af4e01",
+    "dist/render.d.ts": "0f8d355d080486571ef47ec83c9bd83867f3bb489071bdf6fac264cdf304df5f",
+    "dist/render.js": "20342e526ecebe2ded7ab690896912d084aaa101b20eca3f0330aea4c901d69a",
+    "dist/render.js.map": "9de073867a81f0671aabc596ec65eca249f5ef0908bb8bd68c2cca7e55346f1d",
+    "dist/sse.d.ts": "66805edeeb219d56496c2a78922a91d932fa7f650f7c6c9bc3a474cca46b2767",
+    "dist/sse.js": "f472a803ce79545d33e41e88b1fe82887aa7259dc62264ecd30770ba27d2e69a",
+    "dist/sse.js.map": "a197e3d436e2f36a36e759149ffe52aaf272b85e6e642de8cf56a865894d1739",
+    "dist/types.d.ts": "8afd5e41476d2b5c701d01b3de4e66507b00505e6e0cb721f27613ca4f13d3e5",
+    "dist/types.js": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2",
+    "dist/types.js.map": "a7de897b48fe57bf54d6f84169135ff2e89e2fc95ea0a0a815761cc29a41efee"
+  },
+  "tests": {
+    "test/config.test.mjs": "36c688750eb838438728ed5a39e8fdc78faca82984bfa84aa0b30d97600bf2a8",
+    "test/render.test.mjs": "3dfc00d3e7cb986bea3f06143de75d19841483abff314371c949837bea716624"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP030",
+  "baseline": "STEP030_COMMERCE_SNAPSHOT_NON_EMPTY_INVENTORY",
+  "project_version": "2.10.1",
+  "status": "WINDOWS_LIVE_ACCEPTED",
+  "reported_local_date": "2026-07-30",
+  "command": "sh_run_step030_acceptance",
+  "state": "PASSED",
+  "acceptance_id": "20260729T222543885513Z-bbeafd30",
+  "checks": {
+    "credential_not_in_sqlite": true,
+    "empty_inventory_code_exact": true,
+    "empty_inventory_not_retryable": true,
+    "empty_inventory_returned_502": true,
+    "empty_snapshot_not_in_sqlite": true,
+    "model_gateway_never_called": true,
+    "no_artifact_files_created": true,
+    "no_persistent_state_created": true,
+    "no_protected_payload_files_created": true,
+    "product_counts_remained_zero": true,
+    "product_counts_started_zero": true,
+    "references_unchanged": true,
+    "requested_path_exact": true,
+    "source_read_exactly_once": true,
+    "source_write_never_called": true
+  },
+  "response": {
+    "http_status": 502,
+    "code": "COMMERCE_SNAPSHOT_INVALID",
+    "retryable": false
+  },
+  "source": {
+    "read_count": 1,
+    "write_count": 0,
+    "requested_paths": [
+      "case006-invalid-empty-items"
+    ]
+  },
+  "final_counts": {
+    "submissions": 0,
+    "tasks": 0,
+    "runs": 0,
+    "events": 0,
+    "artifacts": 0,
+    "evaluations": 0
+  },
+  "artifact_count": 0,
+  "protected_payload_file_count": 0,
+  "gateway_call_count": 0,
+  "cleanup_state": "COMPLETED",
+  "warning": "Starlette/TestClient deprecation warning was printed and did not affect Product acceptance."
+}

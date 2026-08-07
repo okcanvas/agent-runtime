@@ -1,0 +1,28 @@
+STEP021_READ_ONLY_LOCAL_APPROVAL_INBOX
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING
+Version: 2.1.0
+
+Reference adoption:
+- ADAPT pending-interruption visibility from examples/tools/shell_human_in_the_loop.py.
+- ADAPT separated approval status presentation from temporal_sandbox_tui.py.
+- REJECT approval/decision controls in the general read-only Operations Console.
+- REJECT raw Tool arguments, Tool call IDs, encrypted RunState references, storage hashes, and key IDs in the inbox response.
+- REJECT direct /reference import.
+
+Deterministic validation:
+- compileall: PASS
+- full pytest suite: 275 passed
+- STEP020 approve/reject regression: PASSED
+- STEP021 acceptance: 11/11 PASS
+- authentication required: PASS
+- state filters: PASS
+- safe bounded inbox contract: PASS
+- Operations Summary pending count: PASS
+- GET observation leaves Product SQLite unchanged: PASS
+- Console remains GET-only and contains no decision endpoint or Run-submitter key: PASS
+- direct /reference import verification: PASS
+- Reference integrity: 4/4 PASS
+
+Live status:
+- STEP020 installed-SDK Windows approve/reject acceptance: pending
+- STEP021 Windows API/console acceptance: pending

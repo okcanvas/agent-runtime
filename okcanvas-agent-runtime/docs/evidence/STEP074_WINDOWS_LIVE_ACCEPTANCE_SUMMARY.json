@@ -1,0 +1,55 @@
+{
+  "schema_version": "okcanvas-step074-windows-live-acceptance-summary-v1",
+  "step": "STEP074_PRODUCT_OWNED_DOCKER_SANDBOX_PROVIDER_LIFECYCLE_V1",
+  "version": "2.54.0",
+  "state": "PASSED",
+  "deterministic_acceptance": {
+    "passed_checks": 28,
+    "total_checks": 28
+  },
+  "live_acceptance": {
+    "passed_checks": 27,
+    "total_checks": 27
+  },
+  "docker_server_version": "27.2.0",
+  "docker_calls": 8,
+  "command_operations": [
+    "version --format",
+    "image inspect",
+    "container create",
+    "container inspect",
+    "container start",
+    "container inspect",
+    "container rm",
+    "container ls"
+  ],
+  "requested_image": "hello-world:latest",
+  "immutable_reference": "hello-world@sha256:c3cbe1cc1aa588a64951ac6286e0df7b27fe2e6324b1001c619bb358770c0178",
+  "image_id": "sha256:c3cbe1cc1aa588a64951ac6286e0df7b27fe2e6324b1001c619bb358770c0178",
+  "architecture": "amd64",
+  "operating_system": "linux",
+  "exit_code": 0,
+  "cleanup_state": "COMPLETED",
+  "orphan_count": 0,
+  "output_bytes": 807,
+  "output_sha256": "8d9adee79e1c69c44f1713b1eeaf875a8dc33e738b1983a36c55be54899f871f",
+  "security": {
+    "network_none": true,
+    "network_attachments_absent": true,
+    "ports_absent": true,
+    "mounts_absent": true,
+    "privileged_false": true,
+    "capabilities_drop_all": true,
+    "no_new_privileges": true,
+    "non_root_user": true,
+    "read_only_rootfs": true,
+    "memory_cpu_pid_limits": true,
+    "restart_disabled": true,
+    "product_labels_exact": true,
+    "runtime_image_pull_absent": true
+  },
+  "api_key_persisted": false,
+  "external_network_calls": 0,
+  "model_calls": 0,
+  "static_output_note": "The hello-world program prints explanatory text that mentions an image pull. The observed command operations contain no pull command, the container used the pre-resolved immutable RepoDigest, and runtime_image_pull_absent passed."
+}

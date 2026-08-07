@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "ambiguity_preserved_without_guessing": true,
+    "authorization_value_not_captured": true,
+    "catalog_revision_observed": true,
+    "delegated_identity_forwarded": true,
+    "department_scoped_resolution_normalized": true,
+    "example_product_api_reached": true,
+    "fault_mapped_by_real_connector": true,
+    "mutable_product_change_visible_through_read_only_connector": true,
+    "real_connector_mcp_call_passed": true,
+    "request_id_forwarded": true
+  },
+  "connector_step": "CONNECTOR_ORGANIZATION_CONTEXT_STEP001R1_GROUPWARE_ACCEPTANCE_PATTERN_ALIGNMENT",
+  "example_step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP001R1_GROUPWARE_CONSTRUCTION_GUIDE_PATTERN_ALIGNMENT",
+  "passed_checks": 10,
+  "schema_version": "okcanvas-organization-context-connector-example-integration-v1",
+  "state": "PASSED",
+  "total_checks": 10
+}

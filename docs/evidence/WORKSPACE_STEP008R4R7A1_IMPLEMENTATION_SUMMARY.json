@@ -1,0 +1,25 @@
+{
+  "implementation": {
+    "full_tree_existing_ignored_file_scan_added_to_release_validation": true,
+    "future_regression_test_added_not_executed": true,
+    "git_policy_static_validator_added": true,
+    "issue_041_recorded": true,
+    "issue_042_recorded": true,
+    "root_gitattributes_added": true,
+    "root_gitignore_strengthened": true,
+    "runtime_gitignore_retained_cli_dist_exception_added": true,
+    "runtime_root_artifacts_rule_anchored": true,
+    "workspace_editor_rules_root_anchored": true
+  },
+  "parent_workspace_step": "WORKSPACE_STEP008R4R7A_CURRENT_DOCUMENT_SOT_ALIGNMENT_AND_PER_FILE_IDENTITY_GATE",
+  "parent_workspace_version": "0.8.4-r7a",
+  "parent_zip_sha256": "ae940c8cdd46e4255be4c56c76579ee16b555c38ac2dd262178456026f19b721",
+  "promotion": "NOT_READY",
+  "runtime_product_modifications": 0,
+  "runtime_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.75.0",
+  "schema_version": "okcanvas-workspace-step008r4r7a1-implementation-summary-v1",
+  "test_execution": "DEFERRED_BY_USER_UNTIL_MINIO_READY",
+  "workspace_step": "WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING",
+  "workspace_version": "0.8.4-r7a1"
+}

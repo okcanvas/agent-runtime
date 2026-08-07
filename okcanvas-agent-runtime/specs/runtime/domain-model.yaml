@@ -1,0 +1,70 @@
+schema_version: okcanvas-runtime-domain-plan-v1
+ownership:
+  product_store:
+    - task
+    - run
+    - run_event
+    - agent_invocation
+    - approval
+    - artifact
+    - validation
+  session_store:
+    - product_session
+  adapter_state:
+    - agent_session_reference
+    - agent_runstate_artifact_reference
+    - trace_reference
+    - codex_thread_reference
+entities:
+  agent_definition:
+    key: [agent_id, version]
+    immutable_content: [definition_json, instructions, output_schema]
+    required_integrity: [definition_sha256]
+  task:
+    key: task_id
+    states: [READY, RUNNING, WAITING_APPROVAL, SUCCEEDED, FAILED, CANCELLED]
+  run:
+    key: run_id
+    states: [CREATED, RUNNING, INTERRUPTED, SUCCEEDED, FAILED, CANCELLED]
+  run_event:
+    key: [run_id, sequence]
+    append_only: true
+  agent_invocation:
+    key: invocation_id
+    parent_scope: [run_id, root_invocation_id, parent_invocation_id]
+    kinds: [ROOT, HANDOFF, AGENT_AS_TOOL]
+    states: [PLANNED, RUNNING, SUCCEEDED, FAILED, CANCELLED]
+    required_integrity: [agent_definition_sha256, runtime_binding_sha256, state_namespace]
+    workspace_access: [none, sandbox-readonly-v1, sandbox-patch-v1, sandbox-shell-v1]
+    active_workspace_access_in_step073: [none]
+    constraints:
+      - exactly_one_root_per_run
+      - child_parent_same_run
+      - exact_depth_continuity
+      - unique_state_namespace
+  product_session:
+    key: session_id
+    states: [ACTIVE, CLEARING, CLEARED]
+    required_integrity: [agent_definition_sha256, runtime_binding_sha256]
+    concurrency: exactly_one_active_run
+    metadata: [active_run_id, turn_count, item_count, created_at, updated_at, cleared_at]
+    history_backend: installed_sdk_sqlite_session
+    history_copied_to_product_events: false
+    history_encrypted_in_step043: false
+  approval:
+    key: approval_id
+    states: [PENDING, APPROVED, REJECTED, EXECUTING, COMPLETED, FAILED, BLOCKED]
+  artifact:
+    key: artifact_id
+    required_integrity: [sha256, byte_length]
+  sandbox_runtime:
+    key: [policy_id, provider_id]
+    states: [FOUNDATION_DISABLED, EXECUTION_ENABLED]
+    current_state: FOUNDATION_DISABLED
+    required_integrity: [policy_sha256, provider_contract_sha256, foundation_sha256, runtime_sha256]
+  validation:
+    key: validation_id
+    states: [CREATED, RUNNING, PASSED, FAILED, ERROR, TIMED_OUT]
+security:
+  persist_api_keys: false
+  raw_input_default: protected_reference_or_hash

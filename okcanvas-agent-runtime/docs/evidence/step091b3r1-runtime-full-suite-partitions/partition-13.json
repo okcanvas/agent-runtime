@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-13",
+  "partition_number": 13,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:08:24.791209+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 96,
+  "passed_tests": 96,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 8.808,
+  "exit_code": 0,
+  "files_sha256": "5d2f1e343f4a6bd5462f9d69e75fdd504d22f288a3aca69efb5b0795af6ceca4",
+  "log_sha256": "392d52e7e48204ec4145fd870cdc49350aab1c0286e47cc44b1ed4de7b6d5c53",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step061_openai_agents_examples_coverage_matrix_baseline.py",
+    "tests/test_step062_bounded_multi_agent_orchestration_baseline.py",
+    "tests/test_step062a_windows_node_acceptance_portability_fix.py",
+    "tests/test_step062b_windows_typescript_direct_compiler_portability_fix.py",
+    "tests/test_step062c_committed_node_dist_release_integrity_acceptance_fix.py",
+    "tests/test_step063_strict_encrypted_sqlite_session_history.py",
+    "tests/test_step063a_windows_symlink_integrity_test_portability_fix.py",
+    "tests/test_step064_bounded_encrypted_sqlite_session_compaction.py",
+    "tests/test_step064a_pytest_async_plugin_independence_fix.py",
+    "tests/test_step065_session_history_key_rotation.py",
+    "tests/test_step066_remote_mcp_streamable_http_foundation.py",
+    "tests/test_step066_remote_mcp_streamable_http_mvp_foundation_baseline.py",
+    "tests/test_step067_hosted_web_search_foundation.py",
+    "tests/test_step067_hosted_web_search_foundation_baseline.py"
+  ]
+}

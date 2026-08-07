@@ -1,0 +1,40 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP051",
+  "step_name": "STEP051_IMMUTABLE_OPENAI_MODEL_ROUTE_BINDING_V1",
+  "version": "2.31.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-31T00:41:24.816775Z",
+  "checks_passed": 25,
+  "checks_total": 25,
+  "route": {
+    "policy_id": "local-openai-responses-http-v1",
+    "route_id": "openai:responses:http",
+    "provider_id": "openai",
+    "api": "responses",
+    "transport": "http",
+    "automatic_fallback": false
+  },
+  "gateway_counts": {
+    "runner_run": 0,
+    "runner_run_streamed": 1,
+    "provider_constructed": 1,
+    "provider_get_model": 1,
+    "provider_closed": 1
+  },
+  "drift_confirmation_status": 409,
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "submissions": 2,
+    "invocations": 1,
+    "events": 10,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 1,
+  "evaluation_state": "PASSED",
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1
+}

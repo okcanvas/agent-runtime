@@ -1,0 +1,16 @@
+id: codex_engineer
+implementation: agents.extensions.experimental.codex.codex_tool
+sandbox_mode: workspace-write
+approval_policy: never
+workspace_kind: disposable-git-copy
+network_access_enabled: false
+web_search_enabled: false
+mcp_enabled: false
+environment_inheritance: allowlist
+skip_git_repo_check: false
+exact_file_allowlist_required: true
+patch_evidence_required: true
+independent_validator: pytest-preset
+max_agent_total_tokens: 120000
+max_codex_total_tokens: 120000
+live_accepted: true

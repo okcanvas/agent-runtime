@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP037",
+  "reported_at": "2026-07-30T05:07:14.460277Z",
+  "state": "PASSED",
+  "checks_passed": 24,
+  "checks_total": 24,
+  "gateway_call_count": 1,
+  "event_count": 14,
+  "final_counts": {"submissions": 1, "tasks": 1, "runs": 1, "artifacts": 1},
+  "evaluation_created": true,
+  "protected_payload_deleted": true,
+  "cleanup_state": "COMPLETED",
+  "note": "User-reported Windows installed-project acceptance; Starlette TestClient deprecation warning was non-fatal."
+}

@@ -1,0 +1,74 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260731T103843757296Z-0346f864",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-31T10:38:44.539592Z",
+    "created_at": "2026-07-31T10:38:43.757897Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [
+      {
+        "closed": true,
+        "error": null,
+        "name": "loopback-control-api"
+      }
+    ],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP056"
+  },
+  "artifact_id": "artifact_3f5318c6646a4d2caa4e3840d55659af",
+  "checks": {
+    "agent_catalog_loaded": true,
+    "client_closed": true,
+    "credentials_not_printed_or_persisted": true,
+    "final_product_counts_exact": true,
+    "foundation_filters_tool_session_and_workspace_capabilities": true,
+    "gateway_executed_exactly_once": true,
+    "governed_preflight_and_confirmation_used": true,
+    "loopback_http_used": true,
+    "persisted_sse_consumed_to_terminal": true,
+    "raw_requests_not_persisted": true,
+    "recorded_evaluation_visible": true,
+    "references_unchanged": true,
+    "remote_control_api_rejected": true,
+    "run_succeeded": true,
+    "separate_authorities_required": true,
+    "single_root_invocation_visible": true,
+    "successful_payload_deleted_wrong_preflight_retained": true,
+    "terminal_transcript_contains_operational_result": true,
+    "tui_uses_control_api_only": true,
+    "verified_artifact_visible": true,
+    "wrong_confirmation_blocked_before_product_state": true
+  },
+  "evaluation_id": "eval_62d1c58e996a42db97bb557f601b975e",
+  "event_count": 10,
+  "final_counts": {
+    "artifacts": 1,
+    "evaluations": 1,
+    "events": 10,
+    "invocations": 1,
+    "runs": 1,
+    "submissions": 2,
+    "tasks": 1
+  },
+  "gateway_call_count": 1,
+  "protected_payload_file_count": 1,
+  "run_id": "run_c134dbd8f97941ac87d0cd4eaa1b7577",
+  "runtime_binding_sha256": "137243d0031b1acd21362f7e80a93e212b939a58dd61f3659d641a4e5d86bfe1",
+  "schema_version": "okcanvas-step056-acceptance-v1",
+  "state": "PASSED",
+  "submission_id": "submission_f907b83bf97c400fb0720d94cdfdc8d8",
+  "task_id": "task_ceec49588f444223891c8fe953c5999b",
+  "tui": {
+    "approval_decision_enabled": false,
+    "direct_runtime_access": false,
+    "evaluation_case": "tui-client-foundation-v1",
+    "foundation_agent": "coding-agent",
+    "mode": "loopback-control-api-persisted-sse",
+    "session_enabled": false
+  }
+}

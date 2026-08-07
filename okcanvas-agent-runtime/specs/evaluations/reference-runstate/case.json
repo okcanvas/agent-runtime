@@ -1,0 +1,12 @@
+{
+  "schema_version": "okcanvas-evaluation-case-v1",
+  "case_id": "reference-runstate",
+  "version": "1.0.0",
+  "agent_definition_id": "reference-research-agent",
+  "required_result": {"status": "PARTIAL"},
+  "forbidden_result": {"status": "FAILED"},
+  "required_tools": ["search_reference", "read_reference_file"],
+  "forbidden_tools": ["write_reference_file", "web_search"],
+  "max_total_tokens": 5000,
+  "max_duration_ms": 60000
+}

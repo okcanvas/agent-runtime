@@ -1,0 +1,23 @@
+STEP011_AGENT_DEFINITION_AND_EVALUATION_CATALOG_API
+Version: 1.1.0
+Status: COMPLETE
+
+Validation:
+- python -m compileall -q src scripts tests: PASS
+- pytest -q: 187 passed
+- scripts/run_step011_acceptance.py: PASSED, 13/13 checks
+- scripts/run_step010_acceptance.py: PASS
+- scripts/run_step009_acceptance.py: PASS
+- scripts/run_step008_acceptance.py: PASS
+- scripts/run_step007_acceptance.py: PASS
+- scripts/run_step006_acceptance.py: PASS
+- scripts/verify_core_store.py: PASS
+- scripts/verify_no_reference_imports.py: PASS
+- scripts/verify_reference.py: PASS, 4/4
+
+Boundaries:
+- catalog endpoints are local-admin authenticated and read-only;
+- Agent instructions, local paths, raw model outputs, Tool arguments/results and Reference bodies are not exposed;
+- evaluation database SHA is unchanged by catalog GET requests;
+- only canonical definition.json Agent directories are listed;
+- /reference is actively inspected but never imported.

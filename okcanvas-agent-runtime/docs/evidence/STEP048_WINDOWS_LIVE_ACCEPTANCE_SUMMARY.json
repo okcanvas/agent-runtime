@@ -1,0 +1,63 @@
+{
+  "schema_version": "okcanvas-step048-windows-live-acceptance-summary-v1",
+  "step_id": "STEP048",
+  "reported_state": "PASSED",
+  "windows_live_accepted": true,
+  "check_count": 32,
+  "all_checks_true": true,
+  "session_transitions": {
+    "after_clean_1": [
+      1,
+      2
+    ],
+    "after_input_trip": [
+      1,
+      2
+    ],
+    "after_output_trip": [
+      1,
+      2
+    ],
+    "after_clean_2": [
+      2,
+      4
+    ],
+    "final": [
+      2,
+      4
+    ]
+  },
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 4,
+    "model_calls": 3,
+    "guardrail_runs": {
+      "INPUT": 4,
+      "OUTPUT": 3
+    },
+    "session_instances": 8,
+    "session_closes": 8
+  },
+  "case_event_counts": {
+    "clean_1": 12,
+    "input_trip": 8,
+    "output_trip": 11,
+    "clean_2": 12
+  },
+  "final_counts": {
+    "tasks": 4,
+    "runs": 4,
+    "submissions": 4,
+    "invocations": 4,
+    "events": 43,
+    "artifacts": 2,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 2,
+  "evaluation_state": "PASSED",
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1,
+  "resources_closed": true,
+  "source": "user-reported complete sh_run_step048_acceptance output"
+}

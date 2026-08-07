@@ -1,0 +1,20 @@
+agent_id: reference-research-agent
+definition_version: 1.0.0
+status: active
+allowed_tools: []
+mcp_servers:
+  allow:
+    - reference-catalog
+mcp_tools:
+  allow:
+    - search_reference
+    - read_reference_file
+mcp_read_only: true
+handoffs: []
+workspace_access: none
+network_access: openai_model_api_and_local_stdio_mcp_only
+approval_required: explicit_live_call_opt_in
+max_turns: 4
+output_contract: CodingAgentResult
+session_mode: disabled
+live_accepted: false

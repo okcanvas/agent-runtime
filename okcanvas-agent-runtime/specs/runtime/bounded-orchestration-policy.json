@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-bounded-orchestration-policy-v1",
+  "policy_id": "default-bounded-multi-agent-orchestration",
+  "version": "1.0.0",
+  "child_count": 2,
+  "max_parallelism": 2,
+  "max_depth": 1,
+  "failure_mode": "ALL_REQUIRED_FAIL_FAST",
+  "cancellation_mode": "CANCEL_PENDING_SIBLINGS",
+  "aggregation_mode": "DECLARATION_ORDER_STRUCTURED",
+  "child_output_contract": "CodingAgentResult",
+  "root_output_contract": "BoundedOrchestrationResult",
+  "child_session_mode": "disabled",
+  "read_only_language_only": true,
+  "native_child_streaming": false,
+  "workspace_access": "none"
+}

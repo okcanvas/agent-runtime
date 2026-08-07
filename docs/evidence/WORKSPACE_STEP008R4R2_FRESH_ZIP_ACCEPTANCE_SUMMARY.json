@@ -1,0 +1,22 @@
+{
+  "changed": 0,
+  "final_manifest_actual": 4453,
+  "final_manifest_expected": 4453,
+  "missing": 0,
+  "post_acceptance_drift": 0,
+  "runtime_passed_checks": 25,
+  "runtime_source_unchanged": true,
+  "runtime_step": "STEP091B1_TYPED_PERSISTENCE_PORTS_AND_TRANSACTION_OWNERSHIP",
+  "runtime_total_checks": 25,
+  "runtime_version": "2.71.0",
+  "schema_version": "okcanvas-workspace-step008r4r2-fresh-zip-acceptance-summary-v1",
+  "state": "PASSED",
+  "unexpected": 0,
+  "windows_deterministic": "PENDING",
+  "windows_live_openai": "PENDING",
+  "workspace_passed_checks": 29,
+  "workspace_step": "WORKSPACE_STEP008R4R2_RUNTIME_STEP091B1_TYPED_PERSISTENCE_PORTS_AND_TRANSACTION_OWNERSHIP",
+  "workspace_tests_passed": 111,
+  "workspace_total_checks": 29,
+  "workspace_version": "0.8.4-r2"
+}

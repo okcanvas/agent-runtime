@@ -1,0 +1,87 @@
+{
+  "schema_version": "okcanvas-step002c-live-acceptance-evidence-v1",
+  "baseline_step": "STEP002C_CODEX_READ_ONLY_LIVE_ACCEPTANCE",
+  "project_version": "0.2.3",
+  "accepted_at": "2026-07-28T12:53:58.377550Z",
+  "acceptance_id": "20260728T125150Z-c9ab7845",
+  "source_log_file": "STEP002C_LIVE_ACCEPTANCE_RAW.txt",
+  "source_log_sha256": "172196b24d9e0d9492f936e28292b0c5a98d48e9448b67095ce225b558774a0b",
+  "state": "PASSED",
+  "checks": {
+    "doctor_ready": true,
+    "first_succeeded": true,
+    "second_succeeded": true,
+    "thread_preserved": true,
+    "second_resumed": true,
+    "first_unchanged": true,
+    "second_unchanged": true,
+    "required_files_found": true,
+    "acceptance_passed": true,
+    "sdk_version_exact": true,
+    "codex_cli_version_consistent": true
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.12.5"
+  },
+  "sdk_version": "0.19.0",
+  "codex_cli_version": "codex-cli 0.145.0",
+  "agent_model": "gpt-5.6-sol",
+  "codex_model": "gpt-5.6-sol",
+  "thread_id": "019fa8c8-2f18-79f0-9f66-886aac853a52",
+  "first_run_id": "codexrun_12824eb5ab0e459ba6aa947aa487d12c",
+  "second_run_id": "codexrun_5e0aa0339849434280a1d4cfc6fa2475",
+  "first_event_count": 15,
+  "second_event_count": 14,
+  "first_event_sha256": "a93bd19bf2d59de4cc7594c03bf47d1a5e83f83e96b49b3a77603d392af6646f",
+  "second_event_sha256": "9d65410415fce55a0f3920d11d269760597fcbc66ee9304e3b7571f6485a95eb",
+  "workspace_tree_sha256": "06ac7d3e056fc4f1ea97b9d2654d0648df090f4708df329ca5dcc22df9cd604a",
+  "verified_inspected_files_first": [
+    "src/inventory/api.py",
+    "src/inventory/pricing.py",
+    "tests/test_pricing.py"
+  ],
+  "verified_inspected_files_second": [
+    "README.md",
+    "src/inventory/api.py",
+    "src/inventory/pricing.py",
+    "tests/test_pricing.py"
+  ],
+  "duration_ms": 128359,
+  "usage": {
+    "first_agent": {
+      "requests": 3,
+      "input_tokens": 51538,
+      "output_tokens": 1986,
+      "total_tokens": 53524,
+      "cached_input_tokens": 39263,
+      "reasoning_tokens": 160
+    },
+    "second_agent": {
+      "requests": 3,
+      "input_tokens": 112131,
+      "output_tokens": 3294,
+      "total_tokens": 115425,
+      "cached_input_tokens": 97731,
+      "reasoning_tokens": 38
+    },
+    "first_codex": {
+      "input_tokens": 49981,
+      "cached_input_tokens": 39263,
+      "output_tokens": 1154
+    },
+    "second_codex": {
+      "input_tokens": 110430,
+      "cached_input_tokens": 97731,
+      "output_tokens": 2501
+    },
+    "combined_agent_total_tokens": 168949
+  },
+  "limitations": [
+    "pytest was not installed in the Codex subprocess environment; the first run used a direct function reproduction and the second run directly invoked the test function to observe AssertionError.",
+    "The acceptance used a controlled disposable fixture and does not establish safety for arbitrary untrusted repositories.",
+    "The upstream Codex Tool integration is experimental.",
+    "The two-run acceptance consumed 168949 total Agent tokens, so cost and context growth must be bounded before broad use."
+  ],
+  "decision": "STEP002 read-only vertical slice is live accepted. STEP003 may begin only in a disposable copied workspace with independent validation outside Codex."
+}

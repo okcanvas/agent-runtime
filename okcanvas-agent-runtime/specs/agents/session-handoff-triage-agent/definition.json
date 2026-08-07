@@ -1,0 +1,18 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "session-handoff-triage-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas SQLite Session Handoff Triage Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [],
+  "mcp_servers": [],
+  "handoffs": ["handoff-specialist-agent"],
+  "agent_tools": [],
+  "guardrails": [],
+  "workspace_access": "none",
+  "max_turns": 2,
+  "workflow_name": "OKCanvas SQLite Session Native Handoff V1",
+  "session_mode": "sqlite-v1"
+}

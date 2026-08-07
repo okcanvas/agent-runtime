@@ -1,0 +1,23 @@
+{
+  "connector": "11/11 PASSED",
+  "connector_example": "17/17 PASSED",
+  "evidence_sha256": {
+    "runtime_acceptance": "be78304f0900750e66bd7f90afe4c56135d0e6b0871ee4572669a4193fdd5bf8",
+    "runtime_gate": "5d51968568acda5562473cbdc857afe001658cc554b5c1e1ee69c8d1c4cb0a84",
+    "workspace_acceptance": "b1c29cb6d23cc8e8f39eaa11241bfa0daa0f5b1b473241a13973bce31f5e695b"
+  },
+  "example": "19/19 PASSED",
+  "manifest_drift": {
+    "changed": 0,
+    "missing": 0,
+    "unexpected": 0
+  },
+  "runtime": "25/25 PASSED",
+  "runtime_fresh_gate": "PASSED / source unchanged",
+  "schema_version": "okcanvas-step008r4-local-deterministic-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP008R4_SHORT_EXPRESSION_LIVE_ACCEPTANCE_SEMANTIC_OUTPUT_AND_COMPACTED_SESSION_ASSERTION_CLOSURE",
+  "version": "0.8.4",
+  "workspace": "25/25 PASSED",
+  "workspace_tests": "99/99 PASSED"
+}

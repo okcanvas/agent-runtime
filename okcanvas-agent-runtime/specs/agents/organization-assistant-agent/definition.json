@@ -1,0 +1,22 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "organization-assistant-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Organization Assistant",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "OrganizationAssistantResult",
+  "tools": [],
+  "mcp_servers": [],
+  "hosted_tools": [],
+  "skills": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "orchestration_children": [],
+  "guardrails": [],
+  "workspace_access": "none",
+  "max_turns": 1,
+  "workflow_name": "OKCanvas Organization Assistant Direct Response",
+  "session_mode": "disabled",
+  "input_mode": "text-only"
+}

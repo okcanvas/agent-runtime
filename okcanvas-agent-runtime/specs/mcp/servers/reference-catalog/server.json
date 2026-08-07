@@ -1,0 +1,20 @@
+{
+  "schema_version": "okcanvas-mcp-server-v1",
+  "server_id": "reference-catalog",
+  "version": "1.0.0",
+  "name": "OKCanvas Read-only Reference Catalog",
+  "kind": "builtin-stdio",
+  "module": "okcanvas_agent_runtime.adapters.mcp.servers.reference_catalog",
+  "allowed_tools": [
+    "search_reference",
+    "read_reference_file"
+  ],
+  "read_only": true,
+  "cache_tools_list": true,
+  "connect_timeout_seconds": 10.0,
+  "cleanup_timeout_seconds": 5.0,
+  "tool_timeout_seconds": 8.0,
+  "max_retry_attempts": 1,
+  "retry_backoff_seconds_base": 0.25,
+  "max_result_chars": 24000
+}

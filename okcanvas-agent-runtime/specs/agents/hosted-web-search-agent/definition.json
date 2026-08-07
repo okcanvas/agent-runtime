@@ -1,0 +1,22 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "hosted-web-search-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Hosted Web Search Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "HostedWebSearchResult",
+  "tools": [],
+  "hosted_tools": [
+    "web-search-v1"
+  ],
+  "mcp_servers": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "orchestration_children": [],
+  "guardrails": [],
+  "workspace_access": "none",
+  "max_turns": 2,
+  "workflow_name": "OKCanvas Hosted Web Search",
+  "session_mode": "disabled"
+}

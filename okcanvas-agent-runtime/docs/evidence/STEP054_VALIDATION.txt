@@ -1,0 +1,122 @@
+STEP054_IMMUTABLE_OPENAI_RESPONSE_STORAGE_DISABLED_V1
+okcanvas-agent-runtime 2.34.0
+
+Scope
+-----
+- Current source after STEP053 Windows live closure and STEP054 implementation.
+- Installed SDK boundary: immutable openai-agents-python-0.19.0.
+- Selected boundary: explicit OpenAI Responses request `ModelSettings.store=False`.
+
+Source validation
+-----------------
+- compileall: PASS
+- focused response-storage/model-route/retry/reasoning/Agent-as-Tool tests: 24/24 PASS
+- collected pytest tests: 526 across 163 test files
+- split pytest groups: 198 + 158 + 170 = 526/526 PASS
+- STEP054 deterministic acceptance: 30/30 PASS, cleanup COMPLETED in 1 attempt
+- STEP053: 30/30 PASS
+- STEP052: 25/25 PASS
+- STEP051: 25/25 PASS
+- STEP050: 31/31 PASS
+- STEP049: 33/33 PASS
+- STEP048: 32/32 PASS
+- STEP047: 29/29 PASS
+- STEP046: 27/27 PASS
+- STEP045: 28/28 PASS
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS
+- STEP042: 29/29 PASS
+- STEP041: 24/24 PASS
+- STEP039: 20/20 PASS
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 59
+- launcher violations: 0
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+STEP054 acceptance evidence
+---------------------------
+- policy: local-openai-response-storage-disabled-v1
+- response_store_requested: false
+- captured Root ModelSettings.store: [false]
+- official OpenAI Responses/HTTP route preserved
+- provider/Runner retry budget remains 0/0
+- reasoning request remains reasoning=None and response_include=[]
+- provider construct/get-model/close: 1/1/1
+- Runner.run/run_streamed: 0/1
+- policy drift confirmation: 409
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/2/1/10/1/1
+- protected payload files: 1
+- Evaluation: PASSED
+- References unchanged
+- cleanup: COMPLETED in 1 attempt
+
+Code-audit corrections during validation
+----------------------------------------
+- One partial-project Runtime-binding fixture copied route/retry/reasoning policies but omitted the new response-storage policy. The fixture now copies the exact product policy before binding resolution.
+- STEP053 historical baseline now records its user-reported Windows-live accepted state.
+- STEP052's static source assertion now includes the additional explicit response-storage ModelSettings kwargs while preserving its zero-retry contract.
+
+Claim limitation
+----------------
+- `store=False` proves the outgoing SDK Responses request field only.
+- It does not claim universal provider zero retention, account-level data-control configuration, prompt-cache behavior or provider identifier minimization.
+
+Independent candidate ZIP validation
+------------------------------------
+- candidate ZIP: /mnt/data/step054-candidate.zip
+- canonical root: 1 (`okcanvas-agent-runtime`)
+- ZIP entries: 2,569
+- forbidden files: 0
+- fresh extraction compileall: PASS
+- fresh extraction pytest: 198 + 158 + 170 = 526/526 PASS
+- STEP054: 30/30 PASS, cleanup COMPLETED in 1 attempt
+- STEP053: 30/30 PASS
+- STEP052: 25/25 PASS
+- STEP051: 25/25 PASS
+- STEP050: 31/31 PASS
+- STEP049: 33/33 PASS
+- STEP048: 32/32 PASS
+- STEP047: 29/29 PASS
+- STEP046: 27/27 PASS
+- STEP045: 28/28 PASS
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS
+- STEP042: 29/29 PASS
+- STEP041: 24/24 PASS
+- STEP039: 20/20 PASS
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 59
+- launcher violations: 0
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+Final tested ZIP validation
+---------------------------
+- tested ZIP: /mnt/data/step054-tested-final-before-validation-record.zip
+- SHA-256 before final validation record: 7c5a6eef9da6844fb8c6deec82b47604c44c6d18113e3658fc0af2b398cff818
+- canonical root: 1 (`okcanvas-agent-runtime`)
+- ZIP entries: 2,569
+- forbidden files: 0
+- fresh extraction compileall: PASS
+- fresh extraction pytest: 198 + 158 + 170 = 526/526 PASS
+- STEP054: 30/30 PASS, cleanup COMPLETED in 1 attempt
+- STEP053: 30/30 PASS, cleanup COMPLETED in 1 attempt
+- STEP052: 25/25 PASS, cleanup COMPLETED in 1 attempt
+- STEP051: 25/25 PASS, cleanup COMPLETED in 1 attempt
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 59
+- launcher violations: 0
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+Final distribution integrity rule
+---------------------------------
+- The distribution ZIP is regenerated only to include this final validation record.
+- It must differ from the tested ZIP only at `docs/evidence/STEP054_VALIDATION.txt`.
+
+Windows gate
+------------
+- STEP054 remains Windows-live rerun pending.
+- Run a fresh extracted package with sh_run_step054_acceptance.cmd.
+- STEP055 is forbidden until all 30 checks and cleanup COMPLETED are user-reported and recorded.

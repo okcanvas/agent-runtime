@@ -1,0 +1,129 @@
+{
+  "schema_version": "okcanvas-step044-acceptance-v1",
+  "state": "PASSED",
+  "checks": {
+    "guardrail_catalog_exact": true,
+    "native_streaming_runner_used_five_times": true,
+    "clean_guardrail_path_succeeded": true,
+    "input_tripwire_before_model": true,
+    "output_tripwire_after_model": true,
+    "tool_input_tripwire_prevented_execution": true,
+    "tool_output_tripwire_followed_one_execution": true,
+    "four_tripwire_error_codes_exact": true,
+    "one_safe_tripwire_event_per_rejection": true,
+    "tripwire_metadata_safe": true,
+    "rejected_runs_created_no_artifact": true,
+    "clean_artifact_verified": true,
+    "clean_recorded_evaluation_passed": true,
+    "all_root_invocations_terminal": true,
+    "guardrail_runtime_bound": true,
+    "pydantic_validation_remains_distinct": true,
+    "successful_payload_deleted_failures_retained": true,
+    "protected_payload_count_exact": true,
+    "raw_guarded_content_not_in_product_or_evaluation_db": true,
+    "api_key_not_persisted": true,
+    "product_counts_exact": true,
+    "references_unchanged": true,
+    "cleanup_completed": true
+  },
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 5,
+    "model_calls": 4,
+    "tool_executions": {
+      "guardrail-tool-input-agent": 0,
+      "guardrail-tool-output-agent": 1
+    },
+    "guardrail_runs": {
+      "INPUT": 3,
+      "OUTPUT": 2,
+      "TOOL_INPUT": 1,
+      "TOOL_OUTPUT": 1
+    }
+  },
+  "cases": {
+    "clean": {
+      "run_id": "run_82f8efb23e7e43feb935f10893fd3fb8",
+      "submission_id": "submission_ebd8dac2ce7843d0af9217d8fcc3ac45",
+      "status": "SUCCEEDED",
+      "event_count": 10,
+      "tripwire": null
+    },
+    "input": {
+      "run_id": "run_0dc55a71003e44b1ac6ebd1ca42602f0",
+      "submission_id": "submission_c61ef0d003f240fc9c476e9053d2a3c0",
+      "status": "FAILED",
+      "event_count": 7,
+      "tripwire": {
+        "behavior": "RAISE_EXCEPTION",
+        "guarded_content_persisted": false,
+        "guardrail_id": "block-input-marker",
+        "guardrail_kind": "INPUT",
+        "output_info_persisted": false,
+        "raw_sdk_error_persisted": false,
+        "tool_id": null,
+        "tripwire_triggered": true
+      }
+    },
+    "output": {
+      "run_id": "run_1adae92be78c4278a2ad153ba87ae442",
+      "submission_id": "submission_a3c9d64702fe4d12bf8ec7a7eb119e8c",
+      "status": "FAILED",
+      "event_count": 10,
+      "tripwire": {
+        "behavior": "RAISE_EXCEPTION",
+        "guarded_content_persisted": false,
+        "guardrail_id": "block-output-marker",
+        "guardrail_kind": "OUTPUT",
+        "output_info_persisted": false,
+        "raw_sdk_error_persisted": false,
+        "tool_id": null,
+        "tripwire_triggered": true
+      }
+    },
+    "tool_input": {
+      "run_id": "run_94bc4ed0dce24da6b9529c17cde9da07",
+      "submission_id": "submission_8b34c78c76fb408fbe1abee7ce630b79",
+      "status": "FAILED",
+      "event_count": 10,
+      "tripwire": {
+        "behavior": "RAISE_EXCEPTION",
+        "guarded_content_persisted": false,
+        "guardrail_id": "deny-local-text-tool-input",
+        "guardrail_kind": "TOOL_INPUT",
+        "output_info_persisted": false,
+        "raw_sdk_error_persisted": false,
+        "tool_id": "local_text_fingerprint",
+        "tripwire_triggered": true
+      }
+    },
+    "tool_output": {
+      "run_id": "run_1489367ad4a74f3e80b6c33f31c387aa",
+      "submission_id": "submission_aa5c2a3470314f32a82f68bd8f2a8275",
+      "status": "FAILED",
+      "event_count": 11,
+      "tripwire": {
+        "behavior": "RAISE_EXCEPTION",
+        "guarded_content_persisted": false,
+        "guardrail_id": "deny-local-text-tool-output",
+        "guardrail_kind": "TOOL_OUTPUT",
+        "output_info_persisted": false,
+        "raw_sdk_error_persisted": false,
+        "tool_id": "local_text_fingerprint",
+        "tripwire_triggered": true
+      }
+    }
+  },
+  "final_counts": {
+    "tasks": 5,
+    "runs": 5,
+    "submissions": 5,
+    "invocations": 5,
+    "events": 48,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "artifact_id": "artifact_4a48401a456b462f81414ac7f18e3f5e",
+  "evaluation_id": "eval_1d5aaec1e8264fc69442f28a507e6de9",
+  "protected_payload_file_count": 4
+}

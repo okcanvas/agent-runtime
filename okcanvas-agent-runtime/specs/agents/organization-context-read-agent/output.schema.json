@@ -1,0 +1,135 @@
+{
+  "$defs": {
+    "OrganizationContextReadCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "reference": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference"
+        },
+        "source_type": {
+          "const": "ORGANIZATION_KNOWLEDGE",
+          "default": "ORGANIZATION_KNOWLEDGE",
+          "title": "Source Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "title": "OrganizationContextReadCitation",
+      "type": "object"
+    },
+    "OrganizationContextReadStatus": {
+      "enum": [
+        "ANSWERED",
+        "NEEDS_CLARIFICATION",
+        "NEEDS_CAPABILITY",
+        "REFUSED"
+      ],
+      "title": "OrganizationContextReadStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Strict final output for the external database-SOT Organization Context read Agent.",
+  "properties": {
+    "answer": {
+      "maxLength": 8000,
+      "minLength": 1,
+      "title": "Answer",
+      "type": "string"
+    },
+    "catalog_revision": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Catalog Revision"
+    },
+    "citations": {
+      "items": {
+        "$ref": "#/$defs/OrganizationContextReadCitation"
+      },
+      "maxItems": 30,
+      "title": "Citations",
+      "type": "array"
+    },
+    "queried_operations": {
+      "items": {
+        "enum": [
+          "resolve_organization_context",
+          "search_organization_context",
+          "get_organization_entity"
+        ],
+        "type": "string"
+      },
+      "maxItems": 3,
+      "title": "Queried Operations",
+      "type": "array"
+    },
+    "request_class": {
+      "const": "SEARCH_KNOWLEDGE",
+      "default": "SEARCH_KNOWLEDGE",
+      "title": "Request Class",
+      "type": "string"
+    },
+    "result_count": {
+      "default": 0,
+      "maximum": 50,
+      "minimum": 0,
+      "title": "Result Count",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "okcanvas-organization-context-read-result-v1",
+      "default": "okcanvas-organization-context-read-result-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "side_effect": {
+      "const": "READ",
+      "default": "READ",
+      "title": "Side Effect",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/OrganizationContextReadStatus"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "answer"
+  ],
+  "title": "OrganizationContextReadResult",
+  "type": "object"
+}

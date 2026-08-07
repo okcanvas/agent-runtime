@@ -1,0 +1,79 @@
+{
+  "continuation_files": [
+    "HANDOFF.md",
+    "docs/plans/WORKSPACE_STEP008_ORGANIZATION_CONTEXT_SHORT_EXPRESSION_ROUTING_AND_REFERENCE_FACT_CLOSURE.md",
+    "docs/issues/ISSUE_REGISTRY.md",
+    "okcanvas-agent-runtime/docs/issues/STEP008_IMPLEMENTATION_FAILURE_LOG.md",
+    "docs/evidence/WORKSPACE_STEP008_PROMOTION_MARKER.json"
+  ],
+  "limitations": {
+    "live_openai_model_called": false,
+    "production_database_executed": false,
+    "real_enterprise_organization_context_called": false,
+    "windows_step008_acceptance": "PENDING"
+  },
+  "product_decision": {
+    "add_employee_directory_product_skill": false,
+    "child_agent_skills_remain_empty": true,
+    "implementation_boundary": "PRODUCT_OWNED_SHORT_EXPRESSION_ROUTING_AND_STRUCTURED_REQUEST_HINT",
+    "request_hint_is_entity_evidence": false,
+    "root_agent_skills_remain_empty": true
+  },
+  "reference_dataset": {
+    "employee_scalar_relation_consistency": true,
+    "tenant_a_relations": 893
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-promotion-marker-v1",
+  "state": "LOCAL_DETERMINISTIC_ACCEPTED",
+  "step": "WORKSPACE_STEP008_ORGANIZATION_CONTEXT_SHORT_EXPRESSION_ROUTING_AND_REFERENCE_FACT_CLOSURE",
+  "validation": {
+    "connector_acceptance": {
+      "passed_checks": 11,
+      "total_checks": 11
+    },
+    "connector_example_integration": {
+      "passed_checks": 17,
+      "total_checks": 17
+    },
+    "example_acceptance": {
+      "passed_checks": 19,
+      "state": "PASSED",
+      "total_checks": 19
+    },
+    "example_node_tests": {
+      "evidence": "okcanvas-connector-examples/organization-context/organization-context-api-fake/docs/evidence/STEP002R2_NODE_TESTS.txt",
+      "passed": 12,
+      "total": 12
+    },
+    "runtime_acceptance": {
+      "passed_checks": 23,
+      "state": "PASSED",
+      "total_checks": 23
+    },
+    "runtime_architecture": {
+      "passed_checks": 40,
+      "total_checks": 40
+    },
+    "runtime_focused_regression": {
+      "passed": 104,
+      "total": 104
+    },
+    "runtime_full_suite": {
+      "collected_test_files": 243,
+      "covered_test_files": 243,
+      "partitions": 8,
+      "passed_tests": 1006
+    },
+    "workspace_acceptance": {
+      "passed_checks": 21,
+      "state": "PASSED",
+      "total_checks": 21
+    },
+    "workspace_unit_tests": {
+      "evidence": "docs/evidence/WORKSPACE_STEP008_UNIT_TESTS.txt",
+      "passed": 89,
+      "total": 89
+    }
+  },
+  "version": "0.8.0"
+}

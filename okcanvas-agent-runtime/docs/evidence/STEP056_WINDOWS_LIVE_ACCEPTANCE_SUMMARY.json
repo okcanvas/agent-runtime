@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-step056-windows-live-acceptance-summary-v1",
+  "step_id": "STEP056_TUI_CLIENT_FOUNDATION",
+  "version": "2.36.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-31T07:43:23.121665Z",
+  "checks_passed": 21,
+  "checks_total": 21,
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "submissions": 2,
+    "invocations": 1,
+    "events": 10,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "gateway_call_count": 1,
+  "protected_payload_file_count": 1,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1,
+  "references_unchanged": true,
+  "note": "Technical single-run Control API/SSE smoke was accepted. Product usability feedback then required STEP056B Node.js/TypeScript persistent CLI correction."
+}

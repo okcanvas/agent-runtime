@@ -1,0 +1,16 @@
+{
+  "git_repository_policy_static_validated": true,
+  "object_storage_live_accepted": false,
+  "promotion": "NOT_READY",
+  "reason_not_ready": [
+    "CURRENT_R7A1_TESTS_NOT_EXECUTED",
+    "MINIO_OBJECT_STORAGE_LIVE_DEFERRED_BY_USER"
+  ],
+  "runtime_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.75.0",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "IMPLEMENTED_STATIC_VALIDATED_TEST_EXECUTION_DEFERRED_BY_USER_MINIO_PENDING",
+  "test_execution": "DEFERRED_BY_USER_UNTIL_MINIO_READY",
+  "workspace_step": "WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING",
+  "workspace_version": "0.8.4-r7a1"
+}

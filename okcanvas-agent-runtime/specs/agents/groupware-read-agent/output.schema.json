@@ -1,0 +1,121 @@
+{
+  "$defs": {
+    "GroupwareReadCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "reference": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference"
+        },
+        "source_type": {
+          "const": "ENTERPRISE_SYSTEM",
+          "default": "ENTERPRISE_SYSTEM",
+          "title": "Source Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "title": "GroupwareReadCitation",
+      "type": "object"
+    },
+    "GroupwareReadStatus": {
+      "enum": [
+        "ANSWERED",
+        "NEEDS_CAPABILITY",
+        "REFUSED"
+      ],
+      "title": "GroupwareReadStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Strict final output for the permanently read-only Groupware sub-agent.\n\nThe contract intentionally has no action, approval, mutation, or automation fields.  It is\nnarrower than ``OrganizationAssistantResult`` so a model cannot validate a write-shaped\nresponse merely because the instructions asked it not to.",
+  "properties": {
+    "answer": {
+      "maxLength": 8000,
+      "minLength": 1,
+      "title": "Answer",
+      "type": "string"
+    },
+    "citations": {
+      "items": {
+        "$ref": "#/$defs/GroupwareReadCitation"
+      },
+      "maxItems": 30,
+      "title": "Citations",
+      "type": "array"
+    },
+    "queried_operations": {
+      "items": {
+        "enum": [
+          "search_notices",
+          "search_mail",
+          "list_calendar_events"
+        ],
+        "type": "string"
+      },
+      "maxItems": 3,
+      "title": "Queried Operations",
+      "type": "array"
+    },
+    "request_class": {
+      "const": "READ_SYSTEM",
+      "default": "READ_SYSTEM",
+      "title": "Request Class",
+      "type": "string"
+    },
+    "result_count": {
+      "default": 0,
+      "maximum": 50,
+      "minimum": 0,
+      "title": "Result Count",
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "okcanvas-groupware-read-result-v1",
+      "default": "okcanvas-groupware-read-result-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "side_effect": {
+      "const": "READ",
+      "default": "READ",
+      "title": "Side Effect",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/GroupwareReadStatus"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "answer"
+  ],
+  "title": "GroupwareReadResult",
+  "type": "object"
+}

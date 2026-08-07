@@ -1,0 +1,51 @@
+{
+  "schema_version": "okcanvas-step072-windows-acceptance-summary-v1",
+  "step": "STEP072_IMMUTABLE_OPENAI_TRACE_EXPORT_DISABLED_V1",
+  "version": "2.52.0",
+  "reported_date": "2026-08-01",
+  "deterministic": {
+    "state": "FAILED",
+    "passed_checks": 28,
+    "total_checks": 29,
+    "failed_checks": [
+      "historical_skill_attachment_service_tests_pass"
+    ],
+    "focused_tests": {
+      "passed": 28,
+      "warning_count": 1
+    },
+    "historical_tests": {
+      "passed": 40,
+      "failed": 1,
+      "failure": "test_service_skill_catalog_and_agent_binding_are_public_metadata_only returned the stale STEP071 next_selected_step value while the STEP072 source and policy expected STEP072"
+    },
+    "external_network_calls": 0,
+    "model_calls": 0
+  },
+  "live": {
+    "state": "PASSED",
+    "passed_checks": 13,
+    "total_checks": 13,
+    "model": "gpt-4.1",
+    "model_calls": 1,
+    "usage": {
+      "input_tokens": 827,
+      "output_tokens": 228,
+      "total_tokens": 1055
+    },
+    "terminal_status": "SUCCEEDED",
+    "run_id": "run_4738b0218fed4fb883aa82fbb52068c1",
+    "trace_error_markers": [],
+    "sdk_trace_export_observed": false,
+    "provider_trace_export_diagnostic_absent": true,
+    "api_key_persisted": false,
+    "raw_attachment_persisted": false,
+    "workspace_cleanup_state": "COMPLETED"
+  },
+  "closure": "TRACE_EXPORT_BEHAVIOR_WINDOWS_LIVE_ACCEPTED_PACKAGE_BASELINE_NOT_ACCEPTED",
+  "notes": [
+    "The actual OpenAI workflow succeeded and the STEP071 trailing tracing 400 was absent.",
+    "STEP072 cannot be closed because its deterministic acceptance returned FAILED.",
+    "The corrective baseline must prevent stale Python bytecode from surviving a source ZIP overlay."
+  ]
+}

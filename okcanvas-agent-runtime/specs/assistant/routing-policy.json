@@ -1,0 +1,352 @@
+{
+  "capabilities": [
+    {
+      "availability": "AVAILABLE",
+      "capability_id": "general-assistant-v1",
+      "selected_agent_id": "organization-assistant-agent",
+      "side_effect": "NONE"
+    },
+    {
+      "availability": "AVAILABLE",
+      "capability_id": "content-drafting-v1",
+      "selected_agent_id": "organization-assistant-agent",
+      "side_effect": "DRAFT"
+    },
+    {
+      "availability": "AVAILABLE",
+      "capability_id": "public-web-search-v1",
+      "selected_agent_id": "hosted-web-search-agent",
+      "side_effect": "READ"
+    },
+    {
+      "availability": "AVAILABLE",
+      "capability_id": "local-document-review-v1",
+      "selected_agent_id": "local-document-review-agent",
+      "side_effect": "READ"
+    },
+    {
+      "availability": "AVAILABLE",
+      "capability_id": "repository-readonly-analysis-v1",
+      "selected_agent_id": "sandbox-readonly-coding-agent",
+      "side_effect": "READ"
+    },
+    {
+      "availability": "AVAILABLE",
+      "capability_id": "organization-knowledge-read-v1",
+      "selected_agent_id": "organization-assistant-agent",
+      "side_effect": "READ"
+    },
+    {
+      "availability": "NOT_CONFIGURED",
+      "capability_id": "organization-context-read-v1",
+      "selected_agent_id": null,
+      "side_effect": "READ"
+    },
+    {
+      "availability": "NOT_CONFIGURED",
+      "capability_id": "groupware-read-v1",
+      "selected_agent_id": null,
+      "side_effect": "READ"
+    },
+    {
+      "availability": "NOT_CONFIGURED",
+      "capability_id": "enterprise-system-read-v1",
+      "selected_agent_id": null,
+      "side_effect": "READ"
+    },
+    {
+      "availability": "NOT_CONFIGURED",
+      "capability_id": "enterprise-action-draft-v1",
+      "selected_agent_id": null,
+      "side_effect": "DRAFT"
+    },
+    {
+      "availability": "NOT_CONFIGURED",
+      "capability_id": "enterprise-action-write-v1",
+      "selected_agent_id": null,
+      "side_effect": "WRITE_IRREVERSIBLE"
+    },
+    {
+      "availability": "NOT_CONFIGURED",
+      "capability_id": "durable-automation-v1",
+      "selected_agent_id": null,
+      "side_effect": "AUTOMATION_DEFINITION"
+    }
+  ],
+  "default_agent_id": "organization-assistant-agent",
+  "lexicons": {
+    "automation": [
+      "매일",
+      "매주",
+      "매월",
+      "정기적으로",
+      "마다",
+      "예약",
+      "자동화",
+      "조건이 되면",
+      "when ",
+      "every ",
+      "schedule",
+      "cron",
+      "rrule"
+    ],
+    "code": [
+      "코드",
+      "함수",
+      "클래스",
+      "리포지토리",
+      "저장소",
+      "버그",
+      "컴파일",
+      "repository",
+      "source code",
+      "function",
+      "class ",
+      "bug",
+      "stack trace"
+    ],
+    "content_draft": [
+      "작성해줘",
+      "써줘",
+      "요약해줘",
+      "번역해줘",
+      "초안을 만들어",
+      "보고서",
+      "문서 작성",
+      "write ",
+      "draft ",
+      "summarize",
+      "translate"
+    ],
+    "draft_action": [
+      "초안",
+      "미리보기",
+      "draft",
+      "작성안"
+    ],
+    "enterprise_system": [
+      "erp",
+      "ess",
+      "groupware",
+      "그룹웨어",
+      "전자결재",
+      "결재",
+      "휴가",
+      "근태",
+      "급여",
+      "전표",
+      "예산",
+      "재고",
+      "발주",
+      "구매",
+      "메일",
+      "일정",
+      "공지",
+      "업무요청",
+      "인사정보",
+      "반차",
+      "연차"
+    ],
+    "enterprise_transaction": [
+      "휴가",
+      "반차",
+      "연차",
+      "근태",
+      "급여",
+      "전표",
+      "예산",
+      "재고",
+      "발주",
+      "구매",
+      "전자결재",
+      "결재",
+      "인사정보"
+    ],
+    "external_refresh": [
+      "다시 조회",
+      "재조회",
+      "새로 확인",
+      "다시 검색",
+      "최신으로",
+      "refresh",
+      "re-fetch",
+      "search again",
+      "check again"
+    ],
+    "groupware": [
+      "groupware",
+      "그룹웨어",
+      "메일",
+      "일정",
+      "공지",
+      "업무요청",
+      "calendar",
+      "mailbox",
+      "notice"
+    ],
+    "organization": [
+      "우리 회사",
+      "회사에서",
+      "사내",
+      "조직에서",
+      "조직 용어",
+      "사내 규정",
+      "회사 규정",
+      "정책",
+      "약어",
+      "무슨 뜻",
+      "조직 문맥",
+      "조직문맥",
+      "조직 정보",
+      "조직정보",
+      "부서",
+      "직책",
+      "직급",
+      "사원",
+      "임직원",
+      "제품",
+      "거래처",
+      "고객사",
+      "프로젝트",
+      "client",
+      "employee",
+      "department",
+      "position",
+      "product",
+      "organization context"
+    ],
+    "read_action": [
+      "조회",
+      "확인",
+      "보여",
+      "알려",
+      "잔여",
+      "현황",
+      "목록",
+      "몇",
+      "list ",
+      "show ",
+      "find ",
+      "check ",
+      "balance",
+      "status"
+    ],
+    "session_reference": [
+      "앞선 답변",
+      "앞의 답변",
+      "이전 답변",
+      "방금 답변",
+      "위 답변",
+      "앞에서 확인한",
+      "앞서 확인한",
+      "previous answer",
+      "earlier answer",
+      "last answer"
+    ],
+    "session_restatement": [
+      "그대로 다시",
+      "다시 말",
+      "반복해",
+      "제목만",
+      "요약해서 다시",
+      "repeat",
+      "say again",
+      "same title"
+    ],
+    "web": [
+      "웹에서",
+      "인터넷에서",
+      "최신",
+      "오늘",
+      "뉴스",
+      "web search",
+      "internet",
+      "latest",
+      "news"
+    ],
+    "write_action": [
+      "신청해",
+      "제출해",
+      "상신해",
+      "발송해",
+      "보내줘",
+      "게시해",
+      "등록해",
+      "변경해",
+      "취소해",
+      "승인해",
+      "submit",
+      "send ",
+      "publish",
+      "post ",
+      "create ",
+      "update ",
+      "cancel"
+    ]
+  },
+  "organization_context_short_read_rules": [
+    {
+      "entity_type_hints": [],
+      "intent": "ENTITY_DETAIL_LOOKUP",
+      "max_target_chars": 64,
+      "min_target_chars": 1,
+      "pattern_id": "organization-context-entity-detail-short-v1",
+      "preferred_operation": "RESOLVE",
+      "requested_fields": [
+        "DETAIL"
+      ],
+      "suffixes": [
+        " 정보"
+      ]
+    },
+    {
+      "entity_type_hints": [],
+      "intent": "ENTITY_FIELD_LOOKUP",
+      "max_target_chars": 64,
+      "min_target_chars": 1,
+      "pattern_id": "organization-context-contact-field-short-v1",
+      "preferred_operation": "RESOLVE",
+      "requested_fields": [
+        "CONTACT"
+      ],
+      "suffixes": [
+        " 연락처"
+      ]
+    },
+    {
+      "entity_type_hints": [],
+      "intent": "ENTITY_FIELD_LOOKUP",
+      "max_target_chars": 64,
+      "min_target_chars": 1,
+      "pattern_id": "organization-context-position-field-short-v1",
+      "preferred_operation": "RESOLVE",
+      "requested_fields": [
+        "POSITION"
+      ],
+      "suffixes": [
+        " 직책"
+      ]
+    },
+    {
+      "entity_type_hints": [
+        "POSITION",
+        "EMPLOYEE"
+      ],
+      "intent": "ENTITY_LIST_BY_POSITION",
+      "max_target_chars": 32,
+      "min_target_chars": 1,
+      "pattern_id": "organization-context-position-members-short-v1",
+      "preferred_operation": "SEARCH",
+      "requested_fields": [
+        "MEMBERS"
+      ],
+      "suffixes": [
+        "들 목록"
+      ]
+    }
+  ],
+  "policy_id": "organization-assistant-routing-v1",
+  "schema_version": "okcanvas-organization-assistant-routing-policy-v1",
+  "session_agent_id": "organization-assistant-session-agent",
+  "version": "1.5.0"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-16",
+  "partition_number": 16,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:10:42.403692+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 87,
+  "passed_tests": 87,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 31.844,
+  "exit_code": 0,
+  "files_sha256": "8c3e57be91c0d7a5b7c9631689f8684217e4e815199ddc78bd4a77ad3e8371e3",
+  "log_sha256": "b7b94fa3186b09b4e86e957de38a6a193ade3cd6342bb9872c08d28d78d5387c",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+    "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py",
+    "tests/test_step081_direct_script_bootstrap.py",
+    "tests/test_step081_root_package_and_architecture_restructuring.py",
+    "tests/test_step081_windows_entrypoint_and_launcher_registry.py",
+    "tests/test_step081a_windows_npm_command_resolution_and_subprocess_portability.py",
+    "tests/test_step081b_live_architecture_validator_isolation.py",
+    "tests/test_step081c_windows_deterministic_architecture_diagnostics_and_topology_normalization.py",
+    "tests/test_step081d_windows_source_identity_router_registration_and_workspace_residue.py",
+    "tests/test_step082b_coding_execution_plane_and_distribution_boundary.py",
+    "tests/test_step083_organization_assistant_main_agent_and_action_routing.py",
+    "tests/test_step084_organization_knowledge_glossary_and_directory_foundation.py",
+    "tests/test_step085_multi_mcp_and_delegated_identity_foundation.py",
+    "tests/test_step086_groupware_read_only_vertical.py"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "architecture": "40/40",
+  "distribution": "14/14",
+  "execution_plane": "13/13",
+  "focused_regression": "107/107",
+  "launcher_registry": "7/7",
+  "live_openai_model_called": false,
+  "passed_checks": 18,
+  "schema_version": "okcanvas-step087r2-deterministic-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "STEP087R2_SESSION_REFERENTIAL_RESTATEMENT_ROUTING_CLOSURE",
+  "total_checks": 18,
+  "version": "2.67.2",
+  "windows_step087r2_executed": false
+}

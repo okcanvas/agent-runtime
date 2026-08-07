@@ -1,0 +1,76 @@
+{
+  "deterministic": {
+    "completed_at": "2026-08-05T05:40:15.027223Z",
+    "execution_platform": "windows",
+    "passed_checks": 34,
+    "state": "PASSED",
+    "total_checks": 34,
+    "workspace_manifest_drift": {
+      "changed": [],
+      "missing": [],
+      "unexpected": []
+    }
+  },
+  "live": {
+    "checks": {
+      "actual_connector_and_node_example_reached": true,
+      "actual_openai_model_events_observed": true,
+      "both_runtime_runs_succeeded": true,
+      "child_mcp_called_once_first_turn": true,
+      "cli_completed_two_prompts": true,
+      "command_bearer_redacted": true,
+      "configured_model_used": true,
+      "continuation_skipped_child_and_mcp": true,
+      "delegated_identity_forwarded": true,
+      "enterprise_citation_persisted": true,
+      "environment_file_loaded": true,
+      "explicit_live_gate": true,
+      "groupware_api_bearer_redacted": true,
+      "harness_cleanup_completed": true,
+      "model_loaded_from_environment_file": true,
+      "model_name_safe": true,
+      "openai_key_loaded_from_environment_file": true,
+      "provider_identifiers_not_persisted": true,
+      "response_storage_and_trace_export_remain_disabled": true,
+      "root_agent_tool_called_once_first_turn": true,
+      "root_session_continuity_committed": true,
+      "secrets_absent_from_evidence": true
+    },
+    "completed_at": "2026-08-05T05:41:59.127869Z",
+    "environment": {
+      "model": "gpt-4.1",
+      "openai_api_key_present": true,
+      "secret_values_persisted": false,
+      "source_name": ".env.local"
+    },
+    "execution_platform": "windows",
+    "limitations": {
+      "actual_connector_process_executed": true,
+      "actual_node_example_process_executed": true,
+      "actual_openai_model_called": true,
+      "real_enterprise_groupware_provider_called": false
+    },
+    "passed_checks": 22,
+    "runtime": {
+      "first_turn_invocation_count": 2,
+      "first_turn_model_request_count": 4,
+      "run_ids": [
+        "run_9acd9a34ba9b4494936ee8b2eed7d79c",
+        "run_6c989b4d21e1447890428128adee8557"
+      ],
+      "second_turn_invocation_count": 1,
+      "second_turn_model_request_count": 1,
+      "session_id": "session_f8b571808dd6449b93106bdde8b7a69c"
+    },
+    "state": "PASSED",
+    "total_checks": 22
+  },
+  "promotion": {
+    "official_workspace_baseline": true,
+    "supersedes": "WORKSPACE_STEP003R2 / 0.3.2"
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-step004r2-windows-live-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP004R2_LIVE_GROUPWARE_FAKE_CREDENTIAL_SESSION_CONTINUATION_AND_JSON_STDOUT_CLOSURE",
+  "version": "0.4.2"
+}

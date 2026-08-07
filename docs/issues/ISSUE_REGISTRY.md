@@ -1,0 +1,53 @@
+# Workspace Engineering Issue Registry
+
+Every repeatable Workspace integration, portability, evidence, packaging, or boundary failure is retained in a detailed issue document. Historical duplicate `WORKSPACE-ISSUE-008` identifiers are preserved exactly; new issues continue at 011.
+
+| ID | Status | STEP | Summary | Recurrence gate |
+|---|---|---|---|---|
+| WORKSPACE-ISSUE-001 | FIXED | STEP001 | Nested project ownership was ambiguous. | Parent project file manifests and sibling boundary tests |
+| WORKSPACE-ISSUE-002 | FIXED | STEP001 | Product CLI and development harness were conflated. | Independent Product CLI project and boundary contract |
+| WORKSPACE-ISSUE-003 | FIXED | STEP001 | Connector integration evidence retained a stale Example STEP ID. | Exact retained Example STEP assertion |
+| WORKSPACE-ISSUE-004 | FIXED | STEP001R1 | Windows `npm.cmd` was not resolved. | Windows executable resolution tests |
+| WORKSPACE-ISSUE-005 | FIXED | STEP001R1 | Workspace launcher ran from a Product root. | Workspace root guards |
+| WORKSPACE-ISSUE-006 | FIXED | STEP001R1 | Mutable acceptance evidence broke deterministic repack. | Mutable evidence exclusion set |
+| WORKSPACE-ISSUE-007 | FIXED | STEP001R2 | Windows subprocess output assumed CP949 text mode. | Byte capture with UTF-8-first decoding |
+| WORKSPACE-ISSUE-008A | FIXED | STEP001R3 | Local environment files were treated as parent source drift. | Local environment exclusion tests |
+| WORKSPACE-ISSUE-008B | FIXED | STEP002 | Product Service CLI was foundation-only. | Product-ready CLI acceptance |
+| WORKSPACE-ISSUE-009 | FIXED | STEP002 | unittest discovery did not fix Workspace top-level. | `-t .` discovery regression |
+| WORKSPACE-ISSUE-010 | FIXED | STEP002R1 | CLI acceptance split a Node path containing spaces. | argv-based Node test runner regression |
+| WORKSPACE-ISSUE-011 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_PENDING | STEP003 | Workspace integration catalog still marked the accepted Service CLI→Runtime contract unimplemented and had no explicit Main Assistant→Groupware child contract. | Exact catalog and integration-contract tests |
+| WORKSPACE-ISSUE-012 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_PENDING | STEP003 | First E2E evidence retained the raw CLI bearer in the persisted command argv. | Evidence command redaction and secret scan |
+| WORKSPACE-ISSUE-013 | WINDOWS_DETERMINISTIC_ACCEPTED_STEP004_RECURRENCE_CLOSED_LOCAL | STEP003 / STEP004 | Integrated runners redundantly nested full Runtime acceptance and became unbounded by composition. | Exact retained Runtime evidence validation and tests forbidding nested Runtime acceptance invocation |
+| WORKSPACE-ISSUE-014 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING | STEP003R1 | Redirected Windows CP949 parent stdout could not encode U+2714 in the final aggregate JSON. | Shared console-safe JSON writer, CP949 round-trip tests and redirected full acceptance |
+| WORKSPACE-ISSUE-015 | WINDOWS_DETERMINISTIC_ACCEPTED | STEP003R2 | Workspace orchestrator reused bootstrap Python instead of project-owned `.venv` interpreters. | Project Python resolution and exact interpreter evidence |
+| WORKSPACE-ISSUE-016 | WINDOWS_DETERMINISTIC_ACCEPTED | STEP003R2 | Root redirected acceptance log contaminated Workspace identity and produced unbounded drift output. | Root-local log exclusion and bounded manifest drift |
+| WORKSPACE-ISSUE-017 | WINDOWS_DETERMINISTIC_ACCEPTED | STEP003R2 | Real Windows execution was reported as not executed. | Platform-derived executed/accepted evidence |
+| WORKSPACE-ISSUE-018 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING | STEP004 | Live OpenAI acceptance lacked official environment-file provenance and secret-safe evidence. | Exact loader provenance, secret scan and Live full-process E2E |
+| WORKSPACE-ISSUE-019 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING | STEP004 | Deterministic Agent-as-Tool mocks bypassed the actual SDK turn loop and hid an insufficient Root turn budget. | Runtime STEP087R1 turn-budget tests and STEP004 Live E2E |
+| WORKSPACE-ISSUE-020 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING | STEP004R1 | Windows Live temporary tree was deleted before Runtime, Connector and Node shutdown; built-in PermissionError was misclassified as OpenAI permission. | Shutdown-before-removal, failure-stage and cleanup-separation tests |
+| WORKSPACE-ISSUE-021 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING | STEP004R1 | Workspace launchers bypassed the existing Python bytecode isolation boundary. | Workspace PYTHONPYCACHEPREFIX wrapper and stale-pyc reproducer |
+
+| WORKSPACE-ISSUE-022 | WINDOWS_LIVE_ACCEPTED | STEP004R2 | Live harness randomized token did not match Node Fake. | STEP004R2 source and acceptance gates |
+
+| WORKSPACE-ISSUE-023 | WINDOWS_LIVE_ACCEPTED | STEP004R2 | Live Session continuity check assumed mock item count. | STEP004R2 source and acceptance gates |
+
+| WORKSPACE-ISSUE-024 | WINDOWS_LIVE_ACCEPTED | STEP004R2 | Live stdout JSON was followed by environment info. | STEP004R2 source and acceptance gates |
+
+| WORKSPACE-ISSUE-025 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_PENDING | STEP005 | Static Organization Context JSON cannot serve frequent CRUD without restarts or ownership drift. | External API Example, read-only Connector, revision/change/CAS/tombstone gates, Runtime wiring explicitly deferred |
+| WORKSPACE-ISSUE-026 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING | STEP005R1 | Organization Context created a second integration harness instead of reusing the Windows-live accepted Groupware Workspace E2E pattern. | Exact Groupware-pattern E2E runner and executable-resolution assertions |
+| WORKSPACE-ISSUE-027 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING | STEP005R1 | Full temporary repository paths plus `PYTHONPYCACHEPREFIX` exceeded the effective Windows compileall path boundary. | Short `c/` and `e/` execution copies; standard compileall retained; bespoke compiler forbidden |
+| WORKSPACE-ISSUE-028 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_PENDING | STEP007 | Organization Context required a dedicated Session Root rather than reusing the general Root. | Dedicated Root/Child definition and delegation policy tests |
+| WORKSPACE-ISSUE-029 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING | STEP007R1 | Exact Organization Context resolve exceeded the 32,000-character MCP result budget. | Bounded resolve/search/get shapes and safe MCP failure diagnostics |
+| WORKSPACE-ISSUE-030 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_PENDING | STEP008 | Short organization expressions bypassed the existing read boundary before Agent execution. | Strict short-read routing and negative-admission tests |
+| WORKSPACE-ISSUE-031 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_PENDING | STEP008 | Runtime package identity drift was not checked by current acceptance. | Direct package STEP and archive basename gate in STEP089 acceptance |
+| WORKSPACE-ISSUE-032 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_PENDING | STEP008 | Employee scalar facts conflicted with relation fixtures. | Scalar/relation equality validator and exact relation count |
+| WORKSPACE-ISSUE-033 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTANCE_PENDING_WINDOWS_LIVE_RERUN_PENDING | STEP008R1 | STEP008 had deterministic short-expression routing but no current-step Windows Live OpenAI harness. | Exact four-prompt Live route/model/Agent/MCP/Connector gate |
+| WORKSPACE-ISSUE-034 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING | STEP008R2 | Ambiguous same-name Organization Context results completed MCP resolve but failed SDK/Pydantic structured output handling. | Runtime STEP090 normalization/diagnostics and STEP008R2 four-prompt Windows Live acceptance |
+| WORKSPACE-ISSUE-035 | FIX_IMPLEMENTED_LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING | STEP008R3 | STEP008R2 Live completed all four MCP calls but normalizer rejected the actual SDK text ToolOutput shape; the list prompt also selected resolve instead of search. | Runtime STEP090R1 protocol adapter/named Tool choice and STEP008R3 four-prompt Live acceptance |
+| WORKSPACE-ISSUE-036 | WINDOWS_LIVE_ACCEPTED | STEP008R4 | STEP008R3 functionally passed but the harness rejected valid empty-result wording and post-compaction Session item count. | Structured empty-result evidence and committed-turn event assertions |
+| WORKSPACE-ISSUE-037 | LOCAL_AND_FRESH_DETERMINISTIC_ACCEPTED | STEP008R4R1 | Current README and nested Runtime HANDOFF lagged the promoted STEP008R4/STEP090R1 state. | Exact current-document and Product-source-unchanged tests |
+| WORKSPACE-ISSUE-038 | LIVE_GATE_INTEGRATED_LOCAL_VALIDATION_IN_PROGRESS_REAL_POSTGRESQL_PENDING | STEP008R4R6 | Workspace had deterministic PostgreSQL metadata adapters but no current contract or launcher boundary for a real PostgreSQL isolated-schema acceptance run. | Runtime STEP091B3R1 gate, Workspace current contract, deterministic/Fresh/Windows PostgreSQL-live promotion sequence |
+| WORKSPACE-ISSUE-039 | WINDOWS_LIVE_ACCEPTED_RECURRENCE_RECORDED | STEP008R4R6 | Duplicate `OKCANVAS_CODEX_MODEL` in `.env.local` blocked Live preflight before Product execution. | Fail-fast duplicate-key parser; inspect local env before Product changes; never persist `.env.local` |
+| WORKSPACE-ISSUE-040 | FIX_IMPLEMENTED_TEST_EXECUTION_DEFERRED_BY_USER | STEP008R4R7A | Runtime PLANS SOT drift plus concatenated current-document gate allowed stale nested current state to pass. | `specs/workspace/current-baseline.json`, per-file validator, deliberate stale nested-plan regression; close only after deferred deterministic tests run |
+| WORKSPACE-ISSUE-041 | FIX_IMPLEMENTED_STATIC_VALIDATED_TEST_EXECUTION_DEFERRED_BY_USER | STEP008R4R7A1 | Nested Runtime `.gitignore` recursively ignored the accepted `clients/cli/dist/` source artifact in a fresh repository. | Fresh-repository `git check-ignore --no-index` sentinel plus explicit Runtime dist negation |
+| WORKSPACE-ISSUE-042 | FIX_IMPLEMENTED_STATIC_VALIDATED_TEST_EXECUTION_DEFERRED_BY_USER | STEP008R4R7A1 | Unanchored Runtime `artifacts/` and Workspace `.vscode/` ignore rules hid eight Product Artifact source files and two retained upstream files in a fresh repository. | Root-anchored local-directory rules plus full-tree existing-ignored-file scan |

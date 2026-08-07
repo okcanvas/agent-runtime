@@ -1,0 +1,83 @@
+{
+  "bound_servers": [
+    {
+      "circuit_breaker_failure_threshold": 2,
+      "circuit_breaker_reset_seconds": 30.0,
+      "credential_ref": "shared-read-credential",
+      "delegation_id": "delegation_429a6b71b58ce920b12778289c571baf",
+      "health_mode": "passive",
+      "required_roles": [
+        "agent-user"
+      ],
+      "server_id": "enterprise-read-1",
+      "url": "https://enterprise-read-1.example.invalid/tenants/tenant-a/mcp"
+    },
+    {
+      "circuit_breaker_failure_threshold": 2,
+      "circuit_breaker_reset_seconds": 30.0,
+      "credential_ref": "shared-read-credential",
+      "delegation_id": "delegation_429a6b71b58ce920b12778289c571baf",
+      "health_mode": "passive",
+      "required_roles": [
+        "agent-user"
+      ],
+      "server_id": "enterprise-read-2",
+      "url": "https://enterprise-read-2.example.invalid/tenants/tenant-a/mcp"
+    }
+  ],
+  "checks": {
+    "credential_values_never_public": true,
+    "default_credentials_empty": true,
+    "delegated_headers_exact": true,
+    "delegated_identity_protected_roundtrip": true,
+    "external_endpoints_not_configured": true,
+    "identity_exact": true,
+    "identity_fingerprint_deterministic": true,
+    "mcp_write_remains_disabled": true,
+    "missing_identity_fails_closed": true,
+    "missing_role_fails_closed": true,
+    "next_step_exact": true,
+    "oauth_refresh_not_claimed": true,
+    "passive_circuit_opens": true,
+    "protected_payload_schema_v6": true,
+    "remote_count_bounded": true,
+    "runtime_binding_execution_path_exact": true,
+    "runtime_binding_has_no_secret_values": true,
+    "runtime_binding_has_two_servers": true,
+    "runtime_info_foundation_exact": true,
+    "tenant_endpoint_binding_exact": true,
+    "tool_search_remains_disabled": true,
+    "v3_multi_remote_resolved": true
+  },
+  "default_access_catalog": {
+    "credential_references": [],
+    "credential_values_exposed": false,
+    "policy": {
+      "circuit_breaker_state_scope": "process-local-server-id",
+      "delegated_headers": [
+        "X-OKCanvas-Delegation-ID",
+        "X-OKCanvas-Principal-ID",
+        "X-OKCanvas-Tenant-ID"
+      ],
+      "endpoint_mode": "tenant-template",
+      "health_mode": "passive",
+      "max_remote_servers_per_agent": 4,
+      "policy_id": "multi-mcp-delegated-identity-v1",
+      "policy_sha256": "d6da3de3e9c8acb828408e193c512aab2e0fadb51a0df8072cfefdc619797e52",
+      "schema_version": "okcanvas-mcp-access-policy-v1",
+      "version": "1.0.0"
+    },
+    "schema_version": "okcanvas-mcp-access-catalog-v1"
+  },
+  "passed_checks": 22,
+  "runtime_binding": {
+    "execution_path": "multi-remote-mcp-delegated-identity-execution-v1",
+    "mcp_server_count": 2,
+    "runtime_binding_sha256": "234edc413203d277be0012930edaca36f54b2afb8ef908b7301b2e173f7f9d8f"
+  },
+  "schema_version": "okcanvas-step085-multi-mcp-delegated-identity-validation-v1",
+  "state": "PASSED",
+  "step": "STEP085_MULTI_MCP_AND_DELEGATED_IDENTITY_FOUNDATION",
+  "total_checks": 22,
+  "version": "2.65.0"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "okcanvas-step049-windows-live-acceptance-failure-summary-v1",
+  "step_id": "STEP049",
+  "reported_state": "FAILED",
+  "state_before_workspace_cleanup": "PASSED",
+  "functional_checks_passed": 32,
+  "functional_checks_total": 32,
+  "cleanup_check": false,
+  "session": {
+    "after_turn_1": {
+      "turn_count": 1,
+      "item_count": 4
+    },
+    "after_turn_2": {
+      "turn_count": 2,
+      "item_count": 8
+    },
+    "history_item_count": 8
+  },
+  "gateway_counts": {
+    "run": 0,
+    "outer_run_streamed": 2,
+    "nested_run_streamed": 2,
+    "as_tool_constructed": 2,
+    "agent_tool_invoked": 2,
+    "session_instances": 4,
+    "session_closes": 4
+  },
+  "final_counts": {
+    "tasks": 2,
+    "runs": 2,
+    "submissions": 2,
+    "invocations": 4,
+    "events": 40,
+    "artifacts": 2,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 0,
+  "evaluation_state": "PASSED",
+  "acceptance_workspace": {
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "acceptance_id": "20260730T223914372883Z-b4df49ff",
+    "step_id": "STEP049",
+    "created_at": "2026-07-30T22:39:14.377003Z",
+    "completed_at": "2026-07-30T22:39:20.042940Z",
+    "resources_closed": true,
+    "resource_close_results": [],
+    "compact_evidence_exported": true,
+    "cleanup_state": "PRESERVED",
+    "cleanup_attempts": 3,
+    "preserved_path": "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-agent-runtime-acceptance\\step049\\20260730T223914372883Z-b4df49ff",
+    "cleanup_error": "PermissionError: [WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\okcanvas-agent-runtime-acceptance\\\\step049\\\\20260730T223914372883Z-b4df49ff\\\\scratch\\\\sessions\\\\history.sqlite3'",
+    "product_runtime_state": false
+  },
+  "diagnosis": {
+    "category": "ACCEPTANCE_HARNESS_RESOURCE_LEAK",
+    "file": "scripts/run_step049_acceptance.py",
+    "cause": "The direct history verification used `with sqlite3.connect(...)`, whose context manager commits or rolls back but does not close the Connection. Windows therefore kept history.sqlite3 open during AcceptanceWorkspace cleanup.",
+    "product_runtime_failure": false,
+    "correction": "Use a dedicated `_history_count(...)` helper with `connection.close()` in a finally block and add a regression test that proves close is called.",
+    "windows_live_accepted": false,
+    "rerun_required": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "local-text-metrics-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Local Text Metrics Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [
+    "local_text_metrics"
+  ],
+  "mcp_servers": [],
+  "handoffs": [],
+  "max_turns": 3,
+  "workflow_name": "OKCanvas Governed Local Tool Approval",
+  "session_mode": "disabled"
+}

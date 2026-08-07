@@ -1,0 +1,11 @@
+{
+  "schema_version": "okcanvas-guardrail-definition-v1",
+  "guardrail_id": "block-output-marker",
+  "version": "1.0.0",
+  "kind": "OUTPUT",
+  "implementation_id": "output_marker_block_v1",
+  "marker": "BLOCK_OUTPUT",
+  "tool_id": null,
+  "run_in_parallel": false,
+  "behavior": "RAISE_EXCEPTION"
+}

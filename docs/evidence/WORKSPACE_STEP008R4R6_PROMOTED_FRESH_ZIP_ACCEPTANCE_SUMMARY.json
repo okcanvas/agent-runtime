@@ -1,0 +1,51 @@
+{
+  "candidate_archive_sha256": "fa97ed6154685bb754e33bcd56f0adddd27b9fc0f01e2ff8f83342d8d3b524c1",
+  "candidate_manifest_expected": 4648,
+  "candidate_package_files": 4649,
+  "fresh_connector_acceptance": {
+    "passed": 11,
+    "state": "PASSED",
+    "total": 11
+  },
+  "fresh_connector_example": {
+    "passed": 17,
+    "state": "PASSED",
+    "total": 17
+  },
+  "fresh_example_acceptance": {
+    "passed": 19,
+    "state": "PASSED",
+    "total": 19
+  },
+  "fresh_runtime_acceptance": {
+    "passed": 21,
+    "state": "PASSED",
+    "total": 21
+  },
+  "fresh_workspace_acceptance": {
+    "passed": 33,
+    "state": "PASSED",
+    "total": 33
+  },
+  "fresh_workspace_manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "fresh_workspace_tests": {
+    "passed": 131,
+    "state": "PASSED",
+    "total": 131
+  },
+  "note": "This summary is retained before final repack; release packaging repeats the same Fresh gates and ships only if they remain exact.",
+  "product_runtime_python_digest": "21bc49fecd26bc4bce78afb616567def95dfd255c3e001ed09e2ca36883216d0",
+  "product_runtime_python_files": 347,
+  "product_runtime_python_source_unchanged": true,
+  "promotion": "CURRENT_PROMOTED_BASELINE",
+  "runtime_step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.74.1",
+  "schema_version": "okcanvas-workspace-step008r4r6-promoted-fresh-zip-acceptance-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP008R4R6_RUNTIME_STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "version": "0.8.4-r6"
+}

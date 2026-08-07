@@ -1,0 +1,59 @@
+STEP047_SQLITE_SESSION_NATIVE_HANDOFF_COMPOSITION_V1
+VERSION 2.27.0
+STATE IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+STEP046 WINDOWS CLOSURE
+- user command: sh_run_step046_acceptance
+- state: PASSED
+- checks: 27/27
+- cleanup: COMPLETED
+- prepare/resume: 2/2
+- SQLiteSession instances/closes: 10/10
+- Session transitions: 0/0 -> 0/2 -> 1/4 -> 1/6 -> 2/8
+- Tool executions approve/reject: 1/0
+- final Task/Run/Submission/Invocation/Event/Artifact/Approval/Evaluation: 2/2/2/2/37/1/2/1
+- protected payload files: 1
+- STEP046 state: WINDOWS_LIVE_ACCEPTED
+
+STEP047 SOURCE VALIDATION
+- compileall src/scripts/tests: PASS
+- focused new/composition regression: 33 passed
+- full pytest: 480 passed
+- STEP047 deterministic acceptance: 29/29 PASS, cleanup COMPLETED
+- Session transitions: 0/0 -> 1/4 -> 2/8
+- Runner.run/run_streamed: 0/2
+- native Handoff constructions: 2
+- SQLiteSession instances/closes: 4/4
+- ROOT/HANDOFF invocations: 2/2, all SUCCEEDED
+- per-Run Handoffs: 1/1
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 2/2/2/4/32/2/1
+- confirmation replay: same Run, scheduled=false, replayed=true
+- pending clear and competing Turn rejected while lease held
+- raw requests/history/API key absent from Product/Evaluation DB
+- protected payload files: 0
+- References unchanged
+
+REGRESSION ACCEPTANCE
+- STEP046: 27/27 PASS, cleanup COMPLETED
+- STEP045: 28/28 PASS, BASIC_AGENT_RUNTIME_SKELETON_COMPLETE, cleanup COMPLETED
+- STEP043: 29/29 PASS, cleanup COMPLETED
+- STEP041: 24/24 PASS, cleanup COMPLETED
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 52
+- launcher violations: 0
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+CANONICAL ZIP VALIDATION
+- canonical root: 1 (`okcanvas-agent-runtime`)
+- ZIP entries: 2,454
+- forbidden environment/venv/cache/local-state/database/protected-payload files: 0
+- independently extracted compileall: PASS
+- independently extracted pytest: 480 passed (split execution used after one monolithic container timeout; all 480 collected tests passed)
+- independently extracted STEP047: 29/29 PASS, cleanup COMPLETED
+- independently extracted STEP046: 27/27 PASS, cleanup COMPLETED
+- independently extracted STEP030A: 8/8 PASS
+- independently extracted Windows Runtime launchers: 52, violations 0
+- independently extracted Reference integrity: 4/4 PASS
+- independently extracted direct executable /reference imports: 0
+- final SHA-256 is recorded in the adjacent `.zip.sha256` file and verified after final regeneration

@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-10",
+  "partition_number": 10,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:07:42.800639+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 59,
+  "passed_tests": 59,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 3.988,
+  "exit_code": 0,
+  "files_sha256": "0fb8b8ddb7e0c4642b598448f958999c5e91e0d266ae82ac04c2122a99d845bc",
+  "log_sha256": "d7da3203aa1d4779f2d1e85c083e48e64d3e194ad426314e245ece7be0fe9ff5",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step027_windows_live_acceptance_evidence.py",
+    "tests/test_step028_commerce_snapshot_identity_baseline.py",
+    "tests/test_step028_windows_live_acceptance_evidence.py",
+    "tests/test_step029_commerce_snapshot_strict_scalar_types_baseline.py",
+    "tests/test_step030_commerce_snapshot_non_empty_inventory_baseline.py",
+    "tests/test_step030a_windows_venv_launcher_fix_baseline.py",
+    "tests/test_step031_commerce_snapshot_bounded_quantities_baseline.py",
+    "tests/test_step031_windows_live_acceptance_evidence.py",
+    "tests/test_step032_agent_output_contract_runtime_registry_baseline.py",
+    "tests/test_step033_agent_runtime_binding_fingerprint_baseline.py",
+    "tests/test_step034_orphaned_running_reconciliation_baseline.py",
+    "tests/test_step035_terminal_outcome_reconciliation_baseline.py",
+    "tests/test_step036_recorded_run_runtime_binding_verification_baseline.py",
+    "tests/test_step037_interactive_runner_baseline.py"
+  ]
+}

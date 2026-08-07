@@ -1,0 +1,58 @@
+{
+  "coding_capability_rules": {
+    "codex_removal_allowed_before_migration": false,
+    "new_execution_plane_allowed": false,
+    "repository_read_write_separated": true,
+    "write_requires_approval": true
+  },
+  "developer_only_planes": [
+    {
+      "classification": "DEVELOPER_ONLY_COMPATIBILITY",
+      "plane_id": "legacy-language-runtime",
+      "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.service.AgentRuntimeService",
+      "write_access": false
+    },
+    {
+      "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+      "plane_id": "codex-read-runtime",
+      "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_service.CodexReadOnlyService",
+      "write_access": false
+    },
+    {
+      "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+      "plane_id": "codex-write-runtime",
+      "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_write_service.CodexWriteService",
+      "write_access": true
+    },
+    {
+      "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+      "plane_id": "codex-write-approval-runtime",
+      "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_approval_service.CodexWriteApprovalService",
+      "write_access": true
+    }
+  ],
+  "policy_id": "product-execution-plane-v1",
+  "product_control_plane": {
+    "bootstrap_factory": "okcanvas_agent_runtime.bootstrap.application.create_app",
+    "catalog_bound": true,
+    "plane_id": "generic-agent-runtime",
+    "service_class": "okcanvas_agent_runtime.application.execution.service.GenericAgentExecutionService",
+    "task_run_event_artifact_owned": true,
+    "tool_mcp_session_handoff_guardrail_supported": true
+  },
+  "product_import_rules": {
+    "forbidden_symbols": [
+      "AgentRuntimeService",
+      "CodexReadOnlyService",
+      "CodexWriteService",
+      "CodexWriteApprovalService"
+    ],
+    "required_symbol": "GenericAgentExecutionService",
+    "scanned_roots": [
+      "okcanvas_agent_runtime/bootstrap/application.py",
+      "okcanvas_agent_runtime/transport"
+    ]
+  },
+  "schema_version": "okcanvas-product-execution-plane-policy-v1",
+  "version": "1.0.0"
+}

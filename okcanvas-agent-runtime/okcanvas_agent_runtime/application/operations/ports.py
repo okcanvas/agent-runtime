@@ -1,0 +1,29 @@
+from __future__ import annotations
+
+from typing import Any, Protocol
+
+
+class OperationsProductStorePort(Protocol):
+    def list_tasks(self, *, limit: int) -> tuple[list[dict[str, Any]], int]: ...
+    def list_runs(self, *, limit: int) -> tuple[list[dict[str, Any]], int]: ...
+    def task_status_counts(self) -> dict[str, int]: ...
+    def run_status_counts(self) -> dict[str, int]: ...
+    def artifact_count(self) -> int: ...
+
+
+class OperationsEvaluationStorePort(Protocol):
+    def statistics(self) -> dict[str, Any]: ...
+
+
+class OperationsToolApprovalStorePort(Protocol):
+    def state_counts(self) -> dict[str, int]: ...
+
+
+class ReferenceVerification(Protocol):
+    verified: bool
+
+    def to_dict(self) -> dict[str, Any]: ...
+
+
+class OperationsReferenceCatalogPort(Protocol):
+    def verify_all(self) -> list[ReferenceVerification]: ...

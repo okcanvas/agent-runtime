@@ -1,0 +1,41 @@
+{
+  "actual_changed_file_count": 1535,
+  "checks": {
+    "acceptance_passed": true,
+    "all_clauses_traced": true,
+    "all_constitution_gates_closed": true,
+    "architecture_passed": true,
+    "baseline_inventory_self_hash_exact": true,
+    "changed_files_exact": true,
+    "full_python_passed": true,
+    "groupware_passed": true,
+    "identity_exact": true,
+    "installation_passed": true,
+    "issues_complete": true,
+    "non_python_passed": true,
+    "portability_passed": true,
+    "record_complete": true,
+    "record_self_hash_exact": true,
+    "windows_product_rerun_separate_from_constitution_gate": true
+  },
+  "declared_changed_file_count": 1535,
+  "passed_checks": 16,
+  "schema_version": "okcanvas-step086-compliance-validation-v1",
+  "stale_declared_changed_files": [],
+  "state": "PASSED",
+  "step": "STEP086_GROUPWARE_READ_ONLY_VERTICAL",
+  "summary": {
+    "applied_clause_count": 127,
+    "changed_file_count": 1535,
+    "constitution_sha256": "262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa",
+    "gate_result_count": 32,
+    "pending_external_gate_count": 0,
+    "state": "COMPLETE",
+    "step": "STEP086_GROUPWARE_READ_ONLY_VERTICAL",
+    "traceability_entry_count": 127,
+    "version": "2.66.0"
+  },
+  "total_checks": 16,
+  "unregistered_changed_files": [],
+  "version": "2.66.0"
+}

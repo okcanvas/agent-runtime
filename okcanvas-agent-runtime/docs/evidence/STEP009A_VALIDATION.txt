@@ -1,0 +1,40 @@
+STEP009A_FIRST_READ_ONLY_MCP_LIVE_ACCEPTANCE
+Status: COMPLETE
+Version: 0.9.1
+
+Live evidence:
+- Windows local stdio MCP protocol connected
+- exact allowlisted Tools listed: search_reference, read_reference_file
+- protocol search found src/agents/run_state.py
+- exact line-range read passed
+- real reference-research-agent run SUCCEEDED
+- canonical MCP tool.started/tool.completed events recorded
+- Tool arguments and results not persisted
+- final Artifact SHA verified
+- API key and Reference content not found in product database
+- all four Reference tree hashes unchanged
+- all twelve live acceptance checks true
+
+Known retained issue:
+- OpenAI tracing upload emitted a non-fatal HTTP 400 with response data redacted.
+- Product trace_id linkage and local evidence succeeded.
+- OpenAI trace export is not claimed as live accepted and is deferred for evidence-led diagnosis.
+
+Boundary:
+- read-only local stdio MCP only
+- no writable or remote MCP
+- no direct import from /reference
+- no Handoff, Session, PlanVM or UI
+
+Package regression verification:
+- compileall PASS
+- pytest 170 passed
+- STEP005 Core Store acceptance PASS
+- STEP006 Reference Catalog acceptance PASS
+- STEP007 deterministic Agent execution acceptance PASS
+- STEP008 ASGI/SSE acceptance PASS
+- STEP009 deterministic MCP acceptance PASS
+- direct /reference import scan PASS
+- Reference integrity 4/4 PASS
+- Codex read fixture intentional failure reproduced
+- Codex write fixture failure-to-success validation PASS

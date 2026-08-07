@@ -1,0 +1,168 @@
+{
+  "checks": {
+    "all_gates_mandatory": true,
+    "amendment_protocol_present": true,
+    "bundle_files_exist_and_match": true,
+    "bundle_inventory_exact": true,
+    "clause_count_and_ids_exact": true,
+    "constitution_identity_exact": true,
+    "constitution_sha_exact": true,
+    "coverage_complete": true,
+    "execution_template_present": true,
+    "gate_count_and_ids_exact": true,
+    "normative_annex_count_exact": true,
+    "runtime_snapshot_resolves": true,
+    "source_baseline_exact": true,
+    "source_inventory_count_exact": true,
+    "source_movement_still_blocked": true,
+    "traceability_complete": true
+  },
+  "file_results": [
+    {
+      "actual_sha256": "41259fcc046f54e8f7bb2a33a81adfac77cd4c9b37045165273ce7933e0d0f4a",
+      "exists": true,
+      "expected_sha256": "41259fcc046f54e8f7bb2a33a81adfac77cd4c9b37045165273ce7933e0d0f4a",
+      "match": true,
+      "path": "CONSTITUTION_AMENDMENT_PROTOCOL.md"
+    },
+    {
+      "actual_sha256": "f0990651a4c77400b083ace3ff88d74b7d8dbbfeef99421f6b2a94a05667c81b",
+      "exists": true,
+      "expected_sha256": "f0990651a4c77400b083ace3ff88d74b7d8dbbfeef99421f6b2a94a05667c81b",
+      "match": true,
+      "path": "CONSTITUTION_COVERAGE_MATRIX.json"
+    },
+    {
+      "actual_sha256": "5387cbafc96880968212ab9aed7f405d80351b784bf3cd78aec9717d742c4579",
+      "exists": true,
+      "expected_sha256": "5387cbafc96880968212ab9aed7f405d80351b784bf3cd78aec9717d742c4579",
+      "match": true,
+      "path": "CONSTITUTION_GATE_CATALOG.json"
+    },
+    {
+      "actual_sha256": "743d8e0209ae5e48cc21cc802c1dc7ccbf0d8cf80be5d55d9e87e533e25fa1b0",
+      "exists": true,
+      "expected_sha256": "743d8e0209ae5e48cc21cc802c1dc7ccbf0d8cf80be5d55d9e87e533e25fa1b0",
+      "match": true,
+      "path": "CONSTITUTION_TRACEABILITY_MATRIX.json"
+    },
+    {
+      "actual_sha256": "b5eec052e60a3575b2051b7a1254ac8395d82f4afe1c31a40382354fd38e45d1",
+      "exists": true,
+      "expected_sha256": "b5eec052e60a3575b2051b7a1254ac8395d82f4afe1c31a40382354fd38e45d1",
+      "match": true,
+      "path": "CONSTITUTION_TRACEABILITY_MATRIX.md"
+    },
+    {
+      "actual_sha256": "d83c57276ad2369adf0569fcafe88ad19276c097ad49d764b0d48d424fcbc81d",
+      "exists": true,
+      "expected_sha256": "d83c57276ad2369adf0569fcafe88ad19276c097ad49d764b0d48d424fcbc81d",
+      "match": true,
+      "path": "OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.json"
+    },
+    {
+      "actual_sha256": "b10ebb8e9eeb35b13c47cb48cdd8b10c0b4012603855d79b68399fa76a21ac0c",
+      "exists": true,
+      "expected_sha256": "b10ebb8e9eeb35b13c47cb48cdd8b10c0b4012603855d79b68399fa76a21ac0c",
+      "match": true,
+      "path": "OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.md"
+    },
+    {
+      "actual_sha256": "a03e0c5990d8ef1d9d3aeb98b174f2d545215e8a90d2f6fa4b2faaabcd63af7e",
+      "exists": true,
+      "expected_sha256": "a03e0c5990d8ef1d9d3aeb98b174f2d545215e8a90d2f6fa4b2faaabcd63af7e",
+      "match": true,
+      "path": "README.md"
+    },
+    {
+      "actual_sha256": "8129bbb30d1c46fded34c3472964c6101994f4f9e9fd17ca03363be542623266",
+      "exists": true,
+      "expected_sha256": "8129bbb30d1c46fded34c3472964c6101994f4f9e9fd17ca03363be542623266",
+      "match": true,
+      "path": "STEP_EXECUTION_COMPLIANCE_TEMPLATE.md"
+    },
+    {
+      "actual_sha256": "402bf3343b1fb238850800f2a00dd53dc554134096205f43c86c5ee78013f5cb",
+      "exists": true,
+      "expected_sha256": "402bf3343b1fb238850800f2a00dd53dc554134096205f43c86c5ee78013f5cb",
+      "match": true,
+      "path": "annexes/STEP081_CLIENT_TRANSPORT_AGENT_BOUNDARY_AUDIT.json"
+    },
+    {
+      "actual_sha256": "083fd3b2a5398311625cc14f5cc41f0dcf90d59258602cd3581b546d839ea10e",
+      "exists": true,
+      "expected_sha256": "083fd3b2a5398311625cc14f5cc41f0dcf90d59258602cd3581b546d839ea10e",
+      "match": true,
+      "path": "annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.json"
+    },
+    {
+      "actual_sha256": "d4b863eba88dbdf8f727e86a287ce12cd644171b839f2aecd8dadea284f66bd0",
+      "exists": true,
+      "expected_sha256": "d4b863eba88dbdf8f727e86a287ce12cd644171b839f2aecd8dadea284f66bd0",
+      "match": true,
+      "path": "annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.md"
+    },
+    {
+      "actual_sha256": "b158999a650252558f230657bd5eded65192364e5688467b5f56a019dce8129d",
+      "exists": true,
+      "expected_sha256": "b158999a650252558f230657bd5eded65192364e5688467b5f56a019dce8129d",
+      "match": true,
+      "path": "annexes/STEP081_FLAT_LAYOUT_IMPACT_AUDIT.json"
+    },
+    {
+      "actual_sha256": "747d3afc4ec503179329ca0be1be812b6b551310b6af09552ab2c3da9f7a0ca5",
+      "exists": true,
+      "expected_sha256": "747d3afc4ec503179329ca0be1be812b6b551310b6af09552ab2c3da9f7a0ca5",
+      "match": true,
+      "path": "annexes/STEP081_IMPORT_GRAPH_AUDIT.json"
+    },
+    {
+      "actual_sha256": "d569ed8e79661f71a9bd57f61d862a7200543e7a204195fffa4ee7357a16d0a4",
+      "exists": true,
+      "expected_sha256": "d569ed8e79661f71a9bd57f61d862a7200543e7a204195fffa4ee7357a16d0a4",
+      "match": true,
+      "path": "annexes/STEP081_PATH_COUPLING_AUDIT.json"
+    },
+    {
+      "actual_sha256": "4274b71e6203638f1908970ef0a7eff07a05660a741be2cf685625e5f860e8e6",
+      "exists": true,
+      "expected_sha256": "4274b71e6203638f1908970ef0a7eff07a05660a741be2cf685625e5f860e8e6",
+      "match": true,
+      "path": "annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json"
+    },
+    {
+      "actual_sha256": "45ebb8d9fefec725602cd83cdfe0ec5f9902c386d26143bf12ab1fb71bca0c00",
+      "exists": true,
+      "expected_sha256": "45ebb8d9fefec725602cd83cdfe0ec5f9902c386d26143bf12ab1fb71bca0c00",
+      "match": true,
+      "path": "annexes/STEP081_PROJECT_STRUCTURE_FULL_AUDIT.md"
+    },
+    {
+      "actual_sha256": "047b61d2403c577365622baa5c144c3b1fefeaa6dcf64bbe706206549d537f15",
+      "exists": true,
+      "expected_sha256": "047b61d2403c577365622baa5c144c3b1fefeaa6dcf64bbe706206549d537f15",
+      "match": true,
+      "path": "annexes/STEP081_TARGET_ARCHITECTURE_MANIFEST.json"
+    }
+  ],
+  "passed_checks": 16,
+  "schema_version": "okcanvas-architecture-constitution-validation-v1",
+  "snapshot": {
+    "authority_state": "RATIFIED_ARCHITECTURE_CONSTITUTION",
+    "clause_count": 127,
+    "constitution_id": "OKCANVAS_AGENT_RUNTIME_CLIENT_TRANSPORT_AGENT_ARCHITECTURE_CONSTITUTION",
+    "constitution_sha256": "262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa",
+    "constitution_version": "1.0.0",
+    "implementation_state": "SOURCE_MOVEMENT_BLOCKED_UNTIL_STEP080_WINDOWS_LIVE_ACCEPTED",
+    "normative_annex_count": 12,
+    "product_source_movement_allowed": false,
+    "required_gate_count": 32,
+    "schema_version": "okcanvas-agent-runtime-architecture-constitution-v1",
+    "source_inventory_count": 9,
+    "source_step": "STEP080_PRODUCT_OWNED_CAPABILITY_TOPOLOGY_AND_TOOL_DISCOVERY_FOUNDATION",
+    "source_version": "2.60.0"
+  },
+  "state": "PASSED",
+  "total_checks": 16,
+  "validated_at": "2026-08-02T12:17:29.747301Z"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "okcanvas-function-tool-definition-v1",
+  "runtime_version": "1.0.0",
+  "tool_id": "local_text_fingerprint",
+  "description": "Compute a deterministic SHA-256 fingerprint and bounded text sizes for the already-authorized protected request.",
+  "sdk_kind": "function_tool",
+  "factory_id": "local_text_fingerprint_v1",
+  "input_schema_file": "input.schema.json",
+  "output_schema_file": "output.schema.json",
+  "strict_json_schema": true,
+  "approval_mode": "NEVER",
+  "read_only": true,
+  "filesystem_access": "none",
+  "network_access": "none",
+  "shell_access": "none",
+  "arguments_persisted": false,
+  "result_persisted_in_events": false
+}

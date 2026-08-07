@@ -1,0 +1,449 @@
+STEP009A_FIRST_READ_ONLY_MCP_LIVE_ACCEPTANCE
+Source: user-executed Windows live acceptance
+
+D:\NODE_AGENTS\okcanvas-agent-runtime>sh_run_step009_live_acceptance
+[INFO] Loaded local environment from .env.local without executing it.
+[non-fatal] Tracing client error 400. Response data is redacted.
+{
+  "acceptance_id": "20260728T230639Z-75152cc6",
+  "checks": {
+    "agent_execution_succeeded": true,
+    "api_key_redacted": true,
+    "artifact_verified": true,
+    "mcp_event_source": true,
+    "protocol_connected": true,
+    "protocol_read_exact": true,
+    "protocol_search_found_runstate": true,
+    "reference_content_not_in_database": true,
+    "references_unchanged": true,
+    "tool_arguments_redacted": true,
+    "tool_completed_recorded": true,
+    "tool_started_recorded": true
+  },
+  "completed_at": "2026-07-28T23:07:11.214808Z",
+  "envelope": {
+    "agent_definition_id": "reference-research-agent",
+    "agent_definition_sha256": "658b13b9700c3d64d5c6f87a1e04e6824e6b16c2fb6790269689e776b9111301",
+    "agent_definition_version": "1.0.0",
+    "artifact_id": "artifact_2cadee2f9d264e23864fbe46be11a3fc",
+    "artifact_sha256": "fb23cfcba027ed06f5caec17c96f5cf2854d04954a5d81c813495f660590a33f",
+    "error": null,
+    "live_call": true,
+    "model": "gpt-5.6-sol",
+    "response_id": "resp_0ab024e4434f2f30006a69361abbc08199a7d2ccd528f17916",
+    "result": {
+      "findings": [
+        {
+          "confidence": "CONFIRMED",
+          "detail": "The module documentation explicitly identifies serialization and resumption of agent runs, including human-in-the-loop support.",
+          "evidence": [
+            "src/agents/run_state.py:1 — \"RunState class for serializing and resuming agent runs with human-in-the-loop support.\""
+          ],
+          "severity": "INFO",
+          "title": "RunState responsibilities"
+        }
+      ],
+      "status": "PARTIAL",
+      "summary": "RunState is responsible for serializing and resuming agent runs with human-in-the-loop support.",
+      "unverified": [
+        "The requested lines do not expose the RunState class implementation, API, stored state, serialization format, or exact human-in-the-loop workflow."
+      ]
+    },
+    "run_id": "run_f7efdc9b8da946a9aca6bda7f5596dbd",
+    "schema_version": "okcanvas-generic-agent-execution-v1",
+    "state": "SUCCEEDED",
+    "task_id": "task_8ea1fbfed8ea4bef9845072f17aca0c9",
+    "trace_id": "trace_564002ee49e44c54bd48fc1e994892f9",
+    "usage": {
+      "cached_input_tokens": 0,
+      "input_tokens": 2563,
+      "output_tokens": 222,
+      "reasoning_tokens": 0,
+      "requests": 3,
+      "total_tokens": 2785
+    }
+  },
+  "event_types": [
+    "run.created",
+    "run.started",
+    "agent.definition.resolved",
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "tool.started",
+    "tool.completed",
+    "model.started",
+    "model.completed",
+    "tool.started",
+    "tool.completed",
+    "model.started",
+    "model.completed",
+    "agent.completed",
+    "artifact.created",
+    "run.completed"
+  ],
+  "mcp_events": [
+    {
+      "event_type": "tool.started",
+      "payload": {
+        "arguments_persisted": false,
+        "server_id": "reference-catalog",
+        "tool_call_id_present": true,
+        "tool_name": "search_reference"
+      },
+      "sequence": 7,
+      "source": "mcp"
+    },
+    {
+      "event_type": "tool.completed",
+      "payload": {
+        "result_persisted": false,
+        "result_present": true,
+        "server_id": "reference-catalog",
+        "tool_call_id_present": true,
+        "tool_name": "search_reference"
+      },
+      "sequence": 8,
+      "source": "mcp"
+    },
+    {
+      "event_type": "tool.started",
+      "payload": {
+        "arguments_persisted": false,
+        "server_id": "reference-catalog",
+        "tool_call_id_present": true,
+        "tool_name": "read_reference_file"
+      },
+      "sequence": 11,
+      "source": "mcp"
+    },
+    {
+      "event_type": "tool.completed",
+      "payload": {
+        "result_persisted": false,
+        "result_present": true,
+        "server_id": "reference-catalog",
+        "tool_call_id_present": true,
+        "tool_name": "read_reference_file"
+      },
+      "sequence": 12,
+      "source": "mcp"
+    }
+  ],
+  "mcp_server": {
+    "allowed_tools": [
+      "search_reference",
+      "read_reference_file"
+    ],
+    "cache_tools_list": true,
+    "cleanup_timeout_seconds": 5.0,
+    "connect_timeout_seconds": 10.0,
+    "definition_sha256": "91260edde91cb825f9486174709c0873db71e64437ae8b70b9301487a788fe70",
+    "kind": "builtin-stdio",
+    "max_result_chars": 24000,
+    "max_retry_attempts": 1,
+    "module": "okcanvas_agent_runtime.mcp_servers.reference_catalog",
+    "name": "OKCanvas Read-only Reference Catalog",
+    "read_only": true,
+    "retry_backoff_seconds_base": 0.25,
+    "schema_version": "okcanvas-mcp-server-v1",
+    "server_id": "reference-catalog",
+    "tool_timeout_seconds": 8.0,
+    "version": "1.0.0"
+  },
+  "project_version": "0.9.0",
+  "protocol": {
+    "listed_tools": [
+      "search_reference",
+      "read_reference_file"
+    ],
+    "read": {
+      "read_only": true,
+      "result": {
+        "actual_end_line": 30,
+        "actual_start_line": 1,
+        "byte_length": 151395,
+        "classification": "PRIMARY_SDK_SOURCE",
+        "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+        "lines": [
+          {
+            "line_number": 1,
+            "text": "\"\"\"RunState class for serializing and resuming agent runs with human-in-the-loop support.\"\"\""
+          },
+          {
+            "line_number": 2,
+            "text": ""
+          },
+          {
+            "line_number": 3,
+            "text": "from __future__ import annotations"
+          },
+          {
+            "line_number": 4,
+            "text": ""
+          },
+          {
+            "line_number": 5,
+            "text": "import asyncio"
+          },
+          {
+            "line_number": 6,
+            "text": "import copy"
+          },
+          {
+            "line_number": 7,
+            "text": "import dataclasses"
+          },
+          {
+            "line_number": 8,
+            "text": "import json"
+          },
+          {
+            "line_number": 9,
+            "text": "import threading"
+          },
+          {
+            "line_number": 10,
+            "text": "from collections import deque"
+          },
+          {
+            "line_number": 11,
+            "text": "from collections.abc import Callable, Collection, Iterator, Mapping, Sequence"
+          },
+          {
+            "line_number": 12,
+            "text": "from dataclasses import dataclass, field"
+          },
+          {
+            "line_number": 13,
+            "text": "from pathlib import Path"
+          },
+          {
+            "line_number": 14,
+            "text": "from typing import TYPE_CHECKING, Any, Generic, Literal, cast"
+          },
+          {
+            "line_number": 15,
+            "text": "from uuid import uuid4"
+          },
+          {
+            "line_number": 16,
+            "text": ""
+          },
+          {
+            "line_number": 17,
+            "text": "from openai.types.responses import ("
+          },
+          {
+            "line_number": 18,
+            "text": "    ResponseComputerToolCall,"
+          },
+          {
+            "line_number": 19,
+            "text": "    ResponseCustomToolCall,"
+          },
+          {
+            "line_number": 20,
+            "text": "    ResponseFunctionToolCall,"
+          },
+          {
+            "line_number": 21,
+            "text": "    ResponseOutputMessage,"
+          },
+          {
+            "line_number": 22,
+            "text": "    ResponseOutputRefusal,"
+          },
+          {
+            "line_number": 23,
+            "text": "    ResponseOutputText,"
+          },
+          {
+            "line_number": 24,
+            "text": "    ResponseReasoningItem,"
+          },
+          {
+            "line_number": 25,
+            "text": ")"
+          },
+          {
+            "line_number": 26,
+            "text": "from openai.types.responses.response_input_param import ("
+          },
+          {
+            "line_number": 27,
+            "text": "    ComputerCallOutput,"
+          },
+          {
+            "line_number": 28,
+            "text": "    FunctionCallOutput,"
+          },
+          {
+            "line_number": 29,
+            "text": "    LocalShellCallOutput,"
+          },
+          {
+            "line_number": 30,
+            "text": "    McpApprovalResponse,"
+          }
+        ],
+        "reference_id": "openai-agents-python",
+        "relative_path": "src/agents/run_state.py",
+        "requested_end_line": 30,
+        "requested_start_line": 1,
+        "total_lines": 3819,
+        "version": "0.19.0"
+      },
+      "schema_version": "okcanvas-reference-mcp-read-v1"
+    },
+    "search": {
+      "read_only": true,
+      "result": {
+        "code_map_matches": [
+          {
+            "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+            "label": "RunState and interruptions",
+            "reference_id": "openai-agents-python",
+            "relative_path": "src/agents/run_state.py",
+            "section": "Primary: OpenAI Agents Python 0.19.0"
+          }
+        ],
+        "matches": [
+          {
+            "classification": "PRIMARY_SDK_SOURCE",
+            "excerpt": "\"\"\"RunState class for serializing and resuming agent runs with human-in-the-loop support.\"\"\"",
+            "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+            "line_number": 1,
+            "reference_id": "openai-agents-python",
+            "relative_path": "src/agents/run_state.py",
+            "version": "0.19.0"
+          },
+          {
+            "classification": "PRIMARY_SDK_SOURCE",
+            "excerpt": "# RunState schema policy.",
+            "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+            "line_number": 146,
+            "reference_id": "openai-agents-python",
+            "relative_path": "src/agents/run_state.py",
+            "version": "0.19.0"
+          },
+          {
+            "classification": "PRIMARY_SDK_SOURCE",
+            "excerpt": "| [Run item lifecycle](run-item-lifecycle.md) | Model output processing, new item types, stream events, replay conversion, session persistence, or RunState serialization |",
+            "file_sha256": "eca16af11e88a46e5ec721e5d1975c5cd8bf69003a388db44312856984a65111",
+            "line_number": 23,
+            "reference_id": "openai-agents-python",
+            "relative_path": ".agents/references/README.md",
+            "version": "0.19.0"
+          },
+          {
+            "classification": "PRIMARY_SDK_SOURCE",
+            "excerpt": "| [RunState schema and resume boundary](runstate-schema.md) | Serialized state, schema versions, approvals, agent identity, or durable resume data |",
+            "file_sha256": "eca16af11e88a46e5ec721e5d1975c5cd8bf69003a388db44312856984a65111",
+            "line_number": 27,
+            "reference_id": "openai-agents-python",
+            "relative_path": ".agents/references/README.md",
+            "version": "0.19.0"
+          }
+        ],
+        "query_sha256": "20176a4e03cbf8462b7fe467c1a677aca67bed606b7834e8284ab8a4184dedc3",
+        "reference_ids": [
+          "openai-agents-python"
+        ],
+        "scanned_files": 2,
+        "skipped_non_text_files": 0,
+        "skipped_oversized_files": 0,
+        "truncated": true
+      },
+      "schema_version": "okcanvas-reference-mcp-search-v1"
+    }
+  },
+  "reference_verification_after": {
+    "openai-agents-python": {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    "openai-agents-streaming-api": {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    },
+    "openai-cs-agents-demo": {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    "temporal-openai-agents-demos": {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    }
+  },
+  "reference_verification_before": {
+    "openai-agents-python": {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    "openai-agents-streaming-api": {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    },
+    "openai-cs-agents-demo": {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    "temporal-openai-agents-demos": {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    }
+  },
+  "schema_version": "okcanvas-step009-live-acceptance-v1",
+  "started_at": "2026-07-28T23:06:39.270135Z",
+  "state": "PASSED"
+}
+Acceptance evidence: D:\NODE_AGENTS\okcanvas-agent-runtime\docs\evidence\step009-live\20260728T230639Z-75152cc6

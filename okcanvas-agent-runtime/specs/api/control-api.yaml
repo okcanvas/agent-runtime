@@ -1,0 +1,112 @@
+schema_version: okcanvas-control-api-spec-v1
+mode: local-admin-with-separate-run-submitter-authority
+authentication:
+  admin_header: X-OKCanvas-Admin-Key
+  run_submitter_header: X-OKCanvas-Run-Submitter-Key
+  public_endpoints:
+    - GET /healthz
+  protected_prefix: /v1
+  governed_submission_requires:
+    - local-admin
+    - local-run-submitter
+endpoints:
+  - POST /v1/sessions
+  - GET /v1/sessions
+  - GET /v1/sessions/{session_id}
+  - POST /v1/sessions/{session_id}/clear
+  - POST /v1/sessions/{session_id}/rotate-history-key
+  - GET /v1/run-submission-policy
+  - POST /v1/run-submissions/preflight
+  - GET /v1/run-submissions/{submission_id}
+  - POST /v1/run-submissions/{submission_id}/confirm
+  - POST /v1/run-submissions/recover-stale
+  - POST /v1/protected-payloads/cleanup-expired
+  - POST /v1/runs
+  - GET /v1/tasks/{task_id}
+  - GET /v1/runs/{run_id}
+  - GET /v1/runs/{run_id}/outcome
+  - GET /v1/runs/{run_id}/events
+  - GET /v1/runs/{run_id}/events/stream
+  - GET /v1/runs/{run_id}/sdk-stream
+  - GET /v1/runs/{run_id}/invocations
+  - GET /v1/runs/{run_id}/artifact
+  - POST /v1/runs/{run_id}/cancel
+sqlite_session_runtime:
+  backend: installed-sdk-sqlite-session
+  metadata_backend: product-owned-sqlite-catalog
+  max_active_turns: 1
+  history_exposed_by_api: false
+  history_copied_to_product_events: false
+  compaction_enabled: true
+  encryption_enabled: true
+  encryption_mode: STRICT_AES_256_GCM_HKDF_SHA256_V1
+  encryption_key_source: OKCANVAS_SESSION_HISTORY_KEY
+  key_rotation:
+    mode: explicit-single-session
+    automatic: false
+    previous_key_source: OKCANVAS_SESSION_HISTORY_PREVIOUS_KEY
+    max_history_items: 256
+    resume_incomplete: true
+    mixed_key_envelopes: reject
+    raw_history_in_events: false
+    clear_incomplete_without_decrypt: true
+  encryption_key_persisted: false
+  encryption_key_id_exposed: true
+  legacy_plaintext_mode: REJECT
+  ttl_enabled: false
+  mixed_capabilities_enabled: false
+governed_submission:
+  executable_modes:
+    - IMMEDIATE_AFTER_CONFIRMATION
+  protected_payload: AES_256_GCM_FILE_V1
+  raw_input_in_sqlite: false
+  exact_confirmation_required: true
+  atomic_task_run_binding: true
+  direct_run_api_default_enabled: false
+  local_tool_execution: deferred
+  recovery:
+    mode: explicit-local-operator
+    claim_lease_seconds: 30
+    max_claim_attempts: 3
+    eligible_task_status: READY
+    eligible_run_status: CREATED
+    generation_fencing: true
+    raw_claim_token_persisted: false
+  retention:
+    successful_run: immediate-delete
+    failed_or_cancelled_run_days: 7
+    unconfirmed_submission_hours: 24
+    cleanup_batch_limit: 100
+    cleanup_mode: explicit-authenticated-operation
+sse:
+  source: persisted-canonical-run-events
+  cursor_query: cursor
+  last_event_id_header: Last-Event-ID
+  heartbeat: comment
+  close_on_terminal_run: true
+  sdk_event_classes_public: false
+limitations:
+  active_run_restart_recovery: false
+  automatic_startup_recovery: false
+  distributed_worker_lease: false
+  cross_process_exactly_once: false
+  tenant_authorization: false
+  public_cors: false
+reference_runtime_dependency: forbidden
+
+native_sdk_stream:
+  source: installed-sdk-run-streamed
+  durability: ephemeral-process-local
+  authenticated: true
+  disconnect_cancels_execution: false
+  persisted_to_product_event_ledger: false
+agent_invocations:
+  source: product-owned-sqlite-ledger
+  authenticated: local-admin
+  one_root_per_product_run: true
+  child_kinds: [HANDOFF, AGENT_AS_TOOL]
+  language_workspace_default: none
+  model_selected_child_or_host_root: false
+  step040_child_execution_enabled: false
+  step041_native_handoff_enabled: true
+  step042_agent_as_tool_enabled: true

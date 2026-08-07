@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>OKCanvas Agent Runtime · Interactive Runner</title>
+  <link rel="stylesheet" href="/runner/assets/runner.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <p class="eyebrow">GOVERNED INTERACTIVE RUNNER</p>
+      <h1>OKCanvas Agent Runtime</h1>
+      <p class="subtitle">기존 Product 실행 경계를 그대로 사용하는 로컬 실행 표면</p>
+    </div>
+    <div class="top-actions">
+      <a class="link-button" href="/console">Operations Console</a>
+      <span id="connectionBadge" class="badge neutral">연결 전</span>
+      <button id="newRunButton" class="secondary" type="button" disabled>새 실행</button>
+      <button id="logoutButton" class="ghost" type="button">키 지우기</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="authPanel" class="panel auth-panel">
+      <div>
+        <p class="eyebrow">SEPARATE AUTHORITIES</p>
+        <h2>로컬 실행 권한 연결</h2>
+        <p>관리자 조회 키와 Run 제출 키는 서로 달라야 합니다. 두 키는 현재 브라우저 탭의 <code>sessionStorage</code>에만 보관됩니다.</p>
+      </div>
+      <form id="authForm" class="auth-form">
+        <label for="adminKey">X-OKCanvas-Admin-Key</label>
+        <input id="adminKey" type="password" autocomplete="off" minlength="16" required>
+        <label for="submitterKey">X-OKCanvas-Run-Submitter-Key</label>
+        <input id="submitterKey" type="password" autocomplete="off" minlength="16" required>
+        <button type="submit">Runner 연결</button>
+        <p id="authError" class="error" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div id="runnerRoot" hidden>
+      <section class="notice">
+        <strong>권한 분리 유지</strong>
+        <span>이 화면은 governed preflight·exact confirmation·실행·평가만 제공합니다. Local Tool 승인·거절은 전용 Approval Operator에서 수행합니다.</span>
+      </section>
+
+
+      <section class="panel skeleton-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">BASIC AGENT RUNTIME SKELETON</p>
+            <h2>통합 실행 시나리오</h2>
+          </div>
+          <span id="skeletonBadge" class="badge neutral">Catalog 조회 전</span>
+        </div>
+        <p class="skeleton-intro">각 카드는 기존 governed API를 사용하는 실행 프리셋입니다. 자동 실행·자동 승인·숨겨진 demo 경로는 없습니다.</p>
+        <div id="scenarioGrid" class="scenario-grid"><p class="empty">Runner 연결 후 시나리오를 불러옵니다.</p></div>
+        <div id="scenarioDetail" class="scenario-detail"><p class="empty">시나리오를 선택하면 예상 상태·Evaluation·Invocation·Workspace 경계를 표시합니다.</p></div>
+      </section>
+
+      <ol class="stepper" aria-label="실행 단계">
+        <li id="stepConfigure" class="active"><span>1</span>요청 구성</li>
+        <li id="stepPreflight"><span>2</span>Preflight</li>
+        <li id="stepConfirm"><span>3</span>Exact confirmation</li>
+        <li id="stepExecute"><span>4</span>실행 관찰</li>
+        <li id="stepResult"><span>5</span>Artifact·평가</li>
+      </ol>
+
+      <div class="workspace-grid">
+        <section class="panel configure-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">REQUEST</p>
+              <h2>Agent 실행 요청</h2>
+            </div>
+            <span id="policyBadge" class="badge neutral">정책 조회 전</span>
+          </div>
+
+          <form id="preflightForm">
+            <label for="agentSelect">Agent Definition</label>
+            <select id="agentSelect" required></select>
+            <div id="agentDetail" class="agent-detail"></div>
+
+            <section id="sessionPanel" class="session-panel" hidden>
+              <div class="section-heading">
+                <div><p class="eyebrow">SQLITE SESSION</p><h3>SQLite Session 대화</h3></div>
+                <span id="sessionBadge" class="badge neutral">Session 없음</span>
+              </div>
+              <label for="sessionSelect">활성 Session</label>
+              <select id="sessionSelect"><option value="">Session을 생성하세요</option></select>
+              <div class="inline-field">
+                <button id="createSessionButton" class="secondary compact" type="button">새 Session</button>
+                <button id="clearSessionButton" class="ghost compact" type="button" disabled>선택 Session clear</button>
+              </div>
+              <p id="sessionMeta" class="field-meta">Session history는 서버의 별도 SDK SQLite 저장소에만 보관됩니다.</p>
+            </section>
+
+            <label for="requestInput">요청</label>
+            <textarea id="requestInput" rows="11" maxlength="100000" required placeholder="Agent가 수행할 요청을 입력합니다."></textarea>
+            <div class="field-meta"><span id="inputCount">0 / 100000</span><span>원문은 SQLite·Event에 저장되지 않습니다.</span></div>
+
+            <div class="form-grid">
+              <div>
+                <label for="modelInput">Model override <span class="optional">선택</span></label>
+                <input id="modelInput" type="text" maxlength="128" placeholder="환경 기본 모델 사용">
+              </div>
+              <div>
+                <label for="idempotencyInput">Idempotency key</label>
+                <div class="inline-field">
+                  <input id="idempotencyInput" class="mono" type="text" minlength="16" maxlength="128" required>
+                  <button id="regenerateKeyButton" class="secondary compact" type="button">재생성</button>
+                </div>
+              </div>
+            </div>
+
+            <button id="preflightButton" type="submit">1. Governed Preflight 생성</button>
+          </form>
+
+          <section id="confirmationPanel" class="confirmation-panel" hidden>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">EXACT CONFIRMATION</p>
+                <h2>실행 내용 확인</h2>
+              </div>
+              <span id="preflightStateBadge" class="badge warning">PREFLIGHT</span>
+            </div>
+            <dl id="preflightSummary" class="summary-list"></dl>
+            <label>서버가 발급한 확인 문구</label>
+            <code id="confirmationChallenge" class="challenge"></code>
+            <div class="copy-row">
+              <button id="copyChallengeButton" class="secondary" type="button">확인 문구 복사</button>
+              <span>자동 확인하지 않습니다. 아래 칸에 정확히 붙여 넣어야 합니다.</span>
+            </div>
+            <label for="confirmationInput">Exact confirmation</label>
+            <input id="confirmationInput" class="mono" type="text" autocomplete="off">
+            <button id="confirmButton" type="button" disabled>2. 확인하고 실행 예약</button>
+            <div id="approvalPreparationPanel" class="approval-preparation" hidden>
+              <strong>이 Agent는 Local Tool 승인 경로를 사용합니다.</strong>
+              <span>Run/Tool approval 상태를 먼저 준비한 뒤, 결정은 전용 Approval Operator에서 수행합니다.</span>
+              <button id="prepareApprovalButton" type="button">2. 승인 요청 준비</button>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel execution-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">PERSISTED RUN</p>
+              <h2>실행 상태</h2>
+            </div>
+            <div class="status-cluster">
+              <span id="runStatusBadge" class="badge neutral">RUN 없음</span>
+              <span id="nativeStreamStatusBadge" class="badge neutral">SDK stream 없음</span>
+              <span id="streamStatusBadge" class="badge neutral">Persisted 연결 안 됨</span>
+            </div>
+          </div>
+
+          <dl id="runIdentity" class="summary-list muted-summary">
+            <div><dt>Submission</dt><dd>-</dd></div>
+            <div><dt>Task</dt><dd>-</dd></div>
+            <div><dt>Run</dt><dd>-</dd></div>
+            <div><dt>Runtime binding</dt><dd>-</dd></div>
+          </dl>
+
+
+          <div class="invocation-panel">
+            <div class="event-heading">
+              <h3>Agent invocation identities</h3>
+              <span id="invocationCount" class="mono">0 invocation</span>
+            </div>
+            <div id="invocationList" class="invocation-list"><p class="empty">Run 생성 후 ROOT·child invocation 관계가 표시됩니다.</p></div>
+          </div>
+
+          <div id="approvalNotice" class="approval-notice" hidden>
+            <strong>Local Tool 승인이 필요합니다.</strong>
+            <span>이 Runner는 승인 결정을 제공하지 않습니다. <code>sh_approval_operator.cmd</code> 또는 전용 Approval Operator를 사용하세요.</span>
+          </div>
+
+          <div class="native-stream-panel">
+            <div class="event-heading">
+              <h3>Native SDK ephemeral stream</h3>
+              <span class="mono">메모리 전용 · 재시작 시 소멸</span>
+            </div>
+            <pre id="nativeStreamText" class="native-stream-text">모델 text delta가 여기에 표시됩니다.</pre>
+            <div id="nativeStreamItems" class="native-stream-items"><p class="empty">SDK Run item과 Agent 변경이 표시됩니다.</p></div>
+          </div>
+
+          <div class="event-heading">
+            <h3>Canonical persisted Events</h3>
+            <span id="eventCursor" class="mono">cursor 0</span>
+          </div>
+          <div id="eventList" class="event-list"><p class="empty">실행 전입니다.</p></div>
+        </section>
+      </div>
+
+      <div class="result-grid">
+        <section class="panel">
+          <div class="section-heading">
+            <div><p class="eyebrow">VERIFIED ARTIFACT</p><h2>최종 출력</h2></div>
+            <span id="artifactBadge" class="badge neutral">없음</span>
+          </div>
+          <dl id="artifactMeta" class="summary-list muted-summary"></dl>
+          <pre id="artifactContent" class="output-view">Artifact가 생성되면 검증된 JSON을 표시합니다.</pre>
+        </section>
+
+        <section class="panel">
+          <div class="section-heading">
+            <div><p class="eyebrow">RECORDED-RUN EVALUATION</p><h2>결과 평가</h2></div>
+            <span id="evaluationBadge" class="badge neutral">미실행</span>
+          </div>
+          <label for="evaluationCaseSelect">호환 Evaluation Case</label>
+          <select id="evaluationCaseSelect" disabled><option value="">호환 Case 없음</option></select>
+          <button id="evaluateButton" type="button" disabled>3. 기록된 Run 평가</button>
+          <div id="evaluationResult" class="evaluation-result"><p class="empty">SUCCEEDED Run과 호환 Case가 필요합니다.</p></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer><span id="footerStatus">STEP045 Integrated Walking Skeleton · 연결 전</span></footer>
+  <script src="/runner/assets/persisted-sse.js" defer></script>
+  <script src="/runner/assets/runner.js" defer></script>
+</body>
+</html>

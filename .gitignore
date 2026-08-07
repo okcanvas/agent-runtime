@@ -1,0 +1,93 @@
+# OKCanvas Agent Platform - repository-local/generated files only.
+# Durable source, specs, manifests, docs/evidence, and retained upstream references
+# are intentionally NOT ignored.
+
+# -----------------------------------------------------------------------------
+# Local environment / secrets
+# -----------------------------------------------------------------------------
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.*.example
+**/.envrc
+**/.direnv/
+
+# -----------------------------------------------------------------------------
+# Python local environments / caches / build outputs
+# -----------------------------------------------------------------------------
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.hypothesis/
+**/.tox/
+**/.nox/
+**/.coverage
+**/.coverage.*
+**/htmlcov/
+
+# First-party Python package build products.
+okcanvas-agent-runtime/build/
+okcanvas-agent-runtime/dist/
+okcanvas-agent-runtime/*.egg-info/
+okcanvas-connectors/**/build/
+okcanvas-connectors/**/*.egg-info/
+okcanvas-connector-examples/**/build/
+okcanvas-connector-examples/**/*.egg-info/
+
+# -----------------------------------------------------------------------------
+# Node / TypeScript generated dependencies and build products
+# -----------------------------------------------------------------------------
+**/node_modules/
+
+# Generated product CLI output.
+okcanvas-agent-cli/dist/
+
+# Generated Connector / Example output.
+okcanvas-connectors/**/dist/
+okcanvas-connector-examples/**/dist/
+
+# IMPORTANT: okcanvas-agent-runtime/clients/cli/dist/ is a committed source
+# artifact and is intentionally NOT covered by a global **/dist/ rule.
+
+# Package-manager diagnostic logs only. Durable docs/evidence/*.log files are
+# intentionally retained and must not be hidden by a global *.log rule.
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# -----------------------------------------------------------------------------
+# Runtime-local mutable state
+# -----------------------------------------------------------------------------
+okcanvas-agent-runtime/.local/
+okcanvas-agent-runtime/artifacts/
+
+# Common accidental local databases at the Runtime project root. Test databases
+# are normally created under temporary workspaces and durable fixtures are not
+# globally ignored.
+okcanvas-agent-runtime/*.sqlite
+okcanvas-agent-runtime/*.sqlite3
+okcanvas-agent-runtime/*.db
+
+# -----------------------------------------------------------------------------
+# Local release / command output at the workspace root
+# -----------------------------------------------------------------------------
+/*.zip
+/*.zip.sha256
+/*.log
+
+# -----------------------------------------------------------------------------
+# IDE / editor / operating-system noise
+# -----------------------------------------------------------------------------
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~

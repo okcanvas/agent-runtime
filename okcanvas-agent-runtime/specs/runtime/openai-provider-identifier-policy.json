@@ -1,0 +1,8 @@
+{
+  "schema_version": "okcanvas-openai-provider-identifier-policy-v1",
+  "policy_id": "local-openai-provider-identifier-minimization-v1",
+  "version": "1.0.0",
+  "persist_response_id": false,
+  "persist_request_id": false,
+  "persist_identifier_presence": true
+}

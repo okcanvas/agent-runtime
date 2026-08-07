@@ -1,0 +1,17 @@
+{
+  "evidence_sha256": {
+    "fresh_runtime": "456ac15d930cb446359cce147c2b24b3067ece1bb10a18a35d4d9e86a74d8fde",
+    "fresh_runtime_gate": "d3763de6a04e568c72a0e923e8f2c1e04de43a03454a7151414e58f71d8763e1",
+    "fresh_workspace": "4f1bb884d2533097e661027b1ea4aa3b06dc1e91c24468685b97f46ec0d810f0"
+  },
+  "manifest": "4395/4395 EXACT",
+  "post_acceptance_drift": "ZERO",
+  "runtime": "25/25 PASSED",
+  "schema_version": "okcanvas-step008r4-fresh-zip-deterministic-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP008R4_SHORT_EXPRESSION_LIVE_ACCEPTANCE_SEMANTIC_OUTPUT_AND_COMPACTED_SESSION_ASSERTION_CLOSURE",
+  "verification_note": "Final-package manifest count; package SHA is recorded in the external .sha256 sidecar to avoid self-reference.",
+  "version": "0.8.4",
+  "workspace": "25/25 PASSED",
+  "workspace_tests": "99/99 PASSED"
+}

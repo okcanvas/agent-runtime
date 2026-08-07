@@ -1,0 +1,74 @@
+{
+  "checks": {
+    "configuration_pack_nonempty": true,
+    "configuration_pack_root_exact": true,
+    "distribution_policy_schema_exact": true,
+    "full_source_startup_passed": true,
+    "reference_not_in_wheel_allowlist": true,
+    "reference_pack_nonempty": true,
+    "reference_pack_root_exact": true,
+    "specs_not_in_wheel_allowlist": true,
+    "wheel_build_completed": true,
+    "wheel_install_completed": true,
+    "wheel_only_fails_closed_without_config": true,
+    "wheel_package_allowlist_exact": true,
+    "wheel_plus_config_and_reference_startup_passed": true,
+    "wheel_plus_config_fails_closed_without_reference": true
+  },
+  "configured_wheel_packages": [
+    "okcanvas_agent_runtime",
+    "okcanvas_agent_protocols",
+    "okcanvas_agent_clients"
+  ],
+  "outputs": {
+    "install": "WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\nLooking in indexes: https://reader:****@packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/pypi/pypi-public/simple\nProcessing /tmp/step082b-dist-e3qgz5gz/wheel/okcanvas_agent_runtime-2.66.2-py3-none-any.whl\nInstalling collected packages: okcanvas-agent-runtime\nSuccessfully installed okcanvas-agent-runtime-2.66.2\n",
+    "venv": "",
+    "wheel_build": "WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\nLooking in indexes: https://reader:****@packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/pypi/pypi-public/simple\nProcessing /mnt/data/step086r2_work/okcanvas-agent-runtime\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: okcanvas-agent-runtime\n  Building wheel for okcanvas-agent-runtime (pyproject.toml): started\n  Building wheel for okcanvas-agent-runtime (pyproject.toml): finished with status 'done'\n  Created wheel for okcanvas-agent-runtime: filename=okcanvas_agent_runtime-2.66.2-py3-none-any.whl size=566892 sha256=28a38c97edb087cad99ecfc1cd52505c2d3666d0da56bd94036d13208a638df0\n  Stored in directory: /tmp/pip-ephem-wheel-cache-qxzi701j/wheels/6b/f3/93/35789dafa6667838da0d8623b0c446554b056a6845bda1964a\nSuccessfully built okcanvas-agent-runtime\n"
+  },
+  "packs": {
+    "configuration": {
+      "entry_count": 323,
+      "path": "/tmp/step082b-dist-e3qgz5gz/config.zip",
+      "root": "okcanvas-agent-runtime-config",
+      "sha256": "e15eb83aee446cdb0fb02c258bc38da3023ee26f188ea43104abbbe93062a631"
+    },
+    "reference": {
+      "entry_count": 1540,
+      "path": "/tmp/step082b-dist-e3qgz5gz/reference.zip",
+      "root": "okcanvas-agent-runtime-reference",
+      "sha256": "71deb2178ad00e119d5194ad0b956e38f8bfb36ee145a84f8fbc43ef5a361929"
+    }
+  },
+  "passed_checks": 14,
+  "probes": {
+    "full_source": {
+      "process_ok": true,
+      "route_count": 100,
+      "runtime_origin": "/mnt/data/step086r2_work/okcanvas-agent-runtime/okcanvas_agent_runtime/__init__.py",
+      "state": "PASSED"
+    },
+    "wheel_only": {
+      "error": "SQLite Session policy is missing or unsafe",
+      "error_type": "SessionPolicyError",
+      "process_ok": true,
+      "state": "FAILED"
+    },
+    "wheel_plus_config": {
+      "error": "Pinned SDK SQLiteSession source integrity mismatch",
+      "error_type": "SessionPolicyError",
+      "process_ok": true,
+      "state": "FAILED"
+    },
+    "wheel_plus_config_and_reference": {
+      "process_ok": true,
+      "route_count": 100,
+      "runtime_origin": "/tmp/step082b-dist-e3qgz5gz/venv/lib/python3.13/site-packages/okcanvas_agent_runtime/__init__.py",
+      "state": "PASSED"
+    }
+  },
+  "schema_version": "okcanvas-step082b-distribution-validation-v1",
+  "state": "PASSED",
+  "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+  "total_checks": 14,
+  "version": "2.62.2"
+}

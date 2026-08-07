@@ -1,0 +1,59 @@
+STEP079A_WINDOWS_ENTRYPOINT_COMMAND_REGISTRATION_FIX
+version=2.59.1
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Code-confirmed failure reproduction:
+- extracted STEP079 package
+- python scripts/windows_entrypoint.py atomic-task-run-ownership-transfer-live-acceptance
+- exit code 2
+- argparse invalid choice before dispatch
+- command dispatch branch present
+- parser choice absent
+- model/tool/docker calls 0
+
+Corrective validation:
+STEP079A deterministic acceptance=29/29 PASS
+focused regression=78/78 PASS
+historical regression=33/33 PASS
+full Python regression=861/861 PASS
+Python test files=218
+Node tests=14/14 PASS
+Reference integrity=4/4 PASS
+direct reference imports=0
+npm pack dry-run=23 files PASS
+
+Full Python file-group totals:
+98 + 82 + 134 + 66 + 97 + 141 + 190 + 53 = 861 PASS
+
+Executable command reachability:
+python scripts/windows_entrypoint.py atomic-task-run-ownership-transfer-live-acceptance --help
+exit=0
+routed script=scripts/run_step079a_live_acceptance.py
+
+Live contract:
+initial checks=56
+api_key_not_in_summary=1
+expected total=57
+model required=gpt-4.1
+model calls expected=2
+tool calls expected=1
+
+Packaging boundary:
+- .env.local and .env.local.cmd excluded
+- docs/evidence/step079a-live excluded
+- virtual environments, caches, node_modules and raw live evidence excluded
+- one canonical okcanvas-agent-runtime root required
+
+Candidate ZIP fresh extraction:
+STEP079A acceptance=29/29 PASS
+focused regression=78/78 PASS
+historical regression=33/33 PASS
+full Python regression=861/861 PASS
+Python test files=218
+Node tests=14/14 PASS
+Reference integrity=4/4 PASS
+direct reference imports=0
+npm pack dry-run=23 files PASS
+candidate ZIP root count=1
+candidate ZIP entries=3178
+candidate forbidden files=0

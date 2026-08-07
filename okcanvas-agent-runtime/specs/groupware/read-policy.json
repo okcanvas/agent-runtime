@@ -1,0 +1,30 @@
+{
+  "agent_id": "groupware-read-agent",
+  "capability_id": "groupware-read-v1",
+  "max_results": 50,
+  "operations": [
+    {
+      "description": "Search visible Groupware notices without mutation.",
+      "operation_id": "search-notices",
+      "tool_name": "search_notices"
+    },
+    {
+      "description": "Search visible mailbox metadata and messages without sending or changing state.",
+      "operation_id": "search-mail",
+      "tool_name": "search_mail"
+    },
+    {
+      "description": "List visible calendar events without creating, updating, accepting, or deleting events.",
+      "operation_id": "list-calendar-events",
+      "tool_name": "list_calendar_events"
+    }
+  ],
+  "policy_id": "groupware-read-v1",
+  "required_roles": [
+    "agent-user"
+  ],
+  "schema_version": "okcanvas-groupware-read-policy-v1",
+  "server_id": "groupware-read",
+  "version": "1.0.0",
+  "write_enabled": false
+}

@@ -1,0 +1,113 @@
+{
+  "$defs": {
+    "ProjectEvidenceOutput": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "maxLength": 512,
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "line_start": {
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "line_end": {
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "excerpt": {
+          "maxLength": 1600,
+          "title": "Excerpt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "line_start",
+        "line_end",
+        "excerpt"
+      ],
+      "title": "ProjectEvidenceOutput",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "workspace_label": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Workspace Label",
+      "type": "string"
+    },
+    "snapshot_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Snapshot Sha256",
+      "type": "string"
+    },
+    "files_considered": {
+      "maximum": 3000,
+      "minimum": 1,
+      "title": "Files Considered",
+      "type": "integer"
+    },
+    "bytes_considered": {
+      "maximum": 33554432,
+      "minimum": 0,
+      "title": "Bytes Considered",
+      "type": "integer"
+    },
+    "inspected_files": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 4,
+      "minItems": 1,
+      "title": "Inspected Files",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/ProjectEvidenceOutput"
+      },
+      "maxItems": 4,
+      "minItems": 1,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "evidence_characters": {
+      "maximum": 5000,
+      "minimum": 1,
+      "title": "Evidence Characters",
+      "type": "integer"
+    },
+    "query_terms_considered": {
+      "maximum": 12,
+      "minimum": 0,
+      "title": "Query Terms Considered",
+      "type": "integer"
+    },
+    "truncated": {
+      "title": "Truncated",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "workspace_label",
+    "snapshot_sha256",
+    "files_considered",
+    "bytes_considered",
+    "inspected_files",
+    "evidence",
+    "evidence_characters",
+    "query_terms_considered",
+    "truncated"
+  ],
+  "title": "ProjectReadonlyInspectOutput",
+  "type": "object"
+}

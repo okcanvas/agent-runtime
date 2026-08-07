@@ -1,0 +1,21 @@
+STEP023_MINIMAL_LOCAL_APPROVAL_OPERATOR_CLI
+
+Baseline version: 2.3.0
+Deterministic acceptance: PASSED
+Checks: 15/15
+Loopback HTTP: verified
+Wrong confirmation: blocked without consuming PENDING approval
+Approve branch: SUCCEEDED, Tool execution count 1
+Approve replay: idempotent, Tool execution count remains 1
+Reject branch: CANCELLED, Tool execution count 0
+Inbox response: bounded and excludes RunState/storage/Tool payload metadata
+Admin and Run-submitter keys: absent from Product SQLite and compact Evidence
+STEP020 regression acceptance: PASSED, cleanup COMPLETED
+STEP021 regression acceptance: PASSED, cleanup COMPLETED
+STEP022 regression acceptance: PASSED, cleanup COMPLETED
+Full test suite: 292 passed
+Compileall: PASSED
+Direct /reference imports: none
+Reference integrity: 4/4 unchanged
+Acceptance workspace cleanup: COMPLETED
+Windows live acceptance: not yet reported

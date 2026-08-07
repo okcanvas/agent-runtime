@@ -1,0 +1,60 @@
+STEP061_OPENAI_AGENTS_EXAMPLES_COVERAGE_MATRIX_AND_NEXT_SCOPE_SELECTION
+Project version: 2.41.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+Accepted predecessor evidence
+- STEP060 deterministic Windows acceptance: user-reported 20/20 PASS.
+- STEP060 cleanup: COMPLETED exactly once.
+- STEP060 final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/1/1/12/1/0.
+- STEP060 protected payload files: 0.
+- STEP060 fixture evidence: 1 file / 608 characters.
+- STEP060 real OpenAI Artifact: PASS.
+- STEP060 real evidence: src/okcanvas_agent_runtime/control_api/app.py:485-487.
+- STEP060 real unrelated findings: none.
+- STEP060 real total tokens: 2,688 <= 5,000.
+
+STEP061 implementation
+- immutable SDK examples Python files physically present: 216;
+- exact excluded root runner/support files: 4;
+- classified capability/example files: 212;
+- top-level areas: 15;
+- ADOPT/ADAPT/DEFER/REJECT: 16/16/171/9;
+- every entry records source SHA-256, line count, observed SDK symbols, decision, track, priority,
+  rationale, and current Product evidence;
+- all 71 Sandbox examples are DEFER to SANDBOX_PLATFORM;
+- selected next implementation: STEP062_BOUNDED_MULTI_AGENT_ORCHESTRATION_FOUNDATION;
+- STEP062 implementation remains absent.
+
+Validation executed in this container
+- Python compileall over src/scripts/tests: PASS.
+- Initial monolithic pytest run: environment command timeout after reaching 48%; not counted as acceptance.
+- Split Python pytest over all 179 test files: 591/591 PASS with normal exit codes.
+  - chunk 1: 141 PASS;
+  - chunk 2: 165 PASS;
+  - chunk 3: 118 PASS;
+  - chunk 4: 167 PASS.
+- STEP061 deterministic acceptance: 20/20 PASS.
+- TypeScript build: PASS.
+- Node tests: 13/13 PASS.
+- npm pack dry-run: PASS, 23 files, 23,836 bytes packed, 106,787 bytes unpacked.
+- Reference integrity: 4/4 PASS.
+
+Environment boundary
+- No OpenAI/model call was executed for STEP061 because the STEP adds no executable Agent capability.
+- The STEP060 live OpenAI closure is preserved as user-reported evidence, not re-executed here.
+- Windows launcher sh_run_step061_acceptance.cmd has not been executed in this Linux container.
+
+Required Windows closure
+- Run sh_run_step061_acceptance.cmd.
+- Require 20/20 PASS.
+
+Independent candidate ZIP self-extraction validation
+- canonical root: exactly one (`okcanvas-agent-runtime`).
+- ZIP entries: 3,166 including directory entries.
+- forbidden cache/local-state/dependency files: 0.
+- Python compileall: PASS.
+- STEP061 deterministic acceptance: 20/20 PASS.
+- Python pytest from fresh extraction: 591/591 PASS in four normal-exit chunks.
+- TypeScript build: PASS.
+- Node tests: 13/13 PASS.
+- Reference integrity: 4/4 PASS.

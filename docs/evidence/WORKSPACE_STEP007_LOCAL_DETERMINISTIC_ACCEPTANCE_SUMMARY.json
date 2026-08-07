@@ -1,0 +1,59 @@
+{
+  "completed_at": "2026-08-05T10:08:08.332309Z",
+  "connector": {
+    "passed_checks": 10,
+    "pytest_passed": 9,
+    "state": "PASSED",
+    "step": "CONNECTOR_ORGANIZATION_CONTEXT_STEP002R1_RUNTIME_WIRING_CONTRACT_ALIGNMENT",
+    "version": "0.2.1"
+  },
+  "connector_example": {
+    "passed_checks": 15,
+    "state": "PASSED",
+    "total_checks": 15
+  },
+  "example": {
+    "node_tests_passed": 10,
+    "passed_checks": 16,
+    "state": "PASSED",
+    "step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP002_JSON_REFERENCE_DATASET_AND_UNIFIED_RESOLUTION",
+    "version": "0.2.0"
+  },
+  "execution_platform": "posix",
+  "limitations": {
+    "local_step084_catalog_replaced": false,
+    "openai_model_called": false,
+    "production_database_executed": false,
+    "real_enterprise_organization_context_called": false,
+    "runtime_organization_context_wired": true,
+    "windows_step007_live_executed": false
+  },
+  "live_preflight": {
+    "safe_error_category": "LIVE_ENVIRONMENT_NOT_READY",
+    "state": "FAILED_AS_EXPECTED"
+  },
+  "manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "passed_checks": 30,
+  "runtime": {
+    "focused_regression_passed": 120,
+    "passed_checks": 22,
+    "state": "PASSED",
+    "step": "STEP088_RUNTIME_ORGANIZATION_CONTEXT_SESSION_DELEGATION_AND_LIVE_OPENAI_E2E_READINESS",
+    "total_checks": 22,
+    "version": "2.68.0"
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-step007-local-deterministic-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP007_RUNTIME_ORGANIZATION_CONTEXT_SESSION_DELEGATION_AND_LIVE_OPENAI_E2E_READINESS",
+  "total_checks": 30,
+  "validation_mode": "LOCAL_DETERMINISTIC_RUNTIME_ORGANIZATION_CONTEXT_WIRING_AND_LIVE_READINESS",
+  "version": "0.7.0",
+  "workspace_unit_tests": {
+    "failed": 0,
+    "passed": 79
+  }
+}

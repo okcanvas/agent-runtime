@@ -1,0 +1,24 @@
+{
+  "snapshot_id": "case001-shortage",
+  "safety_stock_units": 5,
+  "items": [
+    {
+      "sku": "desk-lamp",
+      "available_units": 12,
+      "forecast_units": 18,
+      "inbound_units": 4
+    },
+    {
+      "sku": "ergonomic-keyboard",
+      "available_units": 7,
+      "forecast_units": 16,
+      "inbound_units": 2
+    },
+    {
+      "sku": "usb-c-dock",
+      "available_units": 22,
+      "forecast_units": 14,
+      "inbound_units": 0
+    }
+  ]
+}

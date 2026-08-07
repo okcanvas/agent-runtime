@@ -1,0 +1,33 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP042",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-30T10:40:30.377047Z",
+  "checks_passed": 29,
+  "checks_total": 29,
+  "gateway_counts": {
+    "run": 0,
+    "outer_run_streamed": 1,
+    "nested_run_streamed": 1,
+    "as_tool_constructed": 1,
+    "agent_tool_invoked": 1
+  },
+  "usage": {
+    "root": {"input_tokens": 23, "output_tokens": 7, "total_tokens": 30},
+    "child": {"input_tokens": 17, "output_tokens": 5, "total_tokens": 22},
+    "run": {"input_tokens": 40, "output_tokens": 12, "total_tokens": 52}
+  },
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "submissions": 1,
+    "invocations": 2,
+    "events": 18,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "workspace_materialized": false,
+  "successful_payload_deleted": true,
+  "cleanup_state": "COMPLETED",
+  "source": "user-reported sh_run_step042_acceptance.cmd JSON"
+}

@@ -1,0 +1,49 @@
+STEP005_CORE_TASK_RUN_EVENT_ARTIFACT_STORE
+Status: COMPLETE
+Version: 0.5.0
+Date: 2026-07-29
+
+Validation completed in the packaging environment:
+
+- python -m compileall -q src scripts tests
+  PASS
+
+- pytest -q
+  PASS: 97 tests
+
+- PYTHONPATH=src python scripts/verify_core_store.py
+  PASS
+  task_status=SUCCEEDED
+  run_status=SUCCEEDED
+  event_sequences=[1,2,3,4]
+  event_types=[run.created,run.started,agent.started,run.completed]
+  schema_versions=[1]
+  artifact SHA reverified
+  store reopened before final reads
+
+- concurrent Event allocation
+  PASS: 24 concurrent appends produced unique sequences 2..25 after run.created sequence 1
+
+- forced Event insertion failure
+  PASS: Run transition rolled back and event list remained unchanged
+
+- Artifact integrity
+  PASS: registration, verification, changed-file mismatch and missing-file detection
+
+- secret persistence guard
+  PASS: raw sentinel API key was not present in SQLite database bytes; only its SHA-256 was accepted
+
+- PYTHONPATH=src python scripts/verify_reference.py
+  PASS: 4/4 immutable reference trees
+
+- STEP002 and STEP003 fixture verification
+  PASS: intentional baseline defect remained reproducible; known minimal repair passed; source fixtures unchanged
+
+Not executed and not claimed:
+
+- PostgreSQL
+- HTTP/SSE
+- MCP
+- model or Codex call
+- STEP004 live approval acceptance
+- worker queue or distributed concurrency

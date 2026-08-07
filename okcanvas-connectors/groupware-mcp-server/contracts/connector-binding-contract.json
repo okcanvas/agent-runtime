@@ -1,0 +1,14 @@
+{
+  "connector_project_path": "okcanvas-connectors/groupware-mcp-server",
+  "credential_reference_transmitted": false,
+  "required_http_headers": [
+    "Authorization",
+    "X-OKCanvas-Tenant-ID",
+    "X-OKCanvas-Principal-ID",
+    "X-OKCanvas-Roles",
+    "X-OKCanvas-Delegation-ID"
+  ],
+  "required_role": "agent-user",
+  "runtime_provider_contract": "runtime-provider-contract.json",
+  "schema_version": "okcanvas-groupware-connector-binding-contract-v1"
+}

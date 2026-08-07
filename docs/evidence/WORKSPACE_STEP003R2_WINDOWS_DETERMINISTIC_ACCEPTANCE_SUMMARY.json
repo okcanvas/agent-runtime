@@ -1,0 +1,54 @@
+{
+  "completed_at": "2026-08-05T02:51:35.931988Z",
+  "execution_platform": "windows",
+  "limitations": {
+    "live_openai_model_called": false,
+    "real_enterprise_groupware_provider_called": false
+  },
+  "passed_checks": 27,
+  "retained_results": {
+    "connector": {
+      "passed": 7,
+      "state": "PASSED",
+      "total": 7
+    },
+    "connector_example": {
+      "passed": 7,
+      "state": "PASSED",
+      "total": 7
+    },
+    "example": {
+      "passed": 6,
+      "state": "PASSED",
+      "total": 6
+    },
+    "main_assistant_e2e": {
+      "passed": 14,
+      "state": "PASSED",
+      "total": 14
+    },
+    "product_cli": {
+      "passed": 11,
+      "state": "PASSED",
+      "total": 11
+    },
+    "workspace_unit_tests": {
+      "passed": 35,
+      "state": "PASSED",
+      "total": 35
+    }
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-step003r2-windows-acceptance-summary-v1",
+  "source": "user-provided real Windows redirected acceptance log; secret values omitted",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP003R2_WINDOWS_PROJECT_PYTHON_ENVIRONMENT_AND_REDIRECTED_LOG_IDENTITY_CLOSURE",
+  "total_checks": 27,
+  "version": "0.3.2",
+  "windows_step003r2_accepted": true,
+  "windows_step003r2_executed": true,
+  "workspace_manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  }
+}

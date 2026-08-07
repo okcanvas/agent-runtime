@@ -1,0 +1,17 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "execution_id": {
+      "maxLength": 128,
+      "minLength": 16,
+      "pattern": "^execution_[a-f0-9]{16,96}$",
+      "title": "Execution Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "execution_id"
+  ],
+  "title": "LocalTextExecutionInput",
+  "type": "object"
+}

@@ -1,0 +1,53 @@
+STEP079_PRODUCT_OWNED_ATOMIC_TASK_RUN_OWNERSHIP_TRANSFER
+version=2.59.0
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+WORKING TREE VALIDATION
+STEP079 deterministic acceptance=34/34 PASS
+focused regression=75/75 PASS
+historical regression=33/33 PASS
+full Python regression=858/858 PASS
+Python test files=217
+Node tests=14/14 PASS
+Committed TypeScript release=PASS
+Reference integrity=4/4 PASS
+direct reference imports=0
+npm pack dry-run=23 files PASS
+Docker calls=0
+external network calls=0
+model calls=0
+
+FULL PYTHON EXECUTION NOTE
+The 217 test files were executed exactly once in bounded, non-overlapping groups because a single combined command exceeded the execution harness limit. Group results were 88 + 76 + 104 + 46 + 115 + 429 = 858 passing tests. Two encountered failures were historical validation contract drift only: the exact STEP068 Roadmap acceptance sentence, and STEP069's service-policy SHA/Product-owned Skill Roadmap wording. They were corrected to the current code-backed contracts and their complete groups were rerun successfully.
+
+WINDOWS LIVE CONTRACT
+initial checks=55
+api_key_not_in_summary=1
+expected total checks=56
+required model=gpt-4.1
+expected model calls=2
+expected Sandbox Tool calls=1
+completion model calls added=0
+tool replay=false
+
+CANDIDATE ZIP FRESH VALIDATION
+candidate archive SHA-256=42bbe0fcb1c3fd155b0e7e42d388603e4d1cb4c177671e5f0a5aecf9e54dc1d9
+candidate ZIP roots=1 (okcanvas-agent-runtime)
+candidate ZIP entries=3167
+candidate forbidden files=0
+fresh STEP079 acceptance=34/34 PASS
+fresh focused regression=75/75 PASS
+fresh historical regression=33/33 PASS
+fresh full Python regression=858/858 PASS
+fresh Python test files=217
+fresh Node tests=14/14 PASS
+fresh Committed TypeScript release=PASS
+fresh Reference integrity=4/4 PASS
+fresh direct reference imports=0
+fresh npm pack dry-run=23 files PASS
+
+FRESH PYTHON EXECUTION NOTE
+The extracted candidate's 217 test files were executed in non-overlapping ranges. Results: 88 + 76 + 25 + 44 + 35 + 46 + 21 + 15 + 22 + 20 + 37 + 48 + 49 + 92 + 122 + 30 + 22 + 16 + 15 + 35 = 858 passing tests.
+
+FINAL DISTRIBUTION RULE
+After embedding this validation record, package_source.py is run once more. The final archive is not modified afterward. Final extraction must pass STEP079 acceptance and the executable/test payload under src/, scripts/, tests/, specs/, clients/ and reference/ must be byte-identical to this fully regressed candidate tree. The exact final archive SHA-256 is supplied by the adjacent .sha256 file and an external final-distribution validation record.

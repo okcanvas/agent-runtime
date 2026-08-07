@@ -1,0 +1,48 @@
+schema_version: okcanvas-canonical-events-plan-v1
+required_fields:
+  - run_id
+  - sequence
+  - event_type
+  - source
+  - occurred_at
+  - payload_schema_version
+  - payload_sha256
+initial_event_types:
+  - task.created
+  - run.created
+  - run.started
+  - run.execution.recovered
+  - agent.definition.resolved
+  - agent.started
+  - model.started
+  - model.completed
+  - agent.completed
+  - agent.output.recovered
+  - agent.failed
+  - agent.handoff
+  - agent.tool.started
+  - agent.tool.completed
+  - session.turn.started
+  - session.turn.completed
+  - tool.requested
+  - tool.approval_required
+  - tool.started
+  - tool.completed
+  - validation.started
+  - validation.completed
+  - artifact.created
+  - payload.retention.applied
+  - reference.search.completed
+  - reference.file.read
+  - run.interrupted
+  - run.completed
+  - run.failed
+  - run.cancelled
+sources:
+  - runtime
+  - agent_sdk
+  - codex
+  - validator
+  - operator
+  - reference
+  - mcp

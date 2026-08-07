@@ -1,0 +1,40 @@
+STEP039_NATIVE_SDK_STREAMING_ADAPTER_V1
+Version: 2.19.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Source-tree validation:
+- compileall: PASS
+- pytest: 426 passed
+- STEP039: 20/20 PASS, cleanup COMPLETED
+- STEP038: 24/24 PASS, cleanup COMPLETED
+- STEP037: 24/24 PASS, cleanup COMPLETED
+- STEP036: 18/18 PASS, cleanup COMPLETED
+- STEP030A Windows launcher contract: 8/8 PASS, 44 runtime launchers, zero violations
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+STEP039 exact deterministic state:
+- Runner.run_streamed calls: 1
+- Runner.run calls: 0
+- native stream events: 6
+- native stream sequence: sdk.stream.started, agent.updated, model.text.delta, run.item, model.text.delta, sdk.stream.completed
+- assembled text delta: Native stream
+- Product counts submissions/tasks/runs/artifacts: 1/1/1/1
+- successful protected payload: DELETED
+- raw function-call argument sentinel: absent from native stream and Product DB
+- native SDK stream events: absent from canonical Product Event DB
+
+Final Canonical ZIP extraction validation and SHA are appended after package verification.
+
+Initial Canonical ZIP separate-extraction validation:
+- canonical roots: 1
+- files: 2,285
+- forbidden environment/venv/cache/local-state/SQLite files: 0
+- pytest: 426 passed
+- STEP039: 20/20 PASS, cleanup COMPLETED
+- STEP038: 24/24 PASS, cleanup COMPLETED
+- STEP030A: 8/8 PASS, 44 runtime launchers, zero violations
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+The final ZIP is regenerated after these results are recorded and is rechecked before release.

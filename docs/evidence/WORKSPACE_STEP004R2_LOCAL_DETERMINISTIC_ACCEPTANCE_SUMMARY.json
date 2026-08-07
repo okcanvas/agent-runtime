@@ -1,0 +1,20 @@
+{
+  "actual_live_openai_model_called": false,
+  "connector_pytest": "10/10",
+  "connector_to_example": "7/7",
+  "deterministic_main_assistant_e2e": "14/14",
+  "groupware_api_example": "6/6",
+  "groupware_connector": "7/7",
+  "live_preflight": "LIVE_ENVIRONMENT_NOT_READY (expected fail-closed)",
+  "passed_checks": 34,
+  "product_service_cli": "11/11",
+  "runtime_focused_regression": "107/107",
+  "runtime_step087r2": "18/18",
+  "schema_version": "okcanvas-agent-platform-workspace-step004r2-local-deterministic-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP004R2_LIVE_GROUPWARE_FAKE_CREDENTIAL_SESSION_CONTINUATION_AND_JSON_STDOUT_CLOSURE",
+  "total_checks": 34,
+  "version": "0.4.2",
+  "windows_live_rerun_pending": true,
+  "workspace_unit_tests": "51/51"
+}

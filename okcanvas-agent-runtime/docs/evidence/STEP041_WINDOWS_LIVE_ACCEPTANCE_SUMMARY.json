@@ -1,0 +1,32 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP041_NATIVE_HANDOFF_RUNTIME_V1",
+  "reported_at": "2026-07-30T09:31:14.346466Z",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "acceptance_state": "PASSED",
+  "checks_passed": 24,
+  "checks_total": 24,
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 1,
+    "handoff_constructed": 1
+  },
+  "invocation_usage": {
+    "root": {"input_tokens": 12, "output_tokens": 4, "total_tokens": 16},
+    "handoff": {"input_tokens": 18, "output_tokens": 6, "total_tokens": 24},
+    "product_run": {"input_tokens": 30, "output_tokens": 10, "total_tokens": 40}
+  },
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "submissions": 1,
+    "invocations": 2,
+    "events": 14,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "workspace_materialized": false,
+  "payload_retention_state": "DELETED",
+  "cleanup_state": "COMPLETED",
+  "source": "user-reported Windows sh_run_step041_acceptance.cmd output"
+}

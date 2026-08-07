@@ -1,0 +1,45 @@
+STEP062A_WINDOWS_NODE_ACCEPTANCE_PORTABILITY_FIX
+version=2.42.1
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+CONFIRMED INPUT
+- User-reported Windows command: sh_run_step062_acceptance
+- Result: FAILED 27/29
+- Failed checks: node_typescript_build_pass, node_tests_pass
+- All orchestration/policy/binding/Python/document/reference checks: passed
+
+CODE-AUDITED ROOT CAUSES
+1. Python directly invoked the resolved npm.cmd batch file.
+2. package.json used node --test test/*.test.mjs; Windows CMD passed the literal glob to Node.
+3. Acceptance forced UTF-8 decoding, destroying the Korean Windows batch diagnostic.
+
+CORRECTION
+- Windows npm scripts: cmd.exe /d /c call "<resolved npm.cmd>" run <script>
+- Node tests: Python-sorted explicit test/config.test.mjs and test/render.test.mjs paths
+- package.json test: node --test
+- subprocess output: byte capture with UTF-8/platform/Windows fallback decoding
+- Product orchestration implementation unchanged
+
+DETERMINISTIC VALIDATION
+- Corrected STEP062 acceptance: 29/29 PASS
+- STEP062A acceptance: 18/18 PASS
+- Python pytest group 1: 164 PASS
+- Python pytest group 2: 109 PASS
+- Python pytest group 3: 135 PASS
+- Python pytest group 4: 78 PASS
+- Python pytest group 5: 116 PASS
+- Python pytest total: 602/602 PASS
+- Python compileall: PASS
+- TypeScript build: PASS
+- npm test / Node tests: 14/14 PASS
+- npm pack --dry-run: 23 entries PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0 PASS
+- Real OpenAI model calls: NOT RUN; not required by this correction
+
+NOTES
+- A monolithic pytest process exceeded the execution environment time limit; it showed no new
+  failure before termination. The complete suite was then partitioned by test file into five
+  independent processes, all of which exited zero. The summed collected result is 602/602.
+- Windows live acceptance remains pending.
+- STEP063 is not selected.

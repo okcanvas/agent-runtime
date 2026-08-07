@@ -1,0 +1,88 @@
+{
+  "completed_at": "2026-08-05T07:31:02.297847Z",
+  "connector": {
+    "passed_checks": 8,
+    "state": "PASSED",
+    "step": "CONNECTOR_ORGANIZATION_CONTEXT_STEP001R1_GROUPWARE_ACCEPTANCE_PATTERN_ALIGNMENT",
+    "total_checks": 8,
+    "version": "0.1.1"
+  },
+  "connector_example": {
+    "passed_checks": 10,
+    "state": "PASSED",
+    "total_checks": 10
+  },
+  "corrections": {
+    "bespoke_compiler_gate_added": false,
+    "example_groupware_project_skeleton_aligned": true,
+    "groupware_workspace_e2e_pattern_reused": true,
+    "short_windows_execution_copy_paths_used": true,
+    "standard_compileall_retained": true
+  },
+  "example": {
+    "passed_checks": 9,
+    "state": "PASSED",
+    "step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP001R1_GROUPWARE_CONSTRUCTION_GUIDE_PATTERN_ALIGNMENT",
+    "total_checks": 9,
+    "version": "0.1.1"
+  },
+  "failed_windows_parent_attempt": {
+    "evidence": "docs/evidence/WORKSPACE_STEP005_WINDOWS_FAILURE_SUMMARY.json",
+    "passed_checks": 18,
+    "state": "FAILED",
+    "step": "WORKSPACE_STEP005_ORGANIZATION_CONTEXT_CONNECTOR_AND_CONSTRUCTION_GUIDE_FOUNDATION",
+    "total_checks": 23,
+    "version": "0.5.0"
+  },
+  "limitations": {
+    "openai_model_called": false,
+    "real_enterprise_organization_context_called": false,
+    "runtime_organization_context_wired": false,
+    "windows_step005r1_accepted": false,
+    "windows_step005r1_executed": false
+  },
+  "official_windows_parent": {
+    "deterministic": "34/34 PASSED",
+    "live_openai": "22/22 PASSED",
+    "step": "WORKSPACE_STEP004R2_LIVE_GROUPWARE_FAKE_CREDENTIAL_SESSION_CONTINUATION_AND_JSON_STDOUT_CLOSURE",
+    "version": "0.4.2"
+  },
+  "passed_checks": 27,
+  "schema_version": "okcanvas-agent-platform-workspace-step005r1-local-deterministic-acceptance-summary-v1",
+  "standalone_validations": {
+    "connector_optional_example_integration": {
+      "passed_checks": 10,
+      "state": "PASSED",
+      "total_checks": 10
+    },
+    "connector_source_package": {
+      "entries": 62,
+      "sha256": "bc6058c84780f841513097c4c687c8e649f6f99dd851cf60b6bba68658eac9eb",
+      "state": "PASSED"
+    },
+    "example_node_tests": {
+      "passed": 5,
+      "state": "PASSED",
+      "total": 5
+    },
+    "example_source_package": {
+      "entries": 39,
+      "sha256": "6a89e41e2794e7d2fcb5e52bce807852d2debb4986907d173577c899b7ba8582",
+      "state": "PASSED"
+    }
+  },
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP005R1_GROUPWARE_ACCEPTANCE_PATTERN_ALIGNMENT",
+  "total_checks": 27,
+  "validation_mode": "LOCAL_DETERMINISTIC_ACCEPTANCE",
+  "version": "0.5.1",
+  "workspace_manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "workspace_unit_tests": {
+    "count": 63,
+    "state": "PASSED"
+  }
+}

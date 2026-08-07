@@ -1,0 +1,108 @@
+STEP025_GOVERNED_READ_ONLY_COMMERCE_SNAPSHOT_INGRESS
+Validation date: 2026-07-30
+Project: okcanvas-agent-runtime
+Version: 2.5.0
+Status: WINDOWS_LIVE_ACCEPTED
+
+CONSTITUTIONAL DECISION
+- Actual repository code and immutable reference trees were inspected before implementation.
+- openai-agents-python 0.19.0 MCP server code is a Runner-internal, model-invoked Tool path.
+- It was therefore not adopted as the source-of-truth acquisition path before protected-payload fingerprinting.
+- STEP025 uses a product-owned, pre-execution, read-only HTTP ingress and performs zero model calls while acquiring the source snapshot.
+- /reference remains immutable and is not imported or executed.
+
+IMPLEMENTED BOUNDARY
+- Endpoint: POST /v1/commerce-snapshot-ingress/preflight
+- Fixed Agent: store-replenishment-review-agent
+- Adapter: controlled-commerce-http@1.0.0
+- Method: one HTTP GET to a literal loopback IP
+- Bearer credential: local environment injection only
+- Redirects: disabled
+- Retries: zero
+- Timeouts: connect 2 seconds, read 5 seconds
+- Response limit: 65,536 bytes
+- Item limit: 100
+- Media type: application/json
+- Duplicate JSON keys: rejected
+- Product contract: strict StoreReplenishmentInput validation
+- Canonical snapshot SHA-256 is bound into the existing governed preflight.
+- Adapter ID/version/definition SHA and source-request SHA are also bound.
+- Same-key replay returns the existing active protected preflight without another source read.
+- Changed adapter/request/model under the same key fails before another read.
+- Source response and credential are not persisted in SQLite or Events.
+
+OBSERVED VALIDATION
+1. python -m compileall -q src scripts tests
+   PASS
+
+2. python -m pytest -q
+   PASS: 328 passed in 23.89s
+
+3. PYTHONPATH=src python scripts/run_step025_acceptance.py
+   PASS
+   schema_version=okcanvas-step025-acceptance-v1
+   checks=21/21 true
+   source.read_count=1
+   source.write_count=0
+   artifact_count=1
+   deterministic_evaluation_passed=true
+   no_tool_or_mcp_events=true
+   total_reorder_units=19
+   cleanup_state=COMPLETED
+
+4. PYTHONPATH=src python scripts/run_step024b_acceptance.py
+   PASS: 7/7 checks true
+   total_reorder_units=19
+   cleanup_state=COMPLETED
+
+5. PYTHONPATH=src python scripts/run_step024_acceptance.py
+   PASS: 18/18 checks true
+   artifact_count=1
+   total_reorder_units=19
+   cleanup_state=COMPLETED
+
+6. PYTHONPATH=src python scripts/run_step020_acceptance.py
+   PASS
+   approve branch PASS
+   reject branch PASS
+   references unchanged
+   cleanup_state=COMPLETED
+
+7. PYTHONPATH=src python scripts/run_step023_acceptance.py
+   PASS: 15/15 checks true
+   approve SUCCEEDED and Tool executed once
+   reject CANCELLED and Tool executed zero times
+   replay idempotent
+   keys not persisted
+   cleanup_state=COMPLETED
+
+8. PYTHONPATH=src python -m okcanvas_agent_runtime reference-verify --project-root . --pretty
+   PASS: 4/4 verified
+   openai-agents-python tree_sha256=65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a
+   temporal-openai-agents-demos tree_sha256=0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a
+   openai-cs-agents-demo tree_sha256=121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d
+   openai-agents-streaming-api tree_sha256=d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9
+
+9. PYTHONPATH=src python scripts/verify_no_reference_imports.py
+   PASS: ok=true, violations=[]
+
+WINDOWS LIVE ACCEPTANCE CLOSURE
+User-reported command:
+  sh_run_step025_acceptance.cmd
+
+Observed:
+- state=PASSED
+- all 21 checks=true
+- source.read_count=1
+- source.write_count=0
+- outcome.status=SUCCEEDED
+- outcome_http_status=200
+- artifact_count=1
+- deterministic Evaluation PASSED
+- total_reorder_units=19
+- cleanup_state=COMPLETED
+
+The printed Starlette/TestClient deprecation warning did not alter any Product acceptance evidence. Compact closure Evidence is `STEP025_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json`.
+
+NEXT CODE-AUDITED GAP
+Only one canonical replenishment case and one Evaluation case existed at closure. STEP026 therefore expands case breadth without expanding authority.

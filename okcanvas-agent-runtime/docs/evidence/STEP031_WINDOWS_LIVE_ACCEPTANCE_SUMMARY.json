@@ -1,0 +1,37 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP031",
+  "baseline": "STEP031_COMMERCE_SNAPSHOT_BOUNDED_QUANTITIES",
+  "project_version": "2.11.0",
+  "status": "WINDOWS_LIVE_ACCEPTED",
+  "reported_local_date": "2026-07-30",
+  "command": "sh_run_step031_acceptance",
+  "state": "PASSED",
+  "acceptance_id": "20260729T232407148389Z-b2503556",
+  "check_count": 19,
+  "all_checks_true": true,
+  "case_count": 5,
+  "max_inventory_unit_value": 45035996273704,
+  "case_contract": {
+    "http_status": 502,
+    "code": "COMMERCE_SNAPSHOT_INVALID",
+    "retryable": false
+  },
+  "source": {
+    "read_count": 5,
+    "write_count": 0
+  },
+  "final_counts": {
+    "submissions": 0,
+    "tasks": 0,
+    "runs": 0,
+    "events": 0,
+    "artifacts": 0,
+    "evaluations": 0
+  },
+  "artifact_count": 0,
+  "protected_payload_file_count": 0,
+  "gateway_call_count": 0,
+  "cleanup_state": "COMPLETED",
+  "warning": "Starlette/TestClient deprecation warning was printed and did not affect Product acceptance."
+}

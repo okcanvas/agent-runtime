@@ -1,0 +1,14 @@
+{
+  "schema_version": "okcanvas-agent-as-tool-policy-v1",
+  "policy_id": "default-agent-as-tool-policy",
+  "version": "1.0.0",
+  "max_agent_tool_calls_per_run": 1,
+  "max_depth": 1,
+  "input_mode": "MODEL_GENERATED_TEXT",
+  "output_mode": "BOUNDED_STRUCTURED_JSON",
+  "max_result_bytes": 8192,
+  "nested_stream_enabled": true,
+  "inherit_parent_run_config": false,
+  "require_same_output_contract": true,
+  "required_workspace_access": "none"
+}

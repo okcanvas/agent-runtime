@@ -1,0 +1,27 @@
+{
+  "schema_version": "okcanvas-step064-windows-pytest-async-plugin-failure-summary-v1",
+  "step": "STEP064_BOUNDED_ENCRYPTED_SQLITE_SESSION_COMPACTION_V1",
+  "version": "2.44.0",
+  "state": "FAILED",
+  "passed_checks": 28,
+  "total_checks": 29,
+  "failed_checks": [
+    "focused_compaction_tests_pass"
+  ],
+  "focused_test_output": "7 failed, 4 passed, 7 warnings in 1.90s",
+  "historical_session_output": "29 passed, 1 warning in 55.84s",
+  "product_boundary_checks_passed": 28,
+  "node_release_integrity_passed": true,
+  "node_tests_passed": true,
+  "references_unchanged": true,
+  "diagnosis": {
+    "pytest_asyncio_declared_dependency": false,
+    "async_test_count": 7,
+    "synchronous_test_count": 4,
+    "warning_count": 7,
+    "reproduced_with_plugin_autoload_disabled": true,
+    "reproduced_result": "7 failed, 4 passed, 7 warnings",
+    "root_cause": "STEP064 focused tests used pytest.mark.asyncio although pytest-asyncio is not a declared project dependency"
+  },
+  "superseded_when": "STEP064A Windows acceptance passes"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "okcanvas-step081b-windows-deterministic-failure-summary-v1",
+  "step": "STEP081B_LIVE_ARCHITECTURE_VALIDATOR_PROCESS_ISOLATION_AND_DIAGNOSTIC_EVIDENCE",
+  "version": "2.61.2",
+  "state": "FAILED",
+  "passed_checks": 15,
+  "total_checks": 18,
+  "architecture_passed_checks": 36,
+  "architecture_total_checks": 38,
+  "false_acceptance_checks": [
+    "architecture_validator_passed",
+    "focused_regression_passed",
+    "step081_compliance_passed"
+  ],
+  "focused_failures": [
+    "tests/test_step081_root_package_and_architecture_restructuring.py::test_step081_architecture_validator_closes_all_static_gates",
+    "tests/test_step081b_live_architecture_validator_isolation.py::test_architecture_validator_runs_in_isolated_python_process"
+  ],
+  "launcher_registry_passed": true,
+  "node_tests_passed": true,
+  "npm_pack_dry_run_passed": true,
+  "reference_integrity_passed": true,
+  "windows_subprocess_portability_passed": true,
+  "api_or_billing_required": false,
+  "architecture_false_check_names_preserved": false,
+  "architecture_details_preserved": false,
+  "compliance_drift_preserved": false,
+  "source": "user-provided Windows sh_run_step081b_acceptance output"
+}

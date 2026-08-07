@@ -1,0 +1,298 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T034144060004Z-81e2b044",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T03:41:44.354255Z",
+    "created_at": "2026-07-29T03:41:44.060317Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP006"
+  },
+  "checks": {
+    "all_trees_unchanged": true,
+    "all_trees_verified_before": true,
+    "code_map_first_match": true,
+    "exact_line_read": true,
+    "exact_search_match": true,
+    "file_sha_consistent": true,
+    "manifest_reference_count": true,
+    "query_hash_persisted": true,
+    "raw_query_not_persisted": true,
+    "read_event_recorded": true,
+    "search_event_recorded": true,
+    "traversal_blocked": true
+  },
+  "completed_at": "2026-07-29T03:41:44.353358Z",
+  "event_types": [
+    "run.created",
+    "reference.search.completed",
+    "reference.file.read"
+  ],
+  "read": {
+    "actual_end_line": 5,
+    "actual_start_line": 1,
+    "byte_length": 151395,
+    "classification": "PRIMARY_SDK_SOURCE",
+    "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+    "lines": [
+      {
+        "line_number": 1,
+        "text": "\"\"\"RunState class for serializing and resuming agent runs with human-in-the-loop support.\"\"\""
+      },
+      {
+        "line_number": 2,
+        "text": ""
+      },
+      {
+        "line_number": 3,
+        "text": "from __future__ import annotations"
+      },
+      {
+        "line_number": 4,
+        "text": ""
+      },
+      {
+        "line_number": 5,
+        "text": "import asyncio"
+      }
+    ],
+    "reference_id": "openai-agents-python",
+    "relative_path": "src/agents/run_state.py",
+    "requested_end_line": 5,
+    "requested_start_line": 1,
+    "total_lines": 3819,
+    "version": "0.19.0"
+  },
+  "reference_verification_after": {
+    "openai-agents-python": {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    "openai-agents-streaming-api": {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    },
+    "openai-cs-agents-demo": {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    "temporal-openai-agents-demos": {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    }
+  },
+  "reference_verification_before": {
+    "openai-agents-python": {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    "openai-agents-streaming-api": {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    },
+    "openai-cs-agents-demo": {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    "temporal-openai-agents-demos": {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    }
+  },
+  "references": [
+    {
+      "byte_count": 17945765,
+      "classification": "PRIMARY_SDK_SOURCE",
+      "destination": "openai-agents-python-0.19.0",
+      "file_count": 1419,
+      "notes": "Primary implementation reference for Agent, Runner, RunState, sessions, MCP, sandbox, and experimental Codex integration.",
+      "reference_id": "openai-agents-python",
+      "source_url": "https://github.com/openai/openai-agents-python",
+      "tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "version": "0.19.0"
+    },
+    {
+      "byte_count": 774434,
+      "classification": "DURABILITY_EXAMPLE",
+      "destination": "temporal-openai-agents-demos",
+      "file_count": 36,
+      "notes": "Temporal workflow/activity integration example. Not a product baseline.",
+      "reference_id": "temporal-openai-agents-demos",
+      "source_url": "https://github.com/temporal-community/openai-agents-demos",
+      "tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "version": "unversioned-snapshot"
+    },
+    {
+      "byte_count": 1409011,
+      "classification": "UX_AND_HANDOFF_EXAMPLE",
+      "destination": "openai-cs-agents-demo",
+      "file_count": 43,
+      "notes": "Customer-support UI and handoff example. In-memory state and demo-grade boundaries.",
+      "reference_id": "openai-cs-agents-demo",
+      "source_url": "https://github.com/openai/openai-cs-agents-demo",
+      "tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "version": "unversioned-snapshot"
+    },
+    {
+      "byte_count": 246327,
+      "classification": "ADAPTER_AND_NEGATIVE_EXAMPLE",
+      "destination": "openai-agents-streaming-api",
+      "file_count": 38,
+      "notes": "REST/SSE adapter ideas and negative examples. Must not be used as a production base.",
+      "reference_id": "openai-agents-streaming-api",
+      "source_url": "https://github.com/ahmad2b/openai-agents-streaming-api",
+      "tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "version": "unversioned-snapshot"
+    }
+  ],
+  "schema_version": "okcanvas-step006-acceptance-v1",
+  "search": {
+    "code_map_matches": [
+      {
+        "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+        "label": "RunState and interruptions",
+        "reference_id": "openai-agents-python",
+        "relative_path": "src/agents/run_state.py",
+        "section": "Primary: OpenAI Agents Python 0.19.0"
+      }
+    ],
+    "matches": [
+      {
+        "classification": "PRIMARY_SDK_SOURCE",
+        "excerpt": "\"\"\"RunState class for serializing and resuming agent runs with human-in-the-loop support.\"\"\"",
+        "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+        "line_number": 1,
+        "reference_id": "openai-agents-python",
+        "relative_path": "src/agents/run_state.py",
+        "version": "0.19.0"
+      },
+      {
+        "classification": "PRIMARY_SDK_SOURCE",
+        "excerpt": "# RunState schema policy.",
+        "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+        "line_number": 146,
+        "reference_id": "openai-agents-python",
+        "relative_path": "src/agents/run_state.py",
+        "version": "0.19.0"
+      },
+      {
+        "classification": "PRIMARY_SDK_SOURCE",
+        "excerpt": "\"1.0\": \"Initial RunState snapshot format for HITL pause/resume flows.\",",
+        "file_sha256": "41e40ea2a74f503d7a5835f06226e65fd119124a14ee9d43e6a6872e7961482b",
+        "line_number": 156,
+        "reference_id": "openai-agents-python",
+        "relative_path": "src/agents/run_state.py",
+        "version": "0.19.0"
+      },
+      {
+        "classification": "PRIMARY_SDK_SOURCE",
+        "excerpt": "| [Run item lifecycle](run-item-lifecycle.md) | Model output processing, new item types, stream events, replay conversion, session persistence, or RunState serialization |",
+        "file_sha256": "eca16af11e88a46e5ec721e5d1975c5cd8bf69003a388db44312856984a65111",
+        "line_number": 23,
+        "reference_id": "openai-agents-python",
+        "relative_path": ".agents/references/README.md",
+        "version": "0.19.0"
+      },
+      {
+        "classification": "PRIMARY_SDK_SOURCE",
+        "excerpt": "| [RunState schema and resume boundary](runstate-schema.md) | Serialized state, schema versions, approvals, agent identity, or durable resume data |",
+        "file_sha256": "eca16af11e88a46e5ec721e5d1975c5cd8bf69003a388db44312856984a65111",
+        "line_number": 27,
+        "reference_id": "openai-agents-python",
+        "relative_path": ".agents/references/README.md",
+        "version": "0.19.0"
+      },
+      {
+        "classification": "PRIMARY_SDK_SOURCE",
+        "excerpt": "- Context serialization is a separate durability decision. Read [RunState schema and resume boundary](runstate-schema.md) before persisting custom context objects, approvals, usage, or nested tool input.",
+        "file_sha256": "6f6e677a59bc208fbda8f8ca050fd5a9e297d18b5cfaf16fb595dca97b7d10ce",
+        "line_number": 26,
+        "reference_id": "openai-agents-python",
+        "relative_path": ".agents/references/agent-definition-and-run-context.md",
+        "version": "0.19.0"
+      },
+      {
+        "classification": "PRIMARY_SDK_SOURCE",
+        "excerpt": "Use this reference for changes involving multi-turn input, sessions, `conversation_id`, `previous_response_id`, `auto_previous_response_id`, compaction, retries, `call_model_input_filter`, or `RunState` resume.",
+        "file_sha256": "0d5a6bb872b662947fd2f538365501fc4267087dfa3c69fe482976106559859a",
+        "line_number": 3,
+        "reference_id": "openai-agents-python",
+        "relative_path": ".agents/references/conversation-state-ownership.md",
+        "version": "0.19.0"
+      },
+      {
+        "classification": "PRIMARY_SDK_SOURCE",
+        "excerpt": "| `RunState` resume | Serialized Agents SDK run | Resume the same interrupted run; this is not a new conversation strategy |",
+        "file_sha256": "0d5a6bb872b662947fd2f538365501fc4267087dfa3c69fe482976106559859a",
+        "line_number": 15,
+        "reference_id": "openai-agents-python",
+        "relative_path": ".agents/references/conversation-state-ownership.md",
+        "version": "0.19.0"
+      }
+    ],
+    "query_sha256": "20176a4e03cbf8462b7fe467c1a677aca67bed606b7834e8284ab8a4184dedc3",
+    "reference_ids": [
+      "openai-agents-python"
+    ],
+    "scanned_files": 4,
+    "skipped_non_text_files": 0,
+    "skipped_oversized_files": 0,
+    "truncated": true
+  },
+  "started_at": "2026-07-29T03:41:43.756542Z",
+  "state": "PASSED"
+}

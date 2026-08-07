@@ -1,0 +1,88 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021117025398Z-c257b64e",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:11:17.106709Z",
+    "created_at": "2026-07-30T02:11:17.025693Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP032"
+  },
+  "checks": {
+    "coding_contract_has_no_recovery": true,
+    "coding_contract_type_exact": true,
+    "coding_sdk_received_no_recovery_handler": true,
+    "generic_gateway_has_no_replenishment_domain_dependency": true,
+    "invalid_coding_contract_failed": true,
+    "invalid_coding_contract_not_recovered": true,
+    "invalid_coding_failure_contract_exact": true,
+    "no_tool_or_mcp_events": true,
+    "one_model_turn_per_scenario": true,
+    "recovery_event_strategy_exact": true,
+    "recovery_scope_is_contract_specific": true,
+    "references_unchanged": true,
+    "replenishment_contract_recovered": true,
+    "replenishment_contract_type_exact": true,
+    "replenishment_formula_exact": true,
+    "replenishment_recovery_registered": true,
+    "replenishment_recovery_strategy_exact": true,
+    "two_runtime_output_contracts_registered": true,
+    "valid_coding_contract_succeeded": true
+  },
+  "coding_invalid": {
+    "detail_type": "FakeModelBehaviorError",
+    "error_code": "SDK_RUN_FAILED",
+    "event_types": [
+      "agent.started",
+      "model.started",
+      "model.completed"
+    ],
+    "handler_present": false,
+    "runner_calls": 1
+  },
+  "coding_valid": {
+    "event_types": [
+      "agent.started",
+      "model.started",
+      "model.completed",
+      "agent.completed"
+    ],
+    "handler_present": false,
+    "runner_calls": 1
+  },
+  "contract_count": 2,
+  "contracts": [
+    {
+      "contract_name": "CodingAgentResult",
+      "invalid_final_output_recovery": false,
+      "output_type": "CodingAgentResult",
+      "recovery_strategy": null
+    },
+    {
+      "contract_name": "StoreReplenishmentReviewResult",
+      "invalid_final_output_recovery": true,
+      "output_type": "StoreReplenishmentReviewResult",
+      "recovery_strategy": "deterministic-invalid-final-output-fallback"
+    }
+  ],
+  "replenishment_invalid": {
+    "event_types": [
+      "agent.started",
+      "model.started",
+      "model.completed",
+      "agent.completed",
+      "agent.output.recovered"
+    ],
+    "handler_present": true,
+    "runner_calls": 1,
+    "total_reorder_units": 19
+  },
+  "schema_version": "okcanvas-step032-acceptance-v1",
+  "state": "PASSED"
+}

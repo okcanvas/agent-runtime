@@ -1,0 +1,197 @@
+{
+  "schema_version": "okcanvas-constitution-gate-catalog-v1",
+  "gates": [
+    {
+      "gate_id": "GATE-CONSTITUTION-BUNDLE-COMPLETE",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-CLAUSE-COVERAGE-100",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-TRACEABILITY-COMPLETE",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-AMENDMENT-VALID",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-NO-UNCLASSIFIED-TOPLEVEL-PACKAGE",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-NO-HARDCODED-OLD-PACKAGE-PATH",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-WHEEL-CONTENTS-EXACT",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-EDITABLE-INSTALL",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-CLIENT-NO-SERVER-IMPORT",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-PROTOCOLS-RUNTIME-INDEPENDENT",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-TRANSPORT-IMPORT-DIRECTION",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-APPLICATION-NO-CONCRETE-ADAPTER",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-AGENT-NO-TRANSPORT-FRAMEWORK",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-DOMAIN-ISOLATION",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-SERVICE-NO-CONTROL-API-IMPORT",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-TRANSPORT-NO-STORE-COORDINATOR",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-MODULE-CYCLES-ZERO",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-PRODUCT-CLIENT-SERVICE-API-ONLY",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-CLIENT-CREDENTIAL-BOUNDARY",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-TRANSPORT-NO-BUSINESS-LOGIC",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-DUPLICATE-USE-CASE-REMOVED",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-BOOTSTRAP-WIRING-ONLY",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-SSE-SUBSCRIPTION-PORT",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-WEBSOCKET-NO-AUTHORITY-ESCALATION",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-COMPAT-SYMBOL-IDENTITY",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-LAUNCHER-REGISTRY-COMPLETE",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-REFERENCE-INTEGRITY",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-MIGRATION-MAP-COMPLETE",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-FULL-REGRESSION",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-WINDOWS-LIVE",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-FRESH-ZIP",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    },
+    {
+      "gate_id": "GATE-ISSUE-REGISTRY-COMPLETE",
+      "mandatory": true,
+      "implementation_status": "TO_BE_IMPLEMENTED_OR_BOUND",
+      "failure_effect": "STEP_FAIL_CLOSED"
+    }
+  ]
+}

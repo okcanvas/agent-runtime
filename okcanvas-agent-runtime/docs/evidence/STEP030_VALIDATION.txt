@@ -1,0 +1,70 @@
+STEP030_COMMERCE_SNAPSHOT_NON_EMPTY_INVENTORY
+Status: WINDOWS_LIVE_ACCEPTED
+Version: 2.10.0
+Date: 2026-07-30
+
+Code-audited finding
+- StoreReplenishmentInput.items had only max_length=100.
+- Direct validation accepted items=[].
+- Direct deterministic calculation returned READY, reviewed_skus=0, total_reorder_units=0.
+- Empty source scope therefore became indistinguishable from a valid covered inventory snapshot.
+
+Implemented boundary
+- StoreReplenishmentInput.items now requires min_length=1 and max_length=100.
+- Empty inventory returns HTTP 502, COMMERCE_SNAPSHOT_INVALID, retryable=false.
+- Direct deterministic recovery returns INSUFFICIENT_DATA rather than false READY.
+- Rejection occurs before protected payload, Submission, Task, Run, Event, Artifact, Evaluation, or model execution.
+
+Deterministic acceptance
+- STEP030 acceptance: 15/15 PASS.
+- Loopback source reads: 1.
+- Source writes: 0.
+- Product/Evaluation final counts: all 0.
+- Artifact files: 0.
+- Protected payload files: 0.
+- Model gateway calls: 0.
+- Source credential and invalid snapshot identity absent from SQLite.
+- Reference integrity unchanged.
+- Cleanup: COMPLETED.
+
+Windows gate
+Run sh_run_step030_acceptance.cmd and require:
+- state=PASSED;
+- all 15 checks=true;
+- response HTTP 502 / COMMERCE_SNAPSHOT_INVALID / retryable=false;
+- source.read_count=1;
+- source.write_count=0;
+- all final counts=0;
+- artifact_count=0;
+- protected_payload_file_count=0;
+- gateway_call_count=0;
+- cleanup_state=COMPLETED.
+
+Full regression
+- compileall: PASS.
+- pytest: 355 passed.
+- STEP030: 15/15 PASS, cleanup COMPLETED.
+- STEP029: 18/18 PASS, cleanup COMPLETED.
+- STEP028: 15/15 PASS, cleanup COMPLETED.
+- STEP027: 24/24 PASS, cleanup COMPLETED.
+- STEP026: 22/22 PASS, cleanup COMPLETED.
+- STEP025: 21/21 PASS, cleanup COMPLETED.
+- STEP024B: 7/7 PASS, cleanup COMPLETED.
+- STEP024: 18/18 PASS, cleanup COMPLETED.
+- STEP020 approve/reject: PASS, cleanup COMPLETED.
+- STEP023 operator CLI: 15/15 PASS, cleanup COMPLETED.
+- immutable Reference verification: 4/4 PASS.
+- direct /reference imports: 0 violations.
+
+Post-package Windows finding
+- The first Windows command did not execute this acceptance because the packaged launcher invoked PATH python.
+- Failure: ModuleNotFoundError for fastapi before AcceptanceWorkspace creation.
+- Superseded launcher package: STEP030A_WINDOWS_VENV_LAUNCHER_FIX 2.10.1.
+
+Windows closure
+- User-reported sh_run_step030_acceptance result: state PASSED, 15/15 checks.
+- HTTP 502 / COMMERCE_SNAPSHOT_INVALID / retryable=false.
+- Source reads 1, writes 0.
+- Product/Evaluation counts, Artifacts, protected payloads, and model calls all 0.
+- References unchanged; cleanup COMPLETED.
+- Compact Evidence: docs/evidence/STEP030_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json.

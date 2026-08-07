@@ -1,0 +1,40 @@
+{
+  "limitations": {
+    "api_worker_physical_split_implemented": false,
+    "distributed_session_history_implemented": false,
+    "distributed_worker_lease_implemented": false,
+    "object_storage_live_server_executed": false,
+    "production_database_migration_executed": false
+  },
+  "next_action": "NEW_READ_ONLY_EXHAUSTIVE_AUDIT",
+  "next_step_selected": false,
+  "product_runtime_source_changed_by_promotion_packaging": false,
+  "promotion": "CURRENT_PROMOTED_BASELINE",
+  "real_postgresql": {
+    "checks": "19/19",
+    "evidence": "okcanvas-agent-runtime/docs/evidence/windows/STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE.json",
+    "isolated_schema_cleanup": true,
+    "provenance": "USER_PROVIDED_FULL_JSON",
+    "server_version_num": 180004,
+    "state": "PASSED",
+    "tables": "15/15"
+  },
+  "runtime_step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.74.1",
+  "schema_version": "okcanvas-workspace-final-approval-v2",
+  "state": "WINDOWS_DETERMINISTIC_LIVE_OPENAI_AND_REAL_POSTGRESQL_ACCEPTED",
+  "step": "WORKSPACE_STEP008R4R6_RUNTIME_STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "version": "0.8.4-r6",
+  "windows_deterministic": {
+    "checks": "33/33",
+    "provenance": "USER_REPORTED_CURRENT_STEP_PASS",
+    "raw_payload_retained": false,
+    "state": "PASSED"
+  },
+  "windows_live_openai": {
+    "checks": "29/29",
+    "provenance": "USER_REPORTED_CURRENT_STEP_PASS",
+    "raw_payload_retained": false,
+    "state": "PASSED"
+  }
+}

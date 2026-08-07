@@ -1,0 +1,44 @@
+{
+  "schema_version": "okcanvas-step075a-windows-live-failure-summary-v1",
+  "step": "STEP075A_WINDOWS_DOCKER_TMPFS_NORMALIZATION_AND_FAILURE_EVIDENCE_FIX",
+  "version": "2.55.1",
+  "state": "FAILED",
+  "deterministic_acceptance": {
+    "passed_checks": 31,
+    "total_checks": 31
+  },
+  "live_acceptance": {
+    "passed_checks": 13,
+    "total_checks": 29
+  },
+  "acceptance_id": "20260801T224436637152Z-0df00d2e",
+  "acceptance_workspace_state": "PRESERVED",
+  "product_database_relative_path": "databases/product.sqlite3",
+  "run_id": "run_961686626d024afe84a6ba5553145b9b",
+  "terminal_status": "FAILED",
+  "model": "gpt-4.1",
+  "model_calls": 1,
+  "event_sequence_tail": [
+    "model.started",
+    "model.completed",
+    "tool.started",
+    "tool.failed",
+    "agent.failed",
+    "run.failed",
+    "payload.retention.applied"
+  ],
+  "tool_failure": {
+    "tool_id": "sandbox_project_readonly_inspect",
+    "code": "DOCKER_COMMAND_FAILED",
+    "detail_type": "SandboxDockerError",
+    "operation": null,
+    "return_code": null,
+    "stderr_category": null,
+    "cleanup_attempted": null,
+    "cleanup_completed": null,
+    "orphan_count": null,
+    "arguments_persisted": false,
+    "result_persisted": false
+  },
+  "conclusion": "The STEP075A tmpfs semantic fix did not close the distinct live failure. A Docker CLI command returned non-zero, but the persisted evidence did not identify the command operation or bounded return classification. STEP075B adds operation-level bounded failure evidence without claiming the underlying command root cause."
+}

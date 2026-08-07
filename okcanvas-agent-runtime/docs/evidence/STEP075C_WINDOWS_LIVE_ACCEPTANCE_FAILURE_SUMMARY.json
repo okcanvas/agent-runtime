@@ -1,0 +1,49 @@
+{
+  "schema_version": "okcanvas-step075c-windows-live-failure-summary-v1",
+  "step": "STEP075C_WINDOWS_TMPFS_TAR_STREAM_MATERIALIZATION_FIX",
+  "version": "2.55.3",
+  "state": "FAILED",
+  "live_acceptance": {
+    "passed_checks": 13,
+    "total_checks": 29,
+    "terminal_status": "FAILED",
+    "model": "gpt-4.1",
+    "model_calls": 1,
+    "tool_calls": 0
+  },
+  "event_sequence_tail": [
+    "model.started",
+    "model.completed",
+    "tool.started",
+    "agent.failed",
+    "run.failed",
+    "payload.retention.applied"
+  ],
+  "tool_failed_event_present": false,
+  "agent_failure": {
+    "code": "SDK_RUN_FAILED",
+    "detail_type": "UserError",
+    "retryable": true
+  },
+  "run_failure": {
+    "code": "SDK_RUN_FAILED",
+    "detail_type": "UserError",
+    "retryable": true
+  },
+  "acceptance_workspace": {
+    "state": "PRESERVED",
+    "relative_database_path": "databases/product.sqlite3"
+  },
+  "root_cause": {
+    "status": "CODE_AND_DIRECT_REPRODUCTION_CONFIRMED",
+    "summary": "SubprocessDockerCommandRunner passed both stdin=subprocess.PIPE and input=input_bytes to subprocess.run. Python raises ValueError before the Docker process starts.",
+    "exception_type": "ValueError",
+    "exception_text_recorded_in_product_evidence": false,
+    "docker_process_started": false
+  },
+  "security": {
+    "api_key_persisted": false,
+    "raw_workspace_persisted": false,
+    "raw_exception_message_persisted": false
+  }
+}

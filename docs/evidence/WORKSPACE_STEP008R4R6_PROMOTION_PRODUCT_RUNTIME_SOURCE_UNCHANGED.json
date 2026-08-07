@@ -1,0 +1,12 @@
+{
+  "after_sha256": "21bc49fecd26bc4bce78afb616567def95dfd255c3e001ed09e2ca36883216d0",
+  "before_sha256": "21bc49fecd26bc4bce78afb616567def95dfd255c3e001ed09e2ca36883216d0",
+  "comparison_baseline_archive_sha256": "2eddf1faa1c1d593548872b5d02522438b0984a08a89fc65e02fbe9353164706",
+  "promotion_packaging_scope": "GOVERNANCE_SPEC_TEST_CURRENT_DOCUMENT_AND_RETAINED_EVIDENCE_ONLY",
+  "python_file_count": 347,
+  "schema_version": "okcanvas-workspace-product-runtime-source-unchanged-v1",
+  "scope": "okcanvas-agent-runtime/okcanvas_agent_runtime/**/*.py",
+  "step": "WORKSPACE_STEP008R4R6_RUNTIME_STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "unchanged": true,
+  "version": "0.8.4-r6"
+}

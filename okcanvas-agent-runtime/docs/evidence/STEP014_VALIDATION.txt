@@ -1,0 +1,29 @@
+STEP014_ACCEPTANCE_WORKSPACE_AND_EVIDENCE_LIFECYCLE
+Version: 1.4.0
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING
+
+Executed on the final source tree:
+- python -m compileall -q src scripts tests: PASS
+- PYTHONPATH=src pytest -q: 219 passed
+- STEP005 Core Store acceptance: PASS, workspace cleanup COMPLETED
+- STEP006 Reference Catalog acceptance: PASS, workspace cleanup COMPLETED
+- STEP007 Generic Agent deterministic acceptance: PASS, workspace cleanup COMPLETED
+- STEP008 Control API/SSE acceptance: PASS, workspace cleanup COMPLETED
+- STEP009 read-only MCP deterministic acceptance: PASS, workspace cleanup COMPLETED
+- STEP010 deterministic Evaluation acceptance: PASS, workspace cleanup COMPLETED
+- STEP011 Catalog API acceptance: PASS, workspace cleanup COMPLETED
+- STEP012 recorded Run evaluation acceptance: PASS, workspace cleanup COMPLETED
+- STEP013 Suite/Baseline acceptance: PASS, workspace cleanup COMPLETED
+- STEP014 acceptance workspace lifecycle: PASS, 12/12 checks
+- direct /reference import verification: PASS
+- immutable Reference verification: 4/4 PASS
+
+Reference adoption:
+- ADAPT SDK UnixLocal sandbox temporary-root ownership and release-before-delete ordering.
+- ADAPT MCP manager reverse-order cleanup boundary.
+- REJECT swallowed cleanup errors as acceptance success.
+- REJECT direct /reference import.
+
+Not executed:
+- Windows sh_run_step014_acceptance.cmd. acceptance_workspace_windows_live_accepted remains false.
+- ruff was not executed because availability was not established for this validation.

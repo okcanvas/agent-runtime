@@ -1,0 +1,15 @@
+[
+  {
+    "aliases": [
+      "OPS"
+    ],
+    "department_code": "OPS",
+    "department_id": "department.operations",
+    "manager_employee_id": "employee-b001",
+    "name": "운영팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-b"
+  }
+]

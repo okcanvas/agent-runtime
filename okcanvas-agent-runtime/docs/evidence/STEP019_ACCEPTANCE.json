@@ -1,0 +1,66 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T081749913103Z-35115147",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T08:17:50.667693Z",
+    "created_at": "2026-07-29T08:17:49.913988Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP019"
+  },
+  "checks": {
+    "cleanup_ledger_updated": true,
+    "console_remains_read_only": true,
+    "expired_cleanup_deleted_payload": true,
+    "failure_payload_retained": true,
+    "failure_retention_deadline_recorded": true,
+    "failure_run_terminalized": true,
+    "new_generation_started": true,
+    "old_generation_fenced": true,
+    "recovery_attempt_bounded_and_counted": true,
+    "recovery_event_recorded": true,
+    "recovery_run_started_once": true,
+    "recovery_state_started": true,
+    "references_unchanged": true,
+    "stale_claim_recovered": true,
+    "success_payload_deleted": true,
+    "success_payload_existed_before_execution": true,
+    "success_retention_event_recorded": true,
+    "success_run_terminalized": true
+  },
+  "cleanup": {
+    "deleted": 1,
+    "failed": 0,
+    "retained": 0,
+    "scanned": 1,
+    "schema_version": "okcanvas-protected-payload-retention-result-v1",
+    "submission_ids": [
+      "submission_14d24060b214424eb40dba541d7a7f0c"
+    ]
+  },
+  "failure_submission_id": "submission_14d24060b214424eb40dba541d7a7f0c",
+  "recovery": {
+    "claim_attempts": 2,
+    "event_types": [
+      "run.created",
+      "run.execution.recovered",
+      "run.started"
+    ],
+    "new_started": true,
+    "old_started": false,
+    "recovered": 1,
+    "recovery_count": 1,
+    "run_id": "run_6a837b95f871411caa1a8ddd59f87c42",
+    "state": "EXECUTION_STARTED",
+    "submission_id": "submission_5c06e7641be34e7b85b32dd811db07f0"
+  },
+  "schema_version": "okcanvas-step019-acceptance-v1",
+  "state": "PASSED",
+  "success_submission_id": "submission_3b41d9e070344e249808213be53eda21"
+}

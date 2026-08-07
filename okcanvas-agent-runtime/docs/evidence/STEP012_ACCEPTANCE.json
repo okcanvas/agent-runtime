@@ -1,0 +1,43 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021120656276Z-89983d07",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:11:20.997852Z",
+    "created_at": "2026-07-30T02:11:20.656553Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP012"
+  },
+  "artifact_id": "artifact_5d46efa6849e4fd28528b11d633dc33d",
+  "checks": {
+    "api_auth_required": true,
+    "api_evaluation_created": true,
+    "artifact_verified": true,
+    "canonical_events_loaded": true,
+    "definition_identity_verified": true,
+    "history_survives_restart": true,
+    "non_terminal_run_rejected": true,
+    "output_contract_validated": true,
+    "product_event_journal_unchanged": true,
+    "raw_output_not_persisted": true,
+    "recorded_run_loaded": true,
+    "references_unchanged": true,
+    "tamper_created_no_result": true,
+    "tampered_artifact_rejected": true,
+    "tool_calls_reconstructed": true,
+    "usage_reconstructed": true
+  },
+  "completed_at": "2026-07-30T02:11:20.997033Z",
+  "evaluation_id": "eval_402bf61df61541e1ae8b8e63984f1a31",
+  "history_count": 2,
+  "run_id": "run_2ed82fa69491416cb0b560bcc0a6471a",
+  "schema_version": "okcanvas-step012-acceptance-v1",
+  "started_at": "2026-07-30T02:11:20.656237Z",
+  "state": "PASSED"
+}

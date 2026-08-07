@@ -1,0 +1,34 @@
+STEP023A_LIVE_SDK_APPROVAL_RESUME_TURN_BUDGET_AND_DIAGNOSTICS
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Baseline version: 2.3.1
+
+Observed Windows failure:
+- STEP021 passed and cleaned up.
+- STEP020 live child did not create decision-result.json.
+- parent FileNotFoundError masked the child exception.
+
+Confirmed root cause from immutable OpenAI Agents Python 0.19.0 reference:
+- RunState serializes current_turn and max_turns.
+- Runner resumes with run_state._max_turns.
+- STEP020 prepare had max_turns=1, while approval/rejection finalization needs a second model turn.
+
+Correction:
+- LOCAL_TOOL_APPROVAL_MAX_TURNS=2.
+- child prepare/decision exceptions always write result envelopes.
+- parent validates return code and result before consuming child output.
+- redacted stdout/stderr and return code are preserved in child-process Evidence.
+- STEP022 safe summary now surfaces error_type, error, and preserved_path.
+- STEP022 child logs redact API/admin/submitter/payload secrets before writing.
+
+Validation:
+- compileall: PASS
+- full pytest: 299 passed
+- STEP020 deterministic approve/reject: PASS, cleanup COMPLETED
+- STEP021 Inbox: PASS, cleanup COMPLETED
+- STEP022 deterministic closure: 6/6 PASS, cleanup COMPLETED
+- STEP023 loopback operator: 15/15 PASS, cleanup COMPLETED
+- direct /reference import verification: PASS
+- reference integrity: 4/4 PASS
+
+Windows STEP023 operator CLI acceptance was reported PASSED 15/15.
+STEP020 installed-SDK live approval closure must be rerun with sh_run_step022_live_closure.cmd.

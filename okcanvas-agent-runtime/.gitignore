@@ -1,0 +1,84 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+dist/
+build/
+*.egg-info/
+.env
+/artifacts/
+!docs/evidence/
+.env.local
+.env.local.cmd
+docs/evidence/step002-live/
+
+docs/evidence/step003-live/
+
+docs/evidence/step004-live/
+docs/evidence/step007-live/
+.local/
+
+docs/evidence/step008-live/
+
+docs/evidence/step009-live/
+
+docs/evidence/step024-live/
+
+docs/evidence/step071-live/
+
+# STEP072 local provider acceptance evidence
+docs/evidence/step072-live/
+docs/evidence/step072a-live/
+
+# STEP072B local provider acceptance evidence
+docs/evidence/step072b-live/
+
+# STEP075 local model and Docker acceptance evidence
+docs/evidence/step075-live/
+
+# STEP075A local live evidence
+docs/evidence/step075a-live/
+docs/evidence/step075b-live/
+
+docs/evidence/step075c-live/
+
+docs/evidence/step075d-live/
+docs/evidence/step075e-live/
+
+docs/evidence/step075f-live/
+
+docs/evidence/step075g-live/
+
+# STEP076 local immutable project snapshot live evidence
+docs/evidence/step076-live/
+
+# STEP077 local binary ingress lifecycle live evidence
+docs/evidence/step077-live/
+
+docs/evidence/step078-live/
+docs/evidence/step079-live/
+docs/evidence/step079a-live/
+
+# STEP081/STEP081A local Windows acceptance evidence
+docs/evidence/step081-live/
+docs/evidence/step081a-live/
+docs/evidence/step081b-live/
+docs/evidence/step081c-live/
+docs/evidence/step081c-local/
+docs/evidence/step081d-live/
+docs/evidence/step081d-local/
+
+docs/evidence/step082b-local/
+docs/evidence/step083-local/
+docs/evidence/step084-local/
+docs/evidence/step085-local/
+docs/evidence/step086-local/
+
+docs/evidence/step086r1-local/
+
+# Retained Product CLI dist is an accepted source artifact.
+# Keep these files trackable in a fresh repository even though dist/ is ignored above.
+!clients/cli/dist/
+!clients/cli/dist/**

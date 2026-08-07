@@ -1,0 +1,29 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Sha256",
+      "type": "string"
+    },
+    "utf8_bytes": {
+      "maximum": 1000000,
+      "minimum": 0,
+      "title": "Utf8 Bytes",
+      "type": "integer"
+    },
+    "characters": {
+      "maximum": 1000000,
+      "minimum": 0,
+      "title": "Characters",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "sha256",
+    "utf8_bytes",
+    "characters"
+  ],
+  "title": "LocalTextFingerprintOutput",
+  "type": "object"
+}

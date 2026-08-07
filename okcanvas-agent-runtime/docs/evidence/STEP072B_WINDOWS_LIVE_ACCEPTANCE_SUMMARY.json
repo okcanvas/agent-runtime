@@ -1,0 +1,61 @@
+{
+  "schema_version": "okcanvas-step072b-windows-live-acceptance-summary-v1",
+  "step": "STEP072B_WINDOWS_CRLF_AND_LOCAL_ENV_FORWARDING_FIX",
+  "version": "2.52.2",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "source": "User-reported real Windows command output",
+  "deterministic": {
+    "state": "PASSED",
+    "passed_checks": 24,
+    "total_checks": 24,
+    "focused_tests": {
+      "passed": 51,
+      "failed": 0
+    },
+    "historical_tests": {
+      "passed": 41,
+      "failed": 0
+    },
+    "node_tests": {
+      "passed": 14,
+      "failed": 0
+    },
+    "external_network_calls": 0,
+    "model_calls": 0
+  },
+  "live": {
+    "state": "PASSED",
+    "passed_checks": 17,
+    "total_checks": 17,
+    "model": "gpt-4.1",
+    "model_calls": 1,
+    "terminal_status": "SUCCEEDED",
+    "run_id": "run_b0709b2cf9d3496d9900a066425fa008",
+    "usage": {
+      "input_tokens": 827,
+      "output_tokens": 420,
+      "total_tokens": 1247
+    },
+    "python_pycache_prefix_active": true,
+    "python_pycache_prefix_inside_project": false,
+    "local_environment_forwarded_to_current_interpreter": true,
+    "child_live_environment_ready": true,
+    "sdk_trace_export_observed": false,
+    "trace_error_markers": []
+  },
+  "security": {
+    "api_key_value_recorded": false,
+    "api_key_in_captured_output": false,
+    "api_key_persisted": false,
+    "raw_attachment_persisted": false,
+    "workspace_cleanup_completed": true
+  },
+  "closure": {
+    "windows_crlf_collision_fixture_exact_bytes": true,
+    "bytecode_isolation_environment_present": true,
+    "bytecode_isolation_active_in_interpreter": true,
+    "bytecode_isolation_prefix_outside_project": true,
+    "data_only_local_environment_loader_used": true,
+    "provider_trace_export_diagnostic_absent": true
+  }
+}

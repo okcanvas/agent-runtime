@@ -1,0 +1,10 @@
+mode: governed-read-only-function-tool
+local_tools:
+  - local_text_fingerprint
+needs_approval: false
+mcp: false
+handoffs: false
+session: false
+writes: false
+network: false
+shell: false

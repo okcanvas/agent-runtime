@@ -1,0 +1,79 @@
+STEP050_SQLITE_SESSION_NATIVE_MCP_COMPOSITION_V1
+Version: 2.30.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+STEP049 WINDOWS CLOSURE
+- corrected-package user-reported state: PASSED
+- checks: 33/33 true
+- Session: 1/4 -> 2/8; final history item count 8
+- gateway: direct run 0; outer/nested streamed 2/2; Agent.as_tool construction/invocation 2/2; SQLiteSession instances/closes 4/4
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 2/2/2/4/40/2/1
+- protected payload files: 0; Evaluation PASSED; References unchanged
+- cleanup: COMPLETED in 1 attempt
+- prior failed cleanup evidence remains preserved separately
+- STEP049 state: WINDOWS_LIVE_ACCEPTED
+
+SOURCE TREE VALIDATION
+- python compileall: PASS
+- focused Session/MCP/Agent-as-Tool regression: 38 passed
+- full pytest: 501 passed
+- STEP050 deterministic acceptance: 31/31 PASS, cleanup COMPLETED
+- STEP049 deterministic acceptance: 33/33 PASS, cleanup COMPLETED
+- STEP048 deterministic acceptance: 32/32 PASS, cleanup COMPLETED
+- STEP047 deterministic acceptance: 29/29 PASS, cleanup COMPLETED
+- STEP046 deterministic acceptance: 27/27 PASS, cleanup COMPLETED
+- STEP045 deterministic acceptance: 28/28 PASS, cleanup COMPLETED
+- STEP043 SQLite Session acceptance: 29/29 PASS, cleanup COMPLETED
+- STEP042 Agent-as-Tool acceptance: 29/29 PASS, cleanup COMPLETED
+- STEP030A Windows launcher audit: 8/8 PASS; 55 launchers; 0 violations
+- immutable Reference integrity: 4/4 PASS
+- executable source direct /reference imports: 0
+
+STEP050 ACCEPTANCE EXACT RESULTS
+- checks: 31/31
+- Session metadata: 1/4 -> 1/4 -> 2/8; final history item count 8
+- Runner.run: 0
+- Runner.run_streamed: 3
+- model calls: 3
+- MCP runtime created / manager enters / manager exits / Tool calls: 3/3/3/3
+- SQLiteSession instances/closes: 6/6
+- manager cleanup ordering: manager_exit_2 precedes all three rollback_pop_2 operations
+- Event counts: 14/11/14, total 39
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 3/3/3/3/39/2/1
+- protected payload files: 1
+- Evaluation: PASSED
+- Reference unchanged
+- acceptance workspace cleanup: COMPLETED in 1 attempt
+
+WINDOWS STATUS
+- STEP049: WINDOWS_LIVE_ACCEPTED from corrected-package complete 33/33 result
+- STEP050: deterministic accepted; fresh Windows launcher result pending
+
+PACKAGE PLAN
+- canonical root: okcanvas-agent-runtime
+- forbidden files: .venv, .pytest_cache, __pycache__, *.pyc, local acceptance workspaces, generated product/evaluation/session databases
+- final package must be independently extracted and repeat compileall, full pytest, STEP050/049/048/047/046, STEP030A, Reference integrity and no-reference-import validation
+
+INDEPENDENT CANDIDATE ZIP EXTRACTION VALIDATION
+- candidate ZIP canonical root: 1
+- candidate ZIP entries: 2,506
+- candidate ZIP forbidden files: 0
+- fresh extraction compileall: PASS
+- fresh extraction full pytest split: 181 + 173 + 147 = 501 passed
+- fresh extraction STEP050: 31/31 PASS; cleanup COMPLETED
+- fresh extraction STEP049: 33/33 PASS; cleanup COMPLETED
+- fresh extraction STEP048/047/046: 32/29/27 checks PASS; cleanup COMPLETED
+- fresh extraction STEP030A: 8/8 PASS; 55 launchers; 0 violations
+- fresh extraction Reference integrity: 4/4 PASS
+- fresh extraction direct /reference imports: 0
+- final package is rebuilt from the exact same code/tests/Reference tree with only this validation record extended; entry hashes are compared against the candidate package.
+
+FINAL ZIP EXTRACTION VALIDATION
+- final ZIP fresh extraction compileall: PASS
+- final ZIP full pytest split: 181 + 173 + 147 = 501 passed
+- final ZIP STEP050: 31/31 PASS; cleanup COMPLETED
+- final ZIP STEP049: 33/33 PASS; cleanup COMPLETED
+- final ZIP STEP030A: 8/8 PASS; 55 launchers; 0 violations
+- final ZIP Reference integrity: 4/4 PASS
+- final ZIP direct /reference imports: 0
+- final rebuild changes only this Validation file; all code, tests, specs, Reference and other documents remain byte-identical to the independently validated candidate tree.

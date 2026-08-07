@@ -1,0 +1,33 @@
+{
+  "catalog_revision": 500,
+  "example_sot": "COMMITTED_JSON_FIXTURES",
+  "expected_counts": {
+    "capabilities": 30,
+    "clients": 120,
+    "departments": 13,
+    "employees": 48,
+    "glossary": 80,
+    "positions": 12,
+    "products": 120,
+    "projects": 24,
+    "relations": 893,
+    "relations_minimum": 200,
+    "systems": 10
+  },
+  "files": {
+    "capabilities": "capabilities.json",
+    "clients": "clients.json",
+    "departments": "departments.json",
+    "employees": "employees.json",
+    "glossary": "glossary.json",
+    "positions": "positions.json",
+    "products": "products.json",
+    "projects": "projects.json",
+    "relations": "relations.json",
+    "systems": "systems.json"
+  },
+  "fixture_role": "EXECUTABLE_CONSTRUCTION_GUIDE",
+  "production_sot": "DATABASE",
+  "schema_version": "okcanvas-organization-context-reference-fixture-v1",
+  "tenant_id": "tenant-a"
+}

@@ -1,0 +1,41 @@
+STEP062B_WINDOWS_TYPESCRIPT_DIRECT_COMPILER_PORTABILITY_FIX
+version=2.42.2
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+USER-REPORTED WINDOWS EVIDENCE
+- STEP062 first run: FAILED 27/29.
+- Failed checks: node_typescript_build_pass, node_tests_pass.
+- STEP062A second run: FAILED 16/18.
+- Embedded corrected STEP062: FAILED 28/29.
+- Remaining executable failure: node_typescript_build_pass.
+- Exact second build tail: 배치 파일이 아닙니다.
+- Node tests on second run: PASS.
+- Focused portability tests and Python compileall on second run: PASS.
+
+CODE-AUDITED CORRECTION
+- Acceptance TypeScript build no longer invokes npm.cmd, cmd.exe, call, npx.cmd or another batch file.
+- PATH tsc is used only as a locator.
+- A standard Windows global npm shim <prefix>\\tsc.cmd resolves to the filesystem-verified JavaScript compiler <prefix>\\node_modules\\typescript\\bin\\tsc.
+- Actual build command: node <verified compiler> -p tsconfig.json.
+- Build command rejects .cmd/.bat compiler targets.
+- Explicit sorted Node test files remain unchanged.
+- No npm install, dependency, registry access or vendored compiler was added.
+- Product target execution remains based on committed dist and does not require TypeScript.
+- STEP062 orchestration Runtime/policy/Agent/binding/Invocation/Artifact/usage/cancellation/aggregation files were not changed.
+
+DETERMINISTIC VALIDATION
+- Corrected STEP062 acceptance: 29/29 PASS.
+- Corrected STEP062A acceptance: 18/18 PASS.
+- STEP062B acceptance: 22/22 PASS.
+- STEP062B focused tests: 5/5 PASS.
+- Python full regression: 607/607 PASS, executed in five independent file groups after the monolithic run reached 83% without failure and exceeded the environment time limit.
+- Python compileall: PASS.
+- TypeScript direct compiler build: PASS.
+- Node tests: 14/14 PASS.
+- Reference integrity: 4/4 PASS.
+- Direct /reference imports: 0 violations.
+- npm pack dry-run: PASS, 23 files, 24,347 bytes packed, 110,377 bytes unpacked.
+- Real OpenAI model calls: not required and not executed.
+
+WINDOWS CLOSURE
+Run sh_run_step062b_acceptance.cmd from a fresh extraction. Expected: STEP062B 22/22, embedded corrected STEP062A 18/18, embedded corrected STEP062 29/29. Windows live acceptance remains false until the complete real Windows JSON is reported.

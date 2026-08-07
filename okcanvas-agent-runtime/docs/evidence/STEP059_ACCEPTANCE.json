@@ -1,0 +1,71 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260731T125509297502Z-b76f4497",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-31T12:55:09.916013Z",
+    "created_at": "2026-07-31T12:55:09.297815Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [
+      {
+        "closed": true,
+        "error": null,
+        "name": "loopback-control-api"
+      }
+    ],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP059"
+  },
+  "checks": {
+    "actual_project_tool_executed_once": true,
+    "answer_first_result_contains_relative_evidence": true,
+    "artifact_contains_no_absolute_workspace": true,
+    "bounded_project_files_inspected": true,
+    "capability_limits_are_visible": true,
+    "cleanup_completed": true,
+    "excluded_dependency_not_read": true,
+    "final_product_counts_exact": true,
+    "node_process_exited_successfully": true,
+    "project_readonly_agent_visible_and_executed": true,
+    "raw_request_not_persisted": true,
+    "references_unchanged": true,
+    "relative_paths_only": true,
+    "successful_payload_deleted": true,
+    "tool_result_not_persisted_in_events": true,
+    "workspace_unchanged": true
+  },
+  "final_counts": {
+    "artifacts": 1,
+    "evaluations": 0,
+    "events": 12,
+    "invocations": 1,
+    "runs": 1,
+    "submissions": 1,
+    "tasks": 1
+  },
+  "process_returncode": 0,
+  "project_inspection": {
+    "agent_id": "project-readonly-coding-agent",
+    "bytes_considered": 178,
+    "files_considered": 3,
+    "inspected_files": [
+      "src/router.py",
+      "README.md",
+      "src/service.py"
+    ],
+    "network_enabled": false,
+    "shell_enabled": false,
+    "snapshot_sha256": "19361198de4bc5a3c735425cddac5bdb69daa7247e19a23c746b968cf60b63a9",
+    "tool_id": "project_readonly_inspect",
+    "workspace_mutated": false,
+    "write_enabled": false
+  },
+  "protected_payload_file_count": 0,
+  "schema_version": "okcanvas-step059-acceptance-v1",
+  "state": "PASSED",
+  "transcript_tail": "============================================================\n OKCanvas Agent CLI · Node.js/TypeScript persistent client\n============================================================\nRuntime 2.39.1 · Agent project-readonly-coding-agent · Debug OFF\n- 설정된 프로젝트의 텍스트 파일을 제한적으로 읽기 가능\n- 파일 쓰기·Shell·Git 명령·인터넷 접근 없음\n- 서버 대화 기억 없음 · 각 요청은 독립 실행\n- 승인 없는 read-only Function Tool 사용 가능: project_readonly_inspect\n/help 명령으로 사용법을 확인하세요. 종료할 때까지 계속 질문할 수 있습니다.\n\nproject-readonly-coding-agent> Find where the health route is registered and cite the project file.\n실행 준비 중...\n\n[진행]\n  ↳ Tool project_readonly_inspect 실행\n  ✓ Tool project_readonly_inspect 완료\n\nAgent\n─────\nThe configured project was inspected through the bounded read-only Tool.\n\n확인 사항\n1. Health route registration: The health route is registered in the router module. [src/router.py:1-3]\n\n완료 · 60 tokens · 다시 질문하거나 /details를 입력하세요.\n\nproject-readonly-coding-agent> /capabilities\n- 설정된 프로젝트의 텍스트 파일을 제한적으로 읽기 가능\n- 파일 쓰기·Shell·Git 명령·인터넷 접근 없음\n- 서버 대화 기억 없음 · 각 요청은 독립 실행\n- 승인 없는 read-only Function Tool 사용 가능: project_readonly_inspect\n\nproject-readonly-coding-agent> /details\nRun: run_866ff3ee12db4ad5943560e23bdb9a70\nStatus: SUCCEEDED\nTokens: 60\nAgent: project-readonly-coding-agent@1.0.0\nCapability: read-only Tool project_readonly_inspect\nSession: disabled\nInvocations: 1\nROOT · project-readonly-coding-agent · SUCCEEDED · 60 tokens\nArtifact: artifact_93da289dfc95441abca5f24be8889ca9\nArtifact SHA-256: 38a07558dc7b4c994f0ab27b476f93262e537a00164c386d0aa5ad056d1ed134\nEvaluation: not requested\n\nproject-readonly-coding-agent> /quit\n\n종료 · 이 프로세스에서 1개 요청을 실행했습니다.\n\n"
+}

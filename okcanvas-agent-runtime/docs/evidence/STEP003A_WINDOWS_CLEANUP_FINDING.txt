@@ -1,0 +1,23 @@
+STEP003A_WINDOWS_DISPOSABLE_CLEANUP_FIX
+Date: 2026-07-28
+
+Observed Windows live execution (project version 0.3.0):
+- Codex write state: SUCCEEDED
+- Modified file: src/inventory/pricing.py only
+- Baseline validation: 1 failed (expected)
+- Post validation: 1 passed
+- Patch present: true
+- Source fixture unchanged: true
+- Git HEAD unchanged: true
+- Budget accepted: true
+- Functional checks: 10/10 true
+
+The overall summary was FAILED only because TemporaryDirectory cleanup raised:
+PermissionError [WinError 5] while removing
+fixture-repo/src/inventory/__pycache__.
+
+Conclusion:
+- The functional write-and-independent-validation vertical slice passed.
+- Disposable cleanup did not complete reliably on Windows.
+- STEP003 remains not fully live accepted until the hardened harness is rerun and cleanup reports
+  COMPLETED.

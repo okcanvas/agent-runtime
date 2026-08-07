@@ -1,0 +1,78 @@
+{
+  "schema_version": "okcanvas-step026-windows-live-acceptance-summary-v1",
+  "reported_at": "2026-07-30T05:40:00+09:00",
+  "source": "user-reported-console-output",
+  "command": "sh_run_step026_acceptance.cmd",
+  "state": "PASSED",
+  "acceptance_id": "20260729T204019886998Z-1407d03c",
+  "acceptance_workspace": {
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T20:40:24.737357Z",
+    "created_at": "2026-07-29T20:40:19.889519Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resources_closed": true,
+    "step_id": "STEP026"
+  },
+  "valid_case_count": 4,
+  "artifact_count": 4,
+  "artifact_errors": [],
+  "final_counts": {"submissions": 4, "tasks": 4, "runs": 4},
+  "source_result": {
+    "adapter_id": "controlled-commerce-http",
+    "adapter_version": "1.0.0",
+    "read_count": 5,
+    "write_count": 0,
+    "reads_by_key": {
+      "case001-shortage": 1,
+      "case002-covered": 1,
+      "case003-tie-ordering": 1,
+      "case004-single-shortage": 1,
+      "case005-invalid-duplicate-sku": 1
+    }
+  },
+  "case_results": [
+    {"case_id": "case001-shortage", "terminal_status": "SUCCEEDED", "evaluation_state": "PASSED", "payload_retention_state": "DELETED", "status": "ACTION_REQUIRED", "total_reorder_units": 19, "recommendations": [["ergonomic-keyboard", 12], ["desk-lamp", 7], ["usb-c-dock", 0]]},
+    {"case_id": "case002-covered", "terminal_status": "SUCCEEDED", "evaluation_state": "PASSED", "payload_retention_state": "DELETED", "status": "READY", "total_reorder_units": 0, "recommendations": [["cable-organizer", 0], ["monitor-arm", 0], ["webcam", 0]]},
+    {"case_id": "case003-tie-ordering", "terminal_status": "SUCCEEDED", "evaluation_state": "PASSED", "payload_retention_state": "DELETED", "status": "ACTION_REQUIRED", "total_reorder_units": 10, "recommendations": [["alpha-hub", 5], ["zeta-stand", 5], ["beta-mouse", 0]]},
+    {"case_id": "case004-single-shortage", "terminal_status": "SUCCEEDED", "evaluation_state": "PASSED", "payload_retention_state": "DELETED", "status": "ACTION_REQUIRED", "total_reorder_units": 1, "recommendations": [["packing-labels", 1], ["shipping-box", 0], ["tape-roll", 0]]}
+  ],
+  "invalid_case": {
+    "case_id": "case005-invalid-duplicate-sku",
+    "http_status": 502,
+    "code": "COMMERCE_SNAPSHOT_INVALID",
+    "counts_before": {"submissions": 4, "tasks": 4, "runs": 4},
+    "counts_after": {"submissions": 4, "tasks": 4, "runs": 4}
+  },
+  "checks": {
+    "all_business_contracts_exact": true,
+    "all_deterministic_evaluations_passed": true,
+    "all_runs_succeeded": true,
+    "all_successful_payloads_deleted": true,
+    "covered_case_ready_total_zero": true,
+    "credentials_not_in_sqlite": true,
+    "four_valid_business_cases_executed": true,
+    "gateway_called_once_per_valid_case": true,
+    "idempotent_replay_avoided_second_read": true,
+    "invalid_duplicate_sku_failed_before_persistence": true,
+    "invalid_source_read_once": true,
+    "no_tool_or_mcp_events": true,
+    "one_artifact_per_valid_case": true,
+    "preflights_bound_before_task_or_run": true,
+    "raw_source_snapshots_not_in_events_or_sqlite": true,
+    "references_unchanged": true,
+    "single_shortage_case_total_one": true,
+    "single_task_and_run_per_valid_case": true,
+    "source_total_reads_exact": true,
+    "source_write_never_called": true,
+    "tie_case_sorted_by_sku": true,
+    "valid_source_read_once_per_case": true
+  },
+  "observations": [
+    "The Windows run closed the four-valid/one-invalid case matrix over the controlled loopback source, governed preflight, exact confirmation, Product Runs, Artifacts, recorded-Run Evaluations, retention, and cleanup.",
+    "A Starlette TestClient deprecation warning was printed. It did not alter any STEP026 Product acceptance check and remains a separate dependency-maintenance observation."
+  ]
+}

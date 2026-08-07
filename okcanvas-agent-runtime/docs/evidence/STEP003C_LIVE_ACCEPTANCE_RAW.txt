@@ -1,0 +1,31 @@
+STEP003C_DISPOSABLE_WORKSPACE_WRITE_LIVE_ACCEPTANCE
+
+Retained Windows live-acceptance facts from user execution on 2026-07-28.
+
+Doctor baseline:
+- OpenAI Agents SDK: 0.19.0
+- Codex CLI: 0.145.0
+- models and API key configured
+- ready=true, issues=[]
+
+Write run:
+- state=SUCCEEDED
+- run_id=codexwrite_955f8f233021432a8aa3170804331c9c
+- thread_id=019fa91c-e2a0-7593-955e-b0b5d4abd569
+- baseline_commit=final_commit=a551ed3a416a1d1b48e74e3c9978d6dae4063aae
+- verified_modified_files=[src/inventory/pricing.py]
+- additions=1, deletions=1, no untracked or staged files
+- patch_sha256=abb62ef843d0ccb953e4b3f54b0f72542cae4329370cdfbdd42af9bfde66a463
+- Agent tokens=75,521; Codex tokens=74,015
+
+Independent validation:
+- baseline: exit=1, failed=1, expected defect reproduced
+- post-patch: exit=0, passed=1
+- original fixture SHA unchanged
+- Git HEAD unchanged
+- all ten acceptance checks=true
+- cleanup state=COMPLETED, attempts=1
+- final state=PASSED
+
+Known limitation:
+- pytest was unavailable inside the Codex subprocess, but the external independent validator executed pytest and is authoritative.

@@ -1,0 +1,20 @@
+{
+  "schema_version": "okcanvas-sqlite-session-key-rotation-policy-v1",
+  "policy_id": "local-explicit-single-session-key-rotation-v1",
+  "version": "1.0.0",
+  "sdk_version": "0.19.0",
+  "sdk_sqlite_session_source_sha256": "55e998777c4d15e667b819965b1bd5d66c7391969e4cd270fdd1a6498dccbf16",
+  "sessions_table": "agent_sessions",
+  "messages_table": "agent_messages",
+  "message_data_column": "message_data",
+  "mode": "EXPLICIT_SINGLE_SESSION",
+  "automatic_rotation": false,
+  "resume_incomplete_rotation": true,
+  "source_key_environment": "OKCANVAS_SESSION_HISTORY_PREVIOUS_KEY",
+  "target_key_environment": "OKCANVAS_SESSION_HISTORY_KEY",
+  "max_history_items": 256,
+  "plaintext_mode": "REJECT",
+  "mixed_key_envelope_mode": "REJECT",
+  "raw_history_in_events": false,
+  "clear_incomplete_rotation_without_decrypt": true
+}

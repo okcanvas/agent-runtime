@@ -1,0 +1,12 @@
+[
+  {
+    "capability_id": "objectives.read",
+    "name": "목표 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "strategy",
+    "tenant_id": "tenant-b"
+  }
+]

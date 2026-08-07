@@ -1,0 +1,34 @@
+STEP022_WINDOWS_LIVE_ACCEPTANCE_CLOSURE_HARNESS
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING
+Version: 2.2.0
+
+Implemented:
+- one deterministic closure command for STEP021 and STEP020;
+- one Windows installed-SDK live closure command;
+- separate child summaries and logs;
+- compact secret-free closure summary;
+- explicit live readiness issue codes;
+- strict validation of child PASS, cleanup, process restart, approval exactly once, rejection zero times, and Reference integrity;
+- source packaging exclusion for docs/evidence/step022-live/**.
+
+Reference decisions:
+- ADAPT examples/tools/shell_human_in_the_loop.py explicit approve/reject completion;
+- ADAPT temporal_sandbox_tui.py separation of approval observation and execution state;
+- REJECT approval controls in the general read-only console;
+- REJECT direct /reference import.
+
+Executed validation:
+- compileall: PASS
+- pytest: 283 passed
+- STEP020 deterministic acceptance: PASSED / cleanup COMPLETED
+- STEP021 deterministic acceptance: PASSED / cleanup COMPLETED
+- STEP022 deterministic closure: PASSED / cleanup COMPLETED
+- STEP022 checks: 6/6 PASS
+- direct Reference import verification: PASS
+- Reference integrity: 4/4 PASS
+- live readiness fail-closed without model/key: PASS
+
+Not yet executed:
+- Windows sh_run_step022_live_closure.cmd
+- STEP020 installed-SDK live approve/reject closure
+- STEP021 Windows live flag transition

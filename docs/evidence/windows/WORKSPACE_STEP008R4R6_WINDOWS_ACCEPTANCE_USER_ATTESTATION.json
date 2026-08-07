@@ -1,0 +1,28 @@
+{
+  "no_invented_timestamps_or_evidence_hashes": true,
+  "raw_windows_payloads_uploaded": false,
+  "real_postgresql": {
+    "evidence": "okcanvas-agent-runtime/docs/evidence/windows/STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE.json",
+    "passed_checks": 19,
+    "raw_payload_retained": true,
+    "state": "PASSED",
+    "total_checks": 19
+  },
+  "reported_at_local": "2026-08-07T12:27:00+09:00",
+  "schema_version": "okcanvas-workspace-windows-acceptance-user-attestation-v1",
+  "source": "USER_REPORTED_CURRENT_WINDOWS_RUNS_ALL_PASSED",
+  "step": "WORKSPACE_STEP008R4R6_RUNTIME_STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "version": "0.8.4-r6",
+  "windows_deterministic": {
+    "passed_checks": 33,
+    "state": "PASSED",
+    "total_checks": 33,
+    "total_checks_source": "current acceptance code"
+  },
+  "windows_live_openai": {
+    "passed_checks": 29,
+    "state": "PASSED",
+    "total_checks": 29,
+    "total_checks_source": "current live acceptance code"
+  }
+}

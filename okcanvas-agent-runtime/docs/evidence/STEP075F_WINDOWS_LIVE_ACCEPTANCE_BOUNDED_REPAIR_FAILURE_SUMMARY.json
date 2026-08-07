@@ -1,0 +1,47 @@
+{
+  "schema_version": "okcanvas-step075f-windows-live-acceptance-failure-summary-v1",
+  "step": "STEP075F_EXACT_EVIDENCE_OUTPUT_COMPLETENESS_AND_BOUNDED_REPAIR",
+  "version": "2.55.6",
+  "acceptance_classification": "RUNTIME_ACCEPTED_MODEL_REPAIR_FAILED",
+  "live_acceptance": {
+    "passed_checks": 28,
+    "total_checks": 37,
+    "state": "FAILED",
+    "terminal_status": "FAILED",
+    "model": "gpt-4.1",
+    "model_calls": 3,
+    "tool_calls": 1,
+    "input_tokens": 3209,
+    "output_tokens": 400,
+    "total_tokens": 3609
+  },
+  "runtime_evidence": {
+    "workspace_materialized": true,
+    "selected_file_hashes_verified": true,
+    "internal_snapshot_metadata_not_observed": true,
+    "docker_call_count": 9,
+    "cleanup_state": "COMPLETED",
+    "orphan_count": 0,
+    "network_mode": "none",
+    "shell_enabled": false,
+    "apply_patch_enabled": false,
+    "single_sandbox_tool_call_observed": true,
+    "raw_workspace_not_persisted": true,
+    "api_key_not_persisted": true
+  },
+  "answer_failure": {
+    "answer_completeness_checked": true,
+    "repair_started_count": 1,
+    "repair_completed_count": 1,
+    "repair_applied": true,
+    "failure_code": "ANSWER_COMPLETENESS_FAILED",
+    "detail_type": "SandboxAnswerCompletenessError",
+    "exact_formula_observed": false,
+    "evidence_backed_path_not_unverified": false,
+    "final_output_contract_valid": false,
+    "bounded_answer_repair_consistent": false,
+    "raw_draft_persisted": false,
+    "raw_evidence_persisted": false
+  },
+  "confirmed_conclusion": "The read-only Sandbox runtime completed successfully, but a separate no-tool correction model call still failed the deterministic exact-evidence validator. No remaining Docker, tar, subprocess, hash-domain, cleanup, or secret-persistence defect is shown by this run."
+}

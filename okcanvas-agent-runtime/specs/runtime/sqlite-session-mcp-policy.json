@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-sqlite-session-mcp-policy-v1",
+  "policy_id": "local-sqlite-session-native-mcp-v1",
+  "version": "1.0.0",
+  "max_mcp_servers_per_turn": 1,
+  "read_only_required": true,
+  "local_stdio_only": true,
+  "manager_scope": "per-turn",
+  "hold_turn_lease_until_manager_cleanup": true,
+  "commit_completed_turn": true,
+  "rollback_failed_turn": true,
+  "history_copy_to_product": false,
+  "mcp_content_copy_to_product": false,
+  "workspace_access": "none"
+}

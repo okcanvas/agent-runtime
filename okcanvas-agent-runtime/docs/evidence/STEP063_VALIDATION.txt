@@ -1,0 +1,71 @@
+STEP063_STRICT_ENCRYPTED_SQLITE_SESSION_HISTORY_V1
+Version: 2.43.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+CODE AUDIT
+- Existing installed-SDK SQLiteSession persisted Runner items as plaintext JSON in history.sqlite3.
+- Upstream SDK 0.19.0 EncryptedSession was not directly adopted because it permits legacy plaintext and can skip invalid/expired ciphertext.
+- Product-owned strict Session wrapper retains the installed SDK SQLite backend and enforces AES-256-GCM per item.
+
+CRYPTOGRAPHIC CONTRACT
+- External key: 32 bytes, 64-hex or URL-safe base64.
+- Stored key material: none; catalog stores only 16-hex SHA-256 key ID.
+- Derivation: per-Session HKDF-SHA256.
+- Encryption: AES-256-GCM, random 12-byte nonce.
+- AAD: schema version + Session ID + key ID + envelope version.
+- Plaintext, unknown envelope, wrong key, malformed base64/length, invalid tag and invalid JSON: fail closed.
+- TTL: disabled.
+- Compaction: disabled.
+- Legacy session: cannot resume; explicit clear/recreate is available.
+
+DETERMINISTIC ACCEPTANCE
+- STEP063 acceptance: 33/33 PASS.
+- Historical Session continuity/composition:
+  STEP043 PASS
+  STEP046 PASS
+  STEP047 PASS
+  STEP048 PASS
+  STEP049 PASS
+  STEP050 PASS
+- Focused strict-encryption/session/Windows environment tests: 53/53 PASS.
+- Python compileall: PASS.
+- Committed Node TypeScript release integrity: PASS (inputs=11, outputs=21, tests=2, external_tsc_required=false).
+- Node tests: 14/14 PASS.
+- Reference integrity: 4/4 PASS.
+- Direct /reference imports: 0.
+
+FULL PYTHON REGRESSION
+- Group 0: 77 PASS.
+- Group 1: 101 PASS.
+- Group 2: 87 PASS.
+- Group 3: 90 PASS.
+- Group 4: 105 PASS.
+- Group 5: 88 PASS.
+- Group 6: 80 PASS.
+- Total: 628/628 PASS.
+
+NODE PACKAGE
+- npm pack --dry-run: 23 files PASS.
+- Runtime and dev npm dependencies: 0.
+- node_modules packaged: no.
+
+LIVE MODEL CALL
+- Not run and not required for STEP063. Existing deterministic fake-SDK and historical Session composition paths exercise the SDK Session protocol and persistence boundary.
+
+WINDOWS CLOSURE
+- Pending command: sh_run_step063_acceptance.cmd
+- Expected: STEP063 33/33 PASS.
+- STEP064 remains unselected.
+
+PREFINAL ZIP RE-EXTRACTION
+- Candidate SHA-256: 2d2255a031a554b637eb103fe79e24236d0186ed8364556eb7844f463608270a
+- Canonical ZIP root: 1 (`okcanvas-agent-runtime`).
+- ZIP entries: 2,802.
+- Forbidden cache/venv/node_modules/temp entries: 0.
+- Fresh extraction STEP063 acceptance: 33/33 PASS.
+- Fresh extraction Python regression: 628/628 PASS.
+- Fresh extraction Node tests: 14/14 PASS.
+- Fresh extraction Reference integrity: 4/4 PASS.
+- Fresh extraction direct /reference imports: 0.
+
+The final package differs from this prefinal candidate only by this appended validation evidence.

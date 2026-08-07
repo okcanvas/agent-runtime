@@ -1,0 +1,22 @@
+{
+  "schema_version": "okcanvas-step062a-windows-typescript-build-failure-summary-v1",
+  "reported_at": "2026-08-01",
+  "command": "sh_run_step062a_acceptance.cmd",
+  "step": "STEP062A_WINDOWS_NODE_ACCEPTANCE_PORTABILITY_FIX",
+  "version": "2.42.1",
+  "state": "FAILED",
+  "passed_checks": 16,
+  "total_checks": 18,
+  "failed_checks": [
+    "corrected_step062_acceptance_pass",
+    "node_typescript_build_pass"
+  ],
+  "corrected_step062_state": "FAILED",
+  "corrected_step062_passed_checks": 28,
+  "corrected_step062_total_checks": 29,
+  "node_build_output_tail": "배치 파일이 아닙니다.",
+  "node_test_passed": true,
+  "focused_portability_tests_passed": true,
+  "python_compileall_passed": true,
+  "finding": "The Windows npm.cmd boundary remained non-portable even when invoked through cmd.exe /d /c call. TypeScript acceptance must bypass npm.cmd and execute the resolved TypeScript JavaScript compiler entrypoint directly with node."
+}

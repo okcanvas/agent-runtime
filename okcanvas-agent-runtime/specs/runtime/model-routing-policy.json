@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-model-routing-policy-v1",
+  "policy_id": "local-openai-responses-http-v1",
+  "version": "1.0.0",
+  "provider_id": "openai",
+  "provider_adapter": "agents.models.openai_provider.OpenAIProvider",
+  "api": "responses",
+  "transport": "http",
+  "base_url": "https://api.openai.com/v1",
+  "model_id_pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$",
+  "allow_provider_prefixes": false,
+  "automatic_fallback": false,
+  "fallback_model_ids": [],
+  "trace_include_sensitive_data": false
+}

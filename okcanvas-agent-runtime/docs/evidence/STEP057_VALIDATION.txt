@@ -1,0 +1,85 @@
+STEP057_NODE_CLI_RUNTIME_SESSION_CONVERSATION
+Version: 2.37.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+SOURCE VALIDATION
+- Python compileall: PASS
+- TypeScript compile: PASS
+- Node tests: 9/9 PASS
+- npm pack dry-run: PASS, 23 files, runtime dependencies 0
+- Python pytest: 561/561 PASS across 172 test files, with normal process exit in five groups:
+  115 + 105 + 111 + 105 + 125 = 561
+- STEP057: 25/25 PASS, cleanup COMPLETED once
+- STEP056C: 25/25 PASS, cleanup COMPLETED once
+- STEP056B: 25/25 PASS, cleanup COMPLETED once
+- STEP056: 21/21 PASS, cleanup COMPLETED once
+- STEP055: 35/35 PASS
+- STEP054: 30/30 PASS
+- STEP053: 30/30 PASS
+- STEP052: 25/25 PASS
+- STEP051: 25/25 PASS
+- STEP050: 31/31 PASS
+- STEP049: 33/33 PASS
+- STEP048: 32/32 PASS
+- STEP047: 29/29 PASS
+- STEP046: 27/27 PASS
+- STEP045: 28/28 PASS
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS
+- STEP042: 29/29 PASS
+- STEP041: 24/24 PASS
+- STEP039: 20/20 PASS
+- STEP030A: 8/8 PASS; Windows launchers 66; violations 0
+- Reference integrity: 4/4 PASS
+- Direct /reference executable imports: 0
+
+STEP057 DETERMINISTIC PRODUCT EVIDENCE
+- two Node.js processes
+- four governed Session Turns
+- first Session remembered KEVIN-57 in-process and after CLI restart
+- /new created an isolated second Session with no KEVIN-57 history
+- first Session 3 Turns / 6 items
+- second Session 1 Turn / 2 items
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 4/4/4/4/48/4/1
+- protected payload files: 0
+- explicit Evaluation: PASSED
+- raw Session history remained in Session store only
+- cleanup: COMPLETED in one attempt
+
+Independent candidate ZIP and final self-extracted ZIP validation will be appended before release SHA finalization.
+
+INDEPENDENT CANDIDATE ZIP VALIDATION
+- archive root: exactly one `okcanvas-agent-runtime`
+- ZIP entries: 2,670
+- forbidden files: 0
+- immutable Reference `.vscode` files: 2 preserved
+- Node compiled dist entries: 21 preserved
+- Python compileall: PASS
+- TypeScript compile: PASS
+- Node tests: 9/9 PASS
+- Python pytest: 561/561 PASS with normal exits:
+  115 + 105 + 77 + 34 + 105 + 125 = 561
+- STEP057/056C/056B/056/055/054/053/052/051: all PASS
+- STEP050/049/048/047/046/045/044/043/042/041/039: all PASS
+- STEP030A: 8/8 PASS; launchers 66; violations 0
+- Reference integrity: 4/4 PASS
+- Direct /reference executable imports: 0
+
+FINAL SELF-EXTRACTED ZIP VALIDATION
+- tested ZIP entries: 2,670; canonical root exactly one
+- Python compileall: PASS
+- TypeScript compile: PASS
+- Node tests: 9/9 PASS
+- Python pytest: 561/561 PASS with normal exits:
+  83 + 69 + 88 + 84 + 52 + 88 + 97 = 561
+- STEP057/056C/056B/056/055/054/053/052/051: all PASS
+- STEP050/049/048/047/046/045/044/043/042/041/039: all PASS
+- STEP030A: 8/8 PASS; launchers 66; violations 0
+- Reference integrity: 4/4 PASS
+- Direct /reference executable imports: 0
+
+RELEASE CONSTITUTION
+The tested ZIP and release ZIP must contain the same entry set. Only
+`okcanvas-agent-runtime/docs/evidence/STEP057_VALIDATION.txt` may differ after recording this final evidence.
+All code, TypeScript source, compiled dist, tests, policies, Agent definitions, Acceptance and immutable Reference
+entries must remain byte-identical.

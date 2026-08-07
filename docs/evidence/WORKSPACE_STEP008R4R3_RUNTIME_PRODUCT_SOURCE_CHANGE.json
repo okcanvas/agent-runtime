@@ -1,0 +1,25 @@
+{
+  "limitations": [
+    "real PostgreSQL server not executed",
+    "PostgreSQL production readiness not claimed"
+  ],
+  "retained": [
+    "sqlite-local-v1 remains default",
+    "Organization Context Router/Agent/Skill/MCP semantics unchanged",
+    "Tool Approval, Evaluation and Session remain local SQLite",
+    "Artifact binaries remain local filesystem"
+  ],
+  "runtime_step": "STEP091B2_POSTGRESQL_PRODUCT_AND_SUBMISSION_ATOMIC_STORE",
+  "runtime_version": "2.72.0",
+  "schema_version": "okcanvas-workspace-step008r4r3-runtime-product-source-change-v1",
+  "scope": [
+    "PostgreSQL DB-API compatibility and optional psycopg driver boundary",
+    "PostgreSQL ProductStore, RunSubmissionStore and ServiceResourceOwnershipStore",
+    "postgresql-hybrid-v1 validated StorageTopology",
+    "Bootstrap backend selection and optional PostgreSQL DSN"
+  ],
+  "source_snapshot_digest": "7bd6eae769533acc0fe82c4dff657cd1768076ef4e512460e06bc0b6471cccb1",
+  "state": "CHANGED_AS_PLANNED",
+  "workspace_step": "WORKSPACE_STEP008R4R3_RUNTIME_STEP091B2_POSTGRESQL_PRODUCT_AND_SUBMISSION_ATOMIC_STORE",
+  "workspace_version": "0.8.4-r3"
+}

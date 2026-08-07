@@ -1,0 +1,14 @@
+{
+  "schema_version": "okcanvas-multimodal-model-policy-v1",
+  "policy_id": "openai-responses-local-pdf-image-model-v1",
+  "version": "1.0.0",
+  "provider_id": "openai",
+  "api": "responses",
+  "allowed_model_ids": [
+    "gpt-4.1"
+  ],
+  "input_file": true,
+  "input_image": true,
+  "structured_output": true,
+  "store": false
+}

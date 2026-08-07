@@ -1,0 +1,10 @@
+schema_version: okcanvas-agent-policy-v1
+agent_id: store-replenishment-review-agent
+mode: governed-read-only
+local_tools: []
+mcp_servers: []
+handoffs: []
+session: disabled
+network: denied
+filesystem: denied
+mutation: denied

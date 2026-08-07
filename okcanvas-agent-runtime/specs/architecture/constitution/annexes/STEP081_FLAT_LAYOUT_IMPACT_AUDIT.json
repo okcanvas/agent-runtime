@@ -1,0 +1,922 @@
+{
+  "schema_version": "okcanvas-step081-flat-layout-impact-audit-v1",
+  "baseline": {
+    "step": "STEP080_PRODUCT_OWNED_CAPABILITY_TOPOLOGY_AND_TOOL_DISCOVERY_FOUNDATION",
+    "version": "2.60.0"
+  },
+  "source_layout_coupling": {
+    "literal_src_package": {
+      "file_count": 111,
+      "match_count": 399,
+      "by_top_level": {
+        "AGENTS.md": 1,
+        "docs": 31,
+        "pyproject.toml": 1,
+        "scripts": 37,
+        "specs": 4,
+        "tests": 37
+      },
+      "files": [
+        {
+          "path": "docs/plans/STEP037A_GENERIC_FUNCTION_TOOL_RUNTIME_IMPLEMENTATION_PLAN.md",
+          "matches": 17
+        },
+        {
+          "path": "scripts/run_step076_acceptance.py",
+          "matches": 16
+        },
+        {
+          "path": "scripts/run_step069_acceptance.py",
+          "matches": 14
+        },
+        {
+          "path": "scripts/run_step068_acceptance.py",
+          "matches": 13
+        },
+        {
+          "path": "scripts/run_step070_acceptance.py",
+          "matches": 11
+        },
+        {
+          "path": "scripts/run_step067_acceptance.py",
+          "matches": 10
+        },
+        {
+          "path": "scripts/run_step064_acceptance.py",
+          "matches": 8
+        },
+        {
+          "path": "scripts/run_step072_acceptance.py",
+          "matches": 8
+        },
+        {
+          "path": "docs/evidence/STEP069_VALIDATION.txt",
+          "matches": 7
+        },
+        {
+          "path": "scripts/run_step063_acceptance.py",
+          "matches": 7
+        },
+        {
+          "path": "scripts/run_step078_acceptance.py",
+          "matches": 7
+        },
+        {
+          "path": "tests/test_step043_sqlite_session_runtime_baseline.py",
+          "matches": 7
+        },
+        {
+          "path": "tests/test_step072_immutable_openai_trace_export_disabled.py",
+          "matches": 7
+        },
+        {
+          "path": "scripts/run_step065_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step066_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step075_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step075a_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step075b_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step077_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "scripts/run_step079_acceptance.py",
+          "matches": 6
+        },
+        {
+          "path": "tests/test_step040_sub_agent_invocation_scope_baseline.py",
+          "matches": 6
+        },
+        {
+          "path": "tests/test_step041_native_handoff_runtime_baseline.py",
+          "matches": 6
+        },
+        {
+          "path": "tests/test_step042_agent_as_tool_runtime_baseline.py",
+          "matches": 6
+        },
+        {
+          "path": "tests/test_step044_native_guardrail_runtime_baseline.py",
+          "matches": 6
+        },
+        {
+          "path": "docs/36B-SUB-AGENT-INVOCATION-WORKSPACE-ISOLATION-AUDIT.md",
+          "matches": 5
+        },
+        {
+          "path": "docs/evidence/STEP065_VALIDATION.txt",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step062_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step064a_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step074_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step075f_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "scripts/run_step075g_acceptance.py",
+          "matches": 5
+        },
+        {
+          "path": "tests/test_step049_sqlite_session_native_agent_tool_composition_baseline.py",
+          "matches": 5
+        },
+        {
+          "path": "tests/test_step051_immutable_model_route_baseline.py",
+          "matches": 5
+        },
+        {
+          "path": "tests/test_step052_immutable_zero_retry_baseline.py",
+          "matches": 5
+        },
+        {
+          "path": "tests/test_step055_immutable_provider_identifier_minimization_baseline.py",
+          "matches": 5
+        },
+        {
+          "path": "docs/evidence/STEP060_ACCEPTANCE.json",
+          "matches": 4
+        },
+        {
+          "path": "docs/evidence/STEP064A_ACCEPTANCE.json",
+          "matches": 4
+        },
+        {
+          "path": "docs/evidence/STEP064A_VALIDATION.txt",
+          "matches": 4
+        },
+        {
+          "path": "docs/issues/OR-ISSUE-002-STEP075A-WINDOWS-DOCKER-COMMAND-OPERATION-EVIDENCE.md",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step061_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step063a_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step073_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step075c_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "scripts/run_step075e_acceptance.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step047_sqlite_session_native_handoff_composition_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step048_sqlite_session_native_guardrail_composition_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step050_sqlite_session_native_mcp_composition_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step053_immutable_reasoning_evidence_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step054_immutable_response_storage_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step062_bounded_multi_agent_orchestration_baseline.py",
+          "matches": 4
+        },
+        {
+          "path": "tests/test_step064a_pytest_async_plugin_independence_fix.py",
+          "matches": 4
+        },
+        {
+          "path": "docs/evidence/STEP063A_ACCEPTANCE.json",
+          "matches": 3
+        },
+        {
+          "path": "docs/evidence/STEP063A_VALIDATION.txt",
+          "matches": 3
+        },
+        {
+          "path": "scripts/run_step075d_acceptance.py",
+          "matches": 3
+        },
+        {
+          "path": "scripts/run_step080_acceptance.py",
+          "matches": 3
+        },
+        {
+          "path": "tests/test_step020_governed_local_tool_approval_baseline.py",
+          "matches": 3
+        },
+        {
+          "path": "tests/test_step039_native_sdk_streaming_baseline.py",
+          "matches": 3
+        },
+        {
+          "path": "tests/test_step064_bounded_encrypted_sqlite_session_compaction.py",
+          "matches": 3
+        },
+        {
+          "path": "docs/evidence/STEP060_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+          "matches": 2
+        },
+        {
+          "path": "docs/plans/STEP005_CORE_TASK_RUN_EVENT_ARTIFACT_STORE.md",
+          "matches": 2
+        },
+        {
+          "path": "pyproject.toml",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step060_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step072b_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step079a_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_project_readonly_inspection.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_step045_integrated_walking_skeleton_baseline.py",
+          "matches": 2
+        },
+        {
+          "path": "AGENTS.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/02-ARCHITECTURE.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/07-TARGET-PLATFORM-ARCHITECTURE.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/38-WINDOWS-PYTHON-LAUNCHER-PORTABILITY.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/decisions/ADR-005-SPECIFICATION-NAMESPACE.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP055_VALIDATION.txt",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP059A_WINDOWS_ACTUAL_SDK_TOOL_CONTEXT_IMPORT_FAILURE_SUMMARY.json",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP059_WINDOWS_REAL_OPENAI_FUNCTION_TOOL_FAILURE_SUMMARY.json",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP060_VALIDATION.txt",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP061_VALIDATION.txt",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP075B_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+          "matches": 1
+        },
+        {
+          "path": "docs/evidence/STEP075_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+          "matches": 1
+        },
+        {
+          "path": "docs/issues/OR-ISSUE-001-STEP075-WINDOWS-DOCKER-TMPFS-NORMALIZATION.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/issues/OR-ISSUE-010-SERVICE-SUBMISSION-OWNERSHIP-POST-COMMIT-WINDOW.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP002A_LIVE_ACCEPTANCE_HARNESS_HARDENING.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP006_READ_ONLY_REFERENCE_CATALOG_SERVICE.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP036A_REFERENCE_WIDE_RUNTIME_CAPABILITY_MASTER_PLAN.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP037_INTERACTIVE_AGENT_RUNNER_FOUNDATION.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP056_TUI_CLIENT_FOUNDATION.md",
+          "matches": 1
+        },
+        {
+          "path": "docs/plans/STEP072A_WINDOWS_PYCACHE_OVERLAY_ISOLATION_FIX.md",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step019_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059a_deterministic_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059b_deterministic_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062c_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step071_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step072a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "specs/README.md",
+          "matches": 1
+        },
+        {
+          "path": "specs/agents/README.md",
+          "matches": 1
+        },
+        {
+          "path": "specs/mcp/README.md",
+          "matches": 1
+        },
+        {
+          "path": "specs/tools/README.md",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step023_minimal_local_approval_operator_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step046_sqlite_session_approval_composition_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step059a_actual_sdk_function_tool_output_contract_alignment.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step059b_actual_sdk_tool_context_export_alignment.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step060_query_directed_project_retrieval_evidence_budget_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step061_openai_agents_examples_coverage_matrix_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step063_strict_encrypted_sqlite_session_history.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step063a_windows_symlink_integrity_test_portability_fix.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step068_bounded_local_pdf_image_input_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step069_multi_user_service_client_contract_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step073_product_owned_sandbox_runtime_foundation.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075a_windows_docker_tmpfs_normalization_and_failure_evidence_fix.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075b_windows_docker_command_operation_evidence.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075c_windows_tmpfs_tar_stream_materialization_fix.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075d_python_subprocess_stdin_input_contract_fix.py",
+          "matches": 1
+        }
+      ]
+    },
+    "root_src_directory": {
+      "file_count": 92,
+      "match_count": 99,
+      "by_top_level": {
+        "scripts": 77,
+        "tests": 15
+      },
+      "files": [
+        {
+          "path": "scripts/run_step032_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step045_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step056_acceptance.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_step018_governed_run_submission_baseline.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_step034_orphaned_running_reconciliation_baseline.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_step035_terminal_outcome_reconciliation_baseline.py",
+          "matches": 2
+        },
+        {
+          "path": "tests/test_tool_approval_inbox.py",
+          "matches": 2
+        },
+        {
+          "path": "scripts/run_step003_live_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step020_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step022_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step024b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step030a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step033_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step034_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step035_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step036_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step037_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step038_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step039_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step040_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step041_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step042_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step043_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step044_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step046_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step047_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step048_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step049_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step050_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step051_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step052_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step053_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step054_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step055_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step056b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step056c_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step057_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step058_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059a_deterministic_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step059b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step060_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step061_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step062c_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step063_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step063a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step064_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step064a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step065_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step066_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step067_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step068_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step069_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step070_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step071_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step072_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step072a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step072b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step073_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step074_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step074_live_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075b_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075c_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075d_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075e_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075f_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step075g_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step076_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step077_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step078_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step079_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step079a_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/run_step080_acceptance.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/verify_no_reference_imports.py",
+          "matches": 1
+        },
+        {
+          "path": "scripts/windows_entrypoint.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_operations_console_api.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_operations_console_live_view.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_output_contract_runtime_registry.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step015_operations_console_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step016_operations_console_live_view_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step017_run_submission_boundary_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step032_agent_output_contract_runtime_registry_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step036_recorded_run_runtime_binding_verification_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step037_interactive_runner_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step056_tui_client_foundation_baseline.py",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_step075_product_owned_readonly_sandbox_workspace_agent.py",
+          "matches": 1
+        }
+      ]
+    },
+    "pythonpath_src": {
+      "file_count": 9,
+      "match_count": 9,
+      "by_top_level": {
+        "fixtures": 2,
+        "pyproject.toml": 1,
+        "sh_run_step044_acceptance.cmd": 1,
+        "sh_run_step045_acceptance.cmd": 1,
+        "sh_run_step046_acceptance.cmd": 1,
+        "sh_run_step047_acceptance.cmd": 1,
+        "sh_run_step049_acceptance.cmd": 1,
+        "tests": 1
+      },
+      "files": [
+        {
+          "path": "fixtures/codex_readonly_repo/pyproject.toml",
+          "matches": 1
+        },
+        {
+          "path": "fixtures/codex_write_repo/pyproject.toml",
+          "matches": 1
+        },
+        {
+          "path": "pyproject.toml",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step044_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step045_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step046_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step047_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "sh_run_step049_acceptance.cmd",
+          "matches": 1
+        },
+        {
+          "path": "tests/test_pytest_validator.py",
+          "matches": 1
+        }
+      ]
+    }
+  },
+  "probe": {
+    "probe_root": "/mnt/data/step081_flat_layout_probe",
+    "changes": [
+      "moved src/okcanvas_agent_runtime to repository-root okcanvas_agent_runtime",
+      "changed Hatch package path to okcanvas_agent_runtime",
+      "changed pytest pythonpath to [.]",
+      "changed coverage source to okcanvas_agent_runtime"
+    ],
+    "compileall": "PASS",
+    "package_import": "PASS version 2.60.0",
+    "control_api_factory_import": "PASS",
+    "capability_foundation_agent_topology_count": 27,
+    "focused_tests": {
+      "files": [
+        "tests/test_control_api.py",
+        "tests/test_control_api_sse.py",
+        "tests/test_step069_multi_user_service_client_contract.py",
+        "tests/test_agent_definition_catalog.py"
+      ],
+      "result": "......................                                                   [100%]\n22 passed in 5.19s",
+      "passed": 22
+    },
+    "wheel_build": "NOT_EXECUTED_HATCHLING_UNAVAILABLE_IN_AUDIT_ENVIRONMENT",
+    "conclusion": "Python import semantics and core runtime behavior are compatible with a root package; remaining work is physical-path contract migration."
+  }
+}

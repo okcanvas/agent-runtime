@@ -1,0 +1,34 @@
+{
+  "architecture": {
+    "passed_checks": 40,
+    "total_checks": 40
+  },
+  "distribution": {
+    "passed_checks": 14,
+    "total_checks": 14
+  },
+  "execution_plane": {
+    "passed_checks": 13,
+    "total_checks": 13
+  },
+  "focused_regression": {
+    "failed": 0,
+    "passed": 120
+  },
+  "launcher_registry": {
+    "passed_checks": 7,
+    "total_checks": 7
+  },
+  "limitations": {
+    "production_database_executed": false,
+    "real_enterprise_organization_context_called": false,
+    "windows_step088_accepted": false,
+    "workspace_step007_live_openai_accepted": false
+  },
+  "passed_checks": 22,
+  "schema_version": "okcanvas-agent-runtime-step088-deterministic-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "STEP088_RUNTIME_ORGANIZATION_CONTEXT_SESSION_DELEGATION_AND_LIVE_OPENAI_E2E_READINESS",
+  "total_checks": 22,
+  "version": "2.68.0"
+}

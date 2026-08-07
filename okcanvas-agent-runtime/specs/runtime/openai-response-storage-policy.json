@@ -1,0 +1,6 @@
+{
+  "schema_version": "okcanvas-openai-response-storage-policy-v1",
+  "policy_id": "local-openai-response-storage-disabled-v1",
+  "version": "1.0.0",
+  "response_store_requested": false
+}

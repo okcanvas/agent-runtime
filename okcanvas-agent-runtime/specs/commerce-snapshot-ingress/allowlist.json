@@ -1,0 +1,6 @@
+{
+  "schema_version": "okcanvas-commerce-snapshot-allowlist-v1",
+  "allowed_adapter_ids": [
+    "controlled-commerce-http"
+  ]
+}

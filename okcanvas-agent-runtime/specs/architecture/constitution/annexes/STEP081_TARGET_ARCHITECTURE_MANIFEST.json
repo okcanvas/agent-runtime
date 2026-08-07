@@ -1,0 +1,219 @@
+{
+  "schema_version": "okcanvas-step081-client-transport-agent-architecture-manifest-v1",
+  "source_baseline": {
+    "step": "STEP080_PRODUCT_OWNED_CAPABILITY_TOPOLOGY_AND_TOOL_DISCOVERY_FOUNDATION",
+    "version": "2.60.0"
+  },
+  "repository_layout": {
+    "python_package_layout": "ROOT_PACKAGE_NO_SRC_DIRECTORY",
+    "tree": [
+      "okcanvas_agent_runtime/",
+      "  bootstrap/",
+      "  core/",
+      "  domain/",
+      "  application/",
+      "  agent/",
+      "    definitions/",
+      "    runtime/",
+      "    orchestration/",
+      "    capabilities/",
+      "      tools/",
+      "      skills/",
+      "      subagents/",
+      "      mcp/",
+      "      guardrails/",
+      "      workspace/",
+      "      model/",
+      "  transport/",
+      "    common/",
+      "    service/",
+      "      rest/",
+      "      sse/",
+      "      websocket/",
+      "    admin/",
+      "      rest/",
+      "      sse/",
+      "  adapters/",
+      "    openai/",
+      "    persistence/sqlite/",
+      "    sandbox/docker/",
+      "    storage/",
+      "    mcp/",
+      "    codex/",
+      "  compatibility/",
+      "clients/",
+      "  cli/",
+      "  web/",
+      "  desktop/",
+      "  dev-cli/",
+      "  dev-console/",
+      "protocols/",
+      "  rest/openapi/",
+      "  events/",
+      "  sse/",
+      "  websocket/",
+      "tests/",
+      "scripts/",
+      "specs/",
+      "docs/",
+      "reference/",
+      "fixtures/"
+    ]
+  },
+  "dependency_direction": {
+    "clients": [
+      "protocols"
+    ],
+    "protocols": [],
+    "transport": [
+      "application",
+      "protocols",
+      "core"
+    ],
+    "application": [
+      "agent",
+      "domain",
+      "core"
+    ],
+    "agent": [
+      "capabilities",
+      "domain",
+      "core"
+    ],
+    "capabilities": [
+      "domain",
+      "core"
+    ],
+    "domain": [
+      "core"
+    ],
+    "adapters": [
+      "application",
+      "agent",
+      "capabilities",
+      "domain",
+      "core"
+    ],
+    "bootstrap": [
+      "transport",
+      "application",
+      "agent",
+      "capabilities",
+      "domain",
+      "adapters",
+      "core"
+    ],
+    "compatibility": [
+      "core"
+    ]
+  },
+  "forbidden_dependencies": [
+    "clients -> okcanvas_agent_runtime Python imports",
+    "transport -> persistence stores",
+    "transport -> OpenAI Agents SDK gateway",
+    "transport -> Docker/Sandbox implementation",
+    "agent -> FastAPI/httpx/WebSocket framework",
+    "application -> concrete SQLite/OpenAI/Docker adapters",
+    "domain -> transport/application/adapters",
+    "SSE/WebSocket -> raw SDK stream as canonical product state"
+  ],
+  "transport_contracts": {
+    "rest": {
+      "role": "authoritative commands, queries, uploads, idempotency, resource retrieval and auditable decisions",
+      "state_authority": false,
+      "must_call": "application command/query ports"
+    },
+    "sse": {
+      "role": "authoritative persisted one-way Run Event projection with Last-Event-ID/cursor replay",
+      "state_authority": false,
+      "source": "application RunEventSubscription port",
+      "reconnectable": true
+    },
+    "websocket": {
+      "role": "optional low-latency bidirectional client channel using the same application commands and persisted event identities",
+      "state_authority": false,
+      "required_for_basic_operation": false,
+      "rules": [
+        "authentication at connection and authorization for every message",
+        "state-changing messages require idempotency keys",
+        "accepted state changes pass through application commands",
+        "product events are persisted before broadcast",
+        "recovery uses REST/SSE cursor; WebSocket is not the durable ledger",
+        "raw model/SDK deltas are explicitly ephemeral and never replace Product Events",
+        "approval decisions and destructive lifecycle operations remain REST-first auditable commands"
+      ]
+    }
+  },
+  "public_surface": {
+    "service_prefix": "/v1/service",
+    "admin_prefix_target": "/v1/admin",
+    "native_sdk_stream": "ADMIN_DIAGNOSTIC_ONLY_NOT_SERVICE_CONTRACT",
+    "client_products": [
+      "clients/cli",
+      "clients/web",
+      "clients/desktop"
+    ],
+    "client_server_imports_allowed": false
+  },
+  "migration_waves": [
+    {
+      "wave": 0,
+      "name": "Acceptance closure",
+      "actions": [
+        "Run and accept STEP080 Windows live 62/62 before source movement"
+      ]
+    },
+    {
+      "wave": 1,
+      "name": "Constitution and root package move",
+      "actions": [
+        "add machine-readable layout/dependency manifest and AST gate",
+        "centralize repository/package path resolution for scripts and tests",
+        "move src/okcanvas_agent_runtime to root okcanvas_agent_runtime",
+        "update Hatch/pytest/coverage/Windows PYTHONPATH contracts",
+        "do not create a duplicate package, symlink or junction",
+        "preserve historical evidence documents unchanged"
+      ]
+    },
+    {
+      "wave": 2,
+      "name": "Client and transport separation",
+      "actions": [
+        "rename service_clients server package to transport/service",
+        "move TUI/operator/console/runner client sources out of server package",
+        "make clients consume protocols and /v1/service only",
+        "split control_api composition root from admin route modules",
+        "extract shared protocol DTOs from control_api"
+      ]
+    },
+    {
+      "wave": 3,
+      "name": "Application ports",
+      "actions": [
+        "replace route-level store/coordinator access with command/query services",
+        "extract RunEventSubscription from direct ProductStore polling",
+        "unify duplicated admin/service use cases while retaining separate authorization and response projections"
+      ]
+    },
+    {
+      "wave": 4,
+      "name": "WebSocket foundation",
+      "actions": [
+        "define protocol schemas and connection lifecycle",
+        "add disabled-by-default WebSocket adapter",
+        "reuse application commands and persisted event subscription",
+        "prove SSE fallback and reconnect semantics before activation"
+      ]
+    },
+    {
+      "wave": 5,
+      "name": "Capability and domain relocation",
+      "actions": [
+        "move tools/skills/subagents/MCP/guardrails under agent/capabilities",
+        "move concrete OpenAI/SQLite/Docker/MCP implementations under adapters",
+        "retain old Python subpackage imports as bounded re-export facades until a major-version removal gate"
+      ]
+    }
+  ],
+  "manifest_sha256": "619f2fc62e175afba4d8775d65c8a460a7a0877ed590107b95610ee888e6b57f"
+}

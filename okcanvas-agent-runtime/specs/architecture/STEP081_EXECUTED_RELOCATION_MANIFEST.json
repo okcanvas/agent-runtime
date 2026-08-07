@@ -1,0 +1,2188 @@
+{
+  "legacy_source_root_removed": true,
+  "manifest_sha256_without_self": "7ade563a41eb7713c435a464cc0962599b85d586f1ae705fd164354b7f4a1722",
+  "missing_relocation_count": 0,
+  "missing_relocations": [],
+  "python_relocation_count": 262,
+  "python_relocations": [
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/__init__.py",
+      "legacy_sha256": "b4a69fa010d76de90c6b0d9561fc4671b5fba39b601712631eb3ba275f242224",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/__main__.py",
+      "legacy_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/__main__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/acceptance/__init__.py",
+      "legacy_sha256": "0f53706ddda772686658be26b427d7874a0d2ee04e019585cfa9439c0e31db80",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/support/acceptance/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/acceptance/workspace.py",
+      "legacy_sha256": "ce2d0c79d352e43e92570e04779249474ffc5a6314b1fc0de5746ea5bc1b64b7",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/support/acceptance/workspace.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_definitions/__init__.py",
+      "legacy_sha256": "dfdab752d62b1c2910a0ac4de561e63b842ea269b4f2752b0b611fd64368e244",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/definitions/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_definitions/catalog.py",
+      "legacy_sha256": "1cc162ca7d6d1c7fee521e94d2a5b75299f730b82914c51ab97a769f12c4cb9a",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/definitions/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_definitions/errors.py",
+      "legacy_sha256": "b2a382b3bdbdbf33f970b96b35ce9c35790edbfc1bef95d02455072193ff4884",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/definitions/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_definitions/models.py",
+      "legacy_sha256": "56a72604b6a565d9bb52396c3fe97c96544fdaf74d8bec33fe068c94fbbb45b6",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/definitions/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_tools/__init__.py",
+      "legacy_sha256": "a7405917f2f59a6f15ed570c7f45f914908e4b56efd51b9eb5db712470d7b5f1",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/agent_tools/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_tools/errors.py",
+      "legacy_sha256": "6a8b4ec4b429793cc4e7d64e21aa307a831e8ca59dd23d8433362f78220cc066",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/agent_tools/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_tools/models.py",
+      "legacy_sha256": "028257f4c03ab640931f775338baf840506e7d6896ed818c8f05949dc4e16481",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/agent_tools/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_tools/policy.py",
+      "legacy_sha256": "5c85b9103bf5e113a0397ab1fb223f645ff738a6a696ead6f45e6abc58788bb8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/agent_tools/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agent_tools/runtime.py",
+      "legacy_sha256": "ee6c226bc94f7a54d69ba0ab77b9ba651a66b7924bd2b5bfe28b387e8321e60f",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/agent_tools/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agents/__init__.py",
+      "legacy_sha256": "d73b0de810a189ff02479a51f2e75ab2c4320446d1112fb2a74413807f11479d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/sdk/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agents/codex_readonly_agent.py",
+      "legacy_sha256": "71ff26f25bd31f5b9a1b1548c281e62df86d1357b4a8527a16d10bea54994f21",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/sdk/codex_readonly_agent.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agents/codex_write_agent.py",
+      "legacy_sha256": "d6b417c58ec6c07aa60c4fcf2d29c4dc89a9950492dba5b54219795890d64ea0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/sdk/codex_write_agent.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/agents/coding_agent.py",
+      "legacy_sha256": "39ee5c9d9f3c3d7907d69867b6b0a70f67d988508c652dacda35953aae92d1a9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/sdk/coding_agent.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/api/__init__.py",
+      "legacy_sha256": "a7d5b073a61272fda09ad98030713991b278ea25618dbaf0ef16ba9a14bf8eea",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/compatibility/legacy_api.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/approval_contracts.py",
+      "legacy_sha256": "8e4587c58c574c5524abd840b71a0b4e4d95868dcea077204f8bc2c28d0f3ae1",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/codex/approval_contracts.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/approval_operator/__init__.py",
+      "legacy_sha256": "f841a52aa3247213220eefb5e84d5569e85f88f4ccc379d63546aeab536d7474",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_clients/operator/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/approval_operator/client.py",
+      "legacy_sha256": "df36b8d6d28d216a68503df1982c027dd86e5e63ea42eaea99c5c6d4b2d3d604",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_clients/operator/client.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/attachments/__init__.py",
+      "legacy_sha256": "23ae0802b622f773c4e04b8e6cb6aa9ab55c98151bcac6cd1cfba18663607296",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/attachments/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/attachments/errors.py",
+      "legacy_sha256": "e01c3cc3ccbee20b4150d2a90c9045a88980947be87bc8c412f7f6940bf7e432",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/attachments/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/attachments/model_policy.py",
+      "legacy_sha256": "7b3ec8acc72379df0ed16467f23edbad293dd799acfd7b028aa5bd2708921010",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/attachments/model_policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/attachments/models.py",
+      "legacy_sha256": "e6c5af39ce82c9840766a42540b492553b519a895d1c241869e7fa49c4738708",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/attachments/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/attachments/policy.py",
+      "legacy_sha256": "a856e8e8950171c62ebb8d155753f374c978274b7dcddac45fbbdb719338f423",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/attachments/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/attachments/store.py",
+      "legacy_sha256": "0506ed871c50d801fd3f2c3c53777e1c2ab8a469503b1858ac4df4f7766aecb9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/storage/attachments.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/attachments/validation.py",
+      "legacy_sha256": "1e01b609273e72e3dfa438b9472f56c7dc265f4998af29a13c11e9bb8c69b6bf",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/attachments/validation.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/baseline.py",
+      "legacy_sha256": "474f172e997133ae5df4aa8076cc00a9afc6c9ab9f3d9658bf466d418f18548f",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/baseline.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/business/__init__.py",
+      "legacy_sha256": "5cdffb804a1a915d54743ba727ee3a48e4617ce2e505c4d9d9a3a41fe437bd98",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/verticals/store_replenishment/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/business/store_replenishment.py",
+      "legacy_sha256": "ead3fd858a823b91f69d904f4f0691b1629a8d8fd9259411193cb4145c71ac96",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/verticals/store_replenishment/store_replenishment.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/capabilities/__init__.py",
+      "legacy_sha256": "9a1221c0069457ba33e8ec5e4fc9fa740f8f0cdb49a6b0b43a35593539e38fa9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/capabilities/topology/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/capabilities/catalog.py",
+      "legacy_sha256": "c6e5b0b71d97d8ec937b5f4dc54f5522204bb30b943b89955b859855761aeb1d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/capabilities/topology/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/capabilities/errors.py",
+      "legacy_sha256": "7a985c402780ec72af27de0878afe955c7d3be136a9209eadc2e7145c69fa620",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/capabilities/topology/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/capabilities/examples.py",
+      "legacy_sha256": "6e26108ec98cd7e5db28e69106cc0a250e46d49841249b3cf667851f69ddaab1",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/capabilities/topology/examples.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/capabilities/models.py",
+      "legacy_sha256": "c6d342b3e17a4fd86e3f6f227f9d72407c60d1139a41dc700920712d02bd7f1b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/capabilities/topology/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/capabilities/policy.py",
+      "legacy_sha256": "0bba9815a624dd7a0d5663155aba1917dc70ebfdb4fb32f7a93b5d041151bf90",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/capabilities/topology/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/cli.py",
+      "legacy_sha256": "00b06cadd0201722343fb0d8746814c21aec870f0f1d371c74bc54f6574d3ada",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/bootstrap/development_cli/main.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/codex_contracts.py",
+      "legacy_sha256": "d23121329563c0c347580e716c38b3c47a0531e6052173e146a33d18c587d3c2",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/codex/readonly_contracts.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/codex_errors.py",
+      "legacy_sha256": "7928b145d15f3a7a631db18296b2a43c71194010d7178230c2cabb566f51a3bc",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/codex/readonly_errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/codex_write_contracts.py",
+      "legacy_sha256": "531478465ffbafd03d36fd6d466d6044e146c74688aa85244dbbc13278ab2a52",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/codex/write_contracts.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/codex_write_errors.py",
+      "legacy_sha256": "9a2acf8e4f89763161a52cf1041d4bd634d29f152e56330eafe0b3b851658377",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/codex/write_errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/commerce_snapshot_ingress/__init__.py",
+      "legacy_sha256": "30b0e4d9354a84885ed41c947fbaaefcd27b7f4bbf0258e5601fc02a84be8f4d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/commerce_snapshot_ingress/catalog.py",
+      "legacy_sha256": "934db0f4c70514fba5257376bf4fce78336053772f1d3a870a8a1d2afadf00dc",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/commerce_snapshot_ingress/errors.py",
+      "legacy_sha256": "88309cdccb14da6666a32d4a984cff268e4adfbe617863ad2a2d274cc958d781",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/commerce_snapshot_ingress/http_adapter.py",
+      "legacy_sha256": "e29cb3b8578990d0e2fd501064c2e53d92b4c539bd226d57a5713c4f02fbb430",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/http_adapter.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/commerce_snapshot_ingress/models.py",
+      "legacy_sha256": "c677a6f8d42bb22fdabcec84f3397ecb32e59f043e1eb6ab08dd76d26654bcf6",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/commerce_snapshot_ingress/service.py",
+      "legacy_sha256": "273f942258fbb93df471c924d19bc1fb7c8d505550fe76cd18c3583bbee2dcce",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/config.py",
+      "legacy_sha256": "6fe25e2be93f040412eb725a0b3ff67c6aa3c5a7558182cf354a61dfcd07acf4",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/config.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/contracts.py",
+      "legacy_sha256": "c86ab812605093914363c9b83896e7415c1e56051f4163c5cc4f4f2b94a4cd7d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/contracts.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/control_api/__init__.py",
+      "legacy_sha256": "4493d6da1eb2e9b35cb904b48bf53c075099509994e0d7b83ae2c4abd9b056a8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/compatibility/legacy_control_api/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/control_api/app.py",
+      "legacy_sha256": "af9a3a3b842758ddc308bba290d3f802d297719efcbe22ae058b8e620abb3da7",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/bootstrap/application.py",
+        "okcanvas_agent_runtime/application/admin/use_cases.py",
+        "okcanvas_agent_runtime/application/service/use_cases.py",
+        "okcanvas_agent_runtime/transport/admin/rest/routes.py",
+        "okcanvas_agent_runtime/transport/service/rest/routes.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/control_api/auth.py",
+      "legacy_sha256": "5df622d837f2e9032c0231ad5050e925f5e69b8012f004e06eb31a7a27bd1a00",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/transport/admin/rest/auth.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/control_api/contracts.py",
+      "legacy_sha256": "8418c32da2a9dd1542abdca8e9296c382e3017b85862fd3b38bc463b6a61d3b5",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_protocols/rest/admin.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/control_api/coordinator.py",
+      "legacy_sha256": "69002f2ca068a83e617fb0f11ccd4be917f7655086699fa019371f5cf59ba90b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/execution/coordinator.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/control_api/errors.py",
+      "legacy_sha256": "6ea65a8d04cbe22eb5c5f7080cb28a0c9a8d143f04843dc5fc730aa72800844d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/transport/common/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/control_api/mappers.py",
+      "legacy_sha256": "01de39ef3b5426f1105d4b8c2111de6776ac788dccca25757b866d95d6c96d9a",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/admin/projections.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/control_api/sse.py",
+      "legacy_sha256": "000516bf09dd1d34bd62af6d93e9cd17bbff2bd51f276b432285bbcc5963dadb",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/transport/admin/sse/stream.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/errors.py",
+      "legacy_sha256": "7434bd98d51fc7b9f40cc56640a87a7ac3b3f149d5862b26f4946e09894d9c57",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evaluation/__init__.py",
+      "legacy_sha256": "43fff5681e63b7e363befda8bdcd8702f2f2f009b4845c3522f00a59ef288b1e",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/evaluation/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evaluation/application.py",
+      "legacy_sha256": "5faeafc4ec5272661939f926f91ed5a701660516d0b5ec12e2daa2db3906aaf8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/evaluation/application.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evaluation/models.py",
+      "legacy_sha256": "af779e134b8983b05dd8fef9eb9100828afc7bef401e3e19e199e88259798c6f",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/evaluation/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evaluation/service.py",
+      "legacy_sha256": "59b41e119c22eb36c34b65c84bf2fb720aef07b9b387f1cedeca79499bbec151",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/evaluation/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evaluation/suite.py",
+      "legacy_sha256": "ed18be455a6be1512c6210e7dea175e3d50d242fc838941727b2ecf39f288ce0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/evaluation/suite.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evidence/__init__.py",
+      "legacy_sha256": "2c4101ee0d5f587be5c8f10da048d6ba8f9aaa4d0ca493b0906ce7fcb9c86fc9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/evidence/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evidence/jsonl.py",
+      "legacy_sha256": "cd35e4dd4289d6c0bc08270a6cf64d60d0cf7385a40f4fe08e1dfa7e064e6868",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/evidence/jsonl.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evidence/thread_state.py",
+      "legacy_sha256": "35ec64ee28787633f02863b81b564f00640a4535506989691d5470c7cb1bbdd4",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/evidence/thread_state.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/evidence/writer.py",
+      "legacy_sha256": "76c2dcfc324379b09778e030d1f680342dce97b15d7d9620599278132400f220",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/evidence/writer.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/__init__.py",
+      "legacy_sha256": "53cf686131789429f5b853ebbf8ef2f3b0ef90723eae8493e8e2117634d8c26b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/execution/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/contracts.py",
+      "legacy_sha256": "3ae85be266f61bfc923e1731df796961fe5cc46168f7a913f921348e08cd830f",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/execution/contracts.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/errors.py",
+      "legacy_sha256": "fa865c4c102e22425b494a46230611826d1a20dd84720b69e76b44dc3f9f49e5",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/execution/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/gateway.py",
+      "legacy_sha256": "0ffb3afa20194c535a62717a9d31479edddc2edb5de5ff089bdac36d8f386070",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/execution/gateway.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+      "legacy_sha256": "7351c1a722aad6e3498738a01cd5c5d08e46f9b3c978cc2c5562e8ce68ec9bce",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/generic_gateway.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/output_registry.py",
+      "legacy_sha256": "8f7337116df084787c7b7d42631d1061e09e78a9afaa92cafa6d0527ca40248a",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/execution/output_registry.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/runtime_binding.py",
+      "legacy_sha256": "cb4ecbb986661f13bb533937b41e6dc9956fad2c0b1edc9f556bd8dc854297ca",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/runtime/binding.py",
+        "okcanvas_agent_runtime/bootstrap/runtime_binding.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/sandbox_answer_completeness.py",
+      "legacy_sha256": "ef98300fe8f7620c3a0316a3d9e83e769633b6c59460cd6aac39016e5692284b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/execution/sandbox_answer_completeness.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/execution/service.py",
+      "legacy_sha256": "cc15da1d21b3ba1f0dd9a8e0fb10e3bf4335dc5d95427227e12146c10edeb7c1",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/execution/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/function_tools/__init__.py",
+      "legacy_sha256": "b368c87f41e2337951e1c3d6547cf2d33ed7adb990357ba2c7ed0a9ecdfca7f8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/function/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/function_tools/catalog.py",
+      "legacy_sha256": "e8c0def721f0478d46e9bfa78b96c8a8f4581c06738f02ddf8990de52bc02bd8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/function/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/function_tools/errors.py",
+      "legacy_sha256": "08cfa843450b3b7b25bfd9536516f0d2fd30306a5a1a7ff7c121bd797990dc51",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/function/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/function_tools/factories.py",
+      "legacy_sha256": "497647e51969ca0cc6ecd0e12a4c465653d259762c890cefdcd8e30095425d2b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/function/factories.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/function_tools/implementations.py",
+      "legacy_sha256": "f6b81efd5581a9ad1ad67f0dcdc52307c696f75eed4a30c53afb3476edc523d4",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/function/implementations.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/function_tools/models.py",
+      "legacy_sha256": "e7a06c0c657cea83be6e56da2ff63aea53454790579c9fa59dcc0afe16871a0d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/function/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/governance/__init__.py",
+      "legacy_sha256": "16ea50771acb2429ee1272439af93b6b645bac9836e8d7f288b10a1308bf5ff2",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/governance/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/governance/architecture_constitution.py",
+      "legacy_sha256": "98c5f0bbc3c27d61f45632cbba043b84b75f4dc83281810ab0b28ed73331f376",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/governance/architecture_constitution.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/governance/resources/__init__.py",
+      "legacy_sha256": "f7d074ba0bb1eb49bbdbc031c11f94f77a6ca680e44d942f785d46c15f011f60",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/governance/resources/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/governance/step_compliance.py",
+      "legacy_sha256": "43f3105602b7080e0aff1e286dbe10124bc5b3f134892fb2b031e722d1942b39",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/governance/step_compliance.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/guardrails/__init__.py",
+      "legacy_sha256": "818d38b099f90cb158bfd134eb2f22bc434ae82358a6a0c03366911a1b7c1312",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/guardrails/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/guardrails/catalog.py",
+      "legacy_sha256": "d8968f99ff457ed867ed4efa9cf970284f9e9128e9a0dd0e071cf104c1a05994",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/guardrails/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/guardrails/errors.py",
+      "legacy_sha256": "68cbd83eff103fdcbe1bf0908bb8b44b677e479486baa513316a19f307c764f3",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/guardrails/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/guardrails/models.py",
+      "legacy_sha256": "150ff9b83e921d965138c1ea71a657e82694336ccad59afb7e45834561b53889",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/guardrails/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/guardrails/runtime.py",
+      "legacy_sha256": "a9a0a3f46cb0d27a27ddfc81df331a6a8971995698c69d4c70015a298571c5f0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/guardrails/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/handoffs/__init__.py",
+      "legacy_sha256": "92edc01a9fb9680a68af6283618a1fdc22d10570844be7108ddccc519ac085b6",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/handoffs/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/handoffs/errors.py",
+      "legacy_sha256": "ed2bed14b0715a6f6bf18cfc7ad8263ad01c49a618bd5238562f3e017bcb8725",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/handoffs/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/handoffs/models.py",
+      "legacy_sha256": "3b6e136c125c20d8755e3cd7c032e93a541f651f4a9ea0ca700a248f7e61ae83",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/handoffs/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/handoffs/policy.py",
+      "legacy_sha256": "9f078d6eacefb1130b6e33e21bd10af59efb1d7d1f66cc7a51ff070c1e979870",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/handoffs/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/handoffs/runtime.py",
+      "legacy_sha256": "f2144d8c10cbee7a9e53fc91d47f11c0c94a9d3b0ecb9527f453d8c9eb1a676b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/handoffs/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/hosted_search/__init__.py",
+      "legacy_sha256": "98c0f83f973a5496a194087eabb6b42da3bcfc63590c754424296398dd10d9b7",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/hosted_search/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/hosted_search/catalog.py",
+      "legacy_sha256": "9757d63f4c686998213f113f58dca70330c65b52a2597ee44a17324159d44991",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/hosted_search/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/hosted_search/errors.py",
+      "legacy_sha256": "46f1957b9fd6c7d067e0fb196a65520728090432a109fedf5ab93c6c56f70e44",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/hosted_search/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/hosted_search/models.py",
+      "legacy_sha256": "4cbab652d6088eefd130c4f63a91205bef84a37eeccee1429b17b33bd47c6e13",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/hosted_search/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/hosted_search/runtime.py",
+      "legacy_sha256": "cfa6ffa941fe7173970a07d2af684e3ff618f5be7225f0abbbaf6ce170107521",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/hosted_search/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/interactive_runner/__init__.py",
+      "legacy_sha256": "03cea46259853a8580c2a800ce8ea1d859c0eef1f6958915eb93df5c1255b89b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_clients/dev_runner/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/invocations/__init__.py",
+      "legacy_sha256": "b788a7b9ecaf3c3291bbdfcdc4cf9227fa8008b49a6eded170c728492fcb8268",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/invocations/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/invocations/errors.py",
+      "legacy_sha256": "b8a01cc63ada5fc73ae457a61ce891410b380783df9d55dfe9ecfa7ee43724c9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/invocations/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/invocations/graph.py",
+      "legacy_sha256": "1edf72a8cba9d9b1a97cda9de52a4b216c267422b2d5475434b4d41bf071ca33",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/subagents/invocation_graph.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/invocations/models.py",
+      "legacy_sha256": "fd1f477a5b198ab6d4d741ad41b012d6e91ff5c6e58929af8a1290837a7c8d97",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/invocations/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/invocations/policy.py",
+      "legacy_sha256": "4453115e110a7282d521a3004000c142b1218f7bcb296a597ed13cb5fb55ceaf",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/invocations/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/invocations/service.py",
+      "legacy_sha256": "41c4e20a6486a24df489c728caee9f5c1797ae2bf20af1acfea98357d9322843",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/invocations/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/invocations/workspace.py",
+      "legacy_sha256": "1f40dc3ea94fca682061f24234358193a1f963c4d9a8d662f918e5752ea02328",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/workspace/invocation_workspace.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/mcp_clients/__init__.py",
+      "legacy_sha256": "4f1ce509e0a61aca00f84d7aaa3be5bd3f61998efa42131fcca8ad921de45fb6",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/mcp/clients/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+      "legacy_sha256": "89b6ba4b38ca1e02144c5d6eb989ca7d4c613c58534736fc591bf4f62d28fc15",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/mcp/clients/openai_factory.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/mcp_definitions/__init__.py",
+      "legacy_sha256": "943759d8902bc27a960a0694e0e21569ae19d2b54f4bb359ab392a12d11ec451",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/mcp/definitions/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/mcp_definitions/catalog.py",
+      "legacy_sha256": "acca17d0abd6551dea30be55869804a4a7047c78a0aab65568c556f9a26f5f34",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/mcp/definitions/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/mcp_definitions/errors.py",
+      "legacy_sha256": "0ceaf5c5af36e7a2327b148c00ec3afd63932956ec5eeff174ee2170ab42491a",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/mcp/definitions/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/mcp_definitions/models.py",
+      "legacy_sha256": "56a1ba2ce3425786d13e0baeb7071dd1f5027164a624332da72a0f58b4edf6e3",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/mcp/definitions/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/mcp_servers/__init__.py",
+      "legacy_sha256": "30c4f59db379d39ec36fb53d83b2b2df37776005d3e3992d818d773c3dc1f474",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/mcp/servers/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/mcp_servers/reference_catalog.py",
+      "legacy_sha256": "9e0a448504f8cad0c639d84ad0d82dd0221b51966b4056d3cebc7c5b82066524",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/mcp/servers/reference_catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model.py",
+      "legacy_sha256": "b7e50da40f926e271cdf0543d54490b7f207db42a5b57a59e149c4d0cf15fbd2",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/runtime_info/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_retry/__init__.py",
+      "legacy_sha256": "11fb3a59259413c7562bab033df1dc472742fbdabb61d728b18b095eda9638ec",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/retry/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_retry/catalog.py",
+      "legacy_sha256": "1756a44f2f19df31556f11a7b5f6e04de55bd8f9faf863cd012df963174d8e49",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/retry/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_retry/errors.py",
+      "legacy_sha256": "ec58fc2bc70541228329cada5f199b62f1d6681f94462d821cea4de7e15e731e",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/retry/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_retry/models.py",
+      "legacy_sha256": "e077e466ba94d63d33d3652d16dbe2225cc93e3d482198bb3e04397064a56497",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/retry/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_retry/runtime.py",
+      "legacy_sha256": "3669c13e40f95f958c28f14ad8d3dfdc08076a86fc04cbf72b5a045abc10ff1c",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/retry/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_routing/__init__.py",
+      "legacy_sha256": "6784308901032be0c5ec3e5274e566547f5f958b8a3873fcc5ff8638503b8b50",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/routing/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_routing/catalog.py",
+      "legacy_sha256": "fb332a83734cb67e483f24352d71197d1f8620d4eadf0f6712ea25082a0368ad",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/routing/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_routing/errors.py",
+      "legacy_sha256": "0399588dd66a77d2a5ca42f7d9659b9f659debd3e036837d5844f5118bb72350",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/routing/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_routing/models.py",
+      "legacy_sha256": "fc4295b225c64ec519141d0ce46883fbf8db91d8dad718a7b9c605200f409bf8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/routing/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/model_routing/provider.py",
+      "legacy_sha256": "19b93fb328ba64575efcae406c6f2571c09c2c8cc97e90a6f486bcb82a79c107",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/routing/provider.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/operations_console/__init__.py",
+      "legacy_sha256": "c119ede32be00130797eeb4a057df18f7255d3dba6e77aea8cc094ff9a3e1a96",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/operations/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/operations_console/service.py",
+      "legacy_sha256": "de2024e9e43aba1278cff65fe670264ba0328fda102c6b9d9bcd19b7a29c9967",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/operations/snapshot_service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/orchestration/__init__.py",
+      "legacy_sha256": "582ed1f7ed1e5274608e7e86eb23b1289ef2d0fd434a4deda8458d4543f591e2",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/orchestration/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/orchestration/errors.py",
+      "legacy_sha256": "ae731f5b4b91d1fde86a109fdcf5b29f310f0875dff28bedf79a044d86a41fa1",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/orchestration/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/orchestration/models.py",
+      "legacy_sha256": "da545cd92142fc2bdaf354029550a7ee1a0d1fd7172cd6aee34060977006e798",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/orchestration/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/orchestration/openai_runtime.py",
+      "legacy_sha256": "a688176ec4b39d1989dc1ff0cf6b7ad23007b36a1c1502d00fbe33357e06bef3",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/orchestration/openai_runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/orchestration/policy.py",
+      "legacy_sha256": "fd2bf8076ea684b68ed3066c0b6d282e9a10d9525c03e5c2226842de1b6ead90",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/orchestration/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/orchestration/runtime.py",
+      "legacy_sha256": "fdef6c5b44f8d18be2ab39b9d76c2bbbf6ae7f8a5d3ad3e93925114b1edc61f9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/orchestration/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/persistence/__init__.py",
+      "legacy_sha256": "45b60462719d93a55f8e3ae922416aeccdeb943dfb5f83e38c6b749566a29124",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/persistence/product/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/persistence/sqlite_store.py",
+      "legacy_sha256": "b7f4cfe042e2fdcf510ef245bfc2a08ccf51fb8ff39eaca1903cc1c9dcbb08c0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/persistence/product/sqlite_store.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/policy/__init__.py",
+      "legacy_sha256": "bec56d6350d411af5c2752708a4260658070d16f42e8cf19803f2b9ecbc38724",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/compatibility/legacy_policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/product/__init__.py",
+      "legacy_sha256": "71cc45ee3d1852e962f5efc06a51dd61e7d61d2434282fe14571fc20445631a8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/runs/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/product/errors.py",
+      "legacy_sha256": "c65028349e2bed60f2d84cbcd5a7cb06c3552eb2b0ad99874c7393378f0a7d81",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/runs/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/product/models.py",
+      "legacy_sha256": "93bb8cb013a8f935d8ce2cd2eb775ed4c1afad14996cf4b3b476aaea9a34a32d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/runs/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/product/ports.py",
+      "legacy_sha256": "a1032d5b0332c553cd29fe05127976e0135b4b3235a06226f15e7c7db9f270ea",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/runs/ports.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/product/transitions.py",
+      "legacy_sha256": "ee4168b37331e3e4ec1df98bbfc6ac58926763607eeb5c0b83d08de2c3c8c0d3",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/runs/transitions.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/project_snapshots/__init__.py",
+      "legacy_sha256": "c1f3806be538bf1212ea5e4c30ee2a44426db39efb266d9059df49a70e9d7215",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/project_snapshots/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/project_snapshots/errors.py",
+      "legacy_sha256": "6659b0f5afa51f1c69ad772fc6b02c4538b59b6dea0a83efab2f520b47b01899",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/project_snapshots/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/project_snapshots/materialization.py",
+      "legacy_sha256": "ce6222e613381a6cb9daf914fd277ccd0c7272a7589ccb7fe8908d6c592205db",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/workspace/project_snapshot_materialization.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/project_snapshots/models.py",
+      "legacy_sha256": "7aec3e3226cec903c20dd00c0c5d4a3dc9bc9a9e64447161143808a77eb6ed14",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/project_snapshots/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/project_snapshots/policy.py",
+      "legacy_sha256": "879084fb8825ac60fa7372f81188955b14365887c26981fd9d3b2eea6bd5009f",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/project_snapshots/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/project_snapshots/store.py",
+      "legacy_sha256": "a76b15f3f293e70e26f1fd8fbf0b7a3b0eea80e5ded9f36a458be1d1db75a91f",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/storage/project_snapshots.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/project_snapshots/validation.py",
+      "legacy_sha256": "bbb21533b4e2aada5f737e04ba1023f14df8eec89bc1dbfff1f85da09c9bfad4",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/project_snapshots/validation.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/protected_payload/__init__.py",
+      "legacy_sha256": "f68ab29ed08f9c8f2d50feee6d6188d58d82d46631c7c5c72ad709787100dbf0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/storage/protected_payload/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/protected_payload/errors.py",
+      "legacy_sha256": "046bd37057ac862117ad3828c79d9616f443d3ced34f4130cd7c103a556ac3e8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/protected_payload_errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/protected_payload/models.py",
+      "legacy_sha256": "a59d723bf89e5990e912722753ca86b2a8cb59ff2761196ad455c0aa757923f8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/protected_payload.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/protected_payload/store.py",
+      "legacy_sha256": "720b27a15fe871d000f14a55293283468f0d94fd598030a4347d5ce86e90efce",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/storage/protected_payload/store.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/provider_identity/__init__.py",
+      "legacy_sha256": "b754e451a9b2a5c19e7f119a91182b1c0b04a1ff9b9ee44384c7c6b8ed455556",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/provider_identity/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/provider_identity/catalog.py",
+      "legacy_sha256": "93998a2f7b7d54a858eb851045b68b8aed1cb3645cc8869ff3da9e4563ef39ef",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/provider_identity/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/provider_identity/errors.py",
+      "legacy_sha256": "222226b7c6b1dce6823b0fc3858293b971c1bf914068e2ebcfc5a41d780e646d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/provider_identity/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/provider_identity/models.py",
+      "legacy_sha256": "7159f8bd457673f9a2003e506079653f991a5aae98ee2c30a45792002d447f7d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/provider_identity/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/provider_identity/runtime.py",
+      "legacy_sha256": "83705cda4e704195a1d3c6b59801e72a1b85cf25f055988fe8b375ded4fde7e0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/provider_identity/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reasoning_evidence/__init__.py",
+      "legacy_sha256": "38e0d3c63a59d751a91e9e157308db842188a900412b1f88cfa5bc4a20a1a9bd",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/reasoning_evidence/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reasoning_evidence/catalog.py",
+      "legacy_sha256": "2d230e6685bd4f6054358ddda339b9dcc732cba06fbfc46fc410f303031780d8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/reasoning_evidence/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reasoning_evidence/errors.py",
+      "legacy_sha256": "8ece03de6d534da6b283c8e1cac9bbfa009725feb275e1b2d17d745843a23c9c",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/reasoning_evidence/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reasoning_evidence/models.py",
+      "legacy_sha256": "32f34ce69d0ba660a67175e4e13e23a58af16e8bb254b17cc48fdb12c7d1c403",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/reasoning_evidence/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reasoning_evidence/runtime.py",
+      "legacy_sha256": "0473a3fba424c6276a9721275684b3eec4576d9a34da3c34b4cdfd9cb76807ee",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/reasoning_evidence/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reference_catalog/__init__.py",
+      "legacy_sha256": "9bd54a7af89ccbfb530ef41992622c24b5203d8b040281ea59cb780243ab38e9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/reference_catalog/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reference_catalog/errors.py",
+      "legacy_sha256": "863cce7ca2c86939c18c3e469145852e2f2003f4745289e7474a7b10f5c753e6",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/reference_catalog/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reference_catalog/evidence.py",
+      "legacy_sha256": "e2db5c7e8fdd69b1af9c042b203d41eecef30f49adbd30e7b0841d67904665ba",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/reference_catalog/evidence.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reference_catalog/models.py",
+      "legacy_sha256": "382a34f88f98c595b3affb0200d34b815453de826a5487ac655ef448294334b0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/reference_catalog/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/reference_catalog/service.py",
+      "legacy_sha256": "aaa12a5bd8440764519a4daff4374637adeb8a6a4aeb266909f71bdb319d89c2",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/reference_catalog/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/replenishment_limits.py",
+      "legacy_sha256": "ad460bff1f6452e1cb717f695f0bc9cbe8d3fde620c063a0158f8698202cb4cf",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/replenishment_limits.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/response_storage/__init__.py",
+      "legacy_sha256": "cd10524d720dc847187be5f76639e9abafe8464e04247acc508d8bf1d0901935",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/response_storage/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/response_storage/catalog.py",
+      "legacy_sha256": "774f993ace2b2531439696522a5235f5240663e7e99b89ccc4a9584050bf3107",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/response_storage/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/response_storage/errors.py",
+      "legacy_sha256": "5224038a7c671ca55708bfaf38a44e0e8c825c93f34da6e215142f05e02bb32c",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/response_storage/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/response_storage/models.py",
+      "legacy_sha256": "4963a2675cc268801e74c783afe77fa9d01fca9bdf0373b3c66bb77fce4bb841",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/response_storage/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/response_storage/runtime.py",
+      "legacy_sha256": "3219b2fdd7cba7e1517aa901552cb5ef24d57339b7532364c4e7ebf993617fdd",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/response_storage/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/run_submission/__init__.py",
+      "legacy_sha256": "0b2f81427b77708def9d9132fca693c144fe489c71705b165f6372296ab04cc8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/run_submission/errors.py",
+      "legacy_sha256": "aea00993a44f213904b18b02acf7375d6300a6957c724914c5b458ee13b7af38",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/run_submission/execution.py",
+      "legacy_sha256": "3c7371b0058cca538a9973414f808d3c67e6a6e3a40c2ec4e9d3063b4e5fa614",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/execution.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/run_submission/lifecycle.py",
+      "legacy_sha256": "e8e257f7f1c973344d34298993efd7a75ebef316d6d9f59f6d1f42115a56677a",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/lifecycle.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/run_submission/models.py",
+      "legacy_sha256": "6b3e93f44be01ccda574ca0ba77fc51e6bf0ec6ef5ee202d373189f8e0fc3aaf",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/run_submission/policy.py",
+      "legacy_sha256": "3c4118e3e67103f2cb5683fa97b20e96602cad33b62a07e3a59d7b2cc88fac12",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/run_submission/service.py",
+      "legacy_sha256": "9b1fd2f3f41692104cb5cca3a96c07d60936c4d1253271e9b091b0e238dec6ce",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/submissions/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/run_submission/store.py",
+      "legacy_sha256": "428273b8c4619154c092f2bfd3a8fae294df12101655a728d9df6e644d1c3ab7",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/persistence/run_submission.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/__init__.py",
+      "legacy_sha256": "bb5525c784b048636a42da29cbb899c5e7f60d55c21c2851607fe15434867097",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/codex_approval_gateway.py",
+      "legacy_sha256": "d03c6d2c6f0bf7d43da26572861c3d0c527d62519666c7fc31c0b0f2d8f2cfda",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/codex_approval_gateway.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/codex_approval_service.py",
+      "legacy_sha256": "4210f09d5792ec3fa0d4a23bbadcb243d4c780002966d9ead29b1b0cde84d81a",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/codex_approval_service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/codex_gateway.py",
+      "legacy_sha256": "c006c7f5ab059c82b7a0291e514fb375e080e4075e5fd3a9fd8acf6fb725a699",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/codex_gateway.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/codex_readiness.py",
+      "legacy_sha256": "f1fb526a743d85de223ece5211287da02db076f3f24b63cdf05e6ca295f4e4fb",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/codex_readiness.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/codex_service.py",
+      "legacy_sha256": "7c77d11dd58b5767a9f3b7f98ac813e89eb4dc6f13cf89141781501d712fd233",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/codex_service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/codex_write_gateway.py",
+      "legacy_sha256": "c7c7ea8b8abae7740197501bbb9a77b31c6fdb3435d30417716efddbb103e447",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/codex_write_gateway.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/codex_write_service.py",
+      "legacy_sha256": "fb7583ded786dc0e254839df6606f54c63e7c8b0853e8210faa84a912eda3ef5",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/codex_write_service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/gateway.py",
+      "legacy_sha256": "165a02ef7ef106eb560d4c2e0f6ee626611e9c239e16fc5a3aac87dc7620c553",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/gateway.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/openai_gateway.py",
+      "legacy_sha256": "313ad49280461dfe508729a92948223fbb3d79172e882d56c3baa7849acfd3a8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/openai_gateway.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/sdk_readiness.py",
+      "legacy_sha256": "c0fc75c3af4e02c1cf141de5e1a859091c43848ff5a4a7710044e2ab0b46237c",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/sdk_readiness.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/runtime/service.py",
+      "legacy_sha256": "c9816ad284a1995b95a9759c5007b53e39361b282d757ac42ea28ea2d73012ac",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/openai/runtime/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sandbox_runtime/__init__.py",
+      "legacy_sha256": "6e62ea20dd1e4c884793ba8f6c981b89b6e8497e8b109e27e6cdda973555a9c2",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/sandbox/docker/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sandbox_runtime/catalog.py",
+      "legacy_sha256": "ea763145c82c8da18beb8772e7e51adead4a1e825c29402ffed75fc3a7159506",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/sandbox/docker/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sandbox_runtime/docker_cli.py",
+      "legacy_sha256": "446705de9ad41d6825c76a9bdb443c1fbc6e3a58611fa38cb9d397b598e00618",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/sandbox/docker/docker_cli.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sandbox_runtime/errors.py",
+      "legacy_sha256": "ee796bb7ad2d986d0ec497ced05538e67ddf431b5774df06db8436ae4555a9c6",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/sandbox/docker/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sandbox_runtime/models.py",
+      "legacy_sha256": "d78a16ae5dd215299a29248761850f6e45df23d022a599f7b50f4489addde87d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/sandbox/docker/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sandbox_runtime/read_only_workspace.py",
+      "legacy_sha256": "80a2a5f19d75c52adfec2769f198d30a48fb74d0e4aee0319f137bfb5bb1e3e3",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/sandbox/docker/read_only_workspace.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sandbox_runtime/service.py",
+      "legacy_sha256": "b4b27816828103742ab89e5f149736f5fb9fbd3b63284d92c53963110fc975c4",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/sandbox/docker/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/service_clients/__init__.py",
+      "legacy_sha256": "f5f2a5c3d16827a79b47e281308cf7e89db6f7e724c81f60791912ffdfd17867",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/compatibility/legacy_service_clients/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/service_clients/auth.py",
+      "legacy_sha256": "b6719235374e07358dead5b4ef7206b68ecc3691a3d913b340df5877e5e4923d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/transport/service/rest/auth.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/service_clients/contracts.py",
+      "legacy_sha256": "848fe4393513e4aef1672320db98281938da2acc40405fec8214c9491d501a02",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_protocols/rest/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/service_clients/models.py",
+      "legacy_sha256": "864b14430d39c9e2800afba7000b8c73e4011fca6827eec87bbb64dcc87d314d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/core/service_identity.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/service_clients/ownership.py",
+      "legacy_sha256": "7951272451115c89877007c8ba39ad6632cbb5e85211378af2ef8e7ee07384e7",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/persistence/service_ownership.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/service_clients/routes.py",
+      "legacy_sha256": "170bec8e134f2c2dca39ba5899859ceb4b6f11f106c62c8cbe2433417f67ff29",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/transport/service/rest/routes.py",
+        "okcanvas_agent_runtime/application/service/use_cases.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/__init__.py",
+      "legacy_sha256": "a165bb5212d5bd1989151dec20edb4501851748c4148fe4e296f632d843b1bdd",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/agent_tool_policy.py",
+      "legacy_sha256": "2fcfd65d163d562eda4afbce31d2e332d2b609977dc645078bd57d9ee4024e33",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/agent_tool_policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/approval_policy.py",
+      "legacy_sha256": "c4848e7d4a036c52799cc2058825dada41e87d9ff6c1ec132ca17815607673ef",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/approval_policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/compaction.py",
+      "legacy_sha256": "0775e58c3ee126a6d5d4327960e57e75de56b82221f8f59216410387b0f23c2e",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/compaction.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/encryption.py",
+      "legacy_sha256": "b2127cf828e1e4d44663295edac0b4451d8b452a352e73789b3272d6e7a781b0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/storage/session_history.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/errors.py",
+      "legacy_sha256": "f1fff775095b3b462c99a43b2090b4cf08a6243178e1b700d22c010f1b0adbba",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/guardrail_policy.py",
+      "legacy_sha256": "2b2e1071b1319e78c206da1cbcb175ce43846f85019a72e3bfb736d360412412",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/guardrail_policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/handoff_policy.py",
+      "legacy_sha256": "acb7e500e521aec441efa3752c51ed8da78cb0bb2205f6c5060ac3287011b0af",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/handoff_policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/mcp_policy.py",
+      "legacy_sha256": "0acd4708c6b1e0e9a30988e1fe90584c88e32023f2b96d0d5cf70ebc44fa00d0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/mcp_policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/models.py",
+      "legacy_sha256": "5ccae33f425d3c9cc710fd75f7a37ae3224e0cbfc6318d871fa26cc65458ac6f",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/policy.py",
+      "legacy_sha256": "d3e7fe2dc2f1fe79796d64cb3af3a112d25bbbd2bec0e9d11da63fd9d8c68531",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/rotation.py",
+      "legacy_sha256": "de621f11729a3ab0aa88d2c93aa857c1db21f74813edf244ec2fc5e938823ab0",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/persistence/sessions/rotation.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/rotation_policy.py",
+      "legacy_sha256": "721a35f40a4d3129814f779ca3605e036803be701556460e19392a26b7a1c0cf",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/domain/sessions/rotation_policy.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/sessions/service.py",
+      "legacy_sha256": "aae6ea45004e66a55db3b30c6c547a27e8977f8b1e5da3b174efec426076ae14",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/persistence/sessions/runtime_service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/skills/__init__.py",
+      "legacy_sha256": "a9c8a38d73bd52d10af69e614e7cc6c0d13595a465dc47e70f4810942a73cbd7",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/skills/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/skills/catalog.py",
+      "legacy_sha256": "370bcb7587d017fc2f84aaa8000451b0a3dc5917a7ea1eb5426627b560a8ef71",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/skills/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/skills/errors.py",
+      "legacy_sha256": "16ac632fd603a8e397769d289efb55dde1b12aba7307eb0b24ce60bc4ad8c811",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/skills/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/skills/models.py",
+      "legacy_sha256": "b3486e9dcfbb22842c7311b717e7778111a0895ed58a8a8e1773aa3ca2fb833b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/skills/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/skills/runtime.py",
+      "legacy_sha256": "d05849e9c6fd189868ae9c088d9af8309c814102fab7f6887e72cc16801c4cdf",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/skills/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/streaming/__init__.py",
+      "legacy_sha256": "519c5d2df898f7e26201e5d92a9b79396bf061b74df5fb2cbec2d4571b815450",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/streaming/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/streaming/adapter.py",
+      "legacy_sha256": "859ad2d6612e33402033f6570f3109873e38ddcfbb68b826593a6f60bf5bbb94",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/streaming/adapter.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/streaming/broker.py",
+      "legacy_sha256": "c21442b7232d99be3da75a4fe463e0c7634d8ce86a7de421ff97e728d13ec857",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/streaming/broker.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/streaming/models.py",
+      "legacy_sha256": "31daf38e5a5572a93207a76848a4caa01536d114a08e7d21a8ef61a6d9f4a205",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/streaming/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/streaming/sse.py",
+      "legacy_sha256": "b7c64bfb9785370b7fd124963ea2d923a8c5200b3ae80efcb7ca9053c6f4f83e",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/streaming/sse.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tool_approval/__init__.py",
+      "legacy_sha256": "337cc7e975e4823336cd4c130a9653662889f1efc3b887575807b162f5f9984b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/approvals/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tool_approval/errors.py",
+      "legacy_sha256": "b87b4f43c96241fc89740df41571a7edf345704c81fa62fc14696a318c994468",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/approvals/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tool_approval/gateway.py",
+      "legacy_sha256": "396c26414b1daee7cc22b825793ede338b5c9da4f3aa08a9ff16398447c9c157",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/approvals/gateway.py",
+        "okcanvas_agent_runtime/adapters/openai/local_tool_approval.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tool_approval/models.py",
+      "legacy_sha256": "2a427b8edca60030f333d4f0fd72838e0a88dd5ef44ac9b2af2f4499ae68721a",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/approvals/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tool_approval/service.py",
+      "legacy_sha256": "a289ce3fc90bf82b84308e5f220818519f8768648a3833c96bc2bbf2989991c8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/approvals/service.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tool_approval/state_store.py",
+      "legacy_sha256": "c733c3645e7203f0684bfbd09a5e18af0d9cb9d983dd3ad061e17ee91e0f1f12",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/storage/run_state.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tool_approval/store.py",
+      "legacy_sha256": "970c8b024b9445d08f9eb8e063d1b6ac86afec80e046d0706142e518264ad971",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/persistence/tool_approval.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tool_approval/testing.py",
+      "legacy_sha256": "e4798454096a2b476bcad5fa44266da05e5bf1fb65f146be7e70d906d6dc56b9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/approvals/testing.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tools/__init__.py",
+      "legacy_sha256": "a05dd91159972246f02533c1d5e70cf5da403b62711ebf218f6268373371b89d",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/tools/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/trace_export/__init__.py",
+      "legacy_sha256": "1e050b1f0f618d10a3047e0709c078e03b1d1cf66a0c1fea87fc292f07d3f3fc",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/trace_export/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/trace_export/catalog.py",
+      "legacy_sha256": "5f80f708d0e3ec01017dcb8b49058d2f44873e8a6c7163e4d0115b8dd7856ebf",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/trace_export/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/trace_export/errors.py",
+      "legacy_sha256": "9c05e076405f00a819fd5c5e982740713a84bd61303b901085bffc92c7a6e531",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/trace_export/errors.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/trace_export/models.py",
+      "legacy_sha256": "d877745bc14a9b73d41d43068cabc00ae93f022ca9a3daa787bfd1dc2ce8af80",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/trace_export/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/trace_export/runtime.py",
+      "legacy_sha256": "3b67a1b97849d0eea78b1726f4e7f0971783768715c6d79338410470ac9ed85f",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/agent/model/trace_export/runtime.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tui_client/__init__.py",
+      "legacy_sha256": "52a40f544b9524f9af8bdf336175d7faf124235499aa3b73bce9180fc456accc",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_clients/tui/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tui_client/app.py",
+      "legacy_sha256": "217168b418979ae4760a6498d8d19be0f1888404604f1d715d1642f4411a6cf5",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_clients/tui/app.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tui_client/client.py",
+      "legacy_sha256": "ed00436cf50e3ed226762e9ee502e224b903d13ebc0477729ed60aa571cd341c",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_clients/tui/client.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tui_client/config.py",
+      "legacy_sha256": "b5a834bdcf0fd15523ec34a705b3356162dcd24a31260403ce9db71ce853cfc1",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_clients/tui/config.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/tui_client/sse.py",
+      "legacy_sha256": "a2a6c2ab164fdb4d4627abf2eaf6887c4b0d7c74b95abfd93b1461b6497172aa",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_clients/tui/sse.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/validation/__init__.py",
+      "legacy_sha256": "79b4d506f83edbae679741626939062d94ab78971b45159491f013058dbb0ac9",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/support/validation/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/validation/pytest_validator.py",
+      "legacy_sha256": "1f081698a54ab121d47f145cf75c3adf41689f0564678959dd61422d073311d2",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/support/validation/pytest_validator.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/walking_skeleton/__init__.py",
+      "legacy_sha256": "30abc900a6813b754511b0836504e133b371174d9c8cc2ce8b03ea0b47f9ef73",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/scenarios/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/walking_skeleton/catalog.py",
+      "legacy_sha256": "ad6d8e6757a606430cdd2ed45c06413299d3510c8dc6c17868d6549f778f3a33",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/scenarios/catalog.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/walking_skeleton/models.py",
+      "legacy_sha256": "bb62106cff77254ade8493a92a5b274216432548cf4658b300c6935f12ae849b",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/application/scenarios/models.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/workspace/__init__.py",
+      "legacy_sha256": "71ebac20e75f2cecba129e5b66de94da8e145d4cb97768a799383b7d15019150",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/workspace/__init__.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/workspace/git_diff.py",
+      "legacy_sha256": "d8838ae337b1770ff0a7002778fe1aa05f72dcbf981cdcb7d286447024280d5a",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/workspace/git_diff.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/workspace/read_only_project.py",
+      "legacy_sha256": "0990c2bd4f4bfa28c58805ab609eac6c420e895c8380ec4f69bcc6758a1ab2d8",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/workspace/read_only_project.py"
+      ]
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/workspace/tree_hash.py",
+      "legacy_sha256": "6c4a2ef264f95e3a13085d0b0817425bb443a674eb0a0ef058e1308a7b413d21",
+      "status": "RELOCATED_AND_COMPATIBILITY_RESOLVED",
+      "target_paths": [
+        "okcanvas_agent_runtime/adapters/workspace/tree_hash.py"
+      ]
+    }
+  ],
+  "resource_relocation_count": 10,
+  "resource_relocations": [
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/governance/resources/architecture_constitution.json",
+      "legacy_sha256": "d83c57276ad2369adf0569fcafe88ad19276c097ad49d764b0d48d424fcbc81d",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_runtime/core/governance/resources/architecture_constitution.json",
+      "target_sha256": "d83c57276ad2369adf0569fcafe88ad19276c097ad49d764b0d48d424fcbc81d"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/governance/resources/constitution_gate_catalog.json",
+      "legacy_sha256": "5387cbafc96880968212ab9aed7f405d80351b784bf3cd78aec9717d742c4579",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_runtime/core/governance/resources/constitution_gate_catalog.json",
+      "target_sha256": "5387cbafc96880968212ab9aed7f405d80351b784bf3cd78aec9717d742c4579"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/interactive_runner/assets/index.html",
+      "legacy_sha256": "550455d72170da56f0048f0b200063a207f5a29021ff181e25183ee0898ca642",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_clients/dev_runner/assets/index.html",
+      "target_sha256": "550455d72170da56f0048f0b200063a207f5a29021ff181e25183ee0898ca642"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/interactive_runner/assets/persisted-sse.js",
+      "legacy_sha256": "25dca10a3f80d0fc4e43ecee19b6230b873cbab6002aaefd34ec369abd45e4a7",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_clients/dev_runner/assets/persisted-sse.js",
+      "target_sha256": "25dca10a3f80d0fc4e43ecee19b6230b873cbab6002aaefd34ec369abd45e4a7"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/interactive_runner/assets/runner.css",
+      "legacy_sha256": "0ed74a9ff86bd598952cd6c3b85470941308ddf1deffbe5e05826acc9f613b58",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_clients/dev_runner/assets/runner.css",
+      "target_sha256": "0ed74a9ff86bd598952cd6c3b85470941308ddf1deffbe5e05826acc9f613b58"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/interactive_runner/assets/runner.js",
+      "legacy_sha256": "ae491761a7af530b77dca6896c7df95d692ae957ba7b5a62a68782e6b6151ba8",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_clients/dev_runner/assets/runner.js",
+      "target_sha256": "ae491761a7af530b77dca6896c7df95d692ae957ba7b5a62a68782e6b6151ba8"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/operations_console/assets/console.css",
+      "legacy_sha256": "cac2ca4a234aa6737aaea26b3e9b23c4bcc437e169c60ac92290470898fc1afd",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_clients/dev_console/assets/console.css",
+      "target_sha256": "cac2ca4a234aa6737aaea26b3e9b23c4bcc437e169c60ac92290470898fc1afd"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/operations_console/assets/console.js",
+      "legacy_sha256": "121b728714766ca98ed034fb4d6dbc0869d713d40765f850c12ce1cb110d0883",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_clients/dev_console/assets/console.js",
+      "target_sha256": "121b728714766ca98ed034fb4d6dbc0869d713d40765f850c12ce1cb110d0883"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/operations_console/assets/index.html",
+      "legacy_sha256": "52d8022fe76ca1e47a264818a4a27eccdeb5b87c3a4304bc9b05923f7dc7f369",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_clients/dev_console/assets/index.html",
+      "target_sha256": "52d8022fe76ca1e47a264818a4a27eccdeb5b87c3a4304bc9b05923f7dc7f369"
+    },
+    {
+      "legacy_path": "src/okcanvas_agent_runtime/operations_console/assets/persisted-sse.js",
+      "legacy_sha256": "25dca10a3f80d0fc4e43ecee19b6230b873cbab6002aaefd34ec369abd45e4a7",
+      "status": "RELOCATED_BYTE_IDENTICAL",
+      "target_path": "okcanvas_agent_clients/dev_console/assets/persisted-sse.js",
+      "target_sha256": "25dca10a3f80d0fc4e43ecee19b6230b873cbab6002aaefd34ec369abd45e4a7"
+    }
+  ],
+  "schema_version": "okcanvas-step081-executed-relocation-manifest-v1",
+  "step": "STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION",
+  "version": "2.61.4"
+}

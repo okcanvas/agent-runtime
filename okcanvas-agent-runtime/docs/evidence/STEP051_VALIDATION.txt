@@ -1,0 +1,66 @@
+STEP051_IMMUTABLE_OPENAI_MODEL_ROUTE_BINDING_V1
+okcanvas-agent-runtime 2.31.0
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+SOURCE TREE VALIDATION
+- python compileall src/scripts/tests: PASS
+- focused model-route/runtime-binding/gateway regressions: 21 passed
+- full pytest across all 158 test files: 508 passed
+  - group 1: 168 passed
+  - group 2: 183 passed
+  - group 3: 157 passed
+- STEP051 deterministic acceptance: 25/25 PASS, cleanup COMPLETED in 1 attempt
+- STEP050 regression: 31/31 PASS, cleanup COMPLETED
+- STEP049 regression: 33/33 PASS, cleanup COMPLETED
+- STEP048 regression: 32/32 PASS, cleanup COMPLETED
+- STEP047 regression: 29/29 PASS, cleanup COMPLETED
+- STEP046 regression: 27/27 PASS
+- STEP030A launcher audit: 8/8 PASS
+- Windows runtime launchers: 56
+- launcher violations: 0
+- immutable Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+STEP051 ACCEPTANCE EXACT RESULT
+- checks: 25/25
+- Runner.run / Runner.run_streamed: 0 / 1
+- provider constructed / get_model / closed: 1 / 1 / 1
+- route: openai:responses:http
+- official base URL forced: true
+- provider prefixes allowed: false
+- automatic fallback: false
+- policy drift confirmation status: 409
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/2/1/10/1/1
+- protected payload files: 1
+- Evaluation: PASSED
+- Reference unchanged: true
+- cleanup: COMPLETED
+
+INDEPENDENT ZIP VALIDATION
+- candidate ZIP canonical root: 1
+- candidate ZIP entries: 2,522
+- forbidden cache/build entries: 0
+- fresh candidate extraction compileall: PASS
+- fresh candidate extraction pytest: 508/508 PASS
+  - group 1: 168 passed
+  - group 2: 183 passed
+  - group 3: 157 passed
+- fresh candidate extraction STEP051: 25/25 PASS, cleanup COMPLETED
+- fresh candidate extraction STEP050/049/048/047/046: 31/33/32/29/27 PASS
+- fresh candidate extraction STEP030A: 8/8 PASS, launchers 56, violations 0
+- fresh candidate extraction Reference integrity: 4/4 PASS
+- fresh candidate extraction direct /reference imports: 0
+- final ZIP is rebuilt from this exact source tree; only this Validation record differs from the independently tested candidate ZIP.
+
+
+FINAL ZIP EXTRACTION RECHECK
+- final pre-record ZIP fresh extraction compileall: PASS
+- final pre-record ZIP fresh extraction pytest: 508/508 PASS
+  - group 1: 168 passed
+  - group 2: 183 passed
+  - group 3: 157 passed
+- final pre-record ZIP STEP051: 25/25 PASS, cleanup COMPLETED
+- final pre-record ZIP STEP030A: 8/8 PASS, launchers 56, violations 0
+- final pre-record ZIP Reference integrity: 4/4 PASS
+- final pre-record ZIP direct /reference imports: 0
+- released ZIP is rebuilt only to include this final extraction record; all other 2,521 entries remain byte-identical to the tested ZIP.

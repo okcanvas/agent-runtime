@@ -1,0 +1,61 @@
+STEP041_NATIVE_HANDOFF_RUNTIME_V1 validation
+
+Executable baseline
+- project: okcanvas-agent-runtime
+- version: 2.21.0
+- current STEP: STEP041_NATIVE_HANDOFF_RUNTIME_V1
+- previous Windows live closure: STEP040_SUB_AGENT_INVOCATION_SCOPE_FOUNDATION
+
+Source validation
+- compileall: PASS
+- full pytest: 437 passed, executed in five file batches (96 + 118 + 99 + 53 + 71)
+- STEP041 deterministic acceptance: 24/24 PASS, cleanup COMPLETED
+- STEP040 regression acceptance: 23/23 PASS
+- STEP039 regression acceptance: 20/20 PASS
+- STEP038 regression acceptance: 24/24 PASS
+- STEP037 regression acceptance: 24/24 PASS
+- STEP036 regression acceptance: 18/18 PASS
+- STEP020 governed approval approve/reject: PASS
+- STEP023 Approval Operator: 15/15 PASS
+- STEP030A Windows launcher contract: 8/8 PASS, 46 Runtime launchers, zero violations
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: zero
+
+STEP041 exact acceptance
+- checks: 24/24 PASS
+- one SDK Handoff construction
+- Runner.run_streamed calls: 1
+- Runner.run calls: 0
+- Product Task/Run/Submission: 1/1/1
+- Product invocations: ROOT 1, HANDOFF 1
+- ROOT usage: input/output/total 12/4/16
+- HANDOFF child usage: input/output/total 18/6/24
+- Product Run usage: input/output/total 30/10/40
+- canonical agent.handoff Events: 1
+- Handoff history and arguments persisted: false
+- physical workspace materialized: false
+- verified Artifacts: 1
+- PASSED recorded Evaluations: 1
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/1/2/14/1/1
+- successful protected payload: DELETED
+- unchanged References
+- acceptance cleanup: COMPLETED
+
+Initial Canonical ZIP validation
+- archive root count: 1
+- archive root: okcanvas-agent-runtime
+- ZIP entries: 2,328
+- actual forbidden environment/venv/cache/local-state/database/protected-payload state files: 0
+- separately extracted compileall: PASS
+- separately extracted full pytest: 437 passed (96 + 118 + 99 + 53 + 71)
+- separately extracted STEP041: 24/24 PASS
+- separately extracted STEP040: 23/23 PASS
+- separately extracted STEP030A: 8/8 PASS
+- separately extracted Windows Runtime launchers: 46, violations 0
+- separately extracted Reference integrity: 4/4 PASS
+- separately extracted direct executable /reference imports: zero
+
+Final package rule
+- after this validation document is embedded, recreate the Canonical ZIP;
+- separately extract the SHA-final ZIP and repeat full pytest plus STEP041, STEP040, STEP030A, Reference and direct-import checks;
+- the adjacent `.zip.sha256` file is authoritative for final package bytes.

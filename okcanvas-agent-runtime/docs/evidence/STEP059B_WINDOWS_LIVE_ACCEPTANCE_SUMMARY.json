@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step059b-windows-live-acceptance-summary-v1",
+  "baseline_step": "STEP059B_ACTUAL_SDK_TOOL_CONTEXT_EXPORT_ALIGNMENT",
+  "project_version": "2.39.2",
+  "state": "PASSED",
+  "reported_at": "2026-07-31",
+  "installed_sdk": {
+    "package": "openai-agents",
+    "version": "0.19.0",
+    "tool_context_module": "agents.tool_context",
+    "top_level_tool_context_export_expected": false,
+    "all_three_product_tools_constructed": true,
+    "actual_sdk_agent_constructed_with_project_tool": true
+  },
+  "real_openai_run": {
+    "agent_id": "project-readonly-coding-agent",
+    "state": "SUCCEEDED",
+    "events": [
+      "agent.started",
+      "model.started",
+      "model.completed",
+      "tool.started",
+      "tool.completed",
+      "model.started",
+      "model.completed",
+      "agent.completed",
+      "artifact.created",
+      "run.completed"
+    ],
+    "artifact_verified": true,
+    "relative_repository_evidence_only": true,
+    "total_tokens": 8086
+  },
+  "product_quality_observation": {
+    "question": "Health API가 어디에서 등록되는지 파일과 라인 근거로 알려줘",
+    "artifact_status": "PARTIAL",
+    "exact_health_registration_answered": false,
+    "unrelated_findings_returned": true,
+    "token_efficiency_accepted": false,
+    "next_step": "STEP060_QUERY_DIRECTED_PROJECT_RETRIEVAL_AND_EVIDENCE_BUDGET"
+  }
+}

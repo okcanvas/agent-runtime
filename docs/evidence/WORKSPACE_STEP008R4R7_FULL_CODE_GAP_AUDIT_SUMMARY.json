@@ -1,0 +1,309 @@
+{
+  "schema_version": "okcanvas-workspace-step008r4r7-full-code-gap-read-only-audit-v1",
+  "audit": "WORKSPACE_STEP008R4R7_FULL_CODE_GAP_READ_ONLY_AUDIT",
+  "source_workspace_step": "WORKSPACE_STEP008R4R7_RUNTIME_STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "source_workspace_version": "0.8.4-r7",
+  "source_runtime_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "source_runtime_version": "2.75.0",
+  "source_zip_sha256": "a8cf80b010615d4f6c7616c8832cd156f8f2a35fdcaf41a279b5212a8c602a4f",
+  "mode": "READ_ONLY",
+  "product_source_modifications": 0,
+  "test_execution": "DEFERRED_BY_USER_UNTIL_MINIO_READY",
+  "minio_object_storage_live": "DEFERRED",
+  "audit_date": "2026-08-07",
+  "scope": {
+    "included": [
+      "first-party Runtime Product/Protocols/Clients",
+      "Runtime and Workspace tests/scripts/launchers",
+      "Connectors and examples",
+      "specs/contracts/evidence-facing configuration",
+      "current and historical plans/HANDOFF/issues relevant to current-step continuity"
+    ],
+    "excluded_from_deficiency_ownership": [
+      "reference/upstream third-party source",
+      "installed dependency trees",
+      "actual MinIO/S3 live behavior because user deferred live testing"
+    ]
+  },
+  "inventory": {
+    "first_party_python_files": 972,
+    "first_party_python_lines": 163857,
+    "first_party_python_ast_parse_failures": 0,
+    "runtime_product_python_files": 348,
+    "runtime_product_python_lines": 46969,
+    "runtime_protocol_python_files": 5,
+    "runtime_protocol_python_lines": 1213,
+    "runtime_client_python_files": 11,
+    "runtime_client_python_lines": 1169,
+    "runtime_test_python_files": 252,
+    "runtime_test_python_lines": 31347,
+    "runtime_script_python_files": 258,
+    "runtime_script_python_lines": 67877,
+    "workspace_test_python_files": 22,
+    "workspace_test_python_lines": 2827,
+    "workspace_script_python_files": 32,
+    "workspace_script_python_lines": 9851,
+    "connector_python_files": 36,
+    "connector_python_lines": 2554,
+    "cmd_files": 189,
+    "typescript_files": 31,
+    "mjs_files": 22,
+    "js_files": 11,
+    "todo_fixme_notimplementederror_product_hits": 0,
+    "todo_fixme_notimplementederror_test_compatibility_hits": 2
+  },
+  "overall_assessment": {
+    "hidden_stub_assessment": "NO_PRODUCT_TODO_FIXME_NOTIMPLEMENTEDERROR_STUBS_FOUND",
+    "current_candidate_status": "KEEP_STEP008R4R7_STEP091D_NOT_READY_MINIO_LIVE_PENDING",
+    "implementation_should_start_immediately": false,
+    "reason": "P0 corrective and pre-production boundaries should be selected explicitly; MinIO-dependent Artifact work remains deferred."
+  },
+  "findings": [
+    {
+      "id": "R7-AUDIT-001",
+      "priority": "P0_CORRECTIVE",
+      "category": "documentation_sot",
+      "title": "Current Runtime plan SOT is stale and the current-document regression does not validate each SOT independently",
+      "classification": "CURRENT_PACKAGE_DEFECT",
+      "evidence": [
+        "okcanvas-agent-runtime/PLANS.md still declares STEP091B3R1 / 2.74.1 and real PostgreSQL pending",
+        "root PLANS.md declares STEP008R4R7 / STEP091D / 2.75.0 and parent real PostgreSQL 19/19 accepted",
+        "tests/test_workspace_step008r4r1_document_plan_and_storage_audit.py omits okcanvas-agent-runtime/PLANS.md from current docs and concatenates multiple docs before checking CURRENT_STEP",
+        "docs/plans/OKCANVAS_AGENT_RUNTIME_PRODUCTIZATION_MASTER_PLAN.md immediate backlog still stops at STEP091C-era wording"
+      ],
+      "impact": "A ZIP-only continuation can choose the wrong baseline or reopen an already accepted PostgreSQL gate.",
+      "recommended_closure": "Synchronize current plans/issue registry and replace combined-document assertions with per-file current-identity assertions driven from one machine-readable current-baseline SOT."
+    },
+    {
+      "id": "R7-AUDIT-002",
+      "priority": "P0_PRE_PRODUCTION",
+      "category": "network_security_boundary",
+      "title": "Admin and multi-user Service APIs share one FastAPI listener while loopback-only admin traffic is not physically enforced",
+      "classification": "PRODUCTION_BOUNDARY_GAP",
+      "evidence": [
+        "bootstrap/application.py constructs one FastAPI app and registers both Service and Admin routers",
+        "transport/admin/rest/auth.py enforces only static header credentials, not loopback source or listener isolation",
+        "scripts/windows_entrypoint.py accepts OKCANVAS_API_HOST and defaults to 127.0.0.1 but validate_control_api_environment does not reject a non-loopback host",
+        "docs/00-CONSTITUTION.md states credential-bearing operator traffic is loopback-only"
+      ],
+      "impact": "The default loopback bind is safe, but an external bind required for a multi-user Service API would also expose Admin routes on that listener, contrary to the documented boundary.",
+      "recommended_closure": "Prefer separate external Service and loopback Admin listeners/processes. At minimum add explicit fail-closed loopback enforcement for Admin traffic and an acceptance gate for non-loopback binding."
+    },
+    {
+      "id": "R7-AUDIT-003",
+      "priority": "P0_PRE_PRODUCTION",
+      "category": "database_migration",
+      "title": "Real PostgreSQL works on a fresh schema but there is no versioned production migration lifecycle",
+      "classification": "PRODUCTION_BOUNDARY_GAP",
+      "evidence": [
+        "PostgreSQL adapters initialize with CREATE TABLE IF NOT EXISTS and ADD COLUMN IF NOT EXISTS",
+        "product_store.py records schema_migration version 1 but there is no ordered first-party migration runner",
+        "no Alembic/Flyway/Liquibase or first-party migration directory/runner exists in the package",
+        "STEP091B3R1 real PostgreSQL acceptance proves fresh/live behavior but explicitly does not execute production database migration"
+      ],
+      "impact": "Existing production schemas cannot be safely preflighted, upgraded, rolled forward/back, or audited by ordered schema version.",
+      "recommended_closure": "Introduce an explicit migration catalog/runner, current schema version, preflight, transactional upgrade policy, backup/rollback requirements and live upgrade acceptance against an older retained schema."
+    },
+    {
+      "id": "R7-AUDIT-004",
+      "priority": "P1_PRE_PRODUCTION",
+      "category": "readiness_observability",
+      "title": "Health reporting is static and there is no dependency-aware readiness boundary",
+      "classification": "PRODUCTION_OPERATIONS_GAP",
+      "evidence": [
+        "bootstrap/application.py /healthz returns status=ok without checking DB, Artifact store, Session store or Connector readiness",
+        "ObjectStorageArtifactBlobStore.initialize() is a no-op",
+        "no product /readyz, /livez or /metrics route was found"
+      ],
+      "impact": "A process can report healthy before an Object Storage credential/bucket failure is discovered on first use; orchestration cannot distinguish liveness from readiness.",
+      "recommended_closure": "Separate liveness/readiness, add bounded dependency probes with secret-safe diagnostics, and define readiness ownership for PostgreSQL, Artifact storage and required external connectors."
+    },
+    {
+      "id": "R7-AUDIT-005",
+      "priority": "P1_PRE_PRODUCTION",
+      "category": "service_auth_lifecycle",
+      "title": "Service bearer-token registry is static startup JSON with no expiry/revocation/rotation lifecycle",
+      "classification": "PRODUCTION_SECURITY_GAP",
+      "evidence": [
+        "ServiceClientTokenRegistry accepts only token_id, token_sha256, tenant_id, principal_id and roles",
+        "registry is loaded from environment at startup and has no expiry, not-before, revoked-at, issuer/audience or dynamic reload fields"
+      ],
+      "impact": "Credential replacement requires process/config rotation and there is no first-class revocation or validity window.",
+      "recommended_closure": "For production use, integrate an external identity boundary such as OIDC/JWT validation or add a durable revocation-aware rotating registry while retaining tenant/principal/role ownership checks."
+    },
+    {
+      "id": "R7-AUDIT-006",
+      "priority": "P1_AFTER_OBJECT_STORAGE_LIVE",
+      "category": "artifact_lifecycle",
+      "title": "Artifact orphan inventory, quarantine and garbage collection are not representable through current ports",
+      "classification": "KNOWN_LIFECYCLE_GAP",
+      "evidence": [
+        "ArtifactBlobStorePort exposes initialize/put/read/verify/delete/exists only; no listing or age metadata",
+        "ArtifactService performs immediate compensating delete only when metadata registration raises",
+        "ProductStore exposes per-Run artifact listing but no global storage-reference inventory/removal lifecycle"
+      ],
+      "impact": "A crash after blob put or a failed compensation can leave a blob that no durable inventory process can discover and safely reap.",
+      "recommended_closure": "After MinIO live semantics are accepted, add bounded blob inventory plus durable metadata inventory, orphan age threshold, quarantine/recheck and idempotent deletion."
+    },
+    {
+      "id": "R7-AUDIT-007",
+      "priority": "P1_AFTER_OBJECT_STORAGE_LIVE",
+      "category": "object_storage_operations",
+      "title": "S3-compatible client relies on SDK defaults for timeout/retry/TLS/encryption policy",
+      "classification": "PRODUCTION_HARDENING_GAP",
+      "evidence": [
+        "S3CompatibleClientSettings owns endpoint_url, region_name and addressing_style only",
+        "botocore Config explicitly sets signature_version and addressing_style but no Product-owned retry/timeout policy",
+        "no Product-owned server-side encryption policy or custom CA/TLS policy is represented"
+      ],
+      "impact": "Behavior can vary by SDK/default environment and operational requirements such as bounded retries, private CA trust and encryption-at-rest are not part of the Product contract.",
+      "recommended_closure": "Do not change before MinIO live evidence. Then define explicit bounded client policy and deployment contract based on observed S3-compatible behavior."
+    },
+    {
+      "id": "R7-AUDIT-008",
+      "priority": "P2_SCALE",
+      "category": "api_worker_separation",
+      "title": "Durable claim/expiry/recovery state exists, but execution remains single-process and has no heartbeat/lease renewal",
+      "classification": "PLANNED_DISTRIBUTED_EXECUTION_GAP",
+      "evidence": [
+        "LocalExecutionCoordinator explicitly states single-process and uses asyncio.create_task",
+        "Submission lifecycle defaults to explicit-local-operator recovery and rejects distributed_worker_lease_enabled",
+        "existing submission persistence already contains claim owner/token/acquired/expires/recovery fields"
+      ],
+      "impact": "The current process cannot provide multi-worker ownership, liveness renewal or automatic lost-worker recovery.",
+      "recommended_closure": "Extend the existing ledger; do not build a second claim system. Add physical Worker, lease renewal/heartbeat, lost-worker reconciliation and forced-termination acceptance."
+    },
+    {
+      "id": "R7-AUDIT-009",
+      "priority": "P2_SCALE",
+      "category": "distributed_session_history",
+      "title": "Session metadata is PostgreSQL-capable but actual model conversation history remains node-local encrypted SQLite",
+      "classification": "PLANNED_HA_GAP",
+      "evidence": [
+        "STEP091B3 design retains encrypted local SQLite for SDK Session history",
+        "session history TTL is deliberately disabled",
+        "distributed Session history remains explicitly unimplemented"
+      ],
+      "impact": "A conversation cannot transparently move between Worker nodes without an explicit history ownership/migration strategy.",
+      "recommended_closure": "Select only with API/Worker/HA work: define distributed history ownership or sticky session placement plus failure recovery and retention policy."
+    },
+    {
+      "id": "R7-AUDIT-010",
+      "priority": "P2_PRODUCT_CAPABILITY",
+      "category": "enterprise_write",
+      "title": "Enterprise write routing exists only as proposal-only policy; governed write execution is absent",
+      "classification": "PLANNED_FEATURE_GAP",
+      "evidence": [
+        "assistant_routing/service.py routes enterprise-action-write-v1 with proposal_only=True",
+        "RuntimeInfo reports groupware_action_agent_implemented=False and groupware_action_mcp_server_implemented=False",
+        "Groupware Connector exposes read-only tools only"
+      ],
+      "impact": "The runtime can identify write intent but cannot execute a governed enterprise mutation.",
+      "recommended_closure": "Follow Master Plan Phase 3: separate action Agent/MCP credentials, durable Command ledger, hash-bound Approval, idempotency/expected revision, unknown-outcome reconciliation and read-after-write verification."
+    },
+    {
+      "id": "R7-AUDIT-011",
+      "priority": "P2_PRODUCT_CAPABILITY",
+      "category": "durable_automation",
+      "title": "Durable automation routing exists only as proposal-only policy; scheduler/registry are absent",
+      "classification": "PLANNED_FEATURE_GAP",
+      "evidence": [
+        "assistant_routing/service.py maps durable-automation-v1 with reason durable-scheduler-not-configured and proposal_only=True",
+        "RuntimeInfo reports groupware_read_durable_automation_enabled=False and organization_assistant_durable_automation_configured=False",
+        "no Product automation registry/scheduler package was found"
+      ],
+      "impact": "Users cannot create restart-safe scheduled or condition-watch work despite the routing vocabulary already existing.",
+      "recommended_closure": "Implement a durable Automation registry that creates governed Submissions, schedule/condition dedupe, restart-safe firing and execution-time approval."
+    },
+    {
+      "id": "R7-AUDIT-012",
+      "priority": "P2_DEPLOYMENT",
+      "category": "enterprise_read_live",
+      "title": "Read-only Groupware/Organization connector foundations exist, but real enterprise-provider deployment evidence remains incomplete",
+      "classification": "DEPLOYMENT_LIVE_GAP",
+      "evidence": [
+        "Groupware connector is read-only and local/fake acceptance-oriented",
+        "RuntimeInfo retains false flags for production external provider/OAuth/live configuration"
+      ],
+      "impact": "Local/fake evidence does not prove actual private-network provider credentials, OAuth refresh, tenant routing or provider SLA behavior.",
+      "recommended_closure": "Treat as deployment acceptance, not a rewrite: add vendor profile, secret ownership, OAuth refresh if required and actual enterprise read live gate."
+    },
+    {
+      "id": "R7-AUDIT-013",
+      "priority": "P3_PRODUCTION",
+      "category": "operations_supply_chain",
+      "title": "Production metrics, backup/restore gates, SBOM/dependency lock and deployment automation are not repository-owned",
+      "classification": "PRODUCTION_READINESS_GAP",
+      "evidence": [
+        "Master Plan Phase 9 still lists metrics, backup/restore, load/soak/failure injection, SBOM and dependency audit",
+        "no product metrics route or OpenTelemetry/Prometheus integration was found",
+        "no transitive Python lock file was found; pyproject uses ranges for most dependencies and sh_setup.cmd installs editable current constraints",
+        "no first-party CI workflow, Dockerfile, Helm or Terraform artifact was found in the audited repository"
+      ],
+      "impact": "Build/deploy reproducibility and operational recovery remain dependent on external/manual procedures.",
+      "recommended_closure": "Before production gate, choose owned deployment boundary, freeze resolved dependencies, produce SBOM/security audit, and add backup/restore plus load/soak evidence."
+    },
+    {
+      "id": "R7-AUDIT-014",
+      "priority": "P3_MAINTAINABILITY",
+      "category": "complexity_and_acceptance_maintenance",
+      "title": "Several orchestration functions and the historical acceptance surface are highly concentrated",
+      "classification": "MAINTAINABILITY_DEBT",
+      "evidence": [
+        "generic_gateway.py run() is about 1,650 lines",
+        "runtime_binding.py resolve() is about 1,034 lines",
+        "execution/service.py execute_prepared() is about 702 lines",
+        "first-party Runtime scripts are about 67.9k Python lines versus about 49.4k Product/Protocol/Client Python lines",
+        "189 .cmd launchers exist in the package"
+      ],
+      "impact": "Current-step identity, launcher and manifest regressions have repeatedly occurred and large functions raise change impact.",
+      "recommended_closure": "Do not refactor blindly. First centralize current-step identity/launcher generation and strengthen SOT gates; then split large orchestration functions only along existing tested policy/adapter boundaries."
+    },
+    {
+      "id": "R7-AUDIT-015",
+      "priority": "P3_PRODUCT",
+      "category": "client_and_skill_platform",
+      "title": "Product Web/Approval/Automation UI and Skill Platform V2 remain planned",
+      "classification": "PLANNED_FEATURE_GAP",
+      "evidence": [
+        "Master Plan Phase 7 calls for versioned Skill registry and bounded Skill search",
+        "Master Plan Phase 8 calls for Conversation/Run/Artifact/Approval/Automation Product UI",
+        "current Service CLI exists but runtime browser surfaces are development harnesses"
+      ],
+      "impact": "Core runtime capabilities are not yet exposed as the intended end-user Product surface.",
+      "recommended_closure": "Do after production execution boundaries are stable; Client must consume Service API and persisted canonical state only."
+    },
+    {
+      "id": "R7-AUDIT-016",
+      "priority": "P4_RELIABILITY",
+      "category": "model_retry_policy",
+      "title": "Automatic model retry/fallback is intentionally disabled",
+      "classification": "EXPLICIT_OPERATING_CONSTRAINT_NOT_BUG",
+      "evidence": [
+        "RuntimeInfo model policy sets automatic fallback false and runner/provider max retries to zero"
+      ],
+      "impact": "Transient provider errors are surfaced rather than automatically retried; this is safer for side-effect correctness but limits resilience.",
+      "recommended_closure": "Keep disabled until replay and side-effect safety are proven; if enabled later, use category-bounded retry with persisted attempt evidence."
+    }
+  ],
+  "recommended_order": [
+    "R7-AUDIT-001 documentation SOT corrective closure",
+    "R7-AUDIT-002 Admin/Service physical network boundary",
+    "R7-AUDIT-003 versioned PostgreSQL migration lifecycle",
+    "R7-AUDIT-004 readiness/liveness and dependency probes",
+    "R7-AUDIT-005 production Service credential lifecycle",
+    "MinIO/real Object Storage STEP091D live acceptance when environment is ready",
+    "R7-AUDIT-006/R7-AUDIT-007 Artifact orphan lifecycle and Object Storage operational hardening",
+    "R7-AUDIT-010 governed enterprise write",
+    "R7-AUDIT-011 durable automation",
+    "R7-AUDIT-008/R7-AUDIT-009 API/Worker, lease/heartbeat and distributed Session/HA",
+    "R7-AUDIT-013 production operations/SBOM/backup/load",
+    "R7-AUDIT-015 Product client/Skill V2"
+  ],
+  "non_findings": [
+    "No evidence supports rebuilding PostgreSQL claim/admission ownership; durable claim/expiry/recovery fields already exist.",
+    "No evidence supports implementing Artifact GC before Object Storage live semantics are accepted.",
+    "No evidence supports enabling automatic model retry/fallback now; it is intentionally disabled for side-effect safety.",
+    "No product source TODO/FIXME/NotImplementedError stubs were found in audited first-party Product packages."
+  ]
+}

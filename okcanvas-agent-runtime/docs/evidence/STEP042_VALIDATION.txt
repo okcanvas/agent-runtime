@@ -1,0 +1,69 @@
+STEP042_AGENT_AS_TOOL_RUNTIME_V1 validation
+
+Executable baseline
+- project: okcanvas-agent-runtime
+- version: 2.22.0
+- current STEP: STEP042_AGENT_AS_TOOL_RUNTIME_V1
+- previous Windows live closure: STEP041_NATIVE_HANDOFF_RUNTIME_V1
+
+Source validation
+- compileall: PASS
+- full pytest: 441 passed
+- STEP042 deterministic acceptance: 29/29 PASS, cleanup COMPLETED
+- STEP041 regression acceptance: 24/24 PASS
+- STEP040 regression acceptance: 23/23 PASS
+- STEP039 regression acceptance: 20/20 PASS
+- STEP038 regression acceptance: 24/24 PASS
+- STEP037 regression acceptance: 24/24 PASS
+- STEP036 regression acceptance: 18/18 PASS
+- STEP020 governed approval approve/reject: PASS
+- STEP023 Approval Operator: 15/15 PASS
+- STEP030A Windows launcher contract: 8/8 PASS, 47 Runtime launchers, zero violations
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: zero
+
+STEP042 exact acceptance
+- checks: 29/29 PASS
+- Agent.as_tool construction: 1
+- Agent Tool invocation: 1
+- outer Runner.run_streamed: 1
+- nested Runner.run_streamed: 1
+- Runner.run: 0
+- Product Task/Run/Submission: 1/1/1
+- Product invocations: ROOT 1, AGENT_AS_TOOL 1
+- ROOT usage: input/output/total 23/7/30
+- AGENT_AS_TOOL child usage: input/output/total 17/5/22
+- Product Run usage: input/output/total 40/12/52
+- canonical agent.tool.started/completed Events: 1/1
+- parent control retained: true
+- child RunConfig inherited: false
+- child Session: none
+- bounded structured child result: <= 8,192 UTF-8 bytes
+- raw nested arguments/results persisted or streamed: false
+- physical workspace materialized: false
+- verified Artifacts: 1
+- PASSED recorded Evaluations: 1
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/1/2/18/1/1
+- successful protected payload: DELETED
+- unchanged References
+- acceptance cleanup: COMPLETED
+
+Initial Canonical ZIP validation
+- archive root count: 1
+- archive root: okcanvas-agent-runtime
+- ZIP entries: 2,354
+- actual forbidden environment/venv/cache/local-state/database/protected-payload state files: 0
+- separately extracted compileall: PASS
+- separately extracted full pytest: 441 passed (79 + 70 + 100 + 48 + 87 + 57)
+- separately extracted STEP042: 29/29 PASS
+- separately extracted STEP041: 24/24 PASS
+- separately extracted STEP030A: 8/8 PASS
+- separately extracted Windows Runtime launchers: 47, violations 0
+- separately extracted Reference integrity: 4/4 PASS
+- separately extracted direct executable /reference imports: zero
+
+Final package rule
+- create the Canonical ZIP after source validation;
+- separately extract it and repeat full pytest plus STEP042, STEP041, STEP030A, Reference and direct-import checks;
+- embed the exact extracted validation counts, rebuild the ZIP, and revalidate the SHA-final ZIP;
+- the adjacent `.zip.sha256` file is authoritative for final package bytes.

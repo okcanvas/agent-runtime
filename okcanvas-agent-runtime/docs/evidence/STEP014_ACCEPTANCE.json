@@ -1,0 +1,47 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T034157695647Z-ee1bd229",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T03:41:57.699678Z",
+    "created_at": "2026-07-29T03:41:57.695884Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP014"
+  },
+  "checks": {
+    "acceptance_state_not_product_runtime": true,
+    "deterministic_acceptance_scripts_migrated": true,
+    "failure_compact_evidence_exported": true,
+    "failure_evidence_matches": true,
+    "failure_exact_path_reported": true,
+    "failure_workspace_preserved": true,
+    "legacy_live_acceptance_not_reclassified": true,
+    "pass_cleanup_completed": true,
+    "pass_compact_evidence_exported": true,
+    "pass_evidence_has_no_preserved_path": true,
+    "pass_workspace_removed": true,
+    "resources_closed_reverse_order": true
+  },
+  "failure_fixture_preserved_path": "/tmp/okcanvas-agent-runtime-acceptance/step014/20260729T034157695647Z-ee1bd229/scratch/step014-fail/failure-fixture",
+  "migrated_scripts": {
+    "run_step006_acceptance.py": true,
+    "run_step007_acceptance.py": true,
+    "run_step008_acceptance.py": true,
+    "run_step009_acceptance.py": true,
+    "run_step010_acceptance.py": true,
+    "run_step011_acceptance.py": true,
+    "run_step012_acceptance.py": true,
+    "run_step013_acceptance.py": true,
+    "run_step015_acceptance.py": true,
+    "run_step016_acceptance.py": true,
+    "verify_core_store.py": true
+  },
+  "schema_version": "okcanvas-step014-acceptance-v1",
+  "state": "PASSED"
+}

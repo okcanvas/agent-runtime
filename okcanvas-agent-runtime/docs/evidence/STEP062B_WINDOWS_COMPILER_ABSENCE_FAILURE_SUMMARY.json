@@ -1,0 +1,29 @@
+{
+  "schema_version": "okcanvas-step062b-windows-compiler-absence-failure-summary-v1",
+  "step": "STEP062B_WINDOWS_TYPESCRIPT_DIRECT_COMPILER_PORTABILITY_FIX",
+  "version": "2.42.2",
+  "state": "FAILED",
+  "passed_checks": 17,
+  "total_checks": 22,
+  "failed_checks": [
+    "direct_typescript_command_has_no_batch_file",
+    "typescript_compiler_resolution_is_filesystem_verified",
+    "corrected_step062a_acceptance_pass",
+    "corrected_step062_acceptance_pass",
+    "node_typescript_build_pass"
+  ],
+  "corrected_step062a_state": "FAILED",
+  "corrected_step062a_passed_checks": 16,
+  "corrected_step062a_total_checks": 18,
+  "corrected_step062_state": "FAILED",
+  "corrected_step062_passed_checks": 28,
+  "corrected_step062_total_checks": 29,
+  "typescript_compiler": null,
+  "typescript_build_command": [],
+  "focused_test_output": "5 passed in 0.26s",
+  "node_build_output_tail": "TypeScript compiler command not found on PATH",
+  "node_tests_passed": true,
+  "node_test_output_tail": "# duration_ms 162.4523",
+  "reference_count": 4,
+  "conclusion": "The packaged CLI declares no TypeScript dependency and ships no node_modules. PATH tsc is not a valid Windows acceptance prerequisite."
+}

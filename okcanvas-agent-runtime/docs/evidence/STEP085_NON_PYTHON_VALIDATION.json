@@ -1,0 +1,161 @@
+{
+  "checks": {
+    "direct_reference_imports_absent": true,
+    "node_check_passed": true,
+    "node_tests_exact": true,
+    "npm_pack_entry_count_exact": true,
+    "npm_pack_passed": true,
+    "npm_pack_single_package": true,
+    "reference_integrity_passed": true,
+    "reference_result_count_exact": true
+  },
+  "completed_at": "2026-08-04T07:15:44.447697Z",
+  "direct_reference_import_violations": [],
+  "node_passed_count": 14,
+  "node_test_count": 14,
+  "npm_pack_entry_count": 23,
+  "npm_pack_payload": [
+    {
+      "bundled": [],
+      "entryCount": 23,
+      "filename": "okcanvas-agent-cli-0.5.0.tgz",
+      "files": [
+        {
+          "mode": 420,
+          "path": "README.md",
+          "size": 569
+        },
+        {
+          "mode": 420,
+          "path": "dist/api-client.d.ts",
+          "size": 1058
+        },
+        {
+          "mode": 420,
+          "path": "dist/api-client.js",
+          "size": 6996
+        },
+        {
+          "mode": 420,
+          "path": "dist/api-client.js.map",
+          "size": 6612
+        },
+        {
+          "mode": 420,
+          "path": "dist/app.d.ts",
+          "size": 1168
+        },
+        {
+          "mode": 420,
+          "path": "dist/app.js",
+          "size": 22091
+        },
+        {
+          "mode": 420,
+          "path": "dist/app.js.map",
+          "size": 18904
+        },
+        {
+          "mode": 420,
+          "path": "dist/cli.d.ts",
+          "size": 31
+        },
+        {
+          "mode": 420,
+          "path": "dist/cli.js",
+          "size": 1855
+        },
+        {
+          "mode": 420,
+          "path": "dist/cli.js.map",
+          "size": 1172
+        },
+        {
+          "mode": 420,
+          "path": "dist/config.d.ts",
+          "size": 680
+        },
+        {
+          "mode": 420,
+          "path": "dist/config.js",
+          "size": 6902
+        },
+        {
+          "mode": 420,
+          "path": "dist/config.js.map",
+          "size": 6152
+        },
+        {
+          "mode": 420,
+          "path": "dist/render.d.ts",
+          "size": 1654
+        },
+        {
+          "mode": 420,
+          "path": "dist/render.js",
+          "size": 13720
+        },
+        {
+          "mode": 420,
+          "path": "dist/render.js.map",
+          "size": 14071
+        },
+        {
+          "mode": 420,
+          "path": "dist/sse.d.ts",
+          "size": 144
+        },
+        {
+          "mode": 420,
+          "path": "dist/sse.js",
+          "size": 1706
+        },
+        {
+          "mode": 420,
+          "path": "dist/sse.js.map",
+          "size": 1925
+        },
+        {
+          "mode": 420,
+          "path": "dist/types.d.ts",
+          "size": 2155
+        },
+        {
+          "mode": 420,
+          "path": "dist/types.js",
+          "size": 44
+        },
+        {
+          "mode": 420,
+          "path": "dist/types.js.map",
+          "size": 102
+        },
+        {
+          "mode": 420,
+          "path": "package.json",
+          "size": 516
+        }
+      ],
+      "id": "@okcanvas/agent-cli@0.5.0",
+      "integrity": "sha512-lQwy95nt9oTFCtZgfvmJrGc4ZNkSRTwly5jdcQjGr1ps3DItFaX98SiAzDC5KW2nIUjX8UV7VCaQ9YmJKWyz0w==",
+      "name": "@okcanvas/agent-cli",
+      "shasum": "9f9ddbd62c446f8595fe72c696e43836e65dd11f",
+      "size": 24233,
+      "unpackedSize": 110227,
+      "version": "0.5.0"
+    }
+  ],
+  "outputs": {
+    "node": "> @okcanvas/agent-cli@0.5.0 check\n> npm run build && npm test\n\n\n> @okcanvas/agent-cli@0.5.0 build\n> tsc -p tsconfig.json\n\n\n> @okcanvas/agent-cli@0.5.0 test\n> node --test\n\nTAP version 13\n# Subtest: accepts explicit loopback URLs\nok 1 - accepts explicit loopback URLs\n  ---\n  duration_ms: 0.702036\n  type: 'test'\n  ...\n# Subtest: rejects remote URLs\nok 2 - rejects remote URLs\n  ---\n  duration_ms: 0.941402\n  type: 'test'\n  ...\n# Subtest: debug flag is explicit and off by default\nok 3 - debug flag is explicit and off by default\n  ---\n  duration_ms: 0.167179\n  type: 'test'\n  ...\n# Subtest: session resume argument is explicit\nok 4 - session resume argument is explicit\n  ---\n  duration_ms: 0.10695\n  type: 'test'\n  ...\n# Subtest: foundation capability boundary is explicit\nok 5 - foundation capability boundary is explicit\n  ---\n  duration_ms: 1.365283\n  type: 'test'\n  ...\n# Subtest: structured CodingAgentResult renders as friendly text\nok 6 - structured CodingAgentResult renders as friendly text\n  ---\n  duration_ms: 0.363511\n  type: 'test'\n  ...\n# Subtest: finding evidence rendering is bounded and removes line breaks\nok 7 - finding evidence rendering is bounded and removes line breaks\n  ---\n  duration_ms: 0.178526\n  type: 'test'\n  ...\n# Subtest: debug preflight exposes governed diagnostics without changing confirmation flow\nok 8 - debug preflight exposes governed diagnostics without changing confirmation flow\n  ---\n  duration_ms: 0.179136\n  type: 'test'\n  ...\n# Subtest: event and evaluation diagnostics are bounded\nok 9 - event and evaluation diagnostics are bounded\n  ---\n  duration_ms: 0.256062\n  type: 'test'\n  ...\n# Subtest: session-enabled text-only Agent is CLI compatible\nok 10 - session-enabled text-only Agent is CLI compatible\n  ---\n  duration_ms: 0.113429\n  type: 'test'\n  ...\n# Subtest: safe read-only Tool and isolated Sub Agent graphs are CLI compatible\nok 11 - safe read-only Tool and isolated Sub Agent graphs are CLI compatible\n  ---\n  duration_ms: 0.224414\n  type: 'test'\n  ...\n# Subtest: normal progress and invocation tree expose Tool and Sub Agent work without raw payloads\nok 12 - normal progress and invocation tree expose Tool and Sub Agent work without raw payloads\n  ---\n  duration_ms: 0.340137\n  type: 'test'\n  ...\n# Subtest: bounded project read-only Tool is CLI compatible and clearly labeled\nok 13 - bounded project read-only Tool is CLI compatible and clearly labeled\n  ---\n  duration_ms: 0.295801\n  type: 'test'\n  ...\n# Subtest: bounded orchestration is visible and renders child results\nok 14 - bounded orchestration is visible and renders child results\n  ---\n  duration_ms: 0.374127\n  type: 'test'\n  ...\n1..14\n# tests 14\n# suites 0\n# pass 14\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 54.042618",
+    "npm_pack": "[\n  {\n    \"id\": \"@okcanvas/agent-cli@0.5.0\",\n    \"name\": \"@okcanvas/agent-cli\",\n    \"version\": \"0.5.0\",\n    \"size\": 24233,\n    \"unpackedSize\": 110227,\n    \"shasum\": \"9f9ddbd62c446f8595fe72c696e43836e65dd11f\",\n    \"integrity\": \"sha512-lQwy95nt9oTFCtZgfvmJrGc4ZNkSRTwly5jdcQjGr1ps3DItFaX98SiAzDC5KW2nIUjX8UV7VCaQ9YmJKWyz0w==\",\n    \"filename\": \"okcanvas-agent-cli-0.5.0.tgz\",\n    \"files\": [\n      {\n        \"path\": \"README.md\",\n        \"size\": 569,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/api-client.d.ts\",\n        \"size\": 1058,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/api-client.js\",\n        \"size\": 6996,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/api-client.js.map\",\n        \"size\": 6612,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/app.d.ts\",\n        \"size\": 1168,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/app.js\",\n        \"size\": 22091,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/app.js.map\",\n        \"size\": 18904,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/cli.d.ts\",\n        \"size\": 31,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/cli.js\",\n        \"size\": 1855,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/cli.js.map\",\n        \"size\": 1172,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/config.d.ts\",\n        \"size\": 680,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/config.js\",\n        \"size\": 6902,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/config.js.map\",\n        \"size\": 6152,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/render.d.ts\",\n        \"size\": 1654,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/render.js\",\n        \"size\": 13720,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/render.js.map\",\n        \"size\": 14071,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/sse.d.ts\",\n        \"size\": 144,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/sse.js\",\n        \"size\": 1706,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/sse.js.map\",\n        \"size\": 1925,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/types.d.ts\",\n        \"size\": 2155,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/types.js\",\n        \"size\": 44,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"dist/types.js.map\",\n        \"size\": 102,\n        \"mode\": 420\n      },\n      {\n        \"path\": \"package.json\",\n        \"size\": 516,\n        \"mode\": 420\n      }\n    ],\n    \"entryCount\": 23,\n    \"bundled\": []\n  }\n]",
+    "reference": "PASS openai-agents-python files=1419 bytes=17945765 tree_sha256=65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a\nPASS temporal-openai-agents-demos files=36 bytes=774434 tree_sha256=0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a\nPASS openai-cs-agents-demo files=43 bytes=1409011 tree_sha256=121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d\nPASS openai-agents-streaming-api files=38 bytes=246327 tree_sha256=d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9\nPASS reference baseline: 4/4"
+  },
+  "passed_checks": 8,
+  "reference_result_count": 4,
+  "schema_version": "okcanvas-step085-non-python-validation-v1",
+  "started_at": "2026-08-04T07:15:41.849892Z",
+  "state": "PASSED",
+  "step": "STEP085_MULTI_MCP_AND_DELEGATED_IDENTITY_FOUNDATION",
+  "total_checks": 8,
+  "version": "2.65.0"
+}

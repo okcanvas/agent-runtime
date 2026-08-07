@@ -1,0 +1,56 @@
+{
+  "checks": {
+    "child_tool_choice_required_for_live_mcp": true,
+    "deterministic_main_assistant_e2e_retained": true,
+    "live_environment_files_excluded": true,
+    "live_preflight_fails_closed_without_environment": true,
+    "live_secret_values_not_persisted": true,
+    "loopback_tls_trust_harness_scoped": true,
+    "root_and_child_live_turn_budgets_exact": true,
+    "runtime_step087r1_evidence_byte_bound": true,
+    "workspace_manifest_exact": true
+  },
+  "limitations": {
+    "live_openai_model_called": false,
+    "real_enterprise_groupware_provider_called": false,
+    "windows_step004_live_accepted": false,
+    "windows_step004_live_executed": false
+  },
+  "package_filename": "okcanvas-agent-platform-workspace-step004-live-openai-main-assistant-groupware-e2e-readiness.zip",
+  "parent_windows_baseline": {
+    "passed_checks": 27,
+    "state": "PASSED",
+    "step": "WORKSPACE_STEP003R2_WINDOWS_PROJECT_PYTHON_ENVIRONMENT_AND_REDIRECTED_LOG_IDENTITY_CLOSURE",
+    "total_checks": 27,
+    "version": "0.3.2"
+  },
+  "results": {
+    "connector_example_e2e": "7/7 PASSED",
+    "connector_retained_acceptance": "7/7 PASSED; pytest 10/10 PASSED",
+    "deterministic_main_assistant_e2e": "14/14 PASSED",
+    "groupware_api_example": "6/6 PASSED",
+    "product_service_cli": "11/11 PASSED",
+    "runtime_architecture": "40/40 PASSED",
+    "runtime_distribution": "14/14 PASSED",
+    "runtime_execution_plane": "13/13 PASSED",
+    "runtime_focused_tests": "104/104 PASSED",
+    "runtime_launcher_registry": "7/7 PASSED",
+    "runtime_step087r1_acceptance": "17/17 PASSED",
+    "workspace_step004_readiness": "29/29 PASSED",
+    "workspace_unit_tests": "44/44 PASSED"
+  },
+  "runtime": {
+    "child_max_turns": 2,
+    "child_session": "DISABLED_STATELESS",
+    "child_tool_choice": "REQUIRED_FIRST_MCP_TURN",
+    "root_max_turns": 2,
+    "step": "STEP087R1_MAIN_ASSISTANT_LIVE_AGENT_TOOL_TURN_BUDGET_CLOSURE",
+    "version": "2.67.1"
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-step004-local-deterministic-readiness-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP004_WINDOWS_LIVE_OPENAI_MAIN_ASSISTANT_STATELESS_GROUPWARE_SUBAGENT_E2E_READINESS",
+  "total_checks": 29,
+  "validation_mode": "LOCAL_DETERMINISTIC_LIVE_READINESS",
+  "version": "0.4.0"
+}

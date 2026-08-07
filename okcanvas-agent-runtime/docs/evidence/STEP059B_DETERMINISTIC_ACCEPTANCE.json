@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-step059b-deterministic-acceptance-v1",
+  "state": "PASSED",
+  "checks": {
+    "immutable_sdk_top_level_does_not_export_tool_context": true,
+    "immutable_sdk_defines_tool_context_in_submodule": true,
+    "immutable_sdk_examples_use_submodule_import": true,
+    "product_imports_function_tool_from_top_level": true,
+    "product_imports_tool_context_from_submodule": true,
+    "product_does_not_import_tool_context_from_top_level": true,
+    "output_type_only_contract_preserved": true,
+    "reference_import_boundary_preserved": true
+  },
+  "tool_context_import_path": "agents.tool_context.ToolContext"
+}

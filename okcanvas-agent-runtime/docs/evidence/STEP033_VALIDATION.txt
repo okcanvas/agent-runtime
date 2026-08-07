@@ -1,0 +1,51 @@
+STEP033_AGENT_RUNTIME_BINDING_FINGERPRINT
+Version: 2.13.0
+Status: WINDOWS_LIVE_ACCEPTED
+Date: 2026-07-30
+
+Code-audited defect
+- exact confirmation did not bind all executable Runtime behavior.
+- output-contract recovery, SDK expectation, MCP definition/module, local Tool policy/implementation, and execution-engine changes could occur after preflight without changing the Agent definition SHA.
+
+Implemented boundary
+- explicit AgentRuntimeBindingCatalog and okcanvas-agent-runtime-binding-v1.
+- Runtime binding SHA covers SDK version, output-contract Runtime, MCP definition/module, local Tool policy/implementation, execution path, and engine source.
+- SHA is included in submission fingerprint, SQLite ledger, encrypted payload content/AAD, prepared execution, and resolution Event.
+- generic execution and local Tool preparation re-resolve and compare the binding before Product or approval state.
+- old pending submissions without a binding fail closed and must be recreated.
+
+Deterministic acceptance
+- STEP033: 20/20 PASS, cleanup COMPLETED.
+- three distinct current bindings.
+- output Runtime drift conflicts on replay and blocks confirmation.
+- MCP definition drift blocks confirmation.
+- local Tool policy drift blocks preparation.
+- all drift paths created zero Task/Run/approval state and made zero scheduler/model/MCP/Tool calls.
+- References unchanged.
+
+Validation before final packaging
+- compileall: PASS.
+- pytest: 388 passed.
+- final retained acceptance and ZIP extraction results are recorded in HANDOFF.md.
+
+Windows gate
+Run sh_run_step033_acceptance.cmd and require:
+- state=PASSED;
+- all 20 checks=true;
+- binding_count=3;
+- exact output Runtime, MCP, and local Tool drift failures;
+- zero Product/approval state and zero external calls on drift;
+- cleanup_state=COMPLETED.
+
+Canonical ZIP extraction validation
+- one canonical root: okcanvas-agent-runtime.
+- packaged files: 2187.
+- forbidden environment, venv, cache, local-state, and bytecode files: 0.
+- compileall: PASS.
+- pytest: 388 passed.
+- STEP033: 20/20 PASS, cleanup COMPLETED.
+- STEP032: 19/19 PASS, cleanup COMPLETED.
+- STEP031: 19/19 PASS, cleanup COMPLETED.
+- STEP030A: 8/8 PASS across 38 current launchers.
+- Reference: 4/4 PASS.
+- direct /reference imports: 0 violations.

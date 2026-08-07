@@ -1,0 +1,39 @@
+STEP016_OPERATIONS_CONSOLE_PERSISTED_LIVE_VIEW
+Version: 1.6.0
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING
+
+Implemented:
+- product-owned browser SSE parser
+- authenticated GET fetch streaming with local-admin Header
+- cursor query plus Last-Event-ID resume
+- duplicate sequence suppression
+- prior selected-Run stream abort
+- bounded reconnect backoff
+- terminal Run reconnect stop
+- live status, persisted cursor and auto-follow controls
+- newest 500 Event DOM bound
+- no SDK stream-object exposure
+- read-only console contract retained
+
+Deterministic validation:
+- STEP016 acceptance: PASS, 19/19 checks
+- persisted stream resumed after effective cursor
+- terminal canonical Event delivered
+- no-buffering response headers present
+- Product DB unchanged by live reads
+- Evaluation DB unchanged by live reads
+- Reference integrity 4/4 and trees unchanged
+- no admin/API key embedded
+- no direct /reference import
+
+Windows browser live acceptance:
+- pending
+
+Final source verification before packaging:
+- compileall: PASS
+- pytest: 229 passed
+- STEP005-STEP016 acceptance regression: PASS
+- direct reference import verification: PASS
+- immutable reference verification: 4/4 PASS
+- ruff: unavailable unless later installed; no success claimed
+- wheel build: not verified in this validation environment because the configured Hatchling build backend is not installed; no wheel success claimed

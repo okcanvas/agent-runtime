@@ -1,0 +1,18 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "conversational-coding-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Conversational Coding Analyst",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [],
+  "mcp_servers": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "guardrails": [],
+  "workspace_access": "none",
+  "max_turns": 1,
+  "workflow_name": "OKCanvas Conversational Coding Agent",
+  "session_mode": "sqlite-v1"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "okcanvas-step080a-fresh-zip-validation-v1",
+  "candidate_zip": "okcanvas-agent-runtime-step080a-ratified-architecture-constitution-integration-and-compliance-gates-candidate.zip",
+  "candidate_zip_sha256": "29e9e2238c64313e906001e5517f199d133ce44cb85836ae0894e791742abdb6",
+  "canonical_root_count": 1,
+  "zip_entry_count": 3244,
+  "forbidden_file_count": 0,
+  "fresh_acceptance_passed_checks": 37,
+  "fresh_acceptance_total_checks": 37,
+  "fresh_python_test_files": 223,
+  "fresh_python_passed": 885,
+  "fresh_python_skipped": 0,
+  "fresh_node_passed": 14,
+  "fresh_node_total": 14,
+  "fresh_reference_passed": 4,
+  "fresh_reference_total": 4,
+  "fresh_direct_reference_imports": 0,
+  "fresh_npm_pack_files": 23,
+  "state": "PASSED"
+}

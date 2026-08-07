@@ -1,0 +1,38 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP053",
+  "step_name": "STEP053_IMMUTABLE_REASONING_EVIDENCE_MINIMIZATION_V1",
+  "version": "2.33.0",
+  "reported_at": "2026-07-31T02:34:21.604140Z",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "acceptance_state": "PASSED",
+  "checks_passed": 30,
+  "checks_total": 30,
+  "reasoning_policy_sha256": "6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b",
+  "runtime_binding_sha256": "190fd90380f09752992a88c706cc83bcb26a7c43596d7237ab554e229958a559",
+  "observed_reasoning_items": 1,
+  "observed_reasoning_tokens": 11,
+  "gateway_counts": {
+    "runner_run": 0,
+    "runner_run_streamed": 1,
+    "provider_constructed": 1,
+    "provider_get_model": 1,
+    "provider_closed": 1,
+    "openai_client_constructed": 1
+  },
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "submissions": 2,
+    "invocations": 1,
+    "events": 10,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 1,
+  "drift_confirmation_status": 409,
+  "evaluation_state": "PASSED",
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1
+}

@@ -1,0 +1,1313 @@
+{
+  "applied_clauses": [
+    "GOV-004",
+    "GOV-005",
+    "GOV-006",
+    "GOV-007",
+    "GOV-008",
+    "GOV-009",
+    "GOV-010",
+    "ARC-001",
+    "ARC-004",
+    "ARC-005",
+    "CMP-006",
+    "HIS-001",
+    "HIS-002",
+    "HIS-004",
+    "TST-003",
+    "TST-004",
+    "TST-005",
+    "TST-006",
+    "MIG-001",
+    "MIG-002",
+    "MIG-008",
+    "MIG-009"
+  ],
+  "changed_files": [
+    "HANDOFF.md",
+    "PLANS.md",
+    "README.md",
+    "docs/architecture/README.md",
+    "docs/evidence/ARCHITECTURE_CONSTITUTION_VALIDATION.json",
+    "docs/evidence/STEP080A_ACCEPTANCE.json",
+    "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json",
+    "docs/evidence/STEP080A_FRESH_ZIP_VALIDATION.json",
+    "docs/evidence/STEP080A_VALIDATION.txt",
+    "docs/issues/ISSUE_REGISTRY.md",
+    "docs/issues/OR-ISSUE-015-CONSTITUTION-OUTSIDE-PRODUCT-AND-NOT-ENFORCED.md",
+    "docs/issues/OR-ISSUE-016-SERVICE-CAPABILITIES-CONSTITUTION-SNAPSHOT-NOT-INITIALIZED.md",
+    "docs/plans/ROADMAP.md",
+    "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+    "docs/reference/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES_CODE_AUDIT.md",
+    "pyproject.toml",
+    "scripts/package_source.py",
+    "scripts/run_step080a_acceptance.py",
+    "scripts/run_step080a_live_acceptance.py",
+    "scripts/validate_acceptance_launcher_registry.py",
+    "scripts/validate_architecture_constitution.py",
+    "scripts/validate_step080a_compliance.py",
+    "scripts/windows_entrypoint.py",
+    "sh_run_step080a_acceptance.cmd",
+    "sh_run_step080a_live_acceptance.cmd",
+    "specs/acceptance/launcher-registry.json",
+    "specs/architecture/constitution/BUNDLE_INTEGRITY.json",
+    "specs/architecture/constitution/CONSTITUTION_AMENDMENT_PROTOCOL.md",
+    "specs/architecture/constitution/CONSTITUTION_COVERAGE_MATRIX.json",
+    "specs/architecture/constitution/CONSTITUTION_GATE_CATALOG.json",
+    "specs/architecture/constitution/CONSTITUTION_TRACEABILITY_MATRIX.json",
+    "specs/architecture/constitution/CONSTITUTION_TRACEABILITY_MATRIX.md",
+    "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.json",
+    "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.md",
+    "specs/architecture/constitution/README.md",
+    "specs/architecture/constitution/STEP_EXECUTION_COMPLIANCE_TEMPLATE.md",
+    "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_BOUNDARY_AUDIT.json",
+    "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.json",
+    "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.md",
+    "specs/architecture/constitution/annexes/STEP081_FLAT_LAYOUT_IMPACT_AUDIT.json",
+    "specs/architecture/constitution/annexes/STEP081_IMPORT_GRAPH_AUDIT.json",
+    "specs/architecture/constitution/annexes/STEP081_PATH_COUPLING_AUDIT.json",
+    "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json",
+    "specs/architecture/constitution/annexes/STEP081_PROJECT_STRUCTURE_FULL_AUDIT.md",
+    "specs/architecture/constitution/annexes/STEP081_TARGET_ARCHITECTURE_MANIFEST.json",
+    "specs/service_clients/service-client-policy.json",
+    "src/okcanvas_agent_runtime/baseline.py",
+    "src/okcanvas_agent_runtime/execution/runtime_binding.py",
+    "src/okcanvas_agent_runtime/governance/__init__.py",
+    "src/okcanvas_agent_runtime/governance/architecture_constitution.py",
+    "src/okcanvas_agent_runtime/governance/resources/__init__.py",
+    "src/okcanvas_agent_runtime/governance/resources/architecture_constitution.json",
+    "src/okcanvas_agent_runtime/governance/resources/constitution_gate_catalog.json",
+    "src/okcanvas_agent_runtime/governance/step_compliance.py",
+    "src/okcanvas_agent_runtime/model.py",
+    "src/okcanvas_agent_runtime/service_clients/contracts.py",
+    "src/okcanvas_agent_runtime/service_clients/routes.py",
+    "tests/test_cli.py",
+    "tests/test_runtime_info.py",
+    "tests/test_step005_runtime_info.py",
+    "tests/test_step006_reference_catalog_baseline.py",
+    "tests/test_step007_generic_agent_baseline.py",
+    "tests/test_step008_control_api_baseline.py",
+    "tests/test_step009_mcp_baseline.py",
+    "tests/test_step011_catalog_api_baseline.py",
+    "tests/test_step012_recorded_run_evaluation_baseline.py",
+    "tests/test_step012a_windows_sqlite_handle_release_baseline.py",
+    "tests/test_step013_evaluation_suite_baseline.py",
+    "tests/test_step014_acceptance_workspace_baseline.py",
+    "tests/test_step015_operations_console_baseline.py",
+    "tests/test_step016_operations_console_live_view_baseline.py",
+    "tests/test_step017_run_submission_boundary_baseline.py",
+    "tests/test_step018_governed_run_submission_baseline.py",
+    "tests/test_step019_governed_recovery_retention_baseline.py",
+    "tests/test_step020_governed_local_tool_approval_baseline.py",
+    "tests/test_step021_read_only_local_approval_inbox_baseline.py",
+    "tests/test_step022_live_acceptance_closure_baseline.py",
+    "tests/test_step023_minimal_local_approval_operator_baseline.py",
+    "tests/test_step023a_live_sdk_resume_turn_budget.py",
+    "tests/test_step024_business_agent_baseline.py",
+    "tests/test_step025_commerce_snapshot_ingress_baseline.py",
+    "tests/test_step026_multi_case_product_acceptance_baseline.py",
+    "tests/test_step027_commerce_ingress_failure_matrix_baseline.py",
+    "tests/test_step028_commerce_snapshot_identity_baseline.py",
+    "tests/test_step029_commerce_snapshot_strict_scalar_types_baseline.py",
+    "tests/test_step030_commerce_snapshot_non_empty_inventory_baseline.py",
+    "tests/test_step030a_windows_venv_launcher_fix_baseline.py",
+    "tests/test_step031_commerce_snapshot_bounded_quantities_baseline.py",
+    "tests/test_step032_agent_output_contract_runtime_registry_baseline.py",
+    "tests/test_step033_agent_runtime_binding_fingerprint_baseline.py",
+    "tests/test_step034_orphaned_running_reconciliation_baseline.py",
+    "tests/test_step035_terminal_outcome_reconciliation_baseline.py",
+    "tests/test_step036_recorded_run_runtime_binding_verification_baseline.py",
+    "tests/test_step037_interactive_runner_baseline.py",
+    "tests/test_step038_generic_function_tool_baseline.py",
+    "tests/test_step039_native_sdk_streaming_baseline.py",
+    "tests/test_step040_sub_agent_invocation_scope_baseline.py",
+    "tests/test_step041_native_handoff_runtime_baseline.py",
+    "tests/test_step042_agent_as_tool_runtime_baseline.py",
+    "tests/test_step043_sqlite_session_runtime_baseline.py",
+    "tests/test_step044_native_guardrail_runtime_baseline.py",
+    "tests/test_step045_integrated_walking_skeleton_baseline.py",
+    "tests/test_step046_sqlite_session_approval_composition_baseline.py",
+    "tests/test_step048_sqlite_session_native_guardrail_composition_baseline.py",
+    "tests/test_step049_sqlite_session_native_agent_tool_composition_baseline.py",
+    "tests/test_step050_sqlite_session_native_mcp_composition_baseline.py",
+    "tests/test_step051_immutable_model_route_baseline.py",
+    "tests/test_step052_immutable_zero_retry_baseline.py",
+    "tests/test_step053_immutable_reasoning_evidence_baseline.py",
+    "tests/test_step054_immutable_response_storage_baseline.py",
+    "tests/test_step055_immutable_provider_identifier_minimization_baseline.py",
+    "tests/test_step056_tui_client_foundation_baseline.py",
+    "tests/test_step056b_node_typescript_persistent_cli_baseline.py",
+    "tests/test_step056c_node_typescript_cli_developer_observability_baseline.py",
+    "tests/test_step057_node_cli_runtime_session_conversation_baseline.py",
+    "tests/test_step058_node_cli_tool_sub_agent_workflow_visibility_baseline.py",
+    "tests/test_step059_bounded_project_readonly_coding_workflow_baseline.py",
+    "tests/test_step059a_actual_sdk_function_tool_output_contract_alignment.py",
+    "tests/test_step059b_actual_sdk_tool_context_export_alignment.py",
+    "tests/test_step060_query_directed_project_retrieval_evidence_budget_baseline.py",
+    "tests/test_step061_openai_agents_examples_coverage_matrix_baseline.py",
+    "tests/test_step062_bounded_multi_agent_orchestration_baseline.py",
+    "tests/test_step062a_windows_node_acceptance_portability_fix.py",
+    "tests/test_step062b_windows_typescript_direct_compiler_portability_fix.py",
+    "tests/test_step062c_committed_node_dist_release_integrity_acceptance_fix.py",
+    "tests/test_step063_strict_encrypted_sqlite_session_history.py",
+    "tests/test_step063a_windows_symlink_integrity_test_portability_fix.py",
+    "tests/test_step064a_pytest_async_plugin_independence_fix.py",
+    "tests/test_step065_session_history_key_rotation.py",
+    "tests/test_step066_remote_mcp_streamable_http_mvp_foundation_baseline.py",
+    "tests/test_step067_hosted_web_search_foundation_baseline.py",
+    "tests/test_step068_bounded_local_pdf_image_input_baseline.py",
+    "tests/test_step069_multi_user_service_client_contract.py",
+    "tests/test_step069_multi_user_service_client_contract_baseline.py",
+    "tests/test_step070_product_owned_skill_foundation.py",
+    "tests/test_step070_product_owned_skill_foundation_baseline.py",
+    "tests/test_step071_product_skill_document_review_live_acceptance.py",
+    "tests/test_step072_immutable_openai_trace_export_disabled.py",
+    "tests/test_step072a_windows_pycache_overlay_isolation_fix.py",
+    "tests/test_step072b_windows_crlf_and_local_env_forwarding_fix.py",
+    "tests/test_step073_product_owned_sandbox_runtime_foundation.py",
+    "tests/test_step074_product_owned_docker_sandbox_provider_lifecycle.py",
+    "tests/test_step075_product_owned_readonly_sandbox_workspace_agent.py",
+    "tests/test_step075a_windows_docker_tmpfs_normalization_and_failure_evidence_fix.py",
+    "tests/test_step075b_windows_docker_command_operation_evidence.py",
+    "tests/test_step076_product_owned_immutable_project_snapshot_binding.py",
+    "tests/test_step080_product_owned_capability_topology_and_tool_discovery_foundation.py",
+    "tests/test_step080a_acceptance_launcher_registry.py",
+    "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+    "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+  ],
+  "constitution_sha256": "262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa",
+  "gate_results": [
+    {
+      "code_evidence": [
+        "scripts/validate_architecture_constitution.py",
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json"
+      ],
+      "gate_id": "GATE-CONSTITUTION-BUNDLE-COMPLETE",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json",
+        "specs/architecture/constitution/CONSTITUTION_COVERAGE_MATRIX.json"
+      ],
+      "gate_id": "GATE-CLAUSE-COVERAGE-100",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json",
+        "scripts/validate_step080a_compliance.py"
+      ],
+      "gate_id": "GATE-TRACEABILITY-COMPLETE",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "specs/architecture/constitution/CONSTITUTION_AMENDMENT_PROTOCOL.md"
+      ],
+      "gate_id": "GATE-AMENDMENT-VALID",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-NO-UNCLASSIFIED-TOPLEVEL-PACKAGE",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-NO-HARDCODED-OLD-PACKAGE-PATH",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-WHEEL-CONTENTS-EXACT",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-EDITABLE-INSTALL",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-CLIENT-NO-SERVER-IMPORT",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-PROTOCOLS-RUNTIME-INDEPENDENT",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-TRANSPORT-IMPORT-DIRECTION",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-APPLICATION-NO-CONCRETE-ADAPTER",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-AGENT-NO-TRANSPORT-FRAMEWORK",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-DOMAIN-ISOLATION",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-SERVICE-NO-CONTROL-API-IMPORT",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-TRANSPORT-NO-STORE-COORDINATOR",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "specs/architecture/constitution/annexes/STEP081_IMPORT_GRAPH_AUDIT.json"
+      ],
+      "gate_id": "GATE-MODULE-CYCLES-ZERO",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-PRODUCT-CLIENT-SERVICE-API-ONLY",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-CLIENT-CREDENTIAL-BOUNDARY",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-TRANSPORT-NO-BUSINESS-LOGIC",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-DUPLICATE-USE-CASE-REMOVED",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-BOOTSTRAP-WIRING-ONLY",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-SSE-SUBSCRIPTION-PORT",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-WEBSOCKET-NO-AUTHORITY-ESCALATION",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "architecture source movement and transport/client refactor are explicitly out of scope in STEP080A"
+      ],
+      "gate_id": "GATE-COMPAT-SYMBOL-IDENTITY",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "code_evidence": [
+        "specs/acceptance/launcher-registry.json",
+        "scripts/validate_acceptance_launcher_registry.py"
+      ],
+      "gate_id": "GATE-LAUNCHER-REGISTRY-COMPLETE",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "gate_id": "GATE-REFERENCE-INTEGRITY",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json"
+      ],
+      "gate_id": "GATE-MIGRATION-MAP-COMPLETE",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "gate_id": "GATE-FULL-REGRESSION",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "scripts/run_step080a_live_acceptance.py",
+        "sh_run_step080a_live_acceptance.cmd"
+      ],
+      "gate_id": "GATE-WINDOWS-LIVE",
+      "status": "PENDING_EXTERNAL"
+    },
+    {
+      "code_evidence": [
+        "docs/evidence/STEP080A_FRESH_ZIP_VALIDATION.json",
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "gate_id": "GATE-FRESH-ZIP",
+      "status": "PASS"
+    },
+    {
+      "code_evidence": [
+        "docs/issues/ISSUE_REGISTRY.md",
+        "docs/issues/OR-ISSUE-015-CONSTITUTION-OUTSIDE-PRODUCT-AND-NOT-ENFORCED.md",
+        "docs/issues/OR-ISSUE-016-SERVICE-CAPABILITIES-CONSTITUTION-SNAPSHOT-NOT-INITIALIZED.md"
+      ],
+      "gate_id": "GATE-ISSUE-REGISTRY-COMPLETE",
+      "status": "PASS"
+    }
+  ],
+  "open_clause_ids": [],
+  "pending_external_gate_ids": [
+    "GATE-WINDOWS-LIVE"
+  ],
+  "schema_version": "okcanvas-step-constitution-compliance-v1",
+  "state": "DETERMINISTIC_COMPLETE_WINDOWS_PENDING",
+  "step": "STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES",
+  "traceability": [
+    {
+      "acceptance_checks": [
+        "architecture_constitution_identity_exact"
+      ],
+      "clause_id": "GOV-004",
+      "evidence_files": [
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json"
+      ],
+      "implementation_files": [
+        "docs/architecture/README.md",
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json",
+        "specs/architecture/constitution/CONSTITUTION_AMENDMENT_PROTOCOL.md",
+        "specs/architecture/constitution/CONSTITUTION_COVERAGE_MATRIX.json",
+        "specs/architecture/constitution/CONSTITUTION_GATE_CATALOG.json",
+        "specs/architecture/constitution/CONSTITUTION_TRACEABILITY_MATRIX.json",
+        "specs/architecture/constitution/CONSTITUTION_TRACEABILITY_MATRIX.md",
+        "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.json",
+        "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.md",
+        "specs/architecture/constitution/README.md",
+        "specs/architecture/constitution/STEP_EXECUTION_COMPLIANCE_TEMPLATE.md",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_BOUNDARY_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_FLAT_LAYOUT_IMPACT_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_IMPORT_GRAPH_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PATH_COUPLING_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_STRUCTURE_FULL_AUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_TARGET_ARCHITECTURE_MANIFEST.json",
+        "src/okcanvas_agent_runtime/governance/__init__.py",
+        "src/okcanvas_agent_runtime/governance/architecture_constitution.py",
+        "src/okcanvas_agent_runtime/governance/resources/__init__.py",
+        "src/okcanvas_agent_runtime/governance/resources/architecture_constitution.json",
+        "src/okcanvas_agent_runtime/governance/resources/constitution_gate_catalog.json",
+        "src/okcanvas_agent_runtime/governance/step_compliance.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "architecture_step_compliance_complete"
+      ],
+      "clause_id": "GOV-005",
+      "evidence_files": [
+        "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json"
+      ],
+      "implementation_files": [
+        "scripts/validate_step080a_compliance.py",
+        "src/okcanvas_agent_runtime/governance/step_compliance.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "baseline_version_and_step_exact"
+      ],
+      "clause_id": "GOV-006",
+      "evidence_files": [
+        "HANDOFF.md",
+        "docs/plans/ROADMAP.md"
+      ],
+      "implementation_files": [
+        "pyproject.toml",
+        "scripts/package_source.py",
+        "src/okcanvas_agent_runtime/baseline.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_cli.py",
+        "tests/test_runtime_info.py",
+        "tests/test_step005_runtime_info.py",
+        "tests/test_step006_reference_catalog_baseline.py",
+        "tests/test_step007_generic_agent_baseline.py",
+        "tests/test_step008_control_api_baseline.py",
+        "tests/test_step009_mcp_baseline.py",
+        "tests/test_step011_catalog_api_baseline.py",
+        "tests/test_step012_recorded_run_evaluation_baseline.py",
+        "tests/test_step012a_windows_sqlite_handle_release_baseline.py",
+        "tests/test_step013_evaluation_suite_baseline.py",
+        "tests/test_step014_acceptance_workspace_baseline.py",
+        "tests/test_step015_operations_console_baseline.py",
+        "tests/test_step016_operations_console_live_view_baseline.py",
+        "tests/test_step017_run_submission_boundary_baseline.py",
+        "tests/test_step018_governed_run_submission_baseline.py",
+        "tests/test_step019_governed_recovery_retention_baseline.py",
+        "tests/test_step020_governed_local_tool_approval_baseline.py",
+        "tests/test_step021_read_only_local_approval_inbox_baseline.py",
+        "tests/test_step022_live_acceptance_closure_baseline.py",
+        "tests/test_step023_minimal_local_approval_operator_baseline.py",
+        "tests/test_step023a_live_sdk_resume_turn_budget.py",
+        "tests/test_step024_business_agent_baseline.py",
+        "tests/test_step025_commerce_snapshot_ingress_baseline.py",
+        "tests/test_step026_multi_case_product_acceptance_baseline.py",
+        "tests/test_step027_commerce_ingress_failure_matrix_baseline.py",
+        "tests/test_step028_commerce_snapshot_identity_baseline.py",
+        "tests/test_step029_commerce_snapshot_strict_scalar_types_baseline.py",
+        "tests/test_step030_commerce_snapshot_non_empty_inventory_baseline.py",
+        "tests/test_step030a_windows_venv_launcher_fix_baseline.py",
+        "tests/test_step031_commerce_snapshot_bounded_quantities_baseline.py",
+        "tests/test_step032_agent_output_contract_runtime_registry_baseline.py",
+        "tests/test_step033_agent_runtime_binding_fingerprint_baseline.py",
+        "tests/test_step034_orphaned_running_reconciliation_baseline.py",
+        "tests/test_step035_terminal_outcome_reconciliation_baseline.py",
+        "tests/test_step036_recorded_run_runtime_binding_verification_baseline.py",
+        "tests/test_step037_interactive_runner_baseline.py",
+        "tests/test_step038_generic_function_tool_baseline.py",
+        "tests/test_step039_native_sdk_streaming_baseline.py",
+        "tests/test_step040_sub_agent_invocation_scope_baseline.py",
+        "tests/test_step041_native_handoff_runtime_baseline.py",
+        "tests/test_step042_agent_as_tool_runtime_baseline.py",
+        "tests/test_step043_sqlite_session_runtime_baseline.py",
+        "tests/test_step044_native_guardrail_runtime_baseline.py",
+        "tests/test_step045_integrated_walking_skeleton_baseline.py",
+        "tests/test_step046_sqlite_session_approval_composition_baseline.py",
+        "tests/test_step048_sqlite_session_native_guardrail_composition_baseline.py",
+        "tests/test_step049_sqlite_session_native_agent_tool_composition_baseline.py",
+        "tests/test_step050_sqlite_session_native_mcp_composition_baseline.py",
+        "tests/test_step051_immutable_model_route_baseline.py",
+        "tests/test_step052_immutable_zero_retry_baseline.py",
+        "tests/test_step053_immutable_reasoning_evidence_baseline.py",
+        "tests/test_step054_immutable_response_storage_baseline.py",
+        "tests/test_step055_immutable_provider_identifier_minimization_baseline.py",
+        "tests/test_step056_tui_client_foundation_baseline.py",
+        "tests/test_step056b_node_typescript_persistent_cli_baseline.py",
+        "tests/test_step056c_node_typescript_cli_developer_observability_baseline.py",
+        "tests/test_step057_node_cli_runtime_session_conversation_baseline.py",
+        "tests/test_step058_node_cli_tool_sub_agent_workflow_visibility_baseline.py",
+        "tests/test_step059_bounded_project_readonly_coding_workflow_baseline.py",
+        "tests/test_step059a_actual_sdk_function_tool_output_contract_alignment.py",
+        "tests/test_step059b_actual_sdk_tool_context_export_alignment.py",
+        "tests/test_step060_query_directed_project_retrieval_evidence_budget_baseline.py",
+        "tests/test_step061_openai_agents_examples_coverage_matrix_baseline.py",
+        "tests/test_step062_bounded_multi_agent_orchestration_baseline.py",
+        "tests/test_step062a_windows_node_acceptance_portability_fix.py",
+        "tests/test_step062b_windows_typescript_direct_compiler_portability_fix.py",
+        "tests/test_step062c_committed_node_dist_release_integrity_acceptance_fix.py",
+        "tests/test_step063_strict_encrypted_sqlite_session_history.py",
+        "tests/test_step063a_windows_symlink_integrity_test_portability_fix.py",
+        "tests/test_step064a_pytest_async_plugin_independence_fix.py",
+        "tests/test_step065_session_history_key_rotation.py",
+        "tests/test_step066_remote_mcp_streamable_http_mvp_foundation_baseline.py",
+        "tests/test_step067_hosted_web_search_foundation_baseline.py",
+        "tests/test_step068_bounded_local_pdf_image_input_baseline.py",
+        "tests/test_step069_multi_user_service_client_contract.py",
+        "tests/test_step069_multi_user_service_client_contract_baseline.py",
+        "tests/test_step070_product_owned_skill_foundation.py",
+        "tests/test_step070_product_owned_skill_foundation_baseline.py",
+        "tests/test_step071_product_skill_document_review_live_acceptance.py",
+        "tests/test_step072_immutable_openai_trace_export_disabled.py",
+        "tests/test_step072a_windows_pycache_overlay_isolation_fix.py",
+        "tests/test_step072b_windows_crlf_and_local_env_forwarding_fix.py",
+        "tests/test_step073_product_owned_sandbox_runtime_foundation.py",
+        "tests/test_step074_product_owned_docker_sandbox_provider_lifecycle.py",
+        "tests/test_step075_product_owned_readonly_sandbox_workspace_agent.py",
+        "tests/test_step075a_windows_docker_tmpfs_normalization_and_failure_evidence_fix.py",
+        "tests/test_step075b_windows_docker_command_operation_evidence.py",
+        "tests/test_step076_product_owned_immutable_project_snapshot_binding.py",
+        "tests/test_step080_product_owned_capability_topology_and_tool_discovery_foundation.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "step080a_documents_and_issue_present"
+      ],
+      "clause_id": "GOV-007",
+      "evidence_files": [
+        "docs/issues/ISSUE_REGISTRY.md"
+      ],
+      "implementation_files": [
+        "docs/issues/ISSUE_REGISTRY.md",
+        "docs/issues/OR-ISSUE-015-CONSTITUTION-OUTSIDE-PRODUCT-AND-NOT-ENFORCED.md",
+        "docs/issues/OR-ISSUE-016-SERVICE-CAPABILITIES-CONSTITUTION-SNAPSHOT-NOT-INITIALIZED.md"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015",
+        "OR-ISSUE-016"
+      ],
+      "status": "COMPLETE",
+      "test_files": []
+    },
+    {
+      "acceptance_checks": [
+        "architecture_step_compliance_complete"
+      ],
+      "clause_id": "GOV-008",
+      "evidence_files": [
+        "docs/evidence/STEP080A_ACCEPTANCE.json",
+        "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json"
+      ],
+      "implementation_files": [
+        "scripts/run_step080a_acceptance.py",
+        "src/okcanvas_agent_runtime/governance/step_compliance.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "runtime_binding_fingerprints_topology_examples_and_constitution",
+        "service_policy_selects_step080a"
+      ],
+      "clause_id": "GOV-009",
+      "evidence_files": [
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "implementation_files": [
+        "specs/service_clients/service-client-policy.json",
+        "src/okcanvas_agent_runtime/execution/runtime_binding.py",
+        "src/okcanvas_agent_runtime/model.py",
+        "src/okcanvas_agent_runtime/service_clients/contracts.py",
+        "src/okcanvas_agent_runtime/service_clients/routes.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step069_multi_user_service_client_contract.py",
+        "tests/test_step080_product_owned_capability_topology_and_tool_discovery_foundation.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "architecture_constitution_bundle_validation_pass"
+      ],
+      "clause_id": "GOV-010",
+      "evidence_files": [
+        "specs/architecture/constitution/CONSTITUTION_AMENDMENT_PROTOCOL.md"
+      ],
+      "implementation_files": [
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json",
+        "specs/architecture/constitution/CONSTITUTION_AMENDMENT_PROTOCOL.md"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "architecture_constitution_identity_exact"
+      ],
+      "clause_id": "ARC-001",
+      "evidence_files": [
+        "docs/reference/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES_CODE_AUDIT.md"
+      ],
+      "implementation_files": [
+        "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.json",
+        "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.md",
+        "specs/architecture/constitution/annexes/STEP081_TARGET_ARCHITECTURE_MANIFEST.json"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": []
+    },
+    {
+      "acceptance_checks": [
+        "architecture_source_movement_remains_blocked"
+      ],
+      "clause_id": "ARC-004",
+      "evidence_files": [
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "implementation_files": [
+        "specs/architecture/constitution/annexes/STEP081_IMPORT_GRAPH_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PATH_COUPLING_AUDIT.json"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": []
+    },
+    {
+      "acceptance_checks": [
+        "runtime_binding_fingerprints_topology_examples_and_constitution"
+      ],
+      "clause_id": "ARC-005",
+      "evidence_files": [
+        "docs/evidence/STEP080A_ACCEPTANCE.json"
+      ],
+      "implementation_files": [
+        "src/okcanvas_agent_runtime/execution/runtime_binding.py",
+        "src/okcanvas_agent_runtime/service_clients/contracts.py",
+        "src/okcanvas_agent_runtime/service_clients/routes.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step069_multi_user_service_client_contract.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "acceptance_launcher_registry_complete",
+        "live_command_registered"
+      ],
+      "clause_id": "CMP-006",
+      "evidence_files": [
+        "docs/evidence/STEP080A_ACCEPTANCE.json"
+      ],
+      "implementation_files": [
+        "scripts/validate_acceptance_launcher_registry.py",
+        "scripts/windows_entrypoint.py",
+        "sh_run_step080a_acceptance.cmd",
+        "sh_run_step080a_live_acceptance.cmd",
+        "specs/acceptance/launcher-registry.json"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "architecture_constitution_bundle_validation_pass"
+      ],
+      "clause_id": "HIS-001",
+      "evidence_files": [
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json"
+      ],
+      "implementation_files": [
+        "docs/plans/ROADMAP.md",
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "docs/reference/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES_CODE_AUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_BOUNDARY_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_FLAT_LAYOUT_IMPACT_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_IMPORT_GRAPH_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PATH_COUPLING_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_STRUCTURE_FULL_AUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_TARGET_ARCHITECTURE_MANIFEST.json"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": []
+    },
+    {
+      "acceptance_checks": [
+        "architecture_constitution_bundle_validation_pass"
+      ],
+      "clause_id": "HIS-002",
+      "evidence_files": [
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json"
+      ],
+      "implementation_files": [
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_BOUNDARY_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_FLAT_LAYOUT_IMPACT_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_IMPORT_GRAPH_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PATH_COUPLING_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_STRUCTURE_FULL_AUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_TARGET_ARCHITECTURE_MANIFEST.json"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": []
+    },
+    {
+      "acceptance_checks": [
+        "references_unchanged",
+        "no_direct_reference_imports"
+      ],
+      "clause_id": "HIS-004",
+      "evidence_files": [
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "implementation_files": [],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step006_reference_catalog_baseline.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "acceptance_launcher_registry_complete"
+      ],
+      "clause_id": "TST-003",
+      "evidence_files": [
+        "docs/evidence/STEP080A_ACCEPTANCE.json"
+      ],
+      "implementation_files": [
+        "scripts/run_step080a_acceptance.py",
+        "scripts/run_step080a_live_acceptance.py",
+        "scripts/validate_acceptance_launcher_registry.py",
+        "sh_run_step080a_acceptance.cmd",
+        "sh_run_step080a_live_acceptance.cmd",
+        "specs/acceptance/launcher-registry.json"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "focused_step080a_tests_pass",
+        "historical_capability_tests_pass",
+        "python_compileall_pass"
+      ],
+      "clause_id": "TST-004",
+      "evidence_files": [
+        "docs/evidence/STEP080A_ACCEPTANCE.json",
+        "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json",
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "implementation_files": [
+        "HANDOFF.md",
+        "PLANS.md",
+        "README.md",
+        "docs/architecture/README.md",
+        "docs/evidence/ARCHITECTURE_CONSTITUTION_VALIDATION.json",
+        "docs/evidence/STEP080A_ACCEPTANCE.json",
+        "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json",
+        "docs/evidence/STEP080A_FRESH_ZIP_VALIDATION.json",
+        "docs/evidence/STEP080A_VALIDATION.txt",
+        "docs/issues/ISSUE_REGISTRY.md",
+        "docs/issues/OR-ISSUE-015-CONSTITUTION-OUTSIDE-PRODUCT-AND-NOT-ENFORCED.md",
+        "docs/issues/OR-ISSUE-016-SERVICE-CAPABILITIES-CONSTITUTION-SNAPSHOT-NOT-INITIALIZED.md",
+        "docs/plans/ROADMAP.md",
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "docs/reference/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES_CODE_AUDIT.md",
+        "pyproject.toml",
+        "scripts/package_source.py",
+        "scripts/run_step080a_acceptance.py",
+        "scripts/run_step080a_live_acceptance.py",
+        "scripts/validate_acceptance_launcher_registry.py",
+        "scripts/validate_architecture_constitution.py",
+        "scripts/validate_step080a_compliance.py",
+        "scripts/windows_entrypoint.py",
+        "sh_run_step080a_acceptance.cmd",
+        "sh_run_step080a_live_acceptance.cmd",
+        "specs/acceptance/launcher-registry.json",
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json",
+        "specs/architecture/constitution/CONSTITUTION_AMENDMENT_PROTOCOL.md",
+        "specs/architecture/constitution/CONSTITUTION_COVERAGE_MATRIX.json",
+        "specs/architecture/constitution/CONSTITUTION_GATE_CATALOG.json",
+        "specs/architecture/constitution/CONSTITUTION_TRACEABILITY_MATRIX.json",
+        "specs/architecture/constitution/CONSTITUTION_TRACEABILITY_MATRIX.md",
+        "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.json",
+        "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.md",
+        "specs/architecture/constitution/README.md",
+        "specs/architecture/constitution/STEP_EXECUTION_COMPLIANCE_TEMPLATE.md",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_BOUNDARY_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_FLAT_LAYOUT_IMPACT_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_IMPORT_GRAPH_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PATH_COUPLING_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_STRUCTURE_FULL_AUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_TARGET_ARCHITECTURE_MANIFEST.json",
+        "specs/service_clients/service-client-policy.json",
+        "src/okcanvas_agent_runtime/baseline.py",
+        "src/okcanvas_agent_runtime/execution/runtime_binding.py",
+        "src/okcanvas_agent_runtime/governance/__init__.py",
+        "src/okcanvas_agent_runtime/governance/architecture_constitution.py",
+        "src/okcanvas_agent_runtime/governance/resources/__init__.py",
+        "src/okcanvas_agent_runtime/governance/resources/architecture_constitution.json",
+        "src/okcanvas_agent_runtime/governance/resources/constitution_gate_catalog.json",
+        "src/okcanvas_agent_runtime/governance/step_compliance.py",
+        "src/okcanvas_agent_runtime/model.py",
+        "src/okcanvas_agent_runtime/service_clients/contracts.py",
+        "src/okcanvas_agent_runtime/service_clients/routes.py",
+        "tests/test_cli.py",
+        "tests/test_runtime_info.py",
+        "tests/test_step005_runtime_info.py",
+        "tests/test_step006_reference_catalog_baseline.py",
+        "tests/test_step007_generic_agent_baseline.py",
+        "tests/test_step008_control_api_baseline.py",
+        "tests/test_step009_mcp_baseline.py",
+        "tests/test_step011_catalog_api_baseline.py",
+        "tests/test_step012_recorded_run_evaluation_baseline.py",
+        "tests/test_step012a_windows_sqlite_handle_release_baseline.py",
+        "tests/test_step013_evaluation_suite_baseline.py",
+        "tests/test_step014_acceptance_workspace_baseline.py",
+        "tests/test_step015_operations_console_baseline.py",
+        "tests/test_step016_operations_console_live_view_baseline.py",
+        "tests/test_step017_run_submission_boundary_baseline.py",
+        "tests/test_step018_governed_run_submission_baseline.py",
+        "tests/test_step019_governed_recovery_retention_baseline.py",
+        "tests/test_step020_governed_local_tool_approval_baseline.py",
+        "tests/test_step021_read_only_local_approval_inbox_baseline.py",
+        "tests/test_step022_live_acceptance_closure_baseline.py",
+        "tests/test_step023_minimal_local_approval_operator_baseline.py",
+        "tests/test_step023a_live_sdk_resume_turn_budget.py",
+        "tests/test_step024_business_agent_baseline.py",
+        "tests/test_step025_commerce_snapshot_ingress_baseline.py",
+        "tests/test_step026_multi_case_product_acceptance_baseline.py",
+        "tests/test_step027_commerce_ingress_failure_matrix_baseline.py",
+        "tests/test_step028_commerce_snapshot_identity_baseline.py",
+        "tests/test_step029_commerce_snapshot_strict_scalar_types_baseline.py",
+        "tests/test_step030_commerce_snapshot_non_empty_inventory_baseline.py",
+        "tests/test_step030a_windows_venv_launcher_fix_baseline.py",
+        "tests/test_step031_commerce_snapshot_bounded_quantities_baseline.py",
+        "tests/test_step032_agent_output_contract_runtime_registry_baseline.py",
+        "tests/test_step033_agent_runtime_binding_fingerprint_baseline.py",
+        "tests/test_step034_orphaned_running_reconciliation_baseline.py",
+        "tests/test_step035_terminal_outcome_reconciliation_baseline.py",
+        "tests/test_step036_recorded_run_runtime_binding_verification_baseline.py",
+        "tests/test_step037_interactive_runner_baseline.py",
+        "tests/test_step038_generic_function_tool_baseline.py",
+        "tests/test_step039_native_sdk_streaming_baseline.py",
+        "tests/test_step040_sub_agent_invocation_scope_baseline.py",
+        "tests/test_step041_native_handoff_runtime_baseline.py",
+        "tests/test_step042_agent_as_tool_runtime_baseline.py",
+        "tests/test_step043_sqlite_session_runtime_baseline.py",
+        "tests/test_step044_native_guardrail_runtime_baseline.py",
+        "tests/test_step045_integrated_walking_skeleton_baseline.py",
+        "tests/test_step046_sqlite_session_approval_composition_baseline.py",
+        "tests/test_step048_sqlite_session_native_guardrail_composition_baseline.py",
+        "tests/test_step049_sqlite_session_native_agent_tool_composition_baseline.py",
+        "tests/test_step050_sqlite_session_native_mcp_composition_baseline.py",
+        "tests/test_step051_immutable_model_route_baseline.py",
+        "tests/test_step052_immutable_zero_retry_baseline.py",
+        "tests/test_step053_immutable_reasoning_evidence_baseline.py",
+        "tests/test_step054_immutable_response_storage_baseline.py",
+        "tests/test_step055_immutable_provider_identifier_minimization_baseline.py",
+        "tests/test_step056_tui_client_foundation_baseline.py",
+        "tests/test_step056b_node_typescript_persistent_cli_baseline.py",
+        "tests/test_step056c_node_typescript_cli_developer_observability_baseline.py",
+        "tests/test_step057_node_cli_runtime_session_conversation_baseline.py",
+        "tests/test_step058_node_cli_tool_sub_agent_workflow_visibility_baseline.py",
+        "tests/test_step059_bounded_project_readonly_coding_workflow_baseline.py",
+        "tests/test_step059a_actual_sdk_function_tool_output_contract_alignment.py",
+        "tests/test_step059b_actual_sdk_tool_context_export_alignment.py",
+        "tests/test_step060_query_directed_project_retrieval_evidence_budget_baseline.py",
+        "tests/test_step061_openai_agents_examples_coverage_matrix_baseline.py",
+        "tests/test_step062_bounded_multi_agent_orchestration_baseline.py",
+        "tests/test_step062a_windows_node_acceptance_portability_fix.py",
+        "tests/test_step062b_windows_typescript_direct_compiler_portability_fix.py",
+        "tests/test_step062c_committed_node_dist_release_integrity_acceptance_fix.py",
+        "tests/test_step063_strict_encrypted_sqlite_session_history.py",
+        "tests/test_step063a_windows_symlink_integrity_test_portability_fix.py",
+        "tests/test_step064a_pytest_async_plugin_independence_fix.py",
+        "tests/test_step065_session_history_key_rotation.py",
+        "tests/test_step066_remote_mcp_streamable_http_mvp_foundation_baseline.py",
+        "tests/test_step067_hosted_web_search_foundation_baseline.py",
+        "tests/test_step068_bounded_local_pdf_image_input_baseline.py",
+        "tests/test_step069_multi_user_service_client_contract.py",
+        "tests/test_step069_multi_user_service_client_contract_baseline.py",
+        "tests/test_step070_product_owned_skill_foundation.py",
+        "tests/test_step070_product_owned_skill_foundation_baseline.py",
+        "tests/test_step071_product_skill_document_review_live_acceptance.py",
+        "tests/test_step072_immutable_openai_trace_export_disabled.py",
+        "tests/test_step072a_windows_pycache_overlay_isolation_fix.py",
+        "tests/test_step072b_windows_crlf_and_local_env_forwarding_fix.py",
+        "tests/test_step073_product_owned_sandbox_runtime_foundation.py",
+        "tests/test_step074_product_owned_docker_sandbox_provider_lifecycle.py",
+        "tests/test_step075_product_owned_readonly_sandbox_workspace_agent.py",
+        "tests/test_step075a_windows_docker_tmpfs_normalization_and_failure_evidence_fix.py",
+        "tests/test_step075b_windows_docker_command_operation_evidence.py",
+        "tests/test_step076_product_owned_immutable_project_snapshot_binding.py",
+        "tests/test_step080_product_owned_capability_topology_and_tool_discovery_foundation.py",
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_cli.py",
+        "tests/test_runtime_info.py",
+        "tests/test_step005_runtime_info.py",
+        "tests/test_step006_reference_catalog_baseline.py",
+        "tests/test_step007_generic_agent_baseline.py",
+        "tests/test_step008_control_api_baseline.py",
+        "tests/test_step009_mcp_baseline.py",
+        "tests/test_step011_catalog_api_baseline.py",
+        "tests/test_step012_recorded_run_evaluation_baseline.py",
+        "tests/test_step012a_windows_sqlite_handle_release_baseline.py",
+        "tests/test_step013_evaluation_suite_baseline.py",
+        "tests/test_step014_acceptance_workspace_baseline.py",
+        "tests/test_step015_operations_console_baseline.py",
+        "tests/test_step016_operations_console_live_view_baseline.py",
+        "tests/test_step017_run_submission_boundary_baseline.py",
+        "tests/test_step018_governed_run_submission_baseline.py",
+        "tests/test_step019_governed_recovery_retention_baseline.py",
+        "tests/test_step020_governed_local_tool_approval_baseline.py",
+        "tests/test_step021_read_only_local_approval_inbox_baseline.py",
+        "tests/test_step022_live_acceptance_closure_baseline.py",
+        "tests/test_step023_minimal_local_approval_operator_baseline.py",
+        "tests/test_step023a_live_sdk_resume_turn_budget.py",
+        "tests/test_step024_business_agent_baseline.py",
+        "tests/test_step025_commerce_snapshot_ingress_baseline.py",
+        "tests/test_step026_multi_case_product_acceptance_baseline.py",
+        "tests/test_step027_commerce_ingress_failure_matrix_baseline.py",
+        "tests/test_step028_commerce_snapshot_identity_baseline.py",
+        "tests/test_step029_commerce_snapshot_strict_scalar_types_baseline.py",
+        "tests/test_step030_commerce_snapshot_non_empty_inventory_baseline.py",
+        "tests/test_step030a_windows_venv_launcher_fix_baseline.py",
+        "tests/test_step031_commerce_snapshot_bounded_quantities_baseline.py",
+        "tests/test_step032_agent_output_contract_runtime_registry_baseline.py",
+        "tests/test_step033_agent_runtime_binding_fingerprint_baseline.py",
+        "tests/test_step034_orphaned_running_reconciliation_baseline.py",
+        "tests/test_step035_terminal_outcome_reconciliation_baseline.py",
+        "tests/test_step036_recorded_run_runtime_binding_verification_baseline.py",
+        "tests/test_step037_interactive_runner_baseline.py",
+        "tests/test_step038_generic_function_tool_baseline.py",
+        "tests/test_step039_native_sdk_streaming_baseline.py",
+        "tests/test_step040_sub_agent_invocation_scope_baseline.py",
+        "tests/test_step041_native_handoff_runtime_baseline.py",
+        "tests/test_step042_agent_as_tool_runtime_baseline.py",
+        "tests/test_step043_sqlite_session_runtime_baseline.py",
+        "tests/test_step044_native_guardrail_runtime_baseline.py",
+        "tests/test_step045_integrated_walking_skeleton_baseline.py",
+        "tests/test_step046_sqlite_session_approval_composition_baseline.py",
+        "tests/test_step048_sqlite_session_native_guardrail_composition_baseline.py",
+        "tests/test_step049_sqlite_session_native_agent_tool_composition_baseline.py",
+        "tests/test_step050_sqlite_session_native_mcp_composition_baseline.py",
+        "tests/test_step051_immutable_model_route_baseline.py",
+        "tests/test_step052_immutable_zero_retry_baseline.py",
+        "tests/test_step053_immutable_reasoning_evidence_baseline.py",
+        "tests/test_step054_immutable_response_storage_baseline.py",
+        "tests/test_step055_immutable_provider_identifier_minimization_baseline.py",
+        "tests/test_step056_tui_client_foundation_baseline.py",
+        "tests/test_step056b_node_typescript_persistent_cli_baseline.py",
+        "tests/test_step056c_node_typescript_cli_developer_observability_baseline.py",
+        "tests/test_step057_node_cli_runtime_session_conversation_baseline.py",
+        "tests/test_step058_node_cli_tool_sub_agent_workflow_visibility_baseline.py",
+        "tests/test_step059_bounded_project_readonly_coding_workflow_baseline.py",
+        "tests/test_step059a_actual_sdk_function_tool_output_contract_alignment.py",
+        "tests/test_step059b_actual_sdk_tool_context_export_alignment.py",
+        "tests/test_step060_query_directed_project_retrieval_evidence_budget_baseline.py",
+        "tests/test_step061_openai_agents_examples_coverage_matrix_baseline.py",
+        "tests/test_step062_bounded_multi_agent_orchestration_baseline.py",
+        "tests/test_step062a_windows_node_acceptance_portability_fix.py",
+        "tests/test_step062b_windows_typescript_direct_compiler_portability_fix.py",
+        "tests/test_step062c_committed_node_dist_release_integrity_acceptance_fix.py",
+        "tests/test_step063_strict_encrypted_sqlite_session_history.py",
+        "tests/test_step063a_windows_symlink_integrity_test_portability_fix.py",
+        "tests/test_step064a_pytest_async_plugin_independence_fix.py",
+        "tests/test_step065_session_history_key_rotation.py",
+        "tests/test_step066_remote_mcp_streamable_http_mvp_foundation_baseline.py",
+        "tests/test_step067_hosted_web_search_foundation_baseline.py",
+        "tests/test_step068_bounded_local_pdf_image_input_baseline.py",
+        "tests/test_step069_multi_user_service_client_contract.py",
+        "tests/test_step069_multi_user_service_client_contract_baseline.py",
+        "tests/test_step070_product_owned_skill_foundation.py",
+        "tests/test_step070_product_owned_skill_foundation_baseline.py",
+        "tests/test_step071_product_skill_document_review_live_acceptance.py",
+        "tests/test_step072_immutable_openai_trace_export_disabled.py",
+        "tests/test_step072a_windows_pycache_overlay_isolation_fix.py",
+        "tests/test_step072b_windows_crlf_and_local_env_forwarding_fix.py",
+        "tests/test_step073_product_owned_sandbox_runtime_foundation.py",
+        "tests/test_step074_product_owned_docker_sandbox_provider_lifecycle.py",
+        "tests/test_step075_product_owned_readonly_sandbox_workspace_agent.py",
+        "tests/test_step075a_windows_docker_tmpfs_normalization_and_failure_evidence_fix.py",
+        "tests/test_step075b_windows_docker_command_operation_evidence.py",
+        "tests/test_step076_product_owned_immutable_project_snapshot_binding.py",
+        "tests/test_step080_product_owned_capability_topology_and_tool_discovery_foundation.py",
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "live_contract_exact_67",
+        "live_command_registered"
+      ],
+      "clause_id": "TST-005",
+      "evidence_files": [
+        "HANDOFF.md"
+      ],
+      "implementation_files": [
+        "scripts/run_step080a_live_acceptance.py",
+        "scripts/windows_entrypoint.py",
+        "sh_run_step080a_live_acceptance.cmd"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "package_default_is_step080a"
+      ],
+      "clause_id": "TST-006",
+      "evidence_files": [
+        "docs/evidence/STEP080A_FRESH_ZIP_VALIDATION.json",
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "implementation_files": [
+        "scripts/package_source.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": []
+    },
+    {
+      "acceptance_checks": [
+        "architecture_source_movement_remains_blocked"
+      ],
+      "clause_id": "MIG-001",
+      "evidence_files": [
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md"
+      ],
+      "implementation_files": [
+        "docs/plans/ROADMAP.md",
+        "docs/plans/STEP080A_RATIFIED_ARCHITECTURE_CONSTITUTION_INTEGRATION_AND_COMPLIANCE_GATES.md",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": []
+    },
+    {
+      "acceptance_checks": [
+        "architecture_step_compliance_complete"
+      ],
+      "clause_id": "MIG-002",
+      "evidence_files": [
+        "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json"
+      ],
+      "implementation_files": [
+        "specs/architecture/constitution/BUNDLE_INTEGRITY.json",
+        "specs/architecture/constitution/CONSTITUTION_AMENDMENT_PROTOCOL.md",
+        "specs/architecture/constitution/CONSTITUTION_COVERAGE_MATRIX.json",
+        "specs/architecture/constitution/CONSTITUTION_GATE_CATALOG.json",
+        "specs/architecture/constitution/CONSTITUTION_TRACEABILITY_MATRIX.json",
+        "specs/architecture/constitution/CONSTITUTION_TRACEABILITY_MATRIX.md",
+        "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.json",
+        "specs/architecture/constitution/OKCANVAS_AGENT_RUNTIME_ARCHITECTURE_CONSTITUTION.md",
+        "specs/architecture/constitution/README.md",
+        "specs/architecture/constitution/STEP_EXECUTION_COMPLIANCE_TEMPLATE.md",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_BOUNDARY_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_FLAT_LAYOUT_IMPACT_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_IMPORT_GRAPH_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PATH_COUPLING_AUDIT.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json",
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_STRUCTURE_FULL_AUDIT.md",
+        "specs/architecture/constitution/annexes/STEP081_TARGET_ARCHITECTURE_MANIFEST.json",
+        "src/okcanvas_agent_runtime/governance/__init__.py",
+        "src/okcanvas_agent_runtime/governance/architecture_constitution.py",
+        "src/okcanvas_agent_runtime/governance/resources/__init__.py",
+        "src/okcanvas_agent_runtime/governance/resources/architecture_constitution.json",
+        "src/okcanvas_agent_runtime/governance/resources/constitution_gate_catalog.json",
+        "src/okcanvas_agent_runtime/governance/step_compliance.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    },
+    {
+      "acceptance_checks": [
+        "architecture_constitution_bundle_validation_pass"
+      ],
+      "clause_id": "MIG-008",
+      "evidence_files": [
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json"
+      ],
+      "implementation_files": [
+        "specs/architecture/constitution/annexes/STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": []
+    },
+    {
+      "acceptance_checks": [
+        "architecture_step_compliance_complete"
+      ],
+      "clause_id": "MIG-009",
+      "evidence_files": [
+        "docs/evidence/STEP080A_VALIDATION.txt"
+      ],
+      "implementation_files": [
+        "docs/evidence/ARCHITECTURE_CONSTITUTION_VALIDATION.json",
+        "docs/evidence/STEP080A_ACCEPTANCE.json",
+        "docs/evidence/STEP080A_CONSTITUTION_COMPLIANCE.json",
+        "docs/evidence/STEP080A_VALIDATION.txt",
+        "scripts/run_step080a_acceptance.py",
+        "scripts/validate_acceptance_launcher_registry.py",
+        "scripts/validate_architecture_constitution.py",
+        "scripts/validate_step080a_compliance.py"
+      ],
+      "issue_ids": [
+        "OR-ISSUE-015"
+      ],
+      "status": "COMPLETE",
+      "test_files": [
+        "tests/test_step080a_acceptance_launcher_registry.py",
+        "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+        "tests/test_step080a_windows_entrypoint_architecture_constitution_registration.py"
+      ]
+    }
+  ],
+  "unexecuted_required_gate_ids": [],
+  "unregistered_changed_files": [],
+  "validation_environment": {
+    "linux_external_dependency_mode": "PINNED_SDK_SOURCE_WITH_TEST_ONLY_STUBS_OUTSIDE_PACKAGE",
+    "stubs_packaged": false,
+    "windows_real_dependency_rerun_required": true
+  },
+  "version": "2.60.1"
+}

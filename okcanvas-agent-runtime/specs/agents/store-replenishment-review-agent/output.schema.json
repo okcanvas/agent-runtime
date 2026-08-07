@@ -1,0 +1,164 @@
+{
+  "$defs": {
+    "ReplenishmentAction": {
+      "enum": [
+        "REORDER",
+        "NO_ACTION"
+      ],
+      "title": "ReplenishmentAction",
+      "type": "string"
+    },
+    "ReplenishmentReviewStatus": {
+      "enum": [
+        "READY",
+        "ACTION_REQUIRED",
+        "INSUFFICIENT_DATA"
+      ],
+      "title": "ReplenishmentReviewStatus",
+      "type": "string"
+    },
+    "ReplenishmentRisk": {
+      "enum": [
+        "SHORTAGE",
+        "COVERED"
+      ],
+      "title": "ReplenishmentRisk",
+      "type": "string"
+    },
+    "StoreReplenishmentRecommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "sku": {
+          "maxLength": 120,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,119}$",
+          "title": "Sku",
+          "type": "string"
+        },
+        "available_units": {
+          "maximum": 45035996273704,
+          "minimum": 0,
+          "title": "Available Units",
+          "type": "integer"
+        },
+        "forecast_units": {
+          "maximum": 45035996273704,
+          "minimum": 0,
+          "title": "Forecast Units",
+          "type": "integer"
+        },
+        "inbound_units": {
+          "maximum": 45035996273704,
+          "minimum": 0,
+          "title": "Inbound Units",
+          "type": "integer"
+        },
+        "safety_stock_units": {
+          "maximum": 45035996273704,
+          "minimum": 0,
+          "title": "Safety Stock Units",
+          "type": "integer"
+        },
+        "projected_units": {
+          "maximum": 90071992547408,
+          "minimum": -45035996273704,
+          "title": "Projected Units",
+          "type": "integer"
+        },
+        "reorder_units": {
+          "maximum": 90071992547408,
+          "minimum": 0,
+          "title": "Reorder Units",
+          "type": "integer"
+        },
+        "action": {
+          "$ref": "#/$defs/ReplenishmentAction"
+        },
+        "risk": {
+          "$ref": "#/$defs/ReplenishmentRisk"
+        },
+        "reason": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sku",
+        "available_units",
+        "forecast_units",
+        "inbound_units",
+        "safety_stock_units",
+        "projected_units",
+        "reorder_units",
+        "action",
+        "risk",
+        "reason"
+      ],
+      "title": "StoreReplenishmentRecommendation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "okcanvas-store-replenishment-review-v1",
+      "default": "okcanvas-store-replenishment-review-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/ReplenishmentReviewStatus"
+    },
+    "snapshot_id": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Snapshot Id",
+      "type": "string"
+    },
+    "summary": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "reviewed_skus": {
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Reviewed Skus",
+      "type": "integer"
+    },
+    "total_reorder_units": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Total Reorder Units",
+      "type": "integer"
+    },
+    "recommendations": {
+      "items": {
+        "$ref": "#/$defs/StoreReplenishmentRecommendation"
+      },
+      "maxItems": 100,
+      "title": "Recommendations",
+      "type": "array"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "snapshot_id",
+    "summary",
+    "reviewed_skus",
+    "total_reorder_units"
+  ],
+  "title": "StoreReplenishmentReviewResult",
+  "type": "object"
+}

@@ -1,0 +1,32 @@
+{
+  "administration_endpoints_are_not_exposed_as_mcp": true,
+  "ambiguity_must_be_explicit": true,
+  "authentication": "bearer-plus-delegated-identity",
+  "authorization_value_must_not_be_recorded": true,
+  "base_path": "/api/v1",
+  "catalog_revision_required": true,
+  "production_source_of_truth": "DATABASE",
+  "read_endpoints": [
+    "POST /context/resolve",
+    "POST /context/search",
+    "GET /context/entities/{entityType}/{entityId}",
+    "POST /glossary/resolve",
+    "POST /glossary/search",
+    "GET /glossary/terms/{termId}",
+    "GET /glossary/catalog-state",
+    "GET /glossary/changes"
+  ],
+  "reference_example_source_of_truth": "COMMITTED_JSON_FIXTURES",
+  "schema_version": "okcanvas-organization-context-http-api-v2",
+  "supported_entity_types": [
+    "TERM",
+    "DEPARTMENT",
+    "POSITION",
+    "EMPLOYEE",
+    "PRODUCT",
+    "CLIENT",
+    "PROJECT",
+    "SYSTEM",
+    "CAPABILITY"
+  ]
+}

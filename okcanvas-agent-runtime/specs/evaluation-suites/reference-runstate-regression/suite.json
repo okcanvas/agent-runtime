@@ -1,0 +1,19 @@
+{
+  "schema_version": "okcanvas-evaluation-suite-v1",
+  "suite_id": "reference-runstate-regression",
+  "version": "1.0.0",
+  "slots": [
+    {
+      "slot_id": "runstate",
+      "case_id": "reference-runstate",
+      "required": true
+    }
+  ],
+  "max_subjects": 4,
+  "baseline_comparison": {
+    "max_passed_to_failed": 0,
+    "max_total_tokens_increase_percent": 20,
+    "max_duration_increase_percent": 25,
+    "max_tool_call_increase": 1
+  }
+}

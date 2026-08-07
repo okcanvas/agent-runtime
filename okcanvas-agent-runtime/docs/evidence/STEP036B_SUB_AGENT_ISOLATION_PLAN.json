@@ -1,0 +1,45 @@
+{
+  "schema_version": "okcanvas-step036b-sub-agent-isolation-plan-v1",
+  "state": "PASSED",
+  "baseline": "STEP036B_SUB_AGENT_INVOCATION_AND_WORKSPACE_ISOLATION_CONSTITUTION",
+  "runtime_step_unchanged": "STEP036_RECORDED_RUN_RUNTIME_BINDING_VERIFICATION",
+  "runtime_version_unchanged": "2.16.0",
+  "runtime_code_changed": false,
+  "code_findings": {
+    "handoff_creates_workspace": false,
+    "agent_as_tool_creates_workspace": false,
+    "agent_as_tool_inherits_parent_run_config_by_default": true,
+    "sandbox_requires_explicit_session": true,
+    "agent_definition_directories_already_isolated": true
+  },
+  "isolation_layers": [
+    "definition",
+    "invocation",
+    "filesystem-when-capable"
+  ],
+  "revised_p0_step_count": 9,
+  "skeleton_completion_step": "STEP045",
+  "checks": {
+    "sdk_handoff_behavior_inspected": true,
+    "sdk_agent_as_tool_behavior_inspected": true,
+    "sdk_sandbox_session_behavior_inspected": true,
+    "current_agent_definition_catalog_inspected": true,
+    "definition_isolation_mandatory": true,
+    "invocation_isolation_mandatory": true,
+    "physical_workspace_conditional_on_capability": true,
+    "writable_workspace_sharing_forbidden": true,
+    "typed_or_immutable_transfer_required": true,
+    "runtime_binding_closure_defined": true,
+    "p0_order_revised_before_handoff": true,
+    "sandbox_remains_later_independent_track": true,
+    "step036_executable_baseline_preserved": true
+  },
+  "validation": {
+    "plan_checks_passed": 14,
+    "plan_checks_total": 14,
+    "executable_tree_byte_identical_to_step036a": true,
+    "reference_integrity_passed": "4/4",
+    "compileall": "PASS",
+    "pytest": "413 passed"
+  }
+}

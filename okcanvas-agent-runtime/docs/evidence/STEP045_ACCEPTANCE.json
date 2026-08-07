@@ -1,0 +1,202 @@
+{
+  "schema_version": "okcanvas-step045-acceptance-v1",
+  "state": "PASSED",
+  "skeleton_state": "BASIC_AGENT_RUNTIME_SKELETON_COMPLETE",
+  "checks": {
+    "scenario_catalog_auth_required": true,
+    "scenario_catalog_exact_ten": true,
+    "scenario_catalog_identity_exact": true,
+    "all_scenario_agents_and_evaluations_resolved": true,
+    "runner_scenario_matrix_visible": true,
+    "runner_scenario_selection_uses_governed_paths": true,
+    "runner_has_no_hidden_auto_approval": true,
+    "runner_invocation_visibility_exact": true,
+    "runner_streams_remain_separate": true,
+    "tool_free_runner_path_succeeded": true,
+    "tool_free_artifact_verified": true,
+    "tool_free_root_invocation_visible": true,
+    "tool_free_payload_deleted": true,
+    "mcp_artifact_evaluation_primitive_passed": true,
+    "function_tool_and_separate_approval_primitive_passed": true,
+    "native_streaming_primitive_passed": true,
+    "native_handoff_primitive_passed": true,
+    "agent_as_tool_primitive_passed": true,
+    "sqlite_session_two_turn_primitive_passed": true,
+    "native_guardrail_rejection_primitive_passed": true,
+    "all_seven_primitive_acceptances_passed": true,
+    "all_primitive_workspaces_cleaned": true,
+    "no_demo_execution_shortcut_in_runtime": true,
+    "tool_free_product_counts_exact": true,
+    "raw_request_not_persisted": true,
+    "references_unchanged": true,
+    "basic_runtime_skeleton_complete": true,
+    "cleanup_completed": true
+  },
+  "scenario_catalog": {
+    "catalog_id": "basic-agent-runtime-walking-skeleton",
+    "version": "1.0.0",
+    "catalog_sha256": "a1453f98b76bf13a26d44f979b947aa084808b0b963f18a8c204a5d998474cd5",
+    "scenario_count": 10,
+    "scenario_ids": [
+      "tool-free-structured",
+      "read-only-function-tool",
+      "approval-function-tool",
+      "read-only-mcp",
+      "native-sdk-streaming",
+      "native-handoff",
+      "agent-as-tool",
+      "sqlite-session-two-turn",
+      "native-guardrail-rejection",
+      "artifact-recorded-evaluation"
+    ]
+  },
+  "tool_free_runner": {
+    "run_id": "run_eda7626330a14d23adfc5ed355091014",
+    "submission_id": "submission_645271a7d7fa472a823d48011aca0a98",
+    "gateway_calls": 1,
+    "final_counts": {
+      "tasks": 1,
+      "runs": 1,
+      "submissions": 1,
+      "invocations": 1,
+      "events": 10,
+      "artifacts": 1
+    },
+    "artifact_id": "artifact_299cfcad7818443284839d1793bfb09c",
+    "invocation_count": 1
+  },
+  "primitive_acceptances": {
+    "runner_mcp_artifact_evaluation": {
+      "schema_version": "okcanvas-step037-acceptance-v1",
+      "state": "PASSED",
+      "check_count": 24,
+      "checks_passed": 24,
+      "cleanup_state": "COMPLETED",
+      "final_counts": {
+        "artifacts": 1,
+        "runs": 1,
+        "submissions": 1,
+        "tasks": 1
+      }
+    },
+    "function_tool_and_approval": {
+      "schema_version": "okcanvas-step038-acceptance-v1",
+      "state": "PASSED",
+      "check_count": 24,
+      "checks_passed": 24,
+      "cleanup_state": "COMPLETED",
+      "final_counts": {
+        "approvals": 2,
+        "artifacts": 2,
+        "evaluations": 2,
+        "runs": 3,
+        "submissions": 3,
+        "tasks": 3
+      }
+    },
+    "native_streaming": {
+      "schema_version": "okcanvas-step039-acceptance-v1",
+      "state": "PASSED",
+      "check_count": 20,
+      "checks_passed": 20,
+      "cleanup_state": "COMPLETED",
+      "final_counts": {
+        "tasks": 1,
+        "runs": 1,
+        "submissions": 1,
+        "artifacts": 1
+      }
+    },
+    "native_handoff": {
+      "schema_version": "okcanvas-step041-acceptance-v1",
+      "state": "PASSED",
+      "check_count": 24,
+      "checks_passed": 24,
+      "cleanup_state": "COMPLETED",
+      "final_counts": {
+        "tasks": 1,
+        "runs": 1,
+        "submissions": 1,
+        "invocations": 2,
+        "events": 14,
+        "artifacts": 1,
+        "evaluations": 1
+      }
+    },
+    "agent_as_tool": {
+      "schema_version": "okcanvas-step042-acceptance-v1",
+      "state": "PASSED",
+      "check_count": 29,
+      "checks_passed": 29,
+      "cleanup_state": "COMPLETED",
+      "final_counts": {
+        "tasks": 1,
+        "runs": 1,
+        "submissions": 1,
+        "invocations": 2,
+        "events": 18,
+        "artifacts": 1,
+        "evaluations": 1
+      }
+    },
+    "sqlite_session": {
+      "schema_version": "okcanvas-step043-acceptance-v1",
+      "state": "PASSED",
+      "check_count": 29,
+      "checks_passed": 29,
+      "cleanup_state": "COMPLETED",
+      "final_counts": {
+        "tasks": 2,
+        "runs": 2,
+        "submissions": 2,
+        "invocations": 2,
+        "events": 24,
+        "artifacts": 2,
+        "evaluations": 1
+      }
+    },
+    "native_guardrail": {
+      "schema_version": "okcanvas-step044-acceptance-v1",
+      "state": "PASSED",
+      "check_count": 23,
+      "checks_passed": 23,
+      "cleanup_state": "COMPLETED",
+      "final_counts": {
+        "tasks": 5,
+        "runs": 5,
+        "submissions": 5,
+        "invocations": 5,
+        "events": 48,
+        "artifacts": 1,
+        "evaluations": 1
+      }
+    }
+  },
+  "matrix": {
+    "tool_free_structured": "STEP045 governed Runner",
+    "read_only_function_tool": "STEP038",
+    "approval_function_tool": "STEP038 + separate Approval Operator",
+    "read_only_mcp": "STEP037",
+    "native_sdk_streaming": "STEP039",
+    "native_handoff": "STEP041",
+    "agent_as_tool": "STEP042",
+    "sqlite_session_two_turn": "STEP043",
+    "native_guardrail_rejection": "STEP044",
+    "artifact_recorded_evaluation": "STEP037"
+  },
+  "acceptance_workspace": {
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "acceptance_id": "20260731T125519221253Z-7b782c4e",
+    "step_id": "STEP045",
+    "created_at": "2026-07-31T12:55:19.221559Z",
+    "completed_at": "2026-07-31T12:55:32.748326Z",
+    "resources_closed": true,
+    "resource_close_results": [],
+    "compact_evidence_exported": true,
+    "cleanup_state": "COMPLETED",
+    "cleanup_attempts": 1,
+    "preserved_path": null,
+    "cleanup_error": null,
+    "product_runtime_state": false
+  }
+}

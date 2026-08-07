@@ -1,0 +1,20 @@
+{
+  "new_live_execution_required_for_product_semantics": false,
+  "parent_step": "WORKSPACE_STEP008R4_SHORT_EXPRESSION_LIVE_ACCEPTANCE_SEMANTIC_OUTPUT_AND_COMPACTED_SESSION_ASSERTION_CLOSURE",
+  "parent_version": "0.8.4",
+  "parent_windows_deterministic": {
+    "checks": "25/25",
+    "evidence": "docs/evidence/windows/WORKSPACE_STEP008R4_WINDOWS_DETERMINISTIC_ACCEPTANCE.json",
+    "state": "PASSED"
+  },
+  "parent_windows_live_openai": {
+    "checks": "29/29",
+    "evidence": "docs/evidence/windows/WORKSPACE_STEP008R4_WINDOWS_LIVE_OPENAI_ACCEPTANCE.json",
+    "state": "PASSED"
+  },
+  "product_runtime_unchanged": true,
+  "schema_version": "okcanvas-workspace-parent-acceptance-retention-v1",
+  "step": "WORKSPACE_STEP008R4R1_FINAL_PROMOTION_DOCUMENT_PRODUCTIZATION_PLAN_AND_STORAGE_AUDIT_ALIGNMENT",
+  "version": "0.8.4-r1",
+  "windows_deterministic_document_package_rerun": "PENDING"
+}

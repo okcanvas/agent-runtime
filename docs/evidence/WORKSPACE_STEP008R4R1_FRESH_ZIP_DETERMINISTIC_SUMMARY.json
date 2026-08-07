@@ -1,0 +1,25 @@
+{
+  "fresh_connector": "11/11 PASSED",
+  "fresh_connector_example": "17/17 PASSED",
+  "fresh_example": "19/19 PASSED",
+  "fresh_manifest": {
+    "actual": 4410,
+    "changed": 0,
+    "expected": 4410,
+    "missing": 0,
+    "unexpected": 0
+  },
+  "fresh_post_acceptance_drift": {
+    "changed": 0,
+    "missing": 0,
+    "unexpected": 0
+  },
+  "fresh_runtime_step090r1": "25/25 PASSED",
+  "fresh_workspace_acceptance": "25/25 PASSED",
+  "fresh_workspace_tests": "105/105 PASSED",
+  "product_runtime_python_unchanged": true,
+  "schema_version": "okcanvas-workspace-step008r4r1-fresh-zip-deterministic-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP008R4R1_FINAL_PROMOTION_DOCUMENT_PRODUCTIZATION_PLAN_AND_STORAGE_AUDIT_ALIGNMENT",
+  "version": "0.8.4-r1"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "sandbox-readonly-coding-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Product-owned Read-only Sandbox Coding Analyst",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [
+    "sandbox_project_readonly_inspect"
+  ],
+  "mcp_servers": [],
+  "hosted_tools": [],
+  "skills": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "orchestration_children": [],
+  "guardrails": [],
+  "workspace_access": "sandbox-readonly-v1",
+  "max_turns": 2,
+  "workflow_name": "OKCanvas Product-owned Read-only Sandbox Inspection",
+  "session_mode": "disabled",
+  "input_mode": "text-only"
+}

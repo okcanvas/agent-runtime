@@ -1,0 +1,76 @@
+STEP048_SQLITE_SESSION_NATIVE_GUARDRAIL_COMPOSITION_V1
+VERSION 2.28.0
+STATE IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+STEP047 WINDOWS CLOSURE
+- user command: sh_run_step047_acceptance
+- state: PASSED
+- checks: 29/29
+- cleanup: COMPLETED
+- Session transitions: 1/4 -> 2/8
+- Runner.run/run_streamed: 0/2
+- native Handoff constructions: 2
+- SQLiteSession instances/closes: 4/4
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 2/2/2/4/32/2/1
+- protected payload files: 0
+- STEP047 state: WINDOWS_LIVE_ACCEPTED
+
+STEP048 SOURCE VALIDATION
+- compileall src/scripts/tests: PASS
+- focused STEP048 + Session/Handoff/Approval/Guardrail regression: 23 passed
+- full pytest: 487 passed
+- Agent definitions: 16
+- Evaluation cases: 14
+- STEP048 deterministic acceptance: 32/32 PASS
+- Session transitions: 1/2 -> 1/2 -> 1/2 -> 2/4
+- exact final SDK history: 4 items, only two successful Turns
+- Runner.run/run_streamed: 0/4
+- model calls: 3
+- Agent Guardrail executions INPUT/OUTPUT: 4/3
+- SQLiteSession instances/closes: 8/8
+- per-case Event counts clean/input-trip/output-trip/clean: 12/8/11/12
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 4/4/4/4/43/2/1
+- failed-run protected payload files: 2
+- recorded Evaluation: PASSED
+- References unchanged
+- acceptance cleanup: COMPLETED in 1 attempt; resources closed; workspace path absent after finalize
+
+ACCEPTANCE EVIDENCE CORRECTION
+- final audit found that the first STEP048 acceptance draft set cleanup_completed=true without calling AcceptanceWorkspace.finalize()
+- that unsupported cleanup claim was rejected
+- the script now calls workspace.finalize(payload), derives cleanup_completed from the lifecycle result, rewrites compact evidence after cleanup, and has a baseline regression assertion
+- corrected acceptance rerun: 32/32 PASS, cleanup COMPLETED, cleanup attempts 1, resources_closed=true
+
+REGRESSION ACCEPTANCE
+- STEP047: 29/29 PASS, cleanup COMPLETED
+- STEP046: 27/27 PASS, cleanup COMPLETED
+- STEP045: 28/28 PASS, BASIC_AGENT_RUNTIME_SKELETON_COMPLETE, cleanup COMPLETED
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS, cleanup COMPLETED
+- STEP041: 24/24 PASS, cleanup COMPLETED
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 53
+- launcher violations: 0
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+CANONICAL ZIP VALIDATION
+- canonical root: 1 (`okcanvas-agent-runtime`)
+- ZIP entries: 2,469
+- forbidden environment/venv/cache/local-state/database/protected-payload files: 0
+- independently extracted compileall: PASS
+- independently extracted pytest: 487 passed across all 151 test files; split execution used after the monolithic container command exceeded its execution window
+- independently extracted STEP048: 32/32 PASS, cleanup COMPLETED
+- independently extracted STEP047: 29/29 PASS, cleanup COMPLETED
+- independently extracted STEP046: 27/27 PASS, cleanup COMPLETED
+- independently extracted STEP030A: 8/8 PASS
+- independently extracted Windows Runtime launchers: 53, violations 0
+- independently extracted Reference integrity: 4/4 PASS
+- independently extracted direct executable /reference imports: 0
+- final regeneration comparison: all 2,468 non-validation ZIP entries were byte-identical to the independently tested archive; only this validation record changed to capture the completed checks
+- final SHA-256 is recorded in the adjacent `.zip.sha256` file and verified after final regeneration
+
+WINDOWS GATE
+- run: sh_setup.cmd, then sh_run_step048_acceptance.cmd
+- required: state PASSED, all 32 checks true, cleanup COMPLETED
+- do not select STEP049 before the complete Windows result is reported and recorded

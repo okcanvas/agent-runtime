@@ -1,0 +1,65 @@
+STEP064A_PYTEST_ASYNC_PLUGIN_INDEPENDENCE_FIX
+Version: 2.44.1
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+TRIGGERING WINDOWS EVIDENCE
+- STEP064: 28/29 FAILED
+- only failed check: focused_compaction_tests_pass
+- focused output: 7 failed, 4 passed, 7 warnings in 1.90s
+- historical Session compositions: 29 passed
+- Node release integrity/tests and References: passed
+
+ROOT-CAUSE REPRODUCTION
+- exact focused file executed with PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 before correction
+- result: 7 failed, 4 passed, 7 warnings
+- seven failures: async test functions require an async pytest plugin
+- seven warnings: unknown pytest.mark.asyncio
+- pyproject.toml declares no pytest-asyncio dependency
+- requirements-direct.txt declares no pytest-asyncio dependency
+
+CORRECTION
+- replaced seven pytest.mark.asyncio decorators with local @_async_test
+- local wrapper uses functools.wraps + standard-library asyncio.run
+- no new dependency
+- no product Session/compaction source change
+
+SOURCE VALIDATION
+- corrected STEP064 acceptance: 29/29 PASS
+- STEP064A acceptance: 19/19 PASS
+- plugin-autoload-disabled STEP064 focused tests: 11/11 PASS, no skips/warnings
+- STEP064A focused tests: 5/5 PASS
+- combined focused tests: 16/16 PASS
+- Python full regression, four independently terminated groups:
+  - 159 passed
+  - 160 passed
+  - 176 passed
+  - 153 passed
+  - total 648/648 PASS
+- Python compileall: PASS
+- committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0 PASS
+
+UNCHANGED PRODUCT HASHES
+0775e58c3ee126a6d5d4327960e57e75de56b82221f8f59216410387b0f23c2e  src/okcanvas_agent_runtime/sessions/compaction.py
+0906f3ef39dec46b19ac611f384312e4545baa0759e124b41aca283164bda7ad  src/okcanvas_agent_runtime/sessions/service.py
+379e868d22b7b6c216fe2988d875846ed021f53cd8cb86f5630c399f68519d99  specs/runtime/sqlite-session-policy.json
+f1c7c0f2d0b96a06f0732ab691e7fb8a258f814cb9ed49f26c1ded764c56dec9  src/okcanvas_agent_runtime/execution/service.py
+a289ce3fc90bf82b84308e5f220818519f8768648a3833c96bc2bbf2989991c8  src/okcanvas_agent_runtime/tool_approval/service.py
+
+NETWORK/MODEL
+- no real OpenAI model or responses.compact call was made
+- fake SDK/OpenAI boundaries retained from STEP064 deterministic validation
+
+PACKAGE RE-EXTRACTION VALIDATION
+- candidate ZIP SHA-256: 417997e57be393118e6162711a9d7ab134c01d3c158b6d326afe60c05822dde5
+- canonical ZIP root: 1 (`okcanvas-agent-runtime`)
+- ZIP entries: 2,827
+- forbidden cache/venv/node_modules/temp files: 0
+- extracted STEP064A acceptance: 19/19 PASS
+- extracted corrected STEP064 acceptance: 29/29 PASS
+- extracted plugin-independent focused tests: 11/11 PASS
+- extracted full Python regression groups: 159 + 160 + 176 + 153 = 648/648 PASS
+- final ZIP differs from the candidate only by this completed validation record

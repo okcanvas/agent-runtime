@@ -1,0 +1,42 @@
+STEP036A_REFERENCE_WIDE_RUNTIME_CAPABILITY_AUDIT_AND_MASTER_PLAN
+Status: CODE_AUDITED_PLAN_COMPLETE_STEP036_WINDOWS_LIVE_ACCEPTED_STEP037_STARTED
+Date: 2026-07-30
+
+Reference scope
+- immutable references: 4
+- total retained files classified: 1,536
+- openai-agents-python source files: 302
+- openai-agents-python example files: 307
+- openai-agents-python test files: 297
+- full per-file path/category/SHA inventory: docs/reference/STEP036A_REFERENCE_CAPABILITY_INVENTORY.json
+
+Code-change boundary
+- runtime source/spec/test/script/pyproject tree before: 67bacac0323405612ed3a5f49ff9f9187dd26f2f583dda09d7a2eec157c13275
+- runtime source/spec/test/script/pyproject tree after:  67bacac0323405612ed3a5f49ff9f9187dd26f2f583dda09d7a2eec157c13275
+- executable Runtime changed: NO
+- audited executable baseline was STEP036 / 2.16.0; STEP036 is now Windows live accepted
+
+Validation
+- STEP036A audit checks: 16/16 PASS
+- reference integrity: 4/4 PASS
+- compileall: PASS
+- full pytest: 413 passed
+
+Code-derived plan corrections
+- routing is native Handoff, not a separate Router engine
+- parallelization examples use application asyncio orchestration
+- Agent-as-Tool depends on the Function Tool substrate
+- SDK streaming deltas must be separated from persisted canonical Events
+- first Session slice is SQLite-only and isolated from Handoff/approval
+- sandbox, Temporal, realtime, and voice are separate later tracks
+
+P0 order after STEP036 Windows closure (revised by STEP036B)
+1. STEP037 Interactive Agent Runner foundation
+2. STEP038 Generic Function Tool Runtime V1
+3. STEP039 SDK Streaming Event Adapter V1
+4. STEP040 Sub-Agent Invocation Scope Foundation
+5. STEP041 Handoff Runtime V1
+6. STEP042 Agent-as-Tool Runtime V1
+7. STEP043 SQLite Session Runtime V1
+8. STEP044 Guardrail Runtime V1
+9. STEP045 Integrated Runtime walking-skeleton acceptance

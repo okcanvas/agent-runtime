@@ -1,0 +1,12 @@
+agent_id: handoff-specialist-agent
+definition_version: 1.0.0
+status: active
+allowed_tools: []
+handoffs: []
+agent_tools: []
+workspace_access: none
+network_access: openai_model_api_only
+approval_required: inherited_governed_root_confirmation
+max_turns: 1
+output_contract: CodingAgentResult
+session_mode: disabled

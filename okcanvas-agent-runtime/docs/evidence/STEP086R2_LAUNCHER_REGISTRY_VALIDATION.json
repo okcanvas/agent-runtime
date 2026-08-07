@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "all_registered_paths_exist": true,
+    "all_step_acceptance_scripts_registered": true,
+    "all_step_windows_launchers_registered": true,
+    "current_classification_exact": true,
+    "current_record_contract_exact": true,
+    "registered_paths_unique": true,
+    "schema_exact": true
+  },
+  "current_record_count": 2,
+  "current_records": [
+    "scripts/run_step086r2_acceptance.py",
+    "sh_run_step086r2_acceptance.cmd"
+  ],
+  "current_step": "STEP086R2_DELEGATED_ROLE_HEADER_AND_EXTERNAL_CONNECTOR_CONTRACT_CLOSURE",
+  "current_step_token": "086R2",
+  "launcher_count": 137,
+  "passed_checks": 7,
+  "record_count": 279,
+  "schema_version": "okcanvas-acceptance-launcher-registry-validation-v2",
+  "script_count": 142,
+  "state": "PASSED",
+  "total_checks": 7
+}

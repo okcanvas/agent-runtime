@@ -1,0 +1,12 @@
+{
+  "after_sha256": "84da080a4fc9f1f2a52a16677fdf4f7dedf71a2c96c2e259e4dc6431ac10f706",
+  "before_sha256": "84da080a4fc9f1f2a52a16677fdf4f7dedf71a2c96c2e259e4dc6431ac10f706",
+  "file_count": 331,
+  "parent_workspace_step": "WORKSPACE_STEP008R4_SHORT_EXPRESSION_LIVE_ACCEPTANCE_SEMANTIC_OUTPUT_AND_COMPACTED_SESSION_ASSERTION_CLOSURE",
+  "runtime_step": "STEP090R1_ORGANIZATION_CONTEXT_MCP_TOOL_OUTPUT_PROTOCOL_AND_SHORT_LIST_TOOL_CHOICE_CLOSURE",
+  "runtime_version": "2.70.1",
+  "schema_version": "okcanvas-workspace-product-runtime-source-unchanged-v1",
+  "scope": "okcanvas-agent-runtime/okcanvas_agent_runtime/**/*.py",
+  "unchanged": true,
+  "workspace_step": "WORKSPACE_STEP008R4R1_FINAL_PROMOTION_DOCUMENT_PRODUCTIZATION_PLAN_AND_STORAGE_AUDIT_ALIGNMENT"
+}

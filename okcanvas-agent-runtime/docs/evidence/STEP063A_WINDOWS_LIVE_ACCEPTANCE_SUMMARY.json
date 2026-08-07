@@ -1,0 +1,18 @@
+{
+  "schema_version": "okcanvas-step063a-windows-live-acceptance-summary-v1",
+  "step": "STEP063A_WINDOWS_SYMLINK_INTEGRITY_TEST_PORTABILITY_FIX",
+  "version": "2.43.1",
+  "state": "PASSED",
+  "passed_checks": 20,
+  "total_checks": 20,
+  "corrected_step063_state": "PASSED",
+  "corrected_step063_passed_checks": 33,
+  "corrected_step063_total_checks": 33,
+  "corrected_step063_focused_test_output": "53 passed, 1 warning in 6.38s",
+  "focused_symlink_test_output": "1 passed in 0.77s",
+  "focused_step063a_test_output": "4 passed in 0.19s",
+  "committed_node_release_output": "COMMITTED_TYPESCRIPT_RELEASE_VERIFIED inputs=11 outputs=21 tests=2 external_tsc_required=false",
+  "reference_count": 4,
+  "reported_on": "2026-08-01",
+  "source": "user-reported real Windows acceptance output"
+}

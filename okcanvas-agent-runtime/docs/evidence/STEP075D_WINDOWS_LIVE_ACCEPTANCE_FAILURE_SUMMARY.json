@@ -1,0 +1,62 @@
+{
+  "acceptance_workspace": {
+    "cleanup_state": "PRESERVED",
+    "relative_database_path": "databases/product.sqlite3",
+    "resources_closed": true
+  },
+  "event_sequence": [
+    "run.created",
+    "run.started",
+    "agent.definition.resolved",
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "tool.started",
+    "tool.failed",
+    "agent.failed",
+    "run.failed",
+    "payload.retention.applied"
+  ],
+  "live_acceptance": {
+    "model": "gpt-4.1",
+    "model_calls": 1,
+    "passed_checks": 14,
+    "terminal_status": "FAILED",
+    "tool_calls": 0,
+    "total_checks": 30
+  },
+  "root_cause": {
+    "actual_project_file_hash_mismatch_proven": false,
+    "container_read_commands_reached": true,
+    "description": "The Product inspected its staging root without constraining candidates to immutable snapshot entries, selected the internal snapshot manifest as project evidence, and then rejected that non-entry as a hash mismatch.",
+    "docker_tar_materialization_completed": true,
+    "internal_metadata_is_snapshot_entry": false,
+    "internal_metadata_path": ".okcanvas-snapshot-manifest.json",
+    "snapshot_entry_paths": [
+      "README.md",
+      "UNTRUSTED.md",
+      "src/inventory.py"
+    ],
+    "status": "CODE_AND_LOCAL_FIXTURE_REPRODUCTION_CONFIRMED",
+    "unrestricted_inspected_files": [
+      "src/inventory.py",
+      ".okcanvas-snapshot-manifest.json"
+    ]
+  },
+  "schema_version": "okcanvas-step075d-windows-live-failure-summary-v1",
+  "state": "FAILED",
+  "step": "STEP075D_PYTHON_SUBPROCESS_STDIN_INPUT_CONTRACT_FIX",
+  "tool_failure": {
+    "cleanup_attempted": true,
+    "cleanup_completed": true,
+    "code": "SANDBOX_SELECTED_FILE_HASH_MISMATCH",
+    "detail_type": "SandboxDockerError",
+    "operation": null,
+    "orphan_count": 0,
+    "raw_arguments_persisted": false,
+    "raw_message_persisted": false,
+    "raw_output_persisted": false,
+    "return_code": null
+  },
+  "version": "2.55.4"
+}

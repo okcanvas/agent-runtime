@@ -1,0 +1,52 @@
+{
+  "schema_version": "okcanvas-step047-windows-live-acceptance-summary-v1",
+  "step_id": "STEP047_SQLITE_SESSION_NATIVE_HANDOFF_COMPOSITION_V1",
+  "version": "2.27.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_command": "sh_run_step047_acceptance",
+  "reported_at": "2026-07-31T06:11:00+09:00",
+  "acceptance": {
+    "acceptance_id": "20260730T211124647413Z-3359fc8b",
+    "completed_at": "2026-07-30T21:11:27.955400Z",
+    "state": "PASSED",
+    "check_count": 29,
+    "all_checks_true": true,
+    "cleanup_state": "COMPLETED",
+    "resources_closed": true,
+    "compact_evidence_exported": true
+  },
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 2,
+    "handoff_constructed": 2,
+    "session_instances": 4,
+    "session_closes": 4
+  },
+  "session_transitions": [
+    {"phase": "after_turn_1", "turn_count": 1, "item_count": 4, "lease_held": false},
+    {"phase": "after_turn_2", "turn_count": 2, "item_count": 8, "lease_held": false}
+  ],
+  "run_event_counts": {"turn_1": 16, "turn_2": 16, "total": 32},
+  "handoff_counts": {"turn_1": 1, "turn_2": 1, "total": 2},
+  "final_counts": {
+    "tasks": 2,
+    "runs": 2,
+    "submissions": 2,
+    "invocations": 4,
+    "events": 32,
+    "artifacts": 2,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 0,
+  "verified_conditions": [
+    "same SDK Session identity used across root and Handoff",
+    "Turn 2 received complete Turn 1 history",
+    "exactly one native Handoff per Turn",
+    "two ROOT and two HANDOFF invocations succeeded",
+    "confirmation replay created no duplicate",
+    "clear and competing Turn rejected while lease held",
+    "raw Session history and requests absent from Product/Evaluation DB",
+    "references unchanged"
+  ],
+  "source": "user-reported complete Windows JSON output; compacted without changing reported counts or states"
+}

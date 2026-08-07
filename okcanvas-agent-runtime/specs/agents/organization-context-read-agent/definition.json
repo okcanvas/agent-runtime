@@ -1,0 +1,24 @@
+{
+  "agent_id": "organization-context-read-agent",
+  "agent_tools": [],
+  "guardrails": [],
+  "handoffs": [],
+  "hosted_tools": [],
+  "input_mode": "text-only",
+  "instructions_file": "instructions.md",
+  "max_turns": 2,
+  "mcp_servers": [
+    "organization-context-read"
+  ],
+  "name": "OKCanvas Organization Context Read-only Assistant",
+  "orchestration_children": [],
+  "output_contract": "OrganizationContextReadResult",
+  "output_schema_file": "output.schema.json",
+  "schema_version": "okcanvas-agent-definition-v1",
+  "session_mode": "disabled",
+  "skills": [],
+  "tools": [],
+  "version": "1.1.0",
+  "workflow_name": "Organization Context Read-only Grounded Response",
+  "workspace_access": "none"
+}

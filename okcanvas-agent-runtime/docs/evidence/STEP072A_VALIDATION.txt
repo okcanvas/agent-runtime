@@ -1,0 +1,67 @@
+STEP072A_WINDOWS_PYCACHE_OVERLAY_ISOLATION_FIX
+Version: 2.52.1
+Validation state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+CONFIRMED WINDOWS TRIGGER
+- STEP072 deterministic acceptance: FAILED 28/29
+- failed check: historical_skill_attachment_service_tests_pass
+- STEP072 live acceptance: PASSED 13/13
+- model: gpt-4.1
+- model calls: 1
+- usage: 827 input / 228 output / 1,055 total
+- terminal status: SUCCEEDED
+- trace error markers: 0
+- SDK trace export observed: false
+
+CONFIRMED ROOT CAUSE MECHANISM
+- STEP071 and STEP072 service_clients/routes.py ZIP timestamp: identical
+- STEP071 and STEP072 service_clients/routes.py size: 32,523 bytes
+- changed gate text length: identical
+- deterministic fixture reproduces stale timestamp-and-size .pyc import
+- isolated PYTHONPYCACHEPREFIX reads current source
+
+SOURCE VALIDATION
+- STEP072A acceptance: 24/24 PASS
+- focused STEP072A + STEP072 + Windows entrypoint tests: 45/45 PASS
+- historical STEP068-STEP071 service/Skill tests: 41/41 PASS
+- full Python regression: 750/750 PASS
+  - chunk 1: 158/158
+  - chunk 2: 180/180
+  - chunk 3: 95/95
+  - chunk 4: 104/104
+  - chunk 5: 213/213
+- Python compileall: PASS
+- committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+- deterministic external network calls: 0
+- deterministic model calls: 0
+
+PRESERVED IDENTITIES
+- trace policy SHA-256: 6567645dc74b2850bad374f4e73eab50958c6e3e63440b0361dcadcea0b249cc
+- trace runtime SHA-256: a3618bb359b582fda1215885354352aa42ea00e31fc81a44c2319ab772615e13
+- Skill package SHA-256: 60fbfca861141837d4486499687fde4257b83bcb68362b6b0a0b6f40b8df07b5
+- Runtime binding SHA-256: b8b8e6bb118a6a99814feda11d6b954e81da33c6bd76f1e4f32767e3fe051cd2
+
+FRESH ZIP VALIDATION
+- candidate ZIP SHA-256: e384c303417f5b7a1e772bf4da4b6c3ea22a2629278c9149e6434a23e1a70665
+- canonical ZIP root: 1
+- ZIP entries: 2,978
+- forbidden files: 0
+- fresh extraction STEP072A acceptance: 24/24 PASS
+- fresh extraction full Python regression: 750/750 PASS
+  - chunk 1: 158/158
+  - chunk 2: 180/180
+  - chunk 3: 95/95
+  - chunk 4: 104/104
+  - chunk 5: 213/213
+- fresh extraction Node tests: 14/14 PASS
+- fresh extraction Reference integrity: 4/4 PASS
+- fresh extraction npm pack dry-run: 23 files PASS
+
+WINDOWS PENDING
+- sh_run_step072a_acceptance.cmd
+- sh_run_step072a_live_acceptance.cmd
+- STEP073 remains unselected

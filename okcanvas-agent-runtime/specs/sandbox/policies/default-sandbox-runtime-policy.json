@@ -1,0 +1,36 @@
+{
+  "schema_version": "okcanvas-sandbox-runtime-policy-v1",
+  "policy_id": "default-product-sandbox-runtime-v1",
+  "version": "1.2.0",
+  "foundation_enabled": true,
+  "execution_enabled": true,
+  "agent_execution_enabled": true,
+  "provider_lifecycle_enabled": true,
+  "default_workspace_access": "none",
+  "declared_workspace_access_modes": [
+    "none",
+    "sandbox-readonly-v1",
+    "sandbox-patch-v1",
+    "sandbox-shell-v1"
+  ],
+  "active_workspace_access_modes": [
+    "none",
+    "sandbox-readonly-v1"
+  ],
+  "physical_workspace_materialization_enabled": true,
+  "docker_runtime_calls_enabled": true,
+  "network_mode": "none",
+  "exposed_ports": [],
+  "host_bind_mounts_enabled": false,
+  "remote_mounts_enabled": false,
+  "secrets_enabled": false,
+  "automatic_image_pull_enabled": false,
+  "automatic_resume_enabled": false,
+  "snapshot_resume_enabled": false,
+  "shell_enabled": false,
+  "apply_patch_enabled": false,
+  "skill_materialization_enabled": false,
+  "model_selected_provider_enabled": false,
+  "model_selected_host_path_enabled": false,
+  "sdk_default_capabilities_allowed": false
+}

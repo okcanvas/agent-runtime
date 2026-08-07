@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-12",
+  "partition_number": 12,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:08:14.141798+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 51,
+  "passed_tests": 51,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 13.321,
+  "exit_code": 0,
+  "files_sha256": "95596a06793bd6739e5f695fb2ece9f7e4e4e4746396a29821d2bc5b8abd3643",
+  "log_sha256": "9c782c2c7189b24727f0f1ad1a45019786281e9ca9113ea13bda826047a6705a",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step051_immutable_model_route_baseline.py",
+    "tests/test_step052_immutable_zero_retry_baseline.py",
+    "tests/test_step053_immutable_reasoning_evidence_baseline.py",
+    "tests/test_step054_immutable_response_storage_baseline.py",
+    "tests/test_step055_immutable_provider_identifier_minimization_baseline.py",
+    "tests/test_step056_tui_client_foundation_baseline.py",
+    "tests/test_step056b_node_typescript_persistent_cli_baseline.py",
+    "tests/test_step056c_node_typescript_cli_developer_observability_baseline.py",
+    "tests/test_step057_node_cli_runtime_session_conversation_baseline.py",
+    "tests/test_step058_node_cli_tool_sub_agent_workflow_visibility_baseline.py",
+    "tests/test_step059_bounded_project_readonly_coding_workflow_baseline.py",
+    "tests/test_step059a_actual_sdk_function_tool_output_contract_alignment.py",
+    "tests/test_step059b_actual_sdk_tool_context_export_alignment.py",
+    "tests/test_step060_query_directed_project_retrieval_evidence_budget_baseline.py"
+  ]
+}

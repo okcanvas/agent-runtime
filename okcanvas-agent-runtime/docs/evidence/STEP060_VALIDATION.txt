@@ -1,0 +1,110 @@
+STEP060_QUERY_DIRECTED_PROJECT_RETRIEVAL_AND_EVIDENCE_BUDGET
+Project version: 2.40.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_REAL_OPENAI_RERUN_PENDING
+
+Observed predecessor evidence
+- STEP059B installed openai-agents 0.19.0 acceptance: user-reported PASSED.
+- STEP059B real Node CLI/OpenAI project Tool run: user-reported SUCCEEDED.
+- Full Agent/model/Tool lifecycle and verified Artifact: present.
+- Observed product-quality gap: PARTIAL broad answer, unrelated findings, 8,086 total tokens.
+
+Implemented Product correction
+- bounded Korean/English query normalization;
+- corpus rare-term weighting;
+- best line-window scoring;
+- static route-registration and definition-location structural bonuses;
+- implementation-source preference unless test/docs/client is explicitly targeted;
+- maximum evidence files: 4;
+- maximum aggregate evidence characters: 5,000;
+- maximum excerpt lines/characters: 16/1,600;
+- narrow exact-question Agent instructions, at most three findings;
+- project-readonly Agent/tool versions: 1.1.0/1.1.0;
+- no new capability or authority.
+
+Source validation
+- Python compileall: PASS.
+- TypeScript build: PASS.
+- Node tests: 13/13 PASS.
+- npm pack dry-run: PASS, 23 files, 0 runtime dependencies.
+- Python pytest: 588/588 PASS across 178 test files, split with normal exit codes.
+- STEP060 deterministic acceptance: 20/20 PASS.
+  - exact Korean Health query terms considered: 2;
+  - implementation registration ranked first;
+  - primary evidence: src/okcanvas_agent_runtime/control_api/app.py;
+  - exact decorator and handler in primary evidence;
+  - evidence files/characters: 1/608 in fixture;
+  - unrelated document/auth evidence absent;
+  - excluded node_modules sentinel absent;
+  - workspace byte-identical;
+  - final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/1/1/12/1/0;
+  - protected payload files: 0;
+  - cleanup: COMPLETED once.
+- STEP059B deterministic acceptance: 8/8 PASS.
+- STEP059A deterministic acceptance: 10/10 PASS.
+- STEP059 acceptance: 16/16 PASS.
+- STEP058 acceptance: 18/18 PASS.
+- STEP057 acceptance: 25/25 PASS.
+- STEP056C acceptance: 25/25 PASS.
+- STEP056B acceptance: 25/25 PASS.
+- STEP056 acceptance: 21/21 PASS.
+- STEP055 acceptance: 35/35 PASS.
+- STEP054 acceptance: 30/30 PASS.
+- STEP053 acceptance: 30/30 PASS.
+- STEP052 acceptance: 25/25 PASS.
+- STEP051 acceptance: 25/25 PASS.
+- STEP050 acceptance: 31/31 PASS.
+- STEP049 acceptance: 33/33 PASS.
+- STEP048 acceptance: 32/32 PASS.
+- STEP047 acceptance: 29/29 PASS.
+- STEP046 acceptance: 27/27 PASS.
+- STEP045 acceptance: 28/28 PASS.
+- STEP044 acceptance: 23/23 PASS.
+- STEP043 acceptance: 29/29 PASS.
+- STEP042 acceptance: 29/29 PASS.
+- STEP041 acceptance: 24/24 PASS.
+- STEP039 acceptance: 20/20 PASS.
+- STEP038 acceptance: 24/24 PASS with 3 Function Tools.
+- STEP030A acceptance: 8/8 PASS, 71 Windows launchers, 0 violations.
+- Reference integrity: 4/4 PASS.
+- Direct /reference imports: 0.
+
+Environment limitation
+- The container's global Python environment does not contain installed openai-agents package metadata,
+  so sh_run_step059b_acceptance was not re-executed here. Its exact installed-SDK and real OpenAI
+  closure is preserved from the user's Windows evidence, and STEP060 does not modify the SDK factory.
+
+Independent ZIP validation
+- Pending candidate and final self-extracted verification.
+
+Independent candidate ZIP validation
+- canonical root: 1 (`okcanvas-agent-runtime`).
+- ZIP entries: 2,726.
+- forbidden cache/local-state/dependency files: 0.
+- immutable Reference `.vscode` files retained: 2.
+- Node compiled `dist` entries retained: 21.
+- Python compileall: PASS.
+- TypeScript build: PASS.
+- Node tests: 13/13 PASS.
+- Python pytest: 588/588 PASS across 178 files with normal split exits.
+- STEP060: 20/20 PASS.
+- STEP059B/059A deterministic: 8/8 and 10/10 PASS.
+- STEP059: 16/16 PASS.
+- STEP058: 18/18 PASS.
+- STEP057: 25/25 PASS.
+- STEP045: 28/28 PASS.
+- STEP038: 24/24 PASS with 3 Function Tools.
+- STEP030A: 8/8 PASS, 71 launchers, 0 violations.
+- Reference integrity: 4/4 PASS.
+- direct `/reference` imports: 0.
+
+Final self-extracted tested ZIP validation
+- canonical root: 1; entries: 2,726; forbidden files: 0.
+- Python compileall: PASS.
+- TypeScript build and Node tests: PASS, 13/13.
+- Python pytest: 588/588 PASS across 178 files with normal split exits.
+- STEP060: 20/20 PASS.
+- STEP059B/059A deterministic: 8/8 and 10/10 PASS.
+- STEP059/058/057: 16/16, 18/18, 25/25 PASS.
+- STEP045/038: 28/28 and 24/24 PASS.
+- STEP030A: 8/8 PASS, 71 launchers, 0 violations.
+- Reference integrity: 4/4 PASS; direct `/reference` imports: 0.

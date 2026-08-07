@@ -1,0 +1,76 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260731T125515325532Z-e99141ad",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-31T12:55:16.043527Z",
+    "created_at": "2026-07-31T12:55:15.325980Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [
+      {
+        "closed": true,
+        "error": null,
+        "name": "loopback-control-api"
+      }
+    ],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP056C"
+  },
+  "checks": {
+    "cleanup_completed": true,
+    "control_api_and_sse_only": true,
+    "credentials_not_printed_or_persisted": true,
+    "debug_can_be_enabled_and_disabled_in_process": true,
+    "debug_confirmation_visible_but_not_copied": true,
+    "debug_evaluation_not_run_is_explicit": true,
+    "debug_is_off_by_default": true,
+    "debug_persisted_sse_visible": true,
+    "debug_preflight_visible_only_for_debug_request": true,
+    "debug_run_and_artifact_visible": true,
+    "details_events_json_remain_on_demand": true,
+    "explicit_post_run_evaluation_passed": true,
+    "final_product_counts_exact": true,
+    "governed_preflight_confirmation_used": true,
+    "multiple_agent_default_is_not_silent": true,
+    "no_runtime_npm_dependencies": true,
+    "node_process_exited_successfully": true,
+    "node_typescript_source_and_bin_present": true,
+    "normal_mode_answer_remains_friendly": true,
+    "persistent_same_process_two_requests": true,
+    "prompt_returned_after_each_response": true,
+    "raw_requests_not_persisted": true,
+    "references_unchanged": true,
+    "status_command_is_safe_and_useful": true,
+    "successful_payloads_deleted": true
+  },
+  "final_counts": {
+    "artifacts": 2,
+    "evaluations": 1,
+    "events": 20,
+    "invocations": 2,
+    "runs": 2,
+    "submissions": 2,
+    "tasks": 2
+  },
+  "node_cli": {
+    "debug_default_enabled": false,
+    "debug_toggle_supported": true,
+    "direct_runtime_access": false,
+    "evaluation_default_enabled": false,
+    "language": "TypeScript",
+    "persistent_requests": 2,
+    "post_run_evaluation_supported": true,
+    "runtime": "Node.js >=22",
+    "runtime_dependencies": 0,
+    "session_enabled": false
+  },
+  "process_returncode": 0,
+  "protected_payload_file_count": 0,
+  "schema_version": "okcanvas-step056c-acceptance-v1",
+  "state": "PASSED",
+  "transcript_tail": "============================================================\n OKCanvas Agent CLI · Node.js/TypeScript persistent client\n============================================================\nRuntime 2.39.1 · Agent coding-agent · Debug OFF\n- 프로젝트 파일·Shell·인터넷 접근 없음\n- 서버 대화 기억 없음 · 각 요청은 독립 실행\n- 현재는 입력한 대화 텍스트만 분석 가능\n/help 명령으로 사용법을 확인하세요. 종료할 때까지 계속 질문할 수 있습니다.\n\ncoding-agent> /status\nRuntime: 2.39.1\nControl API: http://127.0.0.1:47259\nAgent: coding-agent@1.0.0\nModel: deterministic-step056c-model\nDebug: OFF\nSession: disabled\nSession Turns: 0\nSession Items: 0\nEvaluation default: off\nLast Run: none\n\ncoding-agent> /debug on\nDebug mode: ON\n\ncoding-agent> STEP056C debug request\n실행 준비 중...\n\n[Preflight]\n  Submission      submission_18798ba7046948b4a4993bec8fdc1b63\n  Agent           coding-agent@1.0.0\n  Capability      text-only\n  Session         disabled\n  Runtime binding ab1dddcbcf0bdcd7c19840e4eb75f00096357f245d24f7aff0163f8c19ae9c55\n  Execution       IMMEDIATE_AFTER_CONFIRMATION\n  Approval        false\n  Model           deterministic-step056c-model\n\n[Debug] Exact confirmation challenge received\n  RUN coding-agent@1.0.0 2d305e3fa5ca\n\n[Events]\n  #01 run.created\n  #02 run.started\n  #03 agent.definition.resolved · CodingAgentResult\n  #04 agent.started · coding-agent\n  #05 model.started · deterministic-step056c-model\n  #06 model.completed\n  #07 agent.completed · CodingAgentResult\n  #08 artifact.created\n  #09 run.completed\n  #10 payload.retention.applied\n\n[Run]\n  run_6f44773ca05248848dba827692092357 · SUCCEEDED · 32 tokens\n  Session         disabled\n  Invocations     1\nROOT · coding-agent · SUCCEEDED · 32 tokens\n\n[Artifact VERIFIED]\n  ID              artifact_c79ec0d4ee32449284e8ebf17a980aab\n  SHA-256         914c30bc3a0fea6cea8986120c33a97c7cf1a6073286446ed5d6905fcb01faf8\n{\n  \"findings\": [\n    {\n      \"confidence\": \"CONFIRMED\",\n      \"detail\": \"STEP056C request 1 completed with governed CLI observability.\",\n      \"evidence\": [\n        \"gateway-call-1\"\n      ],\n      \"severity\": \"INFO\",\n      \"title\": \"same-process-request-1\"\n    }\n  ],\n  \"status\": \"PASS\",\n  \"summary\": \"STEP056C developer-mode response 1.\",\n  \"unverified\": []\n}\n\n[Evaluation]\n  NOT RUN\n\n완료 · 32 tokens · 다시 질문하거나 /details를 입력하세요.\n\ncoding-agent> /debug off\nDebug mode: OFF\n\ncoding-agent> STEP056C normal request\n실행 준비 중...\n\nAgent\n─────\nSTEP056C developer-mode response 2.\n\n확인 사항\n1. same-process-request-2: STEP056C request 2 completed with governed CLI observability. [gateway-call-2]\n\n완료 · 34 tokens · 다시 질문하거나 /details를 입력하세요.\n\ncoding-agent> /details\nRun: run_a2752c531b18443d82e1996f9367494f\nStatus: SUCCEEDED\nTokens: 34\nAgent: coding-agent@1.0.0\nCapability: text-only\nSession: disabled\nInvocations: 1\nROOT · coding-agent · SUCCEEDED · 34 tokens\nArtifact: artifact_d803f8e792504a82b4a1a96fe2a39ac3\nArtifact SHA-256: 1eb22f15b58e84a06fa528a3dcc5ae86d362497251c575e016cf684362d96b93\nEvaluation: not requested\n\ncoding-agent> /events\n#01 run.created\n#02 run.started\n#03 agent.definition.resolved · CodingAgentResult\n#04 agent.started · coding-agent\n#05 model.started · deterministic-step056c-model\n#06 model.completed\n#07 agent.completed · CodingAgentResult\n#08 artifact.created\n#09 run.completed\n#10 payload.retention.applied\n\ncoding-agent> /json\n{\n  \"findings\": [\n    {\n      \"confidence\": \"CONFIRMED\",\n      \"detail\": \"STEP056C request 2 completed with governed CLI observability.\",\n      \"evidence\": [\n        \"gateway-call-2\"\n      ],\n      \"severity\": \"INFO\",\n      \"title\": \"same-process-request-2\"\n    }\n  ],\n  \"status\": \"PASS\",\n  \"summary\": \"STEP056C developer-mode response 2.\",\n  \"unverified\": []\n}\n\ncoding-agent> /evaluate tui-client-foundation-v1\nEvaluation 실행 중: tui-client-foundation-v1\n\n[Evaluation]\n  tui-client-foundation-v1 · PASSED\n  PASS  agent_definition_matches\n  PASS  execution_succeeded\n  PASS  forbidden_result_absent\n  PASS  forbidden_tools_absent\n  PASS  latency_budget\n  PASS  required_result\n  PASS  required_tools\n  PASS  token_budget\n\ncoding-agent> /status\nRuntime: 2.39.1\nControl API: http://127.0.0.1:47259\nAgent: coding-agent@1.0.0\nModel: deterministic-step056c-model\nDebug: OFF\nSession: disabled\nSession Turns: 0\nSession Items: 0\nEvaluation default: off\nLast Run: run_a2752c531b18443d82e1996f9367494f\n\ncoding-agent> /quit\n\n종료 · 이 프로세스에서 2개 요청을 실행했습니다.\n"
+}

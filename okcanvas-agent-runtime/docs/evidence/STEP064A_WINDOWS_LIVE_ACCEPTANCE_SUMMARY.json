@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step": "STEP064A_PYTEST_ASYNC_PLUGIN_INDEPENDENCE_FIX",
+  "version": "2.44.1",
+  "reported_state": "PASSED",
+  "reported_passed_checks": 19,
+  "reported_total_checks": 19,
+  "corrected_step064_state": "PASSED",
+  "corrected_step064_passed_checks": 29,
+  "corrected_step064_total_checks": 29,
+  "corrected_step064_focused_test_output": "11 passed in 1.75s",
+  "plugin_independent_test_output": "11 passed in 1.50s",
+  "focused_step064a_test_output": "5 passed in 1.84s",
+  "node_release_output": "COMMITTED_TYPESCRIPT_RELEASE_VERIFIED inputs=11 outputs=21 tests=2 external_tsc_required=false",
+  "references_unchanged": true,
+  "step065_was_unselected_at_closure": true
+}

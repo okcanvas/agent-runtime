@@ -1,0 +1,44 @@
+{
+  "$defs": {
+    "HostedWebSearchStatus": {
+      "enum": [
+        "ANSWERED",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "title": "HostedWebSearchStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "okcanvas-hosted-web-search-result-v1",
+      "default": "okcanvas-hosted-web-search-result-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/HostedWebSearchStatus"
+    },
+    "answer": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Answer",
+      "type": "string"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "answer"
+  ],
+  "title": "HostedWebSearchResult",
+  "type": "object"
+}

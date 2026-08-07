@@ -1,0 +1,77 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260731T125511086749Z-4db7e180",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-31T12:55:11.909446Z",
+    "created_at": "2026-07-31T12:55:11.087234Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [
+      {
+        "closed": true,
+        "error": null,
+        "name": "loopback-control-api"
+      }
+    ],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP058"
+  },
+  "checks": {
+    "agent_as_tool_visible_and_executed": true,
+    "agent_catalog_labels_capabilities": true,
+    "answer_first_mode_preserved": true,
+    "approval_required_tool_excluded": true,
+    "cleanup_completed": true,
+    "control_api_only": true,
+    "final_product_counts_exact": true,
+    "gateway_paths_exact": true,
+    "invocation_tree_visible": true,
+    "mcp_and_guardrail_agents_excluded": true,
+    "native_handoff_visible_and_executed": true,
+    "node_process_exited_successfully": true,
+    "npm_installable_structure_preserved": true,
+    "raw_requests_not_persisted": true,
+    "raw_tool_and_child_data_not_printed": true,
+    "references_unchanged": true,
+    "safe_read_only_tool_visible_and_executed": true,
+    "successful_payloads_deleted": true
+  },
+  "final_counts": {
+    "artifacts": 3,
+    "evaluations": 0,
+    "events": 35,
+    "invocations": 5,
+    "runs": 3,
+    "submissions": 3,
+    "tasks": 3
+  },
+  "gateway_calls": [
+    "local-text-fingerprint-agent",
+    "handoff-triage-agent",
+    "agent-tool-manager-agent"
+  ],
+  "node_cli": {
+    "approval_decision_enabled": false,
+    "guardrail_enabled": false,
+    "language": "TypeScript",
+    "mcp_enabled": false,
+    "process_count": 1,
+    "request_count": 3,
+    "runtime": "Node.js >=22",
+    "runtime_dependencies": 0,
+    "supported_capability_paths": [
+      "READ_ONLY_FUNCTION_TOOL",
+      "HANDOFF",
+      "AGENT_AS_TOOL"
+    ]
+  },
+  "process_returncode": 0,
+  "protected_payload_file_count": 0,
+  "schema_version": "okcanvas-step058-acceptance-v1",
+  "state": "PASSED",
+  "transcript_tail": "============================================================\n OKCanvas Agent CLI · Node.js/TypeScript persistent client\n============================================================\nRuntime 2.39.1 · Agent local-text-fingerprint-agent · Debug OFF\n- 프로젝트 파일·Shell·인터넷 접근 없음\n- 서버 대화 기억 없음 · 각 요청은 독립 실행\n- 승인 없는 read-only Function Tool 사용 가능: local_text_fingerprint\n/help 명령으로 사용법을 확인하세요. 종료할 때까지 계속 질문할 수 있습니다.\n\nlocal-text-fingerprint-agent> Fingerprint this text: STEP058-PRIVATE-TOOL-ARGUMENT\n실행 준비 중...\n\n[진행]\n  ↳ Tool local_text_fingerprint 실행\n  ✓ Tool local_text_fingerprint 완료\n\nAgent\n─────\nThe read-only fingerprint Tool completed.\n\n완료 · 30 tokens · 다시 질문하거나 /details를 입력하세요.\n\nlocal-text-fingerprint-agent> /use handoff-triage-agent\nAgent를 handoff-triage-agent로 변경했습니다.\n- 프로젝트 파일·Shell·인터넷 접근 없음\n- 서버 대화 기억 없음 · 각 요청은 독립 실행\n- 전문 Agent로 한 번 Handoff 가능: handoff-specialist-agent\n\nhandoff-triage-agent> Route this request to the declared specialist.\n실행 준비 중...\n\n[진행]\n  ↳ Handoff handoff-triage-agent → handoff-specialist-agent\n\nAgent\n─────\nThe request was transferred to the declared specialist.\n\n협업 실행\n─────────\nROOT · handoff-triage-agent · SUCCEEDED · 10 tokens\n  HANDOFF · handoff-specialist-agent · SUCCEEDED · 20 tokens\n\n완료 · 30 tokens · 다시 질문하거나 /details를 입력하세요.\n\nhandoff-triage-agent> /use agent-tool-manager-agent\nAgent를 agent-tool-manager-agent로 변경했습니다.\n- 프로젝트 파일·Shell·인터넷 접근 없음\n- 서버 대화 기억 없음 · 각 요청은 독립 실행\n- 전문 Sub Agent를 Tool로 한 번 호출 가능: agent-tool-specialist-agent\n\nagent-tool-manager-agent> Ask the specialist to review STEP058-PRIVATE-SUB-AGENT-RESULT.\n실행 준비 중...\n\n[진행]\n  ↳ Sub Agent agent-tool-specialist-agent 호출\n  ✓ Sub Agent agent-tool-specialist-agent 완료\n\nAgent\n─────\nThe manager used the specialist Sub Agent and retained control.\n\n협업 실행\n─────────\nROOT · agent-tool-manager-agent · SUCCEEDED · 24 tokens\n  AGENT_AS_TOOL · agent-tool-specialist-agent · SUCCEEDED · 16 tokens\n\n완료 · 40 tokens · 다시 질문하거나 /details를 입력하세요.\n\nagent-tool-manager-agent> /invocations\nROOT · agent-tool-manager-agent · SUCCEEDED · 24 tokens\n  AGENT_AS_TOOL · agent-tool-specialist-agent · SUCCEEDED · 16 tokens\n\nagent-tool-manager-agent> /agents\n* agent-tool-manager-agent · OKCanvas Agent Tool Manager · 독립 요청 · Sub Agent → agent-tool-specialist-agent\n  agent-tool-specialist-agent · OKCanvas Agent Tool Specialist · 독립 요청 · text-only\n  coding-agent · OKCanvas Coding Analyst · 독립 요청 · text-only\n  conversational-coding-agent · OKCanvas Conversational Coding Analyst · 대화 기억 · text-only\n  handoff-specialist-agent · OKCanvas Handoff Specialist Agent · 독립 요청 · text-only\n  handoff-triage-agent · OKCanvas Handoff Triage Agent · 독립 요청 · Handoff → handoff-specialist-agent\n  local-text-fingerprint-agent · OKCanvas Local Text Fingerprint Agent · 독립 요청 · read-only Tool local_text_fingerprint\n  project-readonly-coding-agent · OKCanvas Project Read-only Coding Analyst · 독립 요청 · read-only Tool project_readonly_inspect\n  session-agent-tool-manager-agent · OKCanvas SQLite Session Agent Tool Manager · 대화 기억 · Sub Agent → agent-tool-specialist-agent\n  session-continuity-agent · OKCanvas Session Continuity Agent · 대화 기억 · text-only\n  session-handoff-triage-agent · OKCanvas SQLite Session Handoff Triage Agent · 대화 기억 · Handoff → handoff-specialist-agent\n  store-replenishment-review-agent · OKCanvas Store Replenishment Review Agent · 독립 요청 · text-only\n\nagent-tool-manager-agent> /quit\n\n종료 · 이 프로세스에서 3개 요청을 실행했습니다.\n\n"
+}

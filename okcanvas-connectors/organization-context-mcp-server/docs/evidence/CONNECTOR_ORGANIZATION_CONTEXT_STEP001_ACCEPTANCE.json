@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "admin_mutation_tools_absent": true,
+    "async_test_runner_dependency_closed": true,
+    "compileall_passed": true,
+    "fake_mode_absent": true,
+    "identity_exact": true,
+    "pytest_passed": true,
+    "read_tools_exact": true,
+    "runtime_boundary_explicitly_deferred": true
+  },
+  "passed_checks": 8,
+  "processes": {
+    "compileall": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "pytest": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "........                                                                 [100%]\n8 passed in 0.10s\n"
+    }
+  },
+  "schema_version": "okcanvas-organization-context-connector-step001-acceptance-v1",
+  "state": "PASSED",
+  "step": "CONNECTOR_ORGANIZATION_CONTEXT_STEP001_READ_ONLY_MCP_AND_MUTABLE_API_BOUNDARY_FOUNDATION",
+  "total_checks": 8,
+  "version": "0.1.0"
+}

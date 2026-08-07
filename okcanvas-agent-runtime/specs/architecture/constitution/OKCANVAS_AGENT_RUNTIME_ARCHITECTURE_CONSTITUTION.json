@@ -1,0 +1,1606 @@
+{
+  "schema_version": "okcanvas-agent-runtime-architecture-constitution-v1",
+  "constitution_id": "OKCANVAS_AGENT_RUNTIME_CLIENT_TRANSPORT_AGENT_ARCHITECTURE_CONSTITUTION",
+  "constitution_version": "1.0.0",
+  "authority_state": "RATIFIED_ARCHITECTURE_CONSTITUTION",
+  "product_source_baseline": {
+    "step": "STEP080_PRODUCT_OWNED_CAPABILITY_TOPOLOGY_AND_TOOL_DISCOVERY_FOUNDATION",
+    "version": "2.60.0",
+    "windows_live": "PENDING_62_OF_62"
+  },
+  "implementation_state": "SOURCE_MOVEMENT_BLOCKED_UNTIL_STEP080_WINDOWS_LIVE_ACCEPTED",
+  "clauses": [
+    {
+      "id": "GOV-001",
+      "title": "헌법의 최고 우선순위",
+      "normative_text": "본 문서와 해시 고정 부속서는 OKCanvas Agent Runtime의 프로젝트 구조, 책임 경계, 의존 방향, Client/Transport/Agent 관계에 대한 최상위 규범이다. 하위 설계서, STEP 계획, 코드 주석, 디렉터리 관행이 충돌하면 본 헌법이 우선한다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit",
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-002",
+      "title": "적용 범위",
+      "normative_text": "본 헌법은 저장소 전체의 Python Runtime, clients, protocols, transports, application services, agent runtime, capabilities, domain, adapters, bootstrap, tests, scripts, specs, docs, fixtures, launchers, reference 및 packaging에 적용한다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-003",
+      "title": "추측 금지",
+      "normative_text": "모든 구조 변경 판단은 실제 코드, AST import graph, route inventory, path coupling, packaging configuration, tests 및 acceptance evidence를 근거로 해야 하며 디렉터리 이름이나 예상만으로 결정해서는 안 된다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit",
+        "import_graph_audit",
+        "path_coupling_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-004",
+      "title": "단일 진실 원천",
+      "normative_text": "규범 본문, machine-readable manifest, traceability matrix, migration map, gate catalog 및 amendment log는 하나의 불가분 헌법 묶음이다. 어느 하나라도 누락되면 헌법 적용과 STEP 종료를 허용하지 않는다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-005",
+      "title": "조항 ID 의무",
+      "normative_text": "모든 구조 관련 Issue, STEP 계획, 코드 변경, 테스트, acceptance 및 Handoff는 적용하거나 변경하는 헌법 조항 ID를 명시해야 한다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-TRACEABILITY-COMPLETE"
+      ],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-006",
+      "title": "기준선 gate",
+      "normative_text": "STEP080 Windows live acceptance 62/62가 폐쇄되기 전에는 product source의 물리 이동을 공식 기준선으로 승격해서는 안 된다. 헌법 문서의 제정과 검증 도구 준비는 허용한다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest",
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-007",
+      "title": "작업 중 발견사항 기록",
+      "normative_text": "실제 실패, 구조 결함, 경계 위반, 검증 결함, 환경 blocker 및 반복 가능한 near-miss는 별도 Issue 문서와 재발 방지 Gate 없이 닫을 수 없다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-008",
+      "title": "부분 완료 금지",
+      "normative_text": "STEP 종료 시 계획된 조항 중 미구현, 미검증, 미문서화 항목이 하나라도 있으면 상태를 PASSED 또는 ACCEPTED로 선언해서는 안 된다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-CLAUSE-COVERAGE-100"
+      ],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-009",
+      "title": "행동 보존 원칙",
+      "normative_text": "구조 재정렬 STEP은 명시적으로 선택한 기능 변경을 제외하고 Runtime behavior, API semantics, event truth, security, ownership, model/Tool 권한 및 persisted identity를 변경해서는 안 된다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "GOV-010",
+      "title": "헌법 개정 절차",
+      "normative_text": "헌법 조항 변경은 amendment 문서, 영향 분석, 이전/신규 조항 diff, migration plan, 자동 Gate 수정, 전체 회귀 및 Windows live acceptance를 거쳐야 한다. 묵시적 개정은 금지한다.",
+      "category": "governance",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-AMENDMENT-VALID"
+      ],
+      "migration_wave": null
+    },
+    {
+      "id": "ARC-001",
+      "title": "최상위 시스템 축",
+      "normative_text": "제품 구조는 Client ↔ REST/persisted SSE/optional WebSocket ↔ Transport ↔ Application ports ↔ Agent Runtime/Domain ↔ Adapters의 방향을 따른다.",
+      "category": "architecture",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit",
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "ARC-002",
+      "title": "Transport 비권위성",
+      "normative_text": "REST, SSE, WebSocket transport는 Product state의 권위 원천이 아니며 상태 변경과 조회는 Application port를 통해 수행한다.",
+      "category": "architecture",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "ARC-003",
+      "title": "Product Event 권위",
+      "normative_text": "지속 가능한 Product Event ledger만 canonical event truth이며 raw model/SDK stream, WebSocket frame, console log 또는 in-memory callback은 이를 대체할 수 없다.",
+      "category": "architecture",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "ARC-004",
+      "title": "단방향 의존",
+      "normative_text": "상위 interface/transport가 하위 application/domain port를 호출하고 concrete adapter는 port를 구현한다. 하위 계층이 상위 transport/framework를 import해서는 안 된다.",
+      "category": "architecture",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "ARC-005",
+      "title": "기능과 배치의 일치",
+      "normative_text": "논리 capability topology와 물리 디렉터리 구조는 서로 모순되어서는 안 되며 tools, skills, sub-agents, MCP, guardrails, workspace 및 model capability는 agent/capabilities 하위에서 일관되게 표현한다.",
+      "category": "architecture",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "LAY-001",
+      "title": "Root Python package",
+      "normative_text": "Python package의 물리 경로는 저장소 루트의 okcanvas_agent_runtime/이어야 하며 src/okcanvas_agent_runtime/를 최종 구조로 유지하지 않는다. Public import 이름 okcanvas_agent_runtime.*은 변경하지 않는다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "flat_layout_audit",
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "LAY-002",
+      "title": "중복 package 금지",
+      "normative_text": "root package와 src package를 동시에 유지하거나 양쪽을 PYTHONPATH에 넣어서는 안 된다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "LAY-003",
+      "title": "Link 의존 금지",
+      "normative_text": "Windows junction, symbolic link 또는 filesystem alias를 package 이동의 호환 수단으로 사용해서는 안 된다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "flat_layout_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "LAY-004",
+      "title": "Path SOT",
+      "normative_text": "PROJECT_ROOT, PACKAGE_ROOT, CLIENTS_ROOT, PROTOCOLS_ROOT, SCRIPTS_ROOT, TESTS_ROOT, SPECS_ROOT, DOCS_ROOT, REFERENCE_ROOT, FIXTURES_ROOT를 단일 path resolver가 제공해야 한다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "path_coupling_audit",
+        "flat_layout_audit"
+      ],
+      "required_gates": [
+        "GATE-NO-HARDCODED-OLD-PACKAGE-PATH"
+      ],
+      "migration_wave": 1
+    },
+    {
+      "id": "LAY-005",
+      "title": "Target top-level directories",
+      "normative_text": "저장소 최상위는 okcanvas_agent_runtime/, clients/, protocols/, tests/, scripts/, specs/, docs/, reference/, fixtures/ 및 명시적으로 등록된 packaging/launcher 파일로 구성한다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "LAY-006",
+      "title": "Runtime package canonical zones",
+      "normative_text": "okcanvas_agent_runtime 내부 canonical zone은 bootstrap, core, domain, application, agent, transport, adapters, compatibility로 제한한다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [
+        "GATE-NO-UNCLASSIFIED-TOPLEVEL-PACKAGE"
+      ],
+      "migration_wave": 1
+    },
+    {
+      "id": "LAY-007",
+      "title": "빈 placeholder 금지",
+      "normative_text": "구현과 re-export가 없는 api, policy, tools 같은 aspirational placeholder package를 두어서는 안 된다. 실제 경계 또는 compatibility facade가 아니면 제거한다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "LAY-008",
+      "title": "대형 모듈 분해 우선",
+      "normative_text": "1,000 LOC 이상 또는 여러 책임을 가진 모듈은 단순 이동하지 말고 route/resource, transaction aggregate, adapter family 또는 feature record 기준으로 분해한다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 3
+    },
+    {
+      "id": "LAY-009",
+      "title": "RuntimeInfo 분리",
+      "normative_text": "786개 필드의 RuntimeInfo 구현은 immutable feature-group record와 assembler로 분리하고 기존 okcanvas_agent_runtime.model은 major-version 제거 전 compatibility facade로 유지한다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "LAY-010",
+      "title": "Vertical 격리",
+      "normative_text": "store replenishment와 commerce snapshot ingress 등 비즈니스 특화 코드는 verticals/ 또는 명시된 domain vertical에 위치하고 generic core contract가 vertical limit module을 직접 import하지 않도록 한다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "LAY-011",
+      "title": "Interface asset 격리",
+      "normative_text": "Operations Console, Interactive Runner 등 UI/static assets는 client 또는 transport/admin interface 영역에 위치하며 generic Agent Runtime implementation과 혼합하지 않는다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "LAY-012",
+      "title": "Hatch package 제한",
+      "normative_text": "flat layout에서도 build backend는 packages=[\"okcanvas_agent_runtime\"]와 같이 배포 package를 명시하여 clients, protocols, tests, docs, reference가 wheel에 암묵적으로 포함되지 않게 한다.",
+      "category": "layout",
+      "level": "MUST",
+      "source_refs": [
+        "flat_layout_audit"
+      ],
+      "required_gates": [
+        "GATE-WHEEL-CONTENTS-EXACT"
+      ],
+      "migration_wave": 1
+    },
+    {
+      "id": "DEP-001",
+      "title": "Clients 의존",
+      "normative_text": "clients는 protocols와 생성된 client SDK만 의존하며 server Python package를 import하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest",
+        "client_transport_reaudit"
+      ],
+      "required_gates": [
+        "GATE-CLIENT-NO-SERVER-IMPORT"
+      ],
+      "migration_wave": 2
+    },
+    {
+      "id": "DEP-002",
+      "title": "Protocols 독립",
+      "normative_text": "protocols는 Runtime implementation, FastAPI, SQLite, OpenAI SDK, Docker 및 filesystem adapter를 import하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-PROTOCOLS-RUNTIME-INDEPENDENT"
+      ],
+      "migration_wave": 2
+    },
+    {
+      "id": "DEP-003",
+      "title": "Transport 의존",
+      "normative_text": "transport는 application, protocols, core만 의존한다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [
+        "GATE-TRANSPORT-IMPORT-DIRECTION"
+      ],
+      "migration_wave": 2
+    },
+    {
+      "id": "DEP-004",
+      "title": "Application 의존",
+      "normative_text": "application은 agent, domain, core 및 추상 port만 의존하고 concrete SQLite/OpenAI/Docker implementation을 import하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [
+        "GATE-APPLICATION-NO-CONCRETE-ADAPTER"
+      ],
+      "migration_wave": 3
+    },
+    {
+      "id": "DEP-005",
+      "title": "Agent 의존",
+      "normative_text": "agent는 capabilities, domain, core 및 추상 port만 의존하고 FastAPI/httpx/WebSocket framework를 import하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [
+        "GATE-AGENT-NO-TRANSPORT-FRAMEWORK"
+      ],
+      "migration_wave": 5
+    },
+    {
+      "id": "DEP-006",
+      "title": "Capabilities 의존",
+      "normative_text": "capabilities는 domain과 core만 의존하고 transport 및 concrete infrastructure를 직접 소유하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "DEP-007",
+      "title": "Domain 의존",
+      "normative_text": "domain은 core 외의 상위 계층을 import하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [
+        "GATE-DOMAIN-ISOLATION"
+      ],
+      "migration_wave": 3
+    },
+    {
+      "id": "DEP-008",
+      "title": "Adapters 의존",
+      "normative_text": "adapters는 application/agent/capability port와 domain/core contract를 구현할 수 있으나 transport route를 import하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 3
+    },
+    {
+      "id": "DEP-009",
+      "title": "Bootstrap 예외",
+      "normative_text": "bootstrap만 모든 concrete component를 import하고 wiring할 수 있으며 route body 또는 business use case를 소유하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [
+        "GATE-BOOTSTRAP-WIRING-ONLY"
+      ],
+      "migration_wave": 2
+    },
+    {
+      "id": "DEP-010",
+      "title": "Service/Admin transport 독립",
+      "normative_text": "service transport는 admin/control transport implementation을 import하지 않고 양쪽은 transport-neutral protocol DTO, errors 및 application use case를 공유한다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit",
+        "boundary_audit"
+      ],
+      "required_gates": [
+        "GATE-SERVICE-NO-CONTROL-API-IMPORT"
+      ],
+      "migration_wave": 2
+    },
+    {
+      "id": "DEP-011",
+      "title": "Transport-store 직접 접근 금지",
+      "normative_text": "REST/SSE/WebSocket route는 ProductStore, ownership store, attachment/snapshot store, submission store, SQLite connection 또는 execution coordinator를 직접 호출하지 않는다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit",
+        "boundary_audit"
+      ],
+      "required_gates": [
+        "GATE-TRANSPORT-NO-STORE-COORDINATOR"
+      ],
+      "migration_wave": 3
+    },
+    {
+      "id": "DEP-012",
+      "title": "순환 의존 금지",
+      "normative_text": "Python internal module cycle count는 0을 유지한다.",
+      "category": "dependency",
+      "level": "MUST",
+      "source_refs": [
+        "import_graph_audit"
+      ],
+      "required_gates": [
+        "GATE-MODULE-CYCLES-ZERO"
+      ],
+      "migration_wave": null
+    },
+    {
+      "id": "CLI-001",
+      "title": "제품 Client 위치",
+      "normative_text": "제품 Client는 clients/cli, clients/web, clients/desktop에 위치한다.",
+      "category": "clients",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "CLI-002",
+      "title": "개발 Client 분리",
+      "normative_text": "dev-cli, dev-console, acceptance runner, operator utility는 제품 Client와 별도 디렉터리와 credential policy를 갖는다.",
+      "category": "clients",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "CLI-003",
+      "title": "Service API 전용",
+      "normative_text": "제품 Client는 /v1/service 및 공개 protocol만 사용하고 /v1/admin 또는 Control API를 정상 제품 기능에 사용하지 않는다.",
+      "category": "clients",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [
+        "GATE-PRODUCT-CLIENT-SERVICE-API-ONLY"
+      ],
+      "migration_wave": 2
+    },
+    {
+      "id": "CLI-004",
+      "title": "Server resource 비접근",
+      "normative_text": "Client는 SQLite, workspace, encrypted slot, provider key, Docker socket 및 server filesystem에 접근하지 않는다.",
+      "category": "clients",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "CLI-005",
+      "title": "Credential 분리",
+      "normative_text": "제품 Client에 admin key, submitter key 또는 provider API key를 제공하지 않는다.",
+      "category": "clients",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [
+        "GATE-CLIENT-CREDENTIAL-BOUNDARY"
+      ],
+      "migration_wave": null
+    },
+    {
+      "id": "CLI-006",
+      "title": "Protocol-generated types",
+      "normative_text": "Client request/response/event 타입은 protocols의 versioned schema에서 생성하거나 검증한다.",
+      "category": "clients",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "PRO-001",
+      "title": "Protocol SOT",
+      "normative_text": "REST OpenAPI, Product Event schema, SSE frame/replay, WebSocket command/event envelope는 protocols/가 단일 진실 원천이다.",
+      "category": "protocols",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "PRO-002",
+      "title": "Versioning",
+      "normative_text": "모든 공개 protocol은 schema_version과 backward compatibility policy를 가진다.",
+      "category": "protocols",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "PRO-003",
+      "title": "Transport-neutral DTO",
+      "normative_text": "Admin과 Service transport가 공유하는 DTO, error code, cursor 및 event identity는 control_api 구현이 아니라 protocols/common contract에 위치한다.",
+      "category": "protocols",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "PRO-004",
+      "title": "Canonical event identity",
+      "normative_text": "REST Event 조회, SSE frame, WebSocket persisted event frame은 동일한 run_id/event_id/sequence/schema_version을 사용한다.",
+      "category": "protocols",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "PRO-005",
+      "title": "Ephemeral 구분",
+      "normative_text": "raw model token delta, SDK lifecycle delta 및 non-persisted progress는 EPHEMERAL_TELEMETRY로 명시하고 canonical Product Event schema와 혼합하지 않는다.",
+      "category": "protocols",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "TRA-001",
+      "title": "Transport 역할",
+      "normative_text": "Transport는 인증/인가 adapter, request validation, protocol mapping, application command/query 호출, status/error projection만 수행한다.",
+      "category": "transport",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "TRA-002",
+      "title": "Transport business logic 금지",
+      "normative_text": "Transport route에서 ownership transfer, transaction orchestration, encrypted slot lifecycle, Task/Run creation 또는 model execution policy를 직접 구현하지 않는다.",
+      "category": "transport",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-TRANSPORT-NO-BUSINESS-LOGIC"
+      ],
+      "migration_wave": 3
+    },
+    {
+      "id": "TRA-003",
+      "title": "Service prefix",
+      "normative_text": "공개 Service API prefix는 /v1/service를 유지한다.",
+      "category": "transport",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "TRA-004",
+      "title": "Admin prefix 목표",
+      "normative_text": "Admin API는 /v1/admin으로 명확히 분리하며 native SDK stream은 ADMIN_DIAGNOSTIC_ONLY_NOT_SERVICE_CONTRACT로 유지한다.",
+      "category": "transport",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "TRA-005",
+      "title": "Use case 재사용",
+      "normative_text": "Admin과 Service는 authorization과 response projection은 달라도 동일 application command/query use case를 사용한다.",
+      "category": "transport",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [
+        "GATE-DUPLICATE-USE-CASE-REMOVED"
+      ],
+      "migration_wave": 3
+    },
+    {
+      "id": "TRA-006",
+      "title": "Composition root 분리",
+      "normative_text": "FastAPI app 생성과 concrete wiring은 bootstrap/application.py 등 composition root에 위치하고  route 모듈은 wiring을 수행하지 않는다.",
+      "category": "transport",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit",
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "REST-001",
+      "title": "REST 책임",
+      "normative_text": "REST는 command, query, upload, idempotency, confirmation, approval, cancel, artifact retrieval 및 auditable lifecycle 변경의 authoritative protocol이다.",
+      "category": "rest",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest",
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "REST-002",
+      "title": "Idempotency",
+      "normative_text": "모든 재시도 가능한 state-changing Service REST command는 명시적 idempotency key 및 replay contract를 가진다.",
+      "category": "rest",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "REST-003",
+      "title": "Audit 우선 명령",
+      "normative_text": "Approval decision, destructive delete, retention override 및 credential-sensitive operation은 REST-first auditable command로 유지한다.",
+      "category": "rest",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "REST-004",
+      "title": "Store projection 금지",
+      "normative_text": "REST handler는 persistence row를 직접 JSON으로 노출하지 않고 application result를 protocol DTO로 projection한다.",
+      "category": "rest",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 3
+    },
+    {
+      "id": "SSE-001",
+      "title": "Persisted SSE 권위",
+      "normative_text": "persisted SSE는 canonical Product Run Event의 authoritative one-way streaming projection이다.",
+      "category": "sse",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest",
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "SSE-002",
+      "title": "Replay",
+      "normative_text": "SSE는 Last-Event-ID 또는 cursor replay를 지원한다.",
+      "category": "sse",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "SSE-003",
+      "title": "Restart recovery",
+      "normative_text": "SSE는 process restart 이후 persisted Product Event에서 복구 가능해야 한다.",
+      "category": "sse",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "SSE-004",
+      "title": "Subscription port",
+      "normative_text": "SSE adapter는 ProductStore를 직접 polling하지 않고 application RunEventSubscription port만 호출한다.",
+      "category": "sse",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [
+        "GATE-SSE-SUBSCRIPTION-PORT"
+      ],
+      "migration_wave": 3
+    },
+    {
+      "id": "SSE-005",
+      "title": "WebSocket 독립",
+      "normative_text": "WebSocket 도입 여부와 무관하게 SSE fallback과 replay는 항상 사용 가능해야 한다.",
+      "category": "sse",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "SSE-006",
+      "title": "Sequence 보존",
+      "normative_text": "SSE event id와 sequence는 REST Event 조회 및 WebSocket persisted event와 동일해야 한다.",
+      "category": "sse",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "WS-001",
+      "title": "선택적 adapter",
+      "normative_text": "Client-facing WebSocket은 optional low-latency bidirectional adapter이며 기본 제품 실행의 필수 조건이 아니다.",
+      "category": "websocket",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest",
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "WS-002",
+      "title": "새 권한 경로 금지",
+      "normative_text": "WebSocket은 REST와 다른 model, Tool, Store, filesystem 또는 approval 권한 경로를 만들지 않는다.",
+      "category": "websocket",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-WEBSOCKET-NO-AUTHORITY-ESCALATION"
+      ],
+      "migration_wave": 4
+    },
+    {
+      "id": "WS-003",
+      "title": "연결 인증",
+      "normative_text": "WebSocket 연결 시 인증하고 모든 메시지에서 tenant/principal authorization을 다시 검증한다.",
+      "category": "websocket",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "WS-004",
+      "title": "Idempotent command",
+      "normative_text": "state-changing WebSocket message는 idempotency key를 필수로 하고 동일 application command를 호출한다.",
+      "category": "websocket",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "WS-005",
+      "title": "Persist-before-broadcast",
+      "normative_text": "Product Event는 durable store에 commit된 뒤 WebSocket으로 broadcast한다.",
+      "category": "websocket",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "WS-006",
+      "title": "Recovery path",
+      "normative_text": "WebSocket reconnect recovery는 REST/SSE cursor를 사용하며 WebSocket 자체를 durable ledger로 취급하지 않는다.",
+      "category": "websocket",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "WS-007",
+      "title": "Ephemeral telemetry",
+      "normative_text": "raw model/SDK delta를 전달할 경우 EPHEMERAL_TELEMETRY로 표시하고 replay, completion 및 audit truth에 사용하지 않는다.",
+      "category": "websocket",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "WS-008",
+      "title": "비활성 기본값",
+      "normative_text": "WebSocket foundation은 disabled-by-default로 도입하고 SSE fallback과 reconnect semantics가 자동 검증되기 전 활성화하지 않는다.",
+      "category": "websocket",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "APP-001",
+      "title": "Application use cases",
+      "normative_text": "Application은 submissions, runs, sessions, approvals, artifacts, attachments, snapshots, event subscription 및 lifecycle use case를 소유한다.",
+      "category": "application",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "APP-002",
+      "title": "Transaction orchestration",
+      "normative_text": "원자적 ownership transfer, encrypted ingress lifecycle, submission confirmation 및 Task/Run creation transaction은 Application service가 port를 통해 orchestration한다.",
+      "category": "application",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "APP-003",
+      "title": "Authorization intent",
+      "normative_text": "Application은 tenant/principal authorization intent를 받되 HTTP header, WebSocket object 또는 FastAPI dependency를 직접 알지 않는다.",
+      "category": "application",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "APP-004",
+      "title": "Port 우선",
+      "normative_text": "Persistence, model gateway, sandbox, storage, event publisher 및 clock은 추상 port로 주입한다.",
+      "category": "application",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 3
+    },
+    {
+      "id": "APP-005",
+      "title": "Transport 중복 제거",
+      "normative_text": "21개 중복 Admin/Service route shape는 공통 application use case로 수렴시킨다.",
+      "category": "application",
+      "level": "MUST",
+      "source_refs": [
+        "client_transport_reaudit",
+        "boundary_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 3
+    },
+    {
+      "id": "AGT-001",
+      "title": "Agent transport 독립",
+      "normative_text": "Agent runtime은 REST, SSE, WebSocket, FastAPI, HTTP request 또는 client credential을 알지 않는다.",
+      "category": "agent",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "AGT-002",
+      "title": "Agent state write",
+      "normative_text": "Agent 실행 결과와 lifecycle state는 application/domain port를 통해 기록한다.",
+      "category": "agent",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "AGT-003",
+      "title": "Agent topology",
+      "normative_text": "모든 Agent 정의는 STEP080 capability topology와 runtime binding identity를 유지한다.",
+      "category": "agent",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "CAP-001",
+      "title": "Capability 통합 위치",
+      "normative_text": "tools, skills, subagents, MCP, guardrails, workspace 및 model capability는 agent/capabilities 아래 정규화한다.",
+      "category": "capabilities",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit",
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "CAP-002",
+      "title": "Tool subtype",
+      "normative_text": "Function Tool, hosted Tool, Codex, future Tool Search 및 Programmatic Tool Calling은 명시적 subtype과 activation/loading/caller policy를 가진다.",
+      "category": "capabilities",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "CAP-003",
+      "title": "Skill 구분",
+      "normative_text": "Product instruction/static-resource Skill과 SDK Shell/container executable Skill을 동일 contract로 취급하지 않는다.",
+      "category": "capabilities",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "CAP-004",
+      "title": "Sub-agent 구분",
+      "normative_text": "handoff, Agent-as-Tool, bounded orchestration child는 subagents 하위의 서로 다른 capability kind로 유지한다.",
+      "category": "capabilities",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "CAP-005",
+      "title": "MCP 계층",
+      "normative_text": "MCP definition, client adapter, server implementation 및 Hosted MCP discovery를 구분한다.",
+      "category": "capabilities",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "CAP-006",
+      "title": "구조와 권한 분리",
+      "normative_text": "미래 Tool Search/WebSocket/Code Interpreter 구조를 준비하는 것과 runtime 권한 활성화를 분리하며 structure-only 기능은 fail-closed로 유지한다.",
+      "category": "capabilities",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "DOM-001",
+      "title": "Domain framework 독립",
+      "normative_text": "Task, Run, Event, Artifact, Approval, Session, Attachment, Snapshot 및 ownership domain contract는 web/model/persistence framework에 독립적이어야 한다.",
+      "category": "domain",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "DOM-002",
+      "title": "Event 불변성",
+      "normative_text": "canonical Product Event identity와 ordering은 transport 변경으로 달라지지 않는다.",
+      "category": "domain",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "ADP-001",
+      "title": "OpenAI adapter",
+      "normative_text": "OpenAI Agents SDK 및 provider-specific mapping은 adapters/openai에 위치한다.",
+      "category": "adapters",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "ADP-002",
+      "title": "Persistence adapter",
+      "normative_text": "SQLite implementation과 migration은 adapters/persistence/sqlite에 위치한다.",
+      "category": "adapters",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "ADP-003",
+      "title": "Sandbox adapter",
+      "normative_text": "Docker Sandbox implementation은 adapters/sandbox/docker에 위치한다.",
+      "category": "adapters",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "ADP-004",
+      "title": "Storage adapter",
+      "normative_text": "AES-GCM ingress slot 및 encrypted payload implementation은 adapters/storage에 위치하고 application port를 구현한다.",
+      "category": "adapters",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "ADP-005",
+      "title": "MCP/Codex adapter",
+      "normative_text": "Concrete MCP transport와 Codex gateway는 adapters/mcp 및 adapters/codex에 위치한다.",
+      "category": "adapters",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "BOOT-001",
+      "title": "유일한 wiring 위치",
+      "normative_text": "bootstrap은 configuration을 읽고 concrete adapter와 application/transport를 연결하는 유일한 composition root다.",
+      "category": "bootstrap",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "BOOT-002",
+      "title": "Route 비소유",
+      "normative_text": "bootstrap은 HTTP/SSE/WebSocket route body 또는 business validation을 포함하지 않는다.",
+      "category": "bootstrap",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-BOOTSTRAP-WIRING-ONLY"
+      ],
+      "migration_wave": null
+    },
+    {
+      "id": "SEC-001",
+      "title": "Tenant/principal 일관성",
+      "normative_text": "REST, SSE, WebSocket, Application, ownership 및 persistence 전 구간에서 동일 tenant/principal identity를 사용한다.",
+      "category": "security",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "SEC-002",
+      "title": "Secret 비저장",
+      "normative_text": "API key, bearer token, raw archive, raw workspace 및 raw model draft의 기존 비저장 헌법을 구조 변경으로 완화하지 않는다.",
+      "category": "security",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "SEC-003",
+      "title": "Transport privilege parity",
+      "normative_text": "WebSocket/SSE/Admin/Service transport 차이가 권한 상승으로 이어져서는 안 된다.",
+      "category": "security",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "CMP-001",
+      "title": "Compatibility facade",
+      "normative_text": "widely imported 기존 Python path는 canonical implementation 이동 후 bounded re-export facade로 유지한다.",
+      "category": "compatibility",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit",
+        "migration_map"
+      ],
+      "required_gates": [
+        "GATE-COMPAT-SYMBOL-IDENTITY"
+      ],
+      "migration_wave": 2
+    },
+    {
+      "id": "CMP-002",
+      "title": "Import equivalence",
+      "normative_text": "각 facade는 old/new import의 exported symbol identity 및 behavior equivalence 테스트를 가진다.",
+      "category": "compatibility",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "CMP-003",
+      "title": "Deprecation inventory",
+      "normative_text": "compatibility path마다 owner, replacement path, introduction STEP, remaining consumers 및 removal major version을 기록한다.",
+      "category": "compatibility",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "CMP-004",
+      "title": "Major removal gate",
+      "normative_text": "old path 삭제는 internal import 0, scripts/tests consumer 0, external compatibility policy, Handoff 고지 및 major-version boundary를 모두 만족해야 한다.",
+      "category": "compatibility",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "CMP-005",
+      "title": "Root launcher 호환",
+      "normative_text": "기존 root .cmd launcher는 user-facing Windows contract로 유지하고 canonical implementation으로 위임하는 wrapper로 전환한다.",
+      "category": "compatibility",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "CMP-006",
+      "title": "Launcher registry",
+      "normative_text": "새 root launcher와 run_step script는 registry entry, current/history classification 및 command reachability test 없이 추가할 수 없다.",
+      "category": "compatibility",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-LAUNCHER-REGISTRY-COMPLETE"
+      ],
+      "migration_wave": 1
+    },
+    {
+      "id": "HIS-001",
+      "title": "보호 경로",
+      "normative_text": "reference/upstream, specs/agents, specs/mcp, specs/tools, docs/plans, docs/evidence, docs/issues, docs/reference는 일괄 이동하거나 rewrite하지 않는다.",
+      "category": "history",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "HIS-002",
+      "title": "원본 증거 보존",
+      "normative_text": "과거 문서의 당시 경로와 명령은 역사적 사실로 보존한다. 현재 경로로 일괄 치환하지 않는다.",
+      "category": "history",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "HIS-003",
+      "title": "Index 우선",
+      "normative_text": "보호 경로에는 이동 대신 index, manifest, compatibility map을 추가한다.",
+      "category": "history",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "HIS-004",
+      "title": "Reference 불변성",
+      "normative_text": "reference/upstream hash와 direct import 0 계약을 유지한다.",
+      "category": "history",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-REFERENCE-INTEGRITY"
+      ],
+      "migration_wave": null
+    },
+    {
+      "id": "TST-001",
+      "title": "Test inventory",
+      "normative_text": "모든 test는 unit, integration, contract, acceptance/current, regression/history, windows 중 하나로 manifest에서 분류한다.",
+      "category": "testing",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "TST-002",
+      "title": "Test 이동 전제",
+      "normative_text": "exact test path를 사용하는 script가 generated manifest를 사용하기 전에는 tests 물리 이동을 수행하지 않는다.",
+      "category": "testing",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "TST-003",
+      "title": "Acceptance registry",
+      "normative_text": "모든 current/history acceptance script와 launcher는 machine-readable registry에 등록한다.",
+      "category": "testing",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "TST-004",
+      "title": "전체 회귀",
+      "normative_text": "각 구조 변경 STEP은 Python full regression, Node tests, Reference integrity, direct import 0, npm pack, compileall 및 packaging 검증을 수행한다.",
+      "category": "testing",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "TST-005",
+      "title": "Windows live",
+      "normative_text": "Runtime/launcher/package path에 영향을 주는 STEP은 Windows live acceptance 없이 ACCEPTED로 닫지 않는다.",
+      "category": "testing",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "TST-006",
+      "title": "Fresh ZIP",
+      "normative_text": "최종 ZIP을 새 디렉터리에 풀어 동일 acceptance와 전체 회귀 또는 byte-identical payload 증명을 수행한다.",
+      "category": "testing",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "TST-007",
+      "title": "Wheel/editable install",
+      "normative_text": "root package 전환 STEP은 fresh venv에서 wheel build/install, editable install, console entrypoint, import 및 package contents를 검증한다.",
+      "category": "testing",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [
+        "GATE-WHEEL-CONTENTS-EXACT",
+        "GATE-EDITABLE-INSTALL"
+      ],
+      "migration_wave": 1
+    },
+    {
+      "id": "TST-008",
+      "title": "Path coupling zero",
+      "normative_text": "실행 가능한 scripts/tests/config에서 src/okcanvas_agent_runtime 하드코딩이 0이어야 root move를 완료할 수 있다. 역사 문서의 문자열은 예외 inventory로 관리한다.",
+      "category": "testing",
+      "level": "MUST",
+      "source_refs": [
+        "flat_layout_audit",
+        "path_coupling_audit"
+      ],
+      "required_gates": [
+        "GATE-NO-HARDCODED-OLD-PACKAGE-PATH"
+      ],
+      "migration_wave": 1
+    },
+    {
+      "id": "MIG-001",
+      "title": "One-shot 금지",
+      "normative_text": "root move, 64개 package 재배치, transport extraction, application port 도입, WebSocket 활성화 및 Client 구현을 한 STEP에서 동시에 수행하지 않는다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [
+        "structure_audit",
+        "client_transport_reaudit"
+      ],
+      "required_gates": [],
+      "migration_wave": null
+    },
+    {
+      "id": "MIG-002",
+      "title": "Wave 0",
+      "normative_text": "STEP080 Windows live 62/62를 먼저 폐쇄한다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 0
+    },
+    {
+      "id": "MIG-003",
+      "title": "Wave 1",
+      "normative_text": "헌법/manifest/gate/path resolver/root package move/launcher-test inventory/empty placeholder/vertical low-risk 정리를 수행한다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest",
+        "structure_audit"
+      ],
+      "required_gates": [],
+      "migration_wave": 1
+    },
+    {
+      "id": "MIG-004",
+      "title": "Wave 2",
+      "normative_text": "Client와 Transport 물리 분리, protocol DTO 추출, composition root 분리, core/capability compatibility facade를 수행한다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 2
+    },
+    {
+      "id": "MIG-005",
+      "title": "Wave 3",
+      "normative_text": "Route direct store access를 application command/query port로 교체하고 SSE subscription port, transaction aggregate, domain/application/infrastructure 분리를 수행한다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 3
+    },
+    {
+      "id": "MIG-006",
+      "title": "Wave 4",
+      "normative_text": "disabled WebSocket protocol/adapter를 추가하고 SSE fallback, auth, idempotency, persist-before-broadcast, reconnect를 증명한 후 별도 activation STEP을 선택한다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 4
+    },
+    {
+      "id": "MIG-007",
+      "title": "Wave 5",
+      "normative_text": "capability/domain/adapter 물리 재배치와 compatibility facade 소비자 제거를 수행한다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [
+        "target_architecture_manifest"
+      ],
+      "required_gates": [],
+      "migration_wave": 5
+    },
+    {
+      "id": "MIG-008",
+      "title": "64 package map 의무",
+      "normative_text": "현재 64개 first-level package의 target path와 status는 해시 고정 migration map을 따르며 새 package가 생기면 map과 헌법 Gate를 동시에 갱신한다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [
+        "migration_map"
+      ],
+      "required_gates": [
+        "GATE-MIGRATION-MAP-COMPLETE"
+      ],
+      "migration_wave": null
+    },
+    {
+      "id": "MIG-009",
+      "title": "하위 단계 독립 검증",
+      "normative_text": "각 bounded sub-wave마다 import graph, behavior equivalence, full regression, ZIP 및 필요 시 Windows live를 독립적으로 수행한다.",
+      "category": "migration",
+      "level": "MUST",
+      "source_refs": [],
+      "required_gates": [],
+      "migration_wave": null
+    }
+  ],
+  "required_gate_ids": [
+    "GATE-CONSTITUTION-BUNDLE-COMPLETE",
+    "GATE-CLAUSE-COVERAGE-100",
+    "GATE-TRACEABILITY-COMPLETE",
+    "GATE-AMENDMENT-VALID",
+    "GATE-NO-UNCLASSIFIED-TOPLEVEL-PACKAGE",
+    "GATE-NO-HARDCODED-OLD-PACKAGE-PATH",
+    "GATE-WHEEL-CONTENTS-EXACT",
+    "GATE-EDITABLE-INSTALL",
+    "GATE-CLIENT-NO-SERVER-IMPORT",
+    "GATE-PROTOCOLS-RUNTIME-INDEPENDENT",
+    "GATE-TRANSPORT-IMPORT-DIRECTION",
+    "GATE-APPLICATION-NO-CONCRETE-ADAPTER",
+    "GATE-AGENT-NO-TRANSPORT-FRAMEWORK",
+    "GATE-DOMAIN-ISOLATION",
+    "GATE-SERVICE-NO-CONTROL-API-IMPORT",
+    "GATE-TRANSPORT-NO-STORE-COORDINATOR",
+    "GATE-MODULE-CYCLES-ZERO",
+    "GATE-PRODUCT-CLIENT-SERVICE-API-ONLY",
+    "GATE-CLIENT-CREDENTIAL-BOUNDARY",
+    "GATE-TRANSPORT-NO-BUSINESS-LOGIC",
+    "GATE-DUPLICATE-USE-CASE-REMOVED",
+    "GATE-BOOTSTRAP-WIRING-ONLY",
+    "GATE-SSE-SUBSCRIPTION-PORT",
+    "GATE-WEBSOCKET-NO-AUTHORITY-ESCALATION",
+    "GATE-COMPAT-SYMBOL-IDENTITY",
+    "GATE-LAUNCHER-REGISTRY-COMPLETE",
+    "GATE-REFERENCE-INTEGRITY",
+    "GATE-MIGRATION-MAP-COMPLETE",
+    "GATE-FULL-REGRESSION",
+    "GATE-WINDOWS-LIVE",
+    "GATE-FRESH-ZIP",
+    "GATE-ISSUE-REGISTRY-COMPLETE"
+  ],
+  "normative_annexes": [
+    "structure_audit",
+    "migration_map",
+    "import_graph_audit",
+    "path_coupling_audit",
+    "boundary_audit",
+    "client_transport_reaudit",
+    "client_transport_reaudit_json",
+    "flat_layout_audit",
+    "target_architecture_manifest",
+    "CONSTITUTION_TRACEABILITY_MATRIX.json",
+    "STEP_EXECUTION_COMPLIANCE_TEMPLATE.md",
+    "CONSTITUTION_AMENDMENT_PROTOCOL.md"
+  ],
+  "source_inventory": [
+    {
+      "source_id": "structure_audit",
+      "file_name": "STEP081_PROJECT_STRUCTURE_FULL_AUDIT.md",
+      "sha256": "45ebb8d9fefec725602cd83cdfe0ec5f9902c386d26143bf12ab1fb71bca0c00",
+      "byte_length": 14738
+    },
+    {
+      "source_id": "migration_map",
+      "file_name": "STEP081_PROJECT_LAYOUT_MIGRATION_MAP.json",
+      "sha256": "4274b71e6203638f1908970ef0a7eff07a05660a741be2cf685625e5f860e8e6",
+      "byte_length": 22955
+    },
+    {
+      "source_id": "import_graph_audit",
+      "file_name": "STEP081_IMPORT_GRAPH_AUDIT.json",
+      "sha256": "747d3afc4ec503179329ca0be1be812b6b551310b6af09552ab2c3da9f7a0ca5",
+      "byte_length": 36504
+    },
+    {
+      "source_id": "path_coupling_audit",
+      "file_name": "STEP081_PATH_COUPLING_AUDIT.json",
+      "sha256": "d569ed8e79661f71a9bd57f61d862a7200543e7a204195fffa4ee7357a16d0a4",
+      "byte_length": 141083
+    },
+    {
+      "source_id": "boundary_audit",
+      "file_name": "STEP081_CLIENT_TRANSPORT_AGENT_BOUNDARY_AUDIT.json",
+      "sha256": "402bf3343b1fb238850800f2a00dd53dc554134096205f43c86c5ee78013f5cb",
+      "byte_length": 36839
+    },
+    {
+      "source_id": "client_transport_reaudit",
+      "file_name": "STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.md",
+      "sha256": "d4b863eba88dbdf8f727e86a287ce12cd644171b839f2aecd8dadea284f66bd0",
+      "byte_length": 10583
+    },
+    {
+      "source_id": "client_transport_reaudit_json",
+      "file_name": "STEP081_CLIENT_TRANSPORT_AGENT_FULL_REAUDIT.json",
+      "sha256": "083fd3b2a5398311625cc14f5cc41f0dcf90d59258602cd3581b546d839ea10e",
+      "byte_length": 48396
+    },
+    {
+      "source_id": "flat_layout_audit",
+      "file_name": "STEP081_FLAT_LAYOUT_IMPACT_AUDIT.json",
+      "sha256": "b158999a650252558f230657bd5eded65192364e5688467b5f56a019dce8129d",
+      "byte_length": 25230
+    },
+    {
+      "source_id": "target_architecture_manifest",
+      "file_name": "STEP081_TARGET_ARCHITECTURE_MANIFEST.json",
+      "sha256": "047b61d2403c577365622baa5c144c3b1fefeaa6dcf64bbe706206549d537f15",
+      "byte_length": 6566
+    }
+  ],
+  "constitution_sha256": "262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa"
+}

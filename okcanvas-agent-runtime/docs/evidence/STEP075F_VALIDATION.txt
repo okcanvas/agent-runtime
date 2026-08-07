@@ -1,0 +1,72 @@
+STEP075F_EXACT_EVIDENCE_OUTPUT_COMPLETENESS_AND_BOUNDED_REPAIR
+version 2.55.6
+state IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+SOURCE VALIDATION
+- STEP075F Acceptance: 32/32 PASS
+- Focused STEP075F~075/Sandbox/Gateway: 140/140 PASS
+- Historical Skill/trace/service: 47/47 PASS
+- Full Python: 837/837 PASS across 212 test files
+  - chunk 00: 120 PASS
+  - chunk 01: 112 PASS
+  - chunk 02: 117 PASS
+  - chunk 03: 108 PASS
+  - chunk 04: 160 PASS
+  - chunk 05: 220 PASS
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+- Deterministic Docker calls: 0
+- Deterministic external network calls: 0
+- Deterministic model calls: 0
+
+CONTRACT EVIDENCE
+- STEP075E Windows live runtime path recorded as SUCCEEDED with 32/33 checks.
+- Sole historical failed check: formula_observed.
+- Exact required expression: max(0, forecast + SAFETY_STOCK - on_hand).
+- Exact required constant assignment: SAFETY_STOCK = 12.
+- Exact-evidence completeness validation runs before final Artifact registration.
+- Incomplete output permits at most one no-tool/no-MCP/no-Handoff correction model call.
+- Sandbox Tool replay during repair is disabled.
+- Persistent incompleteness fails closed with ANSWER_COMPLETENESS_FAILED.
+- Completeness lifecycle Events persist no raw request, evidence or draft.
+- Non-exact requests do not inherit exact-fragment requirements.
+
+IDENTITY
+- Sandbox policy SHA-256: eca4831968a99223a357edb2da27ee277f120e204e633eeaebf37d8a1651720a
+- Provider contract SHA-256: 83868e3f4d261d4d8e1b98b033f2c735e90da00125ec3a1fe9673e6abb85aaf5
+- Foundation SHA-256: 90403093a14d9cadaf0aaf1abf3bf4c71127293e7da54950e7d0f8df00008a9f
+- Sandbox Runtime SHA-256: 27d4b62c15b6e1aeea7114fd9014c76423ebf07e7342c0309804a3f5a119e9a8
+- Sample Runtime binding SHA-256: fbe41886c7d49cd11891d361f4a245b1061742c3a5f312c0b5733b563fb9cadf
+- Service policy SHA-256: efed4e7de82870fe429a03950897e50429cfca81b9ed6f5c7882f055364d503c
+
+PACKAGE VALIDATION
+- Candidate ZIP SHA-256: 50c19042da43f3e59054a12a2ad3f9eb7594f70b7934c69604bf52f8eb08c284
+- Candidate canonical root: 1 (okcanvas-agent-runtime)
+- Candidate ZIP entries: 3,103
+- Candidate forbidden files: 0
+- Candidate STEP075F Acceptance: 32/32 PASS
+- Candidate full Python: 837/837 PASS across 212 files
+- Candidate Node: 14/14 PASS
+- Candidate Reference integrity: 4/4 PASS
+- Candidate direct /reference imports: 0
+- Candidate npm pack dry-run: 23 files PASS
+- Documentation-complete final ZIP fresh extraction: PASS
+- Final STEP075F Acceptance: 32/32 PASS
+- Final full Python: 837/837 PASS across 212 files
+- Final Node: 14/14 PASS
+- Final Reference integrity: 4/4 PASS
+- Final direct /reference imports: 0
+- Final npm pack dry-run: 23 files PASS
+- Final canonical root: 1
+- Final ZIP entries: 3,103
+- Final forbidden files: 0
+- Final published SHA is carried by the adjacent .zip.sha256 artifact.
+
+WINDOWS
+- Pending sh_run_step075f_acceptance.cmd
+- Pending sh_run_step075f_live_acceptance.cmd
+- STEP076 remains unselected.

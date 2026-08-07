@@ -1,0 +1,35 @@
+{
+  "acceptance_id": "20260728T134510Z-d1322b65",
+  "acceptance_state": "PASSED_WITH_CLEANUP_WARNING",
+  "agent_total_tokens": 62422,
+  "all_core_checks": true,
+  "baseline_validation": {
+    "exit_code": 1,
+    "failed": 1,
+    "state": "FAILED"
+  },
+  "cleanup": {
+    "attempts": 8,
+    "error_type": "PermissionError",
+    "locked_path_suffix": "fixture-repo/src/inventory/__pycache__",
+    "state": "WARNING"
+  },
+  "codex_total_tokens": 60899,
+  "core_acceptance_passed": true,
+  "patch_sha256": "abb62ef843d0ccb953e4b3f54b0f72542cae4329370cdfbdd42af9bfde66a463",
+  "post_validation": {
+    "exit_code": 0,
+    "passed": 1,
+    "state": "PASSED"
+  },
+  "project_version": "0.3.1",
+  "root_cause": "Codex directly invoked Python inside the disposable workspace. The independent validator already disabled bytecode generation, but the Codex subprocess environment did not, so a workspace __pycache__ directory was created and remained unavailable to Windows cleanup.",
+  "schema_version": "okcanvas-step003b-input-evidence-v1",
+  "source": "user-supplied Windows console output",
+  "thread_id": "019fa8f9-4b9b-7fe2-98f7-a3ef7927533a",
+  "verified_modified_files": [
+    "src/inventory/pricing.py"
+  ],
+  "write_run_id": "codexwrite_250e2e27085d4bbb9c8e9de201cc90b8",
+  "write_state": "SUCCEEDED"
+}

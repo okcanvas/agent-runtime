@@ -1,0 +1,32 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP040_SUB_AGENT_INVOCATION_SCOPE_FOUNDATION",
+  "reported_at": "2026-07-30T08:29:34.978124Z",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "acceptance_state": "PASSED",
+  "checks_passed": 23,
+  "checks_total": 23,
+  "policy": {
+    "max_depth": 4,
+    "max_handoffs_per_run": 4,
+    "max_agent_tools_per_run": 8,
+    "default_workspace_access": "none",
+    "physical_workspace_enabled": false,
+    "policy_sha256": "4fb7be359baadbb6ba31174cc75a2dc698a5397816ecf3a92f656283c71a6da1"
+  },
+  "graph": {
+    "handoff_edges": 1,
+    "agent_as_tool_edges": 1
+  },
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "invocations": 3,
+    "events": 3,
+    "artifacts": 0
+  },
+  "external_call_count": 0,
+  "workspace_materialized": false,
+  "cleanup_state": "COMPLETED",
+  "source": "user-reported Windows sh_run_step040_acceptance.cmd output"
+}

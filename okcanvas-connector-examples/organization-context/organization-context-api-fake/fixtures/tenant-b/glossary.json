@@ -1,0 +1,41 @@
+[
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "PI"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "objectives.read",
+        "default_operation": "READ",
+        "entity_type": "PROCESS_IMPROVEMENT",
+        "risk_level": "LOW",
+        "system_id": "strategy"
+      }
+    ],
+    "canonical_name": "프로세스 혁신",
+    "classification": "PROCESS",
+    "definition": "tenant-b에서 사용하는 PI 의미",
+    "deleted_at": null,
+    "revision": 1,
+    "row_version": 1,
+    "source": {
+      "approved_by": "tenant-b-admin",
+      "reference": "org://tenant-b/glossary/pi",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-b",
+    "term_id": "term.pi",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  }
+]

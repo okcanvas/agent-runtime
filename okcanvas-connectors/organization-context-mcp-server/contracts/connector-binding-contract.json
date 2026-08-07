@@ -1,0 +1,32 @@
+{
+  "connector_project_path": "okcanvas-connectors/organization-context-mcp-server",
+  "credential_reference_transmitted": false,
+  "example_project_path": "okcanvas-connector-examples/organization-context/organization-context-api-fake",
+  "example_source_of_truth": "COMMITTED_JSON_FIXTURES",
+  "fake_mode_allowed": false,
+  "production_source_of_truth": "DATABASE",
+  "read_only": true,
+  "required_role": "agent-user",
+  "schema_version": "okcanvas-organization-context-connector-binding-v2",
+  "supported_entity_types": [
+    "TERM",
+    "DEPARTMENT",
+    "POSITION",
+    "EMPLOYEE",
+    "PRODUCT",
+    "CLIENT",
+    "PROJECT",
+    "SYSTEM",
+    "CAPABILITY"
+  ],
+  "tool_names": [
+    "resolve_organization_context",
+    "search_organization_context",
+    "get_organization_entity",
+    "resolve_organization_terms",
+    "search_organization_terms",
+    "get_organization_term",
+    "get_organization_catalog_state",
+    "get_organization_changes"
+  ]
+}

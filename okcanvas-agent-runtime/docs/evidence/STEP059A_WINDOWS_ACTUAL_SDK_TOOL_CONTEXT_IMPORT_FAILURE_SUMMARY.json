@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-step059a-windows-actual-sdk-tool-context-import-failure-v1",
+  "state": "CONFIRMED_PRODUCT_DEFECT",
+  "step_id": "STEP059A",
+  "observed_command": "sh_run_step059a_acceptance",
+  "exception_type": "ImportError",
+  "exception_message": "cannot import name 'ToolContext' from 'agents'",
+  "product_location": "src/okcanvas_agent_runtime/function_tools/factories.py",
+  "invalid_import": "from agents import ToolContext, function_tool",
+  "immutable_sdk_contract": {
+    "function_tool_export": "agents.function_tool",
+    "tool_context_definition": "agents.tool_context.ToolContext",
+    "top_level_tool_context_exported": false
+  },
+  "deterministic_test_gap": "Fake agents modules incorrectly exposed ToolContext at top level.",
+  "correction_step": "STEP059B_ACTUAL_SDK_TOOL_CONTEXT_EXPORT_ALIGNMENT"
+}

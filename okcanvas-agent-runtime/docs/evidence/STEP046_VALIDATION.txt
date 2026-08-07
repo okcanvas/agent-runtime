@@ -1,0 +1,24 @@
+STEP046_SQLITE_SESSION_APPROVAL_COMPOSITION_V1
+VERSION 2.26.0
+STATE WINDOWS_LIVE_ACCEPTED
+
+WINDOWS LIVE RESULT
+- command: sh_run_step046_acceptance
+- acceptance_id: 20260730T202224532258Z-5572095d
+- state: PASSED
+- checks: 27/27
+- cleanup: COMPLETED
+- prepare/resume: 2/2
+- Session instances/closes: 10/10
+- Session metadata: 0/0 -> 0/2 -> 1/4 -> 1/6 -> 2/8
+- approved/rejected Tool executions: 1/0
+- approve/reject Events: 20/17, total 37
+- final Task/Run/Submission/Invocation/Event/Artifact/Approval/Evaluation: 2/2/2/2/37/1/2/1
+- protected payload files: 1 (rejected Run retained)
+- approved Artifact verified; recorded Evaluation PASSED
+- pending clear and competing Turn blocked
+- decision replays created no duplicate
+- raw Session history/request/API key not copied to Product/Evaluation DB
+- References unchanged
+
+The complete user output is represented by the adjacent compact Windows summary. STEP046 is closed.

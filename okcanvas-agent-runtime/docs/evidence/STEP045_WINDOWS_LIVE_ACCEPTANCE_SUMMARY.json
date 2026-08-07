@@ -1,0 +1,34 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP045",
+  "step_name": "STEP045_INTEGRATED_WALKING_SKELETON_ACCEPTANCE",
+  "version": "2.25.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-30T19:14:56.641769Z",
+  "acceptance": {
+    "state": "PASSED",
+    "skeleton_state": "BASIC_AGENT_RUNTIME_SKELETON_COMPLETE",
+    "checks_passed": 28,
+    "checks_total": 28,
+    "scenario_count": 10,
+    "tool_free_counts": {
+      "tasks": 1,
+      "runs": 1,
+      "submissions": 1,
+      "invocations": 1,
+      "events": 10,
+      "artifacts": 1
+    },
+    "primitive_acceptances": {
+      "STEP037": "24/24 PASSED",
+      "STEP038": "24/24 PASSED",
+      "STEP039": "20/20 PASSED",
+      "STEP041": "24/24 PASSED",
+      "STEP042": "29/29 PASSED",
+      "STEP043": "29/29 PASSED",
+      "STEP044": "23/23 PASSED"
+    },
+    "references_unchanged": true,
+    "cleanup_state": "COMPLETED"
+  }
+}

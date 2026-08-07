@@ -1,0 +1,52 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP043",
+  "step_name": "STEP043_SQLITE_SESSION_RUNTIME_V1",
+  "version": "2.23.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-30T12:01:08.980108Z",
+  "acceptance_state": "PASSED",
+  "checks_passed": 29,
+  "checks_total": 29,
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 2,
+    "session_instances": 5,
+    "session_closes": 5
+  },
+  "session_metadata": {
+    "after_turn_1": {
+      "state": "ACTIVE",
+      "turn_count": 1,
+      "item_count": 2
+    },
+    "after_turn_2": {
+      "state": "ACTIVE",
+      "turn_count": 2,
+      "item_count": 4
+    },
+    "after_clear": {
+      "state": "CLEARED",
+      "turn_count": 2,
+      "item_count": 0,
+      "history_items": 0
+    }
+  },
+  "continuity_marker": "ORBIT-7",
+  "active_turn_collision_rejected": true,
+  "post_clear_preflight_rejected": true,
+  "final_counts": {
+    "tasks": 2,
+    "runs": 2,
+    "submissions": 2,
+    "invocations": 2,
+    "events": 24,
+    "artifacts": 2,
+    "evaluations": 1
+  },
+  "workspace_materialized": false,
+  "successful_payloads_deleted": true,
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "source": "user-reported sh_run_step043_acceptance.cmd JSON"
+}

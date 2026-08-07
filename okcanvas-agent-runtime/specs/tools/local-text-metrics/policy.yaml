@@ -1,0 +1,9 @@
+id: local_text_metrics
+sdk_kind: function_tool
+approval_mode: ALWAYS
+read_only: true
+filesystem_access: none
+network_access: none
+shell_access: none
+arguments_persisted: false
+result_persisted_in_events: false

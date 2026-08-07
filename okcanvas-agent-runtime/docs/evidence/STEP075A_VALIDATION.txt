@@ -1,0 +1,57 @@
+STEP075A_WINDOWS_DOCKER_TMPFS_NORMALIZATION_AND_FAILURE_EVIDENCE_FIX
+version: 2.55.1
+state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Source validation
+- STEP075A acceptance: 31/31 PASS
+- Focused STEP075A/STEP075/Sandbox/provider: 96/96 PASS
+- Historical Skill/trace/service: 47/47 PASS
+- Full Python regression: 806/806 PASS across 207 test files
+- Python compileall: PASS
+- Committed TypeScript integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- Deterministic Docker/network/model calls: 0/0/0
+
+Windows evidence retained
+- STEP075 deterministic acceptance: 28/28 PASS
+- STEP075 live acceptance: 13/28 FAILED
+- First model turn: completed
+- Sandbox Tool: started, not completed
+- Acceptance workspace: PRESERVED
+- Correct Product database path: databases/product.sqlite3
+- Exact original Sandbox error code: not retrieved
+
+Fix and recurrence gates
+- tmpfs option order normalized
+- size bytes/32m/32MiB normalized to exact 32 MiB
+- mode 0755/755/0o755 normalized to exact octal 0755
+- rw,noexec,nosuid,nodev required
+- relaxed, missing, malformed, duplicate and unknown values rejected
+- bounded tool.failed code Event added
+- Issue Registry and OR-ISSUE-001 added
+
+Identity
+- Sandbox policy SHA: eca4831968a99223a357edb2da27ee277f120e204e633eeaebf37d8a1651720a
+- Provider contract SHA: 983bc13da334f97d1d2090a7475f9b67780eb2e81a81683db7f4e58a4fca88a5
+- Foundation SHA: c3a2b252a9f8c6cadb27528b42753d9ce9344b71a470800be93f8c8d33d84c94
+- Sandbox Runtime SHA: 7f8986252af21320e3c75c6f408e9e0ccf78bd8d8209213d08c578d9f0e97c7c
+- Sample Runtime binding SHA: 3e0c942a6974a89ff44915b0136f8bf2bc00333ccd21fa77587f93f4f7aa877a
+- Service policy SHA: 8624747937ef788882538858f77a78300632d3577f61ed9751087d99f4ced1d8
+
+Candidate/final package verification is recorded below after fresh extraction.
+
+Candidate ZIP fresh-extraction verification
+- Candidate SHA-256: 9db7584a073f772587c658f36062b7b9e60a1b9dae178a1f2eff82931c24c913
+- Canonical root: 1
+- ZIP entries: 3047
+- Forbidden files: 0
+- STEP075A acceptance: 31/31 PASS
+- Full Python regression: 806/806 PASS across 207 test files
+- Python compileall: PASS through STEP075A acceptance
+- Node tests: 14/14 PASS through STEP075A acceptance
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS

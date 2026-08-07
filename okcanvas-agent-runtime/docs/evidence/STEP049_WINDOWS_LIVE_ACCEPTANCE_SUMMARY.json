@@ -1,0 +1,44 @@
+{
+  "schema_version": "okcanvas-step049-windows-live-acceptance-summary-v1",
+  "step_id": "STEP049",
+  "reported_state": "PASSED",
+  "windows_live_accepted": true,
+  "corrected_package_sha256": "054e3e241b47c63e386d78212277eb82348711f6bdccce07e1d04255e75fb8be",
+  "check_count": 33,
+  "all_checks_true": true,
+  "session_transitions": {
+    "after_turn_1": [1, 4],
+    "after_turn_2": [2, 8],
+    "final": [2, 8]
+  },
+  "gateway_counts": {
+    "run": 0,
+    "outer_run_streamed": 2,
+    "nested_run_streamed": 2,
+    "as_tool_constructed": 2,
+    "agent_tool_invoked": 2,
+    "session_instances": 4,
+    "session_closes": 4
+  },
+  "case_event_counts": {
+    "turn_1": 20,
+    "turn_2": 20
+  },
+  "final_counts": {
+    "tasks": 2,
+    "runs": 2,
+    "submissions": 2,
+    "invocations": 4,
+    "events": 40,
+    "artifacts": 2,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 0,
+  "evaluation_state": "PASSED",
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1,
+  "resources_closed": true,
+  "prior_failed_cleanup_evidence": "docs/evidence/STEP049_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+  "source": "user-reported complete corrected-package sh_run_step049_acceptance output"
+}

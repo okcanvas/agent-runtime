@@ -1,0 +1,9 @@
+D:\NODE_AGENTS\okcanvas-agent-runtime>sh_run_step012_acceptance
+[INFO] Loaded local environment from .env.local without executing it.
+StarletteDeprecationWarning was emitted by FastAPI TestClient dependency compatibility.
+The acceptance completed with state PASSED and all 16 checks true.
+TemporaryDirectory cleanup completed without WinError 32.
+Run: run_0fbd481db18a4c898c0ee9cd9ee663dd
+Artifact: artifact_d8592988703643769962e57c6752f457
+Evaluation: eval_04fd2ed069f54921af5c52da640df708
+Completed: 2026-07-29T01:41:25.331987Z

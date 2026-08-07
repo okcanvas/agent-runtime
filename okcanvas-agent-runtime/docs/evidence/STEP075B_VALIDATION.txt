@@ -1,0 +1,61 @@
+STEP075B_WINDOWS_DOCKER_COMMAND_OPERATION_EVIDENCE
+version: 2.55.2
+state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+SOURCE VALIDATION
+- STEP075B acceptance: 34/34 PASS
+- Focused STEP075B/STEP075A/STEP075/Sandbox/provider: 107/107 PASS
+- Historical Skill/trace/service: 47/47 PASS
+- Full Python regression: 817/817 PASS across 208 test files
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+- Deterministic Docker calls: 0
+- External network calls: 0
+- Model calls: 0
+
+WINDOWS EVIDENCE RETAINED
+- STEP075A deterministic: 31/31 PASS
+- STEP075A live: 13/29 FAILED
+- Tool failure code: DOCKER_COMMAND_FAILED
+- Failed operation/return/category/cleanup outcome: absent in predecessor evidence
+- Product DB relative path: databases/product.sqlite3
+- Acceptance workspace: PRESERVED
+
+STEP075B CHANGE
+- Stable bounded Docker operation vocabulary
+- Integer return code
+- Closed stderr category
+- Output truncation state
+- Primary failure preservation through cleanup
+- Cleanup attempted/completed and orphan count
+- Raw arguments/output/messages/paths/images/source/secrets not persisted
+
+IDENTITY
+- Sandbox policy SHA: eca4831968a99223a357edb2da27ee277f120e204e633eeaebf37d8a1651720a
+- Provider contract SHA: 983bc13da334f97d1d2090a7475f9b67780eb2e81a81683db7f4e58a4fca88a5
+- Foundation SHA: c3a2b252a9f8c6cadb27528b42753d9ce9344b71a470800be93f8c8d33d84c94
+- Sandbox Runtime SHA: feebdd5f0cf0a526401619ea54332ec04f7894cb5cfdedd09c6c0f8ab9c117ec
+- Sample binding SHA: 0335c1c85876d52955192817f4c5224ee26417b3873132f4bea91f591e94d6f2
+- Service policy SHA: 2f14e19a950ea9f84b2b628905d28f4f152af1b4aaf6d4363e5807aadbcde4d3
+
+WINDOWS PENDING
+- sh_run_step075b_acceptance.cmd
+- sh_run_step075b_live_acceptance.cmd
+- Expected success: two model calls, one completed Sandbox Tool call, selected hashes verified, cleanup COMPLETED, orphan zero.
+- Expected failure diagnostic: operation, return_code, stderr_category, output_truncated, cleanup_attempted, cleanup_completed, orphan_count.
+
+CANDIDATE ZIP FRESH EXTRACTION
+- Candidate SHA-256: 7d8705f10c74d4c2e0774cc34ecf9001f97651dbb9fa56f48303fd60632dfe77
+- Canonical root: 1
+- ZIP entries: 3058
+- Forbidden files: 0
+- STEP075B acceptance: 34/34 PASS
+- Full Python regression: 817/817 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- Node tests: 14/14 PASS through acceptance
+- npm pack dry-run: 23 files PASS

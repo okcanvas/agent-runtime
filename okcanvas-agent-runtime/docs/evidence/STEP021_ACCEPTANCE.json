@@ -1,0 +1,36 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T085528060605Z-9f9ed27f",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T08:55:28.512649Z",
+    "created_at": "2026-07-29T08:55:28.060977Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP021"
+  },
+  "approval_total": 2,
+  "checks": {
+    "authentication_required": true,
+    "completed_tool_executed_once": true,
+    "console_has_approval_inbox": true,
+    "console_has_no_decision_control": true,
+    "pending_filter_exact": true,
+    "reads_do_not_mutate_product_db": true,
+    "references_unchanged": true,
+    "safe_inbox_contract": true,
+    "succeeded_filter_exact": true,
+    "summary_pending_count": true,
+    "two_approval_records_listed": true
+  },
+  "completed_approval_id": "approval_dc98bd1455224be7be32d717e6009c08",
+  "pending_approval_id": "approval_4ba4932361934446a08f327d51462553",
+  "pending_total": 1,
+  "schema_version": "okcanvas-step021-acceptance-v1",
+  "state": "PASSED"
+}

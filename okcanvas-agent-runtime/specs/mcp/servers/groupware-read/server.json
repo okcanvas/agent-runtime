@@ -1,0 +1,32 @@
+{
+  "allowed_tools": [
+    "search_notices",
+    "search_mail",
+    "list_calendar_events"
+  ],
+  "authorization_mode": "delegated-bearer-ref",
+  "cache_tools_list": true,
+  "circuit_breaker_failure_threshold": 2,
+  "circuit_breaker_reset_seconds": 30.0,
+  "cleanup_timeout_seconds": 5.0,
+  "connect_timeout_seconds": 10.0,
+  "credential_ref": "groupware-read-credential",
+  "endpoint_mode": "tenant-template",
+  "health_mode": "passive",
+  "http_timeout_seconds": 15.0,
+  "kind": "remote-streamable-http",
+  "max_result_chars": 24000,
+  "max_retry_attempts": 0,
+  "name": "OKCanvas Groupware Read-only MCP",
+  "read_only": true,
+  "required_roles": [
+    "agent-user"
+  ],
+  "retry_backoff_seconds_base": 1.0,
+  "schema_version": "okcanvas-mcp-server-v3",
+  "server_id": "groupware-read",
+  "sse_read_timeout_seconds": 120.0,
+  "tool_timeout_seconds": 15.0,
+  "url_template": "https://groupware.example.invalid/tenants/{tenant_id}/mcp",
+  "version": "1.0.0"
+}

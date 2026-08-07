@@ -1,0 +1,167 @@
+{
+  "checks": {
+    "advanced_tool_calling_remains_disabled": true,
+    "agent_has_no_non_mcp_execution_surfaces": true,
+    "agent_single_groupware_mcp_exact": true,
+    "configured_fixture_becomes_ready": true,
+    "configured_groupware_route_selects_agent": true,
+    "configured_identity_is_bound": true,
+    "credential_reference_metadata_only": true,
+    "default_endpoint_is_non_routable": true,
+    "default_groupware_route_is_not_configured": true,
+    "default_secret_value_absent": true,
+    "default_state_fails_closed": true,
+    "draft_request_not_stolen": true,
+    "identity_exact": true,
+    "mcp_no_retry_passive_circuit_exact": true,
+    "mcp_v3_delegated_read_only_exact": true,
+    "model_context_bounded": true,
+    "model_context_has_no_endpoint_reference_or_secret": true,
+    "next_step_unselected": true,
+    "policy_binding_exact": true,
+    "policy_schema_exact": true,
+    "read_tool_allowlist_exact": true,
+    "result_bound_exact": true,
+    "role_gate_exact": true,
+    "runtime_binding_reuses_step085_path": true,
+    "runtime_info_limits_exact": true,
+    "secret_not_exposed_publicly": true,
+    "step085_windows_evidence_exact": true,
+    "unallowed_role_is_denied": true,
+    "write_request_remains_proposal_only": true,
+    "writes_and_automation_remain_disabled": true
+  },
+  "configured_readiness": {
+    "credential_reference_configured": true,
+    "credential_value_configured": true,
+    "endpoint_configured": true,
+    "executable_now": true,
+    "identity_bound": true,
+    "reasons": [],
+    "role_allowed": true,
+    "schema_version": "okcanvas-groupware-read-readiness-v1",
+    "state": "READY",
+    "write_enabled": false
+  },
+  "configured_route": {
+    "executable_now": true,
+    "grounding": [],
+    "grounding_catalog_id": null,
+    "grounding_catalog_version": null,
+    "grounding_effective_at": null,
+    "grounding_state": "NOT_APPLICABLE",
+    "matched_rule_id": "groupware-read-configured-v1",
+    "policy_id": "organization-assistant-routing-v1",
+    "policy_sha256": "91ed3ad290adb2c66a16adcfa36ec589f20d73c2bda6a2e92739493695fed939",
+    "policy_version": "1.2.0",
+    "reasons": [
+      "groupware-read-intent-detected",
+      "delegated-tenant-principal-role-bound",
+      "read-only-mcp-tool-allowlist-bound"
+    ],
+    "request_class": "READ_SYSTEM",
+    "required_capabilities": [
+      {
+        "availability": "AVAILABLE",
+        "capability_id": "groupware-read-v1",
+        "selected_agent_id": "groupware-read-agent",
+        "side_effect": "READ"
+      }
+    ],
+    "schema_version": "okcanvas-assistant-route-v2",
+    "selected_agent_definition_id": "groupware-read-agent",
+    "side_effect": "READ",
+    "status": "EXECUTABLE"
+  },
+  "default_groupware": {
+    "policy": {
+      "agent_id": "groupware-read-agent",
+      "capability_id": "groupware-read-v1",
+      "max_results": 50,
+      "operations": [
+        {
+          "description": "Search visible Groupware notices without mutation.",
+          "operation_id": "search-notices",
+          "tool_name": "search_notices"
+        },
+        {
+          "description": "Search visible mailbox metadata and messages without sending or changing state.",
+          "operation_id": "search-mail",
+          "tool_name": "search_mail"
+        },
+        {
+          "description": "List visible calendar events without creating, updating, accepting, or deleting events.",
+          "operation_id": "list-calendar-events",
+          "tool_name": "list_calendar_events"
+        }
+      ],
+      "policy_id": "groupware-read-v1",
+      "policy_sha256": "0b7f63059ce1b319279ff1029c8c5286883620041329053c0b8a40c2ebaf9d6b",
+      "required_roles": [
+        "agent-user"
+      ],
+      "schema_version": "okcanvas-groupware-read-policy-v1",
+      "server_id": "groupware-read",
+      "version": "1.0.0",
+      "write_enabled": false
+    },
+    "readiness": {
+      "credential_reference_configured": true,
+      "credential_value_configured": false,
+      "endpoint_configured": false,
+      "executable_now": false,
+      "identity_bound": true,
+      "reasons": [
+        "groupware-endpoint-not-configured",
+        "groupware-credential-value-not-configured"
+      ],
+      "role_allowed": true,
+      "schema_version": "okcanvas-groupware-read-readiness-v1",
+      "state": "NOT_CONFIGURED",
+      "write_enabled": false
+    },
+    "schema_version": "okcanvas-groupware-read-foundation-v1",
+    "server": {
+      "allowed_tools": [
+        "search_notices",
+        "search_mail",
+        "list_calendar_events"
+      ],
+      "authorization_mode": "delegated-bearer-ref",
+      "credential_ref": "groupware-read-credential",
+      "endpoint_mode": "tenant-template",
+      "read_only": true,
+      "required_roles": [
+        "agent-user"
+      ],
+      "schema_version": "okcanvas-mcp-server-v3",
+      "secret_values_exposed": false,
+      "server_id": "groupware-read"
+    }
+  },
+  "denied_readiness": {
+    "credential_reference_configured": true,
+    "credential_value_configured": true,
+    "endpoint_configured": true,
+    "executable_now": false,
+    "identity_bound": true,
+    "reasons": [
+      "delegated-role-not-allowed"
+    ],
+    "role_allowed": false,
+    "schema_version": "okcanvas-groupware-read-readiness-v1",
+    "state": "ACCESS_DENIED",
+    "write_enabled": false
+  },
+  "passed_checks": 30,
+  "runtime_binding": {
+    "execution_path": "multi-remote-mcp-delegated-identity-execution-v1",
+    "mcp_server_count": 1,
+    "runtime_binding_sha256": "c2d2c719cad4a1e454e58d4e942b99636fcf46389153c80b019a31717986e13b"
+  },
+  "schema_version": "okcanvas-step086-groupware-read-only-validation-v1",
+  "state": "PASSED",
+  "step": "STEP086_GROUPWARE_READ_ONLY_VERTICAL",
+  "total_checks": 30,
+  "version": "2.66.0"
+}

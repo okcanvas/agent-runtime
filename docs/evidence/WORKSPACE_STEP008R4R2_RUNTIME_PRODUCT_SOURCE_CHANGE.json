@@ -1,0 +1,32 @@
+{
+  "added": [
+    "bootstrap/storage_topology.py"
+  ],
+  "changed": [
+    "adapters/openai/generic_gateway.py",
+    "application/approvals/service.py",
+    "application/evaluation/application.py",
+    "application/evaluation/suite.py",
+    "application/execution/gateway.py",
+    "application/execution/service.py",
+    "application/ports/__init__.py",
+    "application/ports/stores.py",
+    "application/service/use_cases.py",
+    "application/submissions/execution.py",
+    "bootstrap/application.py",
+    "core/baseline.py"
+  ],
+  "current_file_count": 332,
+  "current_sha256": "eee59758007ca5d51032cb9c708ea9c428fb7d955b92d0e3e605afb69aadff1e",
+  "organization_context_router_agent_skill_mcp_changed": false,
+  "parent_file_count": 331,
+  "parent_runtime_step": "STEP090R1_ORGANIZATION_CONTEXT_MCP_TOOL_OUTPUT_PROTOCOL_AND_SHORT_LIST_TOOL_CHOICE_CLOSURE",
+  "parent_sha256": "84da080a4fc9f1f2a52a16677fdf4f7dedf71a2c96c2e259e4dc6431ac10f706",
+  "parent_workspace_step": "WORKSPACE_STEP008R4R1_FINAL_PROMOTION_DOCUMENT_PRODUCTIZATION_PLAN_AND_STORAGE_AUDIT_ALIGNMENT",
+  "product_semantic_scope": "PERSISTENCE_PORTS_TRANSACTION_OWNERSHIP_AND_BOOTSTRAP_TOPOLOGY",
+  "removed": [],
+  "runtime_step": "STEP091B1_TYPED_PERSISTENCE_PORTS_AND_TRANSACTION_OWNERSHIP",
+  "schema_version": "okcanvas-workspace-step008r4r2-runtime-product-source-change-v1",
+  "scope": "okcanvas-agent-runtime/okcanvas_agent_runtime/**/*.py",
+  "workspace_step": "WORKSPACE_STEP008R4R2_RUNTIME_STEP091B1_TYPED_PERSISTENCE_PORTS_AND_TRANSACTION_OWNERSHIP"
+}

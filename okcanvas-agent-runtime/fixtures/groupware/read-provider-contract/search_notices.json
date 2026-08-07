@@ -1,0 +1,18 @@
+{
+  "delegation_id": "fixture-delegation",
+  "mutated": false,
+  "principal_id": "fixture-principal",
+  "records": [
+    {
+      "record_id": "notice-001",
+      "title": "Maintenance notice"
+    }
+  ],
+  "result_schema_version": "okcanvas-groupware-search-notices-result-v1",
+  "roles": [
+    "agent-user"
+  ],
+  "schema_version": "okcanvas-groupware-read-provider-fixture-v1",
+  "tenant_id": "fixture-tenant",
+  "tool_name": "search_notices"
+}

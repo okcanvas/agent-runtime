@@ -1,0 +1,9 @@
+id: project_readonly_inspect
+sdk_kind: function_tool
+approval_mode: NEVER
+read_only: true
+filesystem_access: read-only
+network_access: none
+shell_access: none
+arguments_persisted: false
+result_persisted_in_events: false

@@ -1,0 +1,966 @@
+{
+  "schema_version": "okcanvas-project-layout-migration-map-v1",
+  "source_step": "STEP080_PRODUCT_OWNED_CAPABILITY_TOPOLOGY_AND_TOOL_DISCOVERY_FOUNDATION",
+  "source_version": "2.60.0",
+  "entry_count": 64,
+  "entries": [
+    {
+      "package": "__main__",
+      "files": 1,
+      "loc": 4,
+      "bytes": 48,
+      "fan_in": 0,
+      "fan_out": 1,
+      "current": "__main__",
+      "target_zone": "interfaces",
+      "target_path": "interfaces/cli/__main__.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "__root__",
+      "files": 1,
+      "loc": 6,
+      "bytes": 115,
+      "fan_in": 43,
+      "fan_out": 0,
+      "current": "__root__",
+      "target_zone": "core",
+      "target_path": "core/__init__.py",
+      "migration_status": "KEEP_PUBLIC_FACADE"
+    },
+    {
+      "package": "acceptance",
+      "files": 2,
+      "loc": 275,
+      "bytes": 10981,
+      "fan_in": 0,
+      "fan_out": 1,
+      "current": "acceptance",
+      "target_zone": "support",
+      "target_path": "support/acceptance",
+      "migration_status": "MIGRATE_WAVE_1"
+    },
+    {
+      "package": "agent_definitions",
+      "files": 4,
+      "loc": 528,
+      "bytes": 24345,
+      "fan_in": 27,
+      "fan_out": 6,
+      "current": "agent_definitions",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/agents/definitions",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "agent_tools",
+      "files": 5,
+      "loc": 295,
+      "bytes": 11952,
+      "fan_in": 2,
+      "fan_out": 5,
+      "current": "agent_tools",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/subagents/agent_tools",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "agents",
+      "files": 4,
+      "loc": 104,
+      "bytes": 3478,
+      "fan_in": 3,
+      "fan_out": 3,
+      "current": "agents",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/agents/sdk",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "api",
+      "files": 1,
+      "loc": 2,
+      "bytes": 45,
+      "fan_in": 0,
+      "fan_out": 0,
+      "current": "api",
+      "target_zone": "interfaces",
+      "target_path": "REMOVE_EMPTY_PLACEHOLDER",
+      "migration_status": "REMOVE_WAVE_1"
+    },
+    {
+      "package": "approval_contracts",
+      "files": 1,
+      "loc": 149,
+      "bytes": 5165,
+      "fan_in": 2,
+      "fan_out": 1,
+      "current": "approval_contracts",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/tools/codex/approval_contracts.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "approval_operator",
+      "files": 2,
+      "loc": 325,
+      "bytes": 11778,
+      "fan_in": 1,
+      "fan_out": 2,
+      "current": "approval_operator",
+      "target_zone": "interfaces",
+      "target_path": "interfaces/operator",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "attachments",
+      "files": 7,
+      "loc": 732,
+      "bytes": 33048,
+      "fan_in": 17,
+      "fan_out": 5,
+      "current": "attachments",
+      "target_zone": "domain",
+      "target_path": "domain/attachments",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "baseline",
+      "files": 1,
+      "loc": 6,
+      "bytes": 239,
+      "fan_in": 4,
+      "fan_out": 0,
+      "current": "baseline",
+      "target_zone": "core",
+      "target_path": "core/baseline.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "business",
+      "files": 2,
+      "loc": 182,
+      "bytes": 6670,
+      "fan_in": 2,
+      "fan_out": 3,
+      "current": "business",
+      "target_zone": "verticals",
+      "target_path": "verticals/store_replenishment",
+      "migration_status": "MIGRATE_WAVE_1"
+    },
+    {
+      "package": "capabilities",
+      "files": 6,
+      "loc": 956,
+      "bytes": 39902,
+      "fan_in": 3,
+      "fan_out": 9,
+      "current": "capabilities",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/topology",
+      "migration_status": "RENAME_WAVE_2"
+    },
+    {
+      "package": "cli",
+      "files": 1,
+      "loc": 1135,
+      "bytes": 49019,
+      "fan_in": 1,
+      "fan_out": 20,
+      "current": "cli",
+      "target_zone": "interfaces",
+      "target_path": "interfaces/cli/main.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "codex_contracts",
+      "files": 1,
+      "loc": 121,
+      "bytes": 4483,
+      "fan_in": 11,
+      "fan_out": 1,
+      "current": "codex_contracts",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/tools/codex/readonly_contracts.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "codex_errors",
+      "files": 1,
+      "loc": 17,
+      "bytes": 361,
+      "fan_in": 3,
+      "fan_out": 1,
+      "current": "codex_errors",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/tools/codex/readonly_errors.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "codex_write_contracts",
+      "files": 1,
+      "loc": 126,
+      "bytes": 5122,
+      "fan_in": 7,
+      "fan_out": 2,
+      "current": "codex_write_contracts",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/tools/codex/write_contracts.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "codex_write_errors",
+      "files": 1,
+      "loc": 17,
+      "bytes": 358,
+      "fan_in": 2,
+      "fan_out": 1,
+      "current": "codex_write_errors",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/tools/codex/write_errors.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "commerce_snapshot_ingress",
+      "files": 6,
+      "loc": 758,
+      "bytes": 29414,
+      "fan_in": 1,
+      "fan_out": 6,
+      "current": "commerce_snapshot_ingress",
+      "target_zone": "verticals",
+      "target_path": "verticals/commerce_snapshot_ingress",
+      "migration_status": "MIGRATE_WAVE_1"
+    },
+    {
+      "package": "config",
+      "files": 1,
+      "loc": 98,
+      "bytes": 3547,
+      "fan_in": 25,
+      "fan_out": 0,
+      "current": "config",
+      "target_zone": "core",
+      "target_path": "core/config.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "contracts",
+      "files": 1,
+      "loc": 257,
+      "bytes": 9477,
+      "fan_in": 33,
+      "fan_out": 1,
+      "current": "contracts",
+      "target_zone": "core",
+      "target_path": "core/contracts.py",
+      "migration_status": "SPLIT_WAVE_3"
+    },
+    {
+      "package": "control_api",
+      "files": 8,
+      "loc": 2964,
+      "bytes": 112367,
+      "fan_in": 7,
+      "fan_out": 41,
+      "current": "control_api",
+      "target_zone": "interfaces",
+      "target_path": "interfaces/control_api",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "errors",
+      "files": 1,
+      "loc": 17,
+      "bytes": 337,
+      "fan_in": 32,
+      "fan_out": 1,
+      "current": "errors",
+      "target_zone": "core",
+      "target_path": "core/errors.py",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "evaluation",
+      "files": 5,
+      "loc": 1449,
+      "bytes": 62165,
+      "fan_in": 5,
+      "fan_out": 9,
+      "current": "evaluation",
+      "target_zone": "domain",
+      "target_path": "domain/evaluations",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "evidence",
+      "files": 4,
+      "loc": 237,
+      "bytes": 7587,
+      "fan_in": 7,
+      "fan_out": 5,
+      "current": "evidence",
+      "target_zone": "infrastructure",
+      "target_path": "infrastructure/evidence",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "execution",
+      "files": 9,
+      "loc": 5038,
+      "bytes": 244129,
+      "fan_in": 22,
+      "fan_out": 81,
+      "current": "execution",
+      "target_zone": "application",
+      "target_path": "application/execution",
+      "migration_status": "SPLIT_WAVE_3"
+    },
+    {
+      "package": "function_tools",
+      "files": 6,
+      "loc": 710,
+      "bytes": 27730,
+      "fan_in": 12,
+      "fan_out": 4,
+      "current": "function_tools",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/tools/function",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "guardrails",
+      "files": 5,
+      "loc": 277,
+      "bytes": 12511,
+      "fan_in": 4,
+      "fan_out": 3,
+      "current": "guardrails",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/guardrails",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "handoffs",
+      "files": 5,
+      "loc": 238,
+      "bytes": 10053,
+      "fan_in": 2,
+      "fan_out": 5,
+      "current": "handoffs",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/subagents/handoffs",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "hosted_search",
+      "files": 5,
+      "loc": 482,
+      "bytes": 19182,
+      "fan_in": 3,
+      "fan_out": 3,
+      "current": "hosted_search",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/tools/hosted_search",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "interactive_runner",
+      "files": 1,
+      "loc": 2,
+      "bytes": 60,
+      "fan_in": 0,
+      "fan_out": 0,
+      "current": "interactive_runner",
+      "target_zone": "interfaces",
+      "target_path": "interfaces/web/interactive_runner",
+      "migration_status": "MIGRATE_WAVE_1"
+    },
+    {
+      "package": "invocations",
+      "files": 7,
+      "loc": 734,
+      "bytes": 29893,
+      "fan_in": 6,
+      "fan_out": 8,
+      "current": "invocations",
+      "target_zone": "domain",
+      "target_path": "domain/invocations",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "mcp_clients",
+      "files": 2,
+      "loc": 257,
+      "bytes": 9005,
+      "fan_in": 1,
+      "fan_out": 2,
+      "current": "mcp_clients",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/mcp/clients",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "mcp_definitions",
+      "files": 4,
+      "loc": 411,
+      "bytes": 17434,
+      "fan_in": 9,
+      "fan_out": 2,
+      "current": "mcp_definitions",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/mcp/definitions",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "mcp_servers",
+      "files": 2,
+      "loc": 142,
+      "bytes": 4825,
+      "fan_in": 0,
+      "fan_out": 1,
+      "current": "mcp_servers",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/mcp/servers",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "model",
+      "files": 1,
+      "loc": 800,
+      "bytes": 50940,
+      "fan_in": 1,
+      "fan_out": 2,
+      "current": "model",
+      "target_zone": "core",
+      "target_path": "core/runtime_info",
+      "migration_status": "SPLIT_WAVE_2"
+    },
+    {
+      "package": "model_retry",
+      "files": 5,
+      "loc": 149,
+      "bytes": 6160,
+      "fan_in": 4,
+      "fan_out": 3,
+      "current": "model_retry",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/model/retry",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "model_routing",
+      "files": 5,
+      "loc": 268,
+      "bytes": 10251,
+      "fan_in": 4,
+      "fan_out": 3,
+      "current": "model_routing",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/model/routing",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "operations_console",
+      "files": 2,
+      "loc": 97,
+      "bytes": 4116,
+      "fan_in": 1,
+      "fan_out": 8,
+      "current": "operations_console",
+      "target_zone": "interfaces",
+      "target_path": "interfaces/web/operations_console",
+      "migration_status": "MIGRATE_WAVE_1"
+    },
+    {
+      "package": "orchestration",
+      "files": 6,
+      "loc": 839,
+      "bytes": 34534,
+      "fan_in": 5,
+      "fan_out": 21,
+      "current": "orchestration",
+      "target_zone": "application",
+      "target_path": "application/orchestration",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "persistence",
+      "files": 2,
+      "loc": 1057,
+      "bytes": 42335,
+      "fan_in": 3,
+      "fan_out": 4,
+      "current": "persistence",
+      "target_zone": "infrastructure",
+      "target_path": "infrastructure/persistence",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "policy",
+      "files": 1,
+      "loc": 2,
+      "bytes": 48,
+      "fan_in": 9,
+      "fan_out": 0,
+      "current": "policy",
+      "target_zone": "core",
+      "target_path": "REMOVE_EMPTY_PLACEHOLDER",
+      "migration_status": "REMOVE_WAVE_1"
+    },
+    {
+      "package": "product",
+      "files": 5,
+      "loc": 386,
+      "bytes": 9787,
+      "fan_in": 28,
+      "fan_out": 3,
+      "current": "product",
+      "target_zone": "domain",
+      "target_path": "domain/runs",
+      "migration_status": "SPLIT_WAVE_3"
+    },
+    {
+      "package": "project_snapshots",
+      "files": 7,
+      "loc": 803,
+      "bytes": 34877,
+      "fan_in": 14,
+      "fan_out": 5,
+      "current": "project_snapshots",
+      "target_zone": "domain",
+      "target_path": "domain/project_snapshots",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "protected_payload",
+      "files": 4,
+      "loc": 493,
+      "bytes": 19880,
+      "fan_in": 9,
+      "fan_out": 6,
+      "current": "protected_payload",
+      "target_zone": "domain",
+      "target_path": "domain/protected_payload",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "provider_identity",
+      "files": 5,
+      "loc": 132,
+      "bytes": 5267,
+      "fan_in": 3,
+      "fan_out": 3,
+      "current": "provider_identity",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/model/provider_identity",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "reasoning_evidence",
+      "files": 5,
+      "loc": 139,
+      "bytes": 6327,
+      "fan_in": 3,
+      "fan_out": 3,
+      "current": "reasoning_evidence",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/model/reasoning_evidence",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "reference_catalog",
+      "files": 5,
+      "loc": 776,
+      "bytes": 28242,
+      "fan_in": 4,
+      "fan_out": 4,
+      "current": "reference_catalog",
+      "target_zone": "infrastructure",
+      "target_path": "infrastructure/reference_catalog",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "replenishment_limits",
+      "files": 1,
+      "loc": 9,
+      "bytes": 298,
+      "fan_in": 2,
+      "fan_out": 0,
+      "current": "replenishment_limits",
+      "target_zone": "verticals",
+      "target_path": "verticals/store_replenishment/limits.py",
+      "migration_status": "MIGRATE_WAVE_1"
+    },
+    {
+      "package": "response_storage",
+      "files": 5,
+      "loc": 110,
+      "bytes": 4210,
+      "fan_in": 3,
+      "fan_out": 3,
+      "current": "response_storage",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/model/response_storage",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "run_submission",
+      "files": 8,
+      "loc": 3428,
+      "bytes": 148505,
+      "fan_in": 7,
+      "fan_out": 31,
+      "current": "run_submission",
+      "target_zone": "application",
+      "target_path": "application/submissions",
+      "migration_status": "SPLIT_WAVE_3"
+    },
+    {
+      "package": "runtime",
+      "files": 12,
+      "loc": 2606,
+      "bytes": 104195,
+      "fan_in": 15,
+      "fan_out": 54,
+      "current": "runtime",
+      "target_zone": "infrastructure",
+      "target_path": "infrastructure/openai_runtime",
+      "migration_status": "SPLIT_WAVE_3"
+    },
+    {
+      "package": "sandbox_runtime",
+      "files": 7,
+      "loc": 1974,
+      "bytes": 96237,
+      "fan_in": 4,
+      "fan_out": 3,
+      "current": "sandbox_runtime",
+      "target_zone": "infrastructure",
+      "target_path": "infrastructure/sandbox",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "service_clients",
+      "files": 6,
+      "loc": 1419,
+      "bytes": 66151,
+      "fan_in": 2,
+      "fan_out": 24,
+      "current": "service_clients",
+      "target_zone": "interfaces",
+      "target_path": "interfaces/service_api",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "sessions",
+      "files": 14,
+      "loc": 2366,
+      "bytes": 97311,
+      "fan_in": 8,
+      "fan_out": 4,
+      "current": "sessions",
+      "target_zone": "domain",
+      "target_path": "domain/sessions",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "skills",
+      "files": 5,
+      "loc": 519,
+      "bytes": 22909,
+      "fan_in": 8,
+      "fan_out": 4,
+      "current": "skills",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/skills",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "streaming",
+      "files": 5,
+      "loc": 290,
+      "bytes": 9297,
+      "fan_in": 2,
+      "fan_out": 1,
+      "current": "streaming",
+      "target_zone": "infrastructure",
+      "target_path": "infrastructure/streaming",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "tool_approval",
+      "files": 8,
+      "loc": 1813,
+      "bytes": 82161,
+      "fan_in": 4,
+      "fan_out": 28,
+      "current": "tool_approval",
+      "target_zone": "domain",
+      "target_path": "domain/tool_approvals",
+      "migration_status": "MIGRATE_WAVE_3"
+    },
+    {
+      "package": "tools",
+      "files": 1,
+      "loc": 2,
+      "bytes": 47,
+      "fan_in": 0,
+      "fan_out": 0,
+      "current": "tools",
+      "target_zone": "capabilities",
+      "target_path": "REMOVE_EMPTY_PLACEHOLDER",
+      "migration_status": "REMOVE_WAVE_1"
+    },
+    {
+      "package": "trace_export",
+      "files": 5,
+      "loc": 129,
+      "bytes": 5258,
+      "fan_in": 8,
+      "fan_out": 3,
+      "current": "trace_export",
+      "target_zone": "capabilities",
+      "target_path": "capabilities/model/trace_export",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "tui_client",
+      "files": 5,
+      "loc": 860,
+      "bytes": 29980,
+      "fan_in": 1,
+      "fan_out": 2,
+      "current": "tui_client",
+      "target_zone": "interfaces",
+      "target_path": "interfaces/tui",
+      "migration_status": "MIGRATE_WAVE_2"
+    },
+    {
+      "package": "validation",
+      "files": 2,
+      "loc": 133,
+      "bytes": 3957,
+      "fan_in": 2,
+      "fan_out": 2,
+      "current": "validation",
+      "target_zone": "support",
+      "target_path": "support/validation",
+      "migration_status": "MIGRATE_WAVE_1"
+    },
+    {
+      "package": "walking_skeleton",
+      "files": 3,
+      "loc": 220,
+      "bytes": 11182,
+      "fan_in": 1,
+      "fan_out": 1,
+      "current": "walking_skeleton",
+      "target_zone": "support",
+      "target_path": "support/scenarios",
+      "migration_status": "MIGRATE_WAVE_1"
+    },
+    {
+      "package": "workspace",
+      "files": 4,
+      "loc": 715,
+      "bytes": 23469,
+      "fan_in": 9,
+      "fan_out": 3,
+      "current": "workspace",
+      "target_zone": "infrastructure",
+      "target_path": "infrastructure/workspace",
+      "migration_status": "MIGRATE_WAVE_3"
+    }
+  ],
+  "zones": [
+    {
+      "zone": "application",
+      "entries": 3,
+      "files": 23,
+      "loc": 9305
+    },
+    {
+      "zone": "capabilities",
+      "entries": 24,
+      "files": 89,
+      "loc": 6278
+    },
+    {
+      "zone": "core",
+      "entries": 7,
+      "files": 7,
+      "loc": 1186
+    },
+    {
+      "zone": "domain",
+      "entries": 8,
+      "files": 57,
+      "loc": 8776
+    },
+    {
+      "zone": "infrastructure",
+      "entries": 7,
+      "files": 39,
+      "loc": 7655
+    },
+    {
+      "zone": "interfaces",
+      "entries": 9,
+      "files": 27,
+      "loc": 6808
+    },
+    {
+      "zone": "support",
+      "entries": 3,
+      "files": 7,
+      "loc": 628
+    },
+    {
+      "zone": "verticals",
+      "entries": 3,
+      "files": 9,
+      "loc": 949
+    }
+  ],
+  "cross_zone_imports": [
+    {
+      "from": "application",
+      "to": "capabilities",
+      "imports": 52
+    },
+    {
+      "from": "application",
+      "to": "domain",
+      "imports": 38
+    },
+    {
+      "from": "capabilities",
+      "to": "core",
+      "imports": 38
+    },
+    {
+      "from": "infrastructure",
+      "to": "core",
+      "imports": 34
+    },
+    {
+      "from": "interfaces",
+      "to": "domain",
+      "imports": 30
+    },
+    {
+      "from": "application",
+      "to": "core",
+      "imports": 24
+    },
+    {
+      "from": "infrastructure",
+      "to": "capabilities",
+      "imports": 24
+    },
+    {
+      "from": "domain",
+      "to": "core",
+      "imports": 24
+    },
+    {
+      "from": "interfaces",
+      "to": "core",
+      "imports": 17
+    },
+    {
+      "from": "interfaces",
+      "to": "capabilities",
+      "imports": 16
+    },
+    {
+      "from": "capabilities",
+      "to": "infrastructure",
+      "imports": 13
+    },
+    {
+      "from": "interfaces",
+      "to": "infrastructure",
+      "imports": 12
+    },
+    {
+      "from": "domain",
+      "to": "capabilities",
+      "imports": 12
+    },
+    {
+      "from": "domain",
+      "to": "application",
+      "imports": 10
+    },
+    {
+      "from": "interfaces",
+      "to": "application",
+      "imports": 8
+    },
+    {
+      "from": "application",
+      "to": "infrastructure",
+      "imports": 5
+    },
+    {
+      "from": "infrastructure",
+      "to": "domain",
+      "imports": 4
+    },
+    {
+      "from": "verticals",
+      "to": "core",
+      "imports": 4
+    },
+    {
+      "from": "verticals",
+      "to": "application",
+      "imports": 3
+    },
+    {
+      "from": "support",
+      "to": "core",
+      "imports": 3
+    },
+    {
+      "from": "domain",
+      "to": "support",
+      "imports": 2
+    },
+    {
+      "from": "core",
+      "to": "verticals",
+      "imports": 1
+    },
+    {
+      "from": "support",
+      "to": "infrastructure",
+      "imports": 1
+    },
+    {
+      "from": "interfaces",
+      "to": "verticals",
+      "imports": 1
+    },
+    {
+      "from": "interfaces",
+      "to": "support",
+      "imports": 1
+    },
+    {
+      "from": "application",
+      "to": "verticals",
+      "imports": 1
+    },
+    {
+      "from": "domain",
+      "to": "infrastructure",
+      "imports": 1
+    }
+  ],
+  "current_module_cycles": 0,
+  "migration_gate": "STEP080_WINDOWS_LIVE_ACCEPTANCE_REQUIRED_BEFORE_SOURCE_MOVES",
+  "map_sha256": "1d2ae78fc2dcaadd1c13f70cdec41d099357f962f8660d85e8ed15d9186f452c"
+}

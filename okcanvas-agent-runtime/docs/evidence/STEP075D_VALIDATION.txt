@@ -1,0 +1,51 @@
+STEP075D_PYTHON_SUBPROCESS_STDIN_INPUT_CONTRACT_FIX
+version: 2.55.4
+state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Source validation:
+- STEP075D acceptance: 29/29 PASS
+- Focused STEP075D/075C/075B/075A/075/Sandbox/provider: 117/117 PASS
+- Historical Skill/trace/service: 47/47 PASS
+- Full Python regression: 827/827 PASS across 210 test files
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+- Deterministic Docker/network/model calls: 0/0/0
+
+Identity:
+- Sandbox policy SHA-256: eca4831968a99223a357edb2da27ee277f120e204e633eeaebf37d8a1651720a
+- Provider contract SHA-256: 83868e3f4d261d4d8e1b98b033f2c735e90da00125ec3a1fe9673e6abb85aaf5
+- Foundation SHA-256: 90403093a14d9cadaf0aaf1abf3bf4c71127293e7da54950e7d0f8df00008a9f
+- Sandbox Runtime SHA-256: f650ec394a824da406fcc8c1f05b5e8dc97d40088adbb282b75cc40b4e9262aa
+- Sample Runtime binding SHA-256: 471b80df4f8d094dd5eb43741155b8f870d4178d08081c3ac7e3d46ecd8cee1a
+- Service policy SHA-256: ceed2704577f21042966e6f162aa57a8fac72b92138201abc04dc8b17afffb99
+
+Fresh ZIP validation is appended after candidate extraction verification.
+
+Candidate ZIP validation:
+- Candidate SHA-256: 23bf92e2f17ac99d28b2b70df59915252c3af1db10a039f0ed54b9bded862d33
+- Canonical ZIP root: 1
+- ZIP entries: 3,080
+- Forbidden files: 0
+- STEP075D acceptance: 29/29 PASS
+- Full Python regression: 827/827 PASS across 210 files
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+
+Final ZIP SHA and final fresh extraction are recorded after final packaging.
+
+Final-package fresh extraction verification before final hash publication:
+- Canonical ZIP root: 1
+- ZIP entries: 3,080
+- Forbidden files: 0
+- STEP075D acceptance: 29/29 PASS
+- Full Python regression: 827/827 PASS across 210 files
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- npm pack dry-run: 23 files PASS

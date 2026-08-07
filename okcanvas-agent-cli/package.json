@@ -1,0 +1,18 @@
+{
+  "bin": {
+    "okcanvas-agent": "src/cli.mjs"
+  },
+  "description": "Product Service CLI for the OKCanvas Agent Runtime",
+  "engines": {
+    "node": ">=20"
+  },
+  "name": "@okcanvas/agent-service-cli",
+  "private": true,
+  "scripts": {
+    "acceptance": "node scripts/run-acceptance.mjs",
+    "start": "node src/cli.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "type": "module",
+  "version": "0.2.1"
+}

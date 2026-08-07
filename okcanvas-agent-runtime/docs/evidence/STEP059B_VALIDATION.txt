@@ -1,0 +1,98 @@
+STEP059B_ACTUAL_SDK_TOOL_CONTEXT_EXPORT_ALIGNMENT
+Project version: 2.39.2
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_ACTUAL_SDK_RERUN_PENDING
+
+Confirmed immutable SDK contract
+- openai-agents reference version: 0.19.0
+- agents.__init__ exports function_tool
+- agents.__init__ does not export ToolContext
+- agents.tool_context defines ToolContext
+- SDK examples/docs/tests import ToolContext from agents.tool_context
+
+Product correction
+- from agents import function_tool
+- from agents.tool_context import ToolContext
+- no from agents import ToolContext
+- output_type-only STEP059A contract preserved
+- all fake SDKs mirror agents.tool_context submodule export
+
+Validation
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- npm pack dry-run: PASS, 23 files, 0 runtime dependencies
+- Python test files: 177
+- Python pytest: 582/582 PASS
+- STEP059B deterministic acceptance: 8/8 PASS
+- STEP059A deterministic acceptance: 10/10 PASS
+- STEP059 fixture acceptance: 16/16 PASS
+- STEP058 acceptance: 18/18 PASS
+- STEP057 acceptance: 25/25 PASS
+- STEP056C acceptance: 25/25 PASS
+- STEP056B acceptance: 25/25 PASS
+- STEP056 acceptance: 21/21 PASS
+- STEP055 acceptance: 35/35 PASS
+- STEP054 acceptance: 30/30 PASS
+- STEP053 acceptance: 30/30 PASS
+- STEP052 acceptance: 25/25 PASS
+- STEP051 acceptance: 25/25 PASS
+- STEP050 acceptance: 31/31 PASS
+- STEP049 acceptance: 33/33 PASS
+- STEP048 acceptance: 32/32 PASS
+- STEP047 acceptance: 29/29 PASS
+- STEP046 acceptance: 27/27 PASS
+- STEP045 acceptance: 28/28 PASS
+- STEP044 acceptance: 23/23 PASS
+- STEP043 acceptance: 29/29 PASS
+- STEP042 acceptance: 29/29 PASS
+- STEP041 acceptance: 24/24 PASS
+- STEP039 acceptance: 20/20 PASS
+- STEP038 acceptance: 24/24 PASS, Function Tool registry count 3
+- STEP030A acceptance: 8/8 PASS, Windows launchers 70, violations 0
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+
+Not executed in this Linux validation environment
+- sh_run_step059b_acceptance.cmd against an installed openai-agents==0.19.0 package
+- real OpenAI project-readonly Tool execution
+These remain mandatory Windows closure gates.
+
+Independent candidate ZIP validation
+- canonical root: 1
+- entries: 2,718
+- forbidden local/cache entries: 0
+- immutable Reference .vscode files: 2 preserved
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- Python pytest: 582/582 PASS
+- STEP059B deterministic: PASS
+- STEP059A deterministic: PASS
+- STEP059: 16/16 PASS
+- STEP058: 18/18 PASS
+- STEP057: 25/25 PASS
+- STEP045: 28/28 PASS
+- STEP038: 24/24 PASS
+- STEP030A: 8/8 PASS, launcher count 70, violations 0
+
+Final self-extracted tested ZIP validation
+- archive entries: 2,718
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- Python pytest: 582/582 PASS
+- STEP059B deterministic: PASS
+- STEP059A deterministic: PASS
+- STEP059: 16/16 PASS
+- STEP058: 18/18 PASS
+- STEP057: 25/25 PASS
+- STEP045: 28/28 PASS
+- STEP038: 24/24 PASS
+- STEP030A: 8/8 PASS, launcher count 70, violations 0
+
+Release packaging rule
+- release ZIP may differ from the tested ZIP only in this validation record.

@@ -1,0 +1,35 @@
+{
+  "schema_version": "okcanvas-step034-windows-live-acceptance-summary-v1",
+  "step_id": "STEP034",
+  "reported_at": "2026-07-30T00:59:00.445020Z",
+  "state": "PASSED",
+  "checks_passed": 20,
+  "checks_total": 20,
+  "reconciliation": {
+    "scanned": 1,
+    "reconciled": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failure": {
+    "code": "PROCESS_LOSS_RECONCILED",
+    "retryable": false
+  },
+  "gateway_call_count": 0,
+  "artifact_count": 0,
+  "evaluation_count": 0,
+  "protected_payload_file_count": 1,
+  "generation_fence": {
+    "active_before": true,
+    "active_after": false,
+    "late_event_blocked": true,
+    "late_metadata_blocked": true,
+    "late_artifact_blocked": true
+  },
+  "replay": {
+    "scanned": 0,
+    "reconciled": 0
+  },
+  "cleanup_state": "COMPLETED",
+  "source": "user-reported Windows output from sh_run_step034_acceptance.cmd"
+}

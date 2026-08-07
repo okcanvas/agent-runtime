@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "reference-research-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Reference Research Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [],
+  "mcp_servers": [
+    "reference-catalog"
+  ],
+  "handoffs": [],
+  "max_turns": 4,
+  "workflow_name": "OKCanvas Reference Research",
+  "session_mode": "disabled"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-step067-scope-decision-v1",
+  "step": "STEP067_HOSTED_WEB_SEARCH_SOURCE_POLICY_AND_EVIDENCE_FOUNDATION",
+  "decision": "SEPARATE_WEB_SEARCH_FROM_FILE_SEARCH",
+  "step067_includes": [
+    "WebSearchTool"
+  ],
+  "step067_excludes": [
+    "FileSearchTool",
+    "vector-store-lifecycle"
+  ],
+  "code_findings": [
+    "WebSearchTool can be configured at Agent execution time from immutable policy",
+    "FileSearchTool requires vector_store_ids",
+    "the current Product has no OpenAI File or Vector Store create-own-retain-delete lifecycle"
+  ],
+  "future_decisions_required": [
+    "resource owner",
+    "tenant boundary",
+    "retention and expiration",
+    "deletion evidence",
+    "provider identifier minimization"
+  ]
+}

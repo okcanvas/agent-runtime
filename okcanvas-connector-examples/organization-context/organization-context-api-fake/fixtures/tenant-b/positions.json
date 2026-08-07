@@ -1,0 +1,14 @@
+[
+  {
+    "aliases": [
+      "Manager"
+    ],
+    "authority_level": 50,
+    "name": "매니저",
+    "position_id": "position.manager",
+    "position_type": "RESPONSIBILITY",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-b"
+  }
+]

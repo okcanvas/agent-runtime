@@ -1,0 +1,76 @@
+STEP056C_NODE_TYPESCRIPT_AGENT_CLI_DEVELOPER_OBSERVABILITY
+Version: 2.36.2
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+SOURCE VALIDATION
+- Python compileall: PASS
+- TypeScript compile: PASS
+- Node tests: 7/7 PASS
+- npm pack dry-run: PASS, package 0.2.0, 23 files, 0 runtime dependencies
+- Python pytest: 557/557 PASS across 171 test files, executed in bounded groups
+
+DETERMINISTIC ACCEPTANCE
+- STEP056C: 25/25 PASS, cleanup COMPLETED once
+- STEP056B: 25/25 PASS, cleanup COMPLETED once
+- STEP056: 21/21 PASS, cleanup COMPLETED once
+- STEP055: 35/35 PASS, cleanup COMPLETED once
+- STEP054: 30/30 PASS, cleanup COMPLETED once
+- STEP053: 30/30 PASS, cleanup COMPLETED once
+- STEP052: 25/25 PASS, cleanup COMPLETED once
+- STEP051: 25/25 PASS, cleanup COMPLETED once
+- STEP050: 31/31 PASS, cleanup COMPLETED once
+- STEP049: 33/33 PASS, cleanup COMPLETED once
+- STEP048: 32/32 PASS, cleanup COMPLETED once
+- STEP047: 29/29 PASS, cleanup COMPLETED once
+- STEP046: 27/27 PASS, cleanup COMPLETED once
+- STEP045: 28/28 PASS, cleanup COMPLETED once
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS, cleanup COMPLETED once
+- STEP042: 29/29 PASS, cleanup COMPLETED once
+- STEP041: 24/24 PASS, cleanup COMPLETED once
+- STEP039: 20/20 PASS, cleanup COMPLETED once
+
+WINDOWS LAUNCHER / REFERENCE
+- STEP030A: 8/8 PASS
+- Windows launchers: 65
+- launcher violations: 0
+- Reference focused regression: 13/13 PASS
+- Reference integrity: 4/4
+- direct /reference imports: 0
+
+STEP056C ACCEPTANCE CORE
+- one Node process, two governed requests
+- debug off by default
+- /debug on and /debug off in the same process
+- debug-only preflight and exact challenge visibility
+- no exact-challenge retyping
+- persisted SSE visible in debug mode
+- terminal Run, verified Artifact raw JSON and explicit NOT RUN Evaluation visible
+- normal answer-first mode preserved
+- /evaluate tui-client-foundation-v1 PASSED
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 2/2/2/2/20/2/1
+- protected payload files: 0
+
+INDEPENDENT ZIP VALIDATION
+- candidate ZIP canonical root: 1
+- candidate ZIP entries: 2,655
+- forbidden entries: 0
+- immutable Reference .vscode files retained: 2
+- candidate TypeScript compile: PASS
+- candidate Node tests: 7/7 PASS
+- candidate npm pack dry-run: PASS, 23 files
+- candidate Python pytest: 557/557 PASS across 171 test files
+- candidate STEP056C: 25/25 PASS, cleanup COMPLETED
+- candidate STEP056B: 25/25 PASS, cleanup COMPLETED
+- candidate STEP030A: 8/8 PASS, 65 launchers, 0 violations
+- candidate Reference focused regression: 13/13 PASS
+- final tested ZIP canonical root: 1
+- final tested ZIP entries: 2,655
+- final tested ZIP Python compileall: PASS
+- final tested ZIP TypeScript compile: PASS
+- final tested ZIP Node tests: 7/7 PASS
+- final tested ZIP Python pytest: 557/557 PASS
+- final tested ZIP STEP056C: 25/25 PASS, cleanup COMPLETED
+- final tested ZIP STEP030A: 8/8 PASS, 65 launchers, 0 violations
+- final tested ZIP Reference focused regression: 13/13 PASS
+- release ZIP differs from the tested ZIP only in this Validation record

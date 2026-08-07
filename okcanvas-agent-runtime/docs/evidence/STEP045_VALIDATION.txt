@@ -1,0 +1,46 @@
+STEP045 validation
+
+Baseline
+- STEP: STEP045_INTEGRATED_WALKING_SKELETON_ACCEPTANCE
+- Version: 2.25.0
+- Deterministic state: BASIC_AGENT_RUNTIME_SKELETON_COMPLETE
+
+Source-tree validation
+- compileall: PASS
+- full pytest: 463 passed
+- STEP045 integrated acceptance: 28/28 PASS
+- scenario catalog: 10 exact ordered scenarios
+- STEP044 regression: 23/23 PASS
+- STEP043 regression: 29/29 PASS
+- STEP030A Windows launcher contract: 8/8 PASS
+- Windows Runtime launchers: 50
+- launcher violations: 0
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+STEP045 acceptance matrix
+- fresh Tool-free governed Runner path: Task/Run/Submission/Invocation/Event/Artifact = 1/1/1/1/10/1
+- STEP037 Runner/MCP/Artifact/Evaluation: 24/24 PASS
+- STEP038 Function Tool/Approval: 24/24 PASS
+- STEP039 native streaming: 20/20 PASS
+- STEP041 native Handoff: 24/24 PASS
+- STEP042 Agent-as-Tool: 29/29 PASS
+- STEP043 SQLite Session: 29/29 PASS
+- STEP044 native Guardrail: 23/23 PASS
+- all acceptance workspaces cleanup: COMPLETED
+
+Canonical package validation
+- canonical root count: 1
+- ZIP entries: 2,420
+- forbidden real environment/venv/cache/local-state/database/protected-payload files: 0
+- separately extracted ZIP full pytest: 463 passed
+- separately extracted ZIP STEP045: 28/28 PASS
+- separately extracted ZIP skeleton state: BASIC_AGENT_RUNTIME_SKELETON_COMPLETE
+- separately extracted ZIP scenario count: 10
+- separately extracted ZIP STEP030A: 8/8 PASS
+- separately extracted ZIP Windows Runtime launchers: 50
+- separately extracted ZIP launcher violations: 0
+- separately extracted ZIP Reference integrity: 4/4 PASS
+- separately extracted ZIP direct executable /reference imports: 0
+
+The adjacent .zip.sha256 file is authoritative for the final package bytes. After this document is packaged, the SHA-final ZIP must be extracted once more and reproduce these values before release.

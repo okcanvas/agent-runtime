@@ -1,0 +1,51 @@
+{
+  "connector": {
+    "passed_checks": 7,
+    "pytest": "10/10",
+    "state": "PASSED",
+    "total_checks": 7
+  },
+  "connector_example": {
+    "passed_checks": 7,
+    "state": "PASSED",
+    "total_checks": 7
+  },
+  "deterministic_main_assistant_e2e": {
+    "passed_checks": 14,
+    "state": "PASSED",
+    "total_checks": 14
+  },
+  "example": {
+    "passed_checks": 6,
+    "state": "PASSED",
+    "total_checks": 6
+  },
+  "live_openai_model_called": false,
+  "live_preflight_without_environment": {
+    "network_called": false,
+    "safe_category": "LIVE_ENVIRONMENT_NOT_READY",
+    "state": "FAILED_AS_EXPECTED"
+  },
+  "passed_checks": 30,
+  "runtime_step087r1": {
+    "passed_checks": 17,
+    "state": "PASSED",
+    "total_checks": 17,
+    "version": "2.67.1"
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-step004r1-local-deterministic-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP004R1_WINDOWS_LIVE_HARNESS_CLEANUP_AND_WORKSPACE_BYTECODE_ISOLATION_CLOSURE",
+  "total_checks": 30,
+  "version": "0.4.1",
+  "windows_live_rerun_pending": true,
+  "workspace_manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "workspace_unit_tests": {
+    "state": "PASSED",
+    "test_count": 50
+  }
+}

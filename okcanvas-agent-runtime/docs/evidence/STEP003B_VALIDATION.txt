@@ -1,0 +1,46 @@
+STEP003B_CODEX_BYTECODE_SUPPRESSION_FIX
+Date: 2026-07-28
+Version: 0.3.2
+Status: IMPLEMENTED_NOT_LIVE_ACCEPTED
+
+Confirmed input evidence
+- Second Windows STEP003 run: core_acceptance_passed=true.
+- All ten functional checks=true.
+- Write modified only src/inventory/pricing.py.
+- Baseline validator: 1 failed as expected.
+- Post validator: 1 passed.
+- Cleanup: WARNING after 8 attempts on fixture-repo/src/inventory/__pycache__.
+
+Code correction
+- Codex read-only child environment now forces PYTHONDONTWRITEBYTECODE=1.
+- Codex workspace-write child environment now forces PYTHONDONTWRITEBYTECODE=1.
+- API key and unrelated host secrets remain excluded from inherited child env.
+
+Deterministic validation
+1. python -m compileall -q src scripts tests
+   PASS
+2. PYTHONPATH=src pytest -q
+   PASS: 69 passed
+3. PYTHONPATH=src python scripts/verify_reference.py
+   PASS: 4/4
+4. PYTHONPATH=src python scripts/verify_codex_fixture.py
+   PASS: intentional 15000 != 25000 defect reproduced
+5. PYTHONPATH=src python scripts/verify_codex_write_fixture.py
+   PASS: baseline 1 failed; known repair 1 passed; source fixture unchanged
+6. Child Python bytecode regression
+   PASS: exact read-only and write Codex envs imported a temporary package without creating __pycache__
+7. Runtime info
+   step=STEP003B_CODEX_BYTECODE_SUPPRESSION_FIX
+   version=0.3.2
+   workspace_write_live_accepted=false
+
+Not executed
+- Windows live rerun using the new Codex child environment.
+- Cleanup state COMPLETED under real Codex execution.
+- External project write.
+8. Final package re-extraction
+   PASS: canonical root okcanvas-agent-runtime/
+   PASS: 69 tests
+   PASS: Reference 4/4
+   PASS: STEP003 fixture baseline failure and known repair success
+   PASS: .env.local and live step003 evidence excluded; examples retained

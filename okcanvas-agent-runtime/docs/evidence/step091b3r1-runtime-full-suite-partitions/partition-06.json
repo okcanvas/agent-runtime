@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-06",
+  "partition_number": 6,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:06:54.470407+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 66,
+  "passed_tests": 66,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 9.133,
+  "exit_code": 0,
+  "files_sha256": "faf250cb1994932f61f8575d9740cd3b83c5621bffc9743720d045f2543e43e8",
+  "log_sha256": "3ae15bf04094054cfaf0b6014449b6d0509163df179972c843e2e96992194c7f",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_recorded_run_evaluation_service.py",
+    "tests/test_reference_catalog_cli.py",
+    "tests/test_reference_catalog_service.py",
+    "tests/test_reference_grounded_architecture.py",
+    "tests/test_reference_manifest.py",
+    "tests/test_reference_mcp_tools.py",
+    "tests/test_run_execution_metadata.py",
+    "tests/test_run_submission_boundary.py",
+    "tests/test_runtime_info.py",
+    "tests/test_sdk_readiness.py",
+    "tests/test_service.py",
+    "tests/test_sqlite_product_store.py",
+    "tests/test_sqlite_session_agent_tool_composition.py",
+    "tests/test_sqlite_session_approval_composition.py"
+  ]
+}

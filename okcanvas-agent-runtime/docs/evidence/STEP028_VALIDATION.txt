@@ -1,0 +1,57 @@
+STEP028_COMMERCE_SNAPSHOT_IDENTITY_CONSISTENCY
+Status: WINDOWS_LIVE_ACCEPTED
+Version: 2.8.0
+Date: 2026-07-30
+
+Code-audited finding
+- ControlledCommerceHTTPAdapter validated StoreReplenishmentInput but did not compare returned snapshot_id with the requested normalized snapshot_key.
+- Request SHA and response SHA were bound, but the requested business identity and returned business identity could differ.
+
+Implemented boundary
+- Exact returned snapshot_id == requested normalized snapshot_key is required.
+- Mismatch returns HTTP 502, code COMMERCE_SNAPSHOT_IDENTITY_MISMATCH, retryable=false.
+- The safe error message does not echo the returned identity.
+- Rejection occurs before canonical preflight, protected payload, Product state, Evaluation, Artifact, or model execution.
+
+Deterministic acceptance
+- STEP028 acceptance: 15/15 PASS.
+- Loopback source reads: 1.
+- Source writes: 0.
+- Product/Evaluation final counts: all 0.
+- Artifact files: 0.
+- Protected payload files: 0.
+- Model gateway calls: 0.
+- Source credential and mismatched returned identity absent from SQLite.
+- Reference integrity unchanged.
+- Cleanup: COMPLETED.
+
+Full regression
+- compileall: PASS.
+- pytest: 341 passed.
+- STEP028: 15/15 PASS.
+- STEP027: 24/24 PASS.
+- STEP026: 22/22 PASS.
+- STEP025: 21/21 PASS.
+- STEP024B: 7/7 PASS.
+- STEP024: 18/18 PASS.
+- STEP020 approve/reject: PASS.
+- STEP023 operator CLI: 15/15 PASS.
+- immutable Reference verification: 4/4 PASS.
+- direct /reference imports: 0 violations.
+
+Windows live closure
+User-reported sh_run_step028_acceptance.cmd passed:
+- state=PASSED;
+- all 15 checks=true;
+- response HTTP 502;
+- code=COMMERCE_SNAPSHOT_IDENTITY_MISMATCH;
+- retryable=false;
+- source.read_count=1;
+- source.write_count=0;
+- all final counts=0;
+- artifact_count=0;
+- protected_payload_file_count=0;
+- gateway_call_count=0;
+- cleanup_state=COMPLETED.
+
+Compact Windows Evidence: docs/evidence/STEP028_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json

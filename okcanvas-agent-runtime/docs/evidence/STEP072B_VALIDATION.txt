@@ -1,0 +1,59 @@
+STEP072B_WINDOWS_CRLF_AND_LOCAL_ENV_FORWARDING_FIX
+Version: 2.52.2
+State: WINDOWS_LIVE_ACCEPTED
+
+SOURCE VALIDATION BEFORE WINDOWS RERUN
+- Post-live STEP072B deterministic acceptance: 26/26 PASS
+- Focused STEP072B + STEP072A + STEP072 + Windows entrypoint tests: 52/52 PASS
+- Historical STEP068-STEP071 Skill/attachment/service tests: 41/41 PASS
+- Full Python regression: 757/757 PASS across all 203 test files
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS (inputs=11, outputs=21, tests=2)
+- Node tests: 14/14 PASS
+- npm pack --dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0
+- Deterministic external network calls: 0
+- Deterministic model calls: 0
+
+REAL WINDOWS CLOSURE
+- STEP072B deterministic acceptance: 24/24 PASS
+- Focused tests: 51/51 PASS
+- Historical tests: 41/41 PASS
+- Node tests: 14/14 PASS
+- STEP072B live acceptance: 17/17 PASS
+- Model: gpt-4.1
+- Model calls: 1
+- Usage: 827 input / 420 output / 1,247 total tokens
+- Terminal status: SUCCEEDED
+- PYTHONPYCACHEPREFIX active: true
+- PYTHONPYCACHEPREFIX inside project: false
+- Local environment forwarded to current interpreter: true
+- Provider trace diagnostic absent: true
+- Trace error markers: []
+- API Key in captured output/persisted: false/false
+- Raw attachment persisted: false
+- Workspace cleanup completed: true
+
+RECURRENCE PREVENTION
+- Durable constitution: docs/38-WINDOWS-PYTHON-LAUNCHER-PORTABILITY.md
+- Binding AGENTS.md launcher rules added
+- Exact-byte tests use Path.write_bytes
+- Configuration-bearing Windows launchers use:
+  python_bytecode_isolation.py -> windows_entrypoint.py -> target
+- Source packages exclude local secrets, bytecode caches, raw live attachments and live Evidence
+
+POST-LIVE PACKAGE VALIDATION
+- Source compileall: PASS
+- Source Reference integrity: 4/4 PASS
+- Source direct /reference imports: 0
+- Source npm pack --dry-run: 23 files PASS
+- Candidate SHA-256: a4dfb9318496821db896a924fdffdee350348e8e717aef4316fd2c76b8df067c
+- Candidate canonical root: 1
+- Candidate ZIP entries: 2,989
+- Candidate forbidden files: 0
+- Fresh extraction STEP072B acceptance: 26/26 PASS
+- Fresh extraction full Python regression: 757/757 PASS across all 203 test files
+- Fresh extraction Reference integrity: 4/4 PASS
+- Fresh extraction direct /reference imports: 0
+- Fresh extraction npm pack --dry-run: 23 files PASS

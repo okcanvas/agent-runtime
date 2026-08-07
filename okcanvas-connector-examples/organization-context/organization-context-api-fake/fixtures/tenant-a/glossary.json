@@ -1,0 +1,3142 @@
+[
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.human-resources",
+        "value": "PI"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.performance.read",
+        "default_operation": "READ",
+        "entity_type": "PERFORMANCE_RESULT",
+        "risk_level": "LOW",
+        "system_id": "ess"
+      }
+    ],
+    "canonical_name": "성과평가",
+    "classification": "HR_PERFORMANCE",
+    "definition": "개인 성과평가 결과와 점수",
+    "deleted_at": null,
+    "revision": 1,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/performance-index",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.performance-index",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.platform-development",
+        "value": "PI"
+      },
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.service-development",
+        "value": "PI"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "planning.increment.read",
+        "default_operation": "READ",
+        "entity_type": "PROGRAM_INCREMENT",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "프로그램 증분",
+    "classification": "ENGINEERING_CADENCE",
+    "definition": "개발 조직의 계획 및 실행 주기",
+    "deleted_at": null,
+    "revision": 2,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/program-increment",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.program-increment",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "휴가"
+      },
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "잔여 연차"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.leave.balance.read",
+        "default_operation": "READ",
+        "entity_type": "LEAVE_BALANCE",
+        "risk_level": "LOW",
+        "system_id": "ess"
+      }
+    ],
+    "canonical_name": "연차",
+    "classification": "HR_LEAVE",
+    "definition": "임직원의 연차휴가와 잔여 일수",
+    "deleted_at": null,
+    "revision": 3,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/annual-leave",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.annual-leave",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.product-planning",
+        "value": "PM"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "product.owner.read",
+        "default_operation": "READ",
+        "entity_type": "EMPLOYEE",
+        "risk_level": "LOW",
+        "system_id": "plm"
+      }
+    ],
+    "canonical_name": "제품 관리자",
+    "classification": "PRODUCT_ROLE",
+    "definition": "제품 전략과 수명주기를 담당하는 역할",
+    "deleted_at": null,
+    "revision": 4,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/product-manager",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.product-manager",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.strategy-planning",
+        "value": "PM"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "project.read",
+        "default_operation": "READ",
+        "entity_type": "EMPLOYEE",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "프로젝트 관리자",
+    "classification": "PROJECT_ROLE",
+    "definition": "프로젝트 납기와 범위를 담당하는 역할",
+    "deleted_at": null,
+    "revision": 5,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/project-manager",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.project-manager",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.product-planning",
+        "value": "PO"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "product.owner.read",
+        "default_operation": "READ",
+        "entity_type": "EMPLOYEE",
+        "risk_level": "LOW",
+        "system_id": "plm"
+      }
+    ],
+    "canonical_name": "제품 책임자",
+    "classification": "PRODUCT_ROLE",
+    "definition": "제품 백로그 우선순위 책임자",
+    "deleted_at": null,
+    "revision": 6,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/product-owner",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.product-owner",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.finance",
+        "value": "PO"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "purchase.read",
+        "default_operation": "READ",
+        "entity_type": "PURCHASE_ORDER",
+        "risk_level": "LOW",
+        "system_id": "erp"
+      }
+    ],
+    "canonical_name": "구매 주문서",
+    "classification": "PROCUREMENT",
+    "definition": "구매 발주 문서",
+    "deleted_at": null,
+    "revision": 7,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/purchase-order",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.purchase-order",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "QA"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "test.report.read",
+        "default_operation": "READ",
+        "entity_type": "QUALITY_REPORT",
+        "risk_level": "LOW",
+        "system_id": "quality"
+      }
+    ],
+    "canonical_name": "품질보증",
+    "classification": "QUALITY",
+    "definition": "제품 품질을 검증하는 활동",
+    "deleted_at": null,
+    "revision": 8,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/quality-assurance",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.quality-assurance",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "CR"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "project.read",
+        "default_operation": "READ",
+        "entity_type": "CHANGE_REQUEST",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "변경 요청",
+    "classification": "PROJECT",
+    "definition": "범위 또는 요구사항 변경 요청",
+    "deleted_at": null,
+    "revision": 9,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/change-request",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.change-request",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "SR"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "ticket.read",
+        "default_operation": "READ",
+        "entity_type": "SERVICE_REQUEST",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "서비스 요청",
+    "classification": "SUPPORT",
+    "definition": "고객 지원 또는 서비스 요청",
+    "deleted_at": null,
+    "revision": 10,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/service-request",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.service-request",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "VOC"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "ticket.read",
+        "default_operation": "READ",
+        "entity_type": "CUSTOMER_FEEDBACK",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "고객의 소리",
+    "classification": "SUPPORT",
+    "definition": "고객 의견 및 불만",
+    "deleted_at": null,
+    "revision": 11,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/voice-of-customer",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.voice-of-customer",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.management-support",
+        "value": "GA"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "notice.read",
+        "default_operation": "READ",
+        "entity_type": "DEPARTMENT",
+        "risk_level": "LOW",
+        "system_id": "groupware"
+      }
+    ],
+    "canonical_name": "총무",
+    "classification": "ADMIN",
+    "definition": "사내 행정과 자산 관리",
+    "deleted_at": null,
+    "revision": 12,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/general-affairs",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.general-affairs",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "BA"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "project.member.read",
+        "default_operation": "READ",
+        "entity_type": "EMPLOYEE",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "비즈니스 분석가",
+    "classification": "PROJECT_ROLE",
+    "definition": "업무 요구사항 분석 역할",
+    "deleted_at": null,
+    "revision": 13,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-analyst",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-analyst",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "KA"
+      },
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "키어카운트"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "client.read",
+        "default_operation": "READ",
+        "entity_type": "CLIENT",
+        "risk_level": "LOW",
+        "system_id": "crm"
+      }
+    ],
+    "canonical_name": "핵심 거래처",
+    "classification": "SALES",
+    "definition": "전략적으로 관리하는 주요 거래처",
+    "deleted_at": null,
+    "revision": 14,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/key-account",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.key-account",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": "department.enterprise-sales",
+        "value": "오너"
+      },
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "담당자"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "client.account-manager.read",
+        "default_operation": "READ",
+        "entity_type": "EMPLOYEE",
+        "risk_level": "LOW",
+        "system_id": "crm"
+      }
+    ],
+    "canonical_name": "거래처 담당자",
+    "classification": "SALES",
+    "definition": "거래처 관계를 책임지는 사원",
+    "deleted_at": null,
+    "revision": 15,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/account-owner",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.account-owner",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원016"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "invoice.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "지원용어 016",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 016",
+    "deleted_at": null,
+    "revision": 16,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-016",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-016",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "인사017"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "purchase.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "인사용어 017",
+    "classification": "인사_TERM",
+    "definition": "인사 업무에서 사용하는 결정적 참고 용어 017",
+    "deleted_at": null,
+    "revision": 17,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-017",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-017",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "재무018"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "budget.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "quality"
+      }
+    ],
+    "canonical_name": "재무용어 018",
+    "classification": "재무_TERM",
+    "definition": "재무 업무에서 사용하는 결정적 참고 용어 018",
+    "deleted_at": null,
+    "revision": 18,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-018",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-018",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "영업019"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "project.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "strategy"
+      }
+    ],
+    "canonical_name": "영업용어 019",
+    "classification": "영업_TERM",
+    "definition": "영업 업무에서 사용하는 결정적 참고 용어 019",
+    "deleted_at": null,
+    "revision": 19,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-019",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-019",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "제품020"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "planning.increment.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "identity"
+      }
+    ],
+    "canonical_name": "제품용어 020",
+    "classification": "제품_TERM",
+    "definition": "제품 업무에서 사용하는 결정적 참고 용어 020",
+    "deleted_at": null,
+    "revision": 20,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-020",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-020",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "개발021"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "project.member.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "ess"
+      }
+    ],
+    "canonical_name": "개발용어 021",
+    "classification": "개발_TERM",
+    "definition": "개발 업무에서 사용하는 결정적 참고 용어 021",
+    "deleted_at": null,
+    "revision": 21,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-021",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-021",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "운영022"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "ticket.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "groupware"
+      }
+    ],
+    "canonical_name": "운영용어 022",
+    "classification": "운영_TERM",
+    "definition": "운영 업무에서 사용하는 결정적 참고 용어 022",
+    "deleted_at": null,
+    "revision": 22,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-022",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-022",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "보안023"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "client.product.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "crm"
+      }
+    ],
+    "canonical_name": "보안용어 023",
+    "classification": "보안_TERM",
+    "definition": "보안 업무에서 사용하는 결정적 참고 용어 023",
+    "deleted_at": null,
+    "revision": 23,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-023",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-023",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원024"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "sla.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "erp"
+      }
+    ],
+    "canonical_name": "지원용어 024",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 024",
+    "deleted_at": null,
+    "revision": 24,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-024",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-024",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "인사025"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "quality.issue.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "plm"
+      }
+    ],
+    "canonical_name": "인사용어 025",
+    "classification": "인사_TERM",
+    "definition": "인사 업무에서 사용하는 결정적 참고 용어 025",
+    "deleted_at": null,
+    "revision": 25,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-025",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-025",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "재무026"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "test.report.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "재무용어 026",
+    "classification": "재무_TERM",
+    "definition": "재무 업무에서 사용하는 결정적 참고 용어 026",
+    "deleted_at": null,
+    "revision": 26,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-026",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-026",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "영업027"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "release.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "영업용어 027",
+    "classification": "영업_TERM",
+    "definition": "영업 업무에서 사용하는 결정적 참고 용어 027",
+    "deleted_at": null,
+    "revision": 27,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-027",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-027",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "제품028"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "objectives.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "quality"
+      }
+    ],
+    "canonical_name": "제품용어 028",
+    "classification": "제품_TERM",
+    "definition": "제품 업무에서 사용하는 결정적 참고 용어 028",
+    "deleted_at": null,
+    "revision": 28,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-028",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-028",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "개발029"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "organization.term.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "strategy"
+      }
+    ],
+    "canonical_name": "개발용어 029",
+    "classification": "개발_TERM",
+    "definition": "개발 업무에서 사용하는 결정적 참고 용어 029",
+    "deleted_at": null,
+    "revision": 29,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-029",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-029",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "운영030"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "organization.context.resolve",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "identity"
+      }
+    ],
+    "canonical_name": "운영용어 030",
+    "classification": "운영_TERM",
+    "definition": "운영 업무에서 사용하는 결정적 참고 용어 030",
+    "deleted_at": null,
+    "revision": 30,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-030",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-030",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "보안031"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.directory.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "ess"
+      }
+    ],
+    "canonical_name": "보안용어 031",
+    "classification": "보안_TERM",
+    "definition": "보안 업무에서 사용하는 결정적 참고 용어 031",
+    "deleted_at": null,
+    "revision": 31,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-031",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-031",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원032"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "department.directory.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "groupware"
+      }
+    ],
+    "canonical_name": "지원용어 032",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 032",
+    "deleted_at": null,
+    "revision": 32,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-032",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-032",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "인사033"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "position.directory.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "crm"
+      }
+    ],
+    "canonical_name": "인사용어 033",
+    "classification": "인사_TERM",
+    "definition": "인사 업무에서 사용하는 결정적 참고 용어 033",
+    "deleted_at": null,
+    "revision": 33,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-033",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-033",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "재무034"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.leave.balance.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "erp"
+      }
+    ],
+    "canonical_name": "재무용어 034",
+    "classification": "재무_TERM",
+    "definition": "재무 업무에서 사용하는 결정적 참고 용어 034",
+    "deleted_at": null,
+    "revision": 34,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-034",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-034",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "영업035"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.performance.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "plm"
+      }
+    ],
+    "canonical_name": "영업용어 035",
+    "classification": "영업_TERM",
+    "definition": "영업 업무에서 사용하는 결정적 참고 용어 035",
+    "deleted_at": null,
+    "revision": 35,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-035",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-035",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "제품036"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.attendance.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "제품용어 036",
+    "classification": "제품_TERM",
+    "definition": "제품 업무에서 사용하는 결정적 참고 용어 036",
+    "deleted_at": null,
+    "revision": 36,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-036",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-036",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "개발037"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "notice.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "개발용어 037",
+    "classification": "개발_TERM",
+    "definition": "개발 업무에서 사용하는 결정적 참고 용어 037",
+    "deleted_at": null,
+    "revision": 37,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-037",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-037",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "운영038"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "approval.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "quality"
+      }
+    ],
+    "canonical_name": "운영용어 038",
+    "classification": "운영_TERM",
+    "definition": "운영 업무에서 사용하는 결정적 참고 용어 038",
+    "deleted_at": null,
+    "revision": 38,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-038",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-038",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "보안039"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "approval.submit",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "strategy"
+      }
+    ],
+    "canonical_name": "보안용어 039",
+    "classification": "보안_TERM",
+    "definition": "보안 업무에서 사용하는 결정적 참고 용어 039",
+    "deleted_at": null,
+    "revision": 39,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-039",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-039",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원040"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "client.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "identity"
+      }
+    ],
+    "canonical_name": "지원용어 040",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 040",
+    "deleted_at": null,
+    "revision": 40,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-040",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-040",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "인사041"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "client.account-manager.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "ess"
+      }
+    ],
+    "canonical_name": "인사용어 041",
+    "classification": "인사_TERM",
+    "definition": "인사 업무에서 사용하는 결정적 참고 용어 041",
+    "deleted_at": null,
+    "revision": 41,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-041",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-041",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "재무042"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "sales.pipeline.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "groupware"
+      }
+    ],
+    "canonical_name": "재무용어 042",
+    "classification": "재무_TERM",
+    "definition": "재무 업무에서 사용하는 결정적 참고 용어 042",
+    "deleted_at": null,
+    "revision": 42,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-042",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-042",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "영업043"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "product.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "crm"
+      }
+    ],
+    "canonical_name": "영업용어 043",
+    "classification": "영업_TERM",
+    "definition": "영업 업무에서 사용하는 결정적 참고 용어 043",
+    "deleted_at": null,
+    "revision": 43,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-043",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-043",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "제품044"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "product.lifecycle.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "erp"
+      }
+    ],
+    "canonical_name": "제품용어 044",
+    "classification": "제품_TERM",
+    "definition": "제품 업무에서 사용하는 결정적 참고 용어 044",
+    "deleted_at": null,
+    "revision": 44,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-044",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-044",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "개발045"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "product.owner.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "plm"
+      }
+    ],
+    "canonical_name": "개발용어 045",
+    "classification": "개발_TERM",
+    "definition": "개발 업무에서 사용하는 결정적 참고 용어 045",
+    "deleted_at": null,
+    "revision": 45,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-045",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-045",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "운영046"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "invoice.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "운영용어 046",
+    "classification": "운영_TERM",
+    "definition": "운영 업무에서 사용하는 결정적 참고 용어 046",
+    "deleted_at": null,
+    "revision": 46,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-046",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-046",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "보안047"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "purchase.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "보안용어 047",
+    "classification": "보안_TERM",
+    "definition": "보안 업무에서 사용하는 결정적 참고 용어 047",
+    "deleted_at": null,
+    "revision": 47,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-047",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-047",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원048"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "budget.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "quality"
+      }
+    ],
+    "canonical_name": "지원용어 048",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 048",
+    "deleted_at": null,
+    "revision": 48,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-048",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-048",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "인사049"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "project.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "strategy"
+      }
+    ],
+    "canonical_name": "인사용어 049",
+    "classification": "인사_TERM",
+    "definition": "인사 업무에서 사용하는 결정적 참고 용어 049",
+    "deleted_at": null,
+    "revision": 49,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-049",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-049",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "재무050"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "planning.increment.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "identity"
+      }
+    ],
+    "canonical_name": "재무용어 050",
+    "classification": "재무_TERM",
+    "definition": "재무 업무에서 사용하는 결정적 참고 용어 050",
+    "deleted_at": null,
+    "revision": 50,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-050",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-050",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "영업051"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "project.member.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "ess"
+      }
+    ],
+    "canonical_name": "영업용어 051",
+    "classification": "영업_TERM",
+    "definition": "영업 업무에서 사용하는 결정적 참고 용어 051",
+    "deleted_at": null,
+    "revision": 51,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-051",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-051",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "제품052"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "ticket.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "groupware"
+      }
+    ],
+    "canonical_name": "제품용어 052",
+    "classification": "제품_TERM",
+    "definition": "제품 업무에서 사용하는 결정적 참고 용어 052",
+    "deleted_at": null,
+    "revision": 52,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-052",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-052",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "개발053"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "client.product.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "crm"
+      }
+    ],
+    "canonical_name": "개발용어 053",
+    "classification": "개발_TERM",
+    "definition": "개발 업무에서 사용하는 결정적 참고 용어 053",
+    "deleted_at": null,
+    "revision": 53,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-053",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-053",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "운영054"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "sla.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "erp"
+      }
+    ],
+    "canonical_name": "운영용어 054",
+    "classification": "운영_TERM",
+    "definition": "운영 업무에서 사용하는 결정적 참고 용어 054",
+    "deleted_at": null,
+    "revision": 54,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-054",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-054",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "보안055"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "quality.issue.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "plm"
+      }
+    ],
+    "canonical_name": "보안용어 055",
+    "classification": "보안_TERM",
+    "definition": "보안 업무에서 사용하는 결정적 참고 용어 055",
+    "deleted_at": null,
+    "revision": 55,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-055",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-055",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원056"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "test.report.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "지원용어 056",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 056",
+    "deleted_at": null,
+    "revision": 56,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-056",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-056",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "인사057"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "release.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "인사용어 057",
+    "classification": "인사_TERM",
+    "definition": "인사 업무에서 사용하는 결정적 참고 용어 057",
+    "deleted_at": null,
+    "revision": 57,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-057",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-057",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "재무058"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "objectives.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "quality"
+      }
+    ],
+    "canonical_name": "재무용어 058",
+    "classification": "재무_TERM",
+    "definition": "재무 업무에서 사용하는 결정적 참고 용어 058",
+    "deleted_at": null,
+    "revision": 58,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-058",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-058",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "영업059"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "organization.term.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "strategy"
+      }
+    ],
+    "canonical_name": "영업용어 059",
+    "classification": "영업_TERM",
+    "definition": "영업 업무에서 사용하는 결정적 참고 용어 059",
+    "deleted_at": null,
+    "revision": 59,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-059",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-059",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "제품060"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "organization.context.resolve",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "identity"
+      }
+    ],
+    "canonical_name": "제품용어 060",
+    "classification": "제품_TERM",
+    "definition": "제품 업무에서 사용하는 결정적 참고 용어 060",
+    "deleted_at": null,
+    "revision": 60,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-060",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-060",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "개발061"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.directory.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "ess"
+      }
+    ],
+    "canonical_name": "개발용어 061",
+    "classification": "개발_TERM",
+    "definition": "개발 업무에서 사용하는 결정적 참고 용어 061",
+    "deleted_at": null,
+    "revision": 61,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-061",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-061",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "운영062"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "department.directory.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "groupware"
+      }
+    ],
+    "canonical_name": "운영용어 062",
+    "classification": "운영_TERM",
+    "definition": "운영 업무에서 사용하는 결정적 참고 용어 062",
+    "deleted_at": null,
+    "revision": 62,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-062",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-062",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "보안063"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "position.directory.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "crm"
+      }
+    ],
+    "canonical_name": "보안용어 063",
+    "classification": "보안_TERM",
+    "definition": "보안 업무에서 사용하는 결정적 참고 용어 063",
+    "deleted_at": null,
+    "revision": 63,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-063",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-063",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원064"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.leave.balance.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "erp"
+      }
+    ],
+    "canonical_name": "지원용어 064",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 064",
+    "deleted_at": null,
+    "revision": 64,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-064",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-064",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "인사065"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.performance.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "plm"
+      }
+    ],
+    "canonical_name": "인사용어 065",
+    "classification": "인사_TERM",
+    "definition": "인사 업무에서 사용하는 결정적 참고 용어 065",
+    "deleted_at": null,
+    "revision": 65,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-065",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-065",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "재무066"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "employee.attendance.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "재무용어 066",
+    "classification": "재무_TERM",
+    "definition": "재무 업무에서 사용하는 결정적 참고 용어 066",
+    "deleted_at": null,
+    "revision": 66,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-066",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-066",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "영업067"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "notice.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "영업용어 067",
+    "classification": "영업_TERM",
+    "definition": "영업 업무에서 사용하는 결정적 참고 용어 067",
+    "deleted_at": null,
+    "revision": 67,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-067",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-067",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "제품068"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "approval.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "quality"
+      }
+    ],
+    "canonical_name": "제품용어 068",
+    "classification": "제품_TERM",
+    "definition": "제품 업무에서 사용하는 결정적 참고 용어 068",
+    "deleted_at": null,
+    "revision": 68,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-068",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-068",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "개발069"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "approval.submit",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "strategy"
+      }
+    ],
+    "canonical_name": "개발용어 069",
+    "classification": "개발_TERM",
+    "definition": "개발 업무에서 사용하는 결정적 참고 용어 069",
+    "deleted_at": null,
+    "revision": 69,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-069",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-069",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "운영070"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "client.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "identity"
+      }
+    ],
+    "canonical_name": "운영용어 070",
+    "classification": "운영_TERM",
+    "definition": "운영 업무에서 사용하는 결정적 참고 용어 070",
+    "deleted_at": null,
+    "revision": 70,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-070",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-070",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "보안071"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "client.account-manager.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "ess"
+      }
+    ],
+    "canonical_name": "보안용어 071",
+    "classification": "보안_TERM",
+    "definition": "보안 업무에서 사용하는 결정적 참고 용어 071",
+    "deleted_at": null,
+    "revision": 71,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-071",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-071",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원072"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "sales.pipeline.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "groupware"
+      }
+    ],
+    "canonical_name": "지원용어 072",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 072",
+    "deleted_at": null,
+    "revision": 72,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-072",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-072",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "인사073"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "product.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "crm"
+      }
+    ],
+    "canonical_name": "인사용어 073",
+    "classification": "인사_TERM",
+    "definition": "인사 업무에서 사용하는 결정적 참고 용어 073",
+    "deleted_at": null,
+    "revision": 73,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-073",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-073",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "재무074"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "product.lifecycle.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "erp"
+      }
+    ],
+    "canonical_name": "재무용어 074",
+    "classification": "재무_TERM",
+    "definition": "재무 업무에서 사용하는 결정적 참고 용어 074",
+    "deleted_at": null,
+    "revision": 74,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-074",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-074",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "영업075"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "product.owner.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "plm"
+      }
+    ],
+    "canonical_name": "영업용어 075",
+    "classification": "영업_TERM",
+    "definition": "영업 업무에서 사용하는 결정적 참고 용어 075",
+    "deleted_at": null,
+    "revision": 75,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-075",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-075",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "제품076"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "invoice.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "project-management"
+      }
+    ],
+    "canonical_name": "제품용어 076",
+    "classification": "제품_TERM",
+    "definition": "제품 업무에서 사용하는 결정적 참고 용어 076",
+    "deleted_at": null,
+    "revision": 76,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-076",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-076",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "개발077"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "purchase.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "support"
+      }
+    ],
+    "canonical_name": "개발용어 077",
+    "classification": "개발_TERM",
+    "definition": "개발 업무에서 사용하는 결정적 참고 용어 077",
+    "deleted_at": null,
+    "revision": 77,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-077",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-077",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "운영078"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "budget.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "quality"
+      }
+    ],
+    "canonical_name": "운영용어 078",
+    "classification": "운영_TERM",
+    "definition": "운영 업무에서 사용하는 결정적 참고 용어 078",
+    "deleted_at": null,
+    "revision": 78,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-078",
+      "version": "1"
+    },
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-078",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "보안079"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "project.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "strategy"
+      }
+    ],
+    "canonical_name": "보안용어 079",
+    "classification": "보안_TERM",
+    "definition": "보안 업무에서 사용하는 결정적 참고 용어 079",
+    "deleted_at": "2026-08-05T09:00:00+09:00",
+    "revision": 79,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-079",
+      "version": "1"
+    },
+    "status": "RETIRED",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-079",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  },
+  {
+    "aliases": [
+      {
+        "locale": "ko-KR",
+        "organization_unit_id": null,
+        "value": "지원080"
+      }
+    ],
+    "bindings": [
+      {
+        "capability_id": "planning.increment.read",
+        "default_operation": "READ",
+        "entity_type": "ORGANIZATION_TERM",
+        "risk_level": "LOW",
+        "system_id": "identity"
+      }
+    ],
+    "canonical_name": "지원용어 080",
+    "classification": "지원_TERM",
+    "definition": "지원 업무에서 사용하는 결정적 참고 용어 080",
+    "deleted_at": "2026-08-05T09:00:00+09:00",
+    "revision": 80,
+    "row_version": 1,
+    "source": {
+      "approved_by": "context-admin",
+      "reference": "org://tenant-a/glossary/business-term-080",
+      "version": "1"
+    },
+    "status": "RETIRED",
+    "tenant_id": "tenant-a",
+    "term_id": "term.business-term-080",
+    "updated_at": "2026-08-05T09:00:00+09:00",
+    "visible_to_roles": [
+      "agent-user",
+      "employee",
+      "manager",
+      "admin"
+    ]
+  }
+]

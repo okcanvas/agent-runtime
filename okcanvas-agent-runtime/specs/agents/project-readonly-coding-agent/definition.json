@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "project-readonly-coding-agent",
+  "version": "1.1.0",
+  "name": "OKCanvas Project Read-only Coding Analyst",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [
+    "project_readonly_inspect"
+  ],
+  "mcp_servers": [],
+  "handoffs": [],
+  "max_turns": 2,
+  "workflow_name": "OKCanvas Bounded Project Read-only Inspection",
+  "session_mode": "disabled"
+}

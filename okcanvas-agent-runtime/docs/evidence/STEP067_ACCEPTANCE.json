@@ -1,0 +1,63 @@
+{
+  "schema_version": "okcanvas-step067-acceptance-v1",
+  "step": "STEP067_HOSTED_WEB_SEARCH_SOURCE_POLICY_AND_EVIDENCE_FOUNDATION",
+  "version": "2.47.0",
+  "state": "PASSED",
+  "passed_checks": 26,
+  "total_checks": 26,
+  "checks": {
+    "baseline_version_and_step_exact": true,
+    "step066_windows_live_closure_exact": true,
+    "mvp_roadmap_and_file_search_separation_exact": true,
+    "step067_runtime_flags_exact": true,
+    "policy_identity_sha_and_bounds_exact": true,
+    "hosted_agent_isolated_and_strict": true,
+    "output_contract_reserves_urls_for_product_evidence": true,
+    "official_sdk_hosted_sources_exact": true,
+    "sdk_web_search_tool_factory_exact": true,
+    "input_only_source_include_store_false_exact": true,
+    "result_items_source_and_citation_validation_present": true,
+    "strict_url_policy_present": true,
+    "raw_search_material_not_product_evidence": true,
+    "separate_hosted_search_artifact_present": true,
+    "runtime_binding_hosted_policy_and_sdk_bound": true,
+    "file_search_runtime_not_implemented": true,
+    "focused_hosted_search_tests_pass": true,
+    "historical_remote_and_generic_tests_pass": true,
+    "python_compileall_pass": true,
+    "committed_node_release_integrity_pass": true,
+    "node_tests_pass": true,
+    "no_direct_reference_imports": true,
+    "references_unchanged": true,
+    "step067_documents_present": true,
+    "acceptance_launcher_present": true,
+    "step068_not_selected": true
+  },
+  "policy": {
+    "policy_id": "official-openai-docs-web-search-v1",
+    "policy_sha256": "0d6badcb01779ec33e937509334e88bc794d606f05e878433e60ec8a41261e82",
+    "tool_id": "web-search-v1",
+    "allowed_domains": [
+      "developers.openai.com"
+    ],
+    "max_search_calls": 1,
+    "max_retrieved_sources": 8,
+    "max_citations": 8,
+    "response_include": [
+      "web_search_call.action.sources"
+    ],
+    "store": false,
+    "tool_choice": "required",
+    "parallel_tool_calls": false
+  },
+  "focused_test_output": "................                                                         [100%]\n16 passed in 0.35s",
+  "historical_test_output": "......................................                                   [100%]\n38 passed in 1.17s",
+  "python_compile_output": "",
+  "node_release_output": "COMMITTED_TYPESCRIPT_RELEASE_VERIFIED inputs=11 outputs=21 tests=2 external_tsc_required=false",
+  "node_test_output_tail": "  duration_ms: 0.105978\n  type: 'test'\n  ...\n# Subtest: safe read-only Tool and isolated Sub Agent graphs are CLI compatible\nok 11 - safe read-only Tool and isolated Sub Agent graphs are CLI compatible\n  ---\n  duration_ms: 0.219356\n  type: 'test'\n  ...\n# Subtest: normal progress and invocation tree expose Tool and Sub Agent work without raw payloads\nok 12 - normal progress and invocation tree expose Tool and Sub Agent work without raw payloads\n  ---\n  duration_ms: 0.320927\n  type: 'test'\n  ...\n# Subtest: bounded project read-only Tool is CLI compatible and clearly labeled\nok 13 - bounded project read-only Tool is CLI compatible and clearly labeled\n  ---\n  duration_ms: 0.320216\n  type: 'test'\n  ...\n# Subtest: bounded orchestration is visible and renders child results\nok 14 - bounded orchestration is visible and renders child results\n  ---\n  duration_ms: 0.379163\n  type: 'test'\n  ...\n1..14\n# tests 14\n# suites 0\n# pass 14\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 51.701633",
+  "reference_import_output_tail": "{\n  \"ok\": true,\n  \"violations\": []\n}",
+  "reference_count": 4,
+  "external_network_calls": 0,
+  "model_calls": 0,
+  "file_search_implemented": false
+}

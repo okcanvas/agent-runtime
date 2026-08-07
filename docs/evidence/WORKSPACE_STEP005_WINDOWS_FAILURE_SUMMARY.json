@@ -1,0 +1,44 @@
+{
+  "completed_at": "2026-08-05T07:00:32.199488Z",
+  "connector": {
+    "compileall_error_types": [
+      "FileNotFoundError"
+    ],
+    "compileall_returncode": 1,
+    "passed_checks": 7,
+    "pytest_passed": true,
+    "state": "FAILED",
+    "total_checks": 8
+  },
+  "example": {
+    "passed_checks": 8,
+    "state": "PASSED",
+    "total_checks": 8
+  },
+  "execution_platform": "windows",
+  "integration": {
+    "error_type": "FileNotFoundError",
+    "failed_command": "npm",
+    "parsed": null,
+    "returncode": 1,
+    "windows_error": "WinError 2"
+  },
+  "manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "passed_checks": 18,
+  "root_causes": [
+    "Organization Context temp copy reproduced the full repository path while Workspace PYTHONPYCACHEPREFIX was active, producing an overlong compileall target path on Windows.",
+    "Connector-local optional integration invoked literal npm/node instead of the accepted Workspace executable resolution and Windows .cmd invocation boundary.",
+    "The already accepted Groupware Workspace E2E pattern was not reused exactly."
+  ],
+  "schema_version": "okcanvas-agent-platform-workspace-step005-windows-failure-summary-v1",
+  "secret_values_persisted": false,
+  "started_at": "2026-08-05T06:58:51.296342Z",
+  "state": "FAILED",
+  "step": "WORKSPACE_STEP005_ORGANIZATION_CONTEXT_CONNECTOR_AND_CONSTRUCTION_GUIDE_FOUNDATION",
+  "total_checks": 23,
+  "version": "0.5.0"
+}

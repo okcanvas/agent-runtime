@@ -1,0 +1,41 @@
+{
+  "schema_version": "okcanvas-step091d-runtime-test-partition-v1",
+  "step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-18",
+  "partition_number": 18,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T04:37:47.337735+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 13,
+  "test_count": 69,
+  "passed_tests": 69,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 12.356,
+  "exit_code": 0,
+  "files_sha256": "923e75598a11a989ebe864d6356d937014d80bedcd520c8d9b954e2060f0e09d",
+  "log_sha256": "2968842233dbc9ed329a50c5a2b61dd2d30cf1ec2433c23bc94376a0b8d739d3",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step091c_artifact_blob_store_boundary.py",
+    "tests/test_step091d_object_storage_deployment_composition_and_live_gate.py",
+    "tests/test_store_replenishment_agent_definition.py",
+    "tests/test_store_replenishment_contract.py",
+    "tests/test_store_replenishment_deterministic_fallback.py",
+    "tests/test_terminal_outcome_reconciliation.py",
+    "tests/test_tool_approval_inbox.py",
+    "tests/test_tui_client_config.py",
+    "tests/test_tui_client_flow.py",
+    "tests/test_tui_client_sse.py",
+    "tests/test_walking_skeleton_catalog.py",
+    "tests/test_windows_entrypoint.py",
+    "tests/test_windows_launcher_project_venv_contract.py"
+  ]
+}

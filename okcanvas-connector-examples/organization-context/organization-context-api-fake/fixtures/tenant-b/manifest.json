@@ -1,0 +1,33 @@
+{
+  "catalog_revision": 1,
+  "example_sot": "COMMITTED_JSON_FIXTURES",
+  "expected_counts": {
+    "capabilities": 1,
+    "clients": 0,
+    "departments": 1,
+    "employees": 1,
+    "glossary": 1,
+    "positions": 1,
+    "products": 0,
+    "projects": 0,
+    "relations": 0,
+    "relations_minimum": 0,
+    "systems": 1
+  },
+  "files": {
+    "capabilities": "capabilities.json",
+    "clients": "clients.json",
+    "departments": "departments.json",
+    "employees": "employees.json",
+    "glossary": "glossary.json",
+    "positions": "positions.json",
+    "products": "products.json",
+    "projects": "projects.json",
+    "relations": "relations.json",
+    "systems": "systems.json"
+  },
+  "fixture_role": "TENANT_ISOLATION_SEED",
+  "production_sot": "DATABASE",
+  "schema_version": "okcanvas-organization-context-reference-fixture-v1",
+  "tenant_id": "tenant-b"
+}

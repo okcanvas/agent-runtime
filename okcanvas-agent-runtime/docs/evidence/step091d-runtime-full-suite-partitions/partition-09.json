@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091d-runtime-test-partition-v1",
+  "step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-09",
+  "partition_number": 9,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T04:33:45.365777+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 37,
+  "passed_tests": 37,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 4.087,
+  "exit_code": 0,
+  "files_sha256": "7546b7c14f31cb6456672ecb1908c4ea42b18464e8e308f5f658a14b21ea5b8b",
+  "log_sha256": "30ef35f226a1c6686a3106479fcd61fa94f83fdf0a20b3a3e23d7ef8c7e94126",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step020_governed_local_tool_approval_baseline.py",
+    "tests/test_step021_read_only_local_approval_inbox_baseline.py",
+    "tests/test_step022_live_acceptance_closure.py",
+    "tests/test_step022_live_acceptance_closure_baseline.py",
+    "tests/test_step023_minimal_local_approval_operator_baseline.py",
+    "tests/test_step023a_live_sdk_resume_turn_budget.py",
+    "tests/test_step024_acceptance_evidence.py",
+    "tests/test_step024_business_agent_baseline.py",
+    "tests/test_step024b_windows_live_acceptance_evidence.py",
+    "tests/test_step025_commerce_snapshot_ingress_baseline.py",
+    "tests/test_step025_windows_live_acceptance_evidence.py",
+    "tests/test_step026_multi_case_product_acceptance_baseline.py",
+    "tests/test_step026_windows_live_acceptance_evidence.py",
+    "tests/test_step027_commerce_ingress_failure_matrix_baseline.py"
+  ]
+}

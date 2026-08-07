@@ -1,0 +1,70 @@
+STEP049_SQLITE_SESSION_NATIVE_AGENT_AS_TOOL_COMPOSITION_V1
+Version: 2.29.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+WINDOWS ATTEMPT AND ACCEPTANCE-HARNESS CORRECTION
+- first user-reported Windows run overall state: FAILED
+- state before workspace cleanup: PASSED
+- functional checks excluding cleanup: 32/32 true
+- Session: 1/4 -> 2/8; history item count 8
+- gateway counts: run 0; outer/nested streamed 2/2; Agent.as_tool construction/invocation 2/2; SQLiteSession instances/closes 4/4
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 2/2/2/4/40/2/1
+- protected payload files: 0; Evaluation PASSED; References unchanged
+- cleanup: PRESERVED after 3 attempts; WinError 32 on scratch/sessions/history.sqlite3
+- exact cause: scripts/run_step049_acceptance.py used `with sqlite3.connect(runtime.history_db)` for a direct history probe; sqlite3 Connection context management commits/rolls back but does not close the connection
+- correction: `_history_count(...)` now closes the direct probe connection in `finally`
+- regression: `test_step049_history_probe_always_closes_sqlite_connection` proves close is called
+- product/runtime interpretation: no Product execution, SDK Session continuity, invocation, persistence, Evaluation or instrumented Session-handle check failed
+- Windows status remains pending until the corrected ZIP reports all 33 checks and cleanup COMPLETED
+- preserved evidence: docs/evidence/STEP049_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json
+
+CORRECTED SOURCE TREE VALIDATION
+- python compileall: PASS
+- full pytest: 495 passed
+- focused acceptance-history probe, STEP049 baseline and AcceptanceWorkspace regression: 10 passed
+- STEP049 deterministic acceptance: 33/33 PASS, cleanup COMPLETED
+- STEP048 deterministic acceptance: 32/32 PASS, cleanup COMPLETED
+- STEP047 deterministic acceptance: 29/29 PASS, cleanup COMPLETED
+- STEP046 deterministic acceptance: 27/27 PASS, cleanup COMPLETED
+- STEP030A Windows launcher audit: 8/8 PASS; 54 launchers; 0 violations
+- immutable Reference integrity: 4/4 PASS
+- executable source direct /reference imports: 0
+
+STEP049 CORRECTED ACCEPTANCE EXACT RESULTS
+- checks: 33/33
+- Session metadata: 1/4 -> 2/8; final history item count 8
+- Runner.run: 0
+- outer Runner.run_streamed: 2
+- nested Agent Tool streamed invocations: 2
+- Agent.as_tool constructions/invocations: 2/2
+- child nested Sessions: disabled for both Turns
+- SQLiteSession instances/closes: 4/4
+- Event counts: 20/20, total 40
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 2/2/2/4/40/2/1
+- protected payload files: 0
+- Evaluation: PASSED
+- Reference unchanged
+- acceptance workspace cleanup: COMPLETED in 1 attempt
+
+WINDOWS STATUS
+- STEP048: WINDOWS_LIVE_ACCEPTED from user-reported complete 32/32 result
+- STEP049: first functional run passed but cleanup failed from the corrected Acceptance-only direct SQLite connection leak; fresh corrected-package Windows rerun pending
+
+PACKAGE PLAN
+- canonical root: okcanvas-agent-runtime
+- expected entries before independent extraction validation: 2,488
+- forbidden files: none
+- final package must be independently extracted and repeat compileall, full pytest, STEP049/048/047/046, STEP030A, Reference integrity and no-reference-import validation
+
+INDEPENDENT CANDIDATE ZIP EXTRACTION VALIDATION
+- candidate ZIP canonical root: 1
+- candidate ZIP entries: 2,488
+- candidate ZIP forbidden files: 0
+- fresh extraction compileall: PASS
+- fresh extraction full pytest: 495 passed
+- fresh extraction STEP049: 33/33 PASS; cleanup COMPLETED in 1 attempt
+- fresh extraction STEP048/047/046: 32/29/27 checks PASS; cleanup COMPLETED
+- fresh extraction STEP030A: 8/8 PASS; 54 launchers; 0 violations
+- fresh extraction Reference integrity: 4/4 PASS
+- fresh extraction direct /reference imports: 0
+- final package is rebuilt from the exact same code/tests/Reference tree with only this validation record extended, then entry hashes are compared against the candidate package.

@@ -1,0 +1,47 @@
+{
+  "schema_version": "okcanvas-step071-windows-live-acceptance-summary-v1",
+  "step": "STEP071_PRODUCT_SKILL_DOCUMENT_REVIEW_LIVE_ACCEPTANCE_V1",
+  "version": "2.51.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "deterministic_command": "sh_run_step071_acceptance",
+  "deterministic_passed_checks": 28,
+  "deterministic_total_checks": 28,
+  "live_command": "sh_run_step071_live_acceptance",
+  "live_passed_checks": 28,
+  "live_total_checks": 28,
+  "terminal_status": "SUCCEEDED",
+  "model": "gpt-4.1",
+  "model_calls": 1,
+  "usage": {
+    "input_tokens": 827,
+    "output_tokens": 318,
+    "total_tokens": 1145
+  },
+  "skill_id": "document-review-v1",
+  "skill_version": "1.0.0",
+  "skill_package_sha256": "60fbfca861141837d4486499687fde4257b83bcb68362b6b0a0b6f40b8df07b5",
+  "skill_runtime_sha256": "c6d3fd17b4be4064343d0fe928e6b3e6c06332811afe8bead12936d4bef716d8",
+  "result_contract": "LocalDocumentReviewResult",
+  "quality": {
+    "reference_id_exactly_observed": true,
+    "amount_observed": true,
+    "due_date_exactly_observed": true,
+    "decision_not_yet_approved_observed": true,
+    "illegible_approver_unverified": true,
+    "document_prompt_injection_treated_as_untrusted": true
+  },
+  "security": {
+    "undeclared_capability_events": 0,
+    "api_key_persisted": false,
+    "raw_attachment_persisted": false,
+    "successful_payload_deleted": true,
+    "references_unchanged": true
+  },
+  "acceptance_workspace": {
+    "cleanup_state": "COMPLETED",
+    "cleanup_attempts": 1,
+    "preserved_path": null
+  },
+  "observed_non_fatal_sdk_diagnostic": "Tracing client error 400. Response data is redacted.",
+  "source": "user-reported complete Windows deterministic and live command output"
+}

@@ -1,0 +1,118 @@
+STEP052_IMMUTABLE_OPENAI_ZERO_RETRY_POLICY_V1
+okcanvas-agent-runtime 2.32.0
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+VALIDATION SCOPE
+- Current working source after STEP051 Windows closure and STEP052 implementation.
+- Immutable openai-agents-python-0.19.0 Reference retained unchanged.
+- No executable imports from /reference.
+
+SOURCE VALIDATION
+- python -m compileall -q src scripts tests: PASS
+- Focused model route/retry/runtime/composition regression: 26 passed
+- Full pytest, all 160 test files, split into three normally terminating groups:
+  - group 1: 162 passed
+  - group 2: 144 passed
+  - group 3: 208 passed
+  - total: 514/514 passed
+
+DETERMINISTIC ACCEPTANCE
+- STEP052: 25/25 PASS, cleanup COMPLETED in 1 attempt
+  - provider-managed retries: 0
+  - Runner-managed retries: 0
+  - Runner.run/run_streamed: 0/2
+  - provider construct/get-model/close: 2/2/2
+  - AsyncOpenAI clients: 2
+  - model attempts: 2
+  - retry policy calls: 1
+  - failed/succeeded/total Events: 8/10/18
+  - final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 2/2/3/2/18/1/1
+  - protected payload files: 2
+  - retry-policy drift confirmation: 409
+  - Evaluation: PASSED
+- STEP051: 25/25 PASS, cleanup COMPLETED
+- STEP050: 31/31 PASS, cleanup COMPLETED
+- STEP049: 33/33 PASS, cleanup COMPLETED
+- STEP048: 32/32 PASS, cleanup COMPLETED
+- STEP047: 29/29 PASS, cleanup COMPLETED
+- STEP046: 27/27 PASS, cleanup COMPLETED
+- STEP045 integrated walking skeleton: 28/28 PASS, cleanup COMPLETED
+- STEP044 native Guardrail: 23/23 PASS
+- STEP043 SQLite Session: 29/29 PASS, cleanup COMPLETED
+- STEP042 Agent-as-Tool: 29/29 PASS, cleanup COMPLETED
+- STEP041 native Handoff: 24/24 PASS, cleanup COMPLETED
+- STEP039 native streaming: 20/20 PASS, cleanup COMPLETED
+
+WINDOWS LAUNCHER CONTRACT
+- STEP030A: 8/8 PASS
+- Windows Runtime launchers: 57
+- Launcher violations: 0
+
+REFERENCE CONTRACT
+- Reference integrity: 4/4 PASS
+  - openai-agents-python
+  - temporal-openai-agents-demos
+  - openai-cs-agents-demo
+  - openai-agents-streaming-api
+- tests/test_no_direct_reference_import.py: PASS
+- direct executable /reference imports: 0
+
+FIXTURE COMPATIBILITY AUDIT
+STEP052 makes installed-SDK ModelSettings and ModelRetrySettings explicit on every RunConfig. Existing
+unit and deterministic acceptance fake SDK modules were updated to model that exact 0.19.0 contract.
+The Product Runtime was not weakened to accept missing SDK types. Historical STEP039/041/042/043/044
+and STEP047/048/049/050 fakes now provide the explicit ModelSettings, zero-retry settings and provider
+surface required by the current immutable substrate. Their original scenario counts and behavioral
+checks remain unchanged and pass.
+
+PACKAGE GATE
+- STEP052 is not Windows-live accepted yet.
+- Run a fresh extracted package with sh_run_step052_acceptance.cmd.
+- STEP053 is forbidden until all 25 checks and cleanup COMPLETED are user-reported and recorded.
+
+INDEPENDENT CANDIDATE ZIP VALIDATION
+- Candidate ZIP canonical root: 1 (`okcanvas-agent-runtime`)
+- Candidate ZIP entries after correction: 2,538
+- Forbidden generated/local files: 0
+- Initial candidate packaging audit found two immutable Reference files incorrectly omitted by a
+  global `.vscode` exclusion rule:
+  - reference/upstream/openai-agents-python-0.19.0/.vscode/launch.json
+  - reference/upstream/openai-agents-python-0.19.0/.vscode/settings.json
+- The package rule was corrected so the entire immutable `reference/` tree is preserved byte for
+  byte regardless of ordinary workspace exclusion names.
+- Corrected candidate Reference integrity: 4/4 PASS.
+- Corrected candidate compileall: PASS.
+- Corrected candidate full pytest:
+  - group 1: 162 passed
+  - group 2: 144 passed
+  - group 3: 208 passed
+  - total: 514/514 passed
+- Corrected candidate deterministic acceptance:
+  - STEP052 25/25, cleanup COMPLETED
+  - STEP051 25/25, cleanup COMPLETED
+  - STEP050 31/31, cleanup COMPLETED
+  - STEP049 33/33, cleanup COMPLETED
+  - STEP048 32/32, cleanup COMPLETED
+  - STEP047 29/29, cleanup COMPLETED
+  - STEP046 27/27, cleanup COMPLETED
+  - STEP045 28/28, cleanup COMPLETED
+  - STEP044 23/23
+  - STEP043 29/29, cleanup COMPLETED
+  - STEP042 29/29, cleanup COMPLETED
+  - STEP041 24/24, cleanup COMPLETED
+  - STEP039 20/20, cleanup COMPLETED
+- Corrected candidate STEP030A: 8/8, 57 launchers, 0 violations.
+- Corrected candidate Reference: 4/4; direct executable imports: 0.
+
+FINAL ZIP EXTRACTION VALIDATION
+- Final ZIP before this validation-record append was extracted to a new directory.
+- Canonical root: 1; entries: 2,538.
+- Reference integrity: 4/4 PASS.
+- compileall: PASS.
+- Full pytest across all 160 files: 162 + 144 + 208 = 514/514 PASS.
+- STEP052: 25/25 PASS, cleanup COMPLETED in 1 attempt.
+- STEP030A: 8/8 PASS, 57 launchers, 0 violations.
+- direct executable /reference imports: 0.
+- The release ZIP rebuilt after recording these results differs from the tested ZIP only in this
+  validation text. All code, tests, policies, immutable Reference files and Acceptance scripts remain
+  byte-identical.

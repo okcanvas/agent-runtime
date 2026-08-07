@@ -1,0 +1,40 @@
+STEP057 DEFAULT AGENT ENV ALLOWLIST CORRECTION VALIDATION
+
+State: CORRECTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Version: 2.37.0
+STEP: STEP057_NODE_CLI_RUNTIME_SESSION_CONVERSATION
+
+Correction
+- Added OKCANVAS_DEFAULT_AGENT_ID and OKCANVAS_SESSION_ROOT to scripts/windows_entrypoint.py _ALLOWED_KEYS.
+- Parsed the complete canonical .env.local.example with no unsupported active keys.
+- Started the real loopback Control API from that canonical template and observed clean startup/shutdown.
+- Kept .env.local.example canonical default OKCANVAS_DEFAULT_AGENT_ID=conversational-coding-agent.
+- Added environment parser and STEP057 baseline regression checks.
+- No Runtime, Session, Agent, model, credential, protected-payload or Control API authority change.
+
+Validation
+- focused environment/STEP057 tests: 34/34 PASS.
+- TypeScript build: PASS.
+- Node tests: 9/9 PASS.
+- Python compileall: PASS.
+- Python pytest: 563/563 PASS across 172 test files (split execution; two new regression checks).
+- STEP057 deterministic acceptance: 25/25 PASS; final counts 4/4/4/4/48/4/1; cleanup COMPLETED once.
+- STEP030A: 8/8 PASS; Windows launchers 66; violations 0.
+- Reference integrity: 4/4 PASS.
+- Direct /reference imports: 0.
+
+Windows closure remains pending. Run sh_run_api.cmd, sh_tui.cmd and sh_run_step057_acceptance.cmd from the corrected package.
+
+Independent corrected ZIP verification
+- Canonical archive root: 1 (`okcanvas-agent-runtime`).
+- ZIP entries: 2675.
+- Forbidden files: 0.
+- Complete canonical `.env.local.example` parsed successfully with default Agent and Session root.
+- Real loopback Control API started and shut down from generated canonical local configuration.
+- TypeScript build: PASS.
+- Node tests: 9/9 PASS.
+- Focused environment/STEP057 tests: 34/34 PASS.
+- Python pytest: 563/563 PASS across 172 files.
+- STEP057 acceptance: 25/25 PASS; cleanup COMPLETED once.
+- STEP030A: 8/8 PASS; launchers 66; violations 0.
+- Reference: 4/4 PASS; direct imports 0.

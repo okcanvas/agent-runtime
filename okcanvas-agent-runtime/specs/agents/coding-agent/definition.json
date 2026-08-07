@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "coding-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Coding Analyst",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [],
+  "handoffs": [],
+  "max_turns": 1,
+  "workflow_name": "OKCanvas Generic Coding Agent",
+  "session_mode": "disabled",
+  "mcp_servers": []
+}

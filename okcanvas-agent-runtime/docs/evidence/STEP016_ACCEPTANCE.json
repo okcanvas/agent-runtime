@@ -1,0 +1,47 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T034200972692Z-a2aa7f19",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T03:42:01.294415Z",
+    "created_at": "2026-07-29T03:42:00.972936Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP016"
+  },
+  "checks": {
+    "admin_key_not_embedded": true,
+    "authenticated_fetch_sse": true,
+    "bounded_reconnect_backoff": true,
+    "console_remains_get_only": true,
+    "console_shell_served": true,
+    "cursor_and_last_event_id_used": true,
+    "duplicate_sequence_guarded": true,
+    "evaluation_db_unchanged_by_live_reads": true,
+    "live_assets_served": true,
+    "live_controls_present": true,
+    "native_eventsource_rejected": true,
+    "prior_stream_aborted": true,
+    "product_db_unchanged_by_live_reads": true,
+    "references_unchanged": true,
+    "stream_auth_required": true,
+    "stream_headers_disable_buffering": true,
+    "stream_resumed_after_effective_cursor": true,
+    "terminal_event_streamed": true,
+    "terminal_run_stops_reconnect": true
+  },
+  "effective_resume_cursor": 3,
+  "run_id": "run_62c88ef5c33b4d3f826ded273df39efd",
+  "schema_version": "okcanvas-step016-acceptance-v1",
+  "state": "PASSED",
+  "streamed_event_ids": [
+    4,
+    5
+  ],
+  "task_id": "task_a81bfc2661a9498da50284b69a1ebcd4"
+}

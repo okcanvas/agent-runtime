@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "skill-document-review-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Skill-Guided Document Review Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "LocalDocumentReviewResult",
+  "tools": [],
+  "mcp_servers": [],
+  "hosted_tools": [],
+  "skills": [
+    "document-review-v1"
+  ],
+  "handoffs": [],
+  "agent_tools": [],
+  "orchestration_children": [],
+  "guardrails": [],
+  "workspace_access": "none",
+  "max_turns": 1,
+  "workflow_name": "OKCanvas Product Skill Document Review",
+  "session_mode": "disabled",
+  "input_mode": "local-attachment-v1"
+}

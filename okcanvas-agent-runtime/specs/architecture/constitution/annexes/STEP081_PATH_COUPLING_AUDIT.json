@@ -1,0 +1,6317 @@
+{
+  "root_launchers": [
+    {
+      "value": "sh_run_step030_acceptance.cmd",
+      "count": 16,
+      "file_count": 11
+    },
+    {
+      "value": "sh_run_step072a_live_acceptance.cmd",
+      "count": 12,
+      "file_count": 10
+    },
+    {
+      "value": "sh_run_step079_live_acceptance.cmd",
+      "count": 10,
+      "file_count": 8
+    },
+    {
+      "value": "sh_run_step062_acceptance.cmd",
+      "count": 9,
+      "file_count": 8
+    },
+    {
+      "value": "sh_run_step072_live_acceptance.cmd",
+      "count": 7,
+      "file_count": 6
+    },
+    {
+      "value": "sh_run_step062b_acceptance.cmd",
+      "count": 7,
+      "file_count": 6
+    },
+    {
+      "value": "sh_run_step071_live_acceptance.cmd",
+      "count": 6,
+      "file_count": 5
+    },
+    {
+      "value": "sh_run_step072b_live_acceptance.cmd",
+      "count": 6,
+      "file_count": 5
+    },
+    {
+      "value": "sh_run_step074_live_acceptance.cmd",
+      "count": 6,
+      "file_count": 5
+    },
+    {
+      "value": "sh_run_step037_acceptance.cmd",
+      "count": 5,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step072a_acceptance.cmd",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "sh_run_step022_live_closure.cmd",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "sh_run_step029_acceptance.cmd",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "sh_run_step080_live_acceptance.cmd",
+      "count": 5,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step062a_acceptance.cmd",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "sh_run_step072_acceptance.cmd",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step036_acceptance.cmd",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step034_acceptance.cmd",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step033_acceptance.cmd",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step028_acceptance.cmd",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step038_acceptance.cmd",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step074_acceptance.cmd",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step075f_live_acceptance.cmd",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step063_acceptance.cmd",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step064_acceptance.cmd",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "sh_run_step075_live_acceptance.cmd",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step073_acceptance.cmd",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step075c_live_acceptance.cmd",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step079a_live_acceptance.cmd",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step075b_live_acceptance.cmd",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step075g_live_acceptance.cmd",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step056b_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step052_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step056_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step043_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step044_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step046_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step040_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step048_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step053_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step026_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step027_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step025_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step054_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step042_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step041_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step057_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step072b_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step075d_live_acceptance.cmd",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step075e_live_acceptance.cmd",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step076_live_acceptance.cmd",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step078_live_acceptance.cmd",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step075a_live_acceptance.cmd",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step077_live_acceptance.cmd",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step061_acceptance.cmd",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step059b_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step012_acceptance.cmd",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "sh_run_step047_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step051_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step049_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step045_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step022_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step056c_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step031_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step060_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step055_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step050_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step070_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step075f_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step064a_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step079_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step066_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step062c_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step075_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step063a_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step067_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step075c_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step079a_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step075b_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step075g_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step068_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step059a_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step002_live_acceptance.cmd",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "sh_run_step021_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step059_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step035_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step058_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step023_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step075d_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step080_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step075e_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step076_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step078_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step075a_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step069_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step065_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step077_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step020_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step020_live_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step019_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step004_live_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step018_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step007_live_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step015_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step017_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step016_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step003_live_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step071_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step014_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "sh_run_step024_live_acceptance.cmd",
+      "count": 1,
+      "file_count": 1
+    }
+  ],
+  "run_step_scripts": [
+    {
+      "value": "scripts/run_step062_acceptance.py",
+      "count": 13,
+      "file_count": 8
+    },
+    {
+      "value": "scripts/run_step062a_acceptance.py",
+      "count": 10,
+      "file_count": 6
+    },
+    {
+      "value": "scripts/run_step062b_acceptance.py",
+      "count": 7,
+      "file_count": 4
+    },
+    {
+      "value": "scripts/run_step049_acceptance.py",
+      "count": 6,
+      "file_count": 5
+    },
+    {
+      "value": "scripts/run_step080_live_acceptance.py",
+      "count": 5,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step064_acceptance.py",
+      "count": 5,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step048_acceptance.py",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step050_acceptance.py",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step072b_live_acceptance.py",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step063_acceptance.py",
+      "count": 4,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step072a_live_acceptance.py",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step072_live_acceptance.py",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step002_live_acceptance.py",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "scripts/run_step006_acceptance.py",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "scripts/run_step052_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step047_acceptance.py",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step051_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step043_acceptance.py",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step046_acceptance.py",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step053_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step054_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step055_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step023_acceptance.py",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step071_live_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step066_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step079a_live_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step075g_live_acceptance.py",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step007_acceptance.py",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "scripts/run_step045_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step070_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075f_live_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step080_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step064a_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step079_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step079_live_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step076_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step062c_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step063a_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step067_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step079a_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step072_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step069_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075g_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step065_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step068_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step072b_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step030_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step056_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step008_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step025_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step024b_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step024_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step020_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step010_acceptance.py",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "scripts/run_step026_acceptance.py",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step021_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step044_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step040_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step022_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step060_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step042_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step041_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075d_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075d_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step071_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075f_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075e_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075e_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step076_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step074_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step074_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step078_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step078_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step073_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075c_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075c_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075b_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075b_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075a_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step075a_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step077_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step077_live_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step072a_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step061_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step038_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step056b_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step056c_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step059_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step027_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step011_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "scripts/run_step009_acceptance.py",
+      "count": 1,
+      "file_count": 1
+    }
+  ],
+  "src_import_paths": [
+    {
+      "value": "okcanvas_agent_runtime.agent_definitions",
+      "count": 139,
+      "file_count": 139
+    },
+    {
+      "value": "okcanvas_agent_runtime.model",
+      "count": 132,
+      "file_count": 132
+    },
+    {
+      "value": "okcanvas_agent_runtime.reference_catalog",
+      "count": 112,
+      "file_count": 112
+    },
+    {
+      "value": "okcanvas_agent_runtime.contracts",
+      "count": 103,
+      "file_count": 103
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution",
+      "count": 100,
+      "file_count": 80
+    },
+    {
+      "value": "okcanvas_agent_runtime.control_api",
+      "count": 89,
+      "file_count": 89
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution.runtime_binding",
+      "count": 82,
+      "file_count": 65
+    },
+    {
+      "value": "okcanvas_agent_runtime.acceptance",
+      "count": 75,
+      "file_count": 75
+    },
+    {
+      "value": "okcanvas_agent_runtime.config",
+      "count": 70,
+      "file_count": 70
+    },
+    {
+      "value": "okcanvas_agent_runtime.product",
+      "count": 37,
+      "file_count": 37
+    },
+    {
+      "value": "okcanvas_agent_runtime.persistence",
+      "count": 36,
+      "file_count": 36
+    },
+    {
+      "value": "okcanvas_agent_runtime.sandbox_runtime",
+      "count": 35,
+      "file_count": 35
+    },
+    {
+      "value": "okcanvas_agent_runtime.function_tools",
+      "count": 31,
+      "file_count": 31
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution.output_registry",
+      "count": 28,
+      "file_count": 11
+    },
+    {
+      "value": "okcanvas_agent_runtime.protected_payload",
+      "count": 28,
+      "file_count": 28
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions",
+      "count": 26,
+      "file_count": 26
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution.service",
+      "count": 17,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.run_submission.service",
+      "count": 17,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime",
+      "count": 16,
+      "file_count": 16
+    },
+    {
+      "value": "okcanvas_agent_runtime.tool_approval",
+      "count": 16,
+      "file_count": 14
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.sdk_readiness",
+      "count": 16,
+      "file_count": 16
+    },
+    {
+      "value": "okcanvas_agent_runtime.mcp_definitions",
+      "count": 15,
+      "file_count": 15
+    },
+    {
+      "value": "okcanvas_agent_runtime.streaming",
+      "count": 15,
+      "file_count": 15
+    },
+    {
+      "value": "okcanvas_agent_runtime.run_submission.execution",
+      "count": 15,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution.openai_gateway",
+      "count": 15,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.run_submission",
+      "count": 14,
+      "file_count": 14
+    },
+    {
+      "value": "okcanvas_agent_runtime.skills",
+      "count": 14,
+      "file_count": 14
+    },
+    {
+      "value": "okcanvas_agent_runtime.business",
+      "count": 13,
+      "file_count": 13
+    },
+    {
+      "value": "okcanvas_agent_runtime.streaming.adapter",
+      "count": 13,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.streaming.broker",
+      "count": 13,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution.contracts",
+      "count": 12,
+      "file_count": 12
+    },
+    {
+      "value": "okcanvas_agent_runtime.evaluation",
+      "count": 11,
+      "file_count": 11
+    },
+    {
+      "value": "okcanvas_agent_runtime.product.models",
+      "count": 11,
+      "file_count": 11
+    },
+    {
+      "value": "okcanvas_agent_runtime.workspace",
+      "count": 10,
+      "file_count": 10
+    },
+    {
+      "value": "okcanvas_agent_runtime.attachments",
+      "count": 10,
+      "file_count": 10
+    },
+    {
+      "value": "okcanvas_agent_runtime.orchestration",
+      "count": 9,
+      "file_count": 8
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution.errors",
+      "count": 9,
+      "file_count": 9
+    },
+    {
+      "value": "okcanvas_agent_runtime.codex_contracts",
+      "count": 9,
+      "file_count": 9
+    },
+    {
+      "value": "okcanvas_agent_runtime.tool_approval.testing",
+      "count": 9,
+      "file_count": 9
+    },
+    {
+      "value": "okcanvas_agent_runtime.attachments.models",
+      "count": 9,
+      "file_count": 8
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.codex_readiness",
+      "count": 8,
+      "file_count": 7
+    },
+    {
+      "value": "okcanvas_agent_runtime.trace_export",
+      "count": 8,
+      "file_count": 8
+    },
+    {
+      "value": "okcanvas_agent_runtime.mcp_servers.reference_catalog",
+      "count": 8,
+      "file_count": 8
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.encryption",
+      "count": 8,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.codex_write_contracts",
+      "count": 7,
+      "file_count": 7
+    },
+    {
+      "value": "okcanvas_agent_runtime.project_snapshots.store",
+      "count": 7,
+      "file_count": 7
+    },
+    {
+      "value": "okcanvas_agent_runtime.control_api.app",
+      "count": 7,
+      "file_count": 7
+    },
+    {
+      "value": "okcanvas_agent_runtime.cli",
+      "count": 7,
+      "file_count": 7
+    },
+    {
+      "value": "okcanvas_agent_runtime.function_tools.implementations",
+      "count": 7,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.model_retry",
+      "count": 7,
+      "file_count": 7
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.compaction",
+      "count": 7,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.product.ports",
+      "count": 7,
+      "file_count": 7
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.codex_write_gateway",
+      "count": 6,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.product.errors",
+      "count": 6,
+      "file_count": 6
+    },
+    {
+      "value": "okcanvas_agent_runtime.baseline",
+      "count": 6,
+      "file_count": 6
+    },
+    {
+      "value": "okcanvas_agent_runtime.commerce_snapshot_ingress",
+      "count": 6,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.hosted_search",
+      "count": 6,
+      "file_count": 6
+    },
+    {
+      "value": "okcanvas_agent_runtime.attachments.store",
+      "count": 6,
+      "file_count": 6
+    },
+    {
+      "value": "okcanvas_agent_runtime.capabilities",
+      "count": 6,
+      "file_count": 6
+    },
+    {
+      "value": "okcanvas_agent_runtime.model_routing",
+      "count": 6,
+      "file_count": 6
+    },
+    {
+      "value": "okcanvas_agent_runtime.invocations.service",
+      "count": 6,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.models",
+      "count": 6,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.policy",
+      "count": 6,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.service",
+      "count": 6,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.evidence",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.project_snapshots",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution.sandbox_answer_completeness",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.function_tools.models",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.sandbox_runtime.docker_cli",
+      "count": 5,
+      "file_count": 4
+    },
+    {
+      "value": "okcanvas_agent_runtime.control_api.errors",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.reasoning_evidence",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.response_storage",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.provider_identity",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.invocations",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.guardrails",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.project_snapshots.models",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "okcanvas_agent_runtime.function_tools.catalog",
+      "count": 5,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.function_tools.factories",
+      "count": 5,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.tui_client",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.codex_gateway",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.mcp_clients",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "okcanvas_agent_runtime.handoffs",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "okcanvas_agent_runtime.agent_tools",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "okcanvas_agent_runtime.validation",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "okcanvas_agent_runtime.mcp_clients.openai_factory",
+      "count": 4,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sandbox_runtime.read_only_workspace",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.codex_write_service",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.control_api.sse",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.tool_approval.gateway",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.control_api.mappers",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.walking_skeleton",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.agent_definitions.models",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.agent_definitions.errors",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.project_snapshots.errors",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.attachments.model_policy",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "okcanvas_agent_runtime.handoffs.models",
+      "count": 3,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.handoffs.policy",
+      "count": 3,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.handoffs.runtime",
+      "count": 3,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.agent_tools.models",
+      "count": 3,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.agent_tools.policy",
+      "count": 3,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.agent_tools.runtime",
+      "count": 3,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.openai_gateway",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.approval_operator",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.approval_contracts",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.codex_approval_gateway",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.agents.coding_agent",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.agents.codex_write_agent",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.service",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.invocations.models",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.protected_payload.store",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.control_api.contracts",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.sandbox_runtime.models",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sandbox_runtime.catalog",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.hosted_search.models",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.hosted_search.catalog",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.hosted_search.runtime",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.orchestration.openai_runtime",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.mcp_definitions.models",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.mcp_definitions.catalog",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.guardrails.models",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.guardrails.catalog",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.guardrails.runtime",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.tool_approval.service",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.attachments.errors",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "okcanvas_agent_runtime.sandbox_runtime.read_only_workspace.inspect_readonly_project",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.evaluation.service",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.workspace.git_diff",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.codex_approval_service",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.service_clients.auth",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.rotation",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.acceptance.workspace",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.service_clients.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.agents.codex_readonly_agent",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.codex_service",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.errors",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.runtime.gateway",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.execution.gateway",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.product.transitions",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.evaluation.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.evaluation.suite",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.operations_console",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.service_clients",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.service_clients.routes",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.capabilities.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.capabilities.policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.capabilities.catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.capabilities.examples",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.model_routing.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.model_routing.catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.model_routing.provider",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.model_retry.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.model_retry.catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.model_retry.runtime",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.reasoning_evidence.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.reasoning_evidence.catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.reasoning_evidence.runtime",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.response_storage.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.response_storage.catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.response_storage.runtime",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.provider_identity.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.provider_identity.catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.provider_identity.runtime",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.trace_export.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.trace_export.catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.trace_export.runtime",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sandbox_runtime.service",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.skills.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.skills.catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.skills.runtime",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.attachments.policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.attachments.validation",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.run_submission.lifecycle",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.protected_payload.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.orchestration.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.orchestration.policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.orchestration.runtime",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.mcp_policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.guardrail_policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.approval_policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.tool_approval.store",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.handoff_policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sessions.agent_tool_policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.invocations.policy",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.invocations.graph",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.invocations.workspace",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.sandbox_runtime.errors",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.replenishment_limits",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.tool_approval.models",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "okcanvas_agent_runtime.run_submission.errors",
+      "count": 1,
+      "file_count": 1
+    }
+  ],
+  "spec_paths": [
+    {
+      "value": "specs/runtime/sqlite-session-policy.json",
+      "count": 32,
+      "file_count": 17
+    },
+    {
+      "value": "specs/service_clients/service-client-policy.json",
+      "count": 28,
+      "file_count": 24
+    },
+    {
+      "value": "specs/runtime/reasoning-evidence-policy.json",
+      "count": 8,
+      "file_count": 7
+    },
+    {
+      "value": "specs/runtime/model-retry-policy.json",
+      "count": 7,
+      "file_count": 7
+    },
+    {
+      "value": "specs/runtime/openai-response-storage-policy.json",
+      "count": 7,
+      "file_count": 6
+    },
+    {
+      "value": "specs/runtime/openai-provider-identifier-policy.json",
+      "count": 7,
+      "file_count": 6
+    },
+    {
+      "value": "specs/sandbox",
+      "count": 6,
+      "file_count": 1
+    },
+    {
+      "value": "specs/runtime/model-routing-policy.json",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "specs/runtime/openai-trace-export-policy.json",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "specs/capabilities/tool-discovery-policy.json",
+      "count": 5,
+      "file_count": 4
+    },
+    {
+      "value": "specs/agents",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "specs/tools/",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "specs/runtime",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "specs/runtime/sub-agent-invocation-policy.json",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "specs/runtime/bounded-orchestration-policy.json",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "specs/runtime/agent-as-tool-policy.json",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "specs/agents/",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "specs/runtime/canonical-events.yaml",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "specs/agents/coding-agent/instructions.md",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "specs/runtime/sqlite-session-approval-policy.json",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "specs/mcp/allowlist.json",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "specs/sandbox/policies/default-sandbox-runtime-policy.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "specs/runtime/native-handoff-policy.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "specs/mcp/examples/remote-streamable-http.server.json",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "specs/capabilities/examples/openai-agents-python-0.19.0.json",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "specs/runtime/sqlite-session-key-rotation-policy.json",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "specs/skills",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "specs/mcp",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "specs/runtime/sqlite-session-handoff-policy.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/agents/session-agent-tool-manager-agent/definition.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/runtime/walking-skeleton-scenarios.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/agents/coding-agent/output.schema.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/agents/session-approval-agent/definition.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/evaluations/sqlite-session-approval-v1/case.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/runtime/sqlite-session-guardrail-policy.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/agents/session-guardrail-language-agent/definition.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/mcp/servers/reference-catalog/server.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/agent-tool-specialist-agent/definition.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/skills/document-review-v1/skill.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/sandbox/providers/docker-local-v1/provider.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/hosted_tools/contracts/HOSTED_WEB_SEARCH_V1.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/capabilities",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/local-text-metrics-agent/definition.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/tools/local-text-metrics/policy.yaml",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/agents/session-reference-research-agent/definition.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/runtime/sqlite-session-mcp-policy.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/service_clients/contracts/MULTI_USER_SERVICE_CLIENT_V1.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/agents/sandbox-readonly-coding-agent/instructions.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/runtime/hosted-web-search-policy.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/runtime/",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/submissions/governed-execution-lifecycle-policy.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/tools",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/skills/",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/agents/local-text-fingerprint-agent/",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/bounded-orchestration-",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "specs/evaluations/immutable-openai-zero-retry-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/session-handoff-triage-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/sqlite-session-native-handoff-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/immutable-openai-model-route-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/runtime/sqlite-session-agent-tool-policy.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/sqlite-session-native-agent-tool-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/session-continuity-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/sqlite-session-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/runtime/domain-model.yaml",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/guardrails/block-input-marker/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/guardrails/block-output-marker/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/guardrails/deny-local-text-tool-input/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/guardrails/deny-local-text-tool-output/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/guardrail-language-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/guardrail-tool-input-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/guardrail-tool-output-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/native-guardrail-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/coding-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/coding-agent",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/bounded-orchestration-manager-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/bounded-orchestration-architecture-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/bounded-orchestration-risk-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/sqlite-session-native-guardrail-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/mcp/servers/reference-catalog",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/mcp/servers/other-server",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/mcp/servers",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/reference-research-agent",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/remote-organization-search-agent",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/hosted-web-search-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/agent-tool-manager-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/agent-as-tool-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/handoff-triage-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/handoff-specialist-agent/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/native-handoff-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tools/reference-search/policy.yaml",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/sqlite-session-native-mcp-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/skills/document-review-v1",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/skills/contracts/PRODUCT_OWNED_SKILL_PACKAGE_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/skills/README.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/project_snapshots/project-snapshot-policy.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/bounded-orchestration-manager-agent/output.schema.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/mcp/contracts/REMOTE_STREAMABLE_HTTP_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/sandbox/contracts/PRODUCT_OWNED_SANDBOX_RUNTIME_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/service_clients/contracts/SERVICE_CLIENT_TOKEN_REGISTRY_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/attachments/contracts/BOUNDED_LOCAL_PDF_IMAGE_INPUT_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/mcp/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/attachments/policies/local-pdf-image-v1.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/guardrails/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/codex-readonly-agent",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tools/codex/policy.yaml",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/submissions/local-run-submission-policy.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tools/local-text-fingerprint/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tools/local-text-metrics/definition.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tools/local-text-metrics/input.schema.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tools/local-text-metrics/output.schema.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluation-suites/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tools/reference-search/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/sandbox/policies",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/sandbox/providers/docker-local-v1",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/session-approval-agent/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/guardrails",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/bounded-orchestration-manager-agent/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/bounded-orchestration-architecture-agent/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/bounded-orchestration-risk-agent/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/evaluations/tui-client-foundation-v1/case.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tools/project-readonly-inspect/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/agents/project-readonly-coding-agent/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/policies/bounded-multi-agent-orchestration/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/tests/scripts/pyproject",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/attachments",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "specs/mcp/servers/",
+      "count": 1,
+      "file_count": 1
+    }
+  ],
+  "docs_paths": [
+    {
+      "value": "docs/plans/ROADMAP.md",
+      "count": 53,
+      "file_count": 39
+    },
+    {
+      "value": "docs/issues/ISSUE_REGISTRY.md",
+      "count": 15,
+      "file_count": 14
+    },
+    {
+      "value": "docs/39-PRODUCT-OWNED-SANDBOX-RUNTIME.md",
+      "count": 10,
+      "file_count": 10
+    },
+    {
+      "value": "docs/38-WINDOWS-PYTHON-LAUNCHER-PORTABILITY.md",
+      "count": 8,
+      "file_count": 5
+    },
+    {
+      "value": "docs/evidence/STEP075_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+      "count": 6,
+      "file_count": 4
+    },
+    {
+      "value": "docs/plans/STEP045_INTEGRATED_WALKING_SKELETON_ACCEPTANCE.md",
+      "count": 6,
+      "file_count": 6
+    },
+    {
+      "value": "docs/evidence/STEP072B_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 6,
+      "file_count": 4
+    },
+    {
+      "value": "docs/evidence/STEP074_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 6,
+      "file_count": 5
+    },
+    {
+      "value": "docs/plans/STEP062_BOUNDED_MULTI_AGENT_ORCHESTRATION_FOUNDATION.md",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "docs/reference/STEP062_BOUNDED_MULTI_AGENT_ORCHESTRATION_FOUNDATION_CODE_AUDIT.md",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "docs/models/gpt-5.6-sol",
+      "count": 5,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP061_OPENAI_AGENTS_EXAMPLES_COVERAGE_MATRIX.json",
+      "count": 5,
+      "file_count": 5
+    },
+    {
+      "value": "docs/evidence/STEP072A_WINDOWS_ACCEPTANCE_SUMMARY.json",
+      "count": 5,
+      "file_count": 4
+    },
+    {
+      "value": "docs/evidence/STEP071_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "docs/plans/STEP059_BOUNDED_PROJECT_READONLY_CODING_WORKFLOW.md",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "docs/evidence/STEP073_WINDOWS_ACCEPTANCE_SUMMARY.json",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "docs/evidence/STEP062A_WINDOWS_TYPESCRIPT_BUILD_FAILURE_SUMMARY.json",
+      "count": 4,
+      "file_count": 3
+    },
+    {
+      "value": "docs/evidence/STEP060_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "docs/plans/STEP036B_SUB_AGENT_INVOCATION_AND_WORKSPACE_ISOLATION.md",
+      "count": 4,
+      "file_count": 4
+    },
+    {
+      "value": "docs/plans/STEP023_MINIMAL_LOCAL_APPROVAL_OPERATOR_CLI.md",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-001-STEP075-WINDOWS-DOCKER-TMPFS-NORMALIZATION.md",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "docs/07-TARGET-PLATFORM-ARCHITECTURE.md",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/09-DELIVERY-ROADMAP.md",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP072_WINDOWS_ACCEPTANCE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP062B_WINDOWS_COMPILER_ABSENCE_FAILURE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP066_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP065_MVP_REPRIORITIZATION_DECISION.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP067_FILE_SEARCH_SCOPE_SEPARATION.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP062_WINDOWS_NODE_ACCEPTANCE_FAILURE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP063_WINDOWS_SYMLINK_TEST_SKIP_FAILURE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP064_WINDOWS_PYTEST_ASYNC_PLUGIN_FAILURE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/step079a-live",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "docs/evidence/STEP069_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 3,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP061_OPENAI_AGENTS_EXAMPLES_COVERAGE_MATRIX_AND_NEXT_SCOPE_SELECTION_CODE_AUDIT.md",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/reference/STEP061_OPENAI_AGENTS_EXAMPLES_COVERAGE_MATRIX.md",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP075G_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP061_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP064A_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP063A_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP079_WINDOWS_LIVE_ENTRYPOINT_FAILURE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP075A_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+      "count": 3,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP049_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "docs/__init__.py",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "docs/coding_task.py",
+      "count": 3,
+      "file_count": 3
+    },
+    {
+      "value": "docs/evidence/STEP051_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/plans/STEP075A_WINDOWS_DOCKER_TMPFS_NORMALIZATION_AND_FAILURE_EVIDENCE_FIX.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/reference/STEP075A_WINDOWS_DOCKER_TMPFS_NORMALIZATION_AND_FAILURE_EVIDENCE_FIX_CODE_AUDIT.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/plans/legacy-health-api.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP050_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/plans/STEP049_SQLITE_SESSION_NATIVE_AGENT_AS_TOOL_COMPOSITION_V1.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP048_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/06-REFERENCE-ADOPTION-MATRIX.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/08-SERVICE-BOUNDARIES.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP045_ACCEPTANCE.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP044_ACCEPTANCE.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP046_ACCEPTANCE.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP047_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP052_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/page",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/models/x",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP053_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP054_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP049_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/step072b-live/",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP069_ACCEPTANCE.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP075D_ACCEPTANCE.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP075C_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP070_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step071-live/",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP075E_WINDOWS_LIVE_ACCEPTANCE_ANSWER_COMPLETENESS_FAILURE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075f-live/",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP062C_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP079A_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP048_ACCEPTANCE.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP078_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP061_OPENAI_AGENTS_EXAMPLES_COVERAGE_MATRIX_AND_NEXT_SCOPE_SELECTION.md",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075D_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP077_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP063A_WINDOWS_SYMLINK_INTEGRITY_TEST_PORTABILITY_FIX.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/reference/STEP063A_WINDOWS_SYMLINK_INTEGRITY_TEST_PORTABILITY_FIX_CODE_AUDIT.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/step075-live/",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP075B_WINDOWS_LIVE_ACCEPTANCE_FAILURE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP068_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP007_ACCEPTANCE.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP075F_WINDOWS_LIVE_ACCEPTANCE_BOUNDED_REPAIR_FAILURE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP067_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP076_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP072B_WINDOWS_CRLF_AND_LOCAL_ENV_FORWARDING_FIX_CODE_AUDIT.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/reference/STEP072A_WINDOWS_PYCACHE_OVERLAY_ISOLATION_FIX_CODE_AUDIT.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/reference/STEP036A_REFERENCE_CAPABILITY_INVENTORY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/step022-live/",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP028_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/client",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP027_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP038_ACCEPTANCE.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP026_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/config.md",
+      "count": 2,
+      "file_count": 2
+    },
+    {
+      "value": "docs/evidence/STEP056B_VALIDATION.txt",
+      "count": 2,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP021_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP002C_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP002C_LIVE_ACCEPTANCE_RAW.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP052_IMMUTABLE_OPENAI_ZERO_RETRY_POLICY_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP052_IMMUTABLE_OPENAI_ZERO_RETRY_POLICY_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP047_SQLITE_SESSION_NATIVE_HANDOFF_COMPOSITION_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP047_SQLITE_SESSION_NATIVE_HANDOFF_COMPOSITION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/routing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP051_IMMUTABLE_OPENAI_MODEL_ROUTE_BINDING_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP051_IMMUTABLE_OPENAI_MODEL_ROUTE_BINDING_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP049_SQLITE_SESSION_NATIVE_AGENT_AS_TOOL_COMPOSITION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP043_SQLITE_SESSION_RUNTIME_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP043_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP043_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP042_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/decisions/ADR-006-MODULAR-MONOLITH-FIRST.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/decisions/ADR-007-CODEX-OPTIONAL-ADAPTER.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/decisions/ADR-008-PRODUCT-STATE-IS-NOT-SDK-STATE.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP045_INTEGRATED_WALKING_SKELETON_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP044_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP045_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP003C_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP003C_LIVE_ACCEPTANCE_RAW.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP044_NATIVE_GUARDRAIL_RUNTIME_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP043_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP044_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP046_SQLITE_SESSION_APPROVAL_COMPOSITION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP045_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP046_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP040_SUB_AGENT_INVOCATION_SCOPE_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP040_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP040_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP039_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step022-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP009A_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP009A_LIVE_ACCEPTANCE_RAW.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP022_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP022_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP008_CONTROL_API_AND_PERSISTED_SSE.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP048_SQLITE_SESSION_NATIVE_GUARDRAIL_COMPOSITION_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP048_SQLITE_SESSION_NATIVE_GUARDRAIL_COMPOSITION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP053_IMMUTABLE_REASONING_EVIDENCE_MINIMIZATION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/models/gpt-5.6-terra/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/models/gpt-5.6-sol/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP059B_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP059A_WINDOWS_ACTUAL_SDK_TOOL_CONTEXT_IMPORT_FAILURE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP059_WINDOWS_REAL_OPENAI_FUNCTION_TOOL_FAILURE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP059A_DETERMINISTIC_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP054_IMMUTABLE_OPENAI_RESPONSE_STORAGE_DISABLED_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP042_AGENT_AS_TOOL_RUNTIME_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP042_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP042_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP041_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP055_IMMUTABLE_OPENAI_PROVIDER_IDENTIFIER_MINIMIZATION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP023_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP023_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP041_NATIVE_HANDOFF_RUNTIME_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP041_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP041_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP040_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP006_READ_ONLY_REFERENCE_CATALOG_SERVICE.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP007_GENERIC_AGENT_EXECUTION_SERVICE.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP020_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP050_SQLITE_SESSION_NATIVE_MCP_COMPOSITION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP050_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075e-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step072-live/STEP072_LIVE_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP006_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP070_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP070_PRODUCT_OWNED_SKILL_PACKAGE_FOUNDATION_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP070_PRODUCT_OWNED_SKILL_PACKAGE_FOUNDATION_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/27-PRODUCT-OWNED-SKILLS.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step076-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP075D_PYTHON_SUBPROCESS_STDIN_INPUT_CONTRACT_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP075D_PYTHON_SUBPROCESS_STDIN_INPUT_CONTRACT_FIX_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-004-STEP075C-PYTHON-SUBPROCESS-STDIN-INPUT-CONFLICT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075d-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP051_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP071_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP071_PRODUCT_SKILL_DOCUMENT_REVIEW_LIVE_ACCEPTANCE_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP071_PRODUCT_SKILL_DOCUMENT_REVIEW_LIVE_ACCEPTANCE_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075F_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP075F_EXACT_EVIDENCE_OUTPUT_COMPLETENESS_AND_BOUNDED_REPAIR.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP075F_EXACT_EVIDENCE_OUTPUT_COMPLETENESS_AND_BOUNDED_REPAIR_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-006-STEP075E-EXACT-EVIDENCE-ANSWER-COMPLETENESS.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075f-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP063_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP063_STRICT_ENCRYPTED_SQLITE_SESSION_HISTORY_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP063_STRICT_ENCRYPTED_SQLITE_SESSION_HISTORY_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP080_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP080_PRODUCT_OWNED_CAPABILITY_TOPOLOGY_AND_TOOL_DISCOVERY_FOUNDATION.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP080_PRODUCT_OWNED_CAPABILITY_TOPOLOGY_AND_TOOL_DISCOVERY_FOUNDATION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-014-CAPABILITY-SURFACES-FRAGMENTED-AND-NOT-NORMALIZED.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP054_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP064A_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP064A_PYTEST_ASYNC_PLUGIN_INDEPENDENCE_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP064A_PYTEST_ASYNC_PLUGIN_INDEPENDENCE_FIX_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step072b-live/STEP072B_LIVE_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP079_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP079_PRODUCT_OWNED_ATOMIC_TASK_RUN_OWNERSHIP_TRANSFER.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP079_PRODUCT_OWNED_ATOMIC_TASK_RUN_OWNERSHIP_TRANSFER_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-012-TASK-RUN-OWNERSHIP-POST-COMMIT-WINDOW.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step079-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP052_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP061_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step077-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step009-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075E_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP075E_INTERNAL_SNAPSHOT_METADATA_EXCLUSION_AND_HASH_DOMAIN_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP075E_INTERNAL_SNAPSHOT_METADATA_EXCLUSION_AND_HASH_DOMAIN_FIX_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-005-STEP075D-INTERNAL-SNAPSHOT-METADATA-HASH-DOMAIN.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075e-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP076_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP076_PRODUCT_OWNED_IMMUTABLE_PROJECT_SNAPSHOT_BINDING.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP076_PRODUCT_OWNED_IMMUTABLE_PROJECT_SNAPSHOT_BINDING_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-008-GLOBAL-SANDBOX-WORKSPACE-NOT-SUBMISSION-BOUND.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step076-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP074_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP074_PRODUCT_OWNED_DOCKER_SANDBOX_PROVIDER_LIFECYCLE_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP074_PRODUCT_OWNED_DOCKER_SANDBOX_PROVIDER_LIFECYCLE_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step072a-live/STEP072A_LIVE_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP062_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP066_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP066_REMOTE_MCP_STREAMABLE_HTTP_MVP_FOUNDATION.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP066_REMOTE_MCP_STREAMABLE_HTTP_MVP_FOUNDATION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step007-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP009_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP064_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP064_BOUNDED_ENCRYPTED_SQLITE_SESSION_COMPACTION_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP064_BOUNDED_ENCRYPTED_SQLITE_SESSION_COMPACTION_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075b-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP078_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP078_PRODUCT_OWNED_ATOMIC_SERVICE_SUBMISSION_OWNERSHIP_TRANSFER.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP078_PRODUCT_OWNED_ATOMIC_SERVICE_SUBMISSION_OWNERSHIP_TRANSFER_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-010-SERVICE-SUBMISSION-OWNERSHIP-POST-COMMIT-WINDOW.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-011-REFERENCE-IMPORT-VERIFIER-CALL-SCAN.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step078-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step078-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP062C_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP075_PRODUCT_OWNED_READ_ONLY_SANDBOX_WORKSPACE_AGENT_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP075_PRODUCT_OWNED_READ_ONLY_SANDBOX_WORKSPACE_AGENT_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP063A_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP073_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP073_PRODUCT_OWNED_SANDBOX_RUNTIME_FOUNDATION_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP073_PRODUCT_OWNED_SANDBOX_RUNTIME_FOUNDATION_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP062A_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP062A_WINDOWS_NODE_ACCEPTANCE_PORTABILITY_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP067_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP067_HOSTED_WEB_SEARCH_SOURCE_POLICY_AND_EVIDENCE_FOUNDATION.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP067_HOSTED_WEB_SEARCH_SOURCE_POLICY_AND_EVIDENCE_FOUNDATION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075C_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP075C_WINDOWS_TMPFS_TAR_STREAM_MATERIALIZATION_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP075C_WINDOWS_TMPFS_TAR_STREAM_MATERIALIZATION_FIX_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-003-STEP075B-WINDOWS-TMPFS-DOCKER-CP-UNSUPPORTED.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075c-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP079A_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP079A_WINDOWS_ENTRYPOINT_COMMAND_REGISTRATION_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP079A_WINDOWS_ENTRYPOINT_COMMAND_REGISTRATION_FIX_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-013-STEP079-LIVE-COMMAND-NOT-REGISTERED.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step079a-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075d-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP072_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP072_IMMUTABLE_OPENAI_TRACE_EXPORT_DISABLED_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP072_IMMUTABLE_OPENAI_TRACE_EXPORT_DISABLED_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step072-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP008_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step074-live/STEP074_LIVE_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075B_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP075B_WINDOWS_DOCKER_COMMAND_OPERATION_EVIDENCE.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP075B_WINDOWS_DOCKER_COMMAND_OPERATION_EVIDENCE_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-002-STEP075A-WINDOWS-DOCKER-COMMAND-OPERATION-EVIDENCE.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075b-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP055_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075A_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075a-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP069_MULTI_USER_SERVICE_CLIENT_CONTRACT_FOUNDATION.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP069_MULTI_USER_SERVICE_CLIENT_CONTRACT_FOUNDATION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/26-MULTI-USER-SERVICE-CLIENT-API.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step079-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075g-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075G_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP075G_PRODUCT_OWNED_DETERMINISTIC_EVIDENCE_COMPLETION.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP075G_PRODUCT_OWNED_DETERMINISTIC_EVIDENCE_COMPLETION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-007-STEP075F-MODEL-REPAIR-NONDETERMINISM.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075g-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step075c-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP065_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP065_STRICT_SESSION_HISTORY_KEY_ROTATION_AND_RECOVERY_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP065_STRICT_SESSION_HISTORY_KEY_ROTATION_AND_RECOVERY_V1_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP062B_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP062B_WINDOWS_TYPESCRIPT_DIRECT_COMPILER_PORTABILITY_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP062B_WINDOWS_TYPESCRIPT_DIRECT_COMPILER_PORTABILITY_FIX_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP068_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP068_BOUNDED_LOCAL_PDF_AND_IMAGE_INPUT_FOUNDATION.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP068_BOUNDED_LOCAL_PDF_AND_IMAGE_INPUT_FOUNDATION_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/25-BOUNDED-LOCAL-PDF-IMAGE-INPUT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP059B_DETERMINISTIC_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP053_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP077_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP077_PRODUCT_OWNED_BINARY_INGRESS_SLOT_LIFECYCLE.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/reference/STEP077_PRODUCT_OWNED_BINARY_INGRESS_SLOT_LIFECYCLE_CODE_AUDIT.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/issues/OR-ISSUE-009-BINARY-INGRESS-SLOT-LIFECYCLE-ORPHANS.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step077-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP072B_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP072B_WINDOWS_CRLF_AND_LOCAL_ENV_FORWARDING_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP001_LIVE_RUN.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP072A_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP072A_WINDOWS_PYCACHE_OVERLAY_ISOLATION_FIX.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step072a-live/",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/17-GOVERNED-RECOVERY-AND-PAYLOAD-RETENTION.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP036A_REFERENCE_WIDE_RUNTIME_CAPABILITY_MASTER_PLAN.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/16-PROTECTED-PAYLOAD-AND-GOVERNED-RUN.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/06-REFERENCE-ADOPTION-MATRIX-STEP012.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP025_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP001_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step002-live/thread.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP036_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP038_GENERIC_FUNCTION_TOOL_RUNTIME_V1.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP039_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP026_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/assets/images/favicon-platform.svg",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/assets/images/graph.png",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/assets/images/harness_with_compute.png",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/assets/images/mcp-tracing.jpg",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/assets/images/orchestration.png",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/assets/logo.svg",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/context.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/examples.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/guardrails.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/handoffs.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/human_in_the_loop.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/config.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/context.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/examples.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/guardrails.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/handoffs.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/human_in_the_loop.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/mcp.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/models/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/models/litellm.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/multi_agent.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/realtime/guide.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/realtime/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/realtime/transport.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/release.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/repl.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/results.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/running_agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sandbox/clients.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sandbox/guide.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sandbox/memory.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sandbox_agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sessions/advanced_sqlite_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sessions/encrypted_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sessions/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sessions/sqlalchemy_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/sessions.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/streaming.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/tools.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/usage.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/visualization.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/voice/pipeline.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/voice/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ja/voice/tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/config.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/context.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/examples.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/guardrails.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/handoffs.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/human_in_the_loop.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/mcp.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/models/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/models/litellm.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/multi_agent.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/realtime/guide.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/realtime/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/realtime/transport.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/release.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/repl.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/results.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/running_agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sandbox/clients.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sandbox/guide.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sandbox/memory.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sandbox_agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sessions/advanced_sqlite_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sessions/encrypted_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sessions/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sessions/sqlalchemy_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/sessions.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/streaming.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/tools.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/usage.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/visualization.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/voice/pipeline.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/voice/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ko/voice/tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/llms-full.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/llms.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/mcp.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/models/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/models/litellm.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/multi_agent.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/realtime/guide.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/realtime/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/realtime/transport.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/agent.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/agent_output.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/agent_tool_input.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/agent_tool_state.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/apply_diff.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/computer.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/decorators.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/editor.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/exceptions.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/codex.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/codex_options.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/codex_tool.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/events.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/exec.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/items.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/output_schema_file.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/payloads.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/thread.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/thread_options.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/codex/turn_options.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/experimental/hosted_multi_agent/model.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/handoff_filters.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/handoff_prompt.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/litellm.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/memory/advanced_sqlite_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/memory/async_sqlite_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/memory/dapr_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/memory/encrypt_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/memory/mongodb_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/memory/redis_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/memory/sqlalchemy_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/models/any_llm_model.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/models/any_llm_provider.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/models/litellm_model.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/models/litellm_provider.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/blaxel/mounts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/blaxel/sandbox.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/cloudflare/mounts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/cloudflare/sandbox.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/daytona/mounts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/daytona/sandbox.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/e2b/mounts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/e2b/sandbox.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/modal/mounts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/modal/sandbox.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/runloop/mounts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/runloop/sandbox.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/vercel/mounts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/sandbox/vercel/sandbox.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/tool_output_trimmer.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/extensions/visualization.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/function_schema.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/guardrail.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/handoffs/history.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/handoffs.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/items.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/lifecycle.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/logger.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/mcp/manager.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/mcp/server.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/mcp/util.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/memory/openai_conversations_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/memory/openai_responses_compaction_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/memory/session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/memory/session_settings.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/memory/sqlite_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/memory/util.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/memory.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/model_settings.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/chatcmpl_converter.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/chatcmpl_helpers.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/chatcmpl_stream_handler.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/default_models.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/fake_id.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/interface.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/multi_provider.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/openai_agent_registration.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/openai_chatcompletions.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/openai_client_utils.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/openai_provider.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/openai_responses.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/models/reasoning_content_replay.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/prompts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/agent.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/audio_formats.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/config.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/events.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/handoffs.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/items.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/model.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/model_events.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/model_inputs.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/openai_realtime.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/runner.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/realtime/session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/repl.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/responses_websocket_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/result.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/retry.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_config.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_context.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_error_handlers.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/agent_bindings.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/agent_runner_helpers.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/approvals.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/error_handlers.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/guardrails.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/items.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/model_retry.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/oai_conversation.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/prompt_cache_key.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/run_grouping.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/run_loop.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/run_steps.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/session_persistence.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/streaming.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/tool_actions.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/tool_caller.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/tool_execution.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/tool_planning.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/tool_use_tracker.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/turn_preparation.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_internal/turn_resolution.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/run_state.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/apply_patch.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/capabilities.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/capability.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/compaction.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/filesystem.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/memory.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/shell.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/skills.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/tools/apply_patch_tool.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/tools/shell_tool.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/capabilities/tools/view_image.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/config.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/artifacts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/base.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/base.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/patterns.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/providers/azure_blob.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/providers/base.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/providers/box.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/providers/gcs.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/providers/r2.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/providers/s3.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries/mounts/providers/s3_files.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/entries.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/errors.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/files.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/manifest.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/manifest_render.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/materialization.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/memory/interface.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/memory/manager.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/memory/phase_one.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/memory/phase_two.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/memory/prompts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/memory/rollouts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/memory/storage.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/permissions.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/remote_mount_policy.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/runtime.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/runtime_agent_preparation.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/runtime_session_manager.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/sandbox_agent.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/sandboxes/docker.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/sandboxes/unix_local.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/archive_extraction.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/archive_ops.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/base_sandbox_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/dependencies.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/events.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/manager.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/manifest_application.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/manifest_ops.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/mount_lifecycle.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/pty_output.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/pty_types.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/runtime_helpers.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/sandbox_client.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/sandbox_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/sandbox_session_state.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/sinks.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/snapshot_lifecycle.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/tar_workspace.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/utils.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/session/workspace_payloads.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/snapshot.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/snapshot_defaults.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/types.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/util/checksums.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/util/deep_merge.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/util/github.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/util/iterator_io.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/util/parse_utils.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/util/retry.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/util/tar_utils.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/util/token_truncation.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox/workspace_paths.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/sandbox.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/stream_events.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/strict_schema.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tool.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tool_context.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tool_guardrails.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/config.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/context.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/create.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/logger.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/model_tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/processor_interface.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/processors.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/provider.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/scope.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/setup.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/span_data.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/spans.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/traces.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/tracing/util.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/usage.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/version.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/events.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/exceptions.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/imports.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/input.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/model.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/models/openai_model_provider.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/models/openai_provider.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/models/openai_stt.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/models/openai_tts.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/pipeline.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/pipeline_config.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/result.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/utils.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/ref/voice/workflow.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/release.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/repl.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/results.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/running_agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/sandbox/clients.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/sandbox/guide.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/sandbox/memory.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/sandbox_agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/scripts/generate_ref_files.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/scripts/translate_docs.py",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/sessions/advanced_sqlite_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/sessions/encrypted_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/sessions/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/sessions/sqlalchemy_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/streaming.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/stylesheets/extra.css",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/tools.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/usage.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/visualization.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/voice/pipeline.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/voice/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/voice/tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/config.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/context.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/examples.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/guardrails.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/handoffs.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/human_in_the_loop.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/mcp.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/models/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/models/litellm.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/multi_agent.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/realtime/guide.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/realtime/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/realtime/transport.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/release.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/repl.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/results.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/running_agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sandbox/clients.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sandbox/guide.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sandbox/memory.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sandbox_agents.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sessions/advanced_sqlite_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sessions/encrypted_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sessions/index.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sessions/sqlalchemy_session.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/sessions.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/streaming.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/tools.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/usage.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/visualization.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/voice/pipeline.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/voice/quickstart.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/zh/voice/tracing.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/repo/README.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/repo/credit_note.sh",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/repo/task.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/repo/tests/test_credit_note.sh",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/skills/credit-note-fixer/SKILL.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP075D_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP047_ACCEPTANCE.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP040_SUB_AGENT_INVOCATION_SCOPE_FOUNDATION.md",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/plans/STEP008_CONTROL_API_AND_PERSISTED_SSE.md.",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/tests",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP032_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP057_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step071-live",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP059_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP030_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json.",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP029_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json.",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP062C_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP058_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step009-live/20260728T230639Z-75152cc6",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs//evidence//step022-live//20260729T110032Z-815ad92c",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP054_VALIDATION.txt",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP031_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/STEP030A_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json.",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs//evidence//step002-live//20260728T125150Z-c9ab7845//first-events.jsonl",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs//evidence//step002-live//20260728T125150Z-c9ab7845//second-events.jsonl",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step002-live/20260728T125150Z-c9ab7845",
+      "count": 1,
+      "file_count": 1
+    },
+    {
+      "value": "docs/evidence/step002-live",
+      "count": 1,
+      "file_count": 1
+    }
+  ]
+}

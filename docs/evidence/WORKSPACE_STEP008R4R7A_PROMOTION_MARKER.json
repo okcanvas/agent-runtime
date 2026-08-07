@@ -1,0 +1,14 @@
+{
+  "issue_040_deterministic_closure": false,
+  "issue_040_fix_implemented": true,
+  "parent_real_postgresql_accepted": true,
+  "promotion": "NOT_READY",
+  "real_object_storage_live_accepted": false,
+  "runtime_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.75.0",
+  "schema_version": "okcanvas-workspace-step008r4r7a-promotion-marker-v1",
+  "state": "IMPLEMENTED_TEST_EXECUTION_DEFERRED_BY_USER_MINIO_PENDING",
+  "tests_deferred_by_user_until_minio_ready": true,
+  "version": "0.8.4-r7a",
+  "workspace_step": "WORKSPACE_STEP008R4R7A_CURRENT_DOCUMENT_SOT_ALIGNMENT_AND_PER_FILE_IDENTITY_GATE"
+}

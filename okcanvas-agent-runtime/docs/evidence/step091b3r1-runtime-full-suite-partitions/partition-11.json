@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-11",
+  "partition_number": 11,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:07:49.376295+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 36,
+  "passed_tests": 36,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 4.443,
+  "exit_code": 0,
+  "files_sha256": "f93384862a03a63be34d5fd498ba2c27ab967689af18498f665578353b2b3c0b",
+  "log_sha256": "30d3879c5e1f308755f41e24c497d7dbfa58371dafbf0420fd0312e84403bbbf",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step038_generic_function_tool_baseline.py",
+    "tests/test_step039_native_sdk_streaming_baseline.py",
+    "tests/test_step040_sub_agent_invocation_scope_baseline.py",
+    "tests/test_step041_native_handoff_runtime_baseline.py",
+    "tests/test_step042_agent_as_tool_runtime_baseline.py",
+    "tests/test_step043_sqlite_session_runtime_baseline.py",
+    "tests/test_step044_native_guardrail_runtime_baseline.py",
+    "tests/test_step045_integrated_walking_skeleton_baseline.py",
+    "tests/test_step046_sqlite_session_approval_composition_baseline.py",
+    "tests/test_step047_sqlite_session_native_handoff_composition_baseline.py",
+    "tests/test_step048_sqlite_session_native_guardrail_composition_baseline.py",
+    "tests/test_step049_acceptance_history_probe.py",
+    "tests/test_step049_sqlite_session_native_agent_tool_composition_baseline.py",
+    "tests/test_step050_sqlite_session_native_mcp_composition_baseline.py"
+  ]
+}

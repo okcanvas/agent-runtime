@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "store-replenishment-review-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Store Replenishment Review Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "StoreReplenishmentReviewResult",
+  "tools": [],
+  "mcp_servers": [],
+  "handoffs": [],
+  "max_turns": 1,
+  "workflow_name": "OKCanvas Store Replenishment Review",
+  "session_mode": "disabled"
+}

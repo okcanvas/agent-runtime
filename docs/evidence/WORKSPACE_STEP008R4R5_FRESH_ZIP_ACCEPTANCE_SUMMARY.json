@@ -1,0 +1,30 @@
+{
+  "candidate_manifest_actual_files": 4589,
+  "candidate_manifest_expected_files": 4589,
+  "candidate_package_total_files": 4590,
+  "connector_checks": 11,
+  "connector_example_checks": 17,
+  "example_checks": 19,
+  "live_openai_r4r5_executed": false,
+  "postgresql_live_server_executed": false,
+  "production_database_executed": false,
+  "runtime_passed_checks": 22,
+  "runtime_source_snapshot_digest": "05564d225c7dc7873fb821342f7f0be209e0e16120ca028a594c09a5ef9ba08c",
+  "runtime_source_unchanged": true,
+  "runtime_step": "STEP091B3_POSTGRESQL_APPROVAL_EVALUATION_AND_SESSION_METADATA",
+  "runtime_total_checks": 22,
+  "runtime_version": "2.74.0",
+  "schema_version": "okcanvas-workspace-step008r4r5-fresh-zip-acceptance-summary-v1",
+  "state": "PASSED",
+  "windows_r4r5_executed": false,
+  "workspace_manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "workspace_passed_checks": 32,
+  "workspace_step": "WORKSPACE_STEP008R4R5_RUNTIME_STEP091B3_POSTGRESQL_APPROVAL_EVALUATION_AND_SESSION_METADATA",
+  "workspace_total_checks": 32,
+  "workspace_unit_tests": 125,
+  "workspace_version": "0.8.4-r5"
+}

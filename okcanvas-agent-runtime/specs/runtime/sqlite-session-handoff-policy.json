@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-sqlite-session-handoff-policy-v1",
+  "policy_id": "local-sqlite-session-native-handoff-v1",
+  "version": "1.0.0",
+  "session_mode": "sqlite-v1",
+  "handoff_policy_id": "native-handoff-v1",
+  "max_handoffs_per_turn": 1,
+  "max_depth": 1,
+  "require_same_sdk_session": true,
+  "hold_turn_lease_until_child_completion": true,
+  "commit_completed_turn": true,
+  "rollback_failed_turn": true,
+  "history_copy_to_product": false,
+  "workspace_access": "none"
+}

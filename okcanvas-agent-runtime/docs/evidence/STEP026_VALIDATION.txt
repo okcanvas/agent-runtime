@@ -1,0 +1,82 @@
+STEP026_STORE_REPLENISHMENT_MULTI_CASE_PRODUCT_ACCEPTANCE
+Validation date: 2026-07-30
+Project: okcanvas-agent-runtime
+Version: 2.6.0
+Status: WINDOWS_LIVE_ACCEPTED
+
+CODE-AUDITED DECISION
+- STEP025 Windows live acceptance is closed.
+- Only one canonical replenishment case and one Evaluation case existed before STEP026.
+- STEP026 adds case breadth without adding production authority, remote network reach, writes, another Agent, browser mutation, or distributed workers.
+- /reference mechanisms are not reimplemented or imported; this STEP changes product-owned case and acceptance assets only.
+
+IMPLEMENTED CASES
+- case001-shortage: ACTION_REQUIRED, total 19, 12/7/0.
+- case002-covered: READY, total 0.
+- case003-tie-ordering: ACTION_REQUIRED, total 10, alpha-hub before zeta-stand on equal quantity.
+- case004-single-shortage: ACTION_REQUIRED, total 1.
+- case005-invalid-duplicate-sku: rejected before persistence.
+
+DETERMINISTIC ACCEPTANCE
+Command:
+  PYTHONPATH=src python scripts/run_step026_acceptance.py
+
+Observed:
+- state=PASSED
+- checks=22/22 true
+- valid_case_count=4
+- source.read_count=5
+- source.write_count=0
+- artifact_count=4
+- artifact_errors=[]
+- four Product Runs SUCCEEDED
+- four recorded-Run Evaluations PASSED
+- invalid HTTP status=502
+- invalid code=COMMERCE_SNAPSHOT_INVALID
+- final counts: 4 submissions, 4 Tasks, 4 Runs
+- all successful payloads DELETED
+- references unchanged
+- cleanup_state=COMPLETED
+
+WINDOWS LIVE ACCEPTANCE
+- user-reported command: sh_run_step026_acceptance.cmd
+- state=PASSED
+- all 22 checks=true
+- valid_case_count=4
+- source.read_count=5
+- source.write_count=0
+- artifact_count=4
+- invalid code=COMMERCE_SNAPSHOT_INVALID
+- cleanup_state=COMPLETED
+- compact Evidence: docs/evidence/STEP026_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json
+
+FULL REGRESSION
+1. python -m compileall -q src scripts tests
+   PASS
+
+2. PYTHONPATH=src python -m pytest -q
+   PASS: 332 passed in 22.84s
+
+3. PYTHONPATH=src python scripts/run_step026_acceptance.py
+   PASS: 22/22 checks, five reads, zero writes, four Artifacts, cleanup COMPLETED
+
+4. PYTHONPATH=src python scripts/run_step025_acceptance.py
+   PASS: 21/21 checks, one read, zero writes, cleanup COMPLETED
+
+5. PYTHONPATH=src python scripts/run_step024b_acceptance.py
+   PASS: 7/7 checks, cleanup COMPLETED
+
+6. PYTHONPATH=src python scripts/run_step024_acceptance.py
+   PASS: 18/18 checks, one Artifact, cleanup COMPLETED
+
+7. PYTHONPATH=src python scripts/run_step020_acceptance.py
+   PASS: approve and reject branches, cleanup COMPLETED
+
+8. PYTHONPATH=src python scripts/run_step023_acceptance.py
+   PASS: 15/15 checks, cleanup COMPLETED
+
+9. PYTHONPATH=src python -m okcanvas_agent_runtime reference-verify --project-root . --pretty
+   PASS: 4/4 immutable references verified
+
+10. PYTHONPATH=src python scripts/verify_no_reference_imports.py
+    PASS: ok=true, violations=[]

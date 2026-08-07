@@ -1,0 +1,217 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T034145644834Z-a91ca0e5",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T03:41:45.765730Z",
+    "created_at": "2026-07-29T03:41:45.645108Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP007"
+  },
+  "agent_definition": {
+    "agent_id": "coding-agent",
+    "definition_sha256": "d14360dac979b9b6bccede8a2c2769b969a91b3e7e36c7910e4c1fcbc0692233",
+    "handoffs": [],
+    "max_turns": 1,
+    "mcp_servers": [],
+    "name": "OKCanvas Coding Analyst",
+    "output_contract": "CodingAgentResult",
+    "schema_version": "okcanvas-agent-definition-v1",
+    "session_mode": "disabled",
+    "tools": [],
+    "version": "1.0.0",
+    "workflow_name": "OKCanvas Generic Coding Agent"
+  },
+  "artifact": {
+    "artifact_id": "artifact_d9f828e5f0154fa591c4a37f3b3eefb1",
+    "artifact_type": "agent.final-output",
+    "byte_length": 176,
+    "created_at": "2026-07-29T03:41:45.677197Z",
+    "media_type": "application/json",
+    "run_id": "run_dfbfdda4e2c24121b2f6e44f3f797e46",
+    "sha256": "28db82d51d160361c8e2ac9aa20f5c80efc7dab78d76a1b255a77fd46fc7f27f",
+    "storage_path": "/tmp/okcanvas-agent-runtime-acceptance/step007/20260729T034145644834Z-a91ca0e5/artifacts/run_dfbfdda4e2c24121b2f6e44f3f797e46/final-output.json",
+    "verified_at": "2026-07-29T03:41:45.687070Z"
+  },
+  "checks": {
+    "api_key_not_in_database": true,
+    "artifact_registered": true,
+    "definition_resolved": true,
+    "execution_succeeded": true,
+    "raw_request_not_in_database": true,
+    "references_unchanged": true,
+    "run_succeeded": true,
+    "sdk_lifecycle_normalized": true,
+    "sequences_monotonic": true,
+    "task_succeeded": true,
+    "trace_linked": true,
+    "usage_linked": true
+  },
+  "completed_at": "2026-07-29T03:41:45.689180Z",
+  "envelope": {
+    "agent_definition_id": "coding-agent",
+    "agent_definition_sha256": "d14360dac979b9b6bccede8a2c2769b969a91b3e7e36c7910e4c1fcbc0692233",
+    "agent_definition_version": "1.0.0",
+    "artifact_id": "artifact_d9f828e5f0154fa591c4a37f3b3eefb1",
+    "artifact_sha256": "28db82d51d160361c8e2ac9aa20f5c80efc7dab78d76a1b255a77fd46fc7f27f",
+    "error": null,
+    "live_call": true,
+    "model": "acceptance-model",
+    "response_id": "resp_acceptance",
+    "result": {
+      "findings": [],
+      "status": "PARTIAL",
+      "summary": "The deterministic acceptance gateway inspected only supplied text.",
+      "unverified": [
+        "Live model behavior"
+      ]
+    },
+    "run_id": "run_dfbfdda4e2c24121b2f6e44f3f797e46",
+    "schema_version": "okcanvas-generic-agent-execution-v1",
+    "state": "SUCCEEDED",
+    "task_id": "task_efcf7d9c296d420888ab1169a48db91e",
+    "trace_id": "trace_step007_acceptance",
+    "usage": {
+      "cached_input_tokens": 5,
+      "input_tokens": 20,
+      "output_tokens": 10,
+      "reasoning_tokens": 1,
+      "requests": 1,
+      "total_tokens": 30
+    }
+  },
+  "event_types": [
+    "run.created",
+    "run.started",
+    "agent.definition.resolved",
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "agent.completed",
+    "artifact.created",
+    "run.completed"
+  ],
+  "reference_verification_after": {
+    "openai-agents-python": {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    "openai-agents-streaming-api": {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    },
+    "openai-cs-agents-demo": {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    "temporal-openai-agents-demos": {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    }
+  },
+  "reference_verification_before": {
+    "openai-agents-python": {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    "openai-agents-streaming-api": {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    },
+    "openai-cs-agents-demo": {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    "temporal-openai-agents-demos": {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    }
+  },
+  "run": {
+    "agent_definition_id": "coding-agent",
+    "agent_definition_version": "1.0.0",
+    "attempt": 1,
+    "codex_thread_id": null,
+    "completed_at": "2026-07-29T03:41:45.681465Z",
+    "created_at": "2026-07-29T03:41:45.658983Z",
+    "input_tokens": 20,
+    "output_tokens": 10,
+    "run_id": "run_dfbfdda4e2c24121b2f6e44f3f797e46",
+    "run_state_artifact_id": null,
+    "session_ref": null,
+    "started_at": "2026-07-29T03:41:45.663585Z",
+    "status": "SUCCEEDED",
+    "task_id": "task_efcf7d9c296d420888ab1169a48db91e",
+    "total_tokens": 30,
+    "trace_id": "trace_step007_acceptance"
+  },
+  "schema_version": "okcanvas-step007-acceptance-v1",
+  "started_at": "2026-07-29T03:41:45.568338Z",
+  "state": "PASSED",
+  "task": {
+    "agent_definition_id": "coding-agent",
+    "agent_definition_version": "1.0.0",
+    "completed_at": "2026-07-29T03:41:45.683781Z",
+    "created_at": "2026-07-29T03:41:45.656415Z",
+    "input_sha256": "21d293de34cdd360825ce1710860d1e9d75d0ae8396439e314b493742cd4063b",
+    "protected_payload_ref": null,
+    "status": "SUCCEEDED",
+    "task_id": "task_efcf7d9c296d420888ab1169a48db91e",
+    "task_type": "GENERIC_AGENT_EXECUTION",
+    "updated_at": "2026-07-29T03:41:45.683781Z"
+  }
+}

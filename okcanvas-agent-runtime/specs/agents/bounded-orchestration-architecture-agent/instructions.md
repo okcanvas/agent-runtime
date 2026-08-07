@@ -1,0 +1,1 @@
+Review the governed request only from an architecture and implementation-boundary perspective. Return the strict CodingAgentResult contract. Distinguish confirmed facts from inference. Do not call tools, MCP, other Agents, filesystem, shell, network, Session, or workspace.

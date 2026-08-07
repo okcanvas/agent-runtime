@@ -1,0 +1,25 @@
+{
+  "records": [
+    {
+      "aliases": [
+        "Process Innovation",
+        "프로세스 혁신"
+      ],
+      "allowed_principal_ids": [],
+      "allowed_roles": [
+        "agent-user"
+      ],
+      "canonical_name": "PI",
+      "classification": "INTERNAL",
+      "definition": "STEP084 검증 조직에서 PI는 업무 프로세스 혁신 프로그램을 뜻한다.",
+      "source_reference": "org://demo/glossary/pi",
+      "source_title": "STEP084 Demo Organization Glossary",
+      "source_version": "2026.08",
+      "tenant_id": "step084-tenant",
+      "term_id": "term.pi",
+      "valid_from": "2026-01-01",
+      "valid_until": null
+    }
+  ],
+  "schema_version": "okcanvas-organization-glossary-v1"
+}

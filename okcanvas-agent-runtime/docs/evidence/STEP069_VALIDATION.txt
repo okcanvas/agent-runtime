@@ -1,0 +1,61 @@
+STEP069_MULTI_USER_SERVICE_CLIENT_CONTRACT_FOUNDATION
+version=2.49.0
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+PREDECESSOR
+STEP068_WINDOWS_LIVE_ACCEPTED=30/30
+
+SOURCE_ACCEPTANCE
+STEP069=31/31 PASS
+focused_service_contract=11/11 PASS
+historical_step068_and_control=34/34 PASS
+external_network_calls=0
+model_calls=0
+
+FULL_REGRESSION
+Python=719/719 PASS
+  group1=194
+  group2=123
+  group3=168
+  group4a=36
+  group4b=68
+  group5a=69
+  group5b=61
+Python_compileall=PASS
+Committed_TypeScript_release_integrity=PASS
+Node=14/14 PASS
+npm_pack_dry_run=23 files PASS
+Reference=4/4 PASS
+direct_reference_imports=0
+
+SERVICE_CONTRACT
+api_prefix=/v1/service
+authentication=bearer-sha256-registry-v1
+resource_scope=tenant-and-principal
+cross_scope_disclosure=404
+idempotency=tenant-principal-sha256
+persisted_sse=Last-Event-ID
+native_sdk_stream_exposed=false
+runtime_storage_direct_access=false
+development_tui_and_node_cli=test-harnesses
+future_clients=agent-cli,agent-web,agent-desktop
+skills_available=false
+next_step=STEP070_PRODUCT_OWNED_SKILL_PACKAGE_FOUNDATION_V1
+
+SOURCE_SHA256
+693c2586778b3a6a15b4c8a0532f3e11aedce528973c4e4260d30f5ed1719f69  specs/service_clients/service-client-policy.json
+b6719235374e07358dead5b4ef7206b68ecc3691a3d913b340df5877e5e4923d  src/okcanvas_agent_runtime/service_clients/auth.py
+aca56a258921c038fd43fbb4a5ff7c270944c6b06c2b96f67d76918930ea161a  src/okcanvas_agent_runtime/service_clients/ownership.py
+238579db7163e4f8ee48aee3cde59328ec7c91b6cc0a670d92b8bd0070491be3  src/okcanvas_agent_runtime/service_clients/routes.py
+d231fca22d645690d72052ed71489c8a7bf1925afec7ce384df6b2cc19abad2d  src/okcanvas_agent_runtime/service_clients/contracts.py
+0aa565e1ae7672882a80325cb09ae5a189b0e71c0657117b849571a6b8aadacc  src/okcanvas_agent_runtime/control_api/app.py
+b7f4cfe042e2fdcf510ef245bfc2a08ccf51fb8ff39eaca1903cc1c9dcbb08c0  src/okcanvas_agent_runtime/persistence/sqlite_store.py
+
+CANDIDATE_ZIP_VALIDATION=PASS step069=31/31 python=719/719 root=1 entries=2917 forbidden=0
+FINAL_ZIP_VALIDATION=PASS step069=31/31 python=719/719 root=1 entries=2917 forbidden=0
+
+PACKAGING_CORRECTION
+The first candidate was rejected before release because an over-broad cleanup command removed the
+Product source directories `src/okcanvas_agent_runtime/attachments` and `specs/attachments` by name.
+Both immutable STEP068 directories were restored byte-for-byte from the Windows-live STEP068 ZIP.
+The invalid candidate was deleted and is not a release artifact. Source acceptance returned 31/31.

@@ -1,0 +1,23 @@
+{
+  "schema_version": "okcanvas-groupware-session-delegation-policy-v1",
+  "policy_id": "main-assistant-stateless-groupware-subagent-v1",
+  "version": "1.0.0",
+  "root_agent_id": "organization-assistant-session-agent",
+  "child_agent_id": "groupware-read-agent",
+  "mcp_server_id": "groupware-read",
+  "root_output_contract": "OrganizationAssistantResult",
+  "child_output_contract": "GroupwareReadResult",
+  "root_session_mode": "sqlite-v1",
+  "child_session_mode": "disabled",
+  "max_agent_tool_calls_per_turn": 1,
+  "max_depth": 1,
+  "max_result_bytes": 8192,
+  "input_mode": "MODEL_GENERATED_TEXT",
+  "output_mode": "BOUNDED_STRUCTURED_JSON",
+  "nested_stream_enabled": true,
+  "inherit_parent_run_config": false,
+  "root_session_only": true,
+  "delegated_identity_required": true,
+  "route_context_required": true,
+  "write_enabled": false
+}

@@ -1,0 +1,181 @@
+[
+  {
+    "aliases": [
+      "임원실"
+    ],
+    "department_code": "EXEC",
+    "department_id": "department.executive",
+    "manager_employee_id": "employee-0001",
+    "name": "경영진",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "경영지원"
+    ],
+    "department_code": "MGT-SUP",
+    "department_id": "department.management-support",
+    "manager_employee_id": "employee-0002",
+    "name": "경영지원실",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "HR팀",
+      "인사"
+    ],
+    "department_code": "HR",
+    "department_id": "department.human-resources",
+    "manager_employee_id": "employee-0003",
+    "name": "인사팀",
+    "parent_department_id": "department.management-support",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "회계팀",
+      "재무"
+    ],
+    "department_code": "FIN",
+    "department_id": "department.finance",
+    "manager_employee_id": "employee-0004",
+    "name": "재무팀",
+    "parent_department_id": "department.management-support",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "전략팀",
+      "기획팀"
+    ],
+    "department_code": "STR",
+    "department_id": "department.strategy-planning",
+    "manager_employee_id": "employee-0005",
+    "name": "전략기획팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "기업영업",
+      "엔터프라이즈영업"
+    ],
+    "department_code": "SALES-ENT",
+    "department_id": "department.enterprise-sales",
+    "manager_employee_id": "employee-0006",
+    "name": "기업영업팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "공공영업"
+    ],
+    "department_code": "SALES-PUB",
+    "department_id": "department.public-sales",
+    "manager_employee_id": "employee-0007",
+    "name": "공공영업팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "채널영업",
+      "파트너팀"
+    ],
+    "department_code": "SALES-PTN",
+    "department_id": "department.partner-sales",
+    "manager_employee_id": "employee-0008",
+    "name": "파트너영업팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "상품기획팀",
+      "제품팀"
+    ],
+    "department_code": "PRD-PLAN",
+    "department_id": "department.product-planning",
+    "manager_employee_id": "employee-0009",
+    "name": "제품기획팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "플랫폼팀",
+      "플개팀"
+    ],
+    "department_code": "DEV-PLAT",
+    "department_id": "department.platform-development",
+    "manager_employee_id": "employee-0010",
+    "name": "플랫폼개발팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "서비스팀",
+      "서개팀"
+    ],
+    "department_code": "DEV-SVC",
+    "department_id": "department.service-development",
+    "manager_employee_id": "employee-0011",
+    "name": "서비스개발팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "QA팀",
+      "품질팀"
+    ],
+    "department_code": "QA",
+    "department_id": "department.quality-assurance",
+    "manager_employee_id": "employee-0012",
+    "name": "품질보증팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "CS팀",
+      "고객센터"
+    ],
+    "department_code": "CS",
+    "department_id": "department.customer-support",
+    "manager_employee_id": "employee-0013",
+    "name": "고객지원팀",
+    "parent_department_id": null,
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  }
+]

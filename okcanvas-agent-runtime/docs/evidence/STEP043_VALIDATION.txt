@@ -1,0 +1,57 @@
+STEP043_SQLITE_SESSION_RUNTIME_V1 validation
+
+Status: PASSED — source tree and separately extracted package candidate validated.
+
+Executable baseline:
+- version: 2.23.0
+- step: STEP043_SQLITE_SESSION_RUNTIME_V1
+- state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Source-tree validation:
+- compileall: PASS
+- pytest: 452 passed in five deterministic batches (109 + 71 + 64 + 93 + 115)
+- STEP043 acceptance: 29/29 PASS; cleanup COMPLETED
+- STEP042 acceptance: 29/29 PASS
+- STEP041 acceptance: 24/24 PASS
+- STEP040 acceptance: 23/23 PASS
+- STEP039 acceptance: 20/20 PASS
+- STEP038 acceptance: 24/24 PASS
+- STEP037 acceptance: 24/24 PASS
+- STEP036 acceptance: 18/18 PASS
+- STEP020 approval boundary: PASS
+- STEP023 Approval Operator: 15/15 PASS
+- Windows launcher contract: 8/8 PASS across 48 Runtime launchers; violations 0
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: 0
+
+STEP043 deterministic acceptance evidence:
+- installed-SDK streamed Turns/non-streamed Runner: 2/0
+- SQLiteSession instances/closes: 5/5
+- one Product Session across two governed Turns
+- Session history item counts: 0 -> 2 -> 4 -> clear -> 0
+- Session metadata turn/item: 0/0 -> 1/2 -> 2/4 -> CLEARED 2/0
+- Turn 2 restored exact continuity marker ORBIT-7
+- one-active-Turn collision rejected
+- cleared Session preflight rejected
+- Product Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 2/2/2/2/24/2/1
+- two successful ROOT invocations; workspace_access=none; workspace_ref=null
+- successful protected payloads deleted
+- raw Session history absent from Product Events and Product/Evaluation databases
+- Session handles closed; References unchanged; cleanup COMPLETED
+
+Package-candidate validation:
+- canonical root: exactly one (okcanvas-agent-runtime)
+- ZIP entries: 2,375
+- forbidden real environment/venv/cache/local-state/database/protected-payload files: 0
+  (.env.local.example and .env.local.cmd.example are documentation templates and are intentionally included)
+- separately extracted pytest: 452 passed (109 + 71 + 64 + 93 + 115)
+- separately extracted STEP043: 29/29 PASS; cleanup COMPLETED
+- separately extracted STEP042: 29/29 PASS; cleanup COMPLETED
+- separately extracted STEP030A: 8/8 PASS; 48 launchers; violations 0
+- separately extracted Reference integrity: 4/4 PASS
+- separately extracted direct executable /reference imports: 0
+
+Packaging rule:
+- the Canonical ZIP is regenerated after this validation text is written;
+- the regenerated SHA-final ZIP must be extracted into a fresh directory and reproduce the same checks;
+- the adjacent .zip.sha256 file is authoritative for final package bytes, avoiding a circular in-ZIP SHA claim.

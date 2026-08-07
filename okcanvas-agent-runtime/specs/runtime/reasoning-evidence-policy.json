@@ -1,0 +1,12 @@
+{
+  "schema_version": "okcanvas-reasoning-evidence-policy-v1",
+  "policy_id": "local-openai-reasoning-evidence-minimization-v1",
+  "version": "1.0.0",
+  "reasoning_summary_requested": false,
+  "response_include": [],
+  "persist_reasoning_content": false,
+  "persist_reasoning_summary": false,
+  "persist_reasoning_item_ids": false,
+  "persist_reasoning_provider_data": false,
+  "persist_reasoning_token_count": true
+}

@@ -1,0 +1,79 @@
+STEP034_ORPHANED_RUNNING_RUN_RECONCILIATION
+Version: 2.14.0
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Date: 2026-07-30
+
+Code-audited defect
+- stale recovery covered only EXECUTION_CLAIMED and EXECUTION_SCHEDULED while Product state remained READY/CREATED.
+- after begin_execution(), submission state was EXECUTION_STARTED and Product Task/Run were RUNNING with no expiry or terminal reconciliation path.
+- process loss could therefore leave a permanent RUNNING record.
+- arbitrary in-flight model execution cannot be safely assumed resumable or safe to re-run.
+
+Implemented Runtime boundary
+- explicit authenticated endpoint POST /v1/run-submissions/reconcile-orphaned-running.
+- exact operator phrase RECONCILE_ORPHANED_RUNNING_AFTER_PROCESS_RESTART.
+- candidates require a different previous process owner, EXECUTION_STARTED, Task/Run RUNNING, and no Artifact.
+- the same Task, Run, and submission are atomically terminalized as FAILED/EXECUTION_FAILED.
+- exact failure code PROCESS_LOSS_RECONCILED, retryable=false.
+- canonical run.execution.orphaned, run.failed, and payload.retention.applied Events.
+- failed protected payload retained for the existing investigation window.
+- no replacement Task/Run and no scheduler/model/MCP/Tool re-execution.
+- previous claim token is invalidated as an execution-generation fence.
+- late previous-generation lifecycle Event, execution metadata, and Artifact registration are blocked.
+
+Reference decision
+- inspected openai-agents-python 0.19.0 run_state.py and result.py.
+- SDK RunState supports serialized interruption/resume but does not prove arbitrary in-flight model-request process-loss resume.
+- SDK resume and automatic model retry were rejected for STEP034.
+
+Deterministic acceptance
+- STEP034: 20/20 PASS, cleanup COMPLETED.
+- one different-owner orphan scanned and reconciled.
+- same Task/Run failed; submission EXECUTION_FAILED and claim cleared.
+- exact Event sequence: run.created, run.started, run.execution.orphaned, run.failed, payload.retention.applied.
+- gateway calls 0; Artifacts 0; Evaluations 0.
+- one failed protected payload retained.
+- previous fence active before and inactive after reconciliation.
+- late Event, metadata, and Artifact writes blocked.
+- replay scanned 0 and reconciled 0.
+- References unchanged.
+
+Full working-tree validation
+- compileall: PASS.
+- pytest: 396 passed.
+- STEP034: 20/20 PASS, cleanup COMPLETED.
+- STEP033: 20/20 PASS, cleanup COMPLETED.
+- STEP032: 19/19 PASS, cleanup COMPLETED.
+- STEP031: 19/19 PASS, cleanup COMPLETED.
+- STEP030A: 8/8 PASS across 39 current Windows launchers, 0 violations.
+- STEP030 through STEP024: all PASS with cleanup COMPLETED.
+- STEP024B: 7/7 PASS, cleanup COMPLETED.
+- STEP020: PASS, cleanup COMPLETED.
+- STEP023: 15/15 PASS, cleanup COMPLETED.
+- Reference integrity: 4/4 PASS.
+- direct /reference imports: 0 violations.
+
+Windows closure gate
+Run sh_run_step034_acceptance.cmd and require:
+- state=PASSED;
+- all 20 checks=true;
+- reconciliation scanned=1 and reconciled=1;
+- exact PROCESS_LOSS_RECONCILED / retryable=false failure;
+- same Task/Run terminalized and submission EXECUTION_FAILED;
+- gateway_call_count=0, artifact/evaluation counts=0;
+- previous-generation late Event, metadata, and Artifact writes blocked;
+- protected_payload_file_count=1 with failed retention;
+- replay scanned=0 and reconciled=0;
+- cleanup_state=COMPLETED.
+
+Canonical ZIP extraction validation
+- one canonical root: okcanvas-agent-runtime.
+- packaged files: 2196.
+- forbidden environment, venv, cache, local-state, and bytecode files: 0.
+- compileall: PASS.
+- pytest: 396 passed.
+- STEP034: 20/20 PASS, cleanup COMPLETED.
+- STEP033: 20/20 PASS, cleanup COMPLETED.
+- STEP030A: 8/8 PASS across 39 current launchers.
+- Reference integrity: 4/4 PASS.
+- direct /reference imports: 0 violations.

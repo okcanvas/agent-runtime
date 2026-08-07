@@ -1,0 +1,61 @@
+STEP073_PRODUCT_OWNED_SANDBOX_RUNTIME_FOUNDATION_V1
+version: 2.53.0
+state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+SOURCE BASELINE
+- predecessor ZIP SHA-256: 6bf3457f9e31a205c36f6162ed6d2652f0fefb8e2fa137dd7d99a9f79cd53bfd
+- predecessor: STEP072B_WINDOWS_CRLF_AND_LOCAL_ENV_FORWARDING_FIX / WINDOWS_LIVE_ACCEPTED
+
+DETERMINISTIC ACCEPTANCE
+- STEP073 acceptance: 26/26 PASS
+- focused STEP073/runtime tests: 40/40 PASS
+- historical Skill/trace/service tests: 47/47 PASS
+- full Python regression: 781/781 PASS across 204 test files
+- Python compileall: PASS
+- committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+- Docker calls: 0
+- external network calls: 0
+- model calls: 0
+
+SANDBOX IDENTITIES
+- policy ID/version: default-product-sandbox-runtime-v1 / 1.0.0
+- policy SHA-256: 4cedb7224eefc7dbc925fd3cf0bb9e6e4365d11750bc1fbb8d7b6994f51a63b1
+- provider ID/version: docker-local-v1 / 1.0.0
+- provider contract SHA-256: 27c2dd48f39d6bcf2ef21093c34d92b9c719742a1146bc6af4b1c7227f1effaa
+- foundation SHA-256: fab2d5a5e84e83fccdb01ab2754a6d3da3119f21986dd9f435a540d8a6ce8d10
+- Product Sandbox runtime SHA-256: d379b9b30de2328a579c7e373acbf390f08c3c0c7e685c8324572442d9053e0c
+- sample Agent Runtime binding SHA-256: d8668e375db88d5ed855bae24d388834b2ba0d09740c9f70faef0659a1a74268
+- Agent definitions bound: 26
+
+CLOSED BOUNDARY
+- execution/physical workspace/Docker calls: false/false/false
+- active workspace access: none
+- network/ports: none/[]
+- host bind/remote/Docker socket mounts: false/false/false
+- secrets/runtime image pull: false/false
+- resume/snapshot: false/false
+- Shell/Apply Patch/Skill materialization: false/false/false
+- SDK default capabilities allowed: false
+
+WINDOWS
+- launcher: sh_run_step073_acceptance.cmd
+- state: WINDOWS_RERUN_PENDING
+- expected deterministic result: 26/26 PASS
+- no Docker daemon, provider network, or model call is required
+
+PACKAGING
+- candidate ZIP SHA-256: 328be11558d1e63658a68a331cccddf2e234d07e67327e969605194e90348f3d
+- canonical ZIP root: 1
+- ZIP entries: 3,005
+- forbidden files: 0
+- fresh extraction STEP073 acceptance: 26/26 PASS
+- fresh extraction Python regression: 781/781 PASS across 204 test files
+- fresh extraction Node tests: 14/14 PASS
+- fresh extraction Reference integrity: 4/4 PASS
+- fresh extraction direct /reference imports: 0
+- fresh extraction npm pack dry-run: 23 files PASS
+- final ZIP SHA-256 is distributed in the adjacent `.zip.sha256` sidecar.

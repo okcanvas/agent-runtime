@@ -1,0 +1,103 @@
+{
+  "checks": {
+    "connector_example_integration_passed": true,
+    "connector_retained_acceptance_passed": true,
+    "e2e_command_bearer_redacted": true,
+    "e2e_connector_and_groupware_secrets_absent": true,
+    "example_retained_acceptance_passed": true,
+    "execution_platform_recorded": true,
+    "external_node_tools_resolved": true,
+    "integration_contracts_promoted_exact": true,
+    "live_provider_claims_remain_false": true,
+    "local_environment_excluded_from_identity": true,
+    "main_assistant_groupware_full_e2e_passed": true,
+    "parent_json_stdout_cp949_safe": true,
+    "product_cli_retained_acceptance_passed": true,
+    "project_python_environments_resolved": true,
+    "redirected_root_log_excluded_from_identity": true,
+    "runtime_nested_connector_and_example_absent": true,
+    "runtime_step087_acceptance_passed": true,
+    "runtime_step087_windows_not_claimed": true,
+    "step002r1_windows_parent_retained": true,
+    "step003r2_launcher_present": true,
+    "subprocess_output_encoding_safe": true,
+    "subproject_acceptance_did_not_mutate_source": true,
+    "workspace_catalog_promoted_exact": true,
+    "workspace_manifest_exact": true,
+    "workspace_root_contract_exact": true,
+    "workspace_shared_environments_absent": true,
+    "workspace_unit_tests_passed": true
+  },
+  "completed_at": "2026-08-05T02:40:37.370108Z",
+  "cp949_redirected_stdout": "PASSED_VALID_JSON_ROUND_TRIP",
+  "execution_platform": "posix",
+  "limitations": {
+    "actual_connector_process_executed": true,
+    "actual_node_example_process_executed": true,
+    "deterministic_openai_agents_boundary_used": true,
+    "live_openai_model_called": false,
+    "real_enterprise_groupware_provider_called": false,
+    "windows_step003r2_accepted": false,
+    "windows_step003r2_executed": false
+  },
+  "mutable_source_evidence_path": "docs/evidence/WORKSPACE_STEP003R2_ACCEPTANCE.json",
+  "mutable_source_evidence_sha256": "b1f34732205fba98a6501321185c9b41a19c8273f4c4d138ccee57ffd1ae25b5",
+  "official_windows_baseline": "WORKSPACE_STEP002R1_PRODUCT_SERVICE_CLI_WINDOWS_NODE_PATH_SPACE_CLOSURE / 0.2.1 / 19 of 19 PASSED",
+  "package_name": "okcanvas-agent-platform-workspace-step003r2-windows-project-python-environment-and-redirected-log-identity-closure.zip",
+  "parent_candidate": "WORKSPACE_STEP003R1_WINDOWS_CP949_PARENT_JSON_OUTPUT_CLOSURE / 0.3.1",
+  "parent_windows_failure_summary": "docs/evidence/WORKSPACE_STEP003R1_WINDOWS_ACCEPTANCE_FAILURE_SUMMARY.json",
+  "passed_checks": 27,
+  "resolved_environment_mode": "project .venv when present; dependency-probed fallback only outside Windows",
+  "retained_product_source_bytes": true,
+  "retained_subprojects": {
+    "connector": {
+      "passed": 7,
+      "state": "PASSED",
+      "total": 7
+    },
+    "connector_example": {
+      "passed": 7,
+      "state": "PASSED",
+      "total": 7
+    },
+    "example": {
+      "passed": 6,
+      "state": "PASSED",
+      "total": 6
+    },
+    "main_assistant_groupware_e2e": {
+      "passed": 14,
+      "state": "PASSED",
+      "total": 14
+    },
+    "product_cli": {
+      "passed": 11,
+      "state": "PASSED",
+      "total": 11
+    },
+    "runtime_step087": {
+      "passed": 15,
+      "state": "PASSED",
+      "total": 15
+    }
+  },
+  "root_redirected_log_acceptance": "PASSED_WITH_LOG_TXT_PRESENT_AND_EXCLUDED",
+  "schema_version": "okcanvas-agent-platform-workspace-step003r2-immutable-acceptance-summary-v1",
+  "started_at": "2026-08-05T02:40:14.803877Z",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP003R2_WINDOWS_PROJECT_PYTHON_ENVIRONMENT_AND_REDIRECTED_LOG_IDENTITY_CLOSURE",
+  "total_checks": 27,
+  "validation_mode": "DETERMINISTIC_FULL_PROCESS_BOUNDARY",
+  "version": "0.3.2",
+  "windows_status": "RERUN_PENDING",
+  "workspace_manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "workspace_unit_tests": {
+    "passed": 35,
+    "state": "PASSED",
+    "total": 35
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "okcanvas-windows-manual-product-use-summary-v1",
+  "step_id": "STEP056C",
+  "state": "MANUALLY_PRODUCT_EXERCISED_ACCEPTANCE_OUTPUT_NOT_REPORTED",
+  "reported_at": "2026-07-31",
+  "observed": {
+    "node_typescript_cli_started": true,
+    "debug_mode_started": true,
+    "explicit_agent_selection_worked": true,
+    "governed_preflight_visible": true,
+    "persisted_sse_events_visible": true,
+    "artifact_verified": true,
+    "evaluation_default_not_run": true,
+    "same_process_multiple_requests_worked": true,
+    "server_conversation_memory_missing": true
+  },
+  "manual_probe": {
+    "turn_1": "내이름은 캐빈이다",
+    "turn_2": "내가 누구라고?",
+    "turn_3": "내이름이 뭐라고?",
+    "result": "The Session-disabled coding-agent did not receive prior Turn history."
+  },
+  "decision": "Proceed to STEP057 Runtime Session conversation after explicit user authorization."
+}

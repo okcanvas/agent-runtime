@@ -1,0 +1,27 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP036",
+  "status": "WINDOWS_LIVE_ACCEPTED",
+  "reported_run": {
+    "acceptance_id": "20260730T035928764129Z-e137095d",
+    "state": "PASSED",
+    "check_count": 18,
+    "all_checks_true": true,
+    "gateway_call_count": 3,
+    "evaluation_count": 1,
+    "artifact_count": 3,
+    "runtime_binding_sha256": "51b8193f3eab4f98c38b78d260fca34503b152dd0e03081f25125d8edcdf0532",
+    "valid_http_status": 201,
+    "valid_state": "PASSED",
+    "tampered_recorded_binding_http_status": 409,
+    "tampered_recorded_binding_code": "RUNTIME_BINDING_DRIFT",
+    "current_runtime_drift_http_status": 409,
+    "current_runtime_drift_code": "RUNTIME_BINDING_DRIFT",
+    "cleanup_state": "COMPLETED"
+  },
+  "source": "user-reported Windows stdout from sh_run_step036_acceptance.cmd",
+  "notes": [
+    "The Starlette/TestClient deprecation warning did not affect Product acceptance.",
+    "No secrets, prompts, model output, or local database files are included."
+  ]
+}

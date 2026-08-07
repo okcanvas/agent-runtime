@@ -1,0 +1,64 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021158757825Z-2eec376c",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:11:59.556016Z",
+    "created_at": "2026-07-30T02:11:58.758123Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP028"
+  },
+  "artifact_count": 0,
+  "checks": {
+    "credential_not_in_sqlite": true,
+    "identity_mismatch_code_exact": true,
+    "identity_mismatch_not_retryable": true,
+    "identity_mismatch_returned_502": true,
+    "model_gateway_never_called": true,
+    "no_artifact_files_created": true,
+    "no_protected_payload_files_created": true,
+    "product_counts_remained_zero": true,
+    "product_counts_started_zero": true,
+    "references_unchanged": true,
+    "requested_key_reached_source_exactly": true,
+    "returned_snapshot_not_in_sqlite": true,
+    "safe_message_does_not_echo_returned_identity": true,
+    "source_read_exactly_once": true,
+    "source_write_never_called": true
+  },
+  "final_counts": {
+    "artifacts": 0,
+    "evaluations": 0,
+    "events": 0,
+    "runs": 0,
+    "submissions": 0,
+    "tasks": 0
+  },
+  "gateway_call_count": 0,
+  "protected_payload_file_count": 0,
+  "request": {
+    "snapshot_key": "step028-requested-snapshot",
+    "source_adapter_id": "controlled-commerce-http"
+  },
+  "response": {
+    "code": "COMMERCE_SNAPSHOT_IDENTITY_MISMATCH",
+    "http_status": 502,
+    "message": "Commerce snapshot identity did not match the requested snapshot key",
+    "retryable": false
+  },
+  "schema_version": "okcanvas-step028-acceptance-v1",
+  "source": {
+    "read_count": 1,
+    "requested_paths": [
+      "step028-requested-snapshot"
+    ],
+    "write_count": 0
+  },
+  "state": "PASSED"
+}

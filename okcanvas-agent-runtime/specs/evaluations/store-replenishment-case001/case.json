@@ -1,0 +1,41 @@
+{
+  "schema_version": "okcanvas-evaluation-case-v1",
+  "case_id": "store-replenishment-case001",
+  "version": "1.0.0",
+  "agent_definition_id": "store-replenishment-review-agent",
+  "required_result": {
+    "schema_version": "okcanvas-store-replenishment-review-v1",
+    "status": "ACTION_REQUIRED",
+    "snapshot_id": "case001-shortage",
+    "reviewed_skus": 3,
+    "total_reorder_units": 19,
+    "recommendations": [
+      {
+        "sku": "ergonomic-keyboard",
+        "reorder_units": 12,
+        "action": "REORDER"
+      },
+      {
+        "sku": "desk-lamp",
+        "reorder_units": 7,
+        "action": "REORDER"
+      },
+      {
+        "sku": "usb-c-dock",
+        "reorder_units": 0,
+        "action": "NO_ACTION"
+      }
+    ]
+  },
+  "forbidden_result": {
+    "status": "INSUFFICIENT_DATA"
+  },
+  "required_tools": [],
+  "forbidden_tools": [
+    "web_search",
+    "write_file",
+    "shell"
+  ],
+  "max_total_tokens": 3000,
+  "max_duration_ms": 60000
+}

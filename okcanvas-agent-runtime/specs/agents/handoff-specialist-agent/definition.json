@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "handoff-specialist-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Handoff Specialist Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [],
+  "mcp_servers": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "workspace_access": "none",
+  "max_turns": 1,
+  "workflow_name": "OKCanvas Native Handoff Specialist",
+  "session_mode": "disabled"
+}

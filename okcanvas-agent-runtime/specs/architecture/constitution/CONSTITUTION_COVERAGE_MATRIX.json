@@ -1,0 +1,380 @@
+{
+  "schema_version": "okcanvas-constitution-coverage-v1",
+  "coverage": [
+    {
+      "source": "structure_audit",
+      "source_item": "F-01",
+      "covered_by": [
+        "LAY-006",
+        "MIG-008"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-02",
+      "covered_by": [
+        "CAP-001",
+        "LAY-006"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-03",
+      "covered_by": [
+        "LAY-009",
+        "CMP-001"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-04",
+      "covered_by": [
+        "LAY-008"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-05",
+      "covered_by": [
+        "CMP-005",
+        "CMP-006",
+        "TST-003"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-06",
+      "covered_by": [
+        "TST-001",
+        "TST-002"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-07",
+      "covered_by": [
+        "LAY-007"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-08",
+      "covered_by": [
+        "LAY-010"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-09",
+      "covered_by": [
+        "LAY-011",
+        "CLI-001"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "structure_audit",
+      "source_item": "F-10",
+      "covered_by": [
+        "HIS-001",
+        "HIS-002",
+        "HIS-003"
+      ],
+      "note": "구조 감사 finding 전체 포함"
+    },
+    {
+      "source": "target_architecture_manifest",
+      "source_item": "repository_layout",
+      "covered_by": [
+        "LAY-001",
+        "LAY-005",
+        "LAY-006"
+      ],
+      "note": "machine-readable target manifest 전체 포함"
+    },
+    {
+      "source": "target_architecture_manifest",
+      "source_item": "dependency_direction",
+      "covered_by": [
+        "DEP-001",
+        "DEP-002",
+        "DEP-003",
+        "DEP-004",
+        "DEP-005",
+        "DEP-006",
+        "DEP-007",
+        "DEP-008",
+        "DEP-009"
+      ],
+      "note": "machine-readable target manifest 전체 포함"
+    },
+    {
+      "source": "target_architecture_manifest",
+      "source_item": "forbidden_dependencies",
+      "covered_by": [
+        "DEP-001",
+        "DEP-010",
+        "DEP-011",
+        "AGT-001",
+        "APP-004",
+        "DOM-001",
+        "ARC-003"
+      ],
+      "note": "machine-readable target manifest 전체 포함"
+    },
+    {
+      "source": "target_architecture_manifest",
+      "source_item": "transport_contracts.rest",
+      "covered_by": [
+        "REST-001",
+        "REST-002",
+        "REST-003"
+      ],
+      "note": "machine-readable target manifest 전체 포함"
+    },
+    {
+      "source": "target_architecture_manifest",
+      "source_item": "transport_contracts.sse",
+      "covered_by": [
+        "SSE-001",
+        "SSE-002",
+        "SSE-003",
+        "SSE-004",
+        "SSE-005"
+      ],
+      "note": "machine-readable target manifest 전체 포함"
+    },
+    {
+      "source": "target_architecture_manifest",
+      "source_item": "transport_contracts.websocket",
+      "covered_by": [
+        "WS-001",
+        "WS-002",
+        "WS-003",
+        "WS-004",
+        "WS-005",
+        "WS-006",
+        "WS-007",
+        "WS-008"
+      ],
+      "note": "machine-readable target manifest 전체 포함"
+    },
+    {
+      "source": "target_architecture_manifest",
+      "source_item": "public_surface",
+      "covered_by": [
+        "TRA-003",
+        "TRA-004",
+        "CLI-001",
+        "CLI-003"
+      ],
+      "note": "machine-readable target manifest 전체 포함"
+    },
+    {
+      "source": "target_architecture_manifest",
+      "source_item": "migration_waves",
+      "covered_by": [
+        "MIG-002",
+        "MIG-003",
+        "MIG-004",
+        "MIG-005",
+        "MIG-006",
+        "MIG-007"
+      ],
+      "note": "machine-readable target manifest 전체 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "root_package_decision",
+      "covered_by": [
+        "LAY-001",
+        "LAY-002",
+        "LAY-003",
+        "LAY-004",
+        "LAY-012",
+        "TST-007",
+        "TST-008"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "client_transport_facts",
+      "covered_by": [
+        "ARC-001",
+        "TRA-003",
+        "TRA-004",
+        "CLI-003"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "boundary_violation_service_imports_admin",
+      "covered_by": [
+        "DEP-010"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "boundary_violation_transport_direct_store",
+      "covered_by": [
+        "DEP-011",
+        "TRA-002"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "boundary_violation_sse_store_polling",
+      "covered_by": [
+        "SSE-004"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "boundary_violation_composition_root_routes",
+      "covered_by": [
+        "TRA-006",
+        "BOOT-001",
+        "BOOT-002"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "boundary_violation_duplicate_routes",
+      "covered_by": [
+        "TRA-005",
+        "APP-005"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "responsibility_clients",
+      "covered_by": [
+        "CLI-001",
+        "CLI-003",
+        "CLI-004",
+        "CLI-005"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "responsibility_protocols",
+      "covered_by": [
+        "PRO-001",
+        "PRO-002",
+        "PRO-003",
+        "PRO-004",
+        "PRO-005"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "responsibility_transport",
+      "covered_by": [
+        "TRA-001",
+        "TRA-002"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "responsibility_application",
+      "covered_by": [
+        "APP-001",
+        "APP-002",
+        "APP-003",
+        "APP-004"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "responsibility_agent",
+      "covered_by": [
+        "AGT-001",
+        "AGT-002",
+        "AGT-003"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "responsibility_adapters",
+      "covered_by": [
+        "ADP-001",
+        "ADP-002",
+        "ADP-003",
+        "ADP-004",
+        "ADP-005"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "client_transport_reaudit",
+      "source_item": "responsibility_bootstrap",
+      "covered_by": [
+        "BOOT-001",
+        "BOOT-002"
+      ],
+      "note": "Client/Transport/Agent 재감사 내용 포함"
+    },
+    {
+      "source": "migration_map",
+      "source_item": "64 entries",
+      "covered_by": [
+        "MIG-008",
+        "CMP-001",
+        "CMP-003"
+      ],
+      "note": "64개 package별 target/status는 부속 JSON을 규범적으로 편입"
+    },
+    {
+      "source": "import_graph_audit",
+      "source_item": "258 modules / cycles 0",
+      "covered_by": [
+        "DEP-012"
+      ],
+      "note": "현재 import graph와 cycle zero gate 편입"
+    },
+    {
+      "source": "path_coupling_audit",
+      "source_item": "src path coupling 111 files / 399 matches",
+      "covered_by": [
+        "LAY-004",
+        "TST-008"
+      ],
+      "note": "경로 결합 제거 gate 편입"
+    },
+    {
+      "source": "flat_layout_audit",
+      "source_item": "flat layout probe and impacts",
+      "covered_by": [
+        "LAY-001",
+        "LAY-002",
+        "LAY-003",
+        "LAY-004",
+        "LAY-012",
+        "TST-007"
+      ],
+      "note": "flat layout 실행 증거와 미검증 wheel gate 편입"
+    }
+  ],
+  "coverage_item_count": 36,
+  "uncovered_items": []
+}

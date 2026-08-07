@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "local-text-fingerprint-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Local Text Fingerprint Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [
+    "local_text_fingerprint"
+  ],
+  "mcp_servers": [],
+  "handoffs": [],
+  "max_turns": 2,
+  "workflow_name": "OKCanvas Generic Read-Only Function Tool",
+  "session_mode": "disabled"
+}

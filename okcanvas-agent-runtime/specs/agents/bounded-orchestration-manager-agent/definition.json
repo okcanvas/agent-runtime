@@ -1,0 +1,21 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "bounded-orchestration-manager-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Bounded Orchestration Manager",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "BoundedOrchestrationResult",
+  "tools": [],
+  "mcp_servers": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "orchestration_children": [
+    "bounded-orchestration-architecture-agent",
+    "bounded-orchestration-risk-agent"
+  ],
+  "workspace_access": "none",
+  "max_turns": 1,
+  "workflow_name": "OKCanvas Bounded Multi-Agent Orchestration V1",
+  "session_mode": "disabled"
+}

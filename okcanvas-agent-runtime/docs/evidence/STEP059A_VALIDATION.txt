@@ -1,0 +1,95 @@
+STEP059A_ACTUAL_SDK_FUNCTION_TOOL_OUTPUT_CONTRACT_ALIGNMENT
+Version: 2.39.1
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_ACTUAL_SDK_RERUN_PENDING
+
+ROOT CAUSE
+- STEP059 deterministic fixture acceptance: PASS 16/16
+- first real Windows OpenAI Tool run: FAILED before agent/model/tool start
+- Product passed output_type and output_json_schema together
+- immutable SDK 0.19.0 declares them mutually exclusive and raises UserError
+
+IMPLEMENTED CORRECTION
+- shared Product Function Tool factory binds output_type only
+- SDK owns strict output-schema generation and output TypeAdapter validation
+- all three registered Function Tools use the corrected shared factory
+- bounded project read-only policy and CLI evidence rendering unchanged
+
+SOURCE VALIDATION
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- npm pack dry-run: PASS, 23 package files, 0 runtime dependencies
+- Python pytest: 578/578 PASS across 176 test files
+- focused STEP059A/Function Tool/project/baseline regression: 21/21 PASS
+- STEP059A deterministic acceptance: 10/10 PASS
+- STEP059 bounded workflow: 16/16 PASS, cleanup COMPLETED
+- STEP058: 18/18 PASS, cleanup COMPLETED
+- STEP057: 25/25 PASS, cleanup COMPLETED
+- STEP056C: 25/25 PASS, cleanup COMPLETED
+- STEP055: 35/35 PASS, cleanup COMPLETED
+- STEP054: 30/30 PASS, cleanup COMPLETED
+- STEP053: 30/30 PASS, cleanup COMPLETED
+- STEP052: 25/25 PASS, cleanup COMPLETED
+- STEP051: 25/25 PASS, cleanup COMPLETED
+- STEP050: 31/31 PASS, cleanup COMPLETED
+- STEP049: 33/33 PASS, cleanup COMPLETED
+- STEP048: 32/32 PASS, cleanup COMPLETED
+- STEP047: 29/29 PASS, cleanup COMPLETED
+- STEP046: 27/27 PASS, cleanup COMPLETED
+- STEP045: 28/28 PASS, cleanup COMPLETED
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS, cleanup COMPLETED
+- STEP042: 29/29 PASS, cleanup COMPLETED
+- STEP041: 24/24 PASS, cleanup COMPLETED
+- STEP039: 20/20 PASS, cleanup COMPLETED
+- STEP038: 24/24 PASS with 3 registered Function Tools
+- STEP030A: 8/8 PASS, 69 Windows launchers, 0 violations
+- immutable Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+
+WINDOWS ACTUAL-SDK CLOSURE REQUIRED
+- sh_run_step059a_acceptance.cmd must import installed openai-agents 0.19.0
+- all three Product Function Tools must construct with generated output schemas/adapters
+- real project-readonly-coding-agent Tool execution must reach Agent/model/Tool lifecycle and Artifact success
+
+Candidate ZIP and self-extracted release validation are appended after they pass.
+
+CANDIDATE ZIP VALIDATION
+- archive canonical root: 1 (`okcanvas-agent-runtime`)
+- archive entries: 2,709
+- forbidden local/runtime files: 0
+- immutable Reference `.vscode` files retained: 2
+- Node compiled dist entries retained: 21
+- immutable Reference integrity: 4/4 PASS
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- Python pytest: 578/578 PASS across 176 test files
+- STEP059A deterministic: 10/10 PASS
+- STEP059: 16/16 PASS, cleanup COMPLETED
+- STEP058: 18/18 PASS, cleanup COMPLETED
+- STEP057: 25/25 PASS, cleanup COMPLETED
+- integrated STEP045: 28/28 PASS
+- STEP038: 24/24 PASS with 3 registered Function Tools
+- STEP030A: 8/8 PASS, 69 launchers, 0 violations
+- direct `/reference` imports: 0
+
+A final self-extracted test ZIP is rebuilt only to include this candidate validation record.
+
+SELF-EXTRACTED FINAL TEST ZIP VALIDATION
+- archive entries: 2,709
+- immutable Reference integrity: 4/4 PASS
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- Python pytest: 578/578 PASS across 176 test files
+- STEP059A deterministic: 10/10 PASS
+- STEP059: 16/16 PASS, cleanup COMPLETED
+- STEP058: 18/18 PASS, cleanup COMPLETED
+- STEP057: 25/25 PASS, cleanup COMPLETED
+- integrated STEP045: 28/28 PASS
+- STEP038: 24/24 PASS with 3 registered Function Tools
+- STEP030A: 8/8 PASS, 69 launchers, 0 violations
+- direct `/reference` imports: 0
+
+The release ZIP is rebuilt only to include this final validation record. The installed-SDK acceptance and real OpenAI Tool execution remain Windows-live pending and are not claimed by this offline validation.

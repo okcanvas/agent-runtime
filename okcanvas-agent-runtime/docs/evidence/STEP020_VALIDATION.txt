@@ -1,0 +1,17 @@
+STEP020_GOVERNED_LOCAL_TOOL_APPROVAL_INTERRUPTION_AND_RESUME
+
+- Version: 2.0.0
+- Deterministic acceptance: PASSED
+- Approval branch: separate prepare/decision processes, Tool executed exactly once, Artifact created, protected payload deleted.
+- Rejection branch: separate prepare/decision processes, Tool executed zero times, Run cancelled, protected payload retained.
+- Encrypted RunState: plaintext request absent, integrity SHA verified, deleted after terminal decision.
+- Tampered RunState: fail-closed, Product Run/Task failed, Tool count zero, encrypted file preserved.
+- Same terminal decision: idempotent replay.
+- Opposite terminal decision: rejected.
+- Reference integrity: unchanged.
+- Windows live SDK acceptance: pending.
+- Full regression suite: 267 passed.
+- Product state drift: approval claim rolls back unless Task=WAITING_APPROVAL, Run=INTERRUPTED, and Submission=WAITING_APPROVAL all transition together.
+- Wrong resume model: rejected without consuming the pending approval.
+- Encrypted RunState hardening: strict envelope keys/schema/identity, bounded size, strict base64, nonce/ciphertext validation, and symlink rejection.
+- app_from_environment: OKCANVAS_RUN_STATE_ROOT wiring verified.

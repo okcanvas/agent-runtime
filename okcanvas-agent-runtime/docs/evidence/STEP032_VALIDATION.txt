@@ -1,0 +1,24 @@
+STEP032_AGENT_OUTPUT_CONTRACT_RUNTIME_REGISTRY
+Version: 2.12.0
+Status: WINDOWS_LIVE_ACCEPTED
+Reported local date: 2026-07-30
+
+Deterministic validation
+- STEP032: 19/19 PASS, cleanup COMPLETED.
+- exactly two output-contract Runtime bindings.
+- CodingAgentResult has no invalid-final-output recovery.
+- StoreReplenishmentReviewResult retains its exact deterministic recovery.
+- generic SDK gateway has no replenishment dependency or contract-name branch.
+
+Windows live evidence
+- command: sh_run_step032_acceptance
+- state: PASSED
+- all 19 checks true
+- contract_count: 2
+- valid Coding output succeeded with no handler and one Runner call
+- invalid Coding output failed as SDK_RUN_FAILED with no recovery and one Runner call
+- invalid replenishment output recovered to total 19 with one Runner call
+- no Tool/MCP events
+- References unchanged
+- cleanup_state: COMPLETED
+- compact evidence: docs/evidence/STEP032_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json

@@ -1,0 +1,89 @@
+STEP076_PRODUCT_OWNED_IMMUTABLE_PROJECT_SNAPSHOT_BINDING
+version=2.56.0
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+validation_date_utc=2026-08-02
+
+SOURCE VALIDATION
+=================
+
+1. Deterministic acceptance
+command: python scripts/run_step076_acceptance.py
+result: PASSED 37/37
+model_calls: 0
+docker_calls: 0
+external_network_calls: 0
+fixture_archive_sha256: 4bb56ab0be2d823b65221c5b6e997b3ebea6d3b9e0026a26a6266526de9e65ce
+fixture_snapshot_sha256: 9ee28d0d5cf9c196344e5cc578fc1294e81e817309acdf228a26bc1e27bba54e
+fixture_file_count: 2
+fixture_total_bytes: 151
+fixture reproducibility: the canonical ZIP fixture was constructed twice and both archive SHA-256 values were identical.
+
+2. Focused STEP076/STEP075/service/submission/Sandbox regression
+result: 93 passed
+
+3. Historical Skill/trace/attachment regression
+result: 41 passed
+
+4. Full Python regression
+command: pytest -q
+result: 845 passed in 104.11s
+
+5. Node client tests
+command: node --test (through deterministic acceptance)
+result: 14 passed, 0 failed
+
+6. Committed TypeScript release integrity
+result: COMMITTED_TYPESCRIPT_RELEASE_VERIFIED inputs=11 outputs=21 tests=2 external_tsc_required=false
+
+7. Reference integrity
+result: 4/4 verified
+
+8. Direct immutable Reference imports
+command: python scripts/verify_no_reference_imports.py
+result: ok=true, violations=[]
+
+9. npm package dry-run
+command: npm pack --dry-run --json
+result: 23 files, PASS
+package: @okcanvas/agent-cli 0.5.0
+
+10. Contract identities
+project_snapshot_policy_sha256: 40a66f1993e6b5e2dda985ec72b750efa56b313dca4c50ad661169c4e1e55eab
+service_policy_sha256: cf3e6530007230b1523daf51e6cb027d5e2470d097632b3ba075949bba0bd829
+sample_runtime_binding_sha256: 1af010cc0f3a61b4aa616576d69ea208e44a7074efd863ab7a373050af71dfad
+
+11. STEP075G predecessor closure retained
+Windows deterministic: 30/30 PASSED
+Windows live: 38/38 PASSED
+model_calls: 2
+tool_calls: 1
+terminal_status: SUCCEEDED
+exact formula/constant evidence: observed
+model repair events: 0
+cleanup_state: COMPLETED
+orphan_count: 0
+
+FRESH PACKAGE VALIDATION
+========================
+
+This section is completed after the canonical package is extracted into a separate directory. The adjacent .zip.sha256 file is the canonical distribution identity; the hash is intentionally not embedded in the ZIP because that would be self-referential.
+
+Canonical package structure:
+canonical ZIP root count: 1
+ZIP entries: 3,133
+forbidden packaged files: 0
+
+Fresh extraction validation:
+STEP076 deterministic acceptance: 37/37 PASS
+focused regression: 93/93 PASS
+historical regression: 41/41 PASS
+full Python regression: 845/845 PASS
+Node tests: 14/14 PASS
+committed TypeScript release integrity: PASS
+Reference integrity: 4/4 PASS
+direct immutable Reference imports: 0
+npm pack dry-run: 23 files PASS
+fixture_archive_sha256: 4bb56ab0be2d823b65221c5b6e997b3ebea6d3b9e0026a26a6266526de9e65ce
+fixture_snapshot_sha256: 9ee28d0d5cf9c196344e5cc578fc1294e81e817309acdf228a26bc1e27bba54e
+
+The final Windows live gate remains pending. No STEP077 is selected.

@@ -1,0 +1,1 @@
+Review the governed request only for correctness risks, failure boundaries, and missing verification. Return the strict CodingAgentResult contract. Distinguish confirmed facts from inference. Do not call tools, MCP, other Agents, filesystem, shell, network, Session, or workspace.

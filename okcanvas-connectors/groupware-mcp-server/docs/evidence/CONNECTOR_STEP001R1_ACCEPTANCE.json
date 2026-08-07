@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "async_test_runner_dependency_closed": true,
+    "compileall_passed": true,
+    "connector_binding_contract_exact": true,
+    "fake_mode_absent": true,
+    "pytest_passed": true,
+    "read_tools_exact": true,
+    "runtime_contract_v2_exact": true
+  },
+  "passed_checks": 7,
+  "processes": {
+    "compileall": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "pytest": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "..........                                                               [100%]\n10 passed in 0.87s\n"
+    }
+  },
+  "schema_version": "okcanvas-groupware-connector-step001r1-acceptance-v1",
+  "state": "PASSED",
+  "step": "CONNECTOR_STEP001R1_ASYNC_TEST_RUNNER_DEPENDENCY_CLOSURE",
+  "total_checks": 7,
+  "version": "0.1.1"
+}

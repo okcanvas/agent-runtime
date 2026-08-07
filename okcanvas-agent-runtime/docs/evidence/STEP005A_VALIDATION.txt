@@ -1,0 +1,24 @@
+STEP005A_ACTIVE_REFERENCE_USE_CONSTITUTION
+Status: COMPLETE
+Version: 0.5.1
+Date: 2026-07-29
+
+Scope
+- Added a binding constitution requiring active consultation of /reference.
+- Required inspection of applicable upstream mechanisms before invention or reimplementation.
+- Required adopt/adapt/defer/reject records with exact reference-relative paths.
+- Kept reference/upstream immutable.
+- Added regression coverage.
+
+Executed validation
+1. python -m compileall -q src scripts tests
+   PASS
+2. pytest -q
+   PASS: 98 passed
+3. PYTHONPATH=src python scripts/verify_reference.py
+   PASS: 4/4 references; tree SHA values unchanged
+4. PYTHONPATH=src python -m okcanvas_agent_runtime info --pretty
+   PASS: step=STEP005A_ACTIVE_REFERENCE_USE_CONSTITUTION, version=0.5.1
+
+Unexecuted
+- No live model, Codex, MCP, HTTP, UI, or external-system execution was required or performed.

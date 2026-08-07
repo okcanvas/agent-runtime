@@ -1,0 +1,38 @@
+{
+  "completed_chunk_count": 10,
+  "corrective_scope": [
+    "current next_selected_step assertions",
+    "HANDOFF preserved document-review-v1 capability statement"
+  ],
+  "error_tests": 0,
+  "failed_chunk": {
+    "counts": {
+      "errors": 0,
+      "failures": 14,
+      "skipped": 0,
+      "tests": 152
+    },
+    "end_file_index": 199,
+    "file_count": 20,
+    "first_file": "tests/test_step067_hosted_web_search_foundation.py",
+    "last_file": "tests/test_step075e_internal_snapshot_metadata_exclusion_and_hash_domain_fix.py",
+    "log_path": "docs/evidence/step082b-local/python-regression/chunk-180-199.txt",
+    "return_code": 1,
+    "start_file_index": 180,
+    "summary": [
+      "138",
+      ""
+    ],
+    "timed_out": false
+  },
+  "failed_tests": 14,
+  "failure_classification": "STALE_CURRENT_STATE_TEST_AND_HANDOFF_EXPECTATIONS",
+  "issue_id": "OR-ISSUE-057",
+  "passed_tests": 756,
+  "schema_version": "okcanvas-step082b-python-regression-failure-summary-v1",
+  "state": "FAILED",
+  "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+  "test_file_count": 231,
+  "total_tests": 770,
+  "version": "2.62.2"
+}

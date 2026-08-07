@@ -1,0 +1,38 @@
+STEP013_EVALUATION_SUITE_AND_BASELINE_SERVICE
+Version: 1.3.0
+Status: COMPLETE
+
+Implemented:
+- immutable versioned Evaluation Suite catalog;
+- explicit subject-to-slot-to-Run mapping;
+- per-Suite maximum 4 subjects for the canonical fixture and global maximum 20;
+- prepare-all-before-write behavior;
+- atomic Evaluation + Suite + member persistence;
+- aggregate pass/fail, token, duration, tool, and request metrics;
+- explicit immutable Baseline creation from passed Suite runs only;
+- exact Suite ID/version/manifest SHA and subject-shape comparison;
+- passed-to-failed and bounded metric regression reporting;
+- CLI and authenticated local-admin Control API;
+- STEP012A Windows cleanup live acceptance incorporated.
+
+Validation:
+- compileall: PASS;
+- pytest: 210 passed;
+- Core Store acceptance: PASS;
+- STEP006 through STEP013 acceptance chain: PASS;
+- STEP013 acceptance: PASSED, 21/21 checks;
+- direct Reference import verification: PASS;
+- Reference integrity: 4/4 PASS;
+- final ZIP re-extraction: PASS;
+- final ZIP pytest: 210 passed;
+- final ZIP STEP013 acceptance: 21/21 PASS;
+- final ZIP Reference integrity: 4/4 PASS;
+- canonical ZIP root: PASS;
+- local environment/state excluded from ZIP: PASS.
+
+Safety:
+- no model, MCP, Codex, or SDK Runner call during Suite evaluation;
+- no implicit latest Run or Baseline selection;
+- no Case×Run cross product;
+- no raw model output, prompt, Tool arguments/results, API keys, or Reference body in Evaluation storage;
+- no automatic release gate or deployment mutation.

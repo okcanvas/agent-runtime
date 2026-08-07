@@ -1,0 +1,95 @@
+STEP027_COMMERCE_SNAPSHOT_INGRESS_FAILURE_MATRIX_PRODUCT_ACCEPTANCE
+Validation date: 2026-07-30
+Project: okcanvas-agent-runtime
+Version: 2.7.0
+Status: WINDOWS_LIVE_ACCEPTED
+
+CODE-AUDITED DECISION
+- STEP026 Windows live acceptance is closed from user-reported console Evidence.
+- The successful commerce path and duplicate-SKU invalid case were accepted, but remaining authentication, response, transport, configuration, request, and adapter failure branches had not been proven as one Product acceptance boundary.
+- STEP027 adds no production authority, successful path, remote origin, write operation, Agent, Tool, MCP, browser mutation, or distributed worker.
+- No new OpenAI Agents SDK behavior is used; every STEP027 failure occurs before Runner invocation.
+
+DETERMINISTIC ACCEPTANCE
+Command:
+  PYTHONPATH=src python scripts/run_step027_acceptance.py
+
+Observed:
+- state=PASSED
+- checks=24/24 true
+- failure_case_count=14
+- source.network_read_count=9
+- source.redirect_target_reads=0
+- source.transport_attempt_count=1
+- source.write_count=0
+- all final Product/Evaluation counts=0
+- artifact_count=0
+- protected_payload_file_count=0
+- gateway_call_count=0
+- references unchanged
+- cleanup_state=COMPLETED
+
+FAILURE CONTRACTS
+- authentication rejected: 502 / COMMERCE_SNAPSHOT_SOURCE_AUTH_FAILED / retryable=false
+- redirect: 502 / COMMERCE_SNAPSHOT_RESPONSE_REJECTED / false
+- wrong content type: 502 / COMMERCE_SNAPSHOT_RESPONSE_REJECTED / false
+- oversized: 502 / COMMERCE_SNAPSHOT_RESPONSE_TOO_LARGE / false
+- malformed JSON: 502 / COMMERCE_SNAPSHOT_INVALID / false
+- invalid UTF-8: 502 / COMMERCE_SNAPSHOT_INVALID / false
+- empty body: 502 / COMMERCE_SNAPSHOT_INVALID / false
+- too many items: 502 / COMMERCE_SNAPSHOT_INVALID / false
+- upstream HTTP 503: 502 / COMMERCE_SNAPSHOT_RESPONSE_REJECTED / false
+- transport unavailable: 503 / COMMERCE_SNAPSHOT_SOURCE_UNAVAILABLE / true
+- missing configuration: 503 / COMMERCE_SNAPSHOT_SOURCE_NOT_CONFIGURED / false
+- remote origin: 503 / COMMERCE_SNAPSHOT_SOURCE_NOT_CONFIGURED / false
+- invalid snapshot key: 422 / COMMERCE_SNAPSHOT_REQUEST_INVALID / false
+- unknown adapter: 502 / COMMERCE_SNAPSHOT_DEFINITION_INVALID / false
+
+FULL REGRESSION
+1. python -m compileall -q src scripts tests
+   PASS
+
+2. PYTHONPATH=src python -m pytest -q
+   PASS: 336 passed in 24.16s
+
+3. STEP027 acceptance
+   PASS: 24/24, 14 failure cases, zero Product state, cleanup COMPLETED
+
+4. STEP026 acceptance
+   PASS: 22/22, five reads, zero writes, four Artifacts, cleanup COMPLETED
+
+5. STEP025 acceptance
+   PASS: 21/21, one read, zero writes, cleanup COMPLETED
+
+6. STEP024B acceptance
+   PASS: 7/7, cleanup COMPLETED
+
+7. STEP024 acceptance
+   PASS: 18/18, cleanup COMPLETED
+
+8. STEP020 approve/reject acceptance
+   PASS
+
+9. STEP023 operator CLI acceptance
+   PASS: 15/15
+
+10. immutable Reference verification
+    PASS: 4/4 exact file count, byte count, and tree SHA
+
+11. direct /reference import verification
+    PASS: ok=true, violations=[]
+
+WINDOWS LIVE CLOSURE
+User-reported sh_run_step027_acceptance.cmd output:
+- state=PASSED
+- all 24 checks=true
+- failure_case_count=14
+- source network reads=9
+- redirect target reads=0
+- transport attempts=1
+- source writes=0
+- all final counts=0
+- Artifact/protected-payload/gateway counts=0
+- cleanup_state=COMPLETED
+
+Compact Evidence: docs/evidence/STEP027_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json

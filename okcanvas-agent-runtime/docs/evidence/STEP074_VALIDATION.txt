@@ -1,0 +1,59 @@
+STEP074_PRODUCT_OWNED_DOCKER_SANDBOX_PROVIDER_LIFECYCLE_V1
+version=2.54.0
+state=IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_DOCKER_RERUN_PENDING
+
+SOURCE_TREE_VALIDATION
+STEP074 acceptance=28/28 PASS
+focused STEP074/provider/runtime tests=71/71 PASS
+historical Skill/trace/service tests=47/47 PASS
+full Python regression=785/785 PASS
+test files=205
+Python compileall=PASS
+committed TypeScript release integrity=PASS
+Node tests=14/14 PASS
+npm pack dry-run=23 files PASS
+Reference integrity=4/4 PASS
+direct /reference imports=0
+real Docker calls=0
+external network calls=0
+model calls=0
+
+IDENTITIES
+sandbox_policy_sha256=4164b41434b33d4c45d747cc868f1711e8be59888a24b52e3701aa4e25ad2a67
+sandbox_provider_contract_sha256=e66ae517e4d6b492ba7593d0b896794958d508f02461056fde489261209922f4
+sandbox_foundation_sha256=7bf66ac54a1061cc8acc2d63b504bd20e6d3027db7f4bfae31def8ce4759ebf7
+sandbox_runtime_sha256=fd64baad4bfbfe40666c74dd1ae8c74e06d231c0aba33ad952c9093ec1e4f6e7
+sample_runtime_binding_sha256=2fe06a08daba395ed00baca821a9c1e96c9bf31b141bd7daf7185bfabfe4ea27
+service_client_policy_sha256=498956c0769e83f107321436fc4c36c507e9d0fdbd82370ee3f9fe6a09ae7226
+
+DETERMINISTIC_BOUNDARY
+No Docker daemon was contacted. The Docker CLI lifecycle was verified with a scripted runner.
+No image was pulled, container was created, network was contacted, or model was called.
+All 26 Agent definitions remain workspace_access=none.
+
+WINDOWS_DOCKER_LIVE_PENDING
+launcher=sh_run_step074_live_acceptance.cmd
+default_image=hello-world:latest
+image_requirement=already-local image with RepoDigest
+expected_checks=27/27 PASS
+expected_agent_workspace_execution=false
+expected_external_network_calls=0
+expected_model_calls=0
+
+FRESH_ZIP_CANDIDATE_VALIDATION
+candidate_sha256=8a3479d802300a4cc063720224ef2ccb01e4ca898a7d360ef580d106b3609a21
+canonical_root_count=1
+zip_entries=3016
+forbidden_files=0
+STEP074 acceptance=28/28 PASS
+full Python regression=785/785 PASS
+Python compileall=PASS
+Reference integrity=4/4 PASS
+direct /reference imports=0
+Node tests=14/14 PASS
+npm pack dry-run=23 files PASS
+
+FINAL_DISTRIBUTION_VALIDATION
+The final distribution is repackaged after recording candidate evidence and is independently
+re-extracted and validated before handoff. Its SHA-256 is distributed in the adjacent `.zip.sha256`
+file because an archive cannot contain its own stable digest.

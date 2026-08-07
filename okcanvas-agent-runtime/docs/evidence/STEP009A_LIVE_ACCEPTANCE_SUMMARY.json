@@ -1,0 +1,102 @@
+{
+  "schema_version": "okcanvas-step009a-live-acceptance-evidence-v1",
+  "baseline_step": "STEP009A_FIRST_READ_ONLY_MCP_LIVE_ACCEPTANCE",
+  "project_version": "0.9.1",
+  "source_runtime_version": "0.9.0",
+  "state": "PASSED",
+  "acceptance_id": "20260728T230639Z-75152cc6",
+  "started_at": "2026-07-28T23:06:39.270135Z",
+  "completed_at": "2026-07-28T23:07:11.214808Z",
+  "checks": {
+    "agent_execution_succeeded": true,
+    "api_key_redacted": true,
+    "artifact_verified": true,
+    "mcp_event_source": true,
+    "protocol_connected": true,
+    "protocol_read_exact": true,
+    "protocol_search_found_runstate": true,
+    "reference_content_not_in_database": true,
+    "references_unchanged": true,
+    "tool_arguments_redacted": true,
+    "tool_completed_recorded": true,
+    "tool_started_recorded": true
+  },
+  "agent": {
+    "agent_definition_id": "reference-research-agent",
+    "agent_definition_version": "1.0.0",
+    "agent_definition_sha256": "658b13b9700c3d64d5c6f87a1e04e6824e6b16c2fb6790269689e776b9111301",
+    "model": "gpt-5.6-sol",
+    "state": "SUCCEEDED",
+    "task_id": "task_8ea1fbfed8ea4bef9845072f17aca0c9",
+    "run_id": "run_f7efdc9b8da946a9aca6bda7f5596dbd",
+    "trace_id": "trace_564002ee49e44c54bd48fc1e994892f9",
+    "response_id": "resp_0ab024e4434f2f30006a69361abbc08199a7d2ccd528f17916",
+    "result_status": "PARTIAL",
+    "artifact_id": "artifact_2cadee2f9d264e23864fbe46be11a3fc",
+    "artifact_sha256": "fb23cfcba027ed06f5caec17c96f5cf2854d04954a5d81c813495f660590a33f",
+    "usage": {
+      "cached_input_tokens": 0,
+      "input_tokens": 2563,
+      "output_tokens": 222,
+      "reasoning_tokens": 0,
+      "requests": 3,
+      "total_tokens": 2785
+    }
+  },
+  "mcp": {
+    "server_id": "reference-catalog",
+    "server_definition_sha256": "91260edde91cb825f9486174709c0873db71e64437ae8b70b9301487a788fe70",
+    "listed_tools": [
+      "search_reference",
+      "read_reference_file"
+    ],
+    "protocol_search_path": "src/agents/run_state.py",
+    "protocol_read_path": "src/agents/run_state.py",
+    "protocol_read_start_line": 1,
+    "protocol_read_end_line": 30,
+    "canonical_mcp_event_count": 4,
+    "canonical_mcp_event_sequences": [
+      7,
+      8,
+      11,
+      12
+    ],
+    "canonical_mcp_event_types": [
+      "tool.started",
+      "tool.completed",
+      "tool.started",
+      "tool.completed"
+    ]
+  },
+  "reference_integrity": {
+    "all_verified": true,
+    "reference_ids": [
+      "openai-agents-python",
+      "openai-agents-streaming-api",
+      "openai-cs-agents-demo",
+      "temporal-openai-agents-demos"
+    ],
+    "tree_sha256": {
+      "openai-agents-python": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "openai-agents-streaming-api": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "openai-cs-agents-demo": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "temporal-openai-agents-demos": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a"
+    }
+  },
+  "trace_export": {
+    "trace_id_linked_to_product_run": true,
+    "openai_trace_upload_live_accepted": false,
+    "non_fatal_http_status": 400,
+    "response_data_redacted": true,
+    "impact_on_product_acceptance": "none"
+  },
+  "capability_boundary": {
+    "mcp_protocol_live_accepted": true,
+    "mcp_agent_live_accepted": true,
+    "generic_agent_execution_live_accepted": true,
+    "mcp_mode": "allowlisted-read-only-local-stdio",
+    "write_capable_mcp_enabled": false,
+    "remote_mcp_enabled": false,
+    "direct_reference_import_forbidden": true
+  }
+}

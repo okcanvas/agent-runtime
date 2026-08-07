@@ -1,0 +1,41 @@
+{
+  "schema_version": "okcanvas-agent-platform-workspace-step003r1-windows-failure-summary-v1",
+  "step": "WORKSPACE_STEP003R1_WINDOWS_CP949_PARENT_JSON_OUTPUT_CLOSURE",
+  "version": "0.3.1",
+  "executed_at": "2026-08-05T02:19:52.280619Z",
+  "execution_platform": "windows",
+  "command": "sh_run_workspace_step003_acceptance > log.txt",
+  "state": "FAILED",
+  "passed_checks": 18,
+  "total_checks": 23,
+  "proven": {
+    "parent_json_stdout_cp949_safe": true,
+    "subprocess_output_encoding_safe": true,
+    "product_cli_retained_acceptance_passed": true,
+    "runtime_step087_acceptance_passed": true,
+    "example_retained_acceptance_passed": true
+  },
+  "failures": {
+    "workspace_unit_tests_passed": false,
+    "connector_retained_acceptance_passed": false,
+    "connector_example_integration_passed": false,
+    "main_assistant_groupware_full_e2e_passed": false,
+    "e2e_command_bearer_redacted": false
+  },
+  "root_causes": [
+    "Workspace orchestrator reused C:\\Python312\\python.exe for Connector and Runtime-owned checks instead of each project's .venv interpreter.",
+    "Connector acceptance failed because the bootstrap interpreter had no pytest.",
+    "Connector-to-Example E2E failed because the bootstrap interpreter had no fastapi.",
+    "Main Assistant E2E failed because the bootstrap interpreter had no uvicorn.",
+    "The root redirected output log was not declared as a local non-identity artifact, and the manifest failure did not provide bounded missing/changed/unexpected diagnostics.",
+    "The evidence field windows_step003r1_executed was hardcoded false even on the real Windows run."
+  ],
+  "secondary_observation": "The unittest manifest diff indicated HANDOFF.md was absent or different in the executed directory. STEP003R2 continues to fail on missing or changed tracked files; a fresh extraction is required.",
+  "secret_scan": {
+    "e2e_connector_and_groupware_secrets_absent": true,
+    "product_cli_external_bearer_secret_redacted": true,
+    "raw_secret_exposure_observed": false
+  },
+  "source_log": "docs/evidence/WORKSPACE_STEP003R1_WINDOWS_ACCEPTANCE_USER_LOG.txt",
+  "source_log_sha256": "cb3c02b843d343714ede1fff2549cf9b66ffed7ac3ee8320139c8c647b7f640c"
+}

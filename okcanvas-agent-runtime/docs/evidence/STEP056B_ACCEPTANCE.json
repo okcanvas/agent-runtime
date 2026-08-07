@@ -1,0 +1,73 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260731T103840799775Z-b99a0962",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-31T10:38:41.925946Z",
+    "created_at": "2026-07-31T10:38:40.800065Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [
+      {
+        "closed": true,
+        "error": null,
+        "name": "loopback-control-api"
+      }
+    ],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP056B"
+  },
+  "checks": {
+    "canonical_env_file_only": true,
+    "capability_limits_visible": true,
+    "cleanup_completed": true,
+    "client_does_not_require_evaluation": true,
+    "control_api_and_sse_only": true,
+    "credentials_not_printed_or_persisted": true,
+    "details_hidden_until_command": true,
+    "events_hidden_until_command": true,
+    "final_product_counts_exact": true,
+    "friendly_answers_rendered": true,
+    "general_mode_evaluation_disabled": true,
+    "governed_preflight_confirmation_used": true,
+    "json_hidden_until_command": true,
+    "loopback_only_client": true,
+    "model_prompt_not_repeated": true,
+    "no_runtime_npm_dependencies": true,
+    "node_process_exited_successfully": true,
+    "node_typescript_source_and_bin_present": true,
+    "persisted_sse_consumed": true,
+    "persistent_same_process_three_requests": true,
+    "prompt_returned_after_each_response": true,
+    "raw_confirmation_challenge_not_shown": true,
+    "raw_requests_not_persisted": true,
+    "references_unchanged": true,
+    "successful_payloads_deleted": true
+  },
+  "final_counts": {
+    "artifacts": 3,
+    "evaluations": 0,
+    "events": 30,
+    "invocations": 3,
+    "runs": 3,
+    "submissions": 3,
+    "tasks": 3
+  },
+  "node_cli": {
+    "direct_runtime_access": false,
+    "evaluation_default_enabled": false,
+    "language": "TypeScript",
+    "persistent_requests": 3,
+    "runtime": "Node.js >=22",
+    "runtime_dependencies": 0,
+    "session_enabled": false
+  },
+  "process_returncode": 0,
+  "protected_payload_file_count": 0,
+  "schema_version": "okcanvas-step056b-acceptance-v1",
+  "state": "PASSED",
+  "transcript_tail": "============================================================\n OKCanvas Agent CLI · Node.js/TypeScript persistent client\n============================================================\nRuntime 2.38.0 · Agent coding-agent · Debug OFF\n- 프로젝트 파일·Shell·인터넷 접근 없음\n- 서버 대화 기억 없음 · 각 요청은 독립 실행\n- 현재는 입력한 대화 텍스트만 분석 가능\n/help 명령으로 사용법을 확인하세요. 종료할 때까지 계속 질문할 수 있습니다.\n\ncoding-agent> STEP056B persistent request one\n실행 준비 중...\n\nAgent\n─────\nSTEP056B persistent response 1.\n\n확인 사항\n1. same-process-request-1: STEP056B request 1 completed in the same Node process.\n\n완료 · 32 tokens · 다시 질문하거나 /details를 입력하세요.\n\ncoding-agent> STEP056B persistent request two\n실행 준비 중...\n\nAgent\n─────\nSTEP056B persistent response 2.\n\n확인 사항\n1. same-process-request-2: STEP056B request 2 completed in the same Node process.\n\n완료 · 34 tokens · 다시 질문하거나 /details를 입력하세요.\n\ncoding-agent> STEP056B persistent request three\n실행 준비 중...\n\nAgent\n─────\nSTEP056B persistent response 3.\n\n확인 사항\n1. same-process-request-3: STEP056B request 3 completed in the same Node process.\n\n완료 · 36 tokens · 다시 질문하거나 /details를 입력하세요.\n\ncoding-agent> /details\nRun: run_2ae02091bb4e4aecbc9556dd4b8a773c\nStatus: SUCCEEDED\nTokens: 36\nAgent: coding-agent@1.0.0\nCapability: text-only\nSession: disabled\nInvocations: 1\nROOT · coding-agent · SUCCEEDED · 36 tokens\nArtifact: artifact_4eb3181acf16477babfe00c559e3a66e\nArtifact SHA-256: d54db01e55788c63cbd754b378e5089873b2712bdc8ddfc865321f2c04979ff3\nEvaluation: not requested\n\ncoding-agent> /events\n#01 run.created\n#02 run.started\n#03 agent.definition.resolved · CodingAgentResult\n#04 agent.started · coding-agent\n#05 model.started · deterministic-step056b-model\n#06 model.completed\n#07 agent.completed · CodingAgentResult\n#08 artifact.created\n#09 run.completed\n#10 payload.retention.applied\n\ncoding-agent> /json\n{\n  \"findings\": [\n    {\n      \"confidence\": \"CONFIRMED\",\n      \"detail\": \"STEP056B request 3 completed in the same Node process.\",\n      \"evidence\": [\n        \"gateway-call-3\"\n      ],\n      \"severity\": \"INFO\",\n      \"title\": \"same-process-request-3\"\n    }\n  ],\n  \"status\": \"PASS\",\n  \"summary\": \"STEP056B persistent response 3.\",\n  \"unverified\": []\n}\n\ncoding-agent> /quit\n\n종료 · 이 프로세스에서 3개 요청을 실행했습니다.\n"
+}

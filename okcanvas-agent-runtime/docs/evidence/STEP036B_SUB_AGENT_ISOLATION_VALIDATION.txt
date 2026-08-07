@@ -1,0 +1,42 @@
+STEP036B_SUB_AGENT_INVOCATION_AND_WORKSPACE_ISOLATION_CONSTITUTION
+Status: CODE_AUDITED_PLAN_COMPLETE_STEP036_WINDOWS_LIVE_ACCEPTED_BINDING_FOR_STEP040
+Date: 2026-07-30
+
+Code-derived findings
+- SDK native Handoff passes control/history and creates no filesystem workspace.
+- Agent.as_tool starts a nested Runner and inherits parent run_config when no nested run_config is supplied.
+- SDK Sandbox isolation exists only when a separate SandboxSession is explicitly created and attached.
+- Current AgentDefinitionCatalog already enforces one safe non-symlink specification directory per Agent.
+
+Binding isolation model
+1. definition isolation: always
+2. invocation/state isolation: always
+3. physical workspace/session isolation: only when filesystem capabilities are enabled
+
+Workspace rules
+- no shared writable parent/child root by default
+- transfer only typed input, filtered history, immutable snapshot/mount, Artifact, or bounded result
+- runtime-generated opaque workspace roots
+- no model-selected host path or mount
+- Session, protected payload, workspace, and long-term memory are separate lifecycles
+- host folder separation alone is not hostile-code containment
+
+Revised P0 order
+1. STEP037 Interactive Agent Runner
+2. STEP038 Generic Function Tool Runtime
+3. STEP039 SDK Streaming Adapter
+4. STEP040 Sub-Agent Invocation Scope Foundation
+5. STEP041 Native Handoff Runtime
+6. STEP042 Agent-as-Tool Runtime
+7. STEP043 SQLite Session Runtime
+8. STEP044 Native Guardrail Runtime
+9. STEP045 Integrated walking-skeleton acceptance
+
+The audited executable Runtime was STEP036 / 2.16.0. STEP036 is now Windows live accepted; the plan remains binding for STEP040 and later.
+
+Validation
+- plan consistency checks: 14/14 PASS
+- executable src/specs/tests/scripts/pyproject byte-identical to STEP036A: PASS
+- reference integrity: 4/4 PASS
+- compileall: PASS
+- full pytest: 413 passed

@@ -1,0 +1,12 @@
+id: codex_workspace_write
+implementation: agents.function_tool
+needs_approval: true
+input:
+  execution_id: opaque-runtime-generated-id
+whole_run_only: true
+codex_internal_command_approval: false
+state_file_sensitive: true
+state_file_packaged: false
+approval_record_atomic: true
+execution_claim_lock: exclusive-file
+terminal_replay: forbidden

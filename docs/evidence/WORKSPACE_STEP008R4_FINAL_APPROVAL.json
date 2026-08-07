@@ -1,0 +1,59 @@
+{
+  "accepted_short_utterances": [
+    "김민수 정보",
+    "김선임 연락처",
+    "김민수 직책",
+    "과장들 목록"
+  ],
+  "ambiguous_candidates_preserved": [
+    "employee-0017",
+    "employee-0034"
+  ],
+  "expected_and_observed_tool_sequence": [
+    "resolve_organization_context",
+    "resolve_organization_context",
+    "resolve_organization_context",
+    "search_organization_context"
+  ],
+  "limitations": {
+    "production_database_executed": false,
+    "real_enterprise_organization_context_called": false
+  },
+  "product_runtime_changed_in_r4": false,
+  "promotion": "CURRENT_PROMOTED_BASELINE",
+  "runtime_step": "STEP090R1_ORGANIZATION_CONTEXT_MCP_TOOL_OUTPUT_PROTOCOL_AND_SHORT_LIST_TOOL_CHOICE_CLOSURE",
+  "runtime_version": "2.70.1",
+  "schema_version": "okcanvas-workspace-final-approval-v1",
+  "state": "WINDOWS_DETERMINISTIC_AND_LIVE_OPENAI_ACCEPTED",
+  "step": "WORKSPACE_STEP008R4_SHORT_EXPRESSION_LIVE_ACCEPTANCE_SEMANTIC_OUTPUT_AND_COMPACTED_SESSION_ASSERTION_CLOSURE",
+  "version": "0.8.4",
+  "windows_deterministic": {
+    "completed_at": "2026-08-06T04:40:28.337993Z",
+    "evidence_path": "docs/evidence/windows/WORKSPACE_STEP008R4_WINDOWS_DETERMINISTIC_ACCEPTANCE.json",
+    "evidence_sha256": "9888210cc4d3e4f317cadb7d4209c96319ddccb25f2f01c72a63f2178f9794d7",
+    "execution_platform": "windows",
+    "passed_checks": 25,
+    "started_at": "2026-08-06T04:34:08.131126Z",
+    "state": "PASSED",
+    "total_checks": 25,
+    "workspace_manifest_drift": {
+      "changed": [],
+      "missing": [],
+      "unexpected": []
+    }
+  },
+  "windows_live_openai": {
+    "actual_connector_process_executed": true,
+    "actual_node_example_process_executed": true,
+    "actual_openai_model_called": true,
+    "completed_at": "2026-08-06T04:46:22.693506Z",
+    "evidence_path": "docs/evidence/windows/WORKSPACE_STEP008R4_WINDOWS_LIVE_OPENAI_ACCEPTANCE.json",
+    "evidence_sha256": "15862fa94993b4561b777030b32329ff55e71b5fb95c65ea5c65102af87db2e9",
+    "execution_platform": "windows",
+    "model": "gpt-4.1",
+    "passed_checks": 29,
+    "started_at": "2026-08-06T04:44:41.666064Z",
+    "state": "PASSED",
+    "total_checks": 29
+  }
+}

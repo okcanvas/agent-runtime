@@ -1,0 +1,24 @@
+STEP024_STORE_REPLENISHMENT_REVIEW_AGENT_VERTICAL_SLICE
+Baseline version: 2.4.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING
+
+Implemented:
+- business-specific StoreReplenishmentReviewResult contract;
+- equation, total, status, uniqueness, and ordering validation;
+- immutable store-replenishment-review-agent definition;
+- case001 shortage input/expected pack;
+- deterministic recorded-Run evaluation case;
+- governed protected-payload submission acceptance;
+- optional installed-SDK live acceptance launcher.
+
+Observed deterministic acceptance:
+- 18/18 checks PASS;
+- reorder quantities 12, 7, 0 and total 19;
+- no Tool or MCP Event;
+- Artifact verified;
+- recorded-Run Evaluation PASSED;
+- protected Payload deleted after success;
+- Acceptance cleanup COMPLETED;
+- reference trees unchanged.
+
+Final regression baseline: 309 tests passed.

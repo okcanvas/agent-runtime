@@ -1,0 +1,200 @@
+{
+  "$defs": {
+    "AssistantActionSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "capability_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Capability Id",
+          "type": "string"
+        },
+        "side_effect": {
+          "$ref": "#/$defs/AssistantSideEffect"
+        },
+        "summary": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "capability_id",
+        "summary",
+        "side_effect"
+      ],
+      "title": "AssistantActionSummary",
+      "type": "object"
+    },
+    "AssistantCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "reference": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference"
+        },
+        "source_type": {
+          "enum": [
+            "USER_INPUT",
+            "SESSION",
+            "ATTACHMENT",
+            "PROJECT_SNAPSHOT",
+            "WEB",
+            "ORGANIZATION_KNOWLEDGE",
+            "ENTERPRISE_SYSTEM"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_type",
+        "label"
+      ],
+      "title": "AssistantCitation",
+      "type": "object"
+    },
+    "AssistantRequestClass": {
+      "enum": [
+        "ANSWER",
+        "WRITE_CONTENT",
+        "ANALYZE_ATTACHMENT",
+        "CODE_ASSIST",
+        "SEARCH_WEB",
+        "SEARCH_KNOWLEDGE",
+        "READ_SYSTEM",
+        "DRAFT_ACTION",
+        "WRITE_ACTION",
+        "AUTOMATE",
+        "CLARIFY",
+        "REFUSE"
+      ],
+      "title": "AssistantRequestClass",
+      "type": "string"
+    },
+    "AssistantResultStatus": {
+      "enum": [
+        "ANSWERED",
+        "ACTION_PROPOSED",
+        "NEEDS_CAPABILITY",
+        "NEEDS_CLARIFICATION",
+        "REFUSED"
+      ],
+      "title": "AssistantResultStatus",
+      "type": "string"
+    },
+    "AssistantSideEffect": {
+      "enum": [
+        "NONE",
+        "READ",
+        "DRAFT",
+        "WRITE_REVERSIBLE",
+        "WRITE_IRREVERSIBLE",
+        "AUTOMATION_DEFINITION"
+      ],
+      "title": "AssistantSideEffect",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "answer": {
+      "maxLength": 8000,
+      "minLength": 1,
+      "title": "Answer",
+      "type": "string"
+    },
+    "citations": {
+      "items": {
+        "$ref": "#/$defs/AssistantCitation"
+      },
+      "maxItems": 30,
+      "title": "Citations",
+      "type": "array"
+    },
+    "completed_actions": {
+      "items": {
+        "$ref": "#/$defs/AssistantActionSummary"
+      },
+      "maxItems": 20,
+      "title": "Completed Actions",
+      "type": "array"
+    },
+    "follow_up_state": {
+      "anyOf": [
+        {
+          "maxLength": 1000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Follow Up State"
+    },
+    "pending_approvals": {
+      "items": {
+        "$ref": "#/$defs/AssistantActionSummary"
+      },
+      "maxItems": 20,
+      "title": "Pending Approvals",
+      "type": "array"
+    },
+    "proposed_actions": {
+      "items": {
+        "$ref": "#/$defs/AssistantActionSummary"
+      },
+      "maxItems": 20,
+      "title": "Proposed Actions",
+      "type": "array"
+    },
+    "request_class": {
+      "$ref": "#/$defs/AssistantRequestClass"
+    },
+    "schema_version": {
+      "const": "okcanvas-organization-assistant-result-v1",
+      "default": "okcanvas-organization-assistant-result-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "side_effect": {
+      "$ref": "#/$defs/AssistantSideEffect"
+    },
+    "status": {
+      "$ref": "#/$defs/AssistantResultStatus"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "answer",
+    "request_class",
+    "side_effect"
+  ],
+  "title": "OrganizationAssistantResult",
+  "type": "object"
+}

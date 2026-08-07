@@ -1,0 +1,94 @@
+{
+  "$defs": {
+    "CodexFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "severity": {
+          "$ref": "#/$defs/CodexFindingSeverity"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "detail": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Detail",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "severity",
+        "title",
+        "detail"
+      ],
+      "title": "CodexFinding",
+      "type": "object"
+    },
+    "CodexFindingSeverity": {
+      "enum": [
+        "INFO",
+        "WARNING",
+        "ERROR"
+      ],
+      "title": "CodexFindingSeverity",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "summary": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "inspected_files": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Inspected Files",
+      "type": "array"
+    },
+    "commands_observed": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Commands Observed",
+      "type": "array"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/CodexFinding"
+      },
+      "maxItems": 100,
+      "title": "Findings",
+      "type": "array"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "CodexReadOnlyResult",
+  "type": "object"
+}

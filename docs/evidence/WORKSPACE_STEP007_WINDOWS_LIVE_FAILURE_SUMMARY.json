@@ -1,0 +1,43 @@
+{
+  "execution_platform": "windows",
+  "failed_checks": [
+    "both_runtime_runs_succeeded",
+    "child_mcp_called_once_each_turn",
+    "cli_completed_two_prompts",
+    "employee_entity_citation_persisted",
+    "root_agent_tool_called_once_each_turn",
+    "root_session_continuity_committed"
+  ],
+  "model": "gpt-4.1",
+  "passed_checks": 18,
+  "proven_root_cause": {
+    "category": "MCP_RESULT_LIMIT_EXCEEDED",
+    "cause": "Resolve returned every ranked candidate with full records and relations instead of only top-score detailed candidates.",
+    "exact_employee_response_chars_before_fix": 34994,
+    "runtime_max_result_chars": 32000,
+    "same_name_response_chars_before_fix": 12977,
+    "tool_name": "resolve_organization_context"
+  },
+  "raw_secret_persisted": false,
+  "schema_version": "okcanvas-agent-platform-workspace-live-failure-summary-v1",
+  "second_turn": {
+    "ambiguity_preserved": true,
+    "candidate_ids": [
+      "employee-0017",
+      "employee-0034"
+    ],
+    "state": "SUCCEEDED"
+  },
+  "state": "FAILED",
+  "step": "WORKSPACE_STEP007_RUNTIME_ORGANIZATION_CONTEXT_SESSION_DELEGATION_AND_LIVE_OPENAI_E2E_READINESS",
+  "successful_boundaries": [
+    "actual_openai_model",
+    "runtime",
+    "organization_context_connector",
+    "node_example",
+    "delegated_identity",
+    "authorization_redaction"
+  ],
+  "total_checks": 24,
+  "version": "0.7.0"
+}

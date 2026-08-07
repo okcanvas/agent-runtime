@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "authorization_value_not_captured": true,
+    "delegated_identity_forwarded": true,
+    "example_groupware_api_reached": true,
+    "fault_mapped_by_real_connector": true,
+    "real_connector_mcp_call_passed": true,
+    "request_id_forwarded": true,
+    "result_normalized": true
+  },
+  "connector_step": "CONNECTOR_STEP001R1_ASYNC_TEST_RUNNER_DEPENDENCY_CLOSURE",
+  "example_step": "EXAMPLE_STEP001_GROUPWARE_API_FAKE_TEMPLATE",
+  "passed_checks": 7,
+  "schema_version": "okcanvas-groupware-connector-example-integration-v1",
+  "state": "PASSED",
+  "total_checks": 7
+}

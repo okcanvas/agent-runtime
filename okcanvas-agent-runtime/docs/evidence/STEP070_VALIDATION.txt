@@ -1,0 +1,58 @@
+STEP070_PRODUCT_OWNED_SKILL_PACKAGE_FOUNDATION_V1
+Version: 2.50.0
+Validation state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+Constitutional baseline
+- STEP069 Windows live evidence is preserved byte-for-byte.
+- OKCanvas Agent Runtime remains a multi-user server.
+- The current TUI, /runner, /console and clients/okcanvas-agent-cli remain development/acceptance harnesses.
+- Future agent-cli, agent-web and agent-desktop consume only service APIs, persisted SSE and verified Artifacts.
+
+Product Skill V1
+- Skill ID: document-review-v1
+- Skill version: 1.0.0
+- Package mode: server-installed immutable instructions and static UTF-8 resources
+- Package SHA-256: 60fbfca861141837d4486499687fde4257b83bcb68362b6b0a0b6f40b8df07b5
+- Manifest SHA-256: 26dc1c5f675161ab50311a025ed359c5532dec27af61ad459042f894dc2a1ea1
+- Instructions SHA-256: 69d57297de7e8950b11b82ff5f79d8338db6f66cb297192c8e5ce47d911f0062
+- Review checklist SHA-256: ce6d6f0eab5721363bd4974467530fa51cc96d7a41876939f26279239ddd9edc
+- Evidence rules SHA-256: 4ddda1026e98d4f2d83e403f6477573476c9f6d6bb271920fafcebab2a0a2f06
+- Skill Runtime SHA-256: c6d3fd17b4be4064343d0fe928e6b3e6c06332811afe8bead12936d4bef716d8
+- Bound Agent: skill-document-review-agent
+- Required Tool/MCP/Hosted Tool capabilities: none
+- Workspace access: none
+- User uploads, executable code, Shell, dynamic dependency installation and client-side execution: disabled
+
+Deterministic validation
+- STEP070 acceptance: 30/30 PASS
+- Focused STEP070 tests: 12/12 PASS
+- Historical service/attachment/catalog tests inside acceptance: 36/36 PASS
+- Full Python regression split: 165 + 128 + 196 + 110 + 132 = 731/731 PASS
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0 PASS
+- External network calls: 0
+- Model calls: 0
+
+Packaging notes
+- Historical STEP069_ACCEPTANCE.json was restored from the Windows-live predecessor before packaging.
+- Cleanup targets only cache/runtime-state names; Product attachment and Skill source/spec directories are retained.
+- Candidate and final ZIP extraction validation will be appended after completion.
+
+Candidate ZIP independent extraction validation
+- Candidate SHA-256: 03661817bdc881f77b3fd4c9f744e22197dfcc016660bb47f017624175e7b5bb
+- Canonical ZIP root: 1
+- ZIP entries: 2,941
+- Forbidden files: 0
+- STEP070 acceptance: 30/30 PASS
+- Focused STEP070 tests: 12/12 PASS
+- Historical service/attachment/catalog tests: 36/36 PASS
+- Full Python regression split: 165 + 128 + 196 + 110 + 132 = 731/731 PASS
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0 PASS

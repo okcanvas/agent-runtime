@@ -1,0 +1,35 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP039",
+  "status": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-30T07:14:54.488345Z",
+  "source": "user-reported sh_run_step039_acceptance output",
+  "state": "PASSED",
+  "checks_total": 20,
+  "checks_passed": 20,
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 1
+  },
+  "native_stream": {
+    "event_count": 6,
+    "event_types": [
+      "sdk.stream.started",
+      "agent.updated",
+      "model.text.delta",
+      "run.item",
+      "model.text.delta",
+      "sdk.stream.completed"
+    ],
+    "assembled_text": "Native stream",
+    "durability": "ephemeral"
+  },
+  "persisted_event_count": 10,
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "submissions": 1,
+    "artifacts": 1
+  },
+  "cleanup_state": "COMPLETED"
+}

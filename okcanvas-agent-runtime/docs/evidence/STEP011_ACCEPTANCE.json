@@ -1,0 +1,39 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T034151820513Z-099a74cc",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T03:41:52.067216Z",
+    "created_at": "2026-07-29T03:41:51.820794Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP011"
+  },
+  "agent_definition_count": 2,
+  "checks": {
+    "agent_definition_detail": true,
+    "agent_definitions_listed": true,
+    "comparison_created": true,
+    "evaluation_case_detail": true,
+    "evaluation_cases_listed": true,
+    "evaluation_database_unchanged": true,
+    "evaluation_detail": true,
+    "evaluation_history_paginated": true,
+    "instructions_not_exposed": true,
+    "missing_evaluation_canonical": true,
+    "references_unchanged": true,
+    "sensitive_output_not_exposed": true,
+    "unauthorized_rejected": true
+  },
+  "completed_at": "2026-07-29T03:41:52.066279Z",
+  "evaluation_case_count": 1,
+  "evaluation_history_total": 2,
+  "schema_version": "okcanvas-step011-acceptance-v1",
+  "started_at": "2026-07-29T03:41:51.820475Z",
+  "state": "PASSED"
+}

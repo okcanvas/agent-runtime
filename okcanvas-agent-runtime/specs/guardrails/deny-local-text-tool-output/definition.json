@@ -1,0 +1,11 @@
+{
+  "schema_version": "okcanvas-guardrail-definition-v1",
+  "guardrail_id": "deny-local-text-tool-output",
+  "version": "1.0.0",
+  "kind": "TOOL_OUTPUT",
+  "implementation_id": "tool_output_deny_v1",
+  "marker": null,
+  "tool_id": "local_text_fingerprint",
+  "run_in_parallel": false,
+  "behavior": "RAISE_EXCEPTION"
+}

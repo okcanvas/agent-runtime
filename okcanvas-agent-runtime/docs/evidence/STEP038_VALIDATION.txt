@@ -1,0 +1,48 @@
+STEP038_GENERIC_FUNCTION_TOOL_RUNTIME_V1
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Version: 2.18.0
+
+Source-tree validation:
+- compileall: PASS
+- full pytest: 421 passed
+- STEP038: 24/24 PASS, cleanup COMPLETED
+- STEP037: 24/24 PASS; Windows live 24/24 PASS, cleanup COMPLETED
+- STEP036: 18/18 PASS
+- STEP020 approve/reject process-restart acceptance: PASS
+- STEP023 Operator CLI acceptance: PASS
+- STEP030A Windows launcher contract: 8/8 PASS, 43 runtime launchers, zero violations
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: zero
+
+STEP038 exact deterministic state:
+- Registry count: 2
+- local_text_fingerprint approval mode: NEVER
+- local_text_metrics approval mode: ALWAYS
+- generic gateway/tool calls: 1/1
+- approval prepare/resume calls: 2/2
+- approve Tool execution: 1; replay no duplicate
+- reject Tool execution: 0; replay no duplicate
+- final submissions/tasks/runs: 3/3/3
+- Artifacts/Evaluations/Approvals: 2/2/2
+- protected payload files: 1 rejected-branch retention
+- raw requests and Tool results absent from Product/Evaluation DB and Tool Events
+
+Canonical ZIP separate-extraction validation:
+- canonical root: 1
+- ZIP entries: 2,271
+- forbidden environment/venv/cache/local-state/SQLite/payload files: 0
+- compileall: PASS
+- full pytest: 421 passed
+- STEP038: 24/24 PASS, cleanup COMPLETED
+- STEP037: 24/24 PASS, cleanup COMPLETED
+- STEP030A: 8/8 PASS, 43 runtime launchers, zero violations
+- Reference integrity: 4/4 PASS
+- direct executable /reference imports: zero
+
+The sibling .sha256 file is the authoritative package digest.
+
+Windows gate:
+1. sh_setup.cmd
+2. sh_run_step038_acceptance.cmd
+
+Do not begin STEP039 executable work before the Windows result reports all 24 checks true and cleanup COMPLETED.

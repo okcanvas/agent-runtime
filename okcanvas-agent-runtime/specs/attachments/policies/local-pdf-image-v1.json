@@ -1,0 +1,22 @@
+{
+  "schema_version": "okcanvas-local-attachment-policy-v1",
+  "policy_id": "bounded-local-pdf-image-input-v1",
+  "version": "1.0.0",
+  "max_attachments": 1,
+  "max_bytes": 8388608,
+  "allowed_media_types": [
+    "application/pdf",
+    "image/png",
+    "image/jpeg"
+  ],
+  "max_pdf_pages": 50,
+  "max_image_width": 10000,
+  "max_image_height": 10000,
+  "max_image_pixels": 20000000,
+  "image_detail": "auto",
+  "slot_ttl_seconds": 900,
+  "remote_urls_allowed": false,
+  "provider_file_ids_allowed": false,
+  "raw_bytes_in_product_events": false,
+  "raw_bytes_in_artifacts": false
+}

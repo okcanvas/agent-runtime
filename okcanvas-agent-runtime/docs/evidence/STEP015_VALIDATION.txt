@@ -1,0 +1,33 @@
+STEP015_LOCAL_OPERATIONS_CONSOLE_FOUNDATION
+Version: 1.5.0
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING
+
+Implemented:
+- server-owned /console shell and local static assets
+- authenticated read-only operations summary
+- paged/filterable Task and Run list APIs
+- Run canonical Event drill-down
+- Agent, MCP, Evaluation and Reference views
+- per-tab sessionStorage administrator key
+- Content-Security-Policy and no external assets
+- GET-only console product API access
+
+Deterministic validation:
+- STEP015 acceptance: PASS, 18/18 checks
+- Product DB unchanged by console GET requests
+- Evaluation DB unchanged by console GET requests
+- Reference integrity 4/4 and trees unchanged
+- no admin/API key embedded
+- no direct /reference import
+
+Windows live acceptance:
+- pending
+
+Final source verification:
+- compileall: PASS
+- pytest: 224 passed
+- STEP005-STEP014 acceptance regression: PASS before final STEP015 packaging
+- STEP015 acceptance: 18/18 PASS
+- direct reference import verification: PASS
+- immutable reference verification: 4/4 PASS
+- ruff: unavailable in the validation environment; no success claimed

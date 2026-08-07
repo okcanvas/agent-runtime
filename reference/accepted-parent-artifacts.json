@@ -1,0 +1,23 @@
+{
+  "artifacts": [
+    {
+      "filename": "okcanvas-agent-runtime-step086r2-delegated-role-header-and-external-connector-contract-closure.zip",
+      "project": "okcanvas-agent-runtime",
+      "sha256": "148cdd83189a30dc611d14d78ab3c06776e0f5962d072028ff97789c5f26a8c0",
+      "windows_state": "ACCEPTED"
+    },
+    {
+      "filename": "okcanvas-connectors-groupware-mcp-server-step001r1.zip",
+      "project": "okcanvas-connectors/groupware-mcp-server",
+      "sha256": "4d56842f27b5ab61f80f3a670e5f9e68bd188be04f04f422d7d4a0ef09b20ece",
+      "windows_state": "ACCEPTED"
+    },
+    {
+      "filename": "okcanvas-connector-examples-groupware-api-fake-step001r1.zip",
+      "project": "okcanvas-connector-examples/groupware/groupware-api-fake",
+      "sha256": "48b669430153475b89f49be4675bb169af2b0c564a7a12b5cb6f353dfde66e2c",
+      "windows_state": "ACCEPTED"
+    }
+  ],
+  "schema_version": "okcanvas-agent-platform-parent-artifacts-v1"
+}

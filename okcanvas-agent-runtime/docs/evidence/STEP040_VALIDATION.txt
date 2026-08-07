@@ -1,0 +1,42 @@
+STEP040_SUB_AGENT_INVOCATION_SCOPE_FOUNDATION VALIDATION
+
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Executable baseline: okcanvas-agent-runtime 2.20.0
+
+SOURCE TREE VALIDATION
+- compileall: PASS
+- full pytest: 432 passed
+- STEP040 deterministic acceptance: 23/23 PASS, cleanup COMPLETED
+- STEP039 acceptance: 20/20 PASS, cleanup COMPLETED
+- STEP038 acceptance: 24/24 PASS, cleanup COMPLETED
+- STEP037 acceptance: 24/24 PASS, cleanup COMPLETED
+- STEP036 acceptance: 18/18 PASS, cleanup COMPLETED
+- STEP020 governed approval approve/reject: PASS
+- STEP023 local operator CLI: 15/15 PASS, cleanup COMPLETED
+- STEP030A Windows launcher contract: 8/8 PASS
+- Runtime Windows launchers: 45
+- Launcher violations: 0
+- Reference integrity: 4/4 PASS
+- Direct executable /reference imports: 0
+
+STEP040 ACCEPTANCE EXACT
+- policy limits depth/handoffs/agent-tools: 4/4/8
+- graph: one HANDOFF edge and one AGENT_AS_TOOL edge
+- Product counts tasks/runs/invocations/events/artifacts: 1/1/3/3/0
+- external/model/Tool/MCP/SDK Runner calls: 0
+- invocation terminal states in no-execution fixture: CANCELLED/CANCELLED/CANCELLED
+- language-only physical workspaces materialized: 0
+
+FINAL CANONICAL ZIP VALIDATION
+- canonical root count: 1
+- ZIP entries: 2,302
+- forbidden environment/venv/cache/local-state/database files: 0
+- separately extracted full pytest: 432 passed
+- separately extracted STEP040: 23/23 PASS, cleanup COMPLETED
+- separately extracted STEP039: 20/20 PASS, cleanup COMPLETED
+- separately extracted STEP030A: 8/8 PASS
+- separately extracted Runtime Windows launchers: 45
+- separately extracted launcher violations: 0
+- separately extracted Reference integrity: 4/4 PASS
+- separately extracted direct executable /reference imports: 0
+- canonical SHA-256 is provided by the adjacent `.zip.sha256` handoff file.

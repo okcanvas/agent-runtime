@@ -1,0 +1,57 @@
+STEP075_PRODUCT_OWNED_READ_ONLY_SANDBOX_WORKSPACE_AGENT_V1
+version: 2.55.0
+state: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+SOURCE VALIDATION
+=================
+STEP075 deterministic acceptance: 28/28 PASS
+Focused STEP075 / Sandbox / retained provider tests: 89/89 PASS
+Historical Skill / trace / service tests: 47/47 PASS
+Full Python regression: 799/799 PASS across 206 test files
+Python compileall: PASS
+Committed TypeScript release integrity: PASS
+Node tests: 14/14 PASS
+npm pack dry-run: 23 files PASS
+Reference integrity: 4/4 PASS
+Direct /reference imports: 0
+Deterministic Docker calls: 0
+External network calls: 0
+Model calls: 0
+
+CURRENT PRODUCT INVENTORY
+=========================
+Agent definitions: 27
+Read-only Sandbox Agent: 1
+Agents retaining workspace_access=none: 26
+Function Tool runtime registry: 4
+
+IDENTITIES
+==========
+Sandbox policy SHA-256: eca4831968a99223a357edb2da27ee277f120e204e633eeaebf37d8a1651720a
+Sandbox provider contract SHA-256: 983bc13da334f97d1d2090a7475f9b67780eb2e81a81683db7f4e58a4fca88a5
+Sandbox foundation SHA-256: c3a2b252a9f8c6cadb27528b42753d9ce9344b71a470800be93f8c8d33d84c94
+Product Sandbox Runtime SHA-256: b66f8832fc48c2ab0b7e51b06a09732a9b3be05184aedc5c1037cedbd8d8d0c4
+Sample Runtime binding SHA-256: d4d6a0a1b8d4554c66ef8c8d75027cceb630b47c24780ca4e88c049fee7f376a
+
+LIVE BOUNDARY
+=============
+Windows live acceptance is not executed in this build environment.
+Required model: gpt-4.1
+Default already-local image: busybox:1.36
+Expected live path: governed preflight/confirmation -> 2 model calls -> 1 exact Sandbox Function Tool call -> CodingAgentResult Artifact.
+Runtime image pull remains forbidden.
+
+FRESH ZIP VALIDATION
+====================
+Candidate ZIP SHA-256: 2ac44a0b265762e7849762845a5882a8fd8e65102dc91e4b893ca31d0d806c13
+Canonical ZIP root: 1
+ZIP entries: 3035
+Forbidden files: 0
+Fresh extraction STEP075 acceptance: 28/28 PASS
+Fresh extraction full Python regression: 799/799 PASS across 206 test files
+Fresh extraction Python compileall: PASS
+Fresh extraction committed TypeScript release integrity: PASS
+Fresh extraction Node tests: 14/14 PASS
+Fresh extraction Reference integrity: 4/4 PASS
+Fresh extraction direct /reference imports: 0
+Fresh extraction npm pack dry-run: 23 files PASS

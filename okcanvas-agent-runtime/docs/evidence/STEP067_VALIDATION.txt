@@ -1,0 +1,74 @@
+STEP067_HOSTED_WEB_SEARCH_SOURCE_POLICY_AND_EVIDENCE_FOUNDATION
+Version: 2.47.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+SOURCE VALIDATION
+- STEP067 acceptance: 26/26 PASS
+- Focused STEP067 tests: 16/16 PASS
+- Historical Remote MCP and generic execution tests: 38/38 PASS
+- Full Python regression: 694/694 PASS
+  - group 1: 160
+  - group 2: 146
+  - group 3: 161
+  - group 4: 103
+  - group 5: 124
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference executable imports: 0
+- External network calls: 0
+- Model calls: 0
+- File Search implementation: false
+
+HOSTED WEB SEARCH CONTRACT
+- Agent: hosted-web-search-agent
+- Tool: web-search-v1 / installed SDK WebSearchTool
+- Policy: official-openai-docs-web-search-v1
+- Canonical policy SHA-256: 0d6badcb01779ec33e937509334e88bc794d606f05e878433e60ec8a41261e82
+- Allowed domains: developers.openai.com
+- Search calls: exactly 1 completed
+- Retrieved sources: 1..8
+- Inline citations: 1..8
+- user_location: disabled
+- response_include: web_search_call.action.sources
+- tool_choice: required
+- parallel_tool_calls: false
+- store: false
+- max_turns: 2
+- Artifacts: agent.final-output + agent.hosted-search-evidence
+- Raw query/content/provider call ID persisted: false/false/false
+
+PINNED SDK SOURCE SHA-256
+- agents/tool.py: 1ba4d71d2e6b59638ce2bfee53529b36373ba6e8dadd1fdf68c6fea040bf6a3e
+- agents/models/openai_responses.py: 37817cc1ba836f5cdfc59d4ab519f19f29432b0fb60d7c713cc5fba7a682a252
+- agents/run_internal/turn_resolution.py: 3bf639e8730785a591a0c70210f80cc1022be43b59b297df7c64a40387df36ae
+
+PRODUCT SOURCE SHA-256
+- hosted_search/__init__.py: 98c0f83f973a5496a194087eabb6b42da3bcfc63590c754424296398dd10d9b7
+- hosted_search/catalog.py: 9757d63f4c686998213f113f58dca70330c65b52a2597ee44a17324159d44991
+- hosted_search/errors.py: 46f1957b9fd6c7d067e0fb196a65520728090432a109fedf5ab93c6c56f70e44
+- hosted_search/models.py: 4cbab652d6088eefd130c4f63a91205bef84a37eeccee1429b17b33bd47c6e13
+- hosted_search/runtime.py: cfa6ffa941fe7173970a07d2af684e3ff618f5be7225f0abbbaf6ce170107521
+- execution/openai_gateway.py: 47e9df1e17be625a38a6c855a772b6f3bdd054a1258957520e222725920b24ed
+- execution/service.py: 5605881ed78ec49f888fc095b226bd8e3ca10de0082f8a18d658f5a6624744ae
+- execution/runtime_binding.py: 7ae37dc4a8b5c900cbb60f95be0b874209d5bee90692f03bc247cbebe60dfbb7
+- hosted-web-search-policy.json file SHA-256: 388a0556c474df1fa87aac0ecc14b21ed2e0547fcf17036b2e1185a70426d130
+- hosted-web-search-agent definition.json: e821964766b411e6f71d410cc2d7fa264fb8afde8d6cb203a7eca3bdbff47d45
+
+ZIP RE-EXTRACTION VALIDATION
+- Candidate ZIP SHA-256: ad749d74557b7c471b0c0da267a091e0727f241b6fdd80da61a7c8b04a3509fb
+- Canonical ZIP root: 1
+- ZIP entries: 2,872
+- Forbidden files: 0
+- Extracted STEP067 acceptance: 26/26 PASS
+- Extracted full Python regression: 694/694 PASS
+  - group 1: 160
+  - group 2: 146
+  - group 3: 161
+  - group 4: 103
+  - group 5: 124
+- Extracted Node tests: 14/14 PASS (inside acceptance)
+- Extracted Reference integrity: 4/4 PASS (inside acceptance)
+- Candidate and final package are expected to differ only in this completed validation record.

@@ -1,0 +1,302 @@
+[
+  {
+    "capability_id": "employee.directory.read",
+    "name": "사원 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "identity",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "department.directory.read",
+    "name": "부서 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "identity",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "position.directory.read",
+    "name": "직책 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "identity",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "employee.leave.balance.read",
+    "name": "연차 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "ess",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "employee.performance.read",
+    "name": "성과 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "ess",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "employee.attendance.read",
+    "name": "근태 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "ess",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "notice.read",
+    "name": "공지 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "groupware",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "approval.read",
+    "name": "결재 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "groupware",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "approval.submit",
+    "name": "결재 상신",
+    "operation": "WRITE",
+    "risk_level": "MEDIUM",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "groupware",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "client.read",
+    "name": "거래처 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "crm",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "client.account-manager.read",
+    "name": "담당자 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "crm",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "sales.pipeline.read",
+    "name": "영업기회 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "crm",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "product.read",
+    "name": "제품 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "plm",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "product.lifecycle.read",
+    "name": "제품 상태 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "plm",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "product.owner.read",
+    "name": "제품 담당자 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "plm",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "invoice.read",
+    "name": "세금계산서 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "erp",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "purchase.read",
+    "name": "구매 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "erp",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "budget.read",
+    "name": "예산 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "erp",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "project.read",
+    "name": "프로젝트 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "project-management",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "planning.increment.read",
+    "name": "PI 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "project-management",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "project.member.read",
+    "name": "프로젝트 참여자 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "project-management",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "ticket.read",
+    "name": "지원 티켓 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "support",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "client.product.read",
+    "name": "고객 사용제품 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "support",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "sla.read",
+    "name": "SLA 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "support",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "quality.issue.read",
+    "name": "품질 이슈 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "quality",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "test.report.read",
+    "name": "테스트 보고서 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "quality",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "release.read",
+    "name": "릴리스 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "quality",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "objectives.read",
+    "name": "목표 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "strategy",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "organization.term.read",
+    "name": "조직용어 조회",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "identity",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "capability_id": "organization.context.resolve",
+    "name": "조직문맥 해석",
+    "operation": "READ",
+    "risk_level": "LOW",
+    "row_version": 1,
+    "status": "ACTIVE",
+    "system_id": "identity",
+    "tenant_id": "tenant-a"
+  }
+]

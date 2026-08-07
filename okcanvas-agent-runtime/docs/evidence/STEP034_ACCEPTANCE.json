@@ -1,0 +1,98 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021114908202Z-563ab465",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:11:15.189480Z",
+    "created_at": "2026-07-30T02:11:14.908485Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP034"
+  },
+  "checks": {
+    "different_owner_started_run_detected": true,
+    "failed_payload_retained_for_investigation": true,
+    "late_artifact_registration_blocked": true,
+    "late_execution_metadata_blocked": true,
+    "late_lifecycle_event_blocked": true,
+    "no_artifact_or_evaluation_created": true,
+    "one_orphan_scanned_and_reconciled": true,
+    "orphan_event_sequence_exact": true,
+    "previous_generation_fence_active_before_reconcile": true,
+    "previous_generation_fenced_after_reconcile": true,
+    "previous_process_execution_started": true,
+    "process_loss_failure_contract_exact": true,
+    "reconciliation_replay_is_noop": true,
+    "reconciliation_returned_200": true,
+    "reexecution_never_attempted": true,
+    "references_unchanged": true,
+    "run_failed_exactly": true,
+    "same_task_and_run_terminalized": true,
+    "submission_failed_and_claim_cleared": true,
+    "task_failed_exactly": true
+  },
+  "failure": {
+    "code": "PROCESS_LOSS_RECONCILED",
+    "event_types": [
+      "run.created",
+      "run.started",
+      "run.execution.orphaned",
+      "run.failed",
+      "payload.retention.applied"
+    ],
+    "retryable": false
+  },
+  "fence": {
+    "active_after": false,
+    "active_before": true,
+    "late_artifact_blocked": true,
+    "late_event_blocked": true,
+    "late_metadata_blocked": true
+  },
+  "final_counts": {
+    "artifacts": 0,
+    "evaluations": 0,
+    "events": 5,
+    "runs": 1,
+    "submissions": 1,
+    "tasks": 1
+  },
+  "gateway_call_count": 0,
+  "protected_payload_file_count": 1,
+  "reconciliation": {
+    "failed": 0,
+    "reconciled": 1,
+    "run_ids": [
+      "run_3fce99829c844cb3abd8d8ba21c3f6e5"
+    ],
+    "scanned": 1,
+    "schema_version": "okcanvas-orphaned-running-reconciliation-v1",
+    "skipped": 0,
+    "submission_ids": [
+      "submission_725b94f5a88d4c21ae9147bf3ffcbe8d"
+    ]
+  },
+  "replay": {
+    "failed": 0,
+    "reconciled": 0,
+    "run_ids": [],
+    "scanned": 0,
+    "schema_version": "okcanvas-orphaned-running-reconciliation-v1",
+    "skipped": 0,
+    "submission_ids": []
+  },
+  "schema_version": "okcanvas-step034-acceptance-v1",
+  "state": "PASSED",
+  "submission": {
+    "payload_retention_state": "RETAINED",
+    "run_id": "run_3fce99829c844cb3abd8d8ba21c3f6e5",
+    "state": "EXECUTION_FAILED",
+    "submission_id": "submission_725b94f5a88d4c21ae9147bf3ffcbe8d",
+    "task_id": "task_32832939325a4efe87f2f64d211535c8"
+  }
+}

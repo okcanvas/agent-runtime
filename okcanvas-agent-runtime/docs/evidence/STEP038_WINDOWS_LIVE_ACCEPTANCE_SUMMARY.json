@@ -1,0 +1,30 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP038",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-30T06:14:22.201990Z",
+  "checks_passed": 24,
+  "checks_total": 24,
+  "registry_count": 2,
+  "gateway_counts": {
+    "generic": 1,
+    "approval_prepare": 2,
+    "approval_resume": 2
+  },
+  "tool_execution_counts": {
+    "read_only": 1,
+    "approve": 1,
+    "reject": 0
+  },
+  "final_counts": {
+    "submissions": 3,
+    "tasks": 3,
+    "runs": 3,
+    "artifacts": 2,
+    "evaluations": 2,
+    "approvals": 2
+  },
+  "protected_payload_file_count": 1,
+  "cleanup_state": "COMPLETED",
+  "note": "Starlette/TestClient deprecation warning did not affect Product acceptance. sdk_factory_probe installed_sdk_available=false was a non-product optional probe; all binding and Product checks passed."
+}

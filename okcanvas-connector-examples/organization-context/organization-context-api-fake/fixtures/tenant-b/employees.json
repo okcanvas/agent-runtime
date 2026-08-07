@@ -1,0 +1,22 @@
+[
+  {
+    "aliases": [
+      "B관리자"
+    ],
+    "department_id": "department.operations",
+    "email": "admin@tenant-b.example",
+    "employee_id": "employee-b001",
+    "employee_number": "B-001",
+    "manager_employee_id": null,
+    "name": "테넌트비 관리자",
+    "position_ids": [
+      "position.manager"
+    ],
+    "roles": [
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-b"
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "agent": {
+    "agent_id": "groupware-read-agent",
+    "definition_sha256": "8b3841a93d625c4f1e41b9e72b0ee48827c62678a9ceac39579aa2782399b38a",
+    "mcp_servers": [
+      "groupware-read"
+    ],
+    "output_contract": "GroupwareReadResult",
+    "version": "1.1.0"
+  },
+  "checks": {
+    "actual_mcp_provider_external": true,
+    "actual_mcp_provider_not_in_runtime": true,
+    "dedicated_output_contract_bound": true,
+    "default_pack_still_fail_closed": true,
+    "fixture_internal_but_nonproduction": true,
+    "future_write_is_separate": true,
+    "identity_exact": true,
+    "mcp_client_declaration_internal": true,
+    "next_step_unselected": true,
+    "nonempty_result_requires_citation": true,
+    "organization_adapter_not_in_runtime": true,
+    "output_has_no_action_fields": true,
+    "output_request_and_side_effect_literal": true,
+    "overclaim_corrected": true,
+    "policy_client_provider_tools_aligned": true,
+    "provider_contract_external_and_unimplemented": true,
+    "provider_identity_contract_exact": true,
+    "provider_tool_contract_exact": true,
+    "read_agent_permanent": true,
+    "runtime_provider_status_exact": true,
+    "step086_windows_parent_accepted": true,
+    "subagent_definition_internal": true,
+    "subagent_runtime_bound": true,
+    "write_shaped_output_rejected": true,
+    "writes_and_automation_disabled": true
+  },
+  "deployment": {
+    "actual_external_provider_implemented": false,
+    "actual_external_provider_live_verified": false,
+    "boundary": {
+      "boundary_sha256": "b488eb6ba1a79eca0c77d46e9923d03961b429605db351271d7f0eca76992b47",
+      "future_write_agent_id": "groupware-action-agent",
+      "future_write_mcp_server_id": "groupware-action",
+      "mcp_client_declaration_location": "runtime-internal",
+      "mcp_provider_deployment": "external-connector-service",
+      "mcp_provider_implementation_in_runtime": false,
+      "organization_specific_adapter_in_runtime": false,
+      "read_agent_definition_location": "runtime-internal",
+      "read_agent_permanently_read_only": true,
+      "schema_version": "okcanvas-groupware-deployment-boundary-v1",
+      "test_fixture_location": "runtime-internal",
+      "write_extension_strategy": "separate-agent-separate-mcp-separate-credential"
+    },
+    "fixture_contract_expected_count": 3,
+    "provider_contract": {
+      "contract_sha256": "02246973fc18b5d57d08bef8a70fa055c477bb121ca7b113211e1a7f5f4d0800",
+      "provider_deployment": "external-connector-service",
+      "provider_implemented_in_runtime": false,
+      "required_identity_fields": [
+        "tenant_id",
+        "principal_id",
+        "roles",
+        "delegation_id"
+      ],
+      "schema_version": "okcanvas-groupware-read-provider-contract-v1",
+      "server_id": "groupware-read",
+      "tools": [
+        {
+          "input_schema_version": "okcanvas-groupware-search-notices-input-v1",
+          "mutates": false,
+          "output_schema_version": "okcanvas-groupware-search-notices-result-v1",
+          "tool_name": "search_notices"
+        },
+        {
+          "input_schema_version": "okcanvas-groupware-search-mail-input-v1",
+          "mutates": false,
+          "output_schema_version": "okcanvas-groupware-search-mail-result-v1",
+          "tool_name": "search_mail"
+        },
+        {
+          "input_schema_version": "okcanvas-groupware-list-calendar-events-input-v1",
+          "mutates": false,
+          "output_schema_version": "okcanvas-groupware-list-calendar-events-result-v1",
+          "tool_name": "list_calendar_events"
+        }
+      ],
+      "transport": "remote-streamable-http"
+    },
+    "schema_version": "okcanvas-groupware-deployment-foundation-v1"
+  },
+  "passed_checks": 25,
+  "runtime_status": {
+    "integration_boundary": "SUBAGENT_AND_CLIENT_BOUNDARY_ONLY",
+    "provider_implemented_in_runtime": false,
+    "provider_live_verified": false
+  },
+  "schema_version": "okcanvas-step086r1-groupware-boundary-validation-v1",
+  "state": "PASSED",
+  "step": "STEP086R1_GROUPWARE_SUBAGENT_AND_EXTERNAL_MCP_BOUNDARY_ALIGNMENT",
+  "total_checks": 25,
+  "version": "2.66.1"
+}

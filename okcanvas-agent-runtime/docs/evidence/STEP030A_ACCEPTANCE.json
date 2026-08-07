@@ -1,0 +1,19 @@
+{
+  "schema_version": "okcanvas-step030a-acceptance-v1",
+  "state": "PASSED",
+  "checks": {
+    "step030_launcher_uses_project_venv": true,
+    "step030_launcher_rejects_missing_venv": true,
+    "step030_launcher_has_no_bare_python": true,
+    "all_python_runtime_launchers_use_project_venv_and_node_cli_is_direct": true,
+    "step030_entrypoint_route_preserved": true,
+    "setup_installs_project_into_venv": true,
+    "fastapi_is_declared_project_dependency": true,
+    "step030a_baseline_exact": true
+  },
+  "launcher_count": 69,
+  "launcher_violations": [],
+  "fixed_launcher": "sh_run_step030_acceptance.cmd",
+  "windows_live_rerun_pending": false,
+  "windows_live_accepted": true
+}

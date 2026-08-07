@@ -1,0 +1,84 @@
+STEP006_READ_ONLY_REFERENCE_CATALOG_SERVICE
+Status: COMPLETE
+Version: 0.6.0
+Date: 2026-07-29
+
+Reference-grounded design evidence:
+
+- ADAPT reference/upstream/openai-agents-python-0.19.0/src/agents/sandbox/workspace_paths.py
+  one-root path normalization and escape rejection.
+- ADAPT reference/upstream/openai-agents-python-0.19.0/src/agents/sandbox/session/archive_extraction.py
+  symbolic-link and unsafe-path rejection.
+- ADAPT reference/upstream/openai-agents-python-0.19.0/src/agents/sandbox/util/token_truncation.py
+  bounded result/file/line policy.
+- REJECT for STEP006: Sandbox execution for local immutable reads.
+- DEFER: HTTP/SSE, MCP, embeddings and vector indexing.
+
+Validation completed in the packaging environment:
+
+- python -m compileall -q src scripts tests
+  PASS
+
+- pytest -q
+  PASS: 113 tests
+
+- PYTHONPATH=src python scripts/run_step006_acceptance.py
+  PASS: state=PASSED
+  checks=12/12
+  manifest references=4
+  CODE_MAP-first RunState path=src/agents/run_state.py
+  exact line read and file SHA consistent
+  traversal rejected
+  canonical reference search/read events recorded
+  raw query not persisted
+  all reference trees unchanged before/after
+
+- PYTHONPATH=src python scripts/verify_core_store.py
+  PASS: state=PASSED
+
+- PYTHONPATH=src python scripts/verify_reference.py
+  PASS: 4/4 immutable reference trees
+  symbolic-link detection enabled
+
+- PYTHONPATH=src python scripts/verify_codex_fixture.py
+  PASS: intentional quantity defect reproduced; source tree unchanged
+
+- PYTHONPATH=src python scripts/verify_codex_write_fixture.py
+  PASS: baseline failed, known minimal repair passed, original fixture unchanged
+
+Security and contract coverage:
+
+- manifest-only reference roots
+- full tree SHA, file count and byte count before serving
+- absolute, Windows-drive, backslash and traversal rejection
+- symbolic-link rejection without following the link
+- binary/non-UTF-8 and oversized content rejection
+- hard search result and exact line-range limits
+- query SHA persisted instead of raw query
+- local Reference Catalog only; no write, import, execution, model, HTTP or MCP capability
+
+Not executed and not claimed:
+
+- model or Codex call for STEP006
+- MCP server/client
+- HTTP/SSE or UI
+- embeddings, vector database or semantic retrieval
+- external project search
+- STEP004 live persisted-approval acceptance
+
+Final source-package re-extraction validation:
+
+- canonical archive root `okcanvas-agent-runtime/`
+  PASS
+- compileall from extracted ZIP
+  PASS
+- pytest from extracted ZIP
+  PASS: 113 tests
+- STEP006 acceptance from extracted ZIP
+  PASS: 12/12 checks
+- STEP005 core-store acceptance from extracted ZIP
+  PASS
+- reference integrity from extracted ZIP
+  PASS: 4/4
+- local `.env.local`, `.env.local.cmd`, and STEP002/003/004 live Evidence excluded
+  PASS

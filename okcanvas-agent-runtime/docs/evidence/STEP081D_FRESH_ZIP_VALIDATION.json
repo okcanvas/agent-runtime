@@ -1,0 +1,84 @@
+{
+  "acceptance": {
+    "architecture_process_returncode": 0,
+    "compliance_process_returncode": 0,
+    "passed_checks": 18,
+    "state": "PASSED",
+    "total_checks": 18
+  },
+  "architecture": {
+    "passed_checks": 40,
+    "state": "PASSED",
+    "total_checks": 40
+  },
+  "billing_or_api_key_required": false,
+  "candidate_zip": "okcanvas-agent-runtime-step081d-candidate2.zip",
+  "candidate_zip_sha256": "989c8b09c1821ad3a640b5cb12f9d278cce85db2e3e62678ce564147f9e5fa29",
+  "canonical_root_count": 1,
+  "canonical_roots": [
+    "okcanvas-agent-runtime"
+  ],
+  "compliance": {
+    "passed_checks": 17,
+    "state": "PASSED",
+    "total_checks": 17
+  },
+  "forbidden_entries": [],
+  "forbidden_entry_count": 0,
+  "fresh_evidence_files": [
+    "docs/evidence/STEP081D_FRESH_ACCEPTANCE.json",
+    "docs/evidence/STEP081D_FRESH_ARCHITECTURE_VALIDATION.json",
+    "docs/evidence/STEP081D_FRESH_COMPLIANCE_VALIDATION.json",
+    "docs/evidence/STEP081D_FRESH_INSTALLATION_VALIDATION.json",
+    "docs/evidence/STEP081D_FRESH_NON_PYTHON_VALIDATION.json",
+    "docs/evidence/STEP081D_FRESH_PYTHON_REGRESSION.json",
+    "docs/evidence/STEP081D_FRESH_WINDOWS_SUBPROCESS_PORTABILITY_VALIDATION.json",
+    "docs/evidence/step081d-fresh-python-regression/"
+  ],
+  "installation": {
+    "passed_checks": 16,
+    "state": "PASSED",
+    "total_checks": 16
+  },
+  "non_python": {
+    "direct_reference_import_violations": [],
+    "node_release_manifest_passed": true,
+    "node_tests_passed": true,
+    "npm_pack_dry_run_passed": true,
+    "reference_result_count": 4,
+    "state": "PASSED"
+  },
+  "python_protected_payload_identity": {
+    "extra": [],
+    "missing": [],
+    "protected_file_count": 2828,
+    "result": "EXACT_MATCH",
+    "sha_mismatches": [],
+    "source_candidate": "okcanvas-agent-runtime-step081d-candidate2.zip",
+    "source_candidate_sha256": "989c8b09c1821ad3a640b5cb12f9d278cce85db2e3e62678ce564147f9e5fa29"
+  },
+  "python_regression": {
+    "completed_chunk_count": 12,
+    "error_tests": 0,
+    "expected_chunk_count": 12,
+    "failed_tests": 0,
+    "passed_tests": 921,
+    "skipped_tests": 0,
+    "state": "PASSED",
+    "test_file_count": 230,
+    "total_tests": 921
+  },
+  "schema_version": "okcanvas-step081d-fresh-zip-validation-v1",
+  "state": "PASSED",
+  "step": "STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION",
+  "validation_phase": "FULL_FRESH_VALIDATION_COMPLETE",
+  "version": "2.61.4",
+  "windows_deterministic_state": "PENDING_REAL_WINDOWS_RERUN",
+  "windows_live_state": "BLOCKED_BY_EXTERNAL_OPENAI_BILLING_OR_API_KEY_UNAVAILABLE",
+  "windows_subprocess_portability": {
+    "passed_checks": 7,
+    "state": "PASSED",
+    "total_checks": 7
+  },
+  "zip_entry_count": 3602
+}

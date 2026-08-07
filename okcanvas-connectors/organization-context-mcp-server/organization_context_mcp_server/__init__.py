@@ -1,0 +1,3 @@
+from .baseline import CURRENT_STEP, PROJECT_VERSION
+
+__all__ = ["CURRENT_STEP", "PROJECT_VERSION"]

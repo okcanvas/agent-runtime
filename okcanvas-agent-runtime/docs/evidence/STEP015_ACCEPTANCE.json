@@ -1,0 +1,100 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T034159149970Z-25a41a4e",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T03:41:59.505655Z",
+    "created_at": "2026-07-29T03:41:59.150234Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP015"
+  },
+  "checks": {
+    "admin_key_not_embedded": true,
+    "api_auth_required": true,
+    "catalogs_loaded": true,
+    "console_assets_served": true,
+    "console_csp_enabled": true,
+    "console_get_only": true,
+    "console_shell_served": true,
+    "evaluation_db_unchanged_by_gets": true,
+    "mcp_read_only_visible": true,
+    "product_counts_correct": true,
+    "product_db_unchanged_by_gets": true,
+    "references_unchanged": true,
+    "references_verified": true,
+    "run_list_loaded": true,
+    "session_storage_only": true,
+    "summary_loaded": true,
+    "summary_read_only": true,
+    "task_list_loaded": true
+  },
+  "run_id": "run_728e16ac93ee485192a4ca1ac5bfef06",
+  "schema_version": "okcanvas-step015-acceptance-v1",
+  "state": "PASSED",
+  "summary": {
+    "catalog": {
+      "agent_definition_total": 2,
+      "evaluation_case_total": 1,
+      "evaluation_suite_total": 1,
+      "mcp_server_total": 1,
+      "mcp_servers": [
+        {
+          "allowed_tools": [
+            "search_reference",
+            "read_reference_file"
+          ],
+          "name": "OKCanvas Read-only Reference Catalog",
+          "read_only": true,
+          "server_id": "reference-catalog",
+          "version": "1.0.0"
+        }
+      ]
+    },
+    "evaluation": {
+      "baseline_total": 0,
+      "evaluation_states": {
+        "FAILED": 0,
+        "PASSED": 0
+      },
+      "evaluation_total": 0,
+      "suite_run_total": 0
+    },
+    "product": {
+      "artifact_total": 0,
+      "run_status_counts": {
+        "CANCELLED": 0,
+        "CREATED": 0,
+        "FAILED": 0,
+        "INTERRUPTED": 0,
+        "RUNNING": 0,
+        "SUCCEEDED": 1
+      },
+      "run_total": 1,
+      "task_status_counts": {
+        "CANCELLED": 0,
+        "FAILED": 0,
+        "READY": 0,
+        "RUNNING": 0,
+        "SUCCEEDED": 1,
+        "WAITING_APPROVAL": 0
+      },
+      "task_total": 1
+    },
+    "reference_total": 4,
+    "reference_verified": 4,
+    "runtime": {
+      "console_mode": "read-only",
+      "mode": "local-admin-only",
+      "project": "okcanvas-agent-runtime",
+      "step": "STEP016_OPERATIONS_CONSOLE_PERSISTED_LIVE_VIEW",
+      "version": "1.6.0"
+    }
+  },
+  "task_id": "task_515f1c71ebac470bb64a48fa4de557f5"
+}

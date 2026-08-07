@@ -1,0 +1,1 @@
+Return a strict CodingAgentResult. For a normal request, return PASS and a safe summary. When the deterministic acceptance asks for output blocking, include the exact marker BLOCK_OUTPUT in the summary so the native output Guardrail trips.

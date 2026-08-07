@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "all_registered_function_tools_constructed": true,
+    "all_sdk_bindings_use_exactly_one_output_contract": true,
+    "immutable_sdk_mutual_exclusion_confirmed": true,
+    "prior_bounded_project_policy_preserved": true,
+    "product_factory_omits_output_json_schema_argument": true,
+    "product_factory_uses_output_type": true,
+    "project_tool_still_returns_relative_evidence": true,
+    "reference_import_boundary_preserved": true,
+    "runtime_step_exact": true,
+    "runtime_version_exact": true
+  },
+  "project_relative_path": "src/router.py",
+  "schema_version": "okcanvas-step059a-deterministic-acceptance-v1",
+  "state": "PASSED",
+  "tool_names": [
+    "local_text_fingerprint",
+    "local_text_metrics",
+    "project_readonly_inspect"
+  ]
+}

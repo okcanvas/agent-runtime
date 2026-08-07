@@ -1,0 +1,54 @@
+{
+  "schema_version": "okcanvas-step046-windows-live-acceptance-summary-v1",
+  "step_id": "STEP046_SQLITE_SESSION_APPROVAL_COMPOSITION_V1",
+  "version": "2.26.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_command": "sh_run_step046_acceptance",
+  "reported_at": "2026-07-31T05:24:00+09:00",
+  "acceptance": {
+    "acceptance_id": "20260730T202224532258Z-5572095d",
+    "completed_at": "2026-07-30T20:22:28.995630Z",
+    "state": "PASSED",
+    "check_count": 27,
+    "all_checks_true": true,
+    "cleanup_state": "COMPLETED",
+    "resources_closed": true,
+    "compact_evidence_exported": true
+  },
+  "gateway_counts": {
+    "prepare": 2,
+    "resume": 2,
+    "session_instances": 10,
+    "session_closes": 10
+  },
+  "session_transitions": [
+    {"phase": "after_prepare_approve", "turn_count": 0, "item_count": 2, "lease_held": true},
+    {"phase": "after_approve", "turn_count": 1, "item_count": 4, "lease_held": false},
+    {"phase": "after_prepare_reject", "turn_count": 1, "item_count": 6, "lease_held": true},
+    {"phase": "after_reject", "turn_count": 2, "item_count": 8, "lease_held": false}
+  ],
+  "tool_execution_counts": {"approve": 1, "reject": 0},
+  "run_event_counts": {"approve": 20, "reject": 17, "total": 37},
+  "final_counts": {
+    "tasks": 2,
+    "runs": 2,
+    "submissions": 2,
+    "invocations": 2,
+    "events": 37,
+    "artifacts": 1,
+    "approvals": 2,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 1,
+  "verified_conditions": [
+    "approved Tool executed exactly once",
+    "rejected Tool executed zero times",
+    "approved Artifact SHA verified",
+    "recorded Evaluation PASSED",
+    "clear and competing Turn rejected while approval pending",
+    "approval and rejection replay created no duplicate",
+    "raw Session history and requests absent from Product/Evaluation DB",
+    "references unchanged"
+  ],
+  "source": "user-reported complete Windows JSON output; compacted without changing reported counts or states"
+}

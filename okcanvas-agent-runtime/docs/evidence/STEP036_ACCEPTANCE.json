@@ -1,0 +1,60 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T090815507214Z-7cdf80a8",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T09:08:15.953492Z",
+    "created_at": "2026-07-30T09:08:15.507496Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP036"
+  },
+  "artifact_count": 3,
+  "checks": {
+    "all_three_artifacts_preserved": true,
+    "api_key_not_in_product_or_evaluation_db": true,
+    "current_runtime_drift_rejected": true,
+    "drift_created_no_evaluation": true,
+    "evaluation_list_contains_only_valid_result": true,
+    "one_model_turn_per_seed_run": true,
+    "recorded_binding_matches_execution_event": true,
+    "recorded_evaluation_invoked_no_model": true,
+    "references_unchanged": true,
+    "runtime_binding_exposed_by_control_api": true,
+    "runtime_binding_is_non_secret_sha": true,
+    "runtime_binding_persisted_with_evaluation": true,
+    "runtime_binding_verification_is_evaluation_only": true,
+    "tampered_recorded_binding_rejected": true,
+    "three_reference_agent_runs_succeeded": true,
+    "valid_evaluation_case_exact": true,
+    "valid_recorded_run_evaluated": true,
+    "valid_subject_agent_exact": true
+  },
+  "current_runtime_drift": {
+    "code": "RUNTIME_BINDING_DRIFT",
+    "http_status": 409,
+    "run_id": "run_c7616c18d34a4b79b9e3c70af089ac6f"
+  },
+  "evaluation_count": 1,
+  "gateway_call_count": 3,
+  "runtime_binding_sha256": "fbfb0991d692aa6a17759ee0b363e4b70494100760c5e0d70a3ddd3e47ed8f55",
+  "schema_version": "okcanvas-step036-acceptance-v1",
+  "state": "PASSED",
+  "tampered_recorded_binding": {
+    "code": "RUNTIME_BINDING_DRIFT",
+    "http_status": 409,
+    "run_id": "run_6c4459c11c244495866f023a532aa43e"
+  },
+  "valid": {
+    "evaluation_id": "eval_2e5a28f075aa4fc581bd91d012f96791",
+    "http_status": 201,
+    "run_id": "run_2e7c0dd537484598ab469b3d04c50e31",
+    "state": "PASSED",
+    "subject_runtime_binding_sha256": "fbfb0991d692aa6a17759ee0b363e4b70494100760c5e0d70a3ddd3e47ed8f55"
+  }
+}

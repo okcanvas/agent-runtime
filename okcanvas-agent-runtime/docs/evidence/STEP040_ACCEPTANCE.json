@@ -1,0 +1,94 @@
+{
+  "schema_version": "okcanvas-step040-acceptance-v1",
+  "state": "PASSED",
+  "checks": {
+    "invocation_policy_exact": true,
+    "closed_child_graph_exact": true,
+    "runtime_binding_contains_invocation_policy": true,
+    "runtime_binding_contains_child_graph": true,
+    "three_invocation_identities_exact": true,
+    "root_identity_exact": true,
+    "child_parent_relationships_exact": true,
+    "child_kinds_exact": true,
+    "state_namespaces_unique": true,
+    "ordinals_and_depths_exact": true,
+    "language_only_workspace_none": true,
+    "workspace_preview_distinct_and_not_materialized": true,
+    "host_workspace_root_not_model_selectable": true,
+    "unresolved_child_rejected": true,
+    "self_reference_rejected": true,
+    "depth_limit_enforced": true,
+    "handoff_count_limit_enforced": true,
+    "root_terminal_state_synchronized": true,
+    "planned_children_never_executed": true,
+    "product_task_run_not_duplicated": true,
+    "no_external_or_model_call": true,
+    "references_unchanged": true,
+    "cleanup_completed": true
+  },
+  "policy": {
+    "schema_version": "okcanvas-sub-agent-invocation-policy-v1",
+    "policy_id": "default-sub-agent-invocation-policy",
+    "version": "1.0.0",
+    "max_depth": 4,
+    "max_handoffs_per_run": 4,
+    "max_agent_tools_per_run": 8,
+    "default_workspace_access": "none",
+    "physical_workspace_enabled": false,
+    "policy_sha256": "b6e0e31d2d624b1bfa44b655bec7e3a340ba12b21cd09389e34b9a8c7a59547d"
+  },
+  "graph": [
+    {
+      "kind": "AGENT_AS_TOOL",
+      "parent_agent_id": "scope-root-agent",
+      "child_agent_id": "scope-tool-agent",
+      "depth": 1,
+      "workspace_access": "none"
+    },
+    {
+      "kind": "HANDOFF",
+      "parent_agent_id": "scope-root-agent",
+      "child_agent_id": "scope-handoff-agent",
+      "depth": 1,
+      "workspace_access": "none"
+    }
+  ],
+  "run_id": "run_4f95833001ef4100ab4e7022c9f56f3a",
+  "task_id": "task_24d301bb224a435c821688d1467dbeef",
+  "root_invocation_id": "invocation_7fe8bf7719764b789ce060b8780c7e50",
+  "handoff_invocation_id": "invocation_a4c045890e5944f9a7e3d8bc19956bc7",
+  "agent_tool_invocation_id": "invocation_99dde7c1355242ffb0359947798d4dc0",
+  "invocation_states": {
+    "invocation_7fe8bf7719764b789ce060b8780c7e50": "CANCELLED",
+    "invocation_a4c045890e5944f9a7e3d8bc19956bc7": "CANCELLED",
+    "invocation_99dde7c1355242ffb0359947798d4dc0": "CANCELLED"
+  },
+  "workspace_preview": {
+    "handoff": "/tmp/okcanvas-agent-runtime-acceptance/step040/20260730T090750014864Z-c410d76c/scratch/generated-workspaces/run_4f95833001ef4100ab4e7022c9f56f3a/invocation_a4c045890e5944f9a7e3d8bc19956bc7",
+    "agent_as_tool": "/tmp/okcanvas-agent-runtime-acceptance/step040/20260730T090750014864Z-c410d76c/scratch/generated-workspaces/run_4f95833001ef4100ab4e7022c9f56f3a/invocation_99dde7c1355242ffb0359947798d4dc0",
+    "materialized": false
+  },
+  "external_call_count": 0,
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "invocations": 3,
+    "events": 3,
+    "artifacts": 0
+  },
+  "acceptance_workspace": {
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "acceptance_id": "20260730T090750014864Z-c410d76c",
+    "step_id": "STEP040",
+    "created_at": "2026-07-30T09:07:50.015531Z",
+    "completed_at": "2026-07-30T09:07:50.181742Z",
+    "resources_closed": true,
+    "resource_close_results": [],
+    "compact_evidence_exported": true,
+    "cleanup_state": "COMPLETED",
+    "cleanup_attempts": 1,
+    "preserved_path": null,
+    "cleanup_error": null,
+    "product_runtime_state": false
+  }
+}

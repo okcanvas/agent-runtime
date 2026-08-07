@@ -1,0 +1,18 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "bounded-orchestration-risk-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Risk Specialist",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [],
+  "mcp_servers": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "orchestration_children": [],
+  "workspace_access": "none",
+  "max_turns": 4,
+  "workflow_name": "OKCanvas Bounded Multi-Agent Orchestration V1",
+  "session_mode": "disabled"
+}

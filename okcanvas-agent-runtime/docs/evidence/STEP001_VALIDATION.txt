@@ -1,0 +1,45 @@
+STEP001_MINIMAL_AGENT_RUNTIME validation
+Date: 2026-07-28
+
+EXECUTED
+
+1. PYTHONPATH=src:. python -m compileall -q src scripts tests
+RESULT: PASS
+
+2. PYTHONPATH=src:. pytest -q
+RESULT: PASS
+OUTPUT: 16 passed in 0.08s
+
+3. PYTHONPATH=src python -m okcanvas_agent_runtime info --pretty
+RESULT: PASS
+CONFIRMED: version 0.1.0, STEP001, model calls supported, Codex/MCP/tools/handoffs/workspace write disabled.
+
+4. PYTHONPATH=src python -m okcanvas_agent_runtime doctor --model test-model --pretty
+RESULT: EXPECTED FAIL-CLOSED, exit 3
+CODES: SDK_NOT_INSTALLED, API_KEY_MISSING
+
+5. OPENAI_API_KEY=<redacted> OKCANVAS_AGENT_MODEL=test-model ... run without --confirm-live-call
+RESULT: EXPECTED FAIL-CLOSED, exit 2
+CODE: LIVE_OPT_IN_REQUIRED
+live_call=false
+
+6. OPENAI_API_KEY=<redacted> OKCANVAS_AGENT_MODEL=test-model ... run with --confirm-live-call
+RESULT: EXPECTED FAIL-CLOSED BEFORE MODEL, exit 3
+CODE: SDK_NOT_INSTALLED
+live_call=false
+
+7. Secret leakage grep over captured CLI JSON
+RESULT: PASS; configured test secret absent.
+
+8. uv build --offline
+RESULT: NOT COMPLETED
+REASON: hatchling>=1.27 unavailable in offline cache. No wheel/sdist success claim.
+
+9. Live OpenAI run
+RESULT: NOT EXECUTED
+REASON: published SDK package/API credentials/live acceptance were not available and automatic live execution is prohibited.
+
+10. Final source ZIP release verification
+PROCEDURE: package source, extract into a clean directory, rerun compileall, 16 tests, reference 4/4 verification, and runtime info.
+RESULT: PASS before release handoff.
+NOTE: Exact release ZIP SHA-256 is stored in the adjacent `.zip.sha256` artifact because embedding a ZIP's own hash inside itself is impossible.

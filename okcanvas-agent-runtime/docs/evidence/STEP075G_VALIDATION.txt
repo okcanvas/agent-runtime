@@ -1,0 +1,54 @@
+STEP075G_PRODUCT_OWNED_DETERMINISTIC_EVIDENCE_COMPLETION
+version 2.55.7
+
+SOURCE VALIDATION
+- STEP075G acceptance: 30/30 PASS
+- focused tests: 144/144 PASS
+- historical Skill/trace/service: 47/47 PASS
+- full Python: 841/841 PASS across 213 test files
+- Python compileall: PASS
+- committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+- deterministic Docker calls: 0
+- deterministic external network calls: 0
+- deterministic model calls: 0
+
+IDENTITY
+- Sandbox policy SHA-256: eca4831968a99223a357edb2da27ee277f120e204e633eeaebf37d8a1651720a
+- provider contract SHA-256: 83868e3f4d261d4d8e1b98b033f2c735e90da00125ec3a1fe9673e6abb85aaf5
+- foundation SHA-256: 90403093a14d9cadaf0aaf1abf3bf4c71127293e7da54950e7d0f8df00008a9f
+- Sandbox Runtime SHA-256: 27d4b62c15b6e1aeea7114fd9014c76423ebf07e7342c0309804a3f5a119e9a8
+- sample Runtime binding SHA-256: 7013563cfe81dbc9a4807779a96431d85b89f6c13c0bb2283cfd0a880b053897
+- service policy SHA-256: 0f63887b2dedddb8dc99f4c5f6154798ecf2b8f227ecba4c91f59e31a953e570
+
+CANDIDATE ZIP VALIDATION
+- SHA-256: ee1b777f4f502b2fdd63ed0dffc2cbf16d1afa98f8e544929c937cc6a391f974
+- canonical root: 1
+- entries: 3114
+- forbidden files: 0
+- STEP075G acceptance: 30/30 PASS
+- full Python: 841/841 PASS across 213 test files
+- Node: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+
+FINAL ZIP VALIDATION
+- first documentation-complete distribution SHA-256: 915888c6b57f9c4b7d48864109d2fbfc12ffbd6b9ae2b3fc6f3052ed8a2c1040
+- canonical root: 1
+- entries: 3114
+- forbidden files: 0
+- STEP075G acceptance: 30/30 PASS
+- full Python: 841/841 PASS across 213 test files
+- Node: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+- npm pack dry-run: 23 files PASS
+- published distribution is repackaged after this evidence update and is verified again; its SHA is external in the adjacent sidecar
+
+WINDOWS
+- Pending sh_run_step075g_acceptance.cmd
+- Pending sh_run_step075g_live_acceptance.cmd

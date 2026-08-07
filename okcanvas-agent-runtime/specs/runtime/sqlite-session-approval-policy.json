@@ -1,0 +1,12 @@
+{
+  "schema_version": "okcanvas-sqlite-session-approval-policy-v1",
+  "policy_id": "local-sqlite-session-approval-v1",
+  "version": "1.0.0",
+  "session_mode": "sqlite-v1",
+  "approval_mode": "ALWAYS",
+  "max_tools": 1,
+  "hold_turn_lease_while_interrupted": true,
+  "commit_rejected_turn": true,
+  "rollback_failed_turn": true,
+  "workspace_access": "none"
+}

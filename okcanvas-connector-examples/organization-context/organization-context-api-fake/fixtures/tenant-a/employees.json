@@ -1,0 +1,1055 @@
+[
+  {
+    "aliases": [
+      "김대표",
+      "E-0001"
+    ],
+    "department_id": "department.executive",
+    "email": "user0001@tenant-a.example",
+    "employee_id": "employee-0001",
+    "employee_number": "E-0001",
+    "manager_employee_id": null,
+    "name": "김서연",
+    "position_ids": [
+      "position.principal",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "이민수팀장",
+      "E-0002"
+    ],
+    "department_id": "department.management-support",
+    "email": "user0002@tenant-a.example",
+    "employee_id": "employee-0002",
+    "employee_number": "E-0002",
+    "manager_employee_id": "employee-0001",
+    "name": "이민수",
+    "position_ids": [
+      "position.lead",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "박민수팀장",
+      "E-0003"
+    ],
+    "department_id": "department.human-resources",
+    "email": "user0003@tenant-a.example",
+    "employee_id": "employee-0003",
+    "employee_number": "E-0003",
+    "manager_employee_id": "employee-0001",
+    "name": "박민수",
+    "position_ids": [
+      "position.senior",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "최민수팀장",
+      "E-0004"
+    ],
+    "department_id": "department.finance",
+    "email": "user0004@tenant-a.example",
+    "employee_id": "employee-0004",
+    "employee_number": "E-0004",
+    "manager_employee_id": "employee-0001",
+    "name": "최민수",
+    "position_ids": [
+      "position.associate",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "정민수팀장",
+      "E-0005"
+    ],
+    "department_id": "department.strategy-planning",
+    "email": "user0005@tenant-a.example",
+    "employee_id": "employee-0005",
+    "employee_number": "E-0005",
+    "manager_employee_id": "employee-0001",
+    "name": "정민수",
+    "position_ids": [
+      "position.staff",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "강민수팀장",
+      "E-0006"
+    ],
+    "department_id": "department.enterprise-sales",
+    "email": "user0006@tenant-a.example",
+    "employee_id": "employee-0006",
+    "employee_number": "E-0006",
+    "manager_employee_id": "employee-0001",
+    "name": "강민수",
+    "position_ids": [
+      "position.principal",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "조민수팀장",
+      "E-0007"
+    ],
+    "department_id": "department.public-sales",
+    "email": "user0007@tenant-a.example",
+    "employee_id": "employee-0007",
+    "employee_number": "E-0007",
+    "manager_employee_id": "employee-0001",
+    "name": "조민수",
+    "position_ids": [
+      "position.lead",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "윤민수팀장",
+      "E-0008"
+    ],
+    "department_id": "department.partner-sales",
+    "email": "user0008@tenant-a.example",
+    "employee_id": "employee-0008",
+    "employee_number": "E-0008",
+    "manager_employee_id": "employee-0001",
+    "name": "윤민수",
+    "position_ids": [
+      "position.senior",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "장민수팀장",
+      "E-0009"
+    ],
+    "department_id": "department.product-planning",
+    "email": "user0009@tenant-a.example",
+    "employee_id": "employee-0009",
+    "employee_number": "E-0009",
+    "manager_employee_id": "employee-0001",
+    "name": "장민수",
+    "position_ids": [
+      "position.associate",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "임민수팀장",
+      "E-0010"
+    ],
+    "department_id": "department.platform-development",
+    "email": "user0010@tenant-a.example",
+    "employee_id": "employee-0010",
+    "employee_number": "E-0010",
+    "manager_employee_id": "employee-0001",
+    "name": "임민수",
+    "position_ids": [
+      "position.staff",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "한민수팀장",
+      "E-0011"
+    ],
+    "department_id": "department.service-development",
+    "email": "user0011@tenant-a.example",
+    "employee_id": "employee-0011",
+    "employee_number": "E-0011",
+    "manager_employee_id": "employee-0001",
+    "name": "한민수",
+    "position_ids": [
+      "position.principal",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "오민수팀장",
+      "E-0012"
+    ],
+    "department_id": "department.quality-assurance",
+    "email": "user0012@tenant-a.example",
+    "employee_id": "employee-0012",
+    "employee_number": "E-0012",
+    "manager_employee_id": "employee-0001",
+    "name": "오민수",
+    "position_ids": [
+      "position.lead",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "김서연팀장",
+      "E-0013"
+    ],
+    "department_id": "department.customer-support",
+    "email": "user0013@tenant-a.example",
+    "employee_id": "employee-0013",
+    "employee_number": "E-0013",
+    "manager_employee_id": "employee-0001",
+    "name": "김서연",
+    "position_ids": [
+      "position.senior",
+      "position.team-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "이서연",
+      "E-0014"
+    ],
+    "department_id": "department.executive",
+    "email": "user0014@tenant-a.example",
+    "employee_id": "employee-0014",
+    "employee_number": "E-0014",
+    "manager_employee_id": "employee-0001",
+    "name": "이서연",
+    "position_ids": [
+      "position.associate",
+      "position.part-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "박서연",
+      "E-0015"
+    ],
+    "department_id": "department.management-support",
+    "email": "user0015@tenant-a.example",
+    "employee_id": "employee-0015",
+    "employee_number": "E-0015",
+    "manager_employee_id": "employee-0002",
+    "name": "박서연",
+    "position_ids": [
+      "position.staff"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "최서연",
+      "E-0016"
+    ],
+    "department_id": "department.human-resources",
+    "email": "user0016@tenant-a.example",
+    "employee_id": "employee-0016",
+    "employee_number": "E-0016",
+    "manager_employee_id": "employee-0003",
+    "name": "최서연",
+    "position_ids": [
+      "position.principal"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "김선임",
+      "플랫폼 김민수",
+      "E-0017"
+    ],
+    "department_id": "department.platform-development",
+    "email": "user0017@tenant-a.example",
+    "employee_id": "employee-0017",
+    "employee_number": "E-0017",
+    "manager_employee_id": "employee-0004",
+    "name": "김민수",
+    "position_ids": [
+      "position.senior"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "강서연선임",
+      "E-0018"
+    ],
+    "department_id": "department.strategy-planning",
+    "email": "user0018@tenant-a.example",
+    "employee_id": "employee-0018",
+    "employee_number": "E-0018",
+    "manager_employee_id": "employee-0005",
+    "name": "강서연",
+    "position_ids": [
+      "position.senior"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "조서연",
+      "E-0019"
+    ],
+    "department_id": "department.enterprise-sales",
+    "email": "user0019@tenant-a.example",
+    "employee_id": "employee-0019",
+    "employee_number": "E-0019",
+    "manager_employee_id": "employee-0006",
+    "name": "조서연",
+    "position_ids": [
+      "position.associate"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "윤서연",
+      "E-0020"
+    ],
+    "department_id": "department.public-sales",
+    "email": "user0020@tenant-a.example",
+    "employee_id": "employee-0020",
+    "employee_number": "E-0020",
+    "manager_employee_id": "employee-0007",
+    "name": "윤서연",
+    "position_ids": [
+      "position.staff"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "장서연",
+      "E-0021"
+    ],
+    "department_id": "department.partner-sales",
+    "email": "user0021@tenant-a.example",
+    "employee_id": "employee-0021",
+    "employee_number": "E-0021",
+    "manager_employee_id": "employee-0008",
+    "name": "장서연",
+    "position_ids": [
+      "position.principal",
+      "position.part-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "임서연",
+      "E-0022"
+    ],
+    "department_id": "department.product-planning",
+    "email": "user0022@tenant-a.example",
+    "employee_id": "employee-0022",
+    "employee_number": "E-0022",
+    "manager_employee_id": "employee-0009",
+    "name": "임서연",
+    "position_ids": [
+      "position.lead",
+      "position.product-manager"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "한서연선임",
+      "E-0023"
+    ],
+    "department_id": "department.platform-development",
+    "email": "user0023@tenant-a.example",
+    "employee_id": "employee-0023",
+    "employee_number": "E-0023",
+    "manager_employee_id": "employee-0010",
+    "name": "한서연",
+    "position_ids": [
+      "position.senior"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "오서연",
+      "E-0024"
+    ],
+    "department_id": "department.service-development",
+    "email": "user0024@tenant-a.example",
+    "employee_id": "employee-0024",
+    "employee_number": "E-0024",
+    "manager_employee_id": "employee-0011",
+    "name": "오서연",
+    "position_ids": [
+      "position.associate"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "김지훈",
+      "E-0025"
+    ],
+    "department_id": "department.quality-assurance",
+    "email": "user0025@tenant-a.example",
+    "employee_id": "employee-0025",
+    "employee_number": "E-0025",
+    "manager_employee_id": "employee-0012",
+    "name": "김지훈",
+    "position_ids": [
+      "position.staff"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "이지훈",
+      "E-0026"
+    ],
+    "department_id": "department.customer-support",
+    "email": "user0026@tenant-a.example",
+    "employee_id": "employee-0026",
+    "employee_number": "E-0026",
+    "manager_employee_id": "employee-0013",
+    "name": "이지훈",
+    "position_ids": [
+      "position.principal"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "박지훈",
+      "E-0027"
+    ],
+    "department_id": "department.executive",
+    "email": "user0027@tenant-a.example",
+    "employee_id": "employee-0027",
+    "employee_number": "E-0027",
+    "manager_employee_id": "employee-0001",
+    "name": "박지훈",
+    "position_ids": [
+      "position.lead"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "최지훈선임",
+      "E-0028"
+    ],
+    "department_id": "department.management-support",
+    "email": "user0028@tenant-a.example",
+    "employee_id": "employee-0028",
+    "employee_number": "E-0028",
+    "manager_employee_id": "employee-0002",
+    "name": "최지훈",
+    "position_ids": [
+      "position.senior",
+      "position.part-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "정지훈",
+      "E-0029"
+    ],
+    "department_id": "department.human-resources",
+    "email": "user0029@tenant-a.example",
+    "employee_id": "employee-0029",
+    "employee_number": "E-0029",
+    "manager_employee_id": "employee-0003",
+    "name": "정지훈",
+    "position_ids": [
+      "position.associate"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "강지훈",
+      "E-0030"
+    ],
+    "department_id": "department.finance",
+    "email": "user0030@tenant-a.example",
+    "employee_id": "employee-0030",
+    "employee_number": "E-0030",
+    "manager_employee_id": "employee-0004",
+    "name": "강지훈",
+    "position_ids": [
+      "position.staff"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "조지훈",
+      "E-0031"
+    ],
+    "department_id": "department.strategy-planning",
+    "email": "user0031@tenant-a.example",
+    "employee_id": "employee-0031",
+    "employee_number": "E-0031",
+    "manager_employee_id": "employee-0005",
+    "name": "조지훈",
+    "position_ids": [
+      "position.principal"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "윤지훈",
+      "E-0032"
+    ],
+    "department_id": "department.enterprise-sales",
+    "email": "user0032@tenant-a.example",
+    "employee_id": "employee-0032",
+    "employee_number": "E-0032",
+    "manager_employee_id": "employee-0006",
+    "name": "윤지훈",
+    "position_ids": [
+      "position.lead"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "장지훈선임",
+      "E-0033"
+    ],
+    "department_id": "department.public-sales",
+    "email": "user0033@tenant-a.example",
+    "employee_id": "employee-0033",
+    "employee_number": "E-0033",
+    "manager_employee_id": "employee-0007",
+    "name": "장지훈",
+    "position_ids": [
+      "position.senior",
+      "position.product-manager"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "김팀장",
+      "영업 김민수",
+      "E-0034"
+    ],
+    "department_id": "department.enterprise-sales",
+    "email": "user0034@tenant-a.example",
+    "employee_id": "employee-0034",
+    "employee_number": "E-0034",
+    "manager_employee_id": "employee-0008",
+    "name": "김민수",
+    "position_ids": [
+      "position.team-leader",
+      "position.lead"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "한지훈",
+      "E-0035"
+    ],
+    "department_id": "department.product-planning",
+    "email": "user0035@tenant-a.example",
+    "employee_id": "employee-0035",
+    "employee_number": "E-0035",
+    "manager_employee_id": "employee-0009",
+    "name": "한지훈",
+    "position_ids": [
+      "position.staff",
+      "position.part-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "오지훈",
+      "E-0036"
+    ],
+    "department_id": "department.platform-development",
+    "email": "user0036@tenant-a.example",
+    "employee_id": "employee-0036",
+    "employee_number": "E-0036",
+    "manager_employee_id": "employee-0010",
+    "name": "오지훈",
+    "position_ids": [
+      "position.principal"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "김하늘",
+      "E-0037"
+    ],
+    "department_id": "department.service-development",
+    "email": "user0037@tenant-a.example",
+    "employee_id": "employee-0037",
+    "employee_number": "E-0037",
+    "manager_employee_id": "employee-0011",
+    "name": "김하늘",
+    "position_ids": [
+      "position.lead"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "이하늘선임",
+      "E-0038"
+    ],
+    "department_id": "department.quality-assurance",
+    "email": "user0038@tenant-a.example",
+    "employee_id": "employee-0038",
+    "employee_number": "E-0038",
+    "manager_employee_id": "employee-0012",
+    "name": "이하늘",
+    "position_ids": [
+      "position.senior"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "박하늘",
+      "E-0039"
+    ],
+    "department_id": "department.customer-support",
+    "email": "user0039@tenant-a.example",
+    "employee_id": "employee-0039",
+    "employee_number": "E-0039",
+    "manager_employee_id": "employee-0013",
+    "name": "박하늘",
+    "position_ids": [
+      "position.associate"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "최하늘",
+      "E-0040"
+    ],
+    "department_id": "department.executive",
+    "email": "user0040@tenant-a.example",
+    "employee_id": "employee-0040",
+    "employee_number": "E-0040",
+    "manager_employee_id": "employee-0001",
+    "name": "최하늘",
+    "position_ids": [
+      "position.staff"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "정하늘",
+      "E-0041"
+    ],
+    "department_id": "department.management-support",
+    "email": "user0041@tenant-a.example",
+    "employee_id": "employee-0041",
+    "employee_number": "E-0041",
+    "manager_employee_id": "employee-0002",
+    "name": "정하늘",
+    "position_ids": [
+      "position.principal"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "강하늘",
+      "E-0042"
+    ],
+    "department_id": "department.human-resources",
+    "email": "user0042@tenant-a.example",
+    "employee_id": "employee-0042",
+    "employee_number": "E-0042",
+    "manager_employee_id": "employee-0003",
+    "name": "강하늘",
+    "position_ids": [
+      "position.lead",
+      "position.part-leader"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "조하늘선임",
+      "E-0043"
+    ],
+    "department_id": "department.finance",
+    "email": "user0043@tenant-a.example",
+    "employee_id": "employee-0043",
+    "employee_number": "E-0043",
+    "manager_employee_id": "employee-0004",
+    "name": "조하늘",
+    "position_ids": [
+      "position.senior"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "윤하늘",
+      "E-0044"
+    ],
+    "department_id": "department.strategy-planning",
+    "email": "user0044@tenant-a.example",
+    "employee_id": "employee-0044",
+    "employee_number": "E-0044",
+    "manager_employee_id": "employee-0005",
+    "name": "윤하늘",
+    "position_ids": [
+      "position.associate",
+      "position.product-manager"
+    ],
+    "roles": [
+      "EMPLOYEE",
+      "MANAGER"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "장하늘",
+      "E-0045"
+    ],
+    "department_id": "department.enterprise-sales",
+    "email": "user0045@tenant-a.example",
+    "employee_id": "employee-0045",
+    "employee_number": "E-0045",
+    "manager_employee_id": "employee-0006",
+    "name": "장하늘",
+    "position_ids": [
+      "position.staff"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "임하늘",
+      "E-0046"
+    ],
+    "department_id": "department.public-sales",
+    "email": "user0046@tenant-a.example",
+    "employee_id": "employee-0046",
+    "employee_number": "E-0046",
+    "manager_employee_id": "employee-0007",
+    "name": "임하늘",
+    "position_ids": [
+      "position.principal"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "ACTIVE",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "한하늘",
+      "E-0047"
+    ],
+    "department_id": "department.partner-sales",
+    "email": "user0047@tenant-a.example",
+    "employee_id": "employee-0047",
+    "employee_number": "E-0047",
+    "manager_employee_id": "employee-0008",
+    "name": "한하늘",
+    "position_ids": [
+      "position.lead"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "RETIRED",
+    "tenant_id": "tenant-a"
+  },
+  {
+    "aliases": [
+      "오하늘선임",
+      "E-0048"
+    ],
+    "department_id": "department.product-planning",
+    "email": "user0048@tenant-a.example",
+    "employee_id": "employee-0048",
+    "employee_number": "E-0048",
+    "manager_employee_id": "employee-0009",
+    "name": "오하늘",
+    "position_ids": [
+      "position.senior"
+    ],
+    "roles": [
+      "EMPLOYEE"
+    ],
+    "row_version": 1,
+    "status": "RETIRED",
+    "tenant_id": "tenant-a"
+  }
+]

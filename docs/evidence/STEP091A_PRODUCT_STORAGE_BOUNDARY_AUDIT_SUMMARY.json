@@ -1,0 +1,66 @@
+{
+  "baseline_runtime": {
+    "step": "STEP090R1_ORGANIZATION_CONTEXT_MCP_TOOL_OUTPUT_PROTOCOL_AND_SHORT_LIST_TOOL_CHOICE_CLOSURE",
+    "version": "2.70.1"
+  },
+  "decision": "STEP091B1_TYPED_PERSISTENCE_PORTS_AND_TRANSACTION_OWNERSHIP",
+  "direct_postgresql_port_admitted": false,
+  "findings": [
+    {
+      "id": "B1",
+      "severity": "HIGH",
+      "title": "Submission adapter directly owns Product tables"
+    },
+    {
+      "id": "B2",
+      "severity": "HIGH",
+      "title": "Non-Product persistence ports use broad Any signatures"
+    },
+    {
+      "id": "B3",
+      "severity": "HIGH",
+      "title": "Artifact metadata and binary filesystem ownership are mixed"
+    },
+    {
+      "id": "B4",
+      "severity": "MEDIUM",
+      "title": "Bootstrap directly constructs concrete topology"
+    },
+    {
+      "id": "B5",
+      "severity": "HIGH",
+      "title": "Cross-store transaction ownership is implicit"
+    },
+    {
+      "id": "B6",
+      "severity": "MEDIUM",
+      "title": "Session capability is SQLite-named"
+    },
+    {
+      "id": "B7",
+      "severity": "MEDIUM",
+      "title": "Evaluation application types concrete SQLite store"
+    },
+    {
+      "id": "B8",
+      "severity": "HIGH",
+      "title": "Coordinator is local and distributed lease is deferred"
+    },
+    {
+      "id": "B9",
+      "severity": "HIGH",
+      "title": "Schema migration ownership is fragmented"
+    }
+  ],
+  "implementation_order": [
+    "STEP091B1",
+    "STEP091B2",
+    "STEP091B3",
+    "STEP091C",
+    "API_WORKER_SPLIT_LATER"
+  ],
+  "mode": "READ_ONLY",
+  "product_source_modifications": 0,
+  "schema_version": "okcanvas-step091a-product-storage-boundary-audit-v1",
+  "step": "STEP091A_PRODUCT_STORAGE_BOUNDARY_EXHAUSTIVE_AUDIT"
+}

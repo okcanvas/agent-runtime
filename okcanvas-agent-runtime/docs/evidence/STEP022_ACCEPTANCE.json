@@ -1,0 +1,50 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T091731752333Z-6a60fbb4",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T09:17:39.676263Z",
+    "created_at": "2026-07-29T09:17:31.752568Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP022"
+  },
+  "checks": {
+    "api_key_not_in_child_logs": true,
+    "api_key_not_in_summary": true,
+    "references_unchanged": true,
+    "step020_approval_accepted": true,
+    "step020_mode_matches": true,
+    "step021_inbox_accepted": true
+  },
+  "completed_at": "2026-07-29T09:17:39.675377Z",
+  "mode": "DETERMINISTIC",
+  "schema_version": "okcanvas-step022-acceptance-v1",
+  "started_at": "2026-07-29T09:17:31.752893Z",
+  "state": "PASSED",
+  "step020": {
+    "approve_state": "PASSED",
+    "cleanup_state": "COMPLETED",
+    "exit_code": 0,
+    "failed_checks": [],
+    "label": "STEP020_DETERMINISTIC_APPROVAL",
+    "log_file": "step020.log",
+    "reject_state": "PASSED",
+    "state": "PASSED",
+    "summary_file": "step020-summary.json"
+  },
+  "step021": {
+    "cleanup_state": "COMPLETED",
+    "exit_code": 0,
+    "failed_checks": [],
+    "label": "STEP021_APPROVAL_INBOX",
+    "log_file": "step021.log",
+    "state": "PASSED",
+    "summary_file": "step021-summary.json"
+  }
+}

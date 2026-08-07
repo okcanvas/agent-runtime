@@ -1,0 +1,62 @@
+{
+  "schema_version": "okcanvas-step075g-windows-live-acceptance-summary-v1",
+  "step": "STEP075G_PRODUCT_OWNED_DETERMINISTIC_EVIDENCE_COMPLETION",
+  "version": "2.55.7",
+  "executed_at_utc": "2026-08-02T04:08:55.822363Z",
+  "completed_at_utc": "2026-08-02T04:09:09.715068Z",
+  "acceptance_id": "20260802T040856214374Z-130c3a25",
+  "state": "PASSED",
+  "outcome_classification": "PASSED",
+  "passed_checks": 38,
+  "total_checks": 38,
+  "check_count_explanation": {
+    "initial_checks": 37,
+    "final_secret_summary_check": "api_key_not_in_summary",
+    "final_total": 38,
+    "prior_handoff_value_37_was_stale": true
+  },
+  "terminal_status": "SUCCEEDED",
+  "model": "gpt-4.1",
+  "model_calls": 2,
+  "tool_calls": 1,
+  "usage": {
+    "input_tokens": 2393,
+    "output_tokens": 257,
+    "total_tokens": 2650
+  },
+  "answer_completeness": {
+    "checked_count": 1,
+    "deterministic_completion_applied": false,
+    "completion_started_count": 0,
+    "completion_completed_count": 0,
+    "model_repair_event_count": 0,
+    "model_calls_added": 0,
+    "tool_reexecuted": false,
+    "interpretation": "The first structured output was already complete, so deterministic completion correctly did not run."
+  },
+  "exact_result": {
+    "target_path": "src/inventory.py",
+    "target_function": "calculate_reorder",
+    "formula": "max(0, forecast + SAFETY_STOCK - on_hand)",
+    "constant": "SAFETY_STOCK = 12",
+    "unverified": []
+  },
+  "sandbox": {
+    "workspace_materialized": true,
+    "selected_file_hashes_verified": true,
+    "network_mode": "none",
+    "shell_enabled": false,
+    "apply_patch_enabled": false,
+    "cleanup_state": "COMPLETED",
+    "orphan_count": 0,
+    "docker_call_count": 9,
+    "snapshot_sha256": "3844f422d3857841caf08efea412812b838956c37dfd27f2c36b536e6ab6133a",
+    "image_binding_sha256": "0291c71987485a61120582ec0f4fa53d61ff234d6423a2079629536bad7592d4"
+  },
+  "fixture_source_sha256": "57edde6a80d126f349cceb921b17dae1f9af0278dda16af5905ac825e941fdea",
+  "run_id": "run_ecdae5af08024e418c6d4d1c23a91640",
+  "submission_id": "submission_586996791ceb4a38add58245676c0beb",
+  "task_id": "task_17c2832316a84559a9f001efff8c0c1a",
+  "failure_diagnostics_empty": true,
+  "closure": "WINDOWS_LIVE_ACCEPTED"
+}

@@ -1,0 +1,149 @@
+STEP056B_NODE_TYPESCRIPT_PERSISTENT_AGENT_CLI_FOUNDATION
+Version: 2.36.1
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Validation date: 2026-07-31
+
+CODE / PACKAGE BOUNDARY
+- Product client source: clients/okcanvas-agent-cli/src/*.ts
+- Compiled product client: clients/okcanvas-agent-cli/dist/*.js
+- Node minimum: 22
+- Runtime npm dependencies: 0
+- package bin: okcanvas-agent -> ./dist/cli.js
+- User launcher: sh_tui.cmd launches Node directly; no Python Runtime import/path
+- Python STEP056 tui_client retained only as historical single-run transport evidence
+- Canonical root environment template: .env.local.example only
+- .env.example removed
+- .env.local.cmd.example removed
+- sh_init_local_env.cmd creates distinct admin/submitter keys and a valid 32-byte payload key without printing secrets
+
+SOURCE WORKSPACE VALIDATION
+- Python compileall: PASS
+- TypeScript compile (`tsc -p tsconfig.json`): PASS
+- Compiled Node syntax check: PASS
+- Node package tests: 4/4 PASS
+- Focused Python regression: 23/23 PASS before full suite
+- Full Python test files: 170
+- Full Python pytest, split with normal process termination:
+  - 172 passed
+  - 103 passed
+  - 137 passed
+  - 39 passed
+  - 58 passed
+  - 45 passed
+  - Total: 554/554 PASS
+
+DETERMINISTIC STEP056B ACCEPTANCE
+- Schema: okcanvas-step056b-acceptance-v1
+- State: PASSED
+- Checks: 25/25
+- One Node process handled exactly three prompts
+- Prompt returned after every response
+- Raw exact confirmation challenges absent from transcript
+- Model prompt not repeated
+- General-mode recorded Evaluations: 0
+- Detail output appeared only after /details
+- Event output appeared only after /events
+- Raw Artifact JSON appeared only after /json
+- Final Task/Run/Submission/Invocation/Event/Artifact/Evaluation counts: 3/3/3/3/30/3/0
+- Successful protected payload files remaining: 0
+- Credentials absent from transcript/Product/Evaluation DB
+- Raw requests absent from Product/Evaluation DB
+- References unchanged
+- Cleanup: COMPLETED in one attempt
+
+SOURCE WORKSPACE PRIOR ACCEPTANCE REGRESSION
+- STEP056B: 25/25 PASS, cleanup COMPLETED
+- STEP056: 21/21 PASS, cleanup COMPLETED
+- STEP055: 35/35 PASS, cleanup COMPLETED
+- STEP054: 30/30 PASS, cleanup COMPLETED
+- STEP053: 30/30 PASS, cleanup COMPLETED
+- STEP052: 25/25 PASS, cleanup COMPLETED
+- STEP051: 25/25 PASS, cleanup COMPLETED
+- STEP050: 31/31 PASS, cleanup COMPLETED
+- STEP049: 33/33 PASS, cleanup COMPLETED
+- STEP048: 32/32 PASS, cleanup COMPLETED
+- STEP047: 29/29 PASS, cleanup COMPLETED
+- STEP046: 27/27 PASS, cleanup COMPLETED
+- STEP045: 28/28 PASS, cleanup COMPLETED
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS, cleanup COMPLETED
+- STEP042: 29/29 PASS, cleanup COMPLETED
+- STEP041: 24/24 PASS, cleanup COMPLETED
+- STEP039: 20/20 PASS, cleanup COMPLETED
+
+WINDOWS LAUNCHER / REFERENCE
+- STEP030A: 8/8 PASS
+- Windows launchers: 64
+- Launcher violations: 0
+- Python Runtime launchers use project venv
+- sh_tui.cmd is the explicit direct Node client launcher
+- Immutable Reference integrity: 4/4 PASS
+- Direct executable imports from /reference: 0
+
+INDEPENDENT CANDIDATE ZIP
+- Candidate: step056b-candidate.zip
+- Canonical archive root count: 1
+- Entries: 2,647
+- Forbidden files: 0
+- Retained compiled Node dist entries: 21
+- Root environment templates: .env.local.example only
+- Independent extraction Python compileall: PASS
+- Independent TypeScript compile: PASS
+- Independent Node tests: 4/4 PASS
+- Independent STEP056B acceptance: 25/25 PASS, cleanup COMPLETED
+- Independent full Python pytest:
+  - 104 passed
+  - 85 passed
+  - 74 passed
+  - 74 passed
+  - 82 passed
+  - 36 passed
+  - 22 passed
+  - 19 passed
+  - 22 passed
+  - 16 passed
+  - 20 passed
+  - Total: 554/554 PASS
+- Independent STEP056: 21/21 PASS, cleanup COMPLETED
+- Independent STEP055: 35/35 PASS, cleanup COMPLETED
+- Independent STEP054: 30/30 PASS, cleanup COMPLETED
+- Independent STEP050: 31/31 PASS, cleanup COMPLETED
+- Independent STEP045: 28/28 PASS, cleanup COMPLETED
+- Independent STEP030A: 8/8 PASS, launchers 64, violations 0
+- Independent Reference integrity: 4/4 PASS
+- Independent direct /reference imports: 0
+
+FINAL ZIP SELF-VALIDATION
+- Pending generation after this validation record is packaged.
+
+FINAL ZIP SELF-VALIDATION RESULT
+- Tested ZIP: step056b-tested-final-before-last-validation.zip
+- Fresh extraction Python compileall: PASS
+- Fresh extraction TypeScript compile: PASS
+- Fresh extraction Node package tests: 4/4 PASS
+- Fresh extraction STEP056B acceptance: 25/25 PASS, cleanup COMPLETED
+- Fresh extraction STEP030A: 8/8 PASS
+- Fresh extraction Windows launchers: 64
+- Fresh extraction launcher violations: 0
+- Fresh extraction full Python pytest: 554/554 PASS
+- Fresh extraction immutable Reference integrity: 4/4 PASS
+- Fresh extraction direct /reference imports: 0
+- npm package dry-run: PASS
+- npm package files: 23
+- npm package runtime dependencies: 0
+- npm bin: okcanvas-agent -> dist/cli.js
+
+RELEASE PACKAGING NOTE
+The final release ZIP is rebuilt only to include this completed validation record. It must be compared
+entry-by-entry with the tested ZIP. Code, tests, TypeScript source, compiled Node dist, policies,
+acceptance scripts and immutable References must remain byte-identical; only
+`docs/evidence/STEP056B_VALIDATION.txt` may differ.
+
+FINAL ENTRY COMPARISON
+- Tested ZIP entries: 2,647
+- Release ZIP entries: 2,647
+- Added entries: 0
+- Removed entries: 0
+- Changed entries: exactly 1
+- Changed entry: okcanvas-agent-runtime/docs/evidence/STEP056B_VALIDATION.txt
+- Byte-identical non-validation entries: 2,646

@@ -1,0 +1,75 @@
+{
+  "$defs": {
+    "LocalDocumentObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Detail",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "detail"
+      ],
+      "title": "LocalDocumentObservation",
+      "type": "object"
+    },
+    "LocalDocumentReviewStatus": {
+      "enum": [
+        "REVIEWED",
+        "INSUFFICIENT_CONTENT"
+      ],
+      "title": "LocalDocumentReviewStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "observations": {
+      "items": {
+        "$ref": "#/$defs/LocalDocumentObservation"
+      },
+      "maxItems": 50,
+      "title": "Observations",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "okcanvas-local-document-review-result-v1",
+      "default": "okcanvas-local-document-review-result-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/LocalDocumentReviewStatus"
+    },
+    "summary": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "summary"
+  ],
+  "title": "LocalDocumentReviewResult",
+  "type": "object"
+}

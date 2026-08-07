@@ -1,0 +1,85 @@
+STEP068_BOUNDED_LOCAL_PDF_AND_IMAGE_INPUT_FOUNDATION
+Version: 2.48.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+SOURCE VALIDATION
+- STEP068 acceptance: 30/30 PASS
+- Focused STEP068 tests: 14/14 PASS
+- Historical text/Search/MCP/submission tests: 46/46 PASS
+- Full Python regression: 708/708 PASS
+  - group 1: 162
+  - group 2: 117
+  - group 3: 166
+  - group 4: 133
+  - group 5: 130
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference executable imports: 0
+- External network calls: 0
+- Model calls: 0
+- File Search implementation: false
+
+BOUNDED LOCAL INPUT CONTRACT
+- Agent: local-document-review-agent
+- Input mode: local-attachment-v1
+- Execution path: bounded-local-pdf-image-input-execution-v1
+- Required text instruction: exactly 1 non-empty string
+- Required local attachment: exactly 1 for this Agent
+- Supported media: PDF, PNG, JPEG
+- Maximum attachment bytes: 8,388,608
+- Maximum PDF structural pages: 50
+- Maximum image width/height: 10,000 / 10,000
+- Maximum image pixels: 20,000,000
+- Upload slot TTL: 900 seconds
+- Model: gpt-4.1 only
+- SDK content: input_file or input_image data URL constructed in memory
+- Raw bytes in Product SQLite/Events/Artifacts: false/false/false
+- Remote URLs/provider file IDs/File Search/Vector Stores: disabled/disabled/not implemented/not implemented
+- Multiple attachments: disabled
+- Session/MCP/Handoff/Agent-as-Tool/orchestration composition: disabled
+
+PRODUCT IDENTITIES
+- Agent definition SHA-256: 33dabac1ffa9021a60ded2b2841000a9254fd2dc0912c02e3e165115b31b6ec6
+- Runtime binding SHA-256: fcc6293c507b6d90aea2a44fd48bb70e2f7a3d796ea900190e78b48e375cc9bd
+- Attachment policy canonical SHA-256: 1b5b656d1f81a3ab4d32745f297c2c1944009583715c44f66c49a02312b1e579
+- Multimodal model policy canonical SHA-256: a64b711c54b276c42aa74dbb4e80f8a1a76a08302e019c61c097a636bb900324
+- Attachment runtime aggregate SHA-256: 3540c6f13db47ecf36d28f97a887a936dc2c94cd078824f2d38b7d84a0713d7d
+
+PINNED SDK EXAMPLE SHA-256
+- examples/basic/local_file.py: 9c778baefd9ea58cdf06c2f947fd09bb6025afd721f7a5c2c3399af4e321fc1c
+- examples/basic/local_image.py: 9a32d52ff6016164838d501fd5827a37e30f7903d560827d7f4d0bf0b1e466a5
+
+PRODUCT SOURCE SHA-256
+- attachments/models.py: e6c5af39ce82c9840766a42540b492553b519a895d1c241869e7fa49c4738708
+- attachments/policy.py: a856e8e8950171c62ebb8d155753f374c978274b7dcddac45fbbdb719338f423
+- attachments/model_policy.py: 7b3ec8acc72379df0ed16467f23edbad293dd799acfd7b028aa5bd2708921010
+- attachments/validation.py: 1e01b609273e72e3dfa438b9472f56c7dc265f4998af29a13c11e9bb8c69b6bf
+- attachments/store.py: 8d99eb0d6b5b84e600d38a2f801db04387e129543c397946ca2611ff9501c57c
+- protected_payload/models.py: 2c3af858736e84552912570e34fd20cc4481b6eb439a5f22f49bdbce802a43e7
+- protected_payload/store.py: 7152b195b372632b1aafce49f4bad0f57f016268b876bc95b4c9a0602483d651
+- execution/runtime_binding.py: ef00fbf8b63b50753b680d2c87968f5547fe2ded9f199a05984b70c4e3c94d9d
+- execution/openai_gateway.py: d6085576048d58842a459006284ebe469daa6fa1a4ac83612c9c58a849293343
+- execution/service.py: 982c2891815ccedf68ec71557d1a483cdd344d255f3c07498b24f591e0ba0cc6
+- run_submission/service.py: 607ed0a21cc99e371fcd69296ffdf80bad4dd4985e52dc574320ad62f68a7a89
+- run_submission/execution.py: e1555ffad5effe15fc15a6877f85bfd1d1b211b4b1d1116c555098523d246623
+- run_submission/lifecycle.py: 2a0f5a77f83296c2e9ca0cd184a6bb006d699fa6f0bec7e2f7cef7aefd717c2e
+- control_api/app.py: b32de825e8e484732df4a5316b17f2ab64e2d7ff0be9927db315659693b1c646
+
+ZIP RE-EXTRACTION VALIDATION
+- Candidate ZIP SHA-256: 102a88ab06e83d8c22cfb80184b3d8e60e06599e6f58e28d46ae9f1ebd03c36b
+- Canonical ZIP root: 1
+- ZIP entries: 2,894
+- Forbidden files: 0
+- Extracted STEP068 acceptance: 30/30 PASS
+- Extracted full Python regression: 708/708 PASS
+  - group 1: 162
+  - group 2: 117
+  - group 3: 166
+  - group 4: 133
+  - group 5: 130
+- Extracted Node tests: 14/14 PASS (inside acceptance)
+- Extracted Reference integrity: 4/4 PASS (inside acceptance)
+- Candidate and final package are expected to differ only in this completed validation record.

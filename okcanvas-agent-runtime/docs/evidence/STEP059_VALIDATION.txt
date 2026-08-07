@@ -1,0 +1,85 @@
+STEP059_BOUNDED_PROJECT_READONLY_CODING_WORKFLOW
+Version: 2.39.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+SOURCE VALIDATION
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- npm pack dry-run: PASS, 23 package files, 0 runtime dependencies
+- Python pytest: 574/574 PASS across 175 test files
+- focused project/tool/environment/baseline regression: 44/44 PASS
+- STEP059 deterministic acceptance: 16/16 PASS, cleanup COMPLETED once
+- STEP058: 18/18 PASS
+- STEP057: 25/25 PASS
+- STEP056C: 25/25 PASS
+- STEP056B: 25/25 PASS
+- STEP056: 21/21 PASS
+- STEP055: 35/35 PASS
+- STEP054: 30/30 PASS
+- STEP053: 30/30 PASS
+- STEP052: 25/25 PASS
+- STEP051: 25/25 PASS
+- STEP050: 31/31 PASS
+- STEP049: 33/33 PASS
+- STEP048: 32/32 PASS
+- STEP047: 29/29 PASS
+- STEP046: 27/27 PASS
+- STEP045: 28/28 PASS
+- STEP044: 23/23 PASS
+- STEP043: 29/29 PASS
+- STEP042: 29/29 PASS
+- STEP041: 24/24 PASS
+- STEP039: 20/20 PASS
+- STEP038: 24/24 PASS with 3 registered Function Tools
+- STEP030A: 8/8 PASS, 68 Windows launchers, 0 violations
+- immutable Reference integrity: 4/4 PASS
+- direct /reference imports: 0
+
+STEP059 ACCEPTANCE DETAILS
+- actual fixture files considered: 3
+- actual bytes considered: 178
+- evidence displayed: src/router.py:1-3
+- excluded node_modules sentinel unread
+- workspace bytes unchanged
+- shell/network/write disabled
+- Product Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/1/1/12/1/0
+- protected payload files: 0
+
+Candidate ZIP and self-extracted release validation are appended after they pass.
+
+CANDIDATE ZIP VALIDATION
+- archive canonical root: 1 (`okcanvas-agent-runtime`)
+- archive entries: 2,703
+- forbidden local/runtime files: 0
+- immutable Reference `.vscode` files retained: 2
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- npm pack dry-run: PASS
+- Python pytest: 574/574 PASS across all 175 test files
+- STEP059: 16/16 PASS
+- STEP058: 18/18 PASS
+- STEP057: 25/25 PASS
+- integrated STEP045: 28/28 PASS
+- STEP038: 24/24 PASS, registry count 3
+- STEP030A: 8/8 PASS, 68 launchers, 0 violations
+- Reference integrity: 4/4 PASS
+- direct `/reference` imports: 0
+
+SELF-EXTRACTED FINAL TEST ZIP VALIDATION
+- archive entries: 2,703
+- Python compileall: PASS
+- TypeScript build: PASS
+- Node tests: 13/13 PASS
+- Python pytest: 574/574 PASS across all 175 test files
+- STEP059: 16/16 PASS
+- STEP058: 18/18 PASS
+- STEP057: 25/25 PASS
+- integrated STEP045: 28/28 PASS
+- STEP038: 24/24 PASS, registry count 3
+- STEP030A: 8/8 PASS, 68 launchers, 0 violations
+- Reference integrity: 4/4 PASS
+- direct `/reference` imports: 0
+
+The release ZIP is rebuilt only to include this final validation record. Entry-level SHA comparison must show that `docs/evidence/STEP059_VALIDATION.txt` is the sole changed entry.

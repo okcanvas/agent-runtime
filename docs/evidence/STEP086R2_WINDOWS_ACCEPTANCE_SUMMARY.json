@@ -1,0 +1,17 @@
+{
+  "architecture": "40/40 PASS",
+  "connector_contract": "11/11 PASS",
+  "distribution": "14/14 PASS",
+  "evidence_origin": "USER_REPORTED_REAL_WINDOWS_RUN",
+  "execution_plane": "13/13 PASS",
+  "focused_regression": "63 passed, 2 expected skipped",
+  "launcher_registry": "7/7 PASS",
+  "passed_checks": 15,
+  "schema_version": "okcanvas-agent-platform-retained-windows-evidence-v1",
+  "source_file": "docs/evidence/STEP086R2_WINDOWS_ACCEPTANCE_USER_LOG.txt",
+  "source_sha256": "5d29fe463aeb58a67f1cdc6b1911db99f03b12deaab6cf9da083b7ace6d67ed2",
+  "state": "PASSED",
+  "step": "STEP086R2_DELEGATED_ROLE_HEADER_AND_EXTERNAL_CONNECTOR_CONTRACT_CLOSURE",
+  "total_checks": 15,
+  "version": "2.66.2"
+}

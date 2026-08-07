@@ -1,0 +1,52 @@
+{
+  "schema_version": "okcanvas-step075-windows-live-failure-summary-v1",
+  "step": "STEP075_PRODUCT_OWNED_READ_ONLY_SANDBOX_WORKSPACE_AGENT_V1",
+  "version": "2.55.0",
+  "state": "FAILED",
+  "deterministic_acceptance": {
+    "passed_checks": 28,
+    "total_checks": 28
+  },
+  "live_acceptance": {
+    "passed_checks": 13,
+    "total_checks": 28
+  },
+  "terminal_status": "FAILED",
+  "model": "gpt-4.1",
+  "model_calls": 1,
+  "tool_calls_completed": 0,
+  "event_types": [
+    "run.created",
+    "run.started",
+    "agent.definition.resolved",
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "tool.started",
+    "agent.failed",
+    "run.failed",
+    "payload.retention.applied"
+  ],
+  "acceptance_workspace_state": "PRESERVED",
+  "acceptance_workspace_relative_id": "step075/20260801T210028648817Z-3f1d8fe9",
+  "product_database_relative_path": "databases/product.sqlite3",
+  "incorrect_diagnostic_path_observed": "database/product.sqlite3",
+  "run_id": "run_1ec51d3e8a76437ca0abea3a7c5d4a27",
+  "submission_id": "submission_9826efb42cf4454a87ba444b3c63f9d1",
+  "task_id": "task_e7492a20f5eb42f8b79da14224ddfdb5",
+  "confirmed_facts": [
+    "The first model turn completed.",
+    "The bound Sandbox Function Tool started but did not complete.",
+    "No final Artifact was created.",
+    "The failed payload and acceptance workspace were retained.",
+    "The original live summary did not expose the exact SandboxDockerError code."
+  ],
+  "code_confirmed_defect": {
+    "file": "src/okcanvas_agent_runtime/sandbox_runtime/read_only_workspace.py",
+    "old_check": "Docker HostConfig.Tmpfs value compared as one exact string",
+    "impact": "Equivalent Docker normalization of option order, size units, or mode 0755/755 could be rejected as CONTAINER_SECURITY_MISMATCH",
+    "actual_failure_code_from_preserved_database": "NOT_YET_RETRIEVED"
+  },
+  "secrets_included": false,
+  "raw_workspace_content_included": false
+}

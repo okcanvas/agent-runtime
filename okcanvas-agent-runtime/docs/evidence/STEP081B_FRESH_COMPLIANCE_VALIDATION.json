@@ -1,0 +1,39 @@
+{
+  "actual_changed_file_count": 1222,
+  "checks": {
+    "all_clauses_traced": true,
+    "all_constitution_gates_closed": true,
+    "architecture_passed": true,
+    "baseline_inventory_self_hash_exact": true,
+    "baseline_zip_exact": true,
+    "changed_files_exact": true,
+    "execution_override_recorded": true,
+    "fresh_zip_passed": true,
+    "full_python_passed": true,
+    "identity_exact": true,
+    "installation_passed": true,
+    "issues_complete": true,
+    "non_python_passed": true,
+    "record_self_hash_exact": true,
+    "windows_only_pending": true,
+    "windows_subprocess_portability_passed": true
+  },
+  "declared_changed_file_count": 1222,
+  "passed_checks": 16,
+  "schema_version": "okcanvas-step081b-compliance-validation-v1",
+  "stale_declared_changed_files": [],
+  "state": "PASSED",
+  "summary": {
+    "applied_clause_count": 127,
+    "changed_file_count": 1222,
+    "constitution_sha256": "262b1db8549d7de5baf09307336b3ad5da07b7397f70cc2d6f5a1374eeb08bfa",
+    "gate_result_count": 32,
+    "pending_external_gate_count": 1,
+    "state": "DETERMINISTIC_COMPLETE_WINDOWS_PENDING",
+    "step": "STEP081B_LIVE_ARCHITECTURE_VALIDATOR_PROCESS_ISOLATION_AND_DIAGNOSTIC_EVIDENCE",
+    "traceability_entry_count": 127,
+    "version": "2.61.2"
+  },
+  "total_checks": 16,
+  "unregistered_changed_files": []
+}

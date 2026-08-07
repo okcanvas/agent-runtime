@@ -1,0 +1,181 @@
+{
+  "checkpointed_at": "2026-08-04T00:37:46.439934Z",
+  "chunk_size": 30,
+  "chunks": [
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 98
+      },
+      "end_file_index": 29,
+      "file_count": 30,
+      "first_file": "tests/test_acceptance_workspace.py",
+      "last_file": "tests/test_encrypted_runstate_store.py",
+      "log_path": "docs/evidence/step082b-local/python-regression/chunk-000-029.txt",
+      "return_code": 0,
+      "start_file_index": 0,
+      "summary": [
+        "98",
+        ""
+      ],
+      "timed_out": false
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 82
+      },
+      "end_file_index": 59,
+      "file_count": 30,
+      "first_file": "tests/test_evaluation_service.py",
+      "last_file": "tests/test_openai_gateway_contract.py",
+      "log_path": "docs/evidence/step082b-local/python-regression/chunk-030-059.txt",
+      "return_code": 0,
+      "start_file_index": 30,
+      "summary": [
+        "82",
+        ""
+      ],
+      "timed_out": false
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 134
+      },
+      "end_file_index": 89,
+      "file_count": 30,
+      "first_file": "tests/test_operations_console_api.py",
+      "last_file": "tests/test_step002_live_acceptance_harness.py",
+      "log_path": "docs/evidence/step082b-local/python-regression/chunk-060-089.txt",
+      "return_code": 0,
+      "start_file_index": 60,
+      "summary": [
+        "134",
+        ""
+      ],
+      "timed_out": false
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 66
+      },
+      "end_file_index": 119,
+      "file_count": 30,
+      "first_file": "tests/test_step002c_acceptance_evidence.py",
+      "last_file": "tests/test_step024_business_agent_baseline.py",
+      "log_path": "docs/evidence/step082b-local/python-regression/chunk-090-119.txt",
+      "return_code": 0,
+      "start_file_index": 90,
+      "summary": [
+        "66",
+        ""
+      ],
+      "timed_out": false
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 97
+      },
+      "end_file_index": 149,
+      "file_count": 30,
+      "first_file": "tests/test_step024b_windows_live_acceptance_evidence.py",
+      "last_file": "tests/test_step047_sqlite_session_native_handoff_composition_baseline.py",
+      "log_path": "docs/evidence/step082b-local/python-regression/chunk-120-149.txt",
+      "return_code": 0,
+      "start_file_index": 120,
+      "summary": [
+        "97",
+        ""
+      ],
+      "timed_out": false
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 141
+      },
+      "end_file_index": 179,
+      "file_count": 30,
+      "first_file": "tests/test_step048_sqlite_session_native_guardrail_composition_baseline.py",
+      "last_file": "tests/test_step066_remote_mcp_streamable_http_mvp_foundation_baseline.py",
+      "log_path": "docs/evidence/step082b-local/python-regression/chunk-150-179.txt",
+      "return_code": 0,
+      "start_file_index": 150,
+      "summary": [
+        "141",
+        ""
+      ],
+      "timed_out": false
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 195
+      },
+      "end_file_index": 209,
+      "file_count": 30,
+      "first_file": "tests/test_step067_hosted_web_search_foundation.py",
+      "last_file": "tests/test_step080a_acceptance_launcher_registry.py",
+      "log_path": "docs/evidence/step082b-local/python-regression/chunk-180-209.txt",
+      "return_code": 0,
+      "start_file_index": 180,
+      "summary": [
+        "195",
+        ""
+      ],
+      "timed_out": false
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 114
+      },
+      "end_file_index": 230,
+      "file_count": 21,
+      "first_file": "tests/test_step080a_architecture_constitution_and_compliance_gates.py",
+      "last_file": "tests/test_windows_launcher_project_venv_contract.py",
+      "log_path": "docs/evidence/step082b-local/python-regression/chunk-210-230.txt",
+      "return_code": 0,
+      "start_file_index": 210,
+      "summary": [
+        "114",
+        ""
+      ],
+      "timed_out": false
+    }
+  ],
+  "completed_at": "2026-08-04T00:37:46.439957Z",
+  "completed_chunk_count": 8,
+  "error_tests": 0,
+  "expected_chunk_count": 8,
+  "failed_tests": 0,
+  "passed_tests": 927,
+  "per_chunk_timeout_seconds": 300,
+  "schema_version": "okcanvas-step082b-python-regression-v1",
+  "skipped_tests": 0,
+  "started_at": "2026-08-04T00:34:09.821379Z",
+  "state": "PASSED",
+  "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+  "test_file_count": 231,
+  "total_tests": 927,
+  "version": "2.62.2"
+}

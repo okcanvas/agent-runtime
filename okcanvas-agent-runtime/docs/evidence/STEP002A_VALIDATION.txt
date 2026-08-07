@@ -1,0 +1,111 @@
+STEP002A_LIVE_ACCEPTANCE_HARNESS_HARDENING VALIDATION
+Date: 2026-07-28
+
+[1] compileall
+PASS
+
+[2] pytest
+..........................................                               [100%]
+42 passed in 0.27s
+
+[3] reference integrity
+PASS openai-agents-python files=1419 bytes=17945765 tree_sha256=65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a
+PASS temporal-openai-agents-demos files=36 bytes=774434 tree_sha256=0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a
+PASS openai-cs-agents-demo files=43 bytes=1409011 tree_sha256=121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d
+PASS openai-agents-streaming-api files=38 bytes=246327 tree_sha256=d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9
+PASS reference baseline: 4/4
+
+[4] intentional fixture defect
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________________ test_quantity_is_applied_to_each_line _____________________
+
+    def test_quantity_is_applied_to_each_line() -> None:
+        lines = [
+            {"unit_price": 10_000, "quantity": 2},
+            {"unit_price": 5_000, "quantity": 1},
+        ]
+>       assert calculate_total(lines) == 25_000
+E       AssertionError: assert 15000 == 25000
+E        +  where 15000 = calculate_total([{'quantity': 2, 'unit_price': 10000}, {'quantity': 1, 'unit_price': 5000}])
+
+fixtures/codex_readonly_repo/tests/test_pricing.py:9: AssertionError
+=========================== short test summary info ============================
+FAILED fixtures/codex_readonly_repo/tests/test_pricing.py::test_quantity_is_applied_to_each_line - AssertionError: assert 15000 == 25000
+ +  where 15000 = calculate_total([{'quantity': 2, 'unit_price': 10000}, {'quantity': 1, 'unit_price': 5000}])
+1 failed in 0.05s
+PASS: intentional quantity defect reproduced; tree_sha256=8c1023ce21afe7fc4b6cef0a0ed835a8e811424756debb5e9c3fe5f5fc3967d0; files=7
+
+[5] runtime info
+{
+  "arbitrary_shell_enabled": false,
+  "codex_integration_stability": "experimental-upstream",
+  "codex_live_accepted": false,
+  "codex_readonly_implemented": true,
+  "handoffs_enabled": false,
+  "live_call_requires_explicit_opt_in": true,
+  "mcp_enabled": false,
+  "model_calls_supported": true,
+  "openai_agents_version": "0.19.0",
+  "project": "okcanvas-agent-runtime",
+  "specification_root": "specs",
+  "step": "STEP002A_LIVE_ACCEPTANCE_HARNESS_HARDENING",
+  "version": "0.2.1",
+  "workspace_write_enabled": false
+}
+
+[6] codex doctor without SDK/CLI/key/models
+{
+  "agent_model_configured": false,
+  "api_key_configured": false,
+  "codex_cli_installed": false,
+  "codex_cli_path": null,
+  "codex_cli_version": null,
+  "codex_model_configured": false,
+  "experimental_codex_importable": false,
+  "issues": [
+    {
+      "code": "SDK_NOT_INSTALLED",
+      "message": "openai-agents==0.19.0 is not installed"
+    },
+    {
+      "code": "CODEX_CLI_NOT_INSTALLED",
+      "message": "Codex CLI was not found; set CODEX_PATH or add codex to PATH"
+    },
+    {
+      "code": "AGENT_MODEL_NOT_CONFIGURED",
+      "message": "Agent model is not configured"
+    },
+    {
+      "code": "CODEX_MODEL_NOT_CONFIGURED",
+      "message": "Codex model is not configured"
+    },
+    {
+      "code": "API_KEY_MISSING",
+      "message": "OPENAI_API_KEY is not configured"
+    }
+  ],
+  "ready": false,
+  "sdk_installed": false,
+  "sdk_version": null
+}
+EXPECTED_EXIT=3
+
+[7] live acceptance without explicit gate
+Refusing live execution: set OKCANVAS_STEP002_LIVE_ACCEPTANCE=1 and all required model credentials
+EXPECTED_EXIT=2
+
+[8] version consistency
+{'pyproject': '0.2.1', '__version__': '0.2.1', 'runtime_info': '0.2.1'}
+PASS
+
+[9] source packaging policy
+PASS
+
+[10] pre-final ZIP re-extraction validation
+compileall: PASS
+pytest: 42 passed
+reference integrity: 4/4 PASS
+.env.local.cmd excluded: PASS
+docs/evidence/step002-live excluded: PASS
+.env.local.cmd.example retained: PASS

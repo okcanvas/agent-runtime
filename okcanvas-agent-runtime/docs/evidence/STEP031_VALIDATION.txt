@@ -1,0 +1,28 @@
+STEP031_COMMERCE_SNAPSHOT_BOUNDED_QUANTITIES
+Version: 2.11.0
+Status: WINDOWS_LIVE_ACCEPTED
+Reported local date: 2026-07-30
+
+Deterministic validation
+- STEP031: 19/19 PASS, cleanup COMPLETED.
+- Five invalid quantity cases returned HTTP 502 / COMMERCE_SNAPSHOT_INVALID / retryable=false.
+- Source reads 5, writes 0.
+- Product/Evaluation counts, Artifacts, protected payloads, and model calls remained zero.
+
+Windows live evidence
+- command: sh_run_step031_acceptance
+- state: PASSED
+- all 19 checks true
+- case_count: 5
+- max_inventory_unit_value: 45035996273704
+- source.read_count: 5
+- source.write_count: 0
+- all final Product/Evaluation counts: 0
+- artifact_count: 0
+- protected_payload_file_count: 0
+- gateway_call_count: 0
+- cleanup_state: COMPLETED
+- compact evidence: docs/evidence/STEP031_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json
+
+Observation
+- Starlette/TestClient printed a deprecation warning; Product state and acceptance outcome were unaffected.

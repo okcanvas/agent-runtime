@@ -1,0 +1,2007 @@
+{
+  "architecture_validation": {
+    "checks": {
+      "admin_route_inventory_exact": true,
+      "all_legacy_files_relocated": true,
+      "client_to_runtime_absent": true,
+      "compatibility_alias_metadata_current": true,
+      "compatibility_alias_targets_complete": true,
+      "coverage_root_packages_exact": true,
+      "declarative_module_references_current": true,
+      "declarative_path_references_current": true,
+      "dependency_direction_violations_absent": true,
+      "eager_import_cycles_absent": true,
+      "executable_legacy_path_coupling_absent": true,
+      "hatch_root_packages_exact": true,
+      "identity_exact": true,
+      "internal_import_targets_complete": true,
+      "legacy_src_package_absent": true,
+      "other_http_route_inventory_exact": true,
+      "physical_manifest_hash_valid": true,
+      "physical_manifest_identity_exact": true,
+      "physical_module_inventory_current": true,
+      "project_root_path_sot_exact": true,
+      "protocol_to_runtime_absent": true,
+      "pytest_root_import_path_exact": true,
+      "python_ast_parse_clean": true,
+      "relocated_resources_byte_identical": true,
+      "relocation_manifest_hash_valid": true,
+      "relocation_manifest_identity_exact": true,
+      "required_root_packages_present": true,
+      "route_method_path_duplicates_absent": true,
+      "router_registration_evidence_exact": true,
+      "runtime_info_feature_groups_exact": true,
+      "runtime_module_origins_exact": true,
+      "service_route_inventory_exact": true,
+      "source_inventory_first_level_exact": true,
+      "source_inventory_hash_valid": true,
+      "source_inventory_identity_exact": true,
+      "source_inventory_resources_exact": true,
+      "transport_app_state_reads_absent": true,
+      "transport_concrete_authority_absent": true,
+      "transport_to_client_absent": true,
+      "websocket_runtime_disabled": true
+    },
+    "details": {
+      "alias_count": 301,
+      "alias_target_failures": [],
+      "ast_failures": [],
+      "canonical_module_count": 339,
+      "declarative_module_reference_failures": [],
+      "declarative_path_reference_failures": [],
+      "dependency_direction_violations": [],
+      "eager_import_edge_count": 798,
+      "eager_missing_imports": [],
+      "executable_legacy_path_coupling": [],
+      "import_cycles": [],
+      "import_edge_count": 805,
+      "legacy_first_level_entry_count": 65,
+      "legacy_python_file_count": 262,
+      "legacy_resource_file_count": 10,
+      "legacy_source_file_count": 272,
+      "missing_imports": [],
+      "physical_manifest_drift": [],
+      "project_root_contract_failures": [],
+      "relocation_target_failures": [],
+      "resource_hash_failures": [],
+      "route_inventory": {
+        "admin_route_count": 54,
+        "duplicates": [],
+        "http_route_count": 98,
+        "missing_runtime_v1_routes": [],
+        "object_origins": {
+          "admin_routes": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/admin/rest/routes.py",
+          "create_app": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/application.py",
+          "service_routes": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/service/rest/routes.py"
+        },
+        "other_http_route_count": 5,
+        "router_registration_evidence": [
+          {
+            "duplicate_method_paths": [],
+            "expected_route_count": 39,
+            "fallback_applied": false,
+            "missing_after_include": [],
+            "missing_after_reconciliation": [],
+            "owner": "service",
+            "registered_route_count": 39
+          },
+          {
+            "duplicate_method_paths": [],
+            "expected_route_count": 54,
+            "fallback_applied": false,
+            "missing_after_include": [],
+            "missing_after_reconciliation": [],
+            "owner": "admin",
+            "registered_route_count": 54
+          }
+        ],
+        "routes": [
+          {
+            "method": "GET",
+            "path": "/console"
+          },
+          {
+            "method": "GET",
+            "path": "/console/"
+          },
+          {
+            "method": "GET",
+            "path": "/healthz"
+          },
+          {
+            "method": "GET",
+            "path": "/runner"
+          },
+          {
+            "method": "GET",
+            "path": "/runner/"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/agent-definitions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/agent-definitions/{agent_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/assistant/routes"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/assistant/run-submissions/preflight"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/assistant/sessions"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/commerce-snapshot-ingress/preflight"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/evaluation-baselines"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-baselines/{baseline_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-cases"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-cases/{case_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-comparisons"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/evaluation-suite-runs"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-suite-runs/{suite_run_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-suites"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluation-suites/{suite_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluations"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/evaluations/{evaluation_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/local-attachments"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/operations/summary"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/organization/directory/search"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/organization/glossary/resolve"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/organization/knowledge/search"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/protected-payloads/cleanup-expired"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/run-submission-policy"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/preflight"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/reconcile-orphaned-running"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/reconcile-terminal-outcomes"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/recover-stale"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/run-submissions/{submission_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/{submission_id}/confirm"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/run-submissions/{submission_id}/prepare-approval"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/runs"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/artifact"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/runs/{run_id}/cancel"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/runs/{run_id}/evaluations"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/events"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/events/stream"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/invocations"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/outcome"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runs/{run_id}/sdk-stream"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/runtime-scenarios"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/agent-definitions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/agent-definitions/{agent_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/assistant/routes"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/assistant/run-submissions/preflight"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/assistant/sessions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/capabilities"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/error-contract"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/local-attachments"
+          },
+          {
+            "method": "DELETE",
+            "path": "/v1/service/local-attachments/{attachment_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/organization/directory/search"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/organization/glossary/resolve"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/organization/knowledge/search"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/project-snapshots"
+          },
+          {
+            "method": "DELETE",
+            "path": "/v1/service/project-snapshots/{project_snapshot_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/run-submissions"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/run-submissions/preflight"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/run-submissions/{submission_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/run-submissions/{submission_id}/confirm"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/run-submissions/{submission_id}/prepare-approval"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/artifacts"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/artifacts/{artifact_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/runs/{run_id}/cancel"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/events"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/events/stream"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/invocations"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/runs/{run_id}/outcome"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/sandbox-runtime"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/sessions"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/sessions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/sessions/{session_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/sessions/{session_id}/clear"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/skills"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/skills/{skill_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/tool-approvals"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/service/tool-approvals/{approval_id}/decision"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/tool-approvals/{approval_id}/inbox"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/service/whoami"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/sessions"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/sessions"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/sessions/{session_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/sessions/{session_id}/clear"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/sessions/{session_id}/rotate-history-key"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tasks"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tasks/{task_id}"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tool-approvals"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tool-approvals/{approval_id}"
+          },
+          {
+            "method": "POST",
+            "path": "/v1/tool-approvals/{approval_id}/decision"
+          },
+          {
+            "method": "GET",
+            "path": "/v1/tool-approvals/{approval_id}/inbox"
+          }
+        ],
+        "runtime": {
+          "admin_route_count": 54,
+          "duplicates": [],
+          "http_route_count": 98,
+          "object_origins": {
+            "admin_routes": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/admin/rest/routes.py",
+            "create_app": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/application.py",
+            "service_routes": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/service/rest/routes.py"
+          },
+          "other_http_route_count": 5,
+          "router_registration_evidence": [
+            {
+              "duplicate_method_paths": [],
+              "expected_route_count": 39,
+              "fallback_applied": false,
+              "missing_after_include": [],
+              "missing_after_reconciliation": [],
+              "owner": "service",
+              "registered_route_count": 39
+            },
+            {
+              "duplicate_method_paths": [],
+              "expected_route_count": 54,
+              "fallback_applied": false,
+              "missing_after_include": [],
+              "missing_after_reconciliation": [],
+              "owner": "admin",
+              "registered_route_count": 54
+            }
+          ],
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/console"
+            },
+            {
+              "method": "GET",
+              "path": "/console/"
+            },
+            {
+              "method": "GET",
+              "path": "/healthz"
+            },
+            {
+              "method": "GET",
+              "path": "/runner"
+            },
+            {
+              "method": "GET",
+              "path": "/runner/"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/agent-definitions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/agent-definitions/{agent_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/assistant/routes"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/assistant/run-submissions/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/assistant/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/commerce-snapshot-ingress/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/evaluation-baselines"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-baselines/{baseline_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-cases"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-cases/{case_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-comparisons"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/evaluation-suite-runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suite-runs/{suite_run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suites"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suites/{suite_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluations/{evaluation_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/local-attachments"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/operations/summary"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/organization/directory/search"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/organization/glossary/resolve"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/organization/knowledge/search"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/protected-payloads/cleanup-expired"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/run-submission-policy"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/reconcile-orphaned-running"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/reconcile-terminal-outcomes"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/recover-stale"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/run-submissions/{submission_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/{submission_id}/confirm"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/{submission_id}/prepare-approval"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/artifact"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs/{run_id}/cancel"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs/{run_id}/evaluations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/events"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/events/stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/invocations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/outcome"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/sdk-stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runtime-scenarios"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/agent-definitions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/agent-definitions/{agent_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/assistant/routes"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/assistant/run-submissions/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/assistant/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/capabilities"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/error-contract"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/local-attachments"
+            },
+            {
+              "method": "DELETE",
+              "path": "/v1/service/local-attachments/{attachment_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/organization/directory/search"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/organization/glossary/resolve"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/organization/knowledge/search"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/project-snapshots"
+            },
+            {
+              "method": "DELETE",
+              "path": "/v1/service/project-snapshots/{project_snapshot_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/run-submissions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/preflight"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/run-submissions/{submission_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/{submission_id}/confirm"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/{submission_id}/prepare-approval"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/artifacts"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/artifacts/{artifact_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/runs/{run_id}/cancel"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/events"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/events/stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/invocations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/outcome"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sandbox-runtime"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sessions/{session_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/sessions/{session_id}/clear"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/skills"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/skills/{skill_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/tool-approvals"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/tool-approvals/{approval_id}/decision"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/tool-approvals/{approval_id}/inbox"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/whoami"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/sessions/{session_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions/{session_id}/clear"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions/{session_id}/rotate-history-key"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tasks"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tasks/{task_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals/{approval_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/tool-approvals/{approval_id}/decision"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals/{approval_id}/inbox"
+            }
+          ],
+          "runtime_versions": {
+            "fastapi": "0.128.2",
+            "pydantic": "2.13.4",
+            "python": "3.13.5",
+            "starlette": "0.50.0"
+          },
+          "service_route_count": 39,
+          "source_identity": {
+            "all_under_project_root": true,
+            "modules": [
+              {
+                "module": "okcanvas_agent_runtime",
+                "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/__init__.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_runtime.bootstrap.application",
+                "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/application.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_runtime.bootstrap.router_registration",
+                "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/router_registration.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_runtime.transport.admin.rest.routes",
+                "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/admin/rest/routes.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_runtime.transport.service.rest.routes",
+                "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/service/rest/routes.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_protocols",
+                "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_protocols/__init__.py",
+                "under_project_root": true
+              },
+              {
+                "module": "okcanvas_agent_clients",
+                "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_clients/__init__.py",
+                "under_project_root": true
+              }
+            ],
+            "project_root": "/mnt/data/work_step086/okcanvas-agent-runtime",
+            "sys_path_head": [
+              "/mnt/data/work_step086/okcanvas-agent-runtime",
+              "/mnt/data/work_step086/okcanvas-agent-runtime/scripts",
+              "/opt/pyvenv-overrides",
+              "/opt/pyvenv-libs",
+              "/opt/python-hooks",
+              "/usr/lib/python313.zip",
+              "/usr/lib/python3.13",
+              "/usr/lib/python3.13/lib-dynload"
+            ]
+          },
+          "websocket_route_count": 0
+        },
+        "runtime_versions": {
+          "fastapi": "0.128.2",
+          "pydantic": "2.13.4",
+          "python": "3.13.5",
+          "starlette": "0.50.0"
+        },
+        "service_route_count": 39,
+        "source": {
+          "admin_route_count": 54,
+          "duplicates": [],
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/v1/agent-definitions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/agent-definitions/{agent_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/assistant/routes"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/assistant/run-submissions/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/assistant/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/commerce-snapshot-ingress/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/evaluation-baselines"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-baselines/{baseline_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-cases"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-cases/{case_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-comparisons"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/evaluation-suite-runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suite-runs/{suite_run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suites"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluation-suites/{suite_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/evaluations/{evaluation_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/local-attachments"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/operations/summary"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/organization/directory/search"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/organization/glossary/resolve"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/organization/knowledge/search"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/protected-payloads/cleanup-expired"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/run-submission-policy"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/reconcile-orphaned-running"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/reconcile-terminal-outcomes"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/recover-stale"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/run-submissions/{submission_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/{submission_id}/confirm"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/run-submissions/{submission_id}/prepare-approval"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/artifact"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs/{run_id}/cancel"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/runs/{run_id}/evaluations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/events"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/events/stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/invocations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/outcome"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runs/{run_id}/sdk-stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/runtime-scenarios"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/agent-definitions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/agent-definitions/{agent_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/assistant/routes"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/assistant/run-submissions/preflight"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/assistant/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/capabilities"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/error-contract"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/local-attachments"
+            },
+            {
+              "method": "DELETE",
+              "path": "/v1/service/local-attachments/{attachment_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/organization/directory/search"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/organization/glossary/resolve"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/organization/knowledge/search"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/project-snapshots"
+            },
+            {
+              "method": "DELETE",
+              "path": "/v1/service/project-snapshots/{project_snapshot_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/run-submissions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/preflight"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/run-submissions/{submission_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/{submission_id}/confirm"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/run-submissions/{submission_id}/prepare-approval"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/artifacts"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/artifacts/{artifact_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/runs/{run_id}/cancel"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/events"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/events/stream"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/invocations"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/runs/{run_id}/outcome"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sandbox-runtime"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/sessions/{session_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/sessions/{session_id}/clear"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/skills"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/skills/{skill_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/tool-approvals"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/service/tool-approvals/{approval_id}/decision"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/tool-approvals/{approval_id}/inbox"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/service/whoami"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/sessions"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/sessions/{session_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions/{session_id}/clear"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/sessions/{session_id}/rotate-history-key"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tasks"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tasks/{task_id}"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals/{approval_id}"
+            },
+            {
+              "method": "POST",
+              "path": "/v1/tool-approvals/{approval_id}/decision"
+            },
+            {
+              "method": "GET",
+              "path": "/v1/tool-approvals/{approval_id}/inbox"
+            }
+          ],
+          "service_route_count": 39,
+          "websocket_decorators": []
+        },
+        "source_identity": {
+          "all_under_project_root": true,
+          "modules": [
+            {
+              "module": "okcanvas_agent_runtime",
+              "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/__init__.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_runtime.bootstrap.application",
+              "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/application.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_runtime.bootstrap.router_registration",
+              "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/router_registration.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_runtime.transport.admin.rest.routes",
+              "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/admin/rest/routes.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_runtime.transport.service.rest.routes",
+              "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/service/rest/routes.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_protocols",
+              "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_protocols/__init__.py",
+              "under_project_root": true
+            },
+            {
+              "module": "okcanvas_agent_clients",
+              "origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_clients/__init__.py",
+              "under_project_root": true
+            }
+          ],
+          "project_root": "/mnt/data/work_step086/okcanvas-agent-runtime",
+          "sys_path_head": [
+            "/mnt/data/work_step086/okcanvas-agent-runtime",
+            "/mnt/data/work_step086/okcanvas-agent-runtime/scripts",
+            "/opt/pyvenv-overrides",
+            "/opt/pyvenv-libs",
+            "/opt/python-hooks",
+            "/usr/lib/python313.zip",
+            "/usr/lib/python3.13",
+            "/usr/lib/python3.13/lib-dynload"
+          ]
+        },
+        "unexpected_runtime_v1_routes": [],
+        "websocket_route_count": 0
+      },
+      "runtime_info": {
+        "field_count": 890,
+        "group_paths": [
+          "okcanvas_agent_runtime/core/runtime_info/foundation.py",
+          "okcanvas_agent_runtime/core/runtime_info/product.py",
+          "okcanvas_agent_runtime/core/runtime_info/agent_session.py",
+          "okcanvas_agent_runtime/core/runtime_info/model.py",
+          "okcanvas_agent_runtime/core/runtime_info/clients.py",
+          "okcanvas_agent_runtime/core/runtime_info/validation.py"
+        ],
+        "missing_group_paths": []
+      },
+      "transport_app_state_reads": []
+    },
+    "passed_checks": 40,
+    "schema_version": "okcanvas-step081-architecture-validation-v1",
+    "state": "PASSED",
+    "step": "STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION",
+    "total_checks": 40,
+    "version": "2.61.4"
+  },
+  "architecture_validation_process": {
+    "completed": true,
+    "json_parsed": true,
+    "parse_error": null,
+    "returncode": 0,
+    "schema_version": "okcanvas-json-subprocess-validator-v1",
+    "script": "scripts/validate_step081_architecture.py",
+    "stderr": "",
+    "stdout": "       \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/preflight\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}/confirm\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}/prepare-approval\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/artifacts\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/artifacts/{artifact_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/runs/{run_id}/cancel\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/events\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/events/stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/invocations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/outcome\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sandbox-runtime\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sessions/{session_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/sessions/{session_id}/clear\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/skills\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/skills/{skill_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/tool-approvals\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/tool-approvals/{approval_id}/decision\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/tool-approvals/{approval_id}/inbox\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/whoami\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/sessions/{session_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions/{session_id}/clear\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions/{session_id}/rotate-history-key\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tasks\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tasks/{task_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals/{approval_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/tool-approvals/{approval_id}/decision\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals/{approval_id}/inbox\"\n          }\n        ],\n        \"runtime_versions\": {\n          \"fastapi\": \"0.128.2\",\n          \"pydantic\": \"2.13.4\",\n          \"python\": \"3.13.5\",\n          \"starlette\": \"0.50.0\"\n        },\n        \"service_route_count\": 39,\n        \"source_identity\": {\n          \"all_under_project_root\": true,\n          \"modules\": [\n            {\n              \"module\": \"okcanvas_agent_runtime\",\n              \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/__init__.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_runtime.bootstrap.application\",\n              \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/application.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_runtime.bootstrap.router_registration\",\n              \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/router_registration.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_runtime.transport.admin.rest.routes\",\n              \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/admin/rest/routes.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_runtime.transport.service.rest.routes\",\n              \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/service/rest/routes.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_protocols\",\n              \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_protocols/__init__.py\",\n              \"under_project_root\": true\n            },\n            {\n              \"module\": \"okcanvas_agent_clients\",\n              \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_clients/__init__.py\",\n              \"under_project_root\": true\n            }\n          ],\n          \"project_root\": \"/mnt/data/work_step086/okcanvas-agent-runtime\",\n          \"sys_path_head\": [\n            \"/mnt/data/work_step086/okcanvas-agent-runtime\",\n            \"/mnt/data/work_step086/okcanvas-agent-runtime/scripts\",\n            \"/opt/pyvenv-overrides\",\n            \"/opt/pyvenv-libs\",\n            \"/opt/python-hooks\",\n            \"/usr/lib/python313.zip\",\n            \"/usr/lib/python3.13\",\n            \"/usr/lib/python3.13/lib-dynload\"\n          ]\n        },\n        \"websocket_route_count\": 0\n      },\n      \"runtime_versions\": {\n        \"fastapi\": \"0.128.2\",\n        \"pydantic\": \"2.13.4\",\n        \"python\": \"3.13.5\",\n        \"starlette\": \"0.50.0\"\n      },\n      \"service_route_count\": 39,\n      \"source\": {\n        \"admin_route_count\": 54,\n        \"duplicates\": [],\n        \"routes\": [\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/agent-definitions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/agent-definitions/{agent_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/assistant/routes\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/assistant/run-submissions/preflight\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/assistant/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/commerce-snapshot-ingress/preflight\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/evaluation-baselines\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-baselines/{baseline_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-cases\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-cases/{case_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-comparisons\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/evaluation-suite-runs\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-suite-runs/{suite_run_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-suites\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluation-suites/{suite_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/evaluations/{evaluation_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/local-attachments\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/operations/summary\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/organization/directory/search\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/organization/glossary/resolve\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/organization/knowledge/search\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/protected-payloads/cleanup-expired\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/run-submission-policy\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/preflight\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/reconcile-orphaned-running\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/reconcile-terminal-outcomes\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/recover-stale\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/run-submissions/{submission_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/{submission_id}/confirm\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/run-submissions/{submission_id}/prepare-approval\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/runs\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/artifact\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/runs/{run_id}/cancel\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/runs/{run_id}/evaluations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/events\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/events/stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/invocations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/outcome\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runs/{run_id}/sdk-stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/runtime-scenarios\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/agent-definitions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/agent-definitions/{agent_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/assistant/routes\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/assistant/run-submissions/preflight\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/assistant/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/capabilities\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/error-contract\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/local-attachments\"\n          },\n          {\n            \"method\": \"DELETE\",\n            \"path\": \"/v1/service/local-attachments/{attachment_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/organization/directory/search\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/organization/glossary/resolve\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/organization/knowledge/search\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/project-snapshots\"\n          },\n          {\n            \"method\": \"DELETE\",\n            \"path\": \"/v1/service/project-snapshots/{project_snapshot_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/run-submissions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/preflight\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}/confirm\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/run-submissions/{submission_id}/prepare-approval\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/artifacts\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/artifacts/{artifact_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/runs/{run_id}/cancel\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/events\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/events/stream\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/invocations\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/runs/{run_id}/outcome\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sandbox-runtime\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/sessions/{session_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/sessions/{session_id}/clear\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/skills\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/skills/{skill_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/tool-approvals\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/service/tool-approvals/{approval_id}/decision\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/tool-approvals/{approval_id}/inbox\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/service/whoami\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/sessions\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/sessions/{session_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions/{session_id}/clear\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/sessions/{session_id}/rotate-history-key\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tasks\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tasks/{task_id}\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals/{approval_id}\"\n          },\n          {\n            \"method\": \"POST\",\n            \"path\": \"/v1/tool-approvals/{approval_id}/decision\"\n          },\n          {\n            \"method\": \"GET\",\n            \"path\": \"/v1/tool-approvals/{approval_id}/inbox\"\n          }\n        ],\n        \"service_route_count\": 39,\n        \"websocket_decorators\": []\n      },\n      \"source_identity\": {\n        \"all_under_project_root\": true,\n        \"modules\": [\n          {\n            \"module\": \"okcanvas_agent_runtime\",\n            \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/__init__.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_runtime.bootstrap.application\",\n            \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/application.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_runtime.bootstrap.router_registration\",\n            \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/bootstrap/router_registration.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_runtime.transport.admin.rest.routes\",\n            \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/admin/rest/routes.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_runtime.transport.service.rest.routes\",\n            \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/transport/service/rest/routes.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_protocols\",\n            \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_protocols/__init__.py\",\n            \"under_project_root\": true\n          },\n          {\n            \"module\": \"okcanvas_agent_clients\",\n            \"origin\": \"/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_clients/__init__.py\",\n            \"under_project_root\": true\n          }\n        ],\n        \"project_root\": \"/mnt/data/work_step086/okcanvas-agent-runtime\",\n        \"sys_path_head\": [\n          \"/mnt/data/work_step086/okcanvas-agent-runtime\",\n          \"/mnt/data/work_step086/okcanvas-agent-runtime/scripts\",\n          \"/opt/pyvenv-overrides\",\n          \"/opt/pyvenv-libs\",\n          \"/opt/python-hooks\",\n          \"/usr/lib/python313.zip\",\n          \"/usr/lib/python3.13\",\n          \"/usr/lib/python3.13/lib-dynload\"\n        ]\n      },\n      \"unexpected_runtime_v1_routes\": [],\n      \"websocket_route_count\": 0\n    },\n    \"runtime_info\": {\n      \"field_count\": 890,\n      \"group_paths\": [\n        \"okcanvas_agent_runtime/core/runtime_info/foundation.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/product.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/agent_session.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/model.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/clients.py\",\n        \"okcanvas_agent_runtime/core/runtime_info/validation.py\"\n      ],\n      \"missing_group_paths\": []\n    },\n    \"transport_app_state_reads\": []\n  },\n  \"passed_checks\": 40,\n  \"schema_version\": \"okcanvas-step081-architecture-validation-v1\",\n  \"state\": \"PASSED\",\n  \"step\": \"STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION\",\n  \"total_checks\": 40,\n  \"version\": \"2.61.4\"\n}\n"
+  },
+  "checks": {
+    "architecture_regression_passed": true,
+    "compileall_passed": true,
+    "default_groupware_fails_closed": true,
+    "focused_regression_passed": true,
+    "groupware_validation_passed": true,
+    "identity_exact": true,
+    "launcher_registry_passed": true,
+    "next_step_unselected": true,
+    "real_endpoint_and_secret_remain_unconfigured": true,
+    "step082b_distribution_retained": true,
+    "step082b_execution_plane_retained": true,
+    "step084_organization_context_retained": true,
+    "step085_multi_mcp_retained": true,
+    "writes_and_automation_remain_disabled": true
+  },
+  "compile_output": "",
+  "completed_at": "2026-08-04T10:20:17.864446Z",
+  "distribution_validation": {
+    "checks": {
+      "configuration_pack_nonempty": true,
+      "configuration_pack_root_exact": true,
+      "distribution_policy_schema_exact": true,
+      "full_source_startup_passed": true,
+      "reference_not_in_wheel_allowlist": true,
+      "reference_pack_nonempty": true,
+      "reference_pack_root_exact": true,
+      "specs_not_in_wheel_allowlist": true,
+      "wheel_build_completed": true,
+      "wheel_install_completed": true,
+      "wheel_only_fails_closed_without_config": true,
+      "wheel_package_allowlist_exact": true,
+      "wheel_plus_config_and_reference_startup_passed": true,
+      "wheel_plus_config_fails_closed_without_reference": true
+    },
+    "configured_wheel_packages": [
+      "okcanvas_agent_runtime",
+      "okcanvas_agent_protocols",
+      "okcanvas_agent_clients"
+    ],
+    "outputs": {
+      "install": "WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\nLooking in indexes: https://reader:****@packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/pypi/pypi-public/simple\nProcessing /tmp/step082b-dist-jtn7r0ss/wheel/okcanvas_agent_runtime-2.66.0-py3-none-any.whl\nInstalling collected packages: okcanvas-agent-runtime\nSuccessfully installed okcanvas-agent-runtime-2.66.0\n",
+      "venv": "",
+      "wheel_build": "WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\nLooking in indexes: https://reader:****@packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/pypi/pypi-public/simple\nProcessing /mnt/data/work_step086/okcanvas-agent-runtime\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: okcanvas-agent-runtime\n  Building wheel for okcanvas-agent-runtime (pyproject.toml): started\n  Building wheel for okcanvas-agent-runtime (pyproject.toml): finished with status 'done'\n  Created wheel for okcanvas-agent-runtime: filename=okcanvas_agent_runtime-2.66.0-py3-none-any.whl size=562001 sha256=4a58536ea1c249765a7523223005cae443dc90ebea904dcd0f2634ea022c5220\n  Stored in directory: /tmp/pip-ephem-wheel-cache-gk54r788/wheels/ed/e9/83/cbb164da9a62a36cbfe1643934cc1770c09c936559c85f43a0\nSuccessfully built okcanvas-agent-runtime\n"
+    },
+    "packs": {
+      "configuration": {
+        "entry_count": 321,
+        "path": "/tmp/step082b-dist-jtn7r0ss/config.zip",
+        "root": "okcanvas-agent-runtime-config",
+        "sha256": "a74837b20ccd084e7dc21f8a2ad38baf0dce7135e778f478b86f88c8af913a85"
+      },
+      "reference": {
+        "entry_count": 1540,
+        "path": "/tmp/step082b-dist-jtn7r0ss/reference.zip",
+        "root": "okcanvas-agent-runtime-reference",
+        "sha256": "71deb2178ad00e119d5194ad0b956e38f8bfb36ee145a84f8fbc43ef5a361929"
+      }
+    },
+    "passed_checks": 14,
+    "probes": {
+      "full_source": {
+        "process_ok": true,
+        "route_count": 100,
+        "runtime_origin": "/mnt/data/work_step086/okcanvas-agent-runtime/okcanvas_agent_runtime/__init__.py",
+        "state": "PASSED"
+      },
+      "wheel_only": {
+        "error": "SQLite Session policy is missing or unsafe",
+        "error_type": "SessionPolicyError",
+        "process_ok": true,
+        "state": "FAILED"
+      },
+      "wheel_plus_config": {
+        "error": "Pinned SDK SQLiteSession source integrity mismatch",
+        "error_type": "SessionPolicyError",
+        "process_ok": true,
+        "state": "FAILED"
+      },
+      "wheel_plus_config_and_reference": {
+        "process_ok": true,
+        "route_count": 100,
+        "runtime_origin": "/tmp/step082b-dist-jtn7r0ss/venv/lib/python3.13/site-packages/okcanvas_agent_runtime/__init__.py",
+        "state": "PASSED"
+      }
+    },
+    "schema_version": "okcanvas-step082b-distribution-validation-v1",
+    "state": "PASSED",
+    "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+    "total_checks": 14,
+    "version": "2.62.2"
+  },
+  "execution_plane_validation": {
+    "agent_definition_count": 30,
+    "checks": {
+      "codex_agent_specs_not_silently_catalog_registered": true,
+      "codex_removal_blocked_before_migration": true,
+      "codex_tool_specs_not_silently_catalog_registered": true,
+      "developer_cli_retains_legacy_and_codex_services": true,
+      "forbidden_developer_services_absent_from_product_transport": true,
+      "generic_agent_catalog_count_retained": true,
+      "generic_function_tool_catalog_count_retained": true,
+      "generic_runtime_required_in_product_bootstrap": true,
+      "new_execution_plane_forbidden": true,
+      "policy_schema_exact": true,
+      "repository_read_write_separated": true,
+      "step082b_policy_retained_in_current_product": true,
+      "write_approval_required": true
+    },
+    "developer_only_planes": [
+      {
+        "classification": "DEVELOPER_ONLY_COMPATIBILITY",
+        "plane_id": "legacy-language-runtime",
+        "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.service.AgentRuntimeService",
+        "write_access": false
+      },
+      {
+        "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+        "plane_id": "codex-read-runtime",
+        "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_service.CodexReadOnlyService",
+        "write_access": false
+      },
+      {
+        "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+        "plane_id": "codex-write-runtime",
+        "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_write_service.CodexWriteService",
+        "write_access": true
+      },
+      {
+        "classification": "DEVELOPER_ONLY_EXPERIMENTAL",
+        "plane_id": "codex-write-approval-runtime",
+        "service_class": "okcanvas_agent_runtime.adapters.openai.runtime.codex_approval_service.CodexWriteApprovalService",
+        "write_access": true
+      }
+    ],
+    "passed_checks": 13,
+    "product_control_plane": {
+      "bootstrap_factory": "okcanvas_agent_runtime.bootstrap.application.create_app",
+      "catalog_bound": true,
+      "plane_id": "generic-agent-runtime",
+      "service_class": "okcanvas_agent_runtime.application.execution.service.GenericAgentExecutionService",
+      "task_run_event_artifact_owned": true,
+      "tool_mcp_session_handoff_guardrail_supported": true
+    },
+    "schema_version": "okcanvas-step082b-execution-plane-validation-v1",
+    "state": "PASSED",
+    "step": "STEP082B_CODING_EXECUTION_PLANE_AND_DISTRIBUTION_BOUNDARY_CONSOLIDATION",
+    "tool_definition_count": 4,
+    "total_checks": 13,
+    "version": "2.62.2"
+  },
+  "focused_output": "...................................................                      [100%]\n51 passed in 4.78s",
+  "groupware_validation": {
+    "checks": {
+      "advanced_tool_calling_remains_disabled": true,
+      "agent_has_no_non_mcp_execution_surfaces": true,
+      "agent_single_groupware_mcp_exact": true,
+      "configured_fixture_becomes_ready": true,
+      "configured_groupware_route_selects_agent": true,
+      "configured_identity_is_bound": true,
+      "credential_reference_metadata_only": true,
+      "default_endpoint_is_non_routable": true,
+      "default_groupware_route_is_not_configured": true,
+      "default_secret_value_absent": true,
+      "default_state_fails_closed": true,
+      "draft_request_not_stolen": true,
+      "identity_exact": true,
+      "mcp_no_retry_passive_circuit_exact": true,
+      "mcp_v3_delegated_read_only_exact": true,
+      "model_context_bounded": true,
+      "model_context_has_no_endpoint_reference_or_secret": true,
+      "next_step_unselected": true,
+      "policy_binding_exact": true,
+      "policy_schema_exact": true,
+      "read_tool_allowlist_exact": true,
+      "result_bound_exact": true,
+      "role_gate_exact": true,
+      "runtime_binding_reuses_step085_path": true,
+      "runtime_info_limits_exact": true,
+      "secret_not_exposed_publicly": true,
+      "step085_windows_evidence_exact": true,
+      "unallowed_role_is_denied": true,
+      "write_request_remains_proposal_only": true,
+      "writes_and_automation_remain_disabled": true
+    },
+    "configured_readiness": {
+      "credential_reference_configured": true,
+      "credential_value_configured": true,
+      "endpoint_configured": true,
+      "executable_now": true,
+      "identity_bound": true,
+      "reasons": [],
+      "role_allowed": true,
+      "schema_version": "okcanvas-groupware-read-readiness-v1",
+      "state": "READY",
+      "write_enabled": false
+    },
+    "configured_route": {
+      "executable_now": true,
+      "grounding": [],
+      "grounding_catalog_id": null,
+      "grounding_catalog_version": null,
+      "grounding_effective_at": null,
+      "grounding_state": "NOT_APPLICABLE",
+      "matched_rule_id": "groupware-read-configured-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "91ed3ad290adb2c66a16adcfa36ec589f20d73c2bda6a2e92739493695fed939",
+      "policy_version": "1.2.0",
+      "reasons": [
+        "groupware-read-intent-detected",
+        "delegated-tenant-principal-role-bound",
+        "read-only-mcp-tool-allowlist-bound"
+      ],
+      "request_class": "READ_SYSTEM",
+      "required_capabilities": [
+        {
+          "availability": "AVAILABLE",
+          "capability_id": "groupware-read-v1",
+          "selected_agent_id": "groupware-read-agent",
+          "side_effect": "READ"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v2",
+      "selected_agent_definition_id": "groupware-read-agent",
+      "side_effect": "READ",
+      "status": "EXECUTABLE"
+    },
+    "default_groupware": {
+      "policy": {
+        "agent_id": "groupware-read-agent",
+        "capability_id": "groupware-read-v1",
+        "max_results": 50,
+        "operations": [
+          {
+            "description": "Search visible Groupware notices without mutation.",
+            "operation_id": "search-notices",
+            "tool_name": "search_notices"
+          },
+          {
+            "description": "Search visible mailbox metadata and messages without sending or changing state.",
+            "operation_id": "search-mail",
+            "tool_name": "search_mail"
+          },
+          {
+            "description": "List visible calendar events without creating, updating, accepting, or deleting events.",
+            "operation_id": "list-calendar-events",
+            "tool_name": "list_calendar_events"
+          }
+        ],
+        "policy_id": "groupware-read-v1",
+        "policy_sha256": "0b7f63059ce1b319279ff1029c8c5286883620041329053c0b8a40c2ebaf9d6b",
+        "required_roles": [
+          "agent-user"
+        ],
+        "schema_version": "okcanvas-groupware-read-policy-v1",
+        "server_id": "groupware-read",
+        "version": "1.0.0",
+        "write_enabled": false
+      },
+      "readiness": {
+        "credential_reference_configured": true,
+        "credential_value_configured": false,
+        "endpoint_configured": false,
+        "executable_now": false,
+        "identity_bound": true,
+        "reasons": [
+          "groupware-endpoint-not-configured",
+          "groupware-credential-value-not-configured"
+        ],
+        "role_allowed": true,
+        "schema_version": "okcanvas-groupware-read-readiness-v1",
+        "state": "NOT_CONFIGURED",
+        "write_enabled": false
+      },
+      "schema_version": "okcanvas-groupware-read-foundation-v1",
+      "server": {
+        "allowed_tools": [
+          "search_notices",
+          "search_mail",
+          "list_calendar_events"
+        ],
+        "authorization_mode": "delegated-bearer-ref",
+        "credential_ref": "groupware-read-credential",
+        "endpoint_mode": "tenant-template",
+        "read_only": true,
+        "required_roles": [
+          "agent-user"
+        ],
+        "schema_version": "okcanvas-mcp-server-v3",
+        "secret_values_exposed": false,
+        "server_id": "groupware-read"
+      }
+    },
+    "denied_readiness": {
+      "credential_reference_configured": true,
+      "credential_value_configured": true,
+      "endpoint_configured": true,
+      "executable_now": false,
+      "identity_bound": true,
+      "reasons": [
+        "delegated-role-not-allowed"
+      ],
+      "role_allowed": false,
+      "schema_version": "okcanvas-groupware-read-readiness-v1",
+      "state": "ACCESS_DENIED",
+      "write_enabled": false
+    },
+    "passed_checks": 30,
+    "runtime_binding": {
+      "execution_path": "multi-remote-mcp-delegated-identity-execution-v1",
+      "mcp_server_count": 1,
+      "runtime_binding_sha256": "c2d2c719cad4a1e454e58d4e942b99636fcf46389153c80b019a31717986e13b"
+    },
+    "schema_version": "okcanvas-step086-groupware-read-only-validation-v1",
+    "state": "PASSED",
+    "step": "STEP086_GROUPWARE_READ_ONLY_VERTICAL",
+    "total_checks": 30,
+    "version": "2.66.0"
+  },
+  "launcher_registry": {
+    "checks": {
+      "all_registered_paths_exist": true,
+      "all_step_acceptance_scripts_registered": true,
+      "all_step_windows_launchers_registered": true,
+      "current_classification_exact": true,
+      "current_record_contract_exact": true,
+      "registered_paths_unique": true,
+      "schema_exact": true
+    },
+    "current_record_count": 2,
+    "current_records": [
+      "scripts/run_step086_acceptance.py",
+      "sh_run_step086_acceptance.cmd"
+    ],
+    "current_step": "STEP086_GROUPWARE_READ_ONLY_VERTICAL",
+    "current_step_token": "086",
+    "launcher_count": 135,
+    "passed_checks": 7,
+    "record_count": 275,
+    "schema_version": "okcanvas-acceptance-launcher-registry-validation-v2",
+    "script_count": 140,
+    "state": "PASSED",
+    "total_checks": 7
+  },
+  "multi_mcp_validation": {
+    "bound_servers": [
+      {
+        "circuit_breaker_failure_threshold": 2,
+        "circuit_breaker_reset_seconds": 30.0,
+        "credential_ref": "shared-read-credential",
+        "delegation_id": "delegation_429a6b71b58ce920b12778289c571baf",
+        "health_mode": "passive",
+        "required_roles": [
+          "agent-user"
+        ],
+        "server_id": "enterprise-read-1",
+        "url": "https://enterprise-read-1.example.invalid/tenants/tenant-a/mcp"
+      },
+      {
+        "circuit_breaker_failure_threshold": 2,
+        "circuit_breaker_reset_seconds": 30.0,
+        "credential_ref": "shared-read-credential",
+        "delegation_id": "delegation_429a6b71b58ce920b12778289c571baf",
+        "health_mode": "passive",
+        "required_roles": [
+          "agent-user"
+        ],
+        "server_id": "enterprise-read-2",
+        "url": "https://enterprise-read-2.example.invalid/tenants/tenant-a/mcp"
+      }
+    ],
+    "checks": {
+      "credential_values_never_public": true,
+      "delegated_headers_exact": true,
+      "delegated_identity_protected_roundtrip": true,
+      "external_endpoints_not_configured": true,
+      "identity_fingerprint_deterministic": true,
+      "mcp_write_remains_disabled": true,
+      "missing_identity_fails_closed": true,
+      "missing_role_fails_closed": true,
+      "oauth_refresh_not_claimed": true,
+      "passive_circuit_opens": true,
+      "protected_payload_schema_v6": true,
+      "remote_count_bounded": true,
+      "runtime_binding_execution_path_exact": true,
+      "runtime_binding_has_no_secret_values": true,
+      "runtime_binding_has_two_servers": true,
+      "runtime_info_foundation_exact": true,
+      "tenant_endpoint_binding_exact": true,
+      "tool_search_remains_disabled": true,
+      "v3_multi_remote_resolved": true
+    },
+    "default_access_catalog": {
+      "credential_references": [
+        {
+          "authorization_mode": "delegated-bearer-ref",
+          "credential_ref": "groupware-read-credential",
+          "environment_variable": "OKCANVAS_GROUPWARE_READ_BEARER"
+        }
+      ],
+      "credential_values_exposed": false,
+      "policy": {
+        "circuit_breaker_state_scope": "process-local-server-id",
+        "delegated_headers": [
+          "X-OKCanvas-Delegation-ID",
+          "X-OKCanvas-Principal-ID",
+          "X-OKCanvas-Tenant-ID"
+        ],
+        "endpoint_mode": "tenant-template",
+        "health_mode": "passive",
+        "max_remote_servers_per_agent": 4,
+        "policy_id": "multi-mcp-delegated-identity-v1",
+        "policy_sha256": "d6da3de3e9c8acb828408e193c512aab2e0fadb51a0df8072cfefdc619797e52",
+        "schema_version": "okcanvas-mcp-access-policy-v1",
+        "version": "1.0.0"
+      },
+      "schema_version": "okcanvas-mcp-access-catalog-v1"
+    },
+    "passed_checks": 19,
+    "retained_from_step": "STEP085_MULTI_MCP_AND_DELEGATED_IDENTITY_FOUNDATION",
+    "runtime_binding": {
+      "execution_path": "multi-remote-mcp-delegated-identity-execution-v1",
+      "mcp_server_count": 2,
+      "runtime_binding_sha256": "234edc413203d277be0012930edaca36f54b2afb8ef908b7301b2e173f7f9d8f"
+    },
+    "schema_version": "okcanvas-step086-retained-step085-multi-mcp-v1",
+    "state": "PASSED",
+    "step": "STEP085_MULTI_MCP_AND_DELEGATED_IDENTITY_FOUNDATION",
+    "total_checks": 19,
+    "version": "2.65.0"
+  },
+  "organization_context_validation": {
+    "checks": {
+      "cross_tenant_filtering_exact": true,
+      "default_catalog_empty_and_valid": true,
+      "default_empty_route_fails_closed": true,
+      "directory_exact_match": true,
+      "durable_automation_remains_unconfigured": true,
+      "enterprise_write_remains_unconfigured": true,
+      "external_sync_not_claimed": true,
+      "fixture_catalog_ready_and_exact": true,
+      "glossary_exact_match": true,
+      "grounding_context_is_authoritative_and_versioned": true,
+      "knowledge_exact_match": true,
+      "manifest_hashes_bound": true,
+      "no_match_blocks_model_submission": true,
+      "organization_routes_registered": true,
+      "ready_route_is_grounded_and_executable": true,
+      "runtime_info_contract_exact": true,
+      "tool_search_remains_disabled": true
+    },
+    "default_catalog": {
+      "catalog_id": "organization-context-default",
+      "record_count": 0,
+      "state": "EMPTY",
+      "version": "1.0.0"
+    },
+    "fixture_catalog": {
+      "catalog_id": "organization-context-step084-fixture",
+      "record_count": 4,
+      "state": "READY",
+      "version": "1.0.0"
+    },
+    "no_match_route": {
+      "executable_now": false,
+      "grounding": [],
+      "grounding_catalog_id": "organization-context-step084-fixture",
+      "grounding_catalog_version": "1.0.0",
+      "grounding_effective_at": "2026-08-04T00:00:00Z",
+      "grounding_state": "NO_MATCH",
+      "matched_rule_id": "organization-context-no-match-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "91ed3ad290adb2c66a16adcfa36ec589f20d73c2bda6a2e92739493695fed939",
+      "policy_version": "1.2.0",
+      "reasons": [
+        "organization-specific-language-detected",
+        "no-authoritative-organization-record-matched",
+        "model-inference-blocked"
+      ],
+      "request_class": "SEARCH_KNOWLEDGE",
+      "required_capabilities": [
+        {
+          "availability": "AVAILABLE",
+          "capability_id": "organization-knowledge-read-v1",
+          "selected_agent_id": "organization-assistant-agent",
+          "side_effect": "READ"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v2",
+      "selected_agent_definition_id": null,
+      "side_effect": "READ",
+      "status": "NO_MATCH"
+    },
+    "passed_checks": 17,
+    "ready_route": {
+      "executable_now": true,
+      "grounding": [
+        {
+          "classification": "INTERNAL",
+          "kind": "GLOSSARY",
+          "label": "PI",
+          "match_type": "CANONICAL_IN_QUERY",
+          "record_id": "term.pi",
+          "score": 90,
+          "source_reference": "org://demo/glossary/pi",
+          "source_title": "STEP084 Demo Organization Glossary",
+          "source_version": "2026.08",
+          "summary": "STEP084 검증 조직에서 PI는 업무 프로세스 혁신 프로그램을 뜻한다."
+        }
+      ],
+      "grounding_catalog_id": "organization-context-step084-fixture",
+      "grounding_catalog_version": "1.0.0",
+      "grounding_effective_at": "2026-08-04T00:00:00Z",
+      "grounding_state": "MATCHED",
+      "matched_rule_id": "organization-context-authoritative-match-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "91ed3ad290adb2c66a16adcfa36ec589f20d73c2bda6a2e92739493695fed939",
+      "policy_version": "1.2.0",
+      "reasons": [
+        "organization-specific-language-detected",
+        "authoritative-organization-context-matched",
+        "tenant-principal-role-scope-verified"
+      ],
+      "request_class": "SEARCH_KNOWLEDGE",
+      "required_capabilities": [
+        {
+          "availability": "AVAILABLE",
+          "capability_id": "organization-knowledge-read-v1",
+          "selected_agent_id": "organization-assistant-agent",
+          "side_effect": "READ"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v2",
+      "selected_agent_definition_id": "organization-assistant-agent",
+      "side_effect": "READ",
+      "status": "EXECUTABLE"
+    },
+    "retained_from_step": "STEP084_ORGANIZATION_KNOWLEDGE_GLOSSARY_AND_DIRECTORY_FOUNDATION",
+    "runtime_organization_routes": [
+      "/v1/organization/directory/search",
+      "/v1/organization/glossary/resolve",
+      "/v1/organization/knowledge/search",
+      "/v1/service/organization/directory/search",
+      "/v1/service/organization/glossary/resolve",
+      "/v1/service/organization/knowledge/search"
+    ],
+    "schema_version": "okcanvas-step086-retained-step084-organization-context-v1",
+    "state": "PASSED",
+    "step": "STEP084_ORGANIZATION_KNOWLEDGE_GLOSSARY_AND_DIRECTORY_FOUNDATION",
+    "total_checks": 17,
+    "version": "2.64.0"
+  },
+  "passed_checks": 14,
+  "schema_version": "okcanvas-step086-acceptance-v1",
+  "started_at": "2026-08-04T10:19:56.045611Z",
+  "state": "PASSED",
+  "step": "STEP086_GROUPWARE_READ_ONLY_VERTICAL",
+  "total_checks": 14,
+  "version": "2.66.0"
+}

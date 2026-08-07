@@ -1,0 +1,13 @@
+{
+  "connector_example_path": "okcanvas-connector-examples/organization-context/organization-context-api-fake",
+  "connector_example_required": false,
+  "connector_example_sot": "COMMITTED_JSON_FIXTURES",
+  "external_connector_path": "okcanvas-connectors/organization-context-mcp-server",
+  "mcp_client_declaration_location": "runtime-internal",
+  "mcp_provider_deployment": "external-connector-service",
+  "mcp_provider_implementation_in_runtime": false,
+  "production_service_sot": "DATABASE",
+  "read_agent_definition_location": "runtime-internal",
+  "read_agent_permanently_read_only": true,
+  "schema_version": "okcanvas-organization-context-deployment-boundary-v1"
+}

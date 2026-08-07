@@ -1,0 +1,52 @@
+{
+  "schema_version": "okcanvas-step075e-windows-live-answer-completeness-failure-summary-v1",
+  "step": "STEP075E_INTERNAL_SNAPSHOT_METADATA_EXCLUSION_AND_HASH_DOMAIN_FIX",
+  "version": "2.55.5",
+  "state": "FAILED",
+  "acceptance_classification": "RUNTIME_ACCEPTED_ANSWER_COMPLETENESS_FAILED",
+  "live_acceptance": {
+    "passed_checks": 32,
+    "total_checks": 33,
+    "terminal_status": "SUCCEEDED",
+    "model": "gpt-4.1",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 2284,
+    "output_tokens": 179,
+    "total_tokens": 2463
+  },
+  "runtime_evidence": {
+    "workspace_materialized": true,
+    "selected_file_hashes_verified": true,
+    "internal_snapshot_metadata_not_observed": true,
+    "inspected_file_count": 1,
+    "docker_call_count": 9,
+    "cleanup_state": "COMPLETED",
+    "orphan_count": 0,
+    "network_mode": "none",
+    "shell_enabled": false,
+    "apply_patch_enabled": false,
+    "tool_failed_count": 0,
+    "agent_failed_count": 0,
+    "run_failed_count": 0,
+    "raw_workspace_persisted": false,
+    "api_key_persisted": false,
+    "successful_payload_deleted": true
+  },
+  "answer_failure": {
+    "sole_failed_check": "formula_observed",
+    "requested_function": "calculate_reorder",
+    "required_formula": "max(0, forecast + SAFETY_STOCK - on_hand)",
+    "required_constant_assignment": "SAFETY_STOCK = 12",
+    "draft_used_ellipsis": true,
+    "draft_marked_evidence_backed_path_unverified": true,
+    "evidence_backed_path": "src/inventory.py"
+  },
+  "conclusion": {
+    "sandbox_runtime_failure_proven": false,
+    "docker_failure_proven": false,
+    "tool_failure_proven": false,
+    "answer_completeness_failure_proven": true,
+    "step075e_officially_windows_live_accepted": false
+  }
+}

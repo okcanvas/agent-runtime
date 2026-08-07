@@ -1,0 +1,57 @@
+{
+  "connector": {
+    "passed_checks": 10,
+    "pytest_passed": 9,
+    "state": "PASSED",
+    "step": "CONNECTOR_ORGANIZATION_CONTEXT_STEP002_UNIFIED_REFERENCE_ENTITY_READ_TOOLS",
+    "version": "0.2.0"
+  },
+  "connector_example": {
+    "passed_checks": 15,
+    "state": "PASSED"
+  },
+  "dataset_counts": {
+    "capabilities": 30,
+    "clients": 120,
+    "departments": 13,
+    "employees": 48,
+    "glossary": 80,
+    "positions": 12,
+    "products": 120,
+    "projects": 24,
+    "relations": 892,
+    "systems": 10
+  },
+  "example": {
+    "node_tests_passed": 10,
+    "passed_checks": 16,
+    "state": "PASSED",
+    "step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP002_JSON_REFERENCE_DATASET_AND_UNIFIED_RESOLUTION",
+    "version": "0.2.0"
+  },
+  "example_sot": "COMMITTED_JSON_FIXTURES",
+  "limitations": {
+    "local_step084_catalog_replaced": false,
+    "openai_model_called": false,
+    "production_database_executed": false,
+    "real_enterprise_organization_context_called": false,
+    "runtime_organization_context_wired": false
+  },
+  "manifest_drift": {
+    "changed": [],
+    "missing": [],
+    "unexpected": []
+  },
+  "passed_checks": 27,
+  "production_sot": "DATABASE",
+  "schema_version": "okcanvas-agent-platform-workspace-step006-local-deterministic-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP006_ORGANIZATION_CONTEXT_JSON_REFERENCE_DATASET_AND_UNIFIED_RESOLUTION_FOUNDATION",
+  "total_checks": 27,
+  "validation_mode": "LOCAL_DETERMINISTIC_JSON_REFERENCE_DATASET_AND_CONNECTOR_E2E",
+  "version": "0.6.0",
+  "workspace_unit_tests": {
+    "failed": 0,
+    "passed": 71
+  }
+}

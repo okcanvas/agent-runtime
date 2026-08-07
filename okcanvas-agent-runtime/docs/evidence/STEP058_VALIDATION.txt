@@ -1,0 +1,84 @@
+STEP058_NODE_CLI_TOOL_AND_SUB_AGENT_WORKFLOW_VISIBILITY
+Version: 2.38.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+Source-tree deterministic validation
+- Python compileall: PASS.
+- TypeScript build: PASS.
+- Node tests: 11/11 PASS.
+- npm pack dry-run: PASS; 23 package files; runtime dependencies 0.
+- Python pytest: 566/566 PASS across 173 test files.
+  - split groups: 83 + 45 + 71 + 97 + 63 + 58 + 68 + 81 = 566.
+- STEP058 acceptance: 18/18 PASS; cleanup COMPLETED once.
+  - final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 3/3/3/5/35/3/0.
+  - protected payload files: 0.
+- STEP057 acceptance: 25/25 PASS; cleanup COMPLETED once.
+- STEP056C acceptance: 25/25 PASS; cleanup COMPLETED once.
+- STEP056B acceptance: 25/25 PASS; cleanup COMPLETED once.
+- STEP056 acceptance: 21/21 PASS; cleanup COMPLETED once.
+- STEP055 acceptance: 35/35 PASS; cleanup COMPLETED once.
+- STEP054 acceptance: 30/30 PASS; cleanup COMPLETED once.
+- STEP053 acceptance: 30/30 PASS; cleanup COMPLETED once.
+- STEP052 acceptance: 25/25 PASS; cleanup COMPLETED once.
+- STEP051 acceptance: 25/25 PASS; cleanup COMPLETED once.
+- STEP050 acceptance: 31/31 PASS; cleanup COMPLETED once.
+- STEP049 acceptance: 33/33 PASS; cleanup COMPLETED once.
+- STEP048 acceptance: 32/32 PASS; cleanup COMPLETED once.
+- STEP047 acceptance: 29/29 PASS; cleanup COMPLETED once.
+- STEP046 acceptance: 27/27 PASS; cleanup COMPLETED once.
+- STEP045 acceptance: 28/28 PASS; BASIC_AGENT_RUNTIME_SKELETON_COMPLETE preserved.
+- STEP044 acceptance: 23/23 PASS.
+- STEP043 acceptance: 29/29 PASS; cleanup COMPLETED once.
+- STEP042 acceptance: 29/29 PASS; cleanup COMPLETED once.
+- STEP041 acceptance: 24/24 PASS; cleanup COMPLETED once.
+- STEP039 acceptance: 20/20 PASS; cleanup COMPLETED once.
+- STEP030A launcher acceptance: 8/8 PASS; 67 launchers; 0 violations.
+- Reference integrity: 4/4 PASS.
+- Direct executable /reference imports: 0.
+
+Independent candidate ZIP and final self-extracted ZIP validation follow below.
+
+Independent candidate ZIP validation
+- Archive root: exactly one canonical `okcanvas-agent-runtime` root.
+- Archive entries: 2,683.
+- Forbidden generated/local files: 0.
+- Immutable Reference `.vscode` files retained: 2.
+- Compiled Node `dist` entries retained: 21.
+- Python compileall: PASS.
+- TypeScript build: PASS.
+- Node tests: 11/11 PASS.
+- Python pytest: 566/566 PASS across 173 test files.
+- STEP058: 18/18 PASS; cleanup COMPLETED once.
+- STEP057: 25/25 PASS; cleanup COMPLETED once.
+- STEP056C: 25/25 PASS; cleanup COMPLETED once.
+- STEP055: 35/35 PASS; cleanup COMPLETED once.
+- STEP050: 31/31 PASS; cleanup COMPLETED once.
+- STEP049: 33/33 PASS; cleanup COMPLETED once.
+- STEP047: 29/29 PASS; cleanup COMPLETED once.
+- STEP045: 28/28 PASS; cleanup COMPLETED once.
+- STEP030A: 8/8 PASS; 67 launchers; 0 violations.
+- Reference integrity: 4/4 PASS.
+- Direct executable /reference imports: 0.
+
+Final self-extracted tested ZIP validation
+- Archive root: exactly one canonical `okcanvas-agent-runtime` root.
+- Archive entries: 2,683.
+- Python compileall: PASS.
+- TypeScript build: PASS.
+- Node tests: 11/11 PASS.
+- Python pytest: 566/566 PASS across 173 test files.
+- STEP058: 18/18 PASS; cleanup COMPLETED once.
+- STEP057: 25/25 PASS; cleanup COMPLETED once.
+- STEP056C: 25/25 PASS; cleanup COMPLETED once.
+- STEP055: 35/35 PASS; cleanup COMPLETED once.
+- STEP049: 33/33 PASS; cleanup COMPLETED once.
+- STEP047: 29/29 PASS; cleanup COMPLETED once.
+- STEP045: 28/28 PASS; cleanup COMPLETED once.
+- STEP030A: 8/8 PASS; 67 launchers; 0 violations.
+- Reference integrity: 4/4 PASS.
+- Direct executable /reference imports: 0.
+
+Release package relationship
+- The final release ZIP is rebuilt after recording this validation evidence.
+- It must differ from the final self-extracted tested ZIP only in `okcanvas-agent-runtime/docs/evidence/STEP058_VALIDATION.txt`.
+- All code, TypeScript, compiled dist, tests, policies, acceptance scripts and immutable Reference entries remain byte-identical.

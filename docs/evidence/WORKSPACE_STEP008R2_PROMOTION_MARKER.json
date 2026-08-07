@@ -1,0 +1,36 @@
+{
+  "accepted_local_evidence": {
+    "connector": "11/11 PASSED",
+    "connector_example": "17/17 PASSED",
+    "example": "19/19 PASSED",
+    "runtime_full_regression": "244 files / 1,013 tests PASSED",
+    "runtime_step090": "24/24 PASSED",
+    "workspace_acceptance": "25/25 PASSED",
+    "workspace_manifest_drift": 0,
+    "workspace_unit_tests": "95/95 PASSED"
+  },
+  "architecture": {
+    "child_agent": "organization-context-read-agent",
+    "child_skills": [],
+    "normalization_strategy": "product-owned-mcp-evidence-normalization-v1",
+    "root_agent": "organization-context-session-agent",
+    "root_skills": []
+  },
+  "live_openai_model_called": false,
+  "pending": {
+    "four_short_expression_runs": [
+      "김민수 정보",
+      "김선임 연락처",
+      "김민수 직책",
+      "과장들 목록"
+    ],
+    "windows_deterministic": true,
+    "windows_live_openai": true
+  },
+  "production_database_executed": false,
+  "promotion_ready": false,
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "LOCAL_DETERMINISTIC_ACCEPTED",
+  "step": "WORKSPACE_STEP008R2_ORGANIZATION_CONTEXT_AMBIGUOUS_RESULT_STRUCTURED_OUTPUT_AND_LIVE_DIAGNOSTIC_CLOSURE",
+  "version": "0.8.2"
+}

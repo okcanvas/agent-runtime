@@ -1,0 +1,20 @@
+{
+  "current_baseline_sot_implemented": true,
+  "deliberate_stale_nested_plan_regression_implemented": true,
+  "deterministic_acceptance_executed": false,
+  "live_openai_executed": false,
+  "object_storage_live_executed": false,
+  "per_file_current_document_gate_implemented": true,
+  "product_runtime_source_modifications": 0,
+  "promotion": "NOT_READY",
+  "runtime_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "runtime_version": "2.75.0",
+  "schema_version": "okcanvas-workspace-step008r4r7a-implementation-summary-v1",
+  "source_release_sha256": "a8cf80b010615d4f6c7616c8832cd156f8f2a35fdcaf41a279b5212a8c602a4f",
+  "state": "IMPLEMENTED_TEST_EXECUTION_DEFERRED_BY_USER_MINIO_PENDING",
+  "test_execution_reason": "DEFERRED_BY_USER_UNTIL_MINIO_READY",
+  "unit_tests_executed": false,
+  "windows_acceptance_executed": false,
+  "workspace_step": "WORKSPACE_STEP008R4R7A_CURRENT_DOCUMENT_SOT_ALIGNMENT_AND_PER_FILE_IDENTITY_GATE",
+  "workspace_version": "0.8.4-r7a"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP055",
+  "step_name": "STEP055_IMMUTABLE_OPENAI_PROVIDER_IDENTIFIER_MINIMIZATION_V1",
+  "version": "2.35.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-31T05:36:42.773818Z",
+  "checks_passed": 35,
+  "checks_total": 35,
+  "provider_identifier_policy": {
+    "persist_response_id": false,
+    "persist_request_id": false,
+    "persist_identifier_presence": true,
+    "observed_response_id_present": true,
+    "observed_request_id_present": true
+  },
+  "gateway_counts": {
+    "runner_run": 0,
+    "runner_run_streamed": 1,
+    "provider_constructed": 1,
+    "provider_get_model": 1,
+    "provider_closed": 1,
+    "openai_client_constructed": 1
+  },
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "submissions": 2,
+    "invocations": 1,
+    "events": 10,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 1,
+  "drift_confirmation_status": 409,
+  "evaluation_state": "PASSED",
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1
+}

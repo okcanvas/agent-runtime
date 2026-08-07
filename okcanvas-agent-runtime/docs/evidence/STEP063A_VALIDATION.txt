@@ -1,0 +1,60 @@
+STEP063A_WINDOWS_SYMLINK_INTEGRITY_TEST_PORTABILITY_FIX
+Version: 2.43.1
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+Reported Windows predecessor evidence
+-------------------------------------
+STEP063: 32/33 checks passed.
+Only failed check: focused_strict_encryption_tests_pass.
+Focused pytest output: 52 passed, 1 skipped, 1 warning in 5.57s.
+All Session runtime, encryption, policy, historical composition, Node and Reference checks passed.
+
+Code-audited cause
+------------------
+The focused test set contained exactly one pytest.skip path:
+tests/test_sqlite_session_runtime.py::test_session_database_symlink_is_rejected.
+It attempted to create a real symbolic link and skipped when the host OS denied symlink creation.
+STEP063 acceptance required the literal summary '53 passed', so host privilege changed the result.
+
+Correction
+----------
+The test no longer creates a real symlink and contains no pytest.skip path.
+It deterministically simulates exists=True and is_symlink=True only for runtime.history_db,
+then calls raw_sdk_session() and verifies SessionIntegrityError('Session database path is unsafe').
+
+Product-runtime immutability
+----------------------------
+b2127cf828e1e4d44663295edac0b4451d8b452a352e73789b3272d6e7a781b0  src/okcanvas_agent_runtime/sessions/encryption.py
+9315367f067d3ebbba31a5babd37aca7159c37c7f6839c5f8dd7417e30bd9e9c  src/okcanvas_agent_runtime/sessions/service.py
+6c488cb3200c9b2f94f0428e7f37684857d500ae0d5bd4ce169e4da75475208d  src/okcanvas_agent_runtime/sessions/policy.py
+bde341bbe78d35511695554a8932a34d449e4f2b1316fcc0ea28f2986298a48d  specs/runtime/sqlite-session-policy.json
+These hashes are identical to the STEP063 predecessor ZIP.
+
+Source-tree deterministic validation
+------------------------------------
+Corrected STEP063 acceptance: 33/33 PASS.
+Corrected STEP063 focused tests: 53 passed, 0 skipped.
+STEP063A acceptance: 20/20 PASS.
+STEP063A focused tests: 4/4 PASS.
+Deterministic symlink rejection test: 1/1 PASS.
+Python full regression: 632/632 PASS across 186 test files.
+Python compileall: PASS.
+Committed TypeScript release integrity: PASS (inputs=11 outputs=21 tests=2 external_tsc_required=false).
+Node tests: 14/14 PASS.
+Reference integrity: 4/4 PASS.
+Direct /reference imports: 0.
+npm pack dry-run: 23 files.
+
+No real OpenAI model call was required.
+STEP064 remains unselected.
+
+Candidate ZIP extraction validation
+-----------------------------------
+Candidate canonical root: 1.
+Candidate ZIP entries: 2,810.
+Candidate forbidden files: 0.
+Candidate STEP063A acceptance: 20/20 PASS.
+Candidate corrected STEP063: 33/33 PASS.
+Candidate focused STEP063 tests: 53 passed, 0 skipped.
+Candidate Python full regression: 632/632 PASS across 186 test files.
+The final ZIP differs from the validated candidate only by this appended validation section.

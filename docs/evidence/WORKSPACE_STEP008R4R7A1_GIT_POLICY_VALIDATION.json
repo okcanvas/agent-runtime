@@ -1,0 +1,105 @@
+{
+  "checks": {
+    "attribute_sentinels": 8,
+    "durable_evidence_log_trackable": true,
+    "environment_example_trackable": true,
+    "ignore_sentinels": 13,
+    "local_environment_ignored": true,
+    "product_artifact_package_trackable": true,
+    "retained_upstream_vscode_trackable": true,
+    "runtime_retained_cli_dist_trackable": true,
+    "runtime_root_artifacts_ignored": true,
+    "workspace_root_vscode_ignored": true
+  },
+  "errors": [],
+  "observed_attributes": {
+    "docs/evidence/sample.json": {
+      "eol": "lf",
+      "text": "set"
+    },
+    "docs/evidence/sample.png": {
+      "eol": "lf",
+      "text": "unset"
+    },
+    "okcanvas-agent-runtime/okcanvas_agent_runtime/__init__.py": {
+      "eol": "lf",
+      "text": "set"
+    },
+    "okcanvas-agent-runtime/sh_run_step086_acceptance.cmd": {
+      "eol": "crlf",
+      "text": "set"
+    },
+    "okcanvas-agent-runtime/sh_run_step086r2_acceptance.cmd": {
+      "eol": "crlf",
+      "text": "set"
+    },
+    "okcanvas-agent-runtime/sh_run_step088r1_acceptance.cmd": {
+      "eol": "crlf",
+      "text": "set"
+    },
+    "okcanvas-agent-runtime/sh_run_step090r1_acceptance.cmd": {
+      "eol": "crlf",
+      "text": "set"
+    },
+    "sh_run_workspace_step008_acceptance.cmd": {
+      "eol": "lf",
+      "text": "set"
+    }
+  },
+  "observed_ignore": {
+    ".vscode/settings.json": {
+      "ignored": true,
+      "rule": ".gitignore:87:/.vscode/\t.vscode/settings.json"
+    },
+    "local-run.log": {
+      "ignored": true,
+      "rule": ".gitignore:81:/*.log\tlocal-run.log"
+    },
+    "node_modules/x/index.js": {
+      "ignored": true,
+      "rule": ".gitignore:44:**/node_modules/\tnode_modules/x/index.js"
+    },
+    "okcanvas-agent-cli/dist/index.js": {
+      "ignored": true,
+      "rule": ".gitignore:47:okcanvas-agent-cli/dist/\tokcanvas-agent-cli/dist/index.js"
+    },
+    "okcanvas-agent-runtime/.env.local": {
+      "ignored": true,
+      "rule": "okcanvas-agent-runtime/.gitignore:13:.env.local\tokcanvas-agent-runtime/.env.local"
+    },
+    "okcanvas-agent-runtime/.env.local.example": {
+      "ignored": false,
+      "rule": ".gitignore:11:!**/.env.*.example\tokcanvas-agent-runtime/.env.local.example"
+    },
+    "okcanvas-agent-runtime/.local/product.sqlite3": {
+      "ignored": true,
+      "rule": "okcanvas-agent-runtime/.gitignore:21:.local/\tokcanvas-agent-runtime/.local/product.sqlite3"
+    },
+    "okcanvas-agent-runtime/artifacts/blob.bin": {
+      "ignored": true,
+      "rule": "okcanvas-agent-runtime/.gitignore:11:/artifacts/\tokcanvas-agent-runtime/artifacts/blob.bin"
+    },
+    "okcanvas-agent-runtime/clients/cli/dist/api-client.js": {
+      "ignored": false,
+      "rule": "okcanvas-agent-runtime/.gitignore:84:!clients/cli/dist/**\tokcanvas-agent-runtime/clients/cli/dist/api-client.js"
+    },
+    "okcanvas-agent-runtime/docs/evidence/step091d-runtime-full-suite-partitions/partition-01.log": {
+      "ignored": false,
+      "rule": ""
+    },
+    "okcanvas-agent-runtime/okcanvas_agent_runtime/application/artifacts/service.py": {
+      "ignored": false,
+      "rule": ""
+    },
+    "okcanvas-agent-runtime/reference/upstream/openai-agents-python-0.19.0/.vscode/settings.json": {
+      "ignored": false,
+      "rule": ""
+    },
+    "okcanvas-connectors/groupware-mcp-server/dist/pkg.js": {
+      "ignored": true,
+      "rule": ".gitignore:50:okcanvas-connectors/**/dist/\tokcanvas-connectors/groupware-mcp-server/dist/pkg.js"
+    }
+  },
+  "schema_version": "okcanvas-git-repository-policy-validation-v1",
+  "state": "PASSED"
+}

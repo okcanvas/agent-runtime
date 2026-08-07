@@ -1,0 +1,13 @@
+{
+  "catalog_id": "organization-context-default",
+  "directory_file": "directory.json",
+  "directory_sha256": "74d984cf9376442eee80f9b6169c46a9ce08e57b3b4912e8384c790e83468a99",
+  "effective_at": "2026-08-04T00:00:00Z",
+  "glossary_file": "glossary.json",
+  "glossary_sha256": "7adc1fcfb5902c34bf01810040fac9e9280127f82cc4128f62f07b9fa1cb65a3",
+  "knowledge_file": "knowledge.json",
+  "knowledge_sha256": "b665795ee27a448060ba37cbafc2cc6af59dda3b5a0ce4b2e07ef278a03e91cf",
+  "schema_version": "okcanvas-organization-context-manifest-v1",
+  "state": "EMPTY",
+  "version": "1.0.0"
+}

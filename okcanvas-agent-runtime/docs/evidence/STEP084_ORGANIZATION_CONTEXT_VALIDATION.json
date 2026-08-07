@@ -1,0 +1,123 @@
+{
+  "checks": {
+    "cross_tenant_filtering_exact": true,
+    "default_catalog_empty_and_valid": true,
+    "default_empty_route_fails_closed": true,
+    "directory_exact_match": true,
+    "durable_automation_remains_unconfigured": true,
+    "enterprise_write_remains_unconfigured": true,
+    "external_sync_not_claimed": true,
+    "fixture_catalog_ready_and_exact": true,
+    "glossary_exact_match": true,
+    "grounding_context_is_authoritative_and_versioned": true,
+    "identity_exact": true,
+    "knowledge_exact_match": true,
+    "manifest_hashes_bound": true,
+    "next_step_exact": true,
+    "no_match_blocks_model_submission": true,
+    "organization_routes_registered": true,
+    "ready_route_is_grounded_and_executable": true,
+    "routing_policy_promoted": true,
+    "runtime_info_contract_exact": true,
+    "tool_search_remains_disabled": true
+  },
+  "default_catalog": {
+    "catalog_id": "organization-context-default",
+    "record_count": 0,
+    "state": "EMPTY",
+    "version": "1.0.0"
+  },
+  "fixture_catalog": {
+    "catalog_id": "organization-context-step084-fixture",
+    "record_count": 4,
+    "state": "READY",
+    "version": "1.0.0"
+  },
+  "no_match_route": {
+    "executable_now": false,
+    "grounding": [],
+    "grounding_catalog_id": "organization-context-step084-fixture",
+    "grounding_catalog_version": "1.0.0",
+    "grounding_effective_at": "2026-08-04T00:00:00Z",
+    "grounding_state": "NO_MATCH",
+    "matched_rule_id": "organization-context-no-match-v1",
+    "policy_id": "organization-assistant-routing-v1",
+    "policy_sha256": "93e072d96eee8476161159e994195f43da4e22f2630c9a2a3d1a2b5a40e3b481",
+    "policy_version": "1.1.0",
+    "reasons": [
+      "organization-specific-language-detected",
+      "no-authoritative-organization-record-matched",
+      "model-inference-blocked"
+    ],
+    "request_class": "SEARCH_KNOWLEDGE",
+    "required_capabilities": [
+      {
+        "availability": "AVAILABLE",
+        "capability_id": "organization-knowledge-read-v1",
+        "selected_agent_id": "organization-assistant-agent",
+        "side_effect": "READ"
+      }
+    ],
+    "schema_version": "okcanvas-assistant-route-v2",
+    "selected_agent_definition_id": null,
+    "side_effect": "READ",
+    "status": "NO_MATCH"
+  },
+  "passed_checks": 20,
+  "ready_route": {
+    "executable_now": true,
+    "grounding": [
+      {
+        "classification": "INTERNAL",
+        "kind": "GLOSSARY",
+        "label": "PI",
+        "match_type": "CANONICAL_IN_QUERY",
+        "record_id": "term.pi",
+        "score": 90,
+        "source_reference": "org://demo/glossary/pi",
+        "source_title": "STEP084 Demo Organization Glossary",
+        "source_version": "2026.08",
+        "summary": "STEP084 검증 조직에서 PI는 업무 프로세스 혁신 프로그램을 뜻한다."
+      }
+    ],
+    "grounding_catalog_id": "organization-context-step084-fixture",
+    "grounding_catalog_version": "1.0.0",
+    "grounding_effective_at": "2026-08-04T00:00:00Z",
+    "grounding_state": "MATCHED",
+    "matched_rule_id": "organization-context-authoritative-match-v1",
+    "policy_id": "organization-assistant-routing-v1",
+    "policy_sha256": "93e072d96eee8476161159e994195f43da4e22f2630c9a2a3d1a2b5a40e3b481",
+    "policy_version": "1.1.0",
+    "reasons": [
+      "organization-specific-language-detected",
+      "authoritative-organization-context-matched",
+      "tenant-principal-role-scope-verified"
+    ],
+    "request_class": "SEARCH_KNOWLEDGE",
+    "required_capabilities": [
+      {
+        "availability": "AVAILABLE",
+        "capability_id": "organization-knowledge-read-v1",
+        "selected_agent_id": "organization-assistant-agent",
+        "side_effect": "READ"
+      }
+    ],
+    "schema_version": "okcanvas-assistant-route-v2",
+    "selected_agent_definition_id": "organization-assistant-agent",
+    "side_effect": "READ",
+    "status": "EXECUTABLE"
+  },
+  "runtime_organization_routes": [
+    "/v1/organization/directory/search",
+    "/v1/organization/glossary/resolve",
+    "/v1/organization/knowledge/search",
+    "/v1/service/organization/directory/search",
+    "/v1/service/organization/glossary/resolve",
+    "/v1/service/organization/knowledge/search"
+  ],
+  "schema_version": "okcanvas-step084-organization-context-validation-v1",
+  "state": "PASSED",
+  "step": "STEP084_ORGANIZATION_KNOWLEDGE_GLOSSARY_AND_DIRECTORY_FOUNDATION",
+  "total_checks": 20,
+  "version": "2.64.0"
+}

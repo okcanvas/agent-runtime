@@ -1,0 +1,209 @@
+{
+  "agent_definition_count": 29,
+  "capability_binding_count": 34,
+  "checks": {
+    "agent_catalog_extended_exact": true,
+    "assistant_routes_registered": true,
+    "attachment_and_snapshot_routes_exact": true,
+    "automation_is_proposal_only": true,
+    "enterprise_mcp_not_falsely_configured": true,
+    "enterprise_read_fails_closed": true,
+    "general_and_content_routes_executable": true,
+    "identity_exact": true,
+    "main_agent_catalog_bound": true,
+    "main_agents_are_language_only": true,
+    "next_step_exact": true,
+    "organization_knowledge_fails_closed": true,
+    "output_contract_runtime_bound": true,
+    "public_web_route_reuses_accepted_agent": true,
+    "routing_policy_exact": true,
+    "session_agent_catalog_bound": true,
+    "tool_search_still_disabled": true,
+    "write_is_proposal_only": true
+  },
+  "passed_checks": 18,
+  "policy_sha256": "44b3d53a393b5ddb4c7ce93cc27a84adea6cab1010c9ad204f21711f51d6ba5d",
+  "routing_matrix": {
+    "automation": {
+      "executable_now": true,
+      "matched_rule_id": "future-repeated-conditional-work-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "44b3d53a393b5ddb4c7ce93cc27a84adea6cab1010c9ad204f21711f51d6ba5d",
+      "policy_version": "1.0.0",
+      "reasons": [
+        "future-or-recurring-trigger-language-detected",
+        "durable-scheduler-not-configured"
+      ],
+      "request_class": "AUTOMATE",
+      "required_capabilities": [
+        {
+          "availability": "NOT_CONFIGURED",
+          "capability_id": "durable-automation-v1",
+          "selected_agent_id": null,
+          "side_effect": "AUTOMATION_DEFINITION"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v1",
+      "selected_agent_definition_id": "organization-assistant-agent",
+      "side_effect": "AUTOMATION_DEFINITION",
+      "status": "PROPOSAL_ONLY"
+    },
+    "content": {
+      "executable_now": true,
+      "matched_rule_id": "content-drafting-intent-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "44b3d53a393b5ddb4c7ce93cc27a84adea6cab1010c9ad204f21711f51d6ba5d",
+      "policy_version": "1.0.0",
+      "reasons": [
+        "content-generation-language-detected",
+        "no-external-side-effect"
+      ],
+      "request_class": "WRITE_CONTENT",
+      "required_capabilities": [
+        {
+          "availability": "AVAILABLE",
+          "capability_id": "content-drafting-v1",
+          "selected_agent_id": "organization-assistant-agent",
+          "side_effect": "DRAFT"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v1",
+      "selected_agent_definition_id": "organization-assistant-agent",
+      "side_effect": "DRAFT",
+      "status": "EXECUTABLE"
+    },
+    "general": {
+      "executable_now": true,
+      "matched_rule_id": "default-general-answer-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "44b3d53a393b5ddb4c7ce93cc27a84adea6cab1010c9ad204f21711f51d6ba5d",
+      "policy_version": "1.0.0",
+      "reasons": [
+        "no-external-capability-required"
+      ],
+      "request_class": "ANSWER",
+      "required_capabilities": [
+        {
+          "availability": "AVAILABLE",
+          "capability_id": "general-assistant-v1",
+          "selected_agent_id": "organization-assistant-agent",
+          "side_effect": "NONE"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v1",
+      "selected_agent_definition_id": "organization-assistant-agent",
+      "side_effect": "NONE",
+      "status": "EXECUTABLE"
+    },
+    "knowledge": {
+      "executable_now": false,
+      "matched_rule_id": "organization-language-intent-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "44b3d53a393b5ddb4c7ce93cc27a84adea6cab1010c9ad204f21711f51d6ba5d",
+      "policy_version": "1.0.0",
+      "reasons": [
+        "organization-specific-language-detected",
+        "organization-knowledge-source-not-configured"
+      ],
+      "request_class": "SEARCH_KNOWLEDGE",
+      "required_capabilities": [
+        {
+          "availability": "NOT_CONFIGURED",
+          "capability_id": "organization-knowledge-read-v1",
+          "selected_agent_id": null,
+          "side_effect": "READ"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v1",
+      "selected_agent_definition_id": null,
+      "side_effect": "READ",
+      "status": "NOT_CONFIGURED"
+    },
+    "system_read": {
+      "executable_now": false,
+      "matched_rule_id": "enterprise-read-intent-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "44b3d53a393b5ddb4c7ce93cc27a84adea6cab1010c9ad204f21711f51d6ba5d",
+      "policy_version": "1.0.0",
+      "reasons": [
+        "enterprise-system-context-detected",
+        "read-language-detected",
+        "enterprise-connector-not-configured"
+      ],
+      "request_class": "READ_SYSTEM",
+      "required_capabilities": [
+        {
+          "availability": "NOT_CONFIGURED",
+          "capability_id": "enterprise-system-read-v1",
+          "selected_agent_id": null,
+          "side_effect": "READ"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v1",
+      "selected_agent_definition_id": null,
+      "side_effect": "READ",
+      "status": "NOT_CONFIGURED"
+    },
+    "web": {
+      "executable_now": true,
+      "matched_rule_id": "public-web-search-intent-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "44b3d53a393b5ddb4c7ce93cc27a84adea6cab1010c9ad204f21711f51d6ba5d",
+      "policy_version": "1.0.0",
+      "reasons": [
+        "public-current-information-language-detected"
+      ],
+      "request_class": "SEARCH_WEB",
+      "required_capabilities": [
+        {
+          "availability": "AVAILABLE",
+          "capability_id": "public-web-search-v1",
+          "selected_agent_id": "hosted-web-search-agent",
+          "side_effect": "READ"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v1",
+      "selected_agent_definition_id": "hosted-web-search-agent",
+      "side_effect": "READ",
+      "status": "EXECUTABLE"
+    },
+    "write": {
+      "executable_now": true,
+      "matched_rule_id": "enterprise-write-intent-v1",
+      "policy_id": "organization-assistant-routing-v1",
+      "policy_sha256": "44b3d53a393b5ddb4c7ce93cc27a84adea6cab1010c9ad204f21711f51d6ba5d",
+      "policy_version": "1.0.0",
+      "reasons": [
+        "enterprise-system-context-detected",
+        "write-verb-detected",
+        "approval-required-before-write"
+      ],
+      "request_class": "WRITE_ACTION",
+      "required_capabilities": [
+        {
+          "availability": "NOT_CONFIGURED",
+          "capability_id": "enterprise-action-write-v1",
+          "selected_agent_id": null,
+          "side_effect": "WRITE_IRREVERSIBLE"
+        }
+      ],
+      "schema_version": "okcanvas-assistant-route-v1",
+      "selected_agent_definition_id": "organization-assistant-agent",
+      "side_effect": "WRITE_IRREVERSIBLE",
+      "status": "PROPOSAL_ONLY"
+    }
+  },
+  "runtime_assistant_routes": [
+    "/v1/assistant/routes",
+    "/v1/assistant/run-submissions/preflight",
+    "/v1/assistant/sessions",
+    "/v1/service/assistant/routes",
+    "/v1/service/assistant/run-submissions/preflight",
+    "/v1/service/assistant/sessions"
+  ],
+  "schema_version": "okcanvas-step083-assistant-routing-validation-v1",
+  "state": "PASSED",
+  "step": "STEP083_ORGANIZATION_ASSISTANT_MAIN_AGENT_AND_ACTION_ROUTING_FOUNDATION",
+  "total_checks": 18,
+  "version": "2.63.0"
+}

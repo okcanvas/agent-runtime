@@ -1,0 +1,18 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "guardrail-language-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Guardrail Language Agent",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [],
+  "mcp_servers": [],
+  "handoffs": [],
+  "agent_tools": [],
+  "guardrails": ["block-input-marker", "block-output-marker"],
+  "workspace_access": "none",
+  "max_turns": 1,
+  "workflow_name": "OKCanvas Native Guardrail Language Agent",
+  "session_mode": "disabled"
+}

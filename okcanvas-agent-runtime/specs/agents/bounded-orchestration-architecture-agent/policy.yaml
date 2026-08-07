@@ -1,0 +1,15 @@
+agent_id: bounded-orchestration-architecture-agent
+definition_version: 1.0.0
+status: active
+allowed_tools: []
+handoffs: []
+agent_tools: []
+orchestration_children: []
+workspace_access: none
+network_access: openai_model_api_only
+approval_required: explicit_live_call_opt_in
+max_turns: 4
+output_contract: CodingAgentResult
+session_mode: disabled
+product_state: task-run-event-artifact
+live_accepted: false

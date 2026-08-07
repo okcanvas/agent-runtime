@@ -1,0 +1,23 @@
+{
+  "name": "@okcanvas/groupware-api-fake-example",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Example/template deterministic Groupware product API substitute for connector development",
+  "type": "module",
+  "scripts": {
+    "setup": "npm ci --ignore-scripts --offline",
+    "build": "tsc -p tsconfig.json",
+    "pretest": "npm run setup",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "preacceptance": "npm run setup",
+    "acceptance": "npm run build && node dist/scripts/run-acceptance.js",
+    "start": "node dist/src/main.js",
+    "package:source": "node scripts/package-source.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "file:vendor/typescript-5.8.3.tgz"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "okcanvas-connector-example-step001r1-acceptance-v1",
+  "step": "EXAMPLE_STEP001R1_TYPESCRIPT_BUILD_DEPENDENCY_CLOSURE",
+  "version": "0.1.1",
+  "state": "PASSED",
+  "checks": {
+    "typescript_build_dependency_closed": true,
+    "product_api_passed": true,
+    "request_capture_redacts_authorization": true,
+    "deterministic_identity": true,
+    "no_mcp_export": true,
+    "example_only_health": true
+  },
+  "passed_checks": 6,
+  "total_checks": 6
+}

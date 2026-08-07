@@ -1,0 +1,27 @@
+{
+  "agent_definition_count": 26,
+  "docker_calls": 0,
+  "external_network_calls": 0,
+  "focused": {
+    "passed": 38,
+    "skip_reason": "Windows symlink creation unavailable",
+    "skipped": 2
+  },
+  "foundation_sha256": "fab2d5a5e84e83fccdb01ab2754a6d3da3119f21986dd9f435a540d8a6ce8d10",
+  "historical": {
+    "passed": 47
+  },
+  "model_calls": 0,
+  "node": {
+    "passed": 14
+  },
+  "passed_checks": 26,
+  "policy_sha256": "4cedb7224eefc7dbc925fd3cf0bb9e6e4365d11750bc1fbb8d7b6994f51a63b1",
+  "provider_contract_sha256": "27c2dd48f39d6bcf2ef21093c34d92b9c719742a1146bc6af4b1c7227f1effaa",
+  "sandbox_runtime_sha256": "d379b9b30de2328a579c7e373acbf390f08c3c0c7e685c8324572442d9053e0c",
+  "schema_version": "okcanvas-step073-windows-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "STEP073_PRODUCT_OWNED_SANDBOX_RUNTIME_FOUNDATION_V1",
+  "total_checks": 26,
+  "version": "2.53.0"
+}

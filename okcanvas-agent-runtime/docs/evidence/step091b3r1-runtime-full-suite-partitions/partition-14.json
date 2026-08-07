@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-14",
+  "partition_number": 14,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:08:48.976364+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 111,
+  "passed_tests": 111,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 16.576,
+  "exit_code": 0,
+  "files_sha256": "9b48eec650ffa8d669c344a62282e890b2862c219dc3e0591e42305db9820e1f",
+  "log_sha256": "3dfb22a4de0405da8dfea8ed9b9174afe869969f163ee0af1c2090462e45ae45",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step068_bounded_local_pdf_image_input.py",
+    "tests/test_step068_bounded_local_pdf_image_input_baseline.py",
+    "tests/test_step069_multi_user_service_client_contract.py",
+    "tests/test_step069_multi_user_service_client_contract_baseline.py",
+    "tests/test_step070_product_owned_skill_foundation.py",
+    "tests/test_step070_product_owned_skill_foundation_baseline.py",
+    "tests/test_step071_product_skill_document_review_live_acceptance.py",
+    "tests/test_step072_immutable_openai_trace_export_disabled.py",
+    "tests/test_step072a_windows_pycache_overlay_isolation_fix.py",
+    "tests/test_step072b_windows_crlf_and_local_env_forwarding_fix.py",
+    "tests/test_step073_product_owned_sandbox_runtime_foundation.py",
+    "tests/test_step074_product_owned_docker_sandbox_provider_lifecycle.py",
+    "tests/test_step075_product_owned_readonly_sandbox_workspace_agent.py",
+    "tests/test_step075a_windows_docker_tmpfs_normalization_and_failure_evidence_fix.py"
+  ]
+}

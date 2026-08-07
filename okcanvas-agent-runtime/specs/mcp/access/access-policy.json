@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-mcp-access-policy-v1",
+  "policy_id": "multi-mcp-delegated-identity-v1",
+  "version": "1.1.0",
+  "max_remote_servers_per_agent": 4,
+  "endpoint_mode": "tenant-template",
+  "delegated_headers": [
+    "X-OKCanvas-Tenant-ID",
+    "X-OKCanvas-Principal-ID",
+    "X-OKCanvas-Roles",
+    "X-OKCanvas-Delegation-ID"
+  ],
+  "health_mode": "passive",
+  "circuit_breaker_state_scope": "process-local-server-id"
+}

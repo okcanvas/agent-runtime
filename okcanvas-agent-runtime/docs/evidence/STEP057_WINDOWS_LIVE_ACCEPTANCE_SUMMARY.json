@@ -1,0 +1,39 @@
+{
+  "schema_version": "okcanvas-step057-windows-live-acceptance-summary-v1",
+  "step_id": "STEP057",
+  "step": "STEP057_NODE_CLI_RUNTIME_SESSION_CONVERSATION",
+  "version": "2.37.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_at": "2026-07-31",
+  "manual_product_probe": {
+    "agent_id": "conversational-coding-agent",
+    "same_session_name_memory": true,
+    "remembered_name": "캐빈",
+    "session_id_present": true
+  },
+  "acceptance": {
+    "schema_version": "okcanvas-step057-acceptance-v1",
+    "state": "PASSED",
+    "checks_passed": 25,
+    "checks_total": 25,
+    "node_process_returncodes": [0, 0],
+    "sessions_created": 2,
+    "resumed_turn_count": 3,
+    "resumed_item_count": 6,
+    "new_turn_count": 1,
+    "new_item_count": 2,
+    "final_counts": {
+      "tasks": 4,
+      "runs": 4,
+      "submissions": 4,
+      "invocations": 4,
+      "events": 48,
+      "artifacts": 4,
+      "evaluations": 1
+    },
+    "protected_payload_file_count": 0,
+    "cleanup_state": "COMPLETED",
+    "cleanup_attempts": 1,
+    "references_unchanged": true
+  }
+}

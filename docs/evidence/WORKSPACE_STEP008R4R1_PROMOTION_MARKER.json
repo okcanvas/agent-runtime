@@ -1,0 +1,18 @@
+{
+  "new_windows_live_required": false,
+  "next_step": "STEP091B1_TYPED_PERSISTENCE_PORTS_AND_TRANSACTION_OWNERSHIP",
+  "parent_product_acceptance": {
+    "windows_deterministic": "25/25 PASSED",
+    "windows_live_openai": "29/29 PASSED",
+    "workspace_step": "WORKSPACE_STEP008R4_SHORT_EXPRESSION_LIVE_ACCEPTANCE_SEMANTIC_OUTPUT_AND_COMPACTED_SESSION_ASSERTION_CLOSURE"
+  },
+  "product_runtime_changed": false,
+  "promotion": "DOCUMENTATION_ALIGNED_CURRENT_PACKAGE_BASELINE_ON_WINDOWS_ACCEPTED_STEP008R4_PARENT",
+  "runtime_step": "STEP090R1_ORGANIZATION_CONTEXT_MCP_TOOL_OUTPUT_PROTOCOL_AND_SHORT_LIST_TOOL_CHOICE_CLOSURE",
+  "runtime_version": "2.70.1",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "LOCAL_AND_FRESH_DETERMINISTIC_ACCEPTED",
+  "step": "WORKSPACE_STEP008R4R1_FINAL_PROMOTION_DOCUMENT_PRODUCTIZATION_PLAN_AND_STORAGE_AUDIT_ALIGNMENT",
+  "version": "0.8.4-r1",
+  "windows_deterministic_package_confirmation": "PENDING_OPTIONAL"
+}

@@ -1,0 +1,68 @@
+STEP066_REMOTE_MCP_STREAMABLE_HTTP_MVP_FOUNDATION
+Version: 2.46.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_RERUN_PENDING
+
+Priority reset
+- Explicit user direction on 2026-08-01: operations stability after MVP.
+- Latest Windows-live accepted baseline retained: STEP064A / 2.44.1.
+- STEP065 remains implemented and deterministic, but is classified as post-MVP hardening and is not claimed Windows-live accepted.
+- Active MVP sequence: remote MCP -> hosted Web/File Search -> multimodal input -> real bounded orchestration workflow -> integrated MVP acceptance.
+
+Implemented core capability
+- `okcanvas-mcp-server-v2` / `remote-streamable-http` definitions.
+- One exact immutable HTTPS endpoint per Session-disabled Agent.
+- No local/remote transport mixing.
+- Static read-only Tool allowlist and cached Tool list.
+- Optional bearer token from one immutable environment-variable name.
+- Official installed-SDK `MCPServerStreamableHttp` and `MCPServerManager` construction.
+- HTTP redirects disabled and environment proxy inheritance disabled.
+- Remote retries fixed to zero.
+- Tool result bounded before returning from the product-owned delegate to the SDK.
+- Exact remote transport and endpoint identity included in Runtime binding.
+- Non-enabled `.invalid` configuration template and contract documentation.
+
+Reference source evidence
+- `reference/upstream/openai-agents-python-0.19.0/src/agents/mcp/server.py`
+  SHA-256 `920c52936da4e02377680e55a5c7d90164e9b31f4ba800c41411524e5c34b118`
+- `reference/upstream/openai-agents-python-0.19.0/src/agents/mcp/manager.py`
+  SHA-256 `1516644f5b85c7c325a0c09b0799b27aeb6ba9357407582d0fab89a8e0ec127d`
+- `reference/upstream/openai-agents-python-0.19.0/src/agents/mcp/util.py`
+  SHA-256 `10d2ee686c76a5d99fea9f1bc8348865e80d9e09608d67fef3f248d9712a9077`
+
+Deterministic validation
+- STEP066 acceptance: 28/28 PASS.
+- STEP066 focused tests: 19/19 PASS.
+- Historical MCP tests: 20/20 PASS.
+- Full Python regression, five disjoint file groups: 154 + 115 + 155 + 101 + 153 = 678/678 PASS.
+- Python compileall: PASS.
+- Committed TypeScript release integrity: PASS (`inputs=11 outputs=21 tests=2 external_tsc_required=false`).
+- Node tests: 14/14 PASS.
+- npm pack dry-run: 23 files.
+- Reference verification: 4/4 PASS.
+- Direct executable `/reference` imports: 0.
+
+Commands executed
+- `PYTHONPATH=src:. python scripts/run_step066_acceptance.py`
+- `PYTHONPATH=src:. pytest -q <five disjoint test-file groups>`
+- `npm pack --dry-run --json`
+- STEP066 acceptance internally executed compileall, committed Node release validation, Node tests, direct-reference-import verification and Reference verification.
+
+Unexecuted live checks
+- No external MCP network connection.
+- No bearer token sent to a remote service.
+- No OpenAI model call.
+- No Windows launcher execution in this environment.
+
+Expected Windows closure
+- `sh_run_step066_acceptance.cmd`
+- Expected state: PASSED, 28/28 checks.
+
+Candidate ZIP independent verification
+- Candidate SHA-256: `9d2cf9b2811b3a45b1b92269793a2a7b2ff79f87b0f9060cdc850b4b43a03a76`.
+- Candidate ZIP canonical root: 1.
+- Candidate ZIP entries: 2,851.
+- Candidate ZIP forbidden files: 0.
+- Newly extracted candidate STEP066 acceptance: 28/28 PASS.
+- Newly extracted candidate Python regression: 678/678 PASS in five disjoint groups.
+- Newly extracted candidate Node tests: 14/14 PASS through acceptance.
+- Newly extracted candidate Reference verification: 4/4 PASS through acceptance.

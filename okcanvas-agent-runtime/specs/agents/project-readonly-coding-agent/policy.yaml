@@ -1,0 +1,10 @@
+mode: governed-project-readonly-inspection
+local_tools:
+  - project_readonly_inspect
+needs_approval: false
+mcp: false
+handoffs: false
+session: false
+writes: false
+network: false
+shell: false

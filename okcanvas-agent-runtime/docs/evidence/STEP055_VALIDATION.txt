@@ -1,0 +1,58 @@
+STEP055_IMMUTABLE_OPENAI_PROVIDER_IDENTIFIER_MINIMIZATION_V1
+Version: 2.35.0
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+
+SOURCE TREE VALIDATION
+- python -m compileall -q src/okcanvas_agent_runtime scripts tests: PASS
+- PYTHONPATH=src pytest -q: 531 passed
+- focused provider-identifier/model-route/runtime-binding regressions: 48 passed
+- STEP055 Acceptance: 35/35 PASS, cleanup COMPLETED in one attempt
+- STEP054 Acceptance: 30/30 PASS
+- STEP053 Acceptance: 30/30 PASS
+- STEP052 Acceptance: 25/25 PASS
+- STEP051 Acceptance: 25/25 PASS
+- STEP050 Acceptance: 31/31 PASS
+- STEP049 Acceptance: 33/33 PASS
+- STEP048 Acceptance: 32/32 PASS
+- STEP047 Acceptance: 29/29 PASS
+- STEP046 Acceptance: 27/27 PASS
+- STEP045 integrated skeleton: 28/28 PASS
+- STEP044/043/042/041/039: 23/29/29/24/20 PASS
+- STEP030A: 8/8 PASS; Windows launchers=60; violations=0
+- Reference integrity: 4/4 PASS
+- Direct executable /reference imports: 0 (full test suite)
+
+STEP055 EXACT EVIDENCE
+- SDK private response/request IDs observed as presence true/true only
+- raw provider response/request IDs absent from Events, Product/Evaluation DB, Artifact, Runtime binding and execution response
+- Runner.run/run_streamed: 0/1
+- provider construct/get-model/close: 1/1/1
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation: 1/1/2/1/10/1/1
+- protected payload files: 1
+- Evaluation: PASSED
+- provider-identifier policy drift confirmation: 409
+- References unchanged
+- acceptance workspace cleanup: COMPLETED, attempts=1
+
+INDEPENDENT ZIP VALIDATION
+- Candidate ZIP: canonical root=1, entries=2584, forbidden files=0.
+- Immutable Reference .vscode files preserved: 2.
+- Fresh extraction compileall: PASS.
+- Fresh extraction full pytest by file groups: 115 + 107 + 176 + 33 + 46 + 28 + 26 = 531/531 PASS.
+- Fresh extraction STEP055/054/053: 35/30/30 PASS.
+- Fresh extraction STEP052/051: 25/25 PASS.
+- Fresh extraction STEP050/049/048/047/046/045: 31/33/32/29/27/28 PASS.
+- Fresh extraction STEP044/043/042/041/039: 23/29/29/24/20 PASS.
+- Fresh extraction STEP030A: 8/8; launchers=60; violations=0.
+- Fresh extraction Reference integrity: 4/4 PASS.
+- Fresh extraction direct executable /reference imports: 0.
+
+FINAL VALIDATION-RECORD ZIP EXTRACTION
+- Validation-record ZIP canonical root=1; entries=2584; forbidden files=0.
+- Fresh extraction compileall: PASS.
+- All 164 test files executed; exact total 115 + 107 + 176 + 33 + 44 + 18 + 38 = 531/531 PASS.
+- STEP055 Acceptance: 35/35 PASS; cleanup COMPLETED in one attempt.
+- STEP030A: 8/8 PASS; launchers=60; violations=0.
+- Reference integrity: 4/4 PASS.
+- Direct executable /reference imports: 0.
+- The final distributable is regenerated only to append this validation record.

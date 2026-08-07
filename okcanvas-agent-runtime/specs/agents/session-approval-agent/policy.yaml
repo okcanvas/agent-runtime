@@ -1,0 +1,12 @@
+mode: governed-sqlite-session-tool-approval
+local_tools:
+  - local_text_metrics
+needs_approval: true
+session: sqlite-v1
+mcp: false
+handoffs: false
+agent_tools: false
+writes: false
+workspace: none
+network: false
+shell: false

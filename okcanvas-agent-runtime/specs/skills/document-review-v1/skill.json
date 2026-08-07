@@ -1,0 +1,32 @@
+{
+  "schema_version": "okcanvas-product-skill-v1",
+  "skill_id": "document-review-v1",
+  "version": "1.0.0",
+  "name": "Bounded Document Review",
+  "description": "A server-installed immutable review method for one validated local PDF or image.",
+  "execution_mode": "instructions-and-static-resources",
+  "instructions_file": "instructions.md",
+  "resources": [
+    {
+      "path": "resources/review-checklist.md",
+      "media_type": "text/markdown"
+    },
+    {
+      "path": "resources/evidence-rules.json",
+      "media_type": "application/json"
+    }
+  ],
+  "allowed_agent_ids": [
+    "skill-document-review-agent"
+  ],
+  "allowed_input_modes": [
+    "local-attachment-v1"
+  ],
+  "allowed_output_contracts": [
+    "LocalDocumentReviewResult"
+  ],
+  "required_tools": [],
+  "required_mcp_servers": [],
+  "required_hosted_tools": [],
+  "workspace_access": "none"
+}

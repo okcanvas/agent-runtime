@@ -1,0 +1,27 @@
+{
+  "schema_version": "okcanvas-hosted-web-search-policy-v1",
+  "policy_id": "official-openai-docs-web-search-v1",
+  "version": "1.0.0",
+  "tool_id": "web-search-v1",
+  "allowed_domains": [
+    "developers.openai.com"
+  ],
+  "search_context_size": "medium",
+  "external_web_access": true,
+  "user_location_enabled": false,
+  "max_search_calls": 1,
+  "max_retrieved_sources": 8,
+  "max_citations": 8,
+  "max_title_chars": 200,
+  "require_retrieved_source": true,
+  "require_inline_citation": true,
+  "raw_query_persisted": false,
+  "raw_content_persisted": false,
+  "provider_call_id_persisted": false,
+  "response_include": [
+    "web_search_call.action.sources"
+  ],
+  "tool_choice": "required",
+  "parallel_tool_calls": false,
+  "max_turns": 2
+}

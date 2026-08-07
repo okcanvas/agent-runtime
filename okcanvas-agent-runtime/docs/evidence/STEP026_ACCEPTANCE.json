@@ -1,0 +1,262 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260730T021203405725Z-5bf4cd57",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-30T02:12:04.577736Z",
+    "created_at": "2026-07-30T02:12:03.406009Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP026"
+  },
+  "artifact_count": 4,
+  "artifact_errors": [],
+  "case_results": [
+    {
+      "case_id": "case001-shortage",
+      "evaluation_state": "PASSED",
+      "event_types": [
+        "run.created",
+        "run.started",
+        "agent.definition.resolved",
+        "agent.started",
+        "model.started",
+        "model.completed",
+        "agent.completed",
+        "artifact.created",
+        "run.completed",
+        "payload.retention.applied"
+      ],
+      "outcome_http_status": 200,
+      "payload_retention_state": "DELETED",
+      "result": {
+        "recommendations": [
+          {
+            "action": "REORDER",
+            "reorder_units": 12,
+            "sku": "ergonomic-keyboard"
+          },
+          {
+            "action": "REORDER",
+            "reorder_units": 7,
+            "sku": "desk-lamp"
+          },
+          {
+            "action": "NO_ACTION",
+            "reorder_units": 0,
+            "sku": "usb-c-dock"
+          }
+        ],
+        "reviewed_skus": 3,
+        "snapshot_id": "case001-shortage",
+        "status": "ACTION_REQUIRED",
+        "total_reorder_units": 19
+      },
+      "run_id": "run_75c5e8206b9d469e8cbba1b1a8b3c608",
+      "submission_id": "submission_a8342a06273d4a32946febf207156c0c",
+      "task_id": "task_625f8426fb904df49fe2a08cb82a70a3",
+      "terminal_status": "SUCCEEDED"
+    },
+    {
+      "case_id": "case002-covered",
+      "evaluation_state": "PASSED",
+      "event_types": [
+        "run.created",
+        "run.started",
+        "agent.definition.resolved",
+        "agent.started",
+        "model.started",
+        "model.completed",
+        "agent.completed",
+        "artifact.created",
+        "run.completed",
+        "payload.retention.applied"
+      ],
+      "outcome_http_status": 200,
+      "payload_retention_state": "DELETED",
+      "result": {
+        "recommendations": [
+          {
+            "action": "NO_ACTION",
+            "reorder_units": 0,
+            "sku": "cable-organizer"
+          },
+          {
+            "action": "NO_ACTION",
+            "reorder_units": 0,
+            "sku": "monitor-arm"
+          },
+          {
+            "action": "NO_ACTION",
+            "reorder_units": 0,
+            "sku": "webcam"
+          }
+        ],
+        "reviewed_skus": 3,
+        "snapshot_id": "case002-covered",
+        "status": "READY",
+        "total_reorder_units": 0
+      },
+      "run_id": "run_54b50a2321d44d64a4d59a22c7232143",
+      "submission_id": "submission_6a9a00af612d465c8389e4a7b47106ca",
+      "task_id": "task_f89f54715641424b8c99e3b347649e58",
+      "terminal_status": "SUCCEEDED"
+    },
+    {
+      "case_id": "case003-tie-ordering",
+      "evaluation_state": "PASSED",
+      "event_types": [
+        "run.created",
+        "run.started",
+        "agent.definition.resolved",
+        "agent.started",
+        "model.started",
+        "model.completed",
+        "agent.completed",
+        "artifact.created",
+        "run.completed",
+        "payload.retention.applied"
+      ],
+      "outcome_http_status": 200,
+      "payload_retention_state": "DELETED",
+      "result": {
+        "recommendations": [
+          {
+            "action": "REORDER",
+            "reorder_units": 5,
+            "sku": "alpha-hub"
+          },
+          {
+            "action": "REORDER",
+            "reorder_units": 5,
+            "sku": "zeta-stand"
+          },
+          {
+            "action": "NO_ACTION",
+            "reorder_units": 0,
+            "sku": "beta-mouse"
+          }
+        ],
+        "reviewed_skus": 3,
+        "snapshot_id": "case003-tie-ordering",
+        "status": "ACTION_REQUIRED",
+        "total_reorder_units": 10
+      },
+      "run_id": "run_963a221fc8a8423cb287e37cdd64a1af",
+      "submission_id": "submission_9575cc8b50df4d198d01739518d2eda2",
+      "task_id": "task_44bbdcad8019421da4636b8421f32f87",
+      "terminal_status": "SUCCEEDED"
+    },
+    {
+      "case_id": "case004-single-shortage",
+      "evaluation_state": "PASSED",
+      "event_types": [
+        "run.created",
+        "run.started",
+        "agent.definition.resolved",
+        "agent.started",
+        "model.started",
+        "model.completed",
+        "agent.completed",
+        "artifact.created",
+        "run.completed",
+        "payload.retention.applied"
+      ],
+      "outcome_http_status": 200,
+      "payload_retention_state": "DELETED",
+      "result": {
+        "recommendations": [
+          {
+            "action": "REORDER",
+            "reorder_units": 1,
+            "sku": "packing-labels"
+          },
+          {
+            "action": "NO_ACTION",
+            "reorder_units": 0,
+            "sku": "shipping-box"
+          },
+          {
+            "action": "NO_ACTION",
+            "reorder_units": 0,
+            "sku": "tape-roll"
+          }
+        ],
+        "reviewed_skus": 3,
+        "snapshot_id": "case004-single-shortage",
+        "status": "ACTION_REQUIRED",
+        "total_reorder_units": 1
+      },
+      "run_id": "run_3f267a974daa47c8becbb0d6e21ebbdd",
+      "submission_id": "submission_f33f3b3bb5264866bc3065c747978a6b",
+      "task_id": "task_a10f8912bf324d89b6a896ad995c14d3",
+      "terminal_status": "SUCCEEDED"
+    }
+  ],
+  "checks": {
+    "all_business_contracts_exact": true,
+    "all_deterministic_evaluations_passed": true,
+    "all_runs_succeeded": true,
+    "all_successful_payloads_deleted": true,
+    "covered_case_ready_total_zero": true,
+    "credentials_not_in_sqlite": true,
+    "four_valid_business_cases_executed": true,
+    "gateway_called_once_per_valid_case": true,
+    "idempotent_replay_avoided_second_read": true,
+    "invalid_duplicate_sku_failed_before_persistence": true,
+    "invalid_source_read_once": true,
+    "no_tool_or_mcp_events": true,
+    "one_artifact_per_valid_case": true,
+    "preflights_bound_before_task_or_run": true,
+    "raw_source_snapshots_not_in_events_or_sqlite": true,
+    "references_unchanged": true,
+    "single_shortage_case_total_one": true,
+    "single_task_and_run_per_valid_case": true,
+    "source_total_reads_exact": true,
+    "source_write_never_called": true,
+    "tie_case_sorted_by_sku": true,
+    "valid_source_read_once_per_case": true
+  },
+  "final_counts": {
+    "runs": 4,
+    "submissions": 4,
+    "tasks": 4
+  },
+  "invalid_case": {
+    "case_id": "case005-invalid-duplicate-sku",
+    "code": "COMMERCE_SNAPSHOT_INVALID",
+    "counts_after": {
+      "runs": 4,
+      "submissions": 4,
+      "tasks": 4
+    },
+    "counts_before": {
+      "runs": 4,
+      "submissions": 4,
+      "tasks": 4
+    },
+    "http_status": 502
+  },
+  "schema_version": "okcanvas-step026-acceptance-v1",
+  "source": {
+    "adapter_id": "controlled-commerce-http",
+    "adapter_version": "1.0.0",
+    "read_count": 5,
+    "reads_by_key": {
+      "case001-shortage": 1,
+      "case002-covered": 1,
+      "case003-tie-ordering": 1,
+      "case004-single-shortage": 1,
+      "case005-invalid-duplicate-sku": 1,
+      "case006-invalid-empty-items": 0
+    },
+    "write_count": 0
+  },
+  "state": "PASSED",
+  "valid_case_count": 4
+}

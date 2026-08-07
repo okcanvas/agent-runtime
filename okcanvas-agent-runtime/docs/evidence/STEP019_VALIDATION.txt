@@ -1,0 +1,42 @@
+STEP019_GOVERNED_EXECUTION_CLAIM_RECOVERY_AND_PAYLOAD_RETENTION
+Version: 1.9.0
+Status: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_PENDING
+Date: 2026-07-29
+
+Reference inspection
+- openai-agents-python-0.19.0/src/agents/run_state.py
+- openai-agents-python-0.19.0/src/agents/result.py
+- openai-agents-python-0.19.0/src/agents/sandbox/session/base_sandbox_session.py
+- openai-agents-python-0.19.0/src/agents/sandbox/session/sandbox_client.py
+- Runtime imports from reference/upstream: forbidden and verified absent
+
+Implementation validation
+- Versioned lifecycle policy and SHA: PASS
+- Claim lease and bounded attempts: PASS
+- Raw claim token absent from SQLite/Event/Evidence: PASS
+- Token SHA and generation metadata persisted: PASS
+- Explicit stale recovery for READY/CREATED only: PASS
+- Old generation fenced at atomic start: PASS
+- New generation starts exactly once: PASS
+- Recovery Event recorded: PASS
+- Successful payload immediate deletion: PASS
+- Failed/cancelled payload seven-day retention: PASS
+- Unconfirmed payload 24-hour expiry: PASS
+- Explicit bounded cleanup: PASS
+- Deletion failure ledger path: PASS
+- Console remains read-only: PASS
+
+Regression validation
+- compileall: PASS
+- pytest: 255 passed
+- STEP018 acceptance: 23/23 PASS
+- STEP019 acceptance: 18/18 PASS
+- Direct /reference import verification: PASS
+- Reference integrity: 4/4 PASS
+
+Known limitations
+- Windows STEP019 live acceptance has not yet been reported.
+- Recovery is not automatic at process startup.
+- Active RUNNING Product Runs are not recovered or resumed.
+- Distributed worker leasing and cross-process exactly-once are not implemented.
+- Local Tool approval execution and console mutation remain disabled.

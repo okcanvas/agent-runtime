@@ -1,0 +1,66 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "runtime-wheel",
+      "forbidden_roots": [
+        "specs",
+        "tests",
+        "scripts",
+        "reference",
+        "docs/evidence"
+      ],
+      "required_roots": [
+        "okcanvas_agent_runtime",
+        "okcanvas_agent_protocols",
+        "okcanvas_agent_clients"
+      ]
+    },
+    {
+      "artifact_id": "product-configuration-pack",
+      "forbidden_roots": [
+        "tests",
+        "reference",
+        "docs/evidence"
+      ],
+      "required_roots": [
+        "specs"
+      ]
+    },
+    {
+      "artifact_id": "developer-source-test-bundle",
+      "forbidden_roots": [],
+      "required_roots": [
+        "scripts",
+        "tests",
+        "fixtures"
+      ]
+    },
+    {
+      "artifact_id": "immutable-reference-pack",
+      "forbidden_roots": [],
+      "required_roots": [
+        "reference"
+      ]
+    },
+    {
+      "artifact_id": "historical-evidence-archive",
+      "forbidden_roots": [],
+      "required_roots": [
+        "docs/evidence"
+      ]
+    }
+  ],
+  "configuration_root": "specs",
+  "configuration_version_binding": "PROJECT_VERSION_CONFIG_PACK_SHA256_AND_REFERENCE_PACK_SHA256",
+  "deletion_policy": "NO_DELETE_WITHOUT_STATIC_DYNAMIC_DOCUMENTATION_PACKAGING_AND_ACCEPTANCE_EVIDENCE",
+  "policy_id": "product-distribution-boundary-v1",
+  "reference_root": "reference",
+  "schema_version": "okcanvas-product-distribution-boundary-v1",
+  "startup_modes": {
+    "full_source_bundle": "SUPPORTED",
+    "wheel_only": "UNSUPPORTED_MISSING_PRODUCT_CONFIGURATION",
+    "wheel_plus_configuration_and_reference_pack": "SUPPORTED",
+    "wheel_plus_configuration_pack": "UNSUPPORTED_MISSING_IMMUTABLE_REFERENCE_PACK"
+  },
+  "version": "1.0.0"
+}

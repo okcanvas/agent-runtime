@@ -1,0 +1,18 @@
+{
+  "child_max_turns": 2,
+  "child_tool_choice_required": true,
+  "limitations": {
+    "live_groupware_provider_called": false,
+    "live_openai_model_called": false,
+    "windows_step087r1_executed": false
+  },
+  "passed_checks": 17,
+  "retained_step087_parent": true,
+  "root_max_turns": 2,
+  "schema_version": "okcanvas-step087r1-immutable-acceptance-summary-v1",
+  "state": "PASSED",
+  "step": "STEP087R1_MAIN_ASSISTANT_LIVE_AGENT_TOOL_TURN_BUDGET_CLOSURE",
+  "total_checks": 17,
+  "validation_mode": "LOCAL_DETERMINISTIC_LIVE_RUN_LOOP_READINESS",
+  "version": "2.67.1"
+}

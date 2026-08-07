@@ -1,0 +1,15 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step": "STEP066_REMOTE_MCP_STREAMABLE_HTTP_MVP_FOUNDATION",
+  "version": "2.46.0",
+  "reported_state": "PASSED",
+  "reported_passed_checks": 28,
+  "reported_total_checks": 28,
+  "focused_test_output": "19 passed in 6.80s",
+  "historical_mcp_output": "19 passed, 1 skipped in 6.11s",
+  "node_release_output": "COMMITTED_TYPESCRIPT_RELEASE_VERIFIED inputs=11 outputs=21 tests=2 external_tsc_required=false",
+  "external_network_calls": 0,
+  "model_calls": 0,
+  "references_unchanged": true,
+  "step067_was_unselected_at_closure": true
+}

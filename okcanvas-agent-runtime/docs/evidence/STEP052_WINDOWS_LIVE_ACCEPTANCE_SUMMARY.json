@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-windows-live-acceptance-summary-v1",
+  "step_id": "STEP052",
+  "step_name": "STEP052_IMMUTABLE_OPENAI_ZERO_RETRY_POLICY_V1",
+  "project_version": "2.32.0",
+  "state": "WINDOWS_LIVE_ACCEPTED",
+  "reported_state": "PASSED",
+  "checks_passed": 25,
+  "checks_total": 25,
+  "retry_policy": {
+    "runner_managed_max_retries": 0,
+    "provider_managed_max_retries": 0,
+    "retryable_categories": [],
+    "conversation_locked_compatibility_retries": false,
+    "automatic_model_fallback": false
+  },
+  "gateway_counts": {
+    "runner_run": 0,
+    "runner_run_streamed": 2,
+    "provider_constructed": 2,
+    "provider_get_model": 2,
+    "provider_closed": 2,
+    "openai_client_constructed": 2,
+    "model_attempts": 2,
+    "retry_policy_calls": 1
+  },
+  "final_counts": {
+    "tasks": 2,
+    "runs": 2,
+    "submissions": 3,
+    "invocations": 2,
+    "events": 18,
+    "artifacts": 1,
+    "evaluations": 1
+  },
+  "protected_payload_file_count": 2,
+  "drift_confirmation_status": 409,
+  "evaluation_state": "PASSED",
+  "references_unchanged": true,
+  "cleanup_state": "COMPLETED",
+  "cleanup_attempts": 1
+}

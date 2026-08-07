@@ -1,0 +1,15 @@
+STEP010_EVALUATION_AND_REGRESSION_SERVICE
+Date: 2026-07-29
+
+Commands:
+- python -m compileall -q src scripts tests: PASS
+- PYTHONPATH=src pytest -q: 175 passed
+- PYTHONPATH=src python scripts/run_step010_acceptance.py: PASSED
+- python scripts/verify_reference.py: 4/4 PASS
+- python scripts/verify_no_reference_imports.py: PASS
+
+Boundaries:
+- no model self-grading as sole gate
+- no raw final output or Reference body persisted in evaluation DB
+- no direct /reference import
+- no HTTP/UI/remote MCP added

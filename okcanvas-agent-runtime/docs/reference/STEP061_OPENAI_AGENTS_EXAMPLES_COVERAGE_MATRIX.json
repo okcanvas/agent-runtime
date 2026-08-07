@@ -1,0 +1,4368 @@
+{
+  "schema_version": "okcanvas-openai-agents-examples-coverage-matrix-v1",
+  "project_step": "STEP061_OPENAI_AGENTS_EXAMPLES_COVERAGE_MATRIX_AND_NEXT_SCOPE_SELECTION",
+  "project_version": "2.41.0",
+  "sdk_reference": "openai-agents-python-0.19.0",
+  "source_root": "reference/upstream/openai-agents-python-0.19.0/examples",
+  "filesystem_python_file_count": 216,
+  "excluded_runner_support_files": [
+    "__init__.py",
+    "auto_mode.py",
+    "run_examples.py",
+    "web_search_utils.py"
+  ],
+  "classified_example_count": 212,
+  "area_count": 15,
+  "decision_counts": {
+    "ADAPT": 16,
+    "ADOPT": 16,
+    "DEFER": 171,
+    "REJECT": 9
+  },
+  "area_counts": {
+    "agent_patterns": 16,
+    "basic": 23,
+    "customer_service": 1,
+    "financial_research_agent": 11,
+    "handoffs": 2,
+    "hosted_mcp": 5,
+    "mcp": 17,
+    "memory": 15,
+    "model_providers": 7,
+    "realtime": 9,
+    "reasoning_content": 4,
+    "research_bot": 8,
+    "sandbox": 71,
+    "tools": 16,
+    "voice": 7
+  },
+  "target_track_counts": {
+    "BOUNDED_MULTI_AGENT_ORCHESTRATION": 22,
+    "CURRENT_POLICY_REJECTION": 5,
+    "CURRENT_RUNTIME": 29,
+    "DYNAMIC_AND_HOSTED_PROMPTS": 2,
+    "HOSTED_READONLY_TOOLS": 3,
+    "HUMAN_APPROVAL_EXPANSION": 5,
+    "IMAGE_GENERATION_PRODUCT": 1,
+    "MCP_REMOTE_AND_HOSTED": 18,
+    "MODEL_PROVIDER_ABSTRACTION": 8,
+    "MULTIMODAL_DOCUMENT_INPUT": 5,
+    "REALTIME_AND_VOICE": 16,
+    "REASONING_CONTENT_MINIMIZATION_POLICY": 4,
+    "RESPONSES_WEBSOCKET_TRANSPORT": 1,
+    "SANDBOX_AND_PRIVILEGED_TOOLS": 7,
+    "SANDBOX_PLATFORM": 71,
+    "SESSION_HARDENING_AND_BACKENDS": 11,
+    "TOOL_DISCOVERY_AND_PROGRAMMATIC_CALLING": 2,
+    "TOOL_FINAL_OUTPUT_AND_CONDITIONAL_DELEGATION": 2
+  },
+  "next_selected_implementation_step": "STEP062_BOUNDED_MULTI_AGENT_ORCHESTRATION_FOUNDATION",
+  "next_selection_basis": [
+    "parallelization.py directly demonstrates concurrent sibling Agent runs",
+    "deterministic.py demonstrates product-owned sequencing rather than model-selected routing",
+    "financial_research_agent and research_bot demonstrate planner/search/verifier/writer manager workflows",
+    "current product code has no sibling fan-out, partial-failure aggregation, sibling cancellation, or deterministic orchestration ledger"
+  ],
+  "entries": [
+    {
+      "path": "agent_patterns/agents_as_tools.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 83,
+      "sha256": "9e86cc3a1570a329ebdf531f13c23748813e834397d5452f6cd2840aea877565",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ItemHelpers",
+        "MessageOutputItem",
+        "Runner",
+        "trace"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Native Agent.as_tool delegation is directly wired with a closed child graph, one-call limit, and invocation ledger.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/agent_tools/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/invocations/"
+      ]
+    },
+    {
+      "path": "agent_patterns/agents_as_tools_conditional.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 159,
+      "sha256": "511e3da26270d1df3a8454e0c8df774d8bc41815db245fa2105ca6a5a137c6a7",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AgentBase",
+        "ModelSettings",
+        "RunContextWrapper",
+        "Runner",
+        "tool",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "TOOL_FINAL_OUTPUT_AND_CONDITIONAL_DELEGATION",
+      "priority": "P3",
+      "rationale": "Conditional tool exposure, mixed approval, and tool-to-final-output policy are not represented in the current closed registry.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/agent_tools/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/invocations/"
+      ]
+    },
+    {
+      "path": "agent_patterns/agents_as_tools_streaming.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 66,
+      "sha256": "25f9d5672f55268b3c71651eba8995803435b709371b7e896181d4dab4c74371",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AgentToolStreamEvent",
+        "ModelSettings",
+        "Runner",
+        "tool",
+        "trace"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Native Agent.as_tool delegation is directly wired with a closed child graph, one-call limit, and invocation ledger.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/agent_tools/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/invocations/",
+        "src/okcanvas_agent_runtime/streaming/"
+      ]
+    },
+    {
+      "path": "agent_patterns/agents_as_tools_structured.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 64,
+      "sha256": "85ba8781e3e8f3e598be95652f0d067fb81749a56b31d59190587826fe1cce9d",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Native Agent.as_tool delegation is directly wired with a closed child graph, one-call limit, and invocation ledger.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/agent_tools/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/invocations/"
+      ]
+    },
+    {
+      "path": "agent_patterns/deterministic.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 84,
+      "sha256": "184792d552a8049dab1901675e672c40fcc787cda35d2091ebbad465ecbd4db3",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "agent_patterns/forcing_tool_use.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 112,
+      "sha256": "ae853bd4a1afdeea5bda983424612a7cf9a868ec6175bfbb64f133e7d4f702c4",
+      "observed_sdk_symbols": [
+        "Agent",
+        "FunctionToolResult",
+        "ModelSettings",
+        "RunContextWrapper",
+        "Runner",
+        "ToolsToFinalOutputFunction",
+        "ToolsToFinalOutputResult",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "TOOL_FINAL_OUTPUT_AND_CONDITIONAL_DELEGATION",
+      "priority": "P3",
+      "rationale": "Conditional tool exposure, mixed approval, and tool-to-final-output policy are not represented in the current closed registry.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/function_tools/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "agent_patterns/hosted_multi_agent_beta.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 96,
+      "sha256": "95dbc644fe5ea932b308dfe9712e71f1035dbb9688b21137c20680a2a041fdcb",
+      "observed_sdk_symbols": [
+        "Agent",
+        "OpenAIHostedMultiAgentModel",
+        "Runner",
+        "ToolContext",
+        "get_hosted_agent_metadata",
+        "tool"
+      ],
+      "decision": "REJECT",
+      "target_track": "CURRENT_POLICY_REJECTION",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Experimental hosted multi-agent execution would bypass the current product-owned invocation ledger and is not accepted.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "agent_patterns/human_in_the_loop.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 142,
+      "sha256": "6ac502e8895fd581a529a8a588bbab8bef84cac79477b920968360a817323ae6",
+      "observed_sdk_symbols": [
+        "Agent",
+        "RunState",
+        "Runner",
+        "tool"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The explicit interruption/decision pattern is retained, but approval is separated into product-owned encrypted state and a local operator boundary.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/"
+      ]
+    },
+    {
+      "path": "agent_patterns/human_in_the_loop_custom_rejection.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 107,
+      "sha256": "5f656cc6c7ecc319fba20e0d6f5cfdb617b97ed680429166112795599a6123ca",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "ToolErrorFormatterArgs",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "HUMAN_APPROVAL_EXPANSION",
+      "priority": "P3",
+      "rationale": "The base approval boundary exists, but streamed approval items, custom rejection, reconnect, and mixed modes are not implemented.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/"
+      ]
+    },
+    {
+      "path": "agent_patterns/human_in_the_loop_stream.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 123,
+      "sha256": "c7471edb486085de7679e9799685b28f8093f74566cd46d017c38964f2f6da17",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "HUMAN_APPROVAL_EXPANSION",
+      "priority": "P3",
+      "rationale": "The base approval boundary exists, but streamed approval items, custom rejection, reconnect, and mixed modes are not implemented.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/",
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/"
+      ]
+    },
+    {
+      "path": "agent_patterns/input_guardrails.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 122,
+      "sha256": "1562f3f62834b74af52b07b1bc87bf59aeef51d5fc935129e971e8719bad68ee",
+      "observed_sdk_symbols": [
+        "Agent",
+        "GuardrailFunctionOutput",
+        "InputGuardrailTripwireTriggered",
+        "RunContextWrapper",
+        "Runner",
+        "TResponseInputItem",
+        "input_guardrail"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Native SDK Guardrail primitives are directly wired and normalized into Product terminal outcomes and Events.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/guardrails/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "agent_patterns/llm_as_a_judge.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 89,
+      "sha256": "cfa294e1df5cdf5f456ccb913aa0fbb4a83a10dcdb521e4affb3680d4e97490c",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ItemHelpers",
+        "Runner",
+        "TResponseInputItem",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "agent_patterns/output_guardrails.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 80,
+      "sha256": "132b2f2021e327cd2cc8936526d5639de34ceb231f3bf4da9fb8b6fe5ea3df73",
+      "observed_sdk_symbols": [
+        "Agent",
+        "GuardrailFunctionOutput",
+        "OutputGuardrailTripwireTriggered",
+        "RunContextWrapper",
+        "Runner",
+        "output_guardrail"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Native SDK Guardrail primitives are directly wired and normalized into Product terminal outcomes and Events.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/guardrails/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "agent_patterns/parallelization.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 65,
+      "sha256": "b17a2e276e2c2d05c3bdf0f1eac2464d3dd78f64776c0f413b5ce509fcee251a",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ItemHelpers",
+        "Runner",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "agent_patterns/routing.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 77,
+      "sha256": "b9b57061f5238335743ca54137df0210fd07f146613afb3783bf2a4c5650a71b",
+      "observed_sdk_symbols": [
+        "Agent",
+        "RawResponsesStreamEvent",
+        "Runner",
+        "TResponseInputItem",
+        "trace"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Native Handoff routing is directly wired with one target, one handoff, and product-owned invocation evidence.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/handoffs/",
+        "src/okcanvas_agent_runtime/invocations/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "agent_patterns/streaming_guardrails.py",
+      "area": "agent_patterns",
+      "role": "executable_example",
+      "line_count": 93,
+      "sha256": "1d1a3608d3d14e8c3604c736084c720ba852351de57e14a895e352b9b193aa9e",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Streaming and Guardrails both exist, but the example composition is not a separately selectable product workflow.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/guardrails/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/"
+      ]
+    },
+    {
+      "path": "basic/agent_lifecycle_example.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 140,
+      "sha256": "02fbe5380aecb3ad1295f8fda54f3d76731e82fa11a529cee491c67cd435d57a",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AgentHookContext",
+        "AgentHooks",
+        "RunContextWrapper",
+        "Runner",
+        "Tool",
+        "tool"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "SDK hooks are normalized into product-owned lifecycle Events rather than exposed as the public contract.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/product/"
+      ]
+    },
+    {
+      "path": "basic/dynamic_system_prompt.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 70,
+      "sha256": "6bee2450933c0e2328c32d5e946d7cbfc07195a89911e8ee6367337dbed9e68a",
+      "observed_sdk_symbols": [
+        "Agent",
+        "RunContextWrapper",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "DYNAMIC_AND_HOSTED_PROMPTS",
+      "priority": "P3",
+      "rationale": "Instructions are immutable files bound by SHA; dynamic or hosted prompts require resolved content/version/variables in the Runtime binding.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/hello_world.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 20,
+      "sha256": "a5a0f5f47a0d79c18df3ed8790e5c5fba022f3628a7544cdd90e10270b0cf7c6",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The core Agent/Function Tool primitive is directly used by the current governed Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/hello_world_gpt_5.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 30,
+      "sha256": "87a8999fb561b8acb8e80d868f1cac6e581014a75098f15020a3b7bc659574b8",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "Runner"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Explicit model settings are retained only through the immutable OpenAI Responses route and reasoning-minimization policy.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/model_routing/",
+        "src/okcanvas_agent_runtime/model_retry/",
+        "src/okcanvas_agent_runtime/reasoning_evidence/"
+      ]
+    },
+    {
+      "path": "basic/hello_world_gpt_oss.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 39,
+      "sha256": "ff3a38cf626c178436a0efb061bc9d69d02839b2604e21b8433fe1288a76bafa",
+      "observed_sdk_symbols": [
+        "Agent",
+        "OpenAIChatCompletionsModel",
+        "Runner",
+        "set_tracing_disabled"
+      ],
+      "decision": "DEFER",
+      "target_track": "MODEL_PROVIDER_ABSTRACTION",
+      "priority": "P3",
+      "rationale": "Current model routing is pinned to OpenAI Responses at the official base URL with no provider prefixes or fallback.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/image_tool_output.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 43,
+      "sha256": "133bf225dfd0582e9d19912e1d3d1a31ad88edf45b103deadb8ea949268e1752",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "ToolOutputImage",
+        "ToolOutputImageDict",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "MULTIMODAL_DOCUMENT_INPUT",
+      "priority": "P2",
+      "rationale": "Current submission and CLI contracts are text-only and lack MIME, size, retention, deletion, and attachment evidence policy.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/lifecycle_example.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 189,
+      "sha256": "47faff578b13d697b1fc9b2706292cb156b24ced2bfe7f29302fd3d71b981b5b",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AgentHookContext",
+        "AgentHooks",
+        "ModelResponse",
+        "RunContextWrapper",
+        "RunHooks",
+        "Runner",
+        "TResponseInputItem",
+        "Tool",
+        "ToolContext",
+        "Usage",
+        "tool"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "SDK hooks are normalized into product-owned lifecycle Events rather than exposed as the public contract.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/product/"
+      ]
+    },
+    {
+      "path": "basic/local_file.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 45,
+      "sha256": "9c778baefd9ea58cdf06c2f947fd09bb6025afd721f7a5c2c3399af4e321fc1c",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "MULTIMODAL_DOCUMENT_INPUT",
+      "priority": "P2",
+      "rationale": "Current submission and CLI contracts are text-only and lack MIME, size, retention, deletion, and attachment evidence policy.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/local_image.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 48,
+      "sha256": "9a32d52ff6016164838d501fd5827a37e30f7903d560827d7f4d0bf0b1e466a5",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "MULTIMODAL_DOCUMENT_INPUT",
+      "priority": "P2",
+      "rationale": "Current submission and CLI contracts are text-only and lack MIME, size, retention, deletion, and attachment evidence policy.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/non_strict_output_type.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 84,
+      "sha256": "f5907ecf8d8667dd72aae1578b4bd499314268d73e4d22358a804d54718eb913",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AgentOutputSchema",
+        "AgentOutputSchemaBase",
+        "ModelBehaviorError",
+        "Runner"
+      ],
+      "decision": "REJECT",
+      "target_track": "CURRENT_POLICY_REJECTION",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Non-strict final output conflicts with verified structured Artifact contracts.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/previous_response_id.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 74,
+      "sha256": "a6513be1736c9ac51f6ba007553c43aa3799b50cc78800fe65ac48d44748e7b9",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "REJECT",
+      "target_track": "CURRENT_POLICY_REJECTION",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Provider response IDs and provider-side response storage are intentionally disabled; SQLite Session is the continuity authority.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/model_routing/",
+        "src/okcanvas_agent_runtime/model_retry/",
+        "src/okcanvas_agent_runtime/reasoning_evidence/"
+      ]
+    },
+    {
+      "path": "basic/prompt_template.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 79,
+      "sha256": "c2bd5a8e20a53d932bcafee18cc94f890f5ce1dd1d7773756c5c42f38d8a3fc0",
+      "observed_sdk_symbols": [
+        "Agent",
+        "GenerateDynamicPromptData",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "DYNAMIC_AND_HOSTED_PROMPTS",
+      "priority": "P3",
+      "rationale": "Instructions are immutable files bound by SHA; dynamic or hosted prompts require resolved content/version/variables in the Runtime binding.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/remote_image.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 31,
+      "sha256": "5a8a564e13ecbc310171ac43743a2167fc29e3cf0a24c82b2e966bded700f24b",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "MULTIMODAL_DOCUMENT_INPUT",
+      "priority": "P2",
+      "rationale": "Current submission and CLI contracts are text-only and lack MIME, size, retention, deletion, and attachment evidence policy.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/remote_pdf.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 31,
+      "sha256": "5446069d35604f68355360b2ef998b69b23a7c7969e0924e75cb1dcbac5977b8",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "MULTIMODAL_DOCUMENT_INPUT",
+      "priority": "P2",
+      "rationale": "Current submission and CLI contracts are text-only and lack MIME, size, retention, deletion, and attachment evidence policy.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "basic/retry.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 112,
+      "sha256": "195aa4c0a99170055cdcbf6bfd6cc99e5a137e2db59e02a48a87033a18613914",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelRetrySettings",
+        "ModelSettings",
+        "RetryDecision",
+        "RunConfig",
+        "Runner",
+        "retry_policies"
+      ],
+      "decision": "REJECT",
+      "target_track": "CURRENT_POLICY_REJECTION",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Runner and provider retries are both fixed at zero so Product replay is never confused with hidden model retry.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/model_routing/",
+        "src/okcanvas_agent_runtime/model_retry/",
+        "src/okcanvas_agent_runtime/reasoning_evidence/"
+      ]
+    },
+    {
+      "path": "basic/retry_litellm.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 114,
+      "sha256": "b58f25708e040ed3270f9e3b30691e9831599e07d8ef42903460d0df1398cc8b",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelRetrySettings",
+        "ModelSettings",
+        "RetryDecision",
+        "RunConfig",
+        "Runner",
+        "retry_policies"
+      ],
+      "decision": "REJECT",
+      "target_track": "CURRENT_POLICY_REJECTION",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Runner and provider retries are both fixed at zero so Product replay is never confused with hidden model retry.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/model_routing/",
+        "src/okcanvas_agent_runtime/model_retry/",
+        "src/okcanvas_agent_runtime/reasoning_evidence/"
+      ]
+    },
+    {
+      "path": "basic/stream_function_call_args.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 91,
+      "sha256": "0b85f0b27faef116c6886f90e95052575e260ab2d8315050b6f456e9dfb9de15",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "tool"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Runner.run_streamed and SDK stream items are directly adapted into ephemeral client progress plus persisted canonical Events.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/"
+      ]
+    },
+    {
+      "path": "basic/stream_items.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 71,
+      "sha256": "9eaf0e0f4ad71b5b80b75d9396d0e4e01c7b9616e24ed9aa9f7c200f3428ae06",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ItemHelpers",
+        "Runner",
+        "tool"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Runner.run_streamed and SDK stream items are directly adapted into ephemeral client progress plus persisted canonical Events.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/"
+      ]
+    },
+    {
+      "path": "basic/stream_text.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 21,
+      "sha256": "d2ae9f7fcb7cd0473f5d861c92ce44da9c173997e6dfad3cee07574d92608ea6",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Runner.run_streamed and SDK stream items are directly adapted into ephemeral client progress plus persisted canonical Events.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/"
+      ]
+    },
+    {
+      "path": "basic/stream_ws.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 236,
+      "sha256": "f9071975a51934789c76aa2f5cdfb765404e61f5fbc709423eb5e987f4e16cce",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "ResponsesWebSocketSession",
+        "responses_websocket_session",
+        "tool",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "RESPONSES_WEBSOCKET_TRANSPORT",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "The immutable model route explicitly disables Responses WebSocket transport; HTTP is the only accepted transport.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/"
+      ]
+    },
+    {
+      "path": "basic/tool_guardrails.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 183,
+      "sha256": "aac7521ff958405534ff2120c8e92a43b8ff3978ec1700fe71f179579ea3db35",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "ToolGuardrailFunctionOutput",
+        "ToolInputGuardrailData",
+        "ToolOutputGuardrailData",
+        "ToolOutputGuardrailTripwireTriggered",
+        "tool",
+        "tool_input_guardrail",
+        "tool_output_guardrail"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Native SDK Guardrail primitives are directly wired and normalized into Product terminal outcomes and Events.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/guardrails/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "basic/tools.py",
+      "area": "basic",
+      "role": "workflow_support",
+      "line_count": 40,
+      "sha256": "d254af5b829ee2bc0a595207ac3d07434043398aff9397011d23d870ca3cc1d5",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "tool"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The core Agent/Function Tool primitive is directly used by the current governed Runtime.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/function_tools/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "basic/usage_tracking.py",
+      "area": "basic",
+      "role": "executable_example",
+      "line_count": 52,
+      "sha256": "7e7b8eab58ad1c453f8320f0348fcba677b3403b8c44793273e6eb7d85f32bcd",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "Usage",
+        "tool"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Request, input, output, cached, reasoning, and total token usage is collected into the Product usage contract.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/contracts.py",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "customer_service/main.py",
+      "area": "customer_service",
+      "role": "executable_example",
+      "line_count": 189,
+      "sha256": "f9f1ff5b37efbb41c17f769934615c3c3c4e107a5d44eb6d09282b2b924ffb7f",
+      "observed_sdk_symbols": [
+        "Agent",
+        "HandoffOutputItem",
+        "ItemHelpers",
+        "MessageOutputItem",
+        "RECOMMENDED_PROMPT_PREFIX",
+        "RunContextWrapper",
+        "Runner",
+        "TResponseInputItem",
+        "ToolCallItem",
+        "ToolCallOutputItem",
+        "handoff",
+        "tool",
+        "trace"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The routing/message-shaping concept is narrower in OKCanvas: a closed one-hop graph with product-owned identity and no broad demo workflow.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/handoffs/",
+        "src/okcanvas_agent_runtime/invocations/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "financial_research_agent/__init__.py",
+      "area": "financial_research_agent",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/agents/__init__.py",
+      "area": "financial_research_agent",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/agents/financials_agent.py",
+      "area": "financial_research_agent",
+      "role": "executable_example",
+      "line_count": 23,
+      "sha256": "f1b72df6e125b5a9b69408ea7a1434ee00034e75b8a93b5f0c16ad2a437b32fa",
+      "observed_sdk_symbols": [
+        "Agent"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/agents/planner_agent.py",
+      "area": "financial_research_agent",
+      "role": "executable_example",
+      "line_count": 35,
+      "sha256": "14b5917947c9c578093abcc4b530db14717ae02e77a3d1b269719a2da7adf625",
+      "observed_sdk_symbols": [
+        "Agent"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/agents/risk_agent.py",
+      "area": "financial_research_agent",
+      "role": "executable_example",
+      "line_count": 22,
+      "sha256": "04abb9eab871a70fd30a93caf666e09a06572a8d3d4080554b176f3b109d2503",
+      "observed_sdk_symbols": [
+        "Agent"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/agents/search_agent.py",
+      "area": "financial_research_agent",
+      "role": "executable_example",
+      "line_count": 27,
+      "sha256": "2a7cb49367e7ce0df4a83c1c4070da851b5c6032d6e2401054b4c97023ee2bc9",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "WebSearchTool"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/agents/verifier_agent.py",
+      "area": "financial_research_agent",
+      "role": "executable_example",
+      "line_count": 48,
+      "sha256": "5104f61c21b7fb523f6264bccbef99b542e8e1e740036a5790bbcc193ad6014e",
+      "observed_sdk_symbols": [
+        "Agent"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/agents/writer_agent.py",
+      "area": "financial_research_agent",
+      "role": "executable_example",
+      "line_count": 42,
+      "sha256": "6f6b135e3ef7174a87d5ad3d471fb9945e732a7ed95eaaa2d6747ba2c4985de1",
+      "observed_sdk_symbols": [
+        "Agent"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/main.py",
+      "area": "financial_research_agent",
+      "role": "executable_example",
+      "line_count": 23,
+      "sha256": "28e2a1a079e8ea247a4504c47e9ab51b551c6bd710d314f2c55430788b2be137",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/manager.py",
+      "area": "financial_research_agent",
+      "role": "workflow_support",
+      "line_count": 265,
+      "sha256": "5a98f44b9f0c0ecd060d6ed0953182ba966357d4c4bc4488199d00707e8502a9",
+      "observed_sdk_symbols": [
+        "FinancialReportData",
+        "FinancialSearchItem",
+        "FinancialSearchPlan",
+        "FinancialSearchSummary",
+        "REVISION_PROMPT",
+        "RunResult",
+        "RunResultStreaming",
+        "Runner",
+        "VerificationResult",
+        "custom_span",
+        "financials_agent",
+        "gen_trace_id",
+        "planner_agent",
+        "risk_agent",
+        "search_agent",
+        "trace",
+        "verifier_agent",
+        "writer_agent"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "financial_research_agent/printer.py",
+      "area": "financial_research_agent",
+      "role": "workflow_support",
+      "line_count": 46,
+      "sha256": "e58f32a96db2903e1347e007cd08a8b597f8b811d95968bd87eeb9809d9826f4",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "handoffs/message_filter.py",
+      "area": "handoffs",
+      "role": "executable_example",
+      "line_count": 194,
+      "sha256": "0123e42206b3e5e99700f1d766dadb4be4a64db8dd4f0c9235038e7833a059a2",
+      "observed_sdk_symbols": [
+        "Agent",
+        "HandoffInputData",
+        "Runner",
+        "handoff",
+        "handoff_filters",
+        "is_gpt_5_default",
+        "tool",
+        "trace"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The routing/message-shaping concept is narrower in OKCanvas: a closed one-hop graph with product-owned identity and no broad demo workflow.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/handoffs/",
+        "src/okcanvas_agent_runtime/invocations/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py"
+      ]
+    },
+    {
+      "path": "handoffs/message_filter_streaming.py",
+      "area": "handoffs",
+      "role": "executable_example",
+      "line_count": 194,
+      "sha256": "f88b7c218d24b9d646065809c126dcc9d04081f70960e0eaac25e10961d6ff9d",
+      "observed_sdk_symbols": [
+        "Agent",
+        "HandoffInputData",
+        "Runner",
+        "handoff",
+        "handoff_filters",
+        "is_gpt_5_default",
+        "tool",
+        "trace"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The routing/message-shaping concept is narrower in OKCanvas: a closed one-hop graph with product-owned identity and no broad demo workflow.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/handoffs/",
+        "src/okcanvas_agent_runtime/invocations/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/"
+      ]
+    },
+    {
+      "path": "hosted_mcp/__init__.py",
+      "area": "hosted_mcp",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "hosted_mcp/connectors.py",
+      "area": "hosted_mcp",
+      "role": "executable_example",
+      "line_count": 63,
+      "sha256": "10acfa8f3208a285aa086bc6a5bd7d3af106858ef760ba7cbb0c0f8457539704",
+      "observed_sdk_symbols": [
+        "Agent",
+        "HostedMCPTool",
+        "RunResult",
+        "RunResultStreaming",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "hosted_mcp/human_in_the_loop.py",
+      "area": "hosted_mcp",
+      "role": "executable_example",
+      "line_count": 133,
+      "sha256": "59623cb78640172d33de39e849f70fee62b6eda3d6b938cb69126eba3838a064",
+      "observed_sdk_symbols": [
+        "Agent",
+        "HostedMCPTool",
+        "MCPToolChoice",
+        "ModelSettings",
+        "RunConfig",
+        "RunResult",
+        "RunResultStreaming",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/"
+      ]
+    },
+    {
+      "path": "hosted_mcp/on_approval.py",
+      "area": "hosted_mcp",
+      "role": "executable_example",
+      "line_count": 86,
+      "sha256": "a0b358a8a9b2055b86afe1f1d48177283a0cc970677ab914ab004b77559982ff",
+      "observed_sdk_symbols": [
+        "Agent",
+        "HostedMCPTool",
+        "MCPToolApprovalFunctionResult",
+        "MCPToolApprovalRequest",
+        "RunResult",
+        "RunResultStreaming",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "hosted_mcp/simple.py",
+      "area": "hosted_mcp",
+      "role": "executable_example",
+      "line_count": 56,
+      "sha256": "0d0c1c255bc4f37dff0a9470dbbab90947e1863eece599989d8616806f39a93d",
+      "observed_sdk_symbols": [
+        "Agent",
+        "HostedMCPTool",
+        "ModelSettings",
+        "RunResult",
+        "RunResultStreaming",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "mcp/filesystem_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 57,
+      "sha256": "0f83f5042cb6a7f270d831ad572847788a1e36ec2437b103b5f2131c2984cc90",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServer",
+        "MCPServerStdio",
+        "Runner",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The local stdio MCP and static allowlist/filter primitive is directly wired through the product-owned MCP factory.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/get_all_mcp_tools_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 137,
+      "sha256": "0e18f9ad5a4735f8350147246c83b27f61a8d713015a4a5d67c27a6d7ffa8469",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServer",
+        "MCPServerStdio",
+        "MCPUtil",
+        "RunContextWrapper",
+        "Runner",
+        "create_static_tool_filter",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Only the manager/static-tool-list concept is retained; remote transports, broad discovery, and multi-server operations are not enabled.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/git_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 48,
+      "sha256": "386227a5960450df4de576d645d81f39125f5798f603e7c680b32f34f3c725d5",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServer",
+        "MCPServerStdio",
+        "Runner",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/manager_example/app.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 130,
+      "sha256": "1a49c00d12a129bf6464ec0849a3799ec58e7417ae3168cacfbf91e0c0d0db47",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServer",
+        "MCPServerManager",
+        "MCPServerStreamableHttp",
+        "ModelSettings",
+        "Runner"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Only the manager/static-tool-list concept is retained; remote transports, broad discovery, and multi-server operations are not enabled.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/manager_example/mcp_server.py",
+      "area": "mcp",
+      "role": "example_server",
+      "line_count": 26,
+      "sha256": "fc52ccb8f5e27d2cc10a4c6eca73e90337b6890e63111fca20628ceb53c66708",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/manager_example/smoke_test.py",
+      "area": "mcp",
+      "role": "validation_support",
+      "line_count": 144,
+      "sha256": "e1b987b7a7df307eb52f4e848fc342ebc336a3709c4d9eeca2eb14a062a7ab34",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/prompt_server/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 131,
+      "sha256": "2167b0b469861dfe8ecf7d9f5512ac1aa5dc2301d5d1fbbf5cc5c8bf86c14f2d",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServer",
+        "MCPServerStreamableHttp",
+        "ModelSettings",
+        "Runner",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/prompt_server/server.py",
+      "area": "mcp",
+      "role": "example_server",
+      "line_count": 42,
+      "sha256": "11e2626f34770473920b6156d6e6b8b8c803c789c72c1a532d7995597bcf477d",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/sse_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 104,
+      "sha256": "a08dd3a02dc2cad0412c200ceb2c9b2fc328ba6c7ec578ae2ee09e4aa7c184d7",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServer",
+        "MCPServerSse",
+        "ModelSettings",
+        "Runner",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/sse_example/server.py",
+      "area": "mcp",
+      "role": "example_server",
+      "line_count": 42,
+      "sha256": "748ea6e4c5d0a284dcc9c9ae4002bdc28f95c2580070943e01659b588766540b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/sse_remote_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 100,
+      "sha256": "3166f97f605cc6e648f31c7a6a1c0ab4d662cc1d4c0e47c9b2a3e6f9a2992be0",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServerSse",
+        "ModelSettings",
+        "Runner",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/streamable_http_remote_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 38,
+      "sha256": "b7c69ada99fefc74f9d98966ffc29ccfc37aced507113d5417967412e5f7292b",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServerStreamableHttp",
+        "Runner",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/",
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/streamablehttp_custom_client_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 137,
+      "sha256": "ac2956143f1b5bec5defd618874ba163df2b60a40122755326862aa23463b11e",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServer",
+        "MCPServerStreamableHttp",
+        "ModelSettings",
+        "Runner",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/",
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/streamablehttp_custom_client_example/server.py",
+      "area": "mcp",
+      "role": "example_server",
+      "line_count": 27,
+      "sha256": "6013ff63fdb449b7b314ab531e98b54d2a48112874f1514505979201831f226c",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/",
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/streamablehttp_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 104,
+      "sha256": "0c637b91b2bb4f679d206de132a63e2486480dfdd37e7855b44031335fc95244",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServer",
+        "MCPServerStreamableHttp",
+        "ModelSettings",
+        "Runner",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/",
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/streamablehttp_example/server.py",
+      "area": "mcp",
+      "role": "example_server",
+      "line_count": 43,
+      "sha256": "ed7c4175c436c4c5cc9891ccbcde146c7f1113b6a5eac3183d5b99cfc2fcf2e4",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "MCP_REMOTE_AND_HOSTED",
+      "priority": "P2",
+      "rationale": "Current MCP is one allowlisted local stdio server with static filtering, no approval, and sequential connection; remote/hosted transports need a separate authority model.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/",
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "mcp/tool_filter_example/main.py",
+      "area": "mcp",
+      "role": "executable_example",
+      "line_count": 75,
+      "sha256": "d58051019e38c058f9130a7f4746618e305a8ca5832a127d07116b67d0dd0419",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MCPServerStdio",
+        "Runner",
+        "create_static_tool_filter",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The local stdio MCP and static allowlist/filter primitive is directly wired through the product-owned MCP factory.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/mcp_clients/openai_factory.py",
+        "src/okcanvas_agent_runtime/mcp_definitions/"
+      ]
+    },
+    {
+      "path": "memory/advanced_sqlite_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 282,
+      "sha256": "5457acc4775c552d08ca04c3a9059b1795ba7703f084abae888aac959ffb27e5",
+      "observed_sdk_symbols": [
+        "AdvancedSQLiteSession",
+        "Agent",
+        "Runner",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/compaction_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 86,
+      "sha256": "cbec732fe137f08c1ca0ff0499df7ae610fa3b5f6daf99f43759e3140c7df110",
+      "observed_sdk_symbols": [
+        "Agent",
+        "OpenAIResponsesCompactionSession",
+        "Runner",
+        "SQLiteSession"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/compaction_session_stateless_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 85,
+      "sha256": "171e10c82427669b6e0b23f79da6194df18ade013e3ec6893d234463294f40cd",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "OpenAIResponsesCompactionSession",
+        "Runner",
+        "SQLiteSession"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/dapr_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 586,
+      "sha256": "73c09c25f7a46682b7c6f84d9650d2c2d48b03708b386481a5fceedbc85a0fc7",
+      "observed_sdk_symbols": [
+        "Agent",
+        "DAPR_CONSISTENCY_EVENTUAL",
+        "DAPR_CONSISTENCY_STRONG",
+        "DaprSession",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/encrypted_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 109,
+      "sha256": "6b1611ba28f3225ffe5deac92f9439921e809bfc31dc7915b1cb2c3057e19e31",
+      "observed_sdk_symbols": [
+        "Agent",
+        "EncryptedEnvelope",
+        "EncryptedSession",
+        "Runner",
+        "SQLiteSession"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/file_hitl_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 156,
+      "sha256": "5b8213ae3f5b8ff9163e2500b14ab09632723c9f3aed6c7a2b76671d7c798a2c",
+      "observed_sdk_symbols": [
+        "Agent",
+        "RunContextWrapper",
+        "RunState",
+        "Runner",
+        "tool"
+      ],
+      "decision": "ADAPT",
+      "target_track": "HUMAN_APPROVAL_EXPANSION",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The explicit interruption/decision pattern is retained, but approval is separated into product-owned encrypted state and a local operator boundary.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/",
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/file_session.py",
+      "area": "memory",
+      "role": "workflow_support",
+      "line_count": 124,
+      "sha256": "b3473865d8fd8cc42f14d21456c5fee23e777574e501064aa51e173d857ce654",
+      "observed_sdk_symbols": [
+        "Session",
+        "SessionSettings"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/hitl_session_scenario.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 412,
+      "sha256": "61c93cc9550272ec346ce31db225718f50755d969f22c83808f3d7c461eae380",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Model",
+        "ModelSettings",
+        "OpenAIConversationsSession",
+        "Runner",
+        "TResponseInputItem",
+        "tool"
+      ],
+      "decision": "ADAPT",
+      "target_track": "HUMAN_APPROVAL_EXPANSION",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The explicit interruption/decision pattern is retained, but approval is separated into product-owned encrypted state and a local operator boundary.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/",
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/memory_session_hitl_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 126,
+      "sha256": "6e7df1dae6329917474e2fc05bae0db6a00c7967e4b25383d6f58fccd83dc7ae",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "SQLiteSession",
+        "tool"
+      ],
+      "decision": "ADAPT",
+      "target_track": "HUMAN_APPROVAL_EXPANSION",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The explicit interruption/decision pattern is retained, but approval is separated into product-owned encrypted state and a local operator boundary.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/",
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/mongodb_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 72,
+      "sha256": "9e1fd98ca4126abf0160f4d7266a17acd0107e59b37a34d720e843dcc521bbc0",
+      "observed_sdk_symbols": [
+        "Agent",
+        "MongoDBSession",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/openai_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 78,
+      "sha256": "716d94817cb9bcdf7722d1151b2c2e4631975fb068fdbc6522662ec9f6e73d0c",
+      "observed_sdk_symbols": [
+        "Agent",
+        "OpenAIConversationsSession",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/openai_session_hitl_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 124,
+      "sha256": "d009f248b0d7a21a9f5f20ed78f96dcca4f5e8bef89d061f86a289f9d59841af",
+      "observed_sdk_symbols": [
+        "Agent",
+        "OpenAIConversationsSession",
+        "Runner",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/",
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/redis_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 181,
+      "sha256": "7fbca72b22a13fae0fc103fa47c0dd296d1dadec9f18548765fde88ebce53ad7",
+      "observed_sdk_symbols": [
+        "Agent",
+        "RedisSession",
+        "Runner"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/sqlalchemy_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 78,
+      "sha256": "5050dc2ff5f17a11207376f4fc44405c1033989657d75ce6ece5af0a6ceff488",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "SQLAlchemySession"
+      ],
+      "decision": "DEFER",
+      "target_track": "SESSION_HARDENING_AND_BACKENDS",
+      "priority": "P2",
+      "rationale": "The capability is legitimate, but current policy permits only the installed SQLiteSession with no compaction, encryption, or remote backend.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "memory/sqlite_session_example.py",
+      "area": "memory",
+      "role": "executable_example",
+      "line_count": 77,
+      "sha256": "b4d3db5c8c11c3ed4e627352a16e742bc0c1b581be4c5e48aa45536d97c4f493",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "SQLiteSession"
+      ],
+      "decision": "ADOPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The installed SDK SQLiteSession primitive is directly wired through a product-owned session policy and catalog.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/sessions/",
+        "specs/runtime/sqlite-session-policy.json"
+      ]
+    },
+    {
+      "path": "model_providers/any_llm_auto.py",
+      "area": "model_providers",
+      "role": "executable_example",
+      "line_count": 56,
+      "sha256": "a07c3b1c0b15d7cb484a5a9ad891e67dfd361982cf2736ccad99d9fe4667d9c5",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "Runner",
+        "set_tracing_disabled",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "MODEL_PROVIDER_ABSTRACTION",
+      "priority": "P3",
+      "rationale": "Current model routing is pinned to OpenAI Responses at the official base URL with no provider prefixes or fallback.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "model_providers/any_llm_provider.py",
+      "area": "model_providers",
+      "role": "executable_example",
+      "line_count": 63,
+      "sha256": "9468df9a898f0a62db3b5aa05b58e5f4bf8861718b1ca6244f1ff1459cb05360",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AnyLLMModel",
+        "Runner",
+        "set_tracing_disabled",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "MODEL_PROVIDER_ABSTRACTION",
+      "priority": "P3",
+      "rationale": "Current model routing is pinned to OpenAI Responses at the official base URL with no provider prefixes or fallback.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "model_providers/custom_example_agent.py",
+      "area": "model_providers",
+      "role": "executable_example",
+      "line_count": 61,
+      "sha256": "d2279b417e313c29005773c86d7a9ab28e7387efe277f958747236d744b8d8cf",
+      "observed_sdk_symbols": [
+        "Agent",
+        "OpenAIChatCompletionsModel",
+        "Runner",
+        "set_tracing_disabled",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "MODEL_PROVIDER_ABSTRACTION",
+      "priority": "P3",
+      "rationale": "Current model routing is pinned to OpenAI Responses at the official base URL with no provider prefixes or fallback.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "model_providers/custom_example_global.py",
+      "area": "model_providers",
+      "role": "executable_example",
+      "line_count": 63,
+      "sha256": "c3ce3342f4b6e6971e488fdff20fe65a253536249359af476acad04cfea87cab",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "set_default_openai_api",
+        "set_default_openai_client",
+        "set_tracing_disabled",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "MODEL_PROVIDER_ABSTRACTION",
+      "priority": "P3",
+      "rationale": "Current model routing is pinned to OpenAI Responses at the official base URL with no provider prefixes or fallback.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "model_providers/custom_example_provider.py",
+      "area": "model_providers",
+      "role": "executable_example",
+      "line_count": 77,
+      "sha256": "bbee8e39e45b257b397f6c0aa67543fc422ab450f55834ce0249de807742f300",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Model",
+        "ModelProvider",
+        "OpenAIChatCompletionsModel",
+        "RunConfig",
+        "Runner",
+        "set_tracing_disabled",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "MODEL_PROVIDER_ABSTRACTION",
+      "priority": "P3",
+      "rationale": "Current model routing is pinned to OpenAI Responses at the official base URL with no provider prefixes or fallback.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "model_providers/litellm_auto.py",
+      "area": "model_providers",
+      "role": "executable_example",
+      "line_count": 60,
+      "sha256": "7bd3f93e892f7829b7027abf7088120e949971f4b2c4e71f87054acc218dcb2e",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "Runner",
+        "set_tracing_disabled",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "MODEL_PROVIDER_ABSTRACTION",
+      "priority": "P3",
+      "rationale": "Current model routing is pinned to OpenAI Responses at the official base URL with no provider prefixes or fallback.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "model_providers/litellm_provider.py",
+      "area": "model_providers",
+      "role": "executable_example",
+      "line_count": 64,
+      "sha256": "dc52c753db2ee19b72bcc985d04681c58bd11f90124510a7661ff21cd04a7ebf",
+      "observed_sdk_symbols": [
+        "Agent",
+        "LitellmModel",
+        "Runner",
+        "set_tracing_disabled",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "MODEL_PROVIDER_ABSTRACTION",
+      "priority": "P3",
+      "rationale": "Current model routing is pinned to OpenAI Responses at the official base URL with no provider prefixes or fallback.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/app/agent.py",
+      "area": "realtime",
+      "role": "workflow_support",
+      "line_count": 105,
+      "sha256": "0a1eee26db8565a103537c1573b1237508856eea861b8293334208fa2a02f9b4",
+      "observed_sdk_symbols": [
+        "RECOMMENDED_PROMPT_PREFIX",
+        "RealtimeAgent",
+        "realtime_handoff",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/app/server.py",
+      "area": "realtime",
+      "role": "example_server",
+      "line_count": 590,
+      "sha256": "1efecd8268fb9485d12961235aa603a21d87e187de95bda2155baac496fa9060",
+      "observed_sdk_symbols": [
+        "RealtimeItem",
+        "RealtimeModelConfig",
+        "RealtimeModelItemUpdatedEvent",
+        "RealtimeModelRawServerEvent",
+        "RealtimeModelSendRawMessage",
+        "RealtimeModelUsageEvent",
+        "RealtimeRunner",
+        "RealtimeSession",
+        "RealtimeSessionEvent",
+        "RealtimeUserInputMessage"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/cli/demo.py",
+      "area": "realtime",
+      "role": "executable_example",
+      "line_count": 381,
+      "sha256": "6da35010c49b89fe95844cfc67932afef32fffcef8f756101ca427fe0cb2af09",
+      "observed_sdk_symbols": [
+        "RealtimeAgent",
+        "RealtimeModelConfig",
+        "RealtimePlaybackTracker",
+        "RealtimeRunner",
+        "RealtimeSession",
+        "RealtimeSessionEvent",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/twilio/__init__.py",
+      "area": "realtime",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/twilio/server.py",
+      "area": "realtime",
+      "role": "example_server",
+      "line_count": 80,
+      "sha256": "67ba61741cc80223e1e37b2935ae2cd3c4c39d1a59321fa61f157381dea58e1e",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/twilio/twilio_handler.py",
+      "area": "realtime",
+      "role": "workflow_support",
+      "line_count": 299,
+      "sha256": "3a0be06f022766b7ebe80f61d436df6f08e0356e7c3c4db21a8a838e358c6f2c",
+      "observed_sdk_symbols": [
+        "RealtimeAgent",
+        "RealtimePlaybackTracker",
+        "RealtimeRunner",
+        "RealtimeSession",
+        "RealtimeSessionEvent",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/twilio_sip/__init__.py",
+      "area": "realtime",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "fe43e16750d9afcc18774e11e150bfdb600996f36090c39595574b5c9f7b23d3",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/twilio_sip/agents.py",
+      "area": "realtime",
+      "role": "workflow_support",
+      "line_count": 92,
+      "sha256": "3d2a0dc34f92b5ae3fd194943c8eb8cceffe3b129ce045c53e1e6ed66060a875",
+      "observed_sdk_symbols": [
+        "RECOMMENDED_PROMPT_PREFIX",
+        "RealtimeAgent",
+        "realtime_handoff",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "realtime/twilio_sip/server.py",
+      "area": "realtime",
+      "role": "example_server",
+      "line_count": 211,
+      "sha256": "24a0f6f8b4b2f590f3f3d8c0fcd8b71609bdadbc12bc950261256b1efe37fda1",
+      "observed_sdk_symbols": [
+        "AssistantAudio",
+        "AssistantMessageItem",
+        "AssistantText",
+        "InputText",
+        "OpenAIRealtimeSIPModel",
+        "RealtimeModelSendRawMessage",
+        "RealtimeRunner",
+        "RealtimeSessionModelSettings",
+        "UserMessageItem",
+        "WELCOME_MESSAGE",
+        "get_starting_agent"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "reasoning_content/__init__.py",
+      "area": "reasoning_content",
+      "role": "package_support",
+      "line_count": 3,
+      "sha256": "89eb5e2ea4d580f6dc8b417be6c55c56b539848e9640c509b1fc1cba51c3eccd",
+      "observed_sdk_symbols": [],
+      "decision": "REJECT",
+      "target_track": "REASONING_CONTENT_MINIMIZATION_POLICY",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Reasoning content, summaries, item IDs, and provider data are intentionally not requested or persisted; only token counts are retained.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/model_routing/",
+        "src/okcanvas_agent_runtime/model_retry/",
+        "src/okcanvas_agent_runtime/reasoning_evidence/"
+      ]
+    },
+    {
+      "path": "reasoning_content/gpt_oss_stream.py",
+      "area": "reasoning_content",
+      "role": "executable_example",
+      "line_count": 54,
+      "sha256": "c27be76f2ddecafdaab7499180c4c86457fb34676fd99f3d65c55e1c371d8cad",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "OpenAIChatCompletionsModel",
+        "Runner",
+        "set_tracing_disabled"
+      ],
+      "decision": "REJECT",
+      "target_track": "REASONING_CONTENT_MINIMIZATION_POLICY",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Reasoning content, summaries, item IDs, and provider data are intentionally not requested or persisted; only token counts are retained.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/streaming/",
+        "src/okcanvas_agent_runtime/model_routing/",
+        "src/okcanvas_agent_runtime/model_retry/",
+        "src/okcanvas_agent_runtime/reasoning_evidence/"
+      ]
+    },
+    {
+      "path": "reasoning_content/main.py",
+      "area": "reasoning_content",
+      "role": "executable_example",
+      "line_count": 128,
+      "sha256": "b0517327dfdf6e996ae149a141d1a9913d5c36dc70b7073fd3c4bd246d028e94",
+      "observed_sdk_symbols": [
+        "ModelSettings",
+        "ModelTracing",
+        "OpenAIProvider"
+      ],
+      "decision": "REJECT",
+      "target_track": "REASONING_CONTENT_MINIMIZATION_POLICY",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Reasoning content, summaries, item IDs, and provider data are intentionally not requested or persisted; only token counts are retained.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/model_routing/",
+        "src/okcanvas_agent_runtime/model_retry/",
+        "src/okcanvas_agent_runtime/reasoning_evidence/"
+      ]
+    },
+    {
+      "path": "reasoning_content/runner_example.py",
+      "area": "reasoning_content",
+      "role": "executable_example",
+      "line_count": 71,
+      "sha256": "0c44a192ede3122ed77d732cdb193ac37f7c04a44789a9f57cf6ee0561a67c7f",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "ReasoningItem",
+        "Runner",
+        "trace"
+      ],
+      "decision": "REJECT",
+      "target_track": "REASONING_CONTENT_MINIMIZATION_POLICY",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Reasoning content, summaries, item IDs, and provider data are intentionally not requested or persisted; only token counts are retained.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/model_routing/",
+        "src/okcanvas_agent_runtime/model_retry/",
+        "src/okcanvas_agent_runtime/reasoning_evidence/"
+      ]
+    },
+    {
+      "path": "research_bot/__init__.py",
+      "area": "research_bot",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "research_bot/agents/__init__.py",
+      "area": "research_bot",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "research_bot/agents/planner_agent.py",
+      "area": "research_bot",
+      "role": "executable_example",
+      "line_count": 31,
+      "sha256": "4e9e47656773850fb797018b71d775c6150a9b2629bd2cd31360ecaeb7cb5064",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "research_bot/agents/search_agent.py",
+      "area": "research_bot",
+      "role": "executable_example",
+      "line_count": 17,
+      "sha256": "da06b3021972712fec6393d0bc01b5034d094c08de8ba6aa0d73704375bd3796",
+      "observed_sdk_symbols": [
+        "Agent",
+        "WebSearchTool"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "research_bot/agents/writer_agent.py",
+      "area": "research_bot",
+      "role": "executable_example",
+      "line_count": 35,
+      "sha256": "796f2df89984034a8149021da421d19639c6255df14f45f38d89b767781cb2ed",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "research_bot/main.py",
+      "area": "research_bot",
+      "role": "executable_example",
+      "line_count": 17,
+      "sha256": "d41cd2737bfafe90e2f51ce87ac46e5b4fd5c1a2c55bf0d1dfdd5702dab3f905",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "research_bot/manager.py",
+      "area": "research_bot",
+      "role": "workflow_support",
+      "line_count": 131,
+      "sha256": "1e85abc178aaafd56afb3b77abad7aa46cb0f183ec0051ebc6c02e1d0202fb7a",
+      "observed_sdk_symbols": [
+        "ReportData",
+        "Runner",
+        "WebSearchItem",
+        "WebSearchPlan",
+        "custom_span",
+        "gen_trace_id",
+        "planner_agent",
+        "search_agent",
+        "trace",
+        "writer_agent"
+      ],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "research_bot/printer.py",
+      "area": "research_bot",
+      "role": "workflow_support",
+      "line_count": 41,
+      "sha256": "d7011aab74945061640fbec78c1cfbb0c77e865d6ea97c3c785e95cf591889b6",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "BOUNDED_MULTI_AGENT_ORCHESTRATION",
+      "priority": "P1_NEXT",
+      "rationale": "Valid near-term input for a bounded orchestration layer, but no parallel fan-out, deterministic aggregation, partial-failure policy, or sibling cancellation exists yet.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "35239018df58312dea4986d5f8d40dd1c8b408388324693a0e8e7a9f4cb15521",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/basic.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 241,
+      "sha256": "42d5af3d4f0b05ae877a25f8fc0c1aa52bd87fd83baf8b96a0f3d1c0cd3b8e2b",
+      "observed_sdk_symbols": [
+        "DEFAULT_PYTHON_SANDBOX_IMAGE",
+        "DockerSandboxClient",
+        "DockerSandboxClientOptions",
+        "File",
+        "Manifest",
+        "ModalSandboxClient",
+        "ModalSandboxClientOptions",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docker/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "8ebfc0bed9499a5fa1c8000b3959987c22140ee954b13a4afae5e9cab580ad11",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docker/docker_runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 165,
+      "sha256": "afce815086d4d2b89005d5a34ffc041267d5af66f1bfb6743970771f710dc470",
+      "observed_sdk_symbols": [
+        "DEFAULT_PYTHON_SANDBOX_IMAGE",
+        "DockerSandboxClient",
+        "DockerSandboxClientOptions",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docker/mounts/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "46a728ab9898dc66e6f9073edccee935fda5e74865422598bbf706b823d75a05",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docker/mounts/azure_mount_read_write.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 84,
+      "sha256": "090eac3bfab16d7fc58f4ac0ff559ab1abe29ec44ba80ab023dadb2edb976db1",
+      "observed_sdk_symbols": [
+        "AzureBlobMount",
+        "DockerVolumeMountStrategy",
+        "FuseMountPattern",
+        "InContainerMountStrategy",
+        "RcloneMountPattern"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docker/mounts/gcs_mount_read_write.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 100,
+      "sha256": "20ed84112a465b3044fa0c63a38476f0423ba4f643947a3a7914b5d4a7e54a72",
+      "observed_sdk_symbols": [
+        "DockerVolumeMountStrategy",
+        "GCSMount",
+        "InContainerMountStrategy",
+        "MountpointMountPattern",
+        "RcloneMountPattern"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docker/mounts/mount_smoke.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 153,
+      "sha256": "14e37a50ad8c2e543878a7aa1603b969dc78e674805c4196cbadd553915e9d16",
+      "observed_sdk_symbols": [
+        "DockerSandboxClient",
+        "DockerSandboxClientOptions",
+        "Manifest",
+        "ModelSettings",
+        "Mount",
+        "MountCommandError",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "SandboxSession"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docker/mounts/s3_files_mount_read_write.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 72,
+      "sha256": "4f25608ebee0fcbb83d5d619ce07b3c888d2a803b2dfe87049c6ec8c07920539",
+      "observed_sdk_symbols": [
+        "InContainerMountStrategy",
+        "S3FilesMount",
+        "S3FilesMountPattern"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docker/mounts/s3_mount_read_write.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 85,
+      "sha256": "925ba57c39de99a2804edd25bef358e7b9bc6d047c76bab5782de1c66a6f19f5",
+      "observed_sdk_symbols": [
+        "DockerVolumeMountStrategy",
+        "InContainerMountStrategy",
+        "MountpointMountPattern",
+        "RcloneMountPattern",
+        "S3Mount"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docs/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "c06250227a0cc09bfdaecc64eb737d7d0686de9dfac21c2ac9c451b37149a573",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/docs/coding_task.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 260,
+      "sha256": "1dbcb0e8777d76fbdf30f0aeebc169ac7d0764616e68c0210b8276e38f4fe3d9",
+      "observed_sdk_symbols": [
+        "Capabilities",
+        "LocalDir",
+        "LocalDirLazySkillSource",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Skills",
+        "ToolCallItem",
+        "ToolCallOutputItem",
+        "UnixLocalSandboxClient"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "e79a569369eb1f1f1af05ead40a3e718aac6baba06c561cd02aeba79e948fb41",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/blaxel_runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 466,
+      "sha256": "f0899a96f8990362b3a6489f8b7f2515d5bd19e9d7bdc8bf0d7d454653eb2ac8",
+      "observed_sdk_symbols": [
+        "BlaxelDriveMount",
+        "BlaxelDriveMountStrategy",
+        "BlaxelSandboxClient",
+        "BlaxelSandboxClientOptions",
+        "DEFAULT_BLAXEL_WORKSPACE_ROOT",
+        "Environment",
+        "File",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "set_tracing_disabled"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/cloudflare_runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 446,
+      "sha256": "746f110bc83a78ac2a17cf2ac2d942a781548d27df48181a2dd6574de98716f5",
+      "observed_sdk_symbols": [
+        "BaseSandboxSession",
+        "CloudflareBucketMountStrategy",
+        "CloudflareSandboxClient",
+        "CloudflareSandboxClientOptions",
+        "File",
+        "LocalSnapshotSpec",
+        "Manifest",
+        "ModelSettings",
+        "R2Mount",
+        "RunConfig",
+        "Runner",
+        "S3Mount",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "set_tracing_disabled"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/daytona/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "9fc9bb52998eaef8aa881ce82f5b1dd8e474fc7391dec1f3f175a8d0db0db041",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/daytona/daytona_runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 208,
+      "sha256": "05bf33168ce1890f06d24e63ae48220228fd613e86ff40c48cdd1da211742f29",
+      "observed_sdk_symbols": [
+        "DEFAULT_DAYTONA_WORKSPACE_ROOT",
+        "DaytonaCloudBucketMountStrategy",
+        "DaytonaSandboxClient",
+        "DaytonaSandboxClientOptions",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "S3Mount",
+        "SandboxAgent",
+        "SandboxRunConfig"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/daytona/usaspending_text2sql/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "576255ab87d5f5a447d5e974266b0c840a39eb886e7c407dc9e32b7764877c13",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/daytona/usaspending_text2sql/agent.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 540,
+      "sha256": "c04bc0150dae3c6d74aa5fcb39c27a3f1244d13d83298bc6fcfa7f08716f4a0c",
+      "observed_sdk_symbols": [
+        "Compaction",
+        "DEFAULT_DAYTONA_WORKSPACE_ROOT",
+        "DaytonaSandboxClient",
+        "DaytonaSandboxClientOptions",
+        "DaytonaSandboxSessionState",
+        "Dir",
+        "EventPayloadPolicy",
+        "File",
+        "Instrumentation",
+        "JsonlOutboxSink",
+        "LocalDir",
+        "LocalFile",
+        "Manifest",
+        "Memory",
+        "MemoryGenerateConfig",
+        "MemoryReadConfig",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/daytona/usaspending_text2sql/setup_db.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 718,
+      "sha256": "e192a20756d170137637c08f60190ed768c4c20eb3ef8d56ad751543c1058d1b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/daytona/usaspending_text2sql/sql_capability.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 175,
+      "sha256": "589da798ad414cc1f99d97ac7bd00eee4aa4da173adbd63442e039f8a4d1cacd",
+      "observed_sdk_symbols": [
+        "BaseSandboxSession",
+        "Capability",
+        "ExecTimeoutError",
+        "FunctionTool",
+        "Manifest",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/e2b_runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 273,
+      "sha256": "b3448905953ef4675b0c0d1d81e6ed2083948f2a9cfe628437724db80fe6855c",
+      "observed_sdk_symbols": [
+        "E2BSandboxClient",
+        "E2BSandboxClientOptions",
+        "E2BSandboxType",
+        "LocalSnapshotSpec",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/modal_runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 398,
+      "sha256": "9a3fe441c2f7095b638516c3a50788e57013a3b0b84dcdf22804a278a7e694d0",
+      "observed_sdk_symbols": [
+        "BaseSandboxSession",
+        "GCSMount",
+        "LocalSnapshotSpec",
+        "Manifest",
+        "ModalCloudBucketMountStrategy",
+        "ModalSandboxClient",
+        "ModalSandboxClientOptions",
+        "ModelSettings",
+        "Mount",
+        "RunConfig",
+        "Runner",
+        "S3Mount",
+        "SandboxAgent",
+        "SandboxRunConfig"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/runloop/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/runloop/capabilities.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 1015,
+      "sha256": "ebc73fad9b1edbbf7d1491a99ae3f05d4199178d56ab4d29809cee7aea8fba77",
+      "observed_sdk_symbols": [
+        "Agent",
+        "DEFAULT_RUNLOOP_ROOT_WORKSPACE_ROOT",
+        "DEFAULT_RUNLOOP_WORKSPACE_ROOT",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "RunloopAfterIdle",
+        "RunloopGatewaySpec",
+        "RunloopLaunchParameters",
+        "RunloopMcpSpec",
+        "RunloopSandboxClient",
+        "RunloopSandboxClientOptions",
+        "RunloopSandboxSessionState",
+        "RunloopTunnelConfig",
+        "RunloopUserParameters",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/runloop/runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 172,
+      "sha256": "f202cf08e9ffeb678f9c715d67b189b92c5b4258ea2b3165c50b07f6313697f4",
+      "observed_sdk_symbols": [
+        "DEFAULT_RUNLOOP_ROOT_WORKSPACE_ROOT",
+        "DEFAULT_RUNLOOP_WORKSPACE_ROOT",
+        "Manifest",
+        "ModelSettings",
+        "NoopSnapshotSpec",
+        "RunConfig",
+        "RunloopSandboxClient",
+        "RunloopSandboxClientOptions",
+        "RunloopUserParameters",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/temporal/_worker_setup.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 39,
+      "sha256": "95aeaccb7a3daf5dab28884a82dab909b0d3b092f48d524339fbe300bda769be",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/temporal/local_hello_workflow.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 150,
+      "sha256": "8868969fb6f4e3c028673b9724efbb83e166869f44c80c09c858233dc9d76240",
+      "observed_sdk_symbols": [
+        "File",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "UnixLocalSandboxClient",
+        "UnixLocalSandboxClientOptions"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/temporal/temporal_sandbox_agent.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 722,
+      "sha256": "1e9f8f2aeaa0cd7c1197130e7f00ebd7addc982cb9e664bf64953da1fb1a17e1",
+      "observed_sdk_symbols": [
+        "Agent",
+        "DaytonaSandboxClient",
+        "DaytonaSandboxClientOptions",
+        "DaytonaSandboxSessionState",
+        "DockerSandboxClient",
+        "DockerSandboxClientOptions",
+        "DockerSandboxSessionState",
+        "E2BSandboxClient",
+        "E2BSandboxClientOptions",
+        "E2BSandboxSessionState",
+        "Manifest",
+        "MessageOutputItem",
+        "ModelSettings",
+        "RunConfig",
+        "RunHooksBase",
+        "RunItem",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "SandboxSessionState",
+        "SnapshotBase",
+        "TResponseInputItem",
+        "ToolApprovalItem",
+        "ToolCallItem"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/temporal/temporal_sandbox_tui.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 1204,
+      "sha256": "275fa0af9548670a428f5ed9a056659d0dba4fd7998765c89d1c75703951860c",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/temporal/temporal_session_manager.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 406,
+      "sha256": "f0dea759d83ee6ca07eae90cbae3bfc9a728338ad216a3e61eb6012630aa385e",
+      "observed_sdk_symbols": [
+        "Manifest",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/extensions/vercel_runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 424,
+      "sha256": "3dfd11c7c87304d8dda61774b070a788fbe7a560e0ac00b7705508b7edc6c042",
+      "observed_sdk_symbols": [
+        "BaseSandboxSession",
+        "LocalSnapshotSpec",
+        "Manifest",
+        "ModelSettings",
+        "OpenAIProvider",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "VercelSandboxClient",
+        "VercelSandboxClientOptions"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/handoffs.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 104,
+      "sha256": "8d064d2d6c32e820805ed454d42f4d8d86f75c29a59958b6f5ebf457d81e7da5",
+      "observed_sdk_symbols": [
+        "Agent",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "UnixLocalSandboxClient"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/healthcare_support/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "e387621d65641e709dd30a699b3f2b8874048fd754bdda32e3759081ec24cac1",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/healthcare_support/data.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 197,
+      "sha256": "5aaf1156170161e5530a24d247ccd815a3c479e9dd8e45b169245a4850c507c2",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/healthcare_support/main.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 152,
+      "sha256": "e225fceb88137e01d50da4bd75fe48bf1e4f71e51b3a9738b32506082d3073d7",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/healthcare_support/models.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 83,
+      "sha256": "e7106fa65d76a632837fb7a36e42187f3257dfdb7c932af62f786edb7cfe2660",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/healthcare_support/support_agents.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 162,
+      "sha256": "3f008525a521fd8860576038fe702e982972afdbafd611b0aa2984493f670678",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AgentOutputSchema",
+        "Filesystem",
+        "LocalDir",
+        "LocalDirLazySkillSource",
+        "ModelSettings",
+        "SandboxAgent",
+        "Shell",
+        "Skills",
+        "Tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/healthcare_support/tools.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 113,
+      "sha256": "ea3a0b30b85090e8cb3b8a40ed521f42617c81598864c17238a7c789ae9e63e6",
+      "observed_sdk_symbols": [
+        "RunContextWrapper",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/healthcare_support/workflow.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 419,
+      "sha256": "7b4d2c1993571bc4533d585cb9e0b1286edb803392570ba526ebd2e3834d03bf",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AgentHookContext",
+        "Dir",
+        "File",
+        "LocalDir",
+        "Manifest",
+        "RunConfig",
+        "RunContextWrapper",
+        "RunHooks",
+        "Runner",
+        "SQLiteSession",
+        "SandboxPathGrant",
+        "SandboxRunConfig",
+        "Tool",
+        "ToolContext",
+        "UnixLocalSandboxClient",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/memory.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 229,
+      "sha256": "5f525cf944bf9383fc240a276de72f7826e277834d4cfa6b9434ce0940cc3087",
+      "observed_sdk_symbols": [
+        "BaseSandboxSession",
+        "File",
+        "Filesystem",
+        "LocalSnapshotSpec",
+        "Manifest",
+        "Memory",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "UnixLocalSandboxClient"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/memory_multi_agent_multiturn.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 236,
+      "sha256": "a78b129e9fdf242daccedbc2fc3bc9394e1bb25a5ac746c88c8485a4deda2136",
+      "observed_sdk_symbols": [
+        "Dir",
+        "File",
+        "Filesystem",
+        "Manifest",
+        "Memory",
+        "MemoryLayoutConfig",
+        "RunConfig",
+        "Runner",
+        "SQLiteSession",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "UnixLocalSandboxClient"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/memory_s3.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 329,
+      "sha256": "c38c01f14c5ec563fcc1acddd1bbccc1c79115577d91aaee847585af20bc6adc",
+      "observed_sdk_symbols": [
+        "DockerSandboxClient",
+        "DockerSandboxClientOptions",
+        "File",
+        "Filesystem",
+        "InContainerMountStrategy",
+        "Manifest",
+        "Memory",
+        "MemoryGenerateConfig",
+        "MemoryLayoutConfig",
+        "RcloneMountPattern",
+        "RunConfig",
+        "Runner",
+        "S3Mount",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "SandboxSession",
+        "Shell"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/misc/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "550ca450589b0d17c7de3777e45523bac62cafa3a8898641bd66406d4c11ef5d",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/misc/example_support.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 33,
+      "sha256": "6ebb4b5e154550eeb4d9836053c3647c173a80b2d5bb0bb9d326fb40e387aefc",
+      "observed_sdk_symbols": [
+        "File",
+        "Manifest"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/misc/reference_policy_mcp_server.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 25,
+      "sha256": "84d9417feb564e61be7d64ba6a6e44b98df6af9a2f4da1857f330ae26e627cac",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/misc/workspace_apply_patch.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 78,
+      "sha256": "2b3d4824a52d34daec6a6825eac52fa58b207626158d2aa5b47c2f6f8e5951a1",
+      "observed_sdk_symbols": [
+        "ApplyPatchOperation",
+        "ApplyPatchResult",
+        "ApplyPatchTool",
+        "BaseSandboxSession",
+        "Capability",
+        "Manifest",
+        "Tool",
+        "apply_diff"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/misc/workspace_shell.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 56,
+      "sha256": "c286a044515157b0826c78e910b39c444e29154e847820e1970aa8eebaef089b",
+      "observed_sdk_symbols": [
+        "BaseSandboxSession",
+        "Capability",
+        "Manifest",
+        "ShellCallOutcome",
+        "ShellCommandOutput",
+        "ShellCommandRequest",
+        "ShellResult",
+        "ShellTool",
+        "Tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/sandbox_agent_capabilities.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 475,
+      "sha256": "fa551692db874beca455df69d62b3c0c463dc96540b57b064cb1ed75bfe091ac",
+      "observed_sdk_symbols": [
+        "AgentOutputSchemaBase",
+        "AgentUpdatedStreamEvent",
+        "ApplyPatchOperation",
+        "BaseSandboxSession",
+        "Capabilities",
+        "File",
+        "Filesystem",
+        "FilesystemToolSet",
+        "Handoff",
+        "ItemHelpers",
+        "LocalDir",
+        "LocalDirLazySkillSource",
+        "LocalFile",
+        "Manifest",
+        "Model",
+        "ModelResponse",
+        "ModelSettings",
+        "ModelTracing",
+        "OpenAIProvider",
+        "RawResponsesStreamEvent",
+        "RunConfig",
+        "RunContextWrapper",
+        "RunItemStreamEvent",
+        "RunResultStreaming"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/sandbox_agent_with_remote_snapshot.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 173,
+      "sha256": "9afc212565398f08a37bdcaf305ac35d1be04e6f3294742e6be72118d7457948",
+      "observed_sdk_symbols": [
+        "Dependencies",
+        "Manifest",
+        "ModelSettings",
+        "RemoteSnapshotSpec",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "UnixLocalSandboxClient"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/sandbox_agent_with_tools.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 117,
+      "sha256": "be5f06e91c52bb628be8e6f45cb438776535af8d464b65f7e07e3170cc8aa679",
+      "observed_sdk_symbols": [
+        "MCPServerStdio",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "UnixLocalSandboxClient",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/sandbox_agents_as_tools.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 211,
+      "sha256": "7faa28a264219ab9694252e88c10f4bb0c2dc9842ebbae13e3e045ce59735c28",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "UnixLocalSandboxClient",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/agent_tools/",
+        "src/okcanvas_agent_runtime/execution/openai_gateway.py",
+        "src/okcanvas_agent_runtime/invocations/"
+      ]
+    },
+    {
+      "path": "sandbox/tax_prep.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 259,
+      "sha256": "ca3a745b8fe7b3386566971b3f4a86f50496955d522e16dcc926f89ab5e1df9c",
+      "observed_sdk_symbols": [
+        "Capabilities",
+        "Dir",
+        "DockerSandboxClient",
+        "DockerSandboxClientOptions",
+        "GitRepo",
+        "LocalFile",
+        "Manifest",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Skills",
+        "TResponseInputItem"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/data/dataroom/setup.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 240,
+      "sha256": "bdadb1aa885219a924934918c4f75bdef77e696e0ec6ec2d57b41342826192ad",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/dataroom_metric_extract/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/dataroom_metric_extract/evals.py",
+      "area": "sandbox",
+      "role": "validation_support",
+      "line_count": 315,
+      "sha256": "c8885995638e72dcf48adc16b3e9e6ecff835ef2bf203a596f0e3b5cc2e1fc4c",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/dataroom_metric_extract/main.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 274,
+      "sha256": "51ec0ea25ecf84cd7999b80bf467aaeb3a805b38b93563d7bd775c94308b4a4f",
+      "observed_sdk_symbols": [
+        "File",
+        "LocalDir",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "RunResultStreaming",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "TResponseInputItem"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/dataroom_metric_extract/schemas.py",
+      "area": "sandbox",
+      "role": "workflow_support",
+      "line_count": 33,
+      "sha256": "992912eb237614df8f88ca8ea0d3ac383c4f921bd7d488ecf278eae99c40ab8b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/dataroom_qa/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/dataroom_qa/main.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 146,
+      "sha256": "c940dcfa55b0de46e483ae811354ac512528373ff9017686a6d2b55266d3aea7",
+      "observed_sdk_symbols": [
+        "File",
+        "LocalDir",
+        "Manifest",
+        "RunConfig",
+        "RunResultStreaming",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "TResponseInputItem"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/misc.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 397,
+      "sha256": "1037dc5cd20df9d6b797b3a84a8b3fc4df15814b2683e88704bd4953f1d4a12a",
+      "observed_sdk_symbols": [
+        "AgentUpdatedStreamEvent",
+        "BaseSandboxClient",
+        "CompactionItem",
+        "DockerSandboxClient",
+        "DockerSandboxClientOptions",
+        "HandoffCallItem",
+        "HandoffOutputItem",
+        "ItemHelpers",
+        "MCPApprovalRequestItem",
+        "MCPApprovalResponseItem",
+        "MCPListToolsItem",
+        "Manifest",
+        "MessageOutputItem",
+        "RawResponsesStreamEvent",
+        "ReasoningItem",
+        "SandboxSession",
+        "StreamEvent",
+        "TResponseInputItem",
+        "ToolApprovalItem",
+        "ToolCallItem",
+        "ToolCallOutputItem",
+        "ToolSearchCallItem",
+        "ToolSearchOutputItem",
+        "UnixLocalSandboxClient"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/repo_code_review/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/repo_code_review/evals.py",
+      "area": "sandbox",
+      "role": "validation_support",
+      "line_count": 79,
+      "sha256": "cca1e208b954b7f5a4e64b9cbb09e4973f44626068d9f9d9fbe76a22c0866b75",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/repo_code_review/main.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 173,
+      "sha256": "74f6a7b16f60f39e45b2c94623761fa3b94e5ea4bf28945a460d449b7c81ec9f",
+      "observed_sdk_symbols": [
+        "File",
+        "Filesystem",
+        "GitRepo",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/sandbox_resume/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/sandbox_resume/main.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 145,
+      "sha256": "2fdec11b561c17f21b6c50b0696ca7bc0dc020b2949dbc6cb93ba8408f772a9a",
+      "observed_sdk_symbols": [
+        "File",
+        "Filesystem",
+        "Manifest",
+        "RunConfig",
+        "RunResultStreaming",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "TResponseInputItem"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/vision_website_clone/__init__.py",
+      "area": "sandbox",
+      "role": "package_support",
+      "line_count": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/tutorials/vision_website_clone/main.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 253,
+      "sha256": "99010a0d7f7d0122ab23cd29f064c3dcb3650e90066b5a860c595c714155669c",
+      "observed_sdk_symbols": [
+        "BaseSandboxSession",
+        "Dir",
+        "File",
+        "Filesystem",
+        "LocalDir",
+        "LocalDirLazySkillSource",
+        "LocalFile",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "Skills",
+        "WorkspaceReadNotFoundError"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/unix_local_pty.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 165,
+      "sha256": "51183cc56ce3e50bd0619cf1b233facf7de27f58e5a0cd0c70b358a7f7340831",
+      "observed_sdk_symbols": [
+        "File",
+        "Manifest",
+        "ModelSettings",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxRunConfig",
+        "Shell",
+        "UnixLocalSandboxClient"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "sandbox/unix_local_runner.py",
+      "area": "sandbox",
+      "role": "executable_example",
+      "line_count": 214,
+      "sha256": "f3f50c64baaa186aa6467e1f02230b2f22ffebcdd75a9532442d0c3c363355a8",
+      "observed_sdk_symbols": [
+        "Manifest",
+        "RunConfig",
+        "Runner",
+        "SandboxAgent",
+        "SandboxPathGrant",
+        "SandboxRunConfig",
+        "UnixLocalSandboxClient",
+        "WorkspaceArchiveWriteError"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_PLATFORM",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "SandboxAgent, Manifest, shell/filesystem capabilities, snapshots, mounts, and remote providers require an independent sandbox platform and authority boundary.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/apply_patch.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 170,
+      "sha256": "3fb41d2041c013d6e1c9d41b46745e7fb05c6df68c459f7113e87595e6831816",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ApplyPatchOperation",
+        "ApplyPatchResult",
+        "ApplyPatchTool",
+        "ModelSettings",
+        "Runner",
+        "apply_diff",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_AND_PRIVILEGED_TOOLS",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Shell, Apply Patch, Code Interpreter, Computer Use, and skills need sandbox isolation and explicit write/approval policy before product use.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/code_interpreter.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 63,
+      "sha256": "2caa8103ede50101d5542d54b00ce442469a55e9cc7b57808d745401f1aa680a",
+      "observed_sdk_symbols": [
+        "Agent",
+        "CodeInterpreterTool",
+        "Runner",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_AND_PRIVILEGED_TOOLS",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Shell, Apply Patch, Code Interpreter, Computer Use, and skills need sandbox isolation and explicit write/approval policy before product use.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/codex.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 167,
+      "sha256": "0385924e558909dba54199a0be5f18f50ed22b59643c78e3b11c7947dfb81cdd",
+      "observed_sdk_symbols": [
+        "Agent",
+        "CodexToolStreamEvent",
+        "CommandExecutionItem",
+        "ErrorItem",
+        "FileChangeItem",
+        "ItemCompletedEvent",
+        "ItemStartedEvent",
+        "ItemUpdatedEvent",
+        "McpToolCallItem",
+        "ReasoningItem",
+        "Runner",
+        "ThreadErrorEvent",
+        "ThreadOptions",
+        "ThreadStartedEvent",
+        "TodoListItem",
+        "TurnCompletedEvent",
+        "TurnFailedEvent",
+        "TurnOptions",
+        "TurnStartedEvent",
+        "WebSearchItem",
+        "codex_tool",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Codex is integrated through product-owned read-only/write/approval gateways rather than importing the experimental example tool unchanged.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/runtime/codex_gateway.py",
+        "src/okcanvas_agent_runtime/runtime/codex_write_gateway.py",
+        "src/okcanvas_agent_runtime/runtime/codex_approval_gateway.py"
+      ]
+    },
+    {
+      "path": "tools/codex_same_thread.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 132,
+      "sha256": "c27f978ccac3c35cdf89e7efce01028b802749cb6963b7a26c155a8cb2668bed",
+      "observed_sdk_symbols": [
+        "Agent",
+        "CodexToolStreamEvent",
+        "ModelSettings",
+        "Runner",
+        "ThreadErrorEvent",
+        "ThreadOptions",
+        "ThreadStartedEvent",
+        "TurnCompletedEvent",
+        "TurnFailedEvent",
+        "TurnStartedEvent",
+        "codex_tool",
+        "gen_trace_id",
+        "trace"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "Codex is integrated through product-owned read-only/write/approval gateways rather than importing the experimental example tool unchanged.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/runtime/codex_gateway.py",
+        "src/okcanvas_agent_runtime/runtime/codex_write_gateway.py",
+        "src/okcanvas_agent_runtime/runtime/codex_approval_gateway.py"
+      ]
+    },
+    {
+      "path": "tools/computer_use.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 311,
+      "sha256": "30815172e92175449367235a1f7bc3497aec0efd02fb9473c8856d5860fc178f",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AsyncComputer",
+        "Button",
+        "ComputerProvider",
+        "ComputerTool",
+        "ModelSettings",
+        "RunContextWrapper",
+        "Runner",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_AND_PRIVILEGED_TOOLS",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Shell, Apply Patch, Code Interpreter, Computer Use, and skills need sandbox isolation and explicit write/approval policy before product use.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/container_shell_inline_skill.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 117,
+      "sha256": "e0fe7d931c5dad57be254d66bd9d1b3a0b517c272f6c1ba9c95ff90f89a191a0",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelResponse",
+        "Runner",
+        "ShellTool",
+        "ShellToolInlineSkill",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_AND_PRIVILEGED_TOOLS",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Shell, Apply Patch, Code Interpreter, Computer Use, and skills need sandbox isolation and explicit write/approval policy before product use.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/container_shell_skill_reference.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 112,
+      "sha256": "d009b25d3dceaf2b39e968e888349dab364bd4e93e0ba223dbaae925b578ea1f",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelResponse",
+        "Runner",
+        "ShellTool",
+        "ShellToolSkillReference",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_AND_PRIVILEGED_TOOLS",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Shell, Apply Patch, Code Interpreter, Computer Use, and skills need sandbox isolation and explicit write/approval policy before product use.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/file_search.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 65,
+      "sha256": "5257ce35c447595b465f74addd7bba195e3c5a7b8908e3071072d5970fa12234",
+      "observed_sdk_symbols": [
+        "Agent",
+        "FileSearchTool",
+        "Runner",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "HOSTED_READONLY_TOOLS",
+      "priority": "P2",
+      "rationale": "The hosted tool is not imported or registered; Web/File Search requires source, retention, citation, and tenant policy before enablement.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/image_generator.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 78,
+      "sha256": "b0137b436eaca52f583fc20b8e66308e9a1e01cc20eccb1097ca3d35ac3c5539",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ImageGenerationTool",
+        "Runner",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "IMAGE_GENERATION_PRODUCT",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Image generation is a separate product capability with media storage and delivery contracts, not part of the current Agent Runtime core.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/local_shell_skill.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 78,
+      "sha256": "8b100b261f9fa6b18cfb0572d138217d01545f213d305a8eae11e804bd50d1ec",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "ShellTool",
+        "ShellToolLocalSkill",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_AND_PRIVILEGED_TOOLS",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Shell, Apply Patch, Code Interpreter, Computer Use, and skills need sandbox isolation and explicit write/approval policy before product use.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/programmatic_tool_calling.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 129,
+      "sha256": "f1beed8d0c4b6cc065e5d7da18185dcfd8dd9652edcd0655ccdc023e0d2ad980",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "ProgrammaticToolCallingTool",
+        "Runner",
+        "ToolCallItem",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "TOOL_DISCOVERY_AND_PROGRAMMATIC_CALLING",
+      "priority": "P3",
+      "rationale": "Dynamic tool discovery and model-generated programs would expand authority beyond the closed Runtime registry and need a separate bounded design.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/shell.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 141,
+      "sha256": "c599290b925c45f0f4491e9f38f1cd88a4131c94af527d13af33be86023b63e1",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "RunContextWrapper",
+        "Runner",
+        "ShellCallOutcome",
+        "ShellCommandOutput",
+        "ShellCommandRequest",
+        "ShellOnApprovalFunctionResult",
+        "ShellResult",
+        "ShellTool",
+        "ToolApprovalItem",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "SANDBOX_AND_PRIVILEGED_TOOLS",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Shell, Apply Patch, Code Interpreter, Computer Use, and skills need sandbox isolation and explicit write/approval policy before product use.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/shell_human_in_the_loop.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 154,
+      "sha256": "64dc076afe4992ab0843715012069ac37fc8c1f7120621fa62c4c8206b073d22",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "Runner",
+        "ShellCallOutcome",
+        "ShellCommandOutput",
+        "ShellCommandRequest",
+        "ShellResult",
+        "ShellTool",
+        "ToolApprovalItem",
+        "trace"
+      ],
+      "decision": "ADAPT",
+      "target_track": "CURRENT_RUNTIME",
+      "priority": "FIXED_CURRENT_DECISION",
+      "rationale": "The explicit interruption/decision pattern is retained, but approval is separated into product-owned encrypted state and a local operator boundary.",
+      "current_product_evidence": [
+        "src/okcanvas_agent_runtime/tool_approval/",
+        "src/okcanvas_agent_runtime/run_submission/"
+      ]
+    },
+    {
+      "path": "tools/tool_search.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 219,
+      "sha256": "c06389cc75b499c40ec7c433ce556d91321934079a6d45edb9f9ad2dff8f20bc",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "Runner",
+        "ToolSearchTool",
+        "tool",
+        "tool_namespace",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "TOOL_DISCOVERY_AND_PROGRAMMATIC_CALLING",
+      "priority": "P3",
+      "rationale": "Dynamic tool discovery and model-generated programs would expand authority beyond the closed Runtime registry and need a separate bounded design.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/web_search.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 23,
+      "sha256": "67724928f8fe65de2f4f7c9cadf9e9918017a1b212e92f941c16fbc23e02a1f7",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "WebSearchTool",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "HOSTED_READONLY_TOOLS",
+      "priority": "P2",
+      "rationale": "The hosted tool is not imported or registered; Web/File Search requires source, retention, citation, and tenant policy before enablement.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "tools/web_search_filters.py",
+      "area": "tools",
+      "role": "executable_example",
+      "line_count": 147,
+      "sha256": "3a98e390d08162be2cde3517fbe1b7c9de216ba93a9972ba42e033691efe20c3",
+      "observed_sdk_symbols": [
+        "Agent",
+        "ModelSettings",
+        "Runner",
+        "WebSearchTool",
+        "trace"
+      ],
+      "decision": "DEFER",
+      "target_track": "HOSTED_READONLY_TOOLS",
+      "priority": "P2",
+      "rationale": "The hosted tool is not imported or registered; Web/File Search requires source, retention, citation, and tenant policy before enablement.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "voice/__init__.py",
+      "area": "voice",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "voice/static/__init__.py",
+      "area": "voice",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "voice/static/main.py",
+      "area": "voice",
+      "role": "executable_example",
+      "line_count": 89,
+      "sha256": "1eae3423a15bd576e372351b8b8cee39ffae30e8d348f60599749329570893f2",
+      "observed_sdk_symbols": [
+        "Agent",
+        "AudioInput",
+        "SingleAgentVoiceWorkflow",
+        "SingleAgentWorkflowCallbacks",
+        "VoicePipeline",
+        "prompt_with_handoff_instructions",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "voice/static/util.py",
+      "area": "voice",
+      "role": "workflow_support",
+      "line_count": 69,
+      "sha256": "8a2afb6dabfe54768af81bc17204ab11b66ea690d99889633e418a26da5d9202",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "voice/streamed/__init__.py",
+      "area": "voice",
+      "role": "package_support",
+      "line_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_sdk_symbols": [],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "voice/streamed/main.py",
+      "area": "voice",
+      "role": "executable_example",
+      "line_count": 233,
+      "sha256": "6d9ae530acd010130b356fd48178b24a3383b80ee7d7ae430320ede26a63a5ce",
+      "observed_sdk_symbols": [
+        "StreamedAudioInput",
+        "VoicePipeline"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    },
+    {
+      "path": "voice/streamed/my_workflow.py",
+      "area": "voice",
+      "role": "executable_example",
+      "line_count": 85,
+      "sha256": "8147d48384364ea8d555384545ef89d0fe4ce88cc7c7bd3ea69ca78052d35fe3",
+      "observed_sdk_symbols": [
+        "Agent",
+        "Runner",
+        "TResponseInputItem",
+        "VoiceWorkflowBase",
+        "VoiceWorkflowHelper",
+        "prompt_with_handoff_instructions",
+        "tool"
+      ],
+      "decision": "DEFER",
+      "target_track": "REALTIME_AND_VOICE",
+      "priority": "SEPARATE_OR_LATER_TRACK",
+      "rationale": "Realtime audio, telephony, playback, and voice workflows are an independent product track outside the text Runtime.",
+      "current_product_evidence": []
+    }
+  ]
+}

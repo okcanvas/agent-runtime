@@ -1,0 +1,178 @@
+{
+  "acceptance_workspace": {
+    "acceptance_id": "20260729T034147191690Z-80b1413a",
+    "cleanup_attempts": 1,
+    "cleanup_error": null,
+    "cleanup_state": "COMPLETED",
+    "compact_evidence_exported": true,
+    "completed_at": "2026-07-29T03:41:47.605286Z",
+    "created_at": "2026-07-29T03:41:47.192222Z",
+    "preserved_path": null,
+    "product_runtime_state": false,
+    "resource_close_results": [],
+    "resources_closed": true,
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "step_id": "STEP008"
+  },
+  "cancelled": {
+    "run_id": "run_0ac1cab3f5f54639b96926b02e8d92f6",
+    "run_status": "CANCELLED",
+    "schema_version": "okcanvas-control-run-cancelled-v1",
+    "task_id": "task_e467abd1530549d2957a9341d7a32e4f",
+    "task_status": "CANCELLED"
+  },
+  "checks": {
+    "admin_key_not_in_database": true,
+    "api_key_not_in_database": true,
+    "cancellation_persisted": true,
+    "event_sequences_monotonic": true,
+    "events_persisted": true,
+    "heartbeat_supported": true,
+    "outcome_http_200": true,
+    "raw_request_not_in_database": true,
+    "references_unchanged": true,
+    "run_create_accepted": true,
+    "run_succeeded": true,
+    "sdk_event_classes_not_public": true,
+    "sse_cursor_resumed": true,
+    "sse_terminal_completed": true,
+    "task_succeeded": true,
+    "unauthorized_rejected": true,
+    "validation_error_canonical": true
+  },
+  "completed_at": "2026-07-29T03:41:47.525465Z",
+  "created": {
+    "run_id": "run_580c0115aaa34f48a4f06c5e46796100",
+    "run_status": "CREATED",
+    "schema_version": "okcanvas-control-run-created-v1",
+    "task_id": "task_938beb45246c4947a4c031da25bebe35",
+    "task_status": "READY"
+  },
+  "event_types": [
+    "run.created",
+    "run.started",
+    "agent.definition.resolved",
+    "agent.started",
+    "model.started",
+    "model.completed",
+    "agent.completed",
+    "artifact.created",
+    "run.completed"
+  ],
+  "reference_verification_after": {
+    "openai-agents-python": {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    "openai-agents-streaming-api": {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    },
+    "openai-cs-agents-demo": {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    "temporal-openai-agents-demos": {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    }
+  },
+  "reference_verification_before": {
+    "openai-agents-python": {
+      "actual_byte_count": 17945765,
+      "actual_file_count": 1419,
+      "actual_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "expected_byte_count": 17945765,
+      "expected_file_count": 1419,
+      "expected_tree_sha256": "65f8e28ed601fe806110d30c683d684faf5e047c411051f3ed89b1b3fcbbba3a",
+      "reference_id": "openai-agents-python",
+      "verified": true
+    },
+    "openai-agents-streaming-api": {
+      "actual_byte_count": 246327,
+      "actual_file_count": 38,
+      "actual_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "expected_byte_count": 246327,
+      "expected_file_count": 38,
+      "expected_tree_sha256": "d9cfce82fea9a94919c8096b3641bceb6f924d84c9d79a34a4e30bcd4f9a94c9",
+      "reference_id": "openai-agents-streaming-api",
+      "verified": true
+    },
+    "openai-cs-agents-demo": {
+      "actual_byte_count": 1409011,
+      "actual_file_count": 43,
+      "actual_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "expected_byte_count": 1409011,
+      "expected_file_count": 43,
+      "expected_tree_sha256": "121f7ffccf30f5eff85ae6b24104b025033a725212cc716acc83ec1c67287c8d",
+      "reference_id": "openai-cs-agents-demo",
+      "verified": true
+    },
+    "temporal-openai-agents-demos": {
+      "actual_byte_count": 774434,
+      "actual_file_count": 36,
+      "actual_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "expected_byte_count": 774434,
+      "expected_file_count": 36,
+      "expected_tree_sha256": "0efa03c5b8f63d1d9a393c8e40f4fe6a80c4db8c3e1a64399885890ff809100a",
+      "reference_id": "temporal-openai-agents-demos",
+      "verified": true
+    }
+  },
+  "run": {
+    "agent_definition_id": "coding-agent",
+    "agent_definition_version": "1.0.0",
+    "attempt": 1,
+    "completed_at": "2026-07-29T03:41:47.366366Z",
+    "created_at": "2026-07-29T03:41:47.341637Z",
+    "input_tokens": 30,
+    "output_tokens": 12,
+    "run_id": "run_580c0115aaa34f48a4f06c5e46796100",
+    "schema_version": "okcanvas-control-run-v1",
+    "started_at": "2026-07-29T03:41:47.347828Z",
+    "status": "SUCCEEDED",
+    "task_id": "task_938beb45246c4947a4c031da25bebe35",
+    "total_tokens": 42,
+    "trace_id": "trace_step008_acceptance"
+  },
+  "schema_version": "okcanvas-step008-acceptance-v1",
+  "sse_after_sequence": 5,
+  "started_at": "2026-07-29T03:41:47.117622Z",
+  "state": "PASSED",
+  "task": {
+    "agent_definition_id": "coding-agent",
+    "agent_definition_version": "1.0.0",
+    "completed_at": "2026-07-29T03:41:47.368833Z",
+    "created_at": "2026-07-29T03:41:47.338202Z",
+    "input_sha256": "c48ebdfefb90f75ee42dfef29d238a7394bd154d041cdec1dc22cf4aa9fb1108",
+    "schema_version": "okcanvas-control-task-v1",
+    "status": "SUCCEEDED",
+    "task_id": "task_938beb45246c4947a4c031da25bebe35",
+    "task_type": "GENERIC_AGENT_EXECUTION",
+    "updated_at": "2026-07-29T03:41:47.368833Z"
+  }
+}

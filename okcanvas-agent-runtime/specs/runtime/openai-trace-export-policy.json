@@ -1,0 +1,9 @@
+{
+  "schema_version": "okcanvas-openai-trace-export-policy-v1",
+  "policy_id": "local-openai-trace-export-disabled-v1",
+  "version": "1.0.0",
+  "sdk_tracing_disabled": true,
+  "provider_trace_export_enabled": false,
+  "trace_include_sensitive_data": false,
+  "persist_local_trace_id": true
+}

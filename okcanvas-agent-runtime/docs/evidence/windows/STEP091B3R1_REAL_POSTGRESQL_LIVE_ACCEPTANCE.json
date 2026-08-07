@@ -1,0 +1,51 @@
+{
+  "checks": {
+    "actual_postgresql_server_connected": true,
+    "all_expected_tables_created": true,
+    "all_postgresql_metadata_stores_share_one_dsn": true,
+    "approval_state_machine_and_resume_fence_live": true,
+    "concurrent_admission_is_idempotent": true,
+    "concurrent_event_sequences_are_contiguous": true,
+    "dsn_not_exposed_in_settings_repr": true,
+    "evaluation_round_trip_live": true,
+    "governed_admission_persisted_ownership": true,
+    "governed_admission_persisted_task_run": true,
+    "governed_admission_rolls_back_atomically": true,
+    "isolated_schema_cleanup_succeeded": true,
+    "isolated_schema_created": true,
+    "postgresql_hybrid_topology_initialized": true,
+    "product_rows_survive_store_restart": true,
+    "session_active_run_row_lock_live": true,
+    "session_history_remains_local_encrypted_sqlite": true,
+    "session_metadata_survives_service_restart": true,
+    "sqlite_default_topology_retained": true
+  },
+  "completed_at": "2026-08-07T03:23:32.909703Z",
+  "failure_code": null,
+  "limitations": {
+    "api_worker_physical_split_implemented": false,
+    "distributed_session_history_implemented": false,
+    "distributed_worker_lease_implemented": false,
+    "isolated_test_schema_only": true,
+    "object_storage_live_server_executed": false,
+    "production_database_migration_executed": false,
+    "real_postgresql_server_executed": true
+  },
+  "passed_checks": 19,
+  "postgresql": {
+    "database_name_sha256": "39949fb73e3c4171756f7cbf90bed99dc11ff833826e925679cd867c2129a682",
+    "database_user_sha256": "4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2",
+    "dsn_sha256": "4699736f14735a985ad9c204f314ef7c3ed2d5c9768a975852de2e2bcce0b781",
+    "expected_table_count": 15,
+    "isolated_schema_name_sha256": "dcaba73a716f1578fcf1dd1a93b10892109da8905ffa28af945be4552a00090c",
+    "observed_table_count": 15,
+    "server_version_num": 180004
+  },
+  "schema_version": "okcanvas-step091b3r1-real-postgresql-live-acceptance-v1",
+  "started_at": "2026-08-07T03:23:26.994715Z",
+  "state": "PASSED",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "total_checks": 19,
+  "validation_mode": "REAL_POSTGRESQL_ISOLATED_SCHEMA_LIVE_GATE",
+  "version": "2.74.1"
+}

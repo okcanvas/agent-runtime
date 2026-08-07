@@ -1,0 +1,17 @@
+{
+  "schema_version": "okcanvas-agent-definition-v1",
+  "agent_id": "agent-tool-manager-agent",
+  "version": "1.0.0",
+  "name": "OKCanvas Agent Tool Manager",
+  "instructions_file": "instructions.md",
+  "output_schema_file": "output.schema.json",
+  "output_contract": "CodingAgentResult",
+  "tools": [],
+  "mcp_servers": [],
+  "handoffs": [],
+  "agent_tools": ["agent-tool-specialist-agent"],
+  "workspace_access": "none",
+  "max_turns": 3,
+  "workflow_name": "OKCanvas Agent-as-Tool V1",
+  "session_mode": "disabled"
+}

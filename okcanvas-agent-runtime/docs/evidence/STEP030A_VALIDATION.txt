@@ -1,0 +1,81 @@
+STEP030A_WINDOWS_VENV_LAUNCHER_FIX
+Status: WINDOWS_LIVE_ACCEPTED
+Version: 2.10.1
+Date: 2026-07-30
+
+Observed Windows failure
+- Command: sh_run_step030_acceptance
+- Failure occurred while importing fastapi.testclient.
+- Exception: ModuleNotFoundError: No module named 'fastapi'.
+- No STEP030 acceptance workspace or Product result was produced.
+
+Code-audited root cause
+- sh_setup.cmd correctly creates .venv and installs the project with .venv\Scripts\python.exe.
+- STEP029 and earlier launchers invoke the project .venv Python.
+- sh_run_step030_acceptance.cmd alone invoked bare PATH `python`.
+- scripts/windows_entrypoint.py then inherited that interpreter through sys.executable.
+- The failure was therefore a launcher regression, not a STEP030 business-contract failure.
+
+Implemented correction
+- sh_run_step030_acceptance.cmd now fails closed when .venv\Scripts\python.exe is absent.
+- It invokes only `.venv\Scripts\python.exe scripts\windows_entrypoint.py commerce-snapshot-non-empty-acceptance`.
+- Added a project-wide test forbidding bare Python in every runtime Windows launcher.
+- Added STEP030A deterministic acceptance with eight exact launcher/dependency/baseline checks.
+- No business model, ingress, payload, Task/Run, Artifact, Evaluation, Tool, MCP, source, or authority behavior changed.
+
+Deterministic acceptance
+- STEP030A acceptance: 8/8 PASS.
+- Runtime Windows launchers inspected: 35.
+- Launcher violations: 0.
+- STEP030 deterministic acceptance remains 15/15 PASS.
+
+Windows closure gate
+Run:
+  sh_setup.cmd
+  sh_run_step030_acceptance.cmd
+
+Accept STEP030 and STEP030A only when the actual STEP030 JSON reports:
+- state=PASSED;
+- all 15 checks=true;
+- HTTP 502 / COMMERCE_SNAPSHOT_INVALID / retryable=false;
+- source.read_count=1;
+- source.write_count=0;
+- all final counts=0;
+- artifact_count=0;
+- protected_payload_file_count=0;
+- gateway_call_count=0;
+- cleanup_state=COMPLETED.
+
+Full regression
+- compileall: PASS.
+- pytest: 360 passed.
+- STEP030A: 8/8 PASS; 35 launchers; 0 violations.
+- STEP030: 15/15 PASS, cleanup COMPLETED.
+- STEP029: 18/18 PASS, cleanup COMPLETED.
+- STEP028: 15/15 PASS, cleanup COMPLETED.
+- STEP027: 24/24 PASS, cleanup COMPLETED.
+- STEP026: 22/22 PASS, cleanup COMPLETED.
+- STEP025: 21/21 PASS, cleanup COMPLETED.
+- STEP024B: 7/7 PASS, cleanup COMPLETED.
+- STEP024: 18/18 PASS, cleanup COMPLETED.
+- STEP020 approve/reject: PASS.
+- STEP023 operator CLI: 15/15 PASS, cleanup COMPLETED.
+- immutable Reference verification: 4/4 PASS.
+- direct /reference imports: 0 violations.
+
+Canonical ZIP extraction validation
+- canonical root: okcanvas-agent-runtime.
+- packaged files: 2,157.
+- forbidden environment, .venv, cache, local DB, and bytecode files: 0.
+- compileall: PASS.
+- pytest: 360 passed.
+- STEP030A: 8/8 PASS.
+- STEP030: 15/15 PASS, cleanup COMPLETED.
+- immutable Reference verification: 4/4 PASS.
+- direct /reference imports: 0 violations.
+
+Windows closure
+- User-reported sh_run_step030a_acceptance result: state PASSED, 8/8 checks.
+- 35 packaged runtime launchers inspected with zero violations.
+- The corrected STEP030 launcher used the project .venv and the subsequent STEP030 Product acceptance passed.
+- Compact Evidence: docs/evidence/STEP030A_WINDOWS_LIVE_ACCEPTANCE_SUMMARY.json.

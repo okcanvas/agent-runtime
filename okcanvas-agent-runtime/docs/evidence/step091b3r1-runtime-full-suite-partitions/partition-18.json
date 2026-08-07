@@ -1,0 +1,41 @@
+{
+  "schema_version": "okcanvas-step091b3r1-runtime-test-partition-v1",
+  "step": "STEP091B3R1_REAL_POSTGRESQL_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-18",
+  "partition_number": 18,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T02:11:10.759356+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 13,
+  "test_count": 72,
+  "passed_tests": 72,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 8.631,
+  "exit_code": 0,
+  "files_sha256": "6e5680bbf67d37f1e81fe7cdd3109cf8e3f2b24f42a7fc83a096ea3d173b7e04",
+  "log_sha256": "73a607e91f205339f96be198666de1f28790574cffa81a356c7d8656cf52b439",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step091b3r1_real_postgresql_live_acceptance_gate.py",
+    "tests/test_step091c_artifact_blob_store_boundary.py",
+    "tests/test_store_replenishment_agent_definition.py",
+    "tests/test_store_replenishment_contract.py",
+    "tests/test_store_replenishment_deterministic_fallback.py",
+    "tests/test_terminal_outcome_reconciliation.py",
+    "tests/test_tool_approval_inbox.py",
+    "tests/test_tui_client_config.py",
+    "tests/test_tui_client_flow.py",
+    "tests/test_tui_client_sse.py",
+    "tests/test_walking_skeleton_catalog.py",
+    "tests/test_windows_entrypoint.py",
+    "tests/test_windows_launcher_project_venv_contract.py"
+  ]
+}

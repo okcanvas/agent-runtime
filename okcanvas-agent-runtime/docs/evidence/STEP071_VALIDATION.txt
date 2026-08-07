@@ -1,0 +1,76 @@
+STEP071_PRODUCT_SKILL_DOCUMENT_REVIEW_LIVE_ACCEPTANCE_V1
+Version: 2.51.0
+Validation state: WINDOWS_LIVE_ACCEPTED
+
+Predecessor closure
+- STEP070 user-reported Windows acceptance: 30/30 PASS
+- STEP070 Skill package SHA-256 retained: 60fbfca861141837d4486499687fde4257b83bcb68362b6b0a0b6f40b8df07b5
+- STEP070 Skill Runtime SHA-256 retained: c6d3fd17b4be4064343d0fe928e6b3e6c06332811afe8bead12936d4bef716d8
+
+STEP071 scope
+- Existing document-review-v1 1.0.0 package and skill-document-review-agent binding remain unchanged.
+- Added a real-provider Windows live harness over authenticated /v1/service APIs.
+- The harness uses attachment upload, governed preflight, exact confirmation, Run polling, persisted Events and verified Artifacts.
+- The current local-attachment model policy requires exactly gpt-4.1.
+- The review request does not disclose the fixture reference, amount, due date, decision or unresolved approver text.
+- Exact provider HTTP request count is not claimed; persisted model.started/model.completed Events are the authoritative model-invocation evidence.
+- .env.local is parsed as data and is never executed.
+- API Key, raw attachment and live evidence are excluded from the source package.
+
+Deterministic validation
+- STEP071 acceptance: 28/28 PASS
+- Focused STEP071 plus retained STEP070 tests: 16/16 PASS
+- Historical attachment/service/catalog tests inside acceptance: 36/36 PASS
+- Full Python regression split: 168 + 128 + 167 + 137 + 136 = 736/736 PASS
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- npm pack dry-run: 23 files PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0 PASS
+- Deterministic external network calls: 0
+- Deterministic model calls: 0
+
+Packaging safety
+- Canonical archive root must be exactly okcanvas-agent-runtime.
+- .env.local, .env.local.cmd, caches, virtual environments, node_modules, runtime state and docs/evidence/step071-live are excluded.
+- Candidate and final fresh-extraction results are appended below after execution.
+
+Windows live gate
+- Required command order: sh_run_step071_acceptance.cmd, then sh_run_step071_live_acceptance.cmd.
+- Required environment: OPENAI_API_KEY present and OKCANVAS_AGENT_MODEL=gpt-4.1.
+- Actual OpenAI response, token usage, output quality and Windows cleanup remain unverified until the complete Windows live JSON is reported.
+- STEP072 remains unselected.
+
+Candidate ZIP independent extraction validation
+- Candidate SHA-256: 1bfef0ac0b030aeb483ede3c0bdbe7446ccf50fb99f2f7c5033bafa46d20a26e
+- Canonical ZIP root: 1
+- ZIP entries: 2,951
+- Forbidden files: 0
+- STEP071 acceptance: 28/28 PASS
+- Focused STEP071 plus retained STEP070 tests: 16/16 PASS
+- Historical attachment/service/catalog tests: 36/36 PASS
+- Full Python regression split: 168 + 128 + 167 + 137 + 136 = 736/736 PASS
+- Python compileall: PASS
+- Committed TypeScript release integrity: PASS
+- Node tests: 14/14 PASS
+- Reference integrity: 4/4 PASS
+- Direct /reference imports: 0 PASS
+
+Windows live closure
+- sh_run_step071_acceptance: 28/28 PASS
+- sh_run_step071_live_acceptance: 28/28 PASS
+- Model: gpt-4.1
+- Model calls: 1
+- Usage: 827 input + 318 output = 1,145 total tokens
+- Terminal status: SUCCEEDED
+- Exact reference, amount, due date and NOT YET APPROVED observed
+- Illegible approver retained in unverified
+- Instruction-looking PDF text treated as untrusted
+- Undeclared capability Events: 0
+- API Key persisted: false
+- Raw PDF persisted: false
+- Successful payload deleted: true
+- Workspace cleanup: COMPLETED
+- References unchanged
+- Trailing non-fatal SDK tracing HTTP 400 observed after success

@@ -1,0 +1,5 @@
+{
+  "snapshot_id": "case006-invalid-empty-items",
+  "safety_stock_units": 2,
+  "items": []
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "okcanvas-step091d-runtime-test-partition-v1",
+  "step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+  "partition_id": "part-15",
+  "partition_number": 15,
+  "partition_count": 18,
+  "state": "PASSED",
+  "completed_at": "2026-08-07T04:35:32.539591+00:00",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "<partition-files>"
+  ],
+  "file_count": 14,
+  "test_count": 68,
+  "passed_tests": 68,
+  "skipped_tests": 0,
+  "failed_tests": 0,
+  "duration_seconds": 27.306,
+  "exit_code": 0,
+  "files_sha256": "90e6a45301473968a2dfa5e3610933b88c77b05ca09739425c4012744c216b98",
+  "log_sha256": "34e3c2e69f812b649442f558d30012b42d7847ac93e59bf337904c8078bb8c85",
+  "raw_provider_output_persisted": false,
+  "files": [
+    "tests/test_step075b_windows_docker_command_operation_evidence.py",
+    "tests/test_step075c_windows_tmpfs_tar_stream_materialization_fix.py",
+    "tests/test_step075d_python_subprocess_stdin_input_contract_fix.py",
+    "tests/test_step075e_internal_snapshot_metadata_exclusion_and_hash_domain_fix.py",
+    "tests/test_step075f_sandbox_answer_completeness_and_bounded_repair.py",
+    "tests/test_step075g_product_owned_deterministic_evidence_completion.py",
+    "tests/test_step076_product_owned_immutable_project_snapshot_binding.py",
+    "tests/test_step077_product_owned_binary_ingress_slot_lifecycle.py",
+    "tests/test_step078_product_owned_atomic_service_submission_ownership_transfer.py",
+    "tests/test_step079_product_owned_atomic_task_run_ownership_transfer.py",
+    "tests/test_step079a_windows_entrypoint_command_registration.py",
+    "tests/test_step080_product_owned_capability_topology_and_tool_discovery_foundation.py",
+    "tests/test_step080_windows_entrypoint_capability_topology_registration.py",
+    "tests/test_step080a_acceptance_launcher_registry.py"
+  ]
+}

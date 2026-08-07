@@ -1,0 +1,52 @@
+{
+  "actual_process_boundaries": [
+    "Product CLI Node process",
+    "Runtime HTTP/SSE ASGI server",
+    "Groupware Connector MCP HTTP ASGI server",
+    "Groupware API Fake Node REST process"
+  ],
+  "checks": {
+    "cli_rendered_groupware_and_follow_up_answers": true,
+    "connector_example_rest_reached": true,
+    "delegated_identity_forwarded_to_example": true,
+    "delegated_identity_scoped_only_to_groupware_turn": true,
+    "enterprise_citation_persisted": true,
+    "external_and_connector_secrets_not_exposed": true,
+    "groupware_api_bearer_redacted_by_example": true,
+    "groupware_subagent_selected_only_first_turn": true,
+    "main_assistant_session_owned_both_turns": true,
+    "persisted_sse_and_terminal_artifacts_observed": true,
+    "product_cli_completed_two_prompts": true,
+    "root_session_continuity_committed": true,
+    "runtime_connector_mcp_http_crossed": true,
+    "stateless_child_not_reused_for_continuation": true
+  },
+  "evidence_command_bearer_redacted": true,
+  "limitations": {
+    "deterministic_openai_agents_boundary_used": true,
+    "live_openai_model_called": false,
+    "real_enterprise_groupware_provider_called": false,
+    "windows_step003_executed": false
+  },
+  "mutable_source_evidence_path": "docs/evidence/WORKSPACE_STEP003_MAIN_ASSISTANT_GROUPWARE_E2E.json",
+  "mutable_source_evidence_sha256": "d4cd8d50fe0aa0797afaf80cf4b18ca5d13cb987a6dbaa1d34e659f720edcb81",
+  "packaging_note": "The mutable detailed process evidence is excluded from deterministic ZIP identity; this immutable candidate summary is included.",
+  "passed_checks": 14,
+  "retained_boundaries": {
+    "cli": "CLI_STEP001R1_WINDOWS_NODE_TEST_RUNNER_PATH_SPACE_CLOSURE",
+    "connector": "CONNECTOR_STEP001R1_ASYNC_TEST_RUNNER_DEPENDENCY_CLOSURE",
+    "example": "EXAMPLE_STEP001R1_TYPESCRIPT_BUILD_DEPENDENCY_CLOSURE",
+    "runtime": "STEP087_MAIN_ASSISTANT_SESSION_STATELESS_GROUPWARE_SUBAGENT_DELEGATION"
+  },
+  "schema_version": "okcanvas-agent-platform-workspace-step003-immutable-e2e-summary-v1",
+  "session_continuity": {
+    "general_continuation_child_calls": 0,
+    "groupware_child_calls": 1,
+    "item_count": 4,
+    "turn_count": 2
+  },
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP003_MAIN_ASSISTANT_SESSION_STATELESS_GROUPWARE_SUBAGENT_E2E",
+  "total_checks": 14,
+  "version": "0.3.0"
+}

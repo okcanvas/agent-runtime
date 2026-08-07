@@ -1,0 +1,19 @@
+{
+  "schema_version": "okcanvas-step063-windows-symlink-test-skip-failure-v1",
+  "step": "STEP063_STRICT_ENCRYPTED_SQLITE_SESSION_HISTORY_V1",
+  "version": "2.43.0",
+  "state": "FAILED",
+  "passed_checks": 32,
+  "total_checks": 33,
+  "failed_checks": [
+    "focused_strict_encryption_tests_pass"
+  ],
+  "focused_test_output": "52 passed, 1 skipped, 1 warning in 5.57s",
+  "confirmed_skip_source": "tests/test_sqlite_session_runtime.py::test_session_database_symlink_is_rejected",
+  "confirmed_skip_reason": "Symlink creation is unavailable",
+  "runtime_checks_passed": true,
+  "historical_session_acceptances_passed": true,
+  "node_release_integrity_passed": true,
+  "node_tests_passed": true,
+  "diagnosis": "The test required the host OS to create a real symbolic link and skipped when Windows did not grant that capability. The STEP063 acceptance required the exact text '53 passed', so an environment-dependent skip was incorrectly treated as a product failure."
+}

@@ -1,0 +1,45 @@
+STEP044_NATIVE_GUARDRAIL_RUNTIME_V1 validation
+
+State: IMPLEMENTED_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Version: 2.24.0
+
+Source validation:
+- compileall PASS
+- full pytest 458 passed in six isolated batches: 83 + 91 + 82 + 67 + 60 + 75
+- STEP044 23/23 PASS
+- STEP043 29/29 PASS
+- STEP042 29/29 PASS
+- STEP041 24/24 PASS
+- STEP040 23/23 PASS
+- STEP039 20/20 PASS
+- STEP038 24/24 PASS
+- STEP037 24/24 PASS
+- STEP036 18/18 PASS
+- STEP020 approve/reject PASS
+- STEP023 Approval Operator 15/15 PASS
+- STEP030A 8/8 PASS across 49 Windows Runtime launchers; violations 0
+- Reference integrity 4/4 PASS
+- direct executable /reference imports 0
+
+STEP044 deterministic acceptance:
+- Runner.run_streamed=5; Runner.run=0; model calls=4
+- Tool executions: input tripwire target=0, output tripwire target=1
+- exact Product tripwire codes for INPUT/OUTPUT/TOOL_INPUT/TOOL_OUTPUT
+- final Task/Run/Submission/Invocation/Event/Artifact/Evaluation=5/5/5/5/48/1/1
+- clean Artifact verified; clean recorded Evaluation PASSED
+- four rejected Runs created no Artifact
+- successful protected payload deleted; four failed payloads retained
+- References unchanged; cleanup COMPLETED
+
+Initial Canonical ZIP extraction verification:
+- one canonical root
+- 2,407 entries
+- zero forbidden real environment/venv/cache/local-state/database/protected-payload files
+- separately extracted copy reproduced all 458 tests in six batches: 83 + 91 + 82 + 67 + 60 + 75
+- extracted STEP044 23/23 PASS
+- extracted STEP043 29/29 PASS
+- extracted STEP030A 8/8 across 49 Windows Runtime launchers; violations 0
+- extracted Reference integrity 4/4 PASS
+- extracted direct executable /reference imports 0
+
+Final package bytes are generated after this document update. The adjacent `.zip.sha256` file is authoritative; the SHA-final ZIP must be independently extracted and revalidated before user handoff.

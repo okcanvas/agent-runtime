@@ -1,0 +1,68 @@
+{
+  "schema_version": "okcanvas-step039-acceptance-v1",
+  "state": "PASSED",
+  "checks": {
+    "native_sdk_runner_used_once": true,
+    "run_completed_without_stream_subscriber": true,
+    "native_stream_auth_required": true,
+    "native_stream_endpoint_returned_200": true,
+    "native_stream_marked_ephemeral": true,
+    "native_stream_event_sequence_exact": true,
+    "text_deltas_assembled_exact": true,
+    "agent_update_exposed": true,
+    "run_item_metadata_exposed": true,
+    "raw_tool_arguments_not_streamed": true,
+    "native_events_not_persisted": true,
+    "text_delta_not_persisted": true,
+    "canonical_events_preserved": true,
+    "artifact_verified": true,
+    "product_counts_exact": true,
+    "successful_payload_deleted": true,
+    "raw_request_not_in_product_db": true,
+    "api_key_not_in_product_db": true,
+    "references_unchanged": true,
+    "cleanup_completed": true
+  },
+  "run_id": "run_f17456e86fa04b9080ecbedd97c3f7f1",
+  "submission_id": "submission_108735b2828b4872b585f1f5d3a168df",
+  "gateway_counts": {
+    "run": 0,
+    "run_streamed": 1
+  },
+  "native_stream": {
+    "event_count": 6,
+    "event_types": [
+      "sdk.stream.started",
+      "agent.updated",
+      "model.text.delta",
+      "run.item",
+      "model.text.delta",
+      "sdk.stream.completed"
+    ],
+    "assembled_text": "Native stream",
+    "durability": "ephemeral"
+  },
+  "persisted_event_count": 10,
+  "final_counts": {
+    "tasks": 1,
+    "runs": 1,
+    "submissions": 1,
+    "artifacts": 1
+  },
+  "artifact_id": "artifact_5bfed6c93b6f4bbc8cbf7973a7dc52a8",
+  "acceptance_workspace": {
+    "schema_version": "okcanvas-acceptance-workspace-lifecycle-v1",
+    "acceptance_id": "20260731T125722406290Z-1853d4eb",
+    "step_id": "STEP039",
+    "created_at": "2026-07-31T12:57:22.406581Z",
+    "completed_at": "2026-07-31T12:57:23.132580Z",
+    "resources_closed": true,
+    "resource_close_results": [],
+    "compact_evidence_exported": true,
+    "cleanup_state": "COMPLETED",
+    "cleanup_attempts": 1,
+    "preserved_path": null,
+    "cleanup_error": null,
+    "product_runtime_state": false
+  }
+}

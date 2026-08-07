@@ -1,0 +1,48 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "summary": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "inspected_files": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Inspected Files",
+      "type": "array"
+    },
+    "modified_files": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "title": "Modified Files",
+      "type": "array"
+    },
+    "commands_observed": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Commands Observed",
+      "type": "array"
+    },
+    "unverified": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100,
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "summary"
+  ],
+  "title": "CodexWriteResult",
+  "type": "object"
+}

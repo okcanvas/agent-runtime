@@ -1,0 +1,32 @@
+{
+  "agent_id": "organization-context-read-agent",
+  "capability_id": "organization-context-read-v1",
+  "max_results": 50,
+  "operations": [
+    {
+      "description": "Resolve organization terms and reference entities with tenant, principal, role, and organization-unit context.",
+      "operation_id": "resolve-context",
+      "tool_name": "resolve_organization_context"
+    },
+    {
+      "description": "Search visible organization terms, departments, positions, employees, products, clients, projects, systems, and capabilities.",
+      "operation_id": "search-context",
+      "tool_name": "search_organization_context"
+    },
+    {
+      "description": "Read one visible organization reference entity and its normalized relationships by stable entity ID.",
+      "operation_id": "get-entity",
+      "tool_name": "get_organization_entity"
+    }
+  ],
+  "policy_id": "organization-context-read-v1",
+  "production_sot": "DATABASE",
+  "required_roles": [
+    "agent-user"
+  ],
+  "root_agent_id": "organization-context-session-agent",
+  "schema_version": "okcanvas-organization-context-read-policy-v1",
+  "server_id": "organization-context-read",
+  "version": "1.0.0",
+  "write_enabled": false
+}

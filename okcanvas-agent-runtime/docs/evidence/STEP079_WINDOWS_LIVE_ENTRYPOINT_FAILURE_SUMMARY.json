@@ -1,0 +1,19 @@
+{
+  "api_key_persisted": false,
+  "command_dispatch_branch_present": true,
+  "command_parser_choice_present": false,
+  "docker_calls": 0,
+  "exact_error_class": "argparse-invalid-choice",
+  "exact_failed_command": "atomic-task-run-ownership-transfer-live-acceptance",
+  "exit_code": 2,
+  "launcher": "sh_run_step079_live_acceptance.cmd",
+  "model_calls": 0,
+  "observed_on": "2026-08-02",
+  "platform": "Windows",
+  "root_cause": "scripts/windows_entrypoint.py implemented the command dispatch branch but omitted the command from argparse choices, so parsing failed before dispatch.",
+  "schema_version": "okcanvas-step079-windows-live-launcher-failure-summary-v1",
+  "state": "FAILED_BEFORE_LIVE_ACCEPTANCE",
+  "step": "STEP079_PRODUCT_OWNED_ATOMIC_TASK_RUN_OWNERSHIP_TRANSFER",
+  "tool_calls": 0,
+  "version": "2.59.0"
+}
