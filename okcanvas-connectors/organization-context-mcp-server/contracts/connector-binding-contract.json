@@ -4,6 +4,12 @@
   "example_project_path": "okcanvas-connector-examples/organization-context/organization-context-api-fake",
   "example_source_of_truth": "COMMITTED_JSON_FIXTURES",
   "fake_mode_allowed": false,
+  "get_entity_relation_completeness_fields": [
+    "relation_count",
+    "relations_returned_count",
+    "relations_truncated"
+  ],
+  "get_entity_relation_completeness_required": true,
   "production_source_of_truth": "DATABASE",
   "read_only": true,
   "required_role": "agent-user",

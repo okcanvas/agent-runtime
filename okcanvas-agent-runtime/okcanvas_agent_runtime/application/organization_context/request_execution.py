@@ -8,6 +8,7 @@ _ROUTING_SEPARATOR = "\n\nUSER REQUEST:\n"
 _ALLOWED_PREFERRED_OPERATIONS = {
     "RESOLVE": "resolve_organization_context",
     "SEARCH": "search_organization_context",
+    "GET": "get_organization_entity",
 }
 
 
@@ -32,8 +33,8 @@ def organization_context_request_hint(request: str) -> dict[str, Any]:
 def organization_context_named_tool_choice(request: str) -> str | None:
     """Resolve a product-owned named Tool choice from an admitted short request.
 
-    Only the two operations emitted by the immutable short-expression routing
-    contract are accepted. Unknown or missing values fail closed to the existing
+    Only the operations emitted by the immutable short-expression or Session-context
+    routing contracts are accepted. Unknown or missing values fail closed to the existing
     required-tool policy rather than guessing a Tool.
     """
 

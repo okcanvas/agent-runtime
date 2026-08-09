@@ -216,7 +216,7 @@ def test_service_capability_contract_exposes_extension_foundation(tmp_path: Path
         assert response.status_code == 200, response.text
         payload = response.json()
     foundation = CapabilityFoundationCatalog(ROOT).resolve()
-    assert payload["runtime_version"] == "2.75.0"
+    assert payload["runtime_version"] == "2.77.0"
     assert payload["capability_topology_available"] is True
     assert payload["capability_foundation_schema"] == foundation.schema_version
     assert payload["capability_topology_schema"] == "okcanvas-agent-capability-topology-v1"

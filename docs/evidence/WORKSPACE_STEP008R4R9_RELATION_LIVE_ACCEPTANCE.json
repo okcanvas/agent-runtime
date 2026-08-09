@@ -1,0 +1,378 @@
+{
+  "checks": {
+    "actual_connector_example_paths_exact": true,
+    "all_runtime_runs_succeeded": true,
+    "connector_authorization_redacted": true,
+    "dedicated_organization_context_session_created": true,
+    "employee_relation_projects_three_products": true,
+    "environment_file_loaded": true,
+    "exactly_three_runtime_runs_created": true,
+    "expected_mcp_tool_sequence_observed": true,
+    "explicit_relation_live_gate": true,
+    "harness_cleanup_completed": true,
+    "harness_execution_completed_without_exception": true,
+    "model_loaded_from_environment_file": true,
+    "model_name_safe": true,
+    "openai_key_loaded_from_environment_file": true,
+    "ordinal_product_relation_projects_two_clients": true,
+    "relation_projection_focus_chain_exact": true,
+    "secrets_absent_from_evidence": true,
+    "three_cli_turns_completed": true,
+    "three_routes_resolved_sequentially_after_prior_turn_commit": true
+  },
+  "cleanup": {
+    "cleanup_error_types": [],
+    "completed": true,
+    "transient_removal_error_types": []
+  },
+  "cli_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:61091",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_53524262d56d4d61b398673d38d2472f",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step093-relation-live-sfy300ds\\prompt-1.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "case_id": "employee-managed-products",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:61091",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_53524262d56d4d61b398673d38d2472f",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step093-relation-live-sfy300ds\\prompt-2.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "case_id": "ordinal-product-clients",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:61091",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_53524262d56d4d61b398673d38d2472f",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step093-relation-live-sfy300ds\\prompt-3.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "completed_at": "2026-08-08T04:12:50.808290Z",
+  "connector_example": {
+    "captured_paths": [
+      "/api/v1/context/resolve",
+      "/api/v1/context/entities/EMPLOYEE/employee-0017",
+      "/api/v1/context/entities/PRODUCT/product-016"
+    ],
+    "request_count": 3
+  },
+  "environment": {
+    "loaded_key_names": [
+      "OKCANVAS_AGENT_MODEL",
+      "OKCANVAS_API_HOST",
+      "OKCANVAS_API_PORT",
+      "OKCANVAS_ARTIFACT_ROOT",
+      "OKCANVAS_CODEX_MODEL",
+      "OKCANVAS_CONTROL_ADMIN_KEY",
+      "OKCANVAS_CONTROL_BASE_URL",
+      "OKCANVAS_DEFAULT_AGENT_ID",
+      "OKCANVAS_DIRECT_RUN_API_ENABLED",
+      "OKCANVAS_EVALUATION_DB",
+      "OKCANVAS_PRODUCT_DB",
+      "OKCANVAS_PROJECT_ROOT",
+      "OKCANVAS_PROTECTED_PAYLOAD_KEY",
+      "OKCANVAS_PROTECTED_PAYLOAD_ROOT",
+      "OKCANVAS_READONLY_WORKSPACE_ROOT",
+      "OKCANVAS_RUN_STATE_ROOT",
+      "OKCANVAS_RUN_SUBMITTER_KEY",
+      "OKCANVAS_SANDBOX_READONLY_IMAGE",
+      "OKCANVAS_SANDBOX_TEMP_ROOT",
+      "OKCANVAS_SESSION_HISTORY_KEY",
+      "OKCANVAS_SESSION_ROOT",
+      "OPENAI_API_KEY"
+    ],
+    "model": "gpt-4.1",
+    "openai_api_key_present": true,
+    "secret_values_persisted": false,
+    "source_name": ".env.local"
+  },
+  "limitations": {
+    "object_storage_live_executed": false,
+    "production_database_executed": false,
+    "real_enterprise_organization_context_called": false
+  },
+  "passed_checks": 19,
+  "route_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "exact": true,
+      "matched_rule_id": "organization-context-short-read-session-stateless-subagent-v1",
+      "request_hint": {
+        "entity_type_hints": [],
+        "intent": "ENTITY_FIELD_LOOKUP",
+        "pattern_id": "organization-context-contact-field-short-v1",
+        "preferred_operation": "RESOLVE",
+        "relation_traversal": null,
+        "requested_fields": [
+          "CONTACT"
+        ],
+        "schema_version": "okcanvas-organization-context-request-hint-v1",
+        "target_expression": "김선임"
+      },
+      "status": "EXECUTABLE"
+    },
+    {
+      "case_id": "employee-managed-products",
+      "exact": true,
+      "matched_rule_id": "organization-context-short-read-session-stateless-subagent-v1",
+      "request_hint": {
+        "entity_type_hints": [
+          "EMPLOYEE"
+        ],
+        "intent": "RELATION_LOOKUP",
+        "pattern_id": "session-context-relation:employee-managed-products-v1",
+        "preferred_operation": "GET",
+        "relation_traversal": {
+          "direction": "OUTBOUND",
+          "max_results": 20,
+          "relation_type": "EMPLOYEE_MANAGES_PRODUCT",
+          "result_entity_types": [
+            "PRODUCT"
+          ],
+          "schema_version": "okcanvas-organization-context-relation-traversal-hint-v1",
+          "source_entity_id": "employee-0017",
+          "source_entity_type": "EMPLOYEE"
+        },
+        "requested_fields": [
+          "RELATION"
+        ],
+        "schema_version": "okcanvas-organization-context-request-hint-v1",
+        "target_expression": "employee-0017"
+      },
+      "status": "EXECUTABLE"
+    },
+    {
+      "case_id": "ordinal-product-clients",
+      "exact": true,
+      "matched_rule_id": "organization-context-short-read-session-stateless-subagent-v1",
+      "request_hint": {
+        "entity_type_hints": [
+          "PRODUCT"
+        ],
+        "intent": "RELATION_LOOKUP",
+        "pattern_id": "session-context-relation:product-client-users-v1",
+        "preferred_operation": "GET",
+        "relation_traversal": {
+          "direction": "INBOUND",
+          "max_results": 20,
+          "relation_type": "CLIENT_USES_PRODUCT",
+          "result_entity_types": [
+            "CLIENT"
+          ],
+          "schema_version": "okcanvas-organization-context-relation-traversal-hint-v1",
+          "source_entity_id": "product-016",
+          "source_entity_type": "PRODUCT"
+        },
+        "requested_fields": [
+          "RELATION"
+        ],
+        "schema_version": "okcanvas-organization-context-request-hint-v1",
+        "target_expression": "product-016"
+      },
+      "status": "EXECUTABLE"
+    }
+  ],
+  "run_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "normalization": {
+        "agent_id": "organization-context-read-agent",
+        "ambiguous": false,
+        "candidate_count": 1,
+        "clarification_applied": false,
+        "invocation_id": "invocation_c074f16018034bfb87eec73eb7da13f4",
+        "model_calls_added": 0,
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-mcp-evidence-normalization-v1",
+        "output_contract": "OrganizationContextReadResult",
+        "requested_field_count": 1,
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "employee-0017",
+              "entity_type": "EMPLOYEE",
+              "label": "김민수",
+              "qualifiers": [
+                "플랫폼개발팀",
+                "선임"
+              ]
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "RESOLVED"
+        },
+        "strategy": "tool-evidence-provenance-alignment-v1",
+        "tool_name": "resolve_organization_context",
+        "tool_reexecuted": false,
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_fc6275df6e614ec7a1cf1628918156aa",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "resolve_organization_context"
+      ]
+    },
+    {
+      "case_id": "employee-managed-products",
+      "normalization": {
+        "agent_id": "organization-context-read-agent",
+        "ambiguous": false,
+        "candidate_count": 3,
+        "clarification_applied": false,
+        "invocation_id": "invocation_1191f908b777404798d2d43d556ceff9",
+        "model_calls_added": 0,
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-mcp-evidence-normalization-v1",
+        "output_contract": "OrganizationContextReadResult",
+        "relation_direction": "OUTBOUND",
+        "relation_projected_count": 3,
+        "relation_source_entity_id": "employee-0017",
+        "relation_type": "EMPLOYEE_MANAGES_PRODUCT",
+        "requested_field_count": 1,
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "product-016",
+              "entity_type": "PRODUCT",
+              "label": "OpenRill 제품 016",
+              "qualifiers": []
+            },
+            {
+              "entity_id": "product-064",
+              "entity_type": "PRODUCT",
+              "label": "OpenRill 제품 064",
+              "qualifiers": []
+            },
+            {
+              "entity_id": "product-112",
+              "entity_type": "PRODUCT",
+              "label": "OpenRill 제품 112",
+              "qualifiers": []
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "MULTIPLE"
+        },
+        "strategy": "tool-evidence-relation-projection-v1",
+        "tool_name": "get_organization_entity",
+        "tool_reexecuted": false,
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_2441407b66a242b18c9ec54cd0d72c79",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "get_organization_entity"
+      ]
+    },
+    {
+      "case_id": "ordinal-product-clients",
+      "normalization": {
+        "agent_id": "organization-context-read-agent",
+        "ambiguous": false,
+        "candidate_count": 2,
+        "clarification_applied": false,
+        "invocation_id": "invocation_e385b5cdfeb8470b8c6268929b2de46b",
+        "model_calls_added": 0,
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-mcp-evidence-normalization-v1",
+        "output_contract": "OrganizationContextReadResult",
+        "relation_direction": "INBOUND",
+        "relation_projected_count": 2,
+        "relation_source_entity_id": "product-016",
+        "relation_type": "CLIENT_USES_PRODUCT",
+        "requested_field_count": 1,
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "client-0015",
+              "entity_type": "CLIENT",
+              "label": "미래리테일015",
+              "qualifiers": []
+            },
+            {
+              "entity_id": "client-0118",
+              "entity_type": "CLIENT",
+              "label": "푸른서비스118",
+              "qualifiers": []
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "MULTIPLE"
+        },
+        "strategy": "tool-evidence-relation-projection-v1",
+        "tool_name": "get_organization_entity",
+        "tool_reexecuted": false,
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_bd213c04d2df4ad8a67cefa71acf904a",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "get_organization_entity"
+      ]
+    }
+  ],
+  "runtime_step": "STEP093R1_RELATION_ROUTE_PROTOCOL_AND_LIVE_FALSE_POSITIVE_CLOSURE",
+  "runtime_version": "2.77.1",
+  "schema_version": "okcanvas-workspace-step008r4r9-relation-live-acceptance-v1",
+  "started_at": "2026-08-08T04:11:25.407138Z",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP008R4R9B_RUNTIME_STEP093R1_RELATION_ROUTE_PROTOCOL_AND_LIVE_FALSE_POSITIVE_CLOSURE",
+  "total_checks": 19,
+  "validation_mode": "WINDOWS_LIVE_OPENAI_ORGANIZATION_CONTEXT_RELATION_CHAIN_E2E",
+  "version": "0.8.4-r9b"
+}

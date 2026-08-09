@@ -140,8 +140,8 @@ class WorkspaceStructureTest(unittest.TestCase):
         self.assertEqual(catalog["workspace_step"], current["workspace_step"])
         self.assertEqual(catalog["workspace_version"], current["workspace_version"])
         runtime = next(item for item in catalog["projects"] if item["project_id"] == "agent-runtime")
-        self.assertEqual(runtime["baseline"], "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE")
-        self.assertEqual(runtime["version"], "2.75.0")
+        self.assertEqual(runtime["baseline"], current["runtime_step"])
+        self.assertEqual(runtime["version"], current["runtime_version"])
         contracts = {item["id"]: item for item in read_json(ROOT / "specs/workspace/integration-contracts.json")["contracts"]}
         self.assertTrue(contracts["service-cli-runtime"]["implemented"])
         delegation = contracts["runtime-main-assistant-groupware-subagent"]
@@ -152,9 +152,9 @@ class WorkspaceStructureTest(unittest.TestCase):
         self.assertEqual(delegation["child_session"], "NONE")
         self.assertFalse(delegation["write_enabled"])
         organization_connector = next(item for item in catalog["projects"] if item["project_id"] == "organization-context-mcp-connector")
-        self.assertEqual(organization_connector["version"], "0.2.2")
+        self.assertEqual(organization_connector["version"], "0.3.0")
         organization_example = next(item for item in catalog["projects"] if item["project_id"] == "organization-context-api-fake-example")
-        self.assertEqual(organization_example["version"], "0.2.2")
+        self.assertEqual(organization_example["version"], "0.3.0")
         self.assertFalse(organization_example["production"])
         self.assertTrue(contracts["runtime-organization-context-connector"]["implemented"])
         self.assertTrue(contracts["connector-organization-context-api"]["implemented"])

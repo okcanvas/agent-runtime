@@ -1,0 +1,19 @@
+{
+  "next_agent_native_step": "RUN_R12R2_STEP096BR1_WINDOWS_LIVE_RERUN",
+  "parent_package_sha256": "65fa8e11820b68208a363f179c3bf1663bf8eed8b2360f220aa26ec47f26ab03",
+  "parent_workspace_step": "WORKSPACE_STEP008R4R12R1_STEP096B_GROUNDED_STRUCTURED_DELEGATION_LIVE_ACCEPTANCE_HARNESS",
+  "parent_workspace_version": "0.8.4-r12r1",
+  "promotion": "CANDIDATE_FOCUSED_WINDOWS_LIVE_RERUN_PENDING",
+  "r12r1_windows_live": "ABORTED_AT_EVIDENCE_PERSISTENCE_FUNCTIONAL_RESULT_UNKNOWN",
+  "r12r2_preflight": "EXPECTED_FAIL_CLOSED_NO_LOCAL_LIVE_ENV_6_OF_11",
+  "r12r2_redaction_correction": "SERIALIZE_PAYLOAD_BEFORE_STRING_REDACTION",
+  "redaction_regression": "NESTED_DICT_LIST_JSON_PARSEABLE_SECRET_REDACTED",
+  "runtime_product_source_changed": false,
+  "runtime_step": "STEP096B_GROUNDED_LLM_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+  "runtime_version": "2.80.0",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "LIVE_HARNESS_REDACTION_CORRECTED_RERUN_PENDING",
+  "step096br1_windows_live": "RERUN_NOT_RUN",
+  "workspace_step": "WORKSPACE_STEP008R4R12R2_STEP096B_LIVE_HARNESS_EVIDENCE_REDACTION_SERIALIZATION_CLOSURE",
+  "workspace_version": "0.8.4-r12r2"
+}

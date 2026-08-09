@@ -140,9 +140,12 @@ test("preserves similar-client ambiguity and resolves a stable client code", asy
 test("returns one entity with resolved relationship summaries", async () => {
   await withServer(async (baseUrl) => {
     const payload = await (await fetch(`${baseUrl}/api/v1/context/entities/CLIENT/client-0042`, { headers: headers() })).json() as {
-      record: { entity_id: string; relations: Array<{ relation_type: string; related_entity: { display_name: string } | null }> };
+      record: { entity_id: string; relation_count: number; relations_returned_count: number; relations_truncated: boolean; relations: Array<{ relation_type: string; related_entity: { display_name: string } | null }> };
     };
     assert.equal(payload.record.entity_id, "client-0042");
+    assert.equal(payload.record.relation_count, payload.record.relations_returned_count);
+    assert.equal(payload.record.relations_returned_count, payload.record.relations.length);
+    assert.equal(payload.record.relations_truncated, false);
     assert.ok(payload.record.relations.some((item) => item.relation_type === "EMPLOYEE_MANAGES_CLIENT" && Boolean(item.related_entity?.display_name)));
     assert.ok(payload.record.relations.some((item) => item.relation_type === "CLIENT_USES_PRODUCT" && Boolean(item.related_entity?.display_name)));
   });

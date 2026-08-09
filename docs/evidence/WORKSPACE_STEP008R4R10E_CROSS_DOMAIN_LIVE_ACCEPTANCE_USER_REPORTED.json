@@ -1,0 +1,77 @@
+{
+  "code_level_interpretation": {
+    "cleanup_gate_included": true,
+    "functional_cross_domain_gate_included": true,
+    "harness_schema_version": "okcanvas-workspace-step008r4r10-cross-domain-live-acceptance-v2",
+    "harness_sha256": "a1953c4a66612c9331b63b523ae2efc178669a5694cc558252b00eff90fd7e9c",
+    "implied_true_checks": [
+      "explicit_cross_domain_live_gate",
+      "environment_file_loaded",
+      "openai_key_loaded_from_environment_file",
+      "model_loaded_from_environment_file",
+      "model_name_safe",
+      "workspace_catalog_identity_matches_current_baseline",
+      "workspace_runtime_identity_matches_project_catalog",
+      "workspace_runtime_identity_matches_executable_runtime",
+      "workspace_runtime_version_matches_runtime_package_metadata",
+      "runtime_service_version_matches_workspace_baseline",
+      "harness_execution_completed_without_exception",
+      "dedicated_session_created",
+      "three_routes_resolved_after_prior_turn_commit",
+      "three_cli_turns_completed",
+      "exactly_three_runtime_runs_created",
+      "all_runtime_runs_succeeded",
+      "expected_mcp_tool_sequence_observed",
+      "focus_is_preserved_across_groupware_turns_only_after_evidence",
+      "organization_connector_called_once",
+      "groupware_paths_exact",
+      "groupware_context_ref_and_canonical_arguments_exact",
+      "groupware_authorization_redacted",
+      "secrets_absent_from_evidence",
+      "harness_cleanup_completed"
+    ],
+    "provenance_gate_included": true,
+    "terminal_count_rule": "passed_checks is the count of boolean true values in the final checks map; total_checks is the final checks-map size",
+    "terminal_state_rule": "PASSED only when prior state is PASSED and every final check is true"
+  },
+  "evidence_kind": "USER_REPORTED_TERMINAL_SUMMARY_WITH_CODE_LEVEL_SEMANTIC_VERIFICATION",
+  "limitations": {
+    "exact_completed_at_available": false,
+    "exact_model_name_available_from_this_report": false,
+    "exact_runtime_service_capabilities_payload_embedded": false,
+    "exact_started_at_available": false,
+    "fabricated_missing_values": false,
+    "full_generated_live_evidence_json_embedded": false
+  },
+  "promotion_conclusion": {
+    "promotion_basis": "PARENT_R10E_LIVE_ACCEPTANCE",
+    "r10e_provenance_fence": "PASSED_BY_TERMINAL_24_OF_24",
+    "step094_cross_domain_capability": "WINDOWS_LIVE_OPENAI_ACCEPTED"
+  },
+  "retained_live_source_hashes": {
+    "focused_live_harness_sha256": "a1953c4a66612c9331b63b523ae2efc178669a5694cc558252b00eff90fd7e9c",
+    "runtime_executable_baseline_sha256": "1d00cbabf3abccd4453428f01953f3f3d86f3480719dc0f079f0691cbc502ddb",
+    "runtime_pyproject_sha256": "ecbe598fbdad7876244dde9954312a704a9116aae4d5c4f5b0a606c39fdfc78c",
+    "workspace_current_baseline_sha256": "68c03b0862664e911b3e543b26677edb560a287c5958acffccd41fcde0bc1004",
+    "workspace_manifest_sha256": "ad5baafa884d5ef6a6bd30cfbda65fc463e84ba4963b5590f0f74a2a52383279",
+    "workspace_project_catalog_sha256": "c38310b0024aefe9270b5b1e923f833cb1f276c9d9c3f521e25bf4da304c2db9"
+  },
+  "schema_version": "okcanvas-workspace-step008r4r10e-user-reported-live-acceptance-v1",
+  "source_package": {
+    "filename": "okcanvas-agent-platform-workspace-step008r4r10e-cross-domain-live-evidence-provenance-identity-closure-test-pending.zip",
+    "sha256": "066c498be186995a6e2a19de6091c6c6fa1d5cde2d1ced81a918b884507ed097",
+    "uploaded_package_file_count": 4857
+  },
+  "source_runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "source_runtime_version": "2.78.2",
+  "source_workspace_step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+  "source_workspace_version": "0.8.4-r10e",
+  "user_reported_execution": {
+    "command": "sh_run_workspace_step008r4r10_cross_domain_live_acceptance",
+    "output_path": "D:\\NODE_AGENTS\\okcanvas-agent-platform\\docs\\evidence\\WORKSPACE_STEP008R4R10_CROSS_DOMAIN_LIVE_ACCEPTANCE.json",
+    "passed_checks": 24,
+    "state": "PASSED",
+    "total_checks": 24,
+    "working_directory": "D:\\NODE_AGENTS\\okcanvas-agent-platform"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "broad_tests": "DEFERRED_BY_USER",
+  "focused_cross_domain_live": {
+    "checks": "24/24",
+    "evidence_materialization": "USER_REPORTED_TERMINAL_SUMMARY_FULL_GENERATED_WINDOWS_JSON_NOT_EMBEDDED",
+    "semantic_verification": "V2_HARNESS_TERMINAL_PASSED_REQUIRES_ALL_PROVENANCE_FUNCTIONAL_AND_CLEANUP_CHECKS_TRUE",
+    "source_package_sha256": "066c498be186995a6e2a19de6091c6c6fa1d5cde2d1ced81a918b884507ed097",
+    "source_workspace_step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+    "source_workspace_version": "0.8.4-r10e",
+    "state": "PASSED"
+  },
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "next_agent_native_step": "STEP095A_BOUNDED_DURABLE_MEMORY_EXHAUSTIVE_AUDIT",
+  "promotion": "CURRENT_PROMOTED_BASELINE",
+  "retained_r10e_provenance": {
+    "focused_live_harness_sha256": "a1953c4a66612c9331b63b523ae2efc178669a5694cc558252b00eff90fd7e9c",
+    "runtime_executable_baseline_sha256": "1d00cbabf3abccd4453428f01953f3f3d86f3480719dc0f079f0691cbc502ddb",
+    "runtime_parent_manifest_sha256": "a40f0c828781cf2c2613fc130e64f3408d4567d4242a9806d841c0f9b6515203",
+    "runtime_pyproject_sha256": "ecbe598fbdad7876244dde9954312a704a9116aae4d5c4f5b0a606c39fdfc78c",
+    "workspace_current_baseline_sha256": "68c03b0862664e911b3e543b26677edb560a287c5958acffccd41fcde0bc1004",
+    "workspace_manifest_sha256": "ad5baafa884d5ef6a6bd30cfbda65fc463e84ba4963b5590f0f74a2a52383279",
+    "workspace_project_catalog_sha256": "c38310b0024aefe9270b5b1e923f833cb1f276c9d9c3f521e25bf4da304c2db9"
+  },
+  "runtime_product_source_changed": false,
+  "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "runtime_version": "2.78.2",
+  "schema_version": "okcanvas-workspace-step008r4r10er1-static-validation-v1",
+  "state": "STATIC_AND_PROVENANCE_PROMOTION_VALIDATED",
+  "static_checks": {
+    "architecture_constitution": "16/16 PASSED",
+    "current_document_sot": "PASSED",
+    "first_party_json_parse": "884/884 PASSED",
+    "first_party_python_ast": "1016/1016 PASSED",
+    "launcher_registry": "7/7 PASSED",
+    "parent_manifests": {
+      "groupware_connector": "31/31 EXACT",
+      "groupware_example": "19/19 EXACT",
+      "organization_context_connector": "34/34 EXACT",
+      "organization_context_example": "51/51 EXACT",
+      "runtime": "4327/4327 EXACT"
+    },
+    "runtime_product_python_changed_vs_r10e": 0,
+    "runtime_product_python_files": 355,
+    "runtime_product_python_snapshot_method": "SHA256(sorted relative_path_from_okcanvas_agent_runtime NUL file_bytes NUL)",
+    "runtime_product_python_snapshot_sha256": "ce63244331505380843a9174d9c6dca085af4153211505461c82db6c8bd4d969",
+    "runtime_step094r2_contract": "15/15 PASSED",
+    "workspace_manifest": "GENERATED_AFTER_THIS_SUMMARY_AND_VERIFIED_EXACT",
+    "workspace_r10er1_contract": "28/28 PASSED"
+  },
+  "tests_executed_for_r10er1": false,
+  "workspace_step": "WORKSPACE_STEP008R4R10ER1_CROSS_DOMAIN_LIVE_ACCEPTANCE_PROMOTION_CLOSURE",
+  "workspace_version": "0.8.4-r10er1"
+}

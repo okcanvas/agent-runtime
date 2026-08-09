@@ -1,0 +1,19 @@
+{
+  "schema_version": "okcanvas-user-reported-focused-cross-domain-live-failure-v1",
+  "source": "USER_REPORTED_WINDOWS_OUTPUT",
+  "workspace_step": "WORKSPACE_STEP008R4R10C_RUNTIME_STEP094R1_UNIFIED_CROSS_DOMAIN_SESSION_ROOT_AND_BINDING_CLOSURE",
+  "workspace_version": "0.8.4-r10c",
+  "runtime_step": "STEP094R1_UNIFIED_CROSS_DOMAIN_SESSION_ROOT_AND_BINDING_CLOSURE",
+  "runtime_version": "2.78.1",
+  "state": "FAILED",
+  "passed_checks": 6,
+  "total_checks": 7,
+  "failure_stage": "execute_establish-employee-focus",
+  "cli_returncode": 0,
+  "cli_one_request_completed": false,
+  "runtime_run_count": 0,
+  "product_error_code": "RUN_SUBMISSION_INVALID",
+  "product_error": "Root Agent must declare exactly the Groupware read Sub-agent",
+  "secrets_persisted": false,
+  "diagnostic_conclusion": "LEGACY_GROUPWARE_ONLY_RUN_SUBMISSION_ADMISSION_GUARD_REJECTED_UNIFIED_TWO_CHILD_ROOT"
+}

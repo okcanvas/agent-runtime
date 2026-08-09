@@ -38,7 +38,9 @@ def test_request_hint_maps_only_admitted_operations_to_named_tools() -> None:
     assert organization_context_named_tool_choice(_request("SEARCH")) == (
         "search_organization_context"
     )
-    assert organization_context_named_tool_choice(_request("GET")) is None
+    assert organization_context_named_tool_choice(_request("GET")) == (
+        "get_organization_entity"
+    )
 
 
 def test_request_hint_is_operation_contract_not_entity_evidence() -> None:

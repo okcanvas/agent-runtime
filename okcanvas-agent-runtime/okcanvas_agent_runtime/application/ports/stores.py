@@ -35,6 +35,9 @@ from okcanvas_agent_runtime.domain.project_snapshots.models import (
 )
 from okcanvas_agent_runtime.domain.sessions.compaction import CompactionEventSink
 from okcanvas_agent_runtime.domain.sessions.models import ProductSessionRecord
+from okcanvas_agent_runtime.domain.sessions.context_focus import (
+    SessionContextFocusObservation, SessionContextFocusRecord,
+)
 
 if TYPE_CHECKING:
     from okcanvas_agent_runtime.application.evaluation.models import EvaluationCase, EvaluationResult
@@ -372,6 +375,7 @@ class SessionRuntimePort(Protocol):
     ) -> ProductSessionRecord: ...
     def get(self, session_id: str) -> ProductSessionRecord: ...
     def list(self, *, limit: int = 100) -> tuple[ProductSessionRecord, ...]: ...
+    def get_context_focus(self, session_id: str) -> SessionContextFocusRecord | None: ...
     def validate_binding(
         self,
         *,
@@ -396,6 +400,7 @@ class SessionRuntimePort(Protocol):
         succeeded: bool | None = None,
         committed: bool | None = None,
         item_count: int,
+        context_focus: SessionContextFocusObservation | None = None,
     ) -> ProductSessionRecord: ...
     def count_items(self, session_id: str) -> int: ...
     def sdk_session(self, session_id: str) -> object: ...

@@ -3,7 +3,7 @@ from okcanvas_agent_runtime.core.runtime_info import RuntimeInfo
 
 def test_step004a_architecture_boundary() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.openai_agents_version == "0.19.0"
     assert info.codex_readonly_implemented is True
     assert info.codex_live_accepted is True

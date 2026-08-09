@@ -1,0 +1,23 @@
+{
+  "broad_tests": "DEFERRED_BY_USER",
+  "focused_cross_domain_live": {
+    "checks": "24/24",
+    "evidence": "docs/evidence/WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_ACCEPTANCE_USER_REPORTED.json",
+    "full_generated_evidence_json_embedded": false,
+    "provenance_gate": "PASSED_BY_V2_TERMINAL_STATE_SEMANTICS",
+    "source_package_sha256": "066c498be186995a6e2a19de6091c6c6fa1d5cde2d1ced81a918b884507ed097",
+    "source_workspace_step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+    "source_workspace_version": "0.8.4-r10e",
+    "state": "PASSED"
+  },
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "next_agent_native_step": "STEP095A_BOUNDED_DURABLE_MEMORY_EXHAUSTIVE_AUDIT",
+  "promotion": "CURRENT_PROMOTED_BASELINE",
+  "runtime_product_source_changed": false,
+  "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "runtime_version": "2.78.2",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "WINDOWS_FOCUSED_CROSS_DOMAIN_LIVE_ACCEPTED_PROMOTION_PACKAGED",
+  "workspace_step": "WORKSPACE_STEP008R4R10ER1_CROSS_DOMAIN_LIVE_ACCEPTANCE_PROMOTION_CLOSURE",
+  "workspace_version": "0.8.4-r10er1"
+}

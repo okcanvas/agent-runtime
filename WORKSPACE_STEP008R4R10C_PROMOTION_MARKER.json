@@ -1,0 +1,13 @@
+{
+  "broad_tests": "DEFERRED_BY_USER",
+  "focused_cross_domain_live": "RERUN_REQUIRED",
+  "forbidden_nonfix_policy": "NO_ALIAS_NO_FALLBACK_NO_SESSION_SWITCH_NO_BINDING_WEAKENING",
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "promotion": "NOT_READY",
+  "runtime_step": "STEP094R1_UNIFIED_CROSS_DOMAIN_SESSION_ROOT_AND_BINDING_CLOSURE",
+  "runtime_version": "2.78.1",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "STATIC_AND_FRESH_PACKAGE_VALIDATED_FOCUSED_LIVE_RERUN_REQUIRED",
+  "workspace_step": "WORKSPACE_STEP008R4R10C_RUNTIME_STEP094R1_UNIFIED_CROSS_DOMAIN_SESSION_ROOT_AND_BINDING_CLOSURE",
+  "workspace_version": "0.8.4-r10c"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "okcanvas-cross-domain-session-delegation-policy-v1",
+  "policy_id": "organization-assistant-cross-domain-read-session-v1",
+  "version": "1.0.0",
+  "root_agent_id": "organization-assistant-session-agent",
+  "root_output_contract": "OrganizationAssistantResult",
+  "root_session_mode": "sqlite-v1",
+  "max_agent_tool_calls_per_turn": 1,
+  "max_depth": 1,
+  "delegated_identity_required": true,
+  "route_context_required": true,
+  "write_enabled": false,
+  "targets": [
+    {
+      "domain": "GROUPWARE",
+      "child_agent_id": "groupware-read-agent",
+      "mcp_server_id": "groupware-read",
+      "child_output_contract": "GroupwareReadResult",
+      "max_result_bytes": 8192,
+      "input_mode": "MODEL_GENERATED_TEXT",
+      "output_mode": "BOUNDED_STRUCTURED_JSON",
+      "nested_stream_enabled": true,
+      "inherit_parent_run_config": false,
+      "policy_id": "cross-domain-groupware-read-target-v1"
+    },
+    {
+      "domain": "ORGANIZATION_CONTEXT",
+      "child_agent_id": "organization-context-read-agent",
+      "mcp_server_id": "organization-context-read",
+      "child_output_contract": "OrganizationContextReadResult",
+      "max_result_bytes": 16384,
+      "input_mode": "MODEL_GENERATED_TEXT",
+      "output_mode": "BOUNDED_STRUCTURED_JSON",
+      "nested_stream_enabled": true,
+      "inherit_parent_run_config": false,
+      "policy_id": "cross-domain-organization-context-read-target-v1"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "okcanvas-step096br1r2-deterministic-acceptance-v1",
+  "step": "STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE",
+  "version": "2.80.2",
+  "validation_mode": "LOCAL_DETERMINISTIC_GROUNDED_SESSION_IDENTITY_HINT_ACTIVATION_CLOSURE",
+  "state": "PASSED",
+  "checks": {
+    "step096br1r2_static_contract": true,
+    "python_compileall": true,
+    "focused_regression_pytest": true,
+    "focused_regression_exact_pass_count": true,
+    "r12r3_live_root_cause_closed_without_parser_or_alias": true,
+    "windows_live_rerun_required": true,
+    "broad_historical_suite_not_claimed": true
+  },
+  "passed_checks": 7,
+  "total_checks": 7,
+  "static": {
+    "state": "PASSED",
+    "step": "STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE",
+    "version": "2.80.2",
+    "parent_step": "STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+    "parent_version": "2.80.1",
+    "checks": {
+      "identity_exact": true,
+      "step096br1r1_diagnostic_and_step096b_behavior_retained": true,
+      "grounded_marker_requests_identity_before_legacy_child_selection": true,
+      "grounded_identity_requires_authenticated_principal": true,
+      "grounded_identity_does_not_prebind_all_possible_execution_mcps": true,
+      "hint_unavailable_has_bounded_diagnostics": true,
+      "hint_diagnostic_is_not_model_context": true,
+      "runtime_event_exposes_safe_hint_activation_evidence": true,
+      "focused_regression_proves_exact_r12r3_gap": true,
+      "root_direct_answer_policy_not_changed_in_this_corrective": true,
+      "windows_live_rerun_required": true
+    },
+    "passed_checks": 11,
+    "total_checks": 11
+  },
+  "focused_pytest": {
+    "returncode": 0,
+    "summary": "69 passed in 1.22s",
+    "stderr_present": false
+  },
+  "compileall_returncode": 0,
+  "windows_live": "NOT_RUN"
+}

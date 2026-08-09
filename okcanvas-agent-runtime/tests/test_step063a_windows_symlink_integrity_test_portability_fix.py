@@ -25,8 +25,8 @@ def _sha256(path: Path) -> str:
 
 def test_step063a_baseline_and_runtime_flags() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.windows_symlink_integrity_test_portability_fix_implemented is True
     assert info.windows_symlink_integrity_test_uses_real_symlink is False
     assert info.windows_symlink_integrity_test_uses_deterministic_path_simulation is True

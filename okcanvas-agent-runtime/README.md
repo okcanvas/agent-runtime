@@ -1,25 +1,16 @@
 # OKCanvas Agent Runtime
 
-```text
-Current Workspace: WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING
-Workspace Version: 0.8.4-r7a1
-Current Runtime: STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE
-Runtime Version: 2.75.0
-State: RUNTIME_PRODUCT_UNCHANGED_STEP091D_OBJECT_STORAGE_LIVE_PENDING
-Promotion: NOT_READY_AT_WORKSPACE_R7A1
-```
+Current Workspace: WORKSPACE_STEP008R4R12R4_STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE
+Workspace Version: 0.8.4-r12r4
+Current Runtime: STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE
+Runtime Version: 2.80.2
 
-The Runtime remains STEP091D / 2.75.0. STEP008R4R7A1 changes Workspace Git repository metadata and
-current governance only; it does not change `okcanvas_agent_runtime/**` Product behavior. R7A's
-current-document SOT correction remains retained.
+State: LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
 
-STEP091D provides S3-compatible boto3 deployment composition for the SDK-neutral
-`ObjectStorageArtifactBlobStore` and a fail-closed real Object Storage live gate over a randomized
-prefix in an existing bucket. `local-filesystem-artifact-v1` and `sqlite-local-v1` remain defaults.
+## STEP096BR1R2 correction
 
-Parent real PostgreSQL STEP091B3R1 remains accepted 19/19. MinIO/Object Storage live execution is
-explicitly deferred until MinIO is prepared. Artifact GC, production DB migration, distributed
-Session history, API/Worker physical split and distributed Worker lease remain unclaimed.
+The grounded Session Root may need Organization SOT hints before legacy route-v2 has selected a specialist. Submission preflight therefore creates delegated identity from the authenticated service-principal ownership transition whenever the explicit grounded structured-delegation marker is present. This identity is protected Runtime state; it is not a model-generated canonical ID and it does not grant every MCP access. Existing selected MCPs are still bound normally, while Hint and lazy child MCPs bind later at their own boundaries.
 
-Current Workspace/Runtime identity is owned by `../specs/workspace/current-baseline.json` and each
-current Runtime document is independently checked by `../scripts/validate_current_document_sot.py`.
+The hint provider exposes a bounded diagnostic code for unavailable states. The Root lifecycle event may record that code plus identity/capability booleans, but raw errors, credentials and Tool payloads remain excluded.
+
+No change is made in this corrective to `model_can_answer_without_child`. The next Windows Live rerun first proves that the grounded hint plane is actually active; only then may specialist-use policy be evaluated.

@@ -94,7 +94,7 @@ class GroupwareReadProviderContract:
 
     def to_public_dict(self) -> dict[str, object]:
         return {
-            "schema_version": "okcanvas-groupware-read-provider-contract-v2",
+            "schema_version": "okcanvas-groupware-read-provider-contract-v3",
             "server_id": self.server_id,
             "transport": self.transport,
             "provider_deployment": self.provider_deployment,
@@ -137,7 +137,7 @@ class GroupwareDeploymentCatalog:
             payload = self._load_json(path)
             expected_keys = {
                 "schema_version", "tool_name", "tenant_id", "principal_id", "roles",
-                "delegation_id", "result_schema_version", "records", "mutated",
+                "delegation_id", "result_schema_version", "records", "mutated", "context_ref",
             }
             if set(payload) != expected_keys:
                 raise GroupwareDeploymentContractError("Groupware provider fixture keys are not exact")
@@ -231,7 +231,7 @@ class GroupwareDeploymentCatalog:
             "required_identity_headers", "external_connector_project_path",
             "credential_reference_transmitted", "tools",
         }
-        if set(payload) != expected or payload["schema_version"] != "okcanvas-groupware-read-provider-contract-v2":
+        if set(payload) != expected or payload["schema_version"] != "okcanvas-groupware-read-provider-contract-v3":
             raise GroupwareDeploymentContractError("Groupware read provider contract keys or schema are invalid")
         if payload["server_id"] != "groupware-read" or payload["transport"] != "remote-streamable-http":
             raise GroupwareDeploymentContractError("Groupware read provider transport identity drifted")

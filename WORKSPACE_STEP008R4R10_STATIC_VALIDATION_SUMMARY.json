@@ -1,0 +1,54 @@
+{
+  "architecture": {
+    "passed_checks": 40,
+    "physical_module_count": 370,
+    "state": "PASSED",
+    "total_checks": 40
+  },
+  "candidate_fresh": {
+    "architecture_static": "PASSED",
+    "current_document_sot": "PASSED",
+    "launcher_registry": "PASSED",
+    "manifest": "4805/4805 exact",
+    "step094_static_contract": "PASSED"
+  },
+  "checks": {
+    "architecture_static_40_of_40": true,
+    "current_document_sot": true,
+    "historical_evidence_992_unchanged": true,
+    "json_parse_851_of_851": true,
+    "launcher_registry_7_of_7": true,
+    "python_ast_1003_of_1003": true,
+    "step094_static_contract_39_of_39": true
+  },
+  "limitations": {
+    "cross_domain_live_executed": false,
+    "full_runtime_regression_executed": false,
+    "groupware_connector_acceptance_executed": false,
+    "groupware_example_acceptance_executed": false,
+    "minio_object_storage_live_executed": false,
+    "runtime_deterministic_executed": false,
+    "unit_tests_executed": false,
+    "windows_live_openai_executed": false,
+    "workspace_acceptance_executed": false
+  },
+  "parent_evidence": {
+    "r9b_step093r1_relation_live": "USER_REPORTED_SUMMARY_PASSED_19_OF_19"
+  },
+  "prepared_but_unexecuted": {
+    "focused_cross_domain_live": "sh_run_workspace_step008r4r10_cross_domain_live_acceptance.cmd",
+    "runtime_deterministic": "okcanvas-agent-runtime/sh_run_step094_acceptance.cmd"
+  },
+  "promotion": "NOT_READY",
+  "runtime_product_python": {
+    "files": 354,
+    "snapshot_sha256": "3105eb9a1e6c685dc481eabd072e14213de76a5ce247cc68759d632193b267a4"
+  },
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "runtime_version": "2.78.0",
+  "schema_version": "okcanvas-workspace-step008r4r10-static-validation-summary-v1",
+  "state": "STATIC_VALIDATED_TEST_PENDING",
+  "validation_mode": "STATIC_ONLY_NO_EXECUTABLE_TESTS",
+  "workspace_step": "WORKSPACE_STEP008R4R10_RUNTIME_STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "workspace_version": "0.8.4-r10"
+}

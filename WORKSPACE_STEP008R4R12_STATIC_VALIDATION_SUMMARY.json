@@ -1,0 +1,12 @@
+{
+  "architecture_constitution": "16/16 PASSED",
+  "current_architecture": "39/40 EXPECTED_HISTORICAL_STEP081_IDENTITY_ONLY",
+  "focused_runtime_pytest": "63/63 PASSED",
+  "launcher_registry": "7/7 PASSED",
+  "runtime_deterministic_acceptance": "6/6 PASSED",
+  "runtime_static": "20/20 PASSED",
+  "schema_version": "okcanvas-workspace-step008r4r12-static-validation-summary-v1",
+  "state": "PASSED",
+  "workspace_static": "31/31 PASSED",
+  "windows_live": "NOT_RUN"
+}

@@ -98,13 +98,34 @@ async function applyFault(mode: FaultMode, response: ServerResponse): Promise<bo
   return false;
 }
 
+
+const CONTEXT_ENTITY_TYPES = new Set(["EMPLOYEE", "PROJECT", "CLIENT", "PRODUCT", "DEPARTMENT"]);
+
+function contextRef(body: unknown): { entity_type: string; entity_id: string } | null | undefined {
+  if (!body || typeof body !== "object") return null;
+  const raw = (body as { context_ref?: unknown }).context_ref;
+  if (raw === undefined || raw === null) return null;
+  if (typeof raw !== "object" || Array.isArray(raw)) return undefined;
+  const keys = Object.keys(raw as Record<string, unknown>).sort();
+  if (keys.join(",") !== "entity_id,entity_type") return undefined;
+  const entityType = (raw as { entity_type?: unknown }).entity_type;
+  const entityId = (raw as { entity_id?: unknown }).entity_id;
+  if (typeof entityType !== "string" || !CONTEXT_ENTITY_TYPES.has(entityType) || typeof entityId !== "string" || !entityId || entityId.length > 200) return undefined;
+  return { entity_type: entityType, entity_id: entityId };
+}
+
+function matchesContextRef(record: { context_refs: Array<{ entity_type: string; entity_id: string }> }, expected: { entity_type: string; entity_id: string } | null): boolean {
+  if (expected === null) return true;
+  return record.context_refs.some((item) => item.entity_type === expected.entity_type && item.entity_id === expected.entity_id);
+}
+
 export function createGroupwareFake(state = new FakeState()): { server: Server; state: FakeState } {
   const server = createServer(async (request, response) => {
     const method = request.method ?? "GET";
     const path = new URL(request.url ?? "/", "http://groupware-fake").pathname;
 
     if (method === "GET" && path === "/healthz") {
-      json(response, 200, { state: "READY", example_template_only: true, version: "0.1.0" });
+      json(response, 200, { state: "READY", example_template_only: true, version: "0.2.0" });
       return;
     }
     if (path.startsWith("/_fake/")) {
@@ -183,21 +204,29 @@ export function createGroupwareFake(state = new FakeState()): { server: Server; 
     const delegatedRoles = roles(request) as Role[];
     const limit = typeof (body as { limit?: unknown }).limit === "number" ? (body as { limit: number }).limit : 20;
     const query = typeof (body as { query?: unknown }).query === "string" ? (body as { query: string }).query.toLowerCase() : "";
+    const requestedContextRef = contextRef(body);
+    if (requestedContextRef === undefined) {
+      json(response, 400, { message: "context_ref is invalid" });
+      return;
+    }
     let records: unknown[];
     if (operation === "notices.search") {
       records = state.notices.filter(
         (item) => item.tenant_id === tenant && item.visible_to_roles.some((role) => delegatedRoles.includes(role)) &&
+          matchesContextRef(item, requestedContextRef) &&
           (!query || item.title.toLowerCase().includes(query) || item.body.toLowerCase().includes(query)),
       );
     } else if (operation === "mail.search") {
       records = state.mail.filter(
         (item) => item.tenant_id === tenant && item.owner_principal_id === principal &&
+          matchesContextRef(item, requestedContextRef) &&
           (!query || item.subject.toLowerCase().includes(query) || item.body.toLowerCase().includes(query)),
       );
     } else {
       records = state.calendar.filter(
         (item) => item.tenant_id === tenant &&
-          (item.owner_principal_id === principal || delegatedRoles.includes("manager") || delegatedRoles.includes("admin")),
+          (item.owner_principal_id === principal || delegatedRoles.includes("manager") || delegatedRoles.includes("admin")) &&
+          matchesContextRef(item, requestedContextRef),
       );
     }
     if (fault?.mode === "PARTIAL_RESPONSE") {

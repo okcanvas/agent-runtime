@@ -3,8 +3,8 @@ from okcanvas_agent_runtime.core.runtime_info import RuntimeInfo
 
 def test_step024_business_agent_baseline() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.store_replenishment_agent_implemented is True
     assert info.store_replenishment_agent_deterministic_accepted is True
     assert info.store_replenishment_agent_live_accepted is True

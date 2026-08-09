@@ -333,5 +333,5 @@ def test_step084_local_evidence_is_excluded_from_product_inventory() -> None:
 def test_step084_source_packager_default_identity_is_exact() -> None:
     from scripts.package_source import DEFAULT_OUTPUT, PACKAGE_STEP
 
-    assert PACKAGE_STEP == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert DEFAULT_OUTPUT.name == "okcanvas-agent-runtime-step091d-object-storage-deployment-composition-and-live-acceptance-gate.zip"
+    assert PACKAGE_STEP == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert DEFAULT_OUTPUT.name == "okcanvas-agent-runtime-step093-relation-aware-contextual-follow-up-and-evidence-bound-traversal.zip"

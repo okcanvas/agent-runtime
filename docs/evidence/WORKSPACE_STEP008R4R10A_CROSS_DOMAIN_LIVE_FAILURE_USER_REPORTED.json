@@ -1,0 +1,14 @@
+{
+  "source": "USER_PROVIDED_WINDOWS_R10A_EVIDENCE",
+  "state": "FAILED",
+  "passed_checks": 6,
+  "total_checks": 7,
+  "failure_stage": "execute_establish-employee-focus",
+  "safe_error": {"category": "LIVE_EXECUTION_FAILED", "type": "RuntimeError"},
+  "failure_diagnostics": {"cli": null, "runtime": null, "runtime_collection_error_type": null},
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "runtime_version": "2.78.0",
+  "workspace_step": "WORKSPACE_STEP008R4R10A_CROSS_DOMAIN_LIVE_FAILURE_DIAGNOSTIC_CLOSURE",
+  "workspace_version": "0.8.4-r10a",
+  "completed_at": "2026-08-08T06:05:45.564410Z"
+}

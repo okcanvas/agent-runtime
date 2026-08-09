@@ -13,6 +13,19 @@ from okcanvas_agent_runtime.agent.definitions import AgentDefinition, AgentDefin
 from okcanvas_agent_runtime.core.config import EXPECTED_OPENAI_AGENTS_VERSION, RuntimeSettings
 from okcanvas_agent_runtime.core.contracts import CodingAgentResult, UsageSummary
 from okcanvas_agent_runtime.adapters.mcp.clients import RemoteMCPResultLimitError, create_openai_mcp_runtime
+from okcanvas_agent_runtime.adapters.mcp.organization_interpretation_hints import (
+    GroundedInterpretationHintContractError,
+    OrganizationGroundedInterpretationContextProvider,
+)
+from okcanvas_agent_runtime.application.assistant_interpretation import (
+    GroundedDelegationAdmission,
+    GroundedDelegationContractError,
+    GroupwareReadDelegationInput,
+    OrganizationReadDelegationInput,
+    extract_grounded_routing_context,
+    extract_grounded_session_utterance,
+    grounded_structured_delegation_requested,
+)
 from okcanvas_agent_runtime.application.mcp_access import DelegatedMCPIdentity, MCPAccessCatalog, MCPPassiveHealthRegistry
 from okcanvas_agent_runtime.agent.mcp.definitions import MCPDefinitionError, MCPServerCatalog
 from okcanvas_agent_runtime.agent.model.retry import ModelRetryPolicyCatalog, ModelRetryPolicyError, build_sdk_model_retry_settings
@@ -35,9 +48,12 @@ from okcanvas_agent_runtime.domain.project_snapshots import materialize_project_
 from okcanvas_agent_runtime.domain.project_snapshots.models import PreparedProjectSnapshot
 from okcanvas_agent_runtime.domain.attachments.model_policy import MultimodalModelPolicyCatalog
 from okcanvas_agent_runtime.application.orchestration import BoundedOrchestrationPolicyCatalog
+from okcanvas_agent_runtime.application.assistant_routing.cross_domain_session import (
+    CrossDomainSessionContractError,
+    CrossDomainSessionDelegationCatalog,
+)
 from okcanvas_agent_runtime.application.groupware_read import (
-    GroupwareSessionDelegationCatalog,
-    requires_groupware_session_delegation,
+    groupware_named_tool_choice,
 )
 from okcanvas_agent_runtime.application.organization_context import (
     OrganizationContextSessionDelegationCatalog,
@@ -100,6 +116,58 @@ def _tool_origin_type(tool: Any) -> str:
     origin = getattr(tool, "_tool_origin", None)
     value = getattr(origin, "type", None)
     return str(getattr(value, "value", value) or "")
+
+
+def _safe_model_output_shape(response: Any) -> dict[str, int]:
+    """Return content-free provider output item counts for Live diagnostics."""
+
+    counts = {"message": 0, "function_call": 0, "reasoning": 0, "other": 0}
+    for item in tuple(getattr(response, "output", ()) or ()):
+        kind = str(getattr(item, "type", "") or "").strip().lower()
+        if kind == "message":
+            counts["message"] += 1
+        elif kind == "function_call":
+            counts["function_call"] += 1
+        elif kind == "reasoning":
+            counts["reasoning"] += 1
+        else:
+            counts["other"] += 1
+    return counts
+
+
+def _safe_model_behavior_failure_diagnostic(exc: Exception) -> dict[str, object] | None:
+    """Classify SDK model-behavior failures without persisting model/tool payload text."""
+
+    if type(exc).__name__ != "ModelBehaviorError":
+        return None
+    message = str(exc)
+    if message.startswith("Invalid JSON input for tool "):
+        category = (
+            "TOOL_ARGUMENT_SCHEMA_INVALID"
+            if "validation error" in message.lower()
+            else "TOOL_ARGUMENT_JSON_INVALID"
+        )
+    elif message.startswith("Failed to serialize structured tool input for "):
+        category = "TOOL_ARGUMENT_SERIALIZATION_FAILED"
+    elif message == "Agent tool called with invalid input":
+        category = "TOOL_INPUT_BUILDER_INVALID"
+    elif message.startswith("Tool ") and " not found in agent " in message:
+        category = "UNKNOWN_TOOL_CALL"
+    elif message.startswith("Invalid JSON when parsing "):
+        category = "STRUCTURED_FINAL_OUTPUT_INVALID"
+    elif message == "Model returned no final output for the structured output type.":
+        category = "STRUCTURED_FINAL_OUTPUT_MISSING"
+    elif message == "Model did not produce a final response!":
+        category = "MODEL_FINAL_RESPONSE_MISSING"
+    else:
+        category = "MODEL_BEHAVIOR_OTHER"
+    return {
+        "detail_type": "ModelBehaviorError",
+        "model_behavior_category": category,
+        "raw_model_output_persisted": False,
+        "raw_tool_arguments_persisted": False,
+        "raw_error_message_persisted": False,
+    }
 
 
 def _exception_chain(exc: BaseException) -> tuple[BaseException, ...]:
@@ -202,6 +270,29 @@ def _safe_structured_output_failure_diagnostic(
         "tool_result_persisted": False,
         "raw_error_persisted": False,
     }
+
+
+def _inject_grounded_interpretation_context(model_data: Any, context_text: str) -> Any:
+    """Add turn-local grounded context to the model payload without persisting it to Session history.
+
+    The hint payload is deliberately a user-role data item rather than system instructions. Database/SOT
+    strings are model context data and must never gain instruction authority. The SDK persists the original
+    caller input, not call_model_input_filter additions, so this item remains turn-local.
+    """
+
+    context_item = {
+        "role": "user",
+        "content": [{"type": "input_text", "text": context_text}],
+    }
+    items = list(model_data.input)
+    insertion_index = 0
+    for index in range(len(items) - 1, -1, -1):
+        item = items[index]
+        if isinstance(item, dict) and item.get("role") == "user":
+            insertion_index = index
+            break
+    items.insert(insertion_index, context_item)
+    return type(model_data)(input=items, instructions=model_data.instructions)
 
 
 class OpenAIGenericAgentGateway:
@@ -330,8 +421,17 @@ class OpenAIGenericAgentGateway:
                 and not definition.guardrails
                 and definition.workspace_access == "none"
             )
+            session_cross_domain_agent_tool_mode = (
+                definition.agent_id == "organization-assistant-session-agent"
+                and definition.agent_tools == ("groupware-read-agent", "organization-context-read-agent")
+                and not definition.tools
+                and not definition.handoffs
+                and not definition.mcp_servers
+                and not definition.guardrails
+                and definition.workspace_access == "none"
+            )
             if definition.tools or (definition.mcp_servers and not session_mcp_mode) or (
-                definition.agent_tools and not session_agent_tool_mode
+                definition.agent_tools and not (session_agent_tool_mode or session_cross_domain_agent_tool_mode)
             ) or (definition.handoffs and not session_handoff_mode) or (
                 definition.guardrails and not session_guardrail_mode
             ):
@@ -375,17 +475,27 @@ class OpenAIGenericAgentGateway:
         project_root = definition.definition_path.parents[3]
         groupware_session_binding = None
         organization_context_session_binding = None
+        cross_domain_session_binding = None
+        cross_domain_target = None
         delegated_route_required = False
         if definition.agent_id == "organization-assistant-session-agent":
             try:
-                groupware_session_binding = GroupwareSessionDelegationCatalog(project_root).resolve(
+                cross_domain_session_binding = CrossDomainSessionDelegationCatalog(project_root).resolve(
                     definition
                 )
-                delegated_route_required = requires_groupware_session_delegation(request)
+                cross_domain_target = cross_domain_session_binding.target_for_request(request)
+                delegated_route_required = cross_domain_target is not None
+                if cross_domain_target is not None:
+                    if cross_domain_target.domain == "GROUPWARE":
+                        groupware_session_binding = cross_domain_target
+                    elif cross_domain_target.domain == "ORGANIZATION_CONTEXT":
+                        organization_context_session_binding = cross_domain_target
+                    else:
+                        raise CrossDomainSessionContractError("Unsupported selected cross-domain target")
             except Exception as exc:
                 raise GenericExecutionFailure(
                     GenericExecutionErrorCode.AGENT_POLICY_DENIED,
-                    "Groupware Session delegation contract is invalid",
+                    "Cross-domain Session delegation contract is invalid",
                     detail_type=type(exc).__name__,
                 ) from exc
         elif definition.agent_id == "organization-context-session-agent":
@@ -408,6 +518,62 @@ class OpenAIGenericAgentGateway:
                 GenericExecutionErrorCode.AGENT_POLICY_DENIED,
                 "Delegated read Session requires a protected delegated identity",
             )
+        grounded_interpretation_context_text: str | None = None
+        grounded_interpretation_utterance: str | None = None
+        grounded_session_focus = None
+        grounded_structured_delegation_enabled = False
+        if definition.agent_id == "organization-assistant-session-agent":
+            routing_context = extract_grounded_routing_context(request)
+            utterance = extract_grounded_session_utterance(request)
+            structured_delegation_requested = grounded_structured_delegation_requested(routing_context)
+            if utterance is not None and session_runtime is not None and session_id is not None:
+                try:
+                    grounded_session_focus = session_runtime.get_context_focus(session_id)
+                    provider = OrganizationGroundedInterpretationContextProvider(project_root)
+                    grounded_context = await provider.build(
+                        utterance=utterance,
+                        delegated_identity=delegated_mcp_identity,
+                        session_focus=grounded_session_focus,
+                    )
+                    grounded_interpretation_utterance = utterance
+                    grounded_structured_delegation_enabled = (
+                        structured_delegation_requested and cross_domain_session_binding is not None
+                    )
+                    grounded_interpretation_context_text = grounded_context.to_model_context_text()
+                    await lifecycle_sink(
+                        GatewayLifecycleEvent(
+                            "interpretation.context.prepared",
+                            {
+                                "schema_version": "okcanvas-grounded-interpretation-context-v1",
+                                "hint_state": grounded_context.organization_hints.state.value,
+                                "hint_diagnostic_code": grounded_context.organization_hints.diagnostic_code,
+                                "delegated_identity_present": delegated_mcp_identity is not None,
+                                "capability_availability": {
+                                    item.capability_id: item.available
+                                    for item in grounded_context.capabilities
+                                },
+                                "entity_hint_state": grounded_context.organization_hints.entity_state.value,
+                                "term_hint_state": grounded_context.organization_hints.term_state.value,
+                                "entity_hint_count": len(grounded_context.organization_hints.entities),
+                                "term_hint_count": len(grounded_context.organization_hints.terms),
+                                "catalog_revision_consistent": (
+                                    grounded_context.organization_hints.catalog_revision_consistent
+                                ),
+                                "hint_content_persisted": False,
+                                "stable_entity_ids_exposed_to_model": False,
+                                "raw_tool_results_persisted": False,
+                                "authoritative_for_execution": False,
+                            },
+                            payload_schema_version="okcanvas-grounded-interpretation-context-prepared-v1",
+                            source=EventSource.RUNTIME,
+                        )
+                    )
+                except GroundedInterpretationHintContractError as exc:
+                    raise GenericExecutionFailure(
+                        GenericExecutionErrorCode.AGENT_POLICY_DENIED,
+                        "Grounded interpretation hint contract is invalid",
+                        detail_type=type(exc).__name__,
+                    ) from exc
         try:
             model_route = ModelRoutingPolicyCatalog(project_root).resolve_model(settings.model)
         except ModelRoutingError as exc:
@@ -481,11 +647,20 @@ class OpenAIGenericAgentGateway:
                 ) from exc
         agent_tool_policy = None
         agent_tool_child_definition = None
+        grounded_agent_tool_bindings = ()
         if definition.agent_tools:
             try:
-                if delegated_session_binding is not None:
+                if grounded_structured_delegation_enabled:
+                    if cross_domain_session_binding is None:
+                        raise AgentToolContractError("Grounded structured delegation has no cross-domain binding")
+                    grounded_agent_tool_bindings = cross_domain_session_binding.targets
+                elif delegated_session_binding is not None:
                     agent_tool_policy = delegated_session_binding.policy
                     agent_tool_child_definition = delegated_session_binding.child
+                elif cross_domain_session_binding is not None:
+                    # A cross-domain Session Root exposes no child Tool on legacy language-only Turns.
+                    agent_tool_policy = None
+                    agent_tool_child_definition = None
                 else:
                     agent_tool_policy = AgentToolPolicyCatalog(project_root).resolve()
                     if len(definition.agent_tools) != 1:
@@ -518,8 +693,14 @@ class OpenAIGenericAgentGateway:
             mcp_definitions = mcp_catalog.resolve_many(definition.mcp_servers)
             agent_tool_mcp_definitions = (
                 mcp_catalog.resolve_many(agent_tool_child_definition.mcp_servers)
-                if delegated_session_binding is not None and delegated_route_required
+                if (not grounded_structured_delegation_enabled)
+                and delegated_session_binding is not None and delegated_route_required
                 and agent_tool_child_definition is not None
+                else ()
+            )
+            grounded_agent_tool_mcp_definitions = (
+                tuple(mcp_catalog.resolve(binding.mcp_server_id) for binding in grounded_agent_tool_bindings)
+                if grounded_agent_tool_bindings
                 else ()
             )
         except MCPDefinitionError as exc:
@@ -665,10 +846,18 @@ class OpenAIGenericAgentGateway:
             if agent_tool_output_contract is not None
             else None
         )
+        grounded_output_contracts = {
+            binding.child.agent_id: resolve_output_contract(binding.child.output_contract)
+            for binding in grounded_agent_tool_bindings
+        }
         trace_id = gen_trace_id()
         set_default_openai_key(settings.api_key)
         allowed_server_ids = frozenset(
-            (*definition.mcp_servers, *(item.server_id for item in agent_tool_mcp_definitions))
+            (
+                *definition.mcp_servers,
+                *(item.server_id for item in agent_tool_mcp_definitions),
+                *(item.server_id for item in grounded_agent_tool_mcp_definitions),
+            )
         )
         local_tools = {item.tool_id: item for item in function_tool_runtimes}
         selected_model_settings: dict[str, object] = {
@@ -683,13 +872,27 @@ class OpenAIGenericAgentGateway:
         sdk_definition_by_object: dict[int, AgentDefinition] = {}
         handoff_count = 0
         agent_tool_count = 0
+        grounded_agent_tool_request_count = 0
         active_mcp_tool: dict[str, object] | None = None
         agent_tool_completed = False
+        admitted_agent_tool_definition = None
         expected_agent_tool_name = (
             agent_tool_name(agent_tool_child_definition)
             if agent_tool_child_definition is not None
             else None
         )
+        grounded_agent_tool_by_name = {
+            agent_tool_name(binding.child): binding for binding in grounded_agent_tool_bindings
+        }
+        grounded_mcp_definition_by_agent = {
+            binding.child.agent_id: mcp_definition
+            for binding, mcp_definition in zip(
+                grounded_agent_tool_bindings, grounded_agent_tool_mcp_definitions, strict=True
+            )
+        }
+        grounded_admission_lock = asyncio.Lock()
+        grounded_admitted_request_by_agent: dict[str, str] = {}
+        grounded_connected_servers: dict[str, Any] = {}
 
         def definition_for_sdk_agent(agent: Any) -> AgentDefinition:
             resolved = sdk_definition_by_object.get(id(agent))
@@ -844,6 +1047,8 @@ class OpenAIGenericAgentGateway:
                             "provider_response_id_persisted": False,
                             "provider_request_id_persisted": False,
                             "output_item_count": len(getattr(response, "output", ()) or ()),
+                            "output_item_type_counts": _safe_model_output_shape(response),
+                            "output_item_content_persisted": False,
                             "reasoning_item_count": count_reasoning_items(response),
                             "reasoning_content_persisted": False,
                             "reasoning_summary_persisted": False,
@@ -866,9 +1071,37 @@ class OpenAIGenericAgentGateway:
                 )
 
             async def on_tool_start(self, context, agent, tool) -> None:  # type: ignore[no-untyped-def]
-                nonlocal agent_tool_count, active_mcp_tool
+                nonlocal agent_tool_count, grounded_agent_tool_request_count, active_mcp_tool
                 tool_name, server_id, call_id_present = _tool_identity(tool, context)
                 if _tool_origin_type(tool) == "agent_as_tool":
+                    if grounded_structured_delegation_enabled:
+                        binding = grounded_agent_tool_by_name.get(tool_name)
+                        if (
+                            binding is None
+                            or agent_tool_count != 0
+                            or grounded_agent_tool_request_count != 0
+                        ):
+                            raise GenericExecutionFailure(
+                                GenericExecutionErrorCode.AGENT_POLICY_DENIED,
+                                "Grounded Agent-as-Tool request is outside the bounded one-request read graph",
+                            )
+                        grounded_agent_tool_request_count = 1
+                        await lifecycle_sink(
+                            GatewayLifecycleEvent(
+                                "agent.tool.requested",
+                                {
+                                    "from_agent_id": definition.agent_id,
+                                    "to_agent_id": binding.child.agent_id,
+                                    "tool_name": tool_name,
+                                    "tool_call_id_present": call_id_present,
+                                    "arguments_persisted": False,
+                                    "admitted": False,
+                                },
+                                payload_schema_version="okcanvas-grounded-agent-tool-requested-v1",
+                                source=EventSource.AGENT_SDK,
+                            )
+                        )
+                        return
                     if (
                         agent_tool_policy is None
                         or agent_tool_child_definition is None
@@ -942,6 +1175,38 @@ class OpenAIGenericAgentGateway:
                 nonlocal active_mcp_tool, agent_tool_completed
                 tool_name, server_id, call_id_present = _tool_identity(tool, context)
                 if _tool_origin_type(tool) == "agent_as_tool":
+                    if grounded_structured_delegation_enabled:
+                        binding = grounded_agent_tool_by_name.get(tool_name)
+                        if (
+                            binding is None
+                            or admitted_agent_tool_definition is None
+                            or admitted_agent_tool_definition.agent_id != binding.child.agent_id
+                            or agent_tool_count != 1
+                        ):
+                            raise GenericExecutionFailure(
+                                GenericExecutionErrorCode.AGENT_POLICY_DENIED,
+                                "Grounded Agent-as-Tool completion was not admitted",
+                            )
+                        agent_tool_completed = True
+                        usage = _usage_summary(getattr(context, "usage", None))
+                        await lifecycle_sink(
+                            GatewayLifecycleEvent(
+                                "agent.tool.completed",
+                                {
+                                    "from_agent_id": definition.agent_id,
+                                    "to_agent_id": binding.child.agent_id,
+                                    "tool_name": tool_name,
+                                    "tool_call_id_present": call_id_present,
+                                    "arguments_persisted": False,
+                                    "result_present": result is not None,
+                                    "result_persisted": False,
+                                    "parent_control_retained": True,
+                                    "usage_after": usage.model_dump(mode="json"),
+                                },
+                                payload_schema_version="okcanvas-agent-as-tool-completed-v1",
+                            )
+                        )
+                        return
                     if (
                         agent_tool_policy is None
                         or agent_tool_child_definition is None
@@ -1204,6 +1469,323 @@ class OpenAIGenericAgentGateway:
             else:
                 input_guardrails, output_guardrails = [], []
             sdk_handoffs: list[Any] = []
+            if grounded_agent_tool_bindings:
+                if grounded_interpretation_utterance is None:
+                    raise GenericExecutionFailure(
+                        GenericExecutionErrorCode.AGENT_POLICY_DENIED,
+                        "Grounded structured delegation has no user utterance",
+                    )
+                admission = GroundedDelegationAdmission(str(project_root))
+
+                async def add_grounded_child_tool(binding: Any) -> None:
+                    nonlocal agent_tool_count, admitted_agent_tool_definition
+                    child_definition_local = binding.child
+                    output_contract_local = grounded_output_contracts[child_definition_local.agent_id]
+                    output_type_local = output_contract_local.output_type
+                    child_agent_kwargs: dict[str, Any] = {
+                        "name": child_definition_local.name,
+                        "instructions": resolve_effective_instructions(child_definition_local),
+                        "model": settings.model,
+                        "tools": [],
+                        "mcp_servers": [],
+                        "handoffs": [],
+                        "output_type": output_type_local,
+                        "model_settings": ModelSettings(
+                            tool_choice="required",
+                            **reasoning_settings,
+                            **response_storage_settings,
+                        ),
+                        "reset_tool_choice": True,
+                    }
+                    child_agent_local = Agent(**child_agent_kwargs)
+                    sdk_definition_by_object[id(child_agent_local)] = child_definition_local
+                    child_run_config_local = RunConfig(
+                        model=settings.model,
+                        model_provider=model_provider,
+                        model_settings=ModelSettings(
+                            retry=model_retry_settings,
+                            **reasoning_settings,
+                            **response_storage_settings,
+                        ),
+                        workflow_name=child_definition_local.workflow_name,
+                        trace_id=trace_id,
+                        group_id=run_id,
+                        **trace_run_config_settings,
+                        trace_metadata={
+                            "run_id": run_id,
+                            "model_route_id": model_route.policy.route_id,
+                            "model_routing_policy_sha256": model_route.policy.policy_sha256,
+                            "model_retry_policy_id": model_retry_policy.policy_id,
+                            "model_retry_policy_sha256": model_retry_policy.policy_sha256,
+                            "reasoning_evidence_policy_id": reasoning_evidence_policy.policy_id,
+                            "reasoning_evidence_policy_sha256": reasoning_evidence_policy.policy_sha256,
+                            "response_storage_policy_id": response_storage_policy.policy_id,
+                            "response_storage_policy_sha256": response_storage_policy.policy_sha256,
+                            "provider_identifier_policy_id": provider_identifier_policy.policy_id,
+                            "provider_identifier_policy_sha256": provider_identifier_policy.policy_sha256,
+                            "trace_export_policy_id": trace_export_policy.policy_id,
+                            "trace_export_policy_sha256": trace_export_policy.policy_sha256,
+                            "agent_definition_id": child_definition_local.agent_id,
+                            "agent_definition_version": child_definition_local.version,
+                            "agent_definition_sha256": child_definition_local.definition_sha256,
+                            "invocation_kind": "GROUNDED_STRUCTURED_AGENT_AS_TOOL",
+                            "run_config_inherited": False,
+                        },
+                    )
+                    nested_stream_started_local = False
+
+                    async def on_grounded_nested_stream(envelope: Any) -> None:
+                        nonlocal nested_stream_started_local
+                        if self._native_stream_broker is None:
+                            return
+                        if not nested_stream_started_local:
+                            nested_stream_started_local = True
+                            await self._native_stream_broker.publish(
+                                run_id=run_id,
+                                event_type="agent.tool.stream.started",
+                                payload={
+                                    "agent_id": child_definition_local.agent_id,
+                                    "persisted": False,
+                                },
+                            )
+                        sdk_event = envelope.get("event") if isinstance(envelope, dict) else None
+                        adapted = adapt_sdk_stream_event(sdk_event)
+                        if adapted is None:
+                            return
+                        nested_type, nested_payload = adapted
+                        if nested_type == "agent.updated":
+                            nested_payload = {
+                                **nested_payload,
+                                "agent_id": child_definition_local.agent_id,
+                            }
+                        await self._native_stream_broker.publish(
+                            run_id=run_id,
+                            event_type=f"agent.tool.{nested_type}",
+                            payload={**nested_payload, "nested": True},
+                        )
+
+                    async def grounded_input_builder(options: dict[str, Any]) -> str:
+                        nonlocal agent_tool_count, admitted_agent_tool_definition
+                        raw = options.get("params")
+                        if not isinstance(raw, dict):
+                            raise GroundedDelegationContractError(
+                                "Structured delegation parameters are not an object"
+                            )
+                        async with grounded_admission_lock:
+                            if agent_tool_count != 0 or admitted_agent_tool_definition is not None:
+                                raise GroundedDelegationContractError(
+                                    "At most one grounded specialist may be admitted per Turn"
+                                )
+                            try:
+                                if binding.domain == "ORGANIZATION_CONTEXT":
+                                    child_request = admission.admit_organization(
+                                        raw=raw,
+                                        user_utterance=grounded_interpretation_utterance,
+                                        delegated_identity=delegated_mcp_identity,
+                                        session_focus=grounded_session_focus,
+                                        parent_side_effect=str((routing_context or {}).get("side_effect") or ""),
+                                    )
+                                    admitted_tool_choice = (
+                                        organization_context_named_tool_choice(child_request)
+                                    )
+                                elif binding.domain == "GROUPWARE":
+                                    child_request = admission.admit_groupware(
+                                        raw=raw,
+                                        user_utterance=grounded_interpretation_utterance,
+                                        delegated_identity=delegated_mcp_identity,
+                                        session_focus=grounded_session_focus,
+                                        parent_side_effect=str((routing_context or {}).get("side_effect") or ""),
+                                    )
+                                    admitted_tool_choice = groupware_named_tool_choice(child_request)
+                                else:
+                                    raise GroundedDelegationContractError(
+                                        "Unsupported grounded delegation domain"
+                                    )
+                                if not admitted_tool_choice:
+                                    raise GroundedDelegationContractError(
+                                        "Admitted child request did not resolve one exact MCP Tool"
+                                    )
+                                mcp_definition = grounded_mcp_definition_by_agent[
+                                    child_definition_local.agent_id
+                                ]
+                                access_bindings = MCPAccessCatalog(project_root).bind_many(
+                                    (mcp_definition,), delegated_mcp_identity
+                                )
+                                lazy_runtime = create_openai_mcp_runtime(
+                                    (mcp_definition,),
+                                    project_root=project_root,
+                                    access_bindings=access_bindings,
+                                    health_registry=MCPPassiveHealthRegistry(),
+                                )
+                                server = lazy_runtime.servers[0]
+                                await server.connect()
+                            except Exception as exc:
+                                await lifecycle_sink(
+                                    GatewayLifecycleEvent(
+                                        "agent.tool.admission.denied",
+                                        {
+                                            "from_agent_id": definition.agent_id,
+                                            "to_agent_id": child_definition_local.agent_id,
+                                            "arguments_persisted": False,
+                                            "stable_ids_from_model_accepted": False,
+                                            "detail_type": type(exc).__name__,
+                                        },
+                                        payload_schema_version=(
+                                            "okcanvas-grounded-agent-tool-admission-denied-v1"
+                                        ),
+                                        source=EventSource.RUNTIME,
+                                    )
+                                )
+                                raise
+                            child_agent_local.mcp_servers = [server]
+                            child_agent_local.model_settings = ModelSettings(
+                                tool_choice=admitted_tool_choice,
+                                **reasoning_settings,
+                                **response_storage_settings,
+                            )
+                            grounded_connected_servers[child_definition_local.agent_id] = server
+                            grounded_admitted_request_by_agent[child_definition_local.agent_id] = (
+                                child_request
+                            )
+                            admitted_agent_tool_definition = child_definition_local
+                            agent_tool_count = 1
+                            await lifecycle_sink(
+                                GatewayLifecycleEvent(
+                                    "agent.tool.admitted",
+                                    {
+                                        "from_agent_id": definition.agent_id,
+                                        "to_agent_id": child_definition_local.agent_id,
+                                        "capability_id": (
+                                            "organization-context-read-v1"
+                                            if binding.domain == "ORGANIZATION_CONTEXT"
+                                            else "groupware-read-v1"
+                                        ),
+                                        "side_effect": "READ",
+                                        "arguments_persisted": False,
+                                        "stable_ids_from_model_accepted": False,
+                                        "selected_child_mcp_connected": True,
+                                    },
+                                    payload_schema_version="okcanvas-grounded-agent-tool-admitted-v1",
+                                    source=EventSource.RUNTIME,
+                                )
+                            )
+                            await lifecycle_sink(
+                                GatewayLifecycleEvent(
+                                    "agent.tool.started",
+                                    {
+                                        "from_agent_id": definition.agent_id,
+                                        "to_agent_id": child_definition_local.agent_id,
+                                        "tool_name": agent_tool_name(child_definition_local),
+                                        "arguments_persisted": False,
+                                        "result_persisted": False,
+                                        "input_mode": "STRUCTURED_MODEL_INTERPRETATION",
+                                        "output_mode": binding.policy.output_mode,
+                                    },
+                                    payload_schema_version="okcanvas-agent-as-tool-started-v1",
+                                    source=EventSource.RUNTIME,
+                                )
+                            )
+                            return child_request
+
+                    async def extract_grounded_nested_output(result: Any) -> str:
+                        child_request = grounded_admitted_request_by_agent.get(
+                            child_definition_local.agent_id
+                        )
+                        if child_request is None:
+                            raise AgentToolContractError(
+                                "Grounded child output has no admitted request"
+                            )
+                        try:
+                            draft = result.final_output_as(
+                                output_type_local, raise_if_incorrect_type=True
+                            )
+                            normalization = output_contract_local.normalize_nested_result(
+                                result=result, output=draft, request=child_request
+                            )
+                            payload = normalization.output.model_dump(
+                                mode="json", round_trip=True
+                            )
+                            serialized = json.dumps(
+                                payload, ensure_ascii=False, separators=(",", ":")
+                            )
+                        except Exception as exc:
+                            diagnostic = _safe_structured_output_failure_diagnostic(
+                                exc,
+                                output_contract=child_definition_local.output_contract,
+                                agent_id=child_definition_local.agent_id,
+                            )
+                            await lifecycle_sink(
+                                GatewayLifecycleEvent(
+                                    "agent.tool.output.normalization.failed",
+                                    diagnostic,
+                                    payload_schema_version=(
+                                        "okcanvas-agent-tool-output-normalization-failed-v1"
+                                    ),
+                                    source=EventSource.AGENT_SDK,
+                                )
+                            )
+                            raise AgentToolContractError(
+                                "Nested Agent output could not be normalized"
+                            ) from exc
+                        if len(serialized.encode("utf-8")) > binding.policy.max_result_bytes:
+                            raise AgentToolContractError(
+                                "Nested Agent structured result exceeds the configured bound"
+                            )
+                        await lifecycle_sink(
+                            GatewayLifecycleEvent(
+                                "agent.tool.output.normalized",
+                                {
+                                    "agent_id": child_definition_local.agent_id,
+                                    "output_contract": child_definition_local.output_contract,
+                                    "normalization_strategy": (
+                                        output_contract_local.nested_normalization_strategy
+                                    ),
+                                    **normalization.metadata,
+                                },
+                                payload_schema_version="okcanvas-agent-tool-output-normalized-v1",
+                                source=EventSource.AGENT_SDK,
+                            )
+                        )
+                        return serialized
+
+                    if binding.domain == "ORGANIZATION_CONTEXT":
+                        parameters = OrganizationReadDelegationInput
+                        description = (
+                            "Use for exactly one grounded, read-only Organization Context request. "
+                            "Interpret natural language using the turn-local grounded context. "
+                            "Never supply a stable entity ID; use context_reference_mode=SESSION_FOCUS "
+                            "only when the current grounded focus is the intended entity."
+                        )
+                    elif binding.domain == "GROUPWARE":
+                        parameters = GroupwareReadDelegationInput
+                        description = (
+                            "Use for exactly one grounded, read-only Groupware resource: notice, mail, "
+                            "or calendar. Use context_reference_mode=SESSION_FOCUS only when the user "
+                            "clearly refers to the current grounded entity."
+                        )
+                    else:
+                        raise GenericExecutionFailure(
+                            GenericExecutionErrorCode.AGENT_POLICY_DENIED,
+                            "Unsupported grounded child binding",
+                        )
+                    sdk_tools.append(
+                        build_sdk_agent_tool(
+                            child_sdk_agent=child_agent_local,
+                            child_definition=child_definition_local,
+                            policy=binding.policy,
+                            run_config=child_run_config_local,
+                            hooks=ProductRunHooks(),
+                            on_stream=on_grounded_nested_stream,
+                            custom_output_extractor=extract_grounded_nested_output,
+                            parameters=parameters,
+                            input_builder=grounded_input_builder,
+                            tool_description=description,
+                        )
+                    )
+
+                for grounded_binding in grounded_agent_tool_bindings:
+                    await add_grounded_child_tool(grounded_binding)
+
             if (
                 agent_tool_child_definition is not None
                 and agent_tool_policy is not None
@@ -1222,6 +1804,8 @@ class OpenAIGenericAgentGateway:
                     child_tool_choice = (
                         organization_context_named_tool_choice(request)
                         if organization_context_session_binding is not None
+                        else groupware_named_tool_choice(request)
+                        if groupware_session_binding is not None
                         else None
                     ) or "required"
                     child_agent_kwargs["model_settings"] = ModelSettings(
@@ -1276,6 +1860,9 @@ class OpenAIGenericAgentGateway:
                             child_tool_choice
                             if organization_context_session_binding is not None
                             else None
+                        ),
+                        "groupware_named_tool_choice": (
+                            child_tool_choice if groupware_session_binding is not None else None
                         ),
                     },
                 )
@@ -1408,9 +1995,10 @@ class OpenAIGenericAgentGateway:
                         policy=handoff_policy,
                     )
                 )
+            root_instructions = resolve_effective_instructions(definition)
             agent_kwargs: dict[str, Any] = {
                 "name": definition.name,
-                "instructions": resolve_effective_instructions(definition),
+                "instructions": root_instructions,
                 "model": settings.model,
                 "tools": sdk_tools,
                 "mcp_servers": root_active_mcp_servers,
@@ -1424,12 +2012,23 @@ class OpenAIGenericAgentGateway:
                 agent_kwargs["model_settings"] = ModelSettings(**selected_model_settings)
                 agent_kwargs["reset_tool_choice"] = True
             elif sdk_tools:
-                if delegated_session_binding is None or delegated_route_required:
+                if (
+                    not grounded_structured_delegation_enabled
+                    and (delegated_session_binding is None or delegated_route_required)
+                ):
                     agent_kwargs["model_settings"] = ModelSettings(
                         tool_choice="required", **reasoning_settings, **response_storage_settings
                     )
             agent = Agent(**agent_kwargs)
             sdk_definition_by_object[id(agent)] = definition
+
+            def grounded_model_input_filter(data: Any) -> Any:
+                if grounded_interpretation_context_text is None:
+                    return data.model_data
+                return _inject_grounded_interpretation_context(
+                    data.model_data, grounded_interpretation_context_text
+                )
+
             run_config = RunConfig(
                 model=settings.model,
                 model_provider=model_provider,
@@ -1437,6 +2036,11 @@ class OpenAIGenericAgentGateway:
                 workflow_name=definition.workflow_name,
                 trace_id=trace_id,
                 group_id=run_id,
+                call_model_input_filter=(
+                    grounded_model_input_filter
+                    if grounded_interpretation_context_text is not None
+                    else None
+                ),
                 **trace_run_config_settings,
                 trace_metadata={
                     "run_id": run_id,
@@ -1583,6 +2187,12 @@ class OpenAIGenericAgentGateway:
                 await raise_guardrail_failure(exc)
                 raise AssertionError("unreachable")
             finally:
+                for server in tuple(grounded_connected_servers.values()):
+                    try:
+                        await server.cleanup()
+                    except Exception:
+                        pass
+                grounded_connected_servers.clear()
                 if sdk_session is not None:
                     close = getattr(sdk_session, "close", None)
                     if callable(close):
@@ -1670,11 +2280,13 @@ class OpenAIGenericAgentGateway:
             except GenericExecutionFailure:
                 raise
             except Exception as exc:
+                diagnostic = _safe_model_behavior_failure_diagnostic(exc)
                 raise GenericExecutionFailure(
                     GenericExecutionErrorCode.SDK_RUN_FAILED,
                     "OpenAI Agents SDK run failed",
                     retryable=True,
                     detail_type=type(exc).__name__,
+                    diagnostic=diagnostic,
                 ) from exc
         finally:
             await model_provider.aclose()
@@ -1686,15 +2298,27 @@ class OpenAIGenericAgentGateway:
             )
 
         agent_tool_invocation_required = bool(
-            agent_tool_child_definition is not None
+            not grounded_structured_delegation_enabled
+            and agent_tool_child_definition is not None
             and (delegated_session_binding is None or delegated_route_required)
         )
-        if agent_tool_invocation_required and agent_tool_count != 1:
+        if grounded_structured_delegation_enabled:
+            if agent_tool_count not in {0, 1}:
+                raise GenericExecutionFailure(
+                    GenericExecutionErrorCode.AGENT_POLICY_DENIED,
+                    "Grounded Session Root exceeded the one-child-per-Turn bound",
+                )
+            if agent_tool_count == 1 and not agent_tool_completed:
+                raise GenericExecutionFailure(
+                    GenericExecutionErrorCode.AGENT_POLICY_DENIED,
+                    "Grounded Session child invocation did not complete",
+                )
+        elif agent_tool_invocation_required and agent_tool_count != 1:
             raise GenericExecutionFailure(
                 GenericExecutionErrorCode.AGENT_POLICY_DENIED,
                 "Agent-as-Tool parent completed without the required single child invocation",
             )
-        if not agent_tool_invocation_required and agent_tool_count != 0:
+        elif not agent_tool_invocation_required and agent_tool_count != 0:
             raise GenericExecutionFailure(
                 GenericExecutionErrorCode.AGENT_POLICY_DENIED,
                 "Agent-as-Tool invocation was not authorized by the Product routing context",

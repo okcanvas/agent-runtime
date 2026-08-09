@@ -15,11 +15,11 @@ from fastapi.testclient import TestClient
 
 from okcanvas_agent_runtime.agent.definitions import AgentDefinitionCatalog
 from okcanvas_agent_runtime.application.assistant_routing import OrganizationAssistantRoutingService
+from okcanvas_agent_runtime.application.assistant_routing.cross_domain_session import CrossDomainSessionDelegationCatalog
 from okcanvas_agent_runtime.application.execution import OpenAIGenericAgentGateway
 from okcanvas_agent_runtime.application.execution import openai_gateway as gateway_module
 from okcanvas_agent_runtime.application.execution.contracts import GenericGatewayRunResult, GatewayLifecycleEvent
 from okcanvas_agent_runtime.application.groupware_read import (
-    GroupwareSessionDelegationCatalog,
     requires_groupware_session_delegation,
 )
 from okcanvas_agent_runtime.application.mcp_access import DelegatedMCPIdentity
@@ -237,24 +237,24 @@ def test_step087_exact_composition_and_runtime_binding() -> None:
     definitions = AgentDefinitionCatalog(ROOT)
     root = definitions.resolve("organization-assistant-session-agent")
     child = definitions.resolve("groupware-read-agent")
-    composition = GroupwareSessionDelegationCatalog(ROOT).resolve(root)
-    assert root.agent_tools == (child.agent_id,)
+    composition = CrossDomainSessionDelegationCatalog(ROOT).resolve(root)
+    assert root.agent_tools == ("groupware-read-agent", "organization-context-read-agent")
     assert root.session_mode == "sqlite-v1"
     assert root.output_contract == "OrganizationAssistantResult"
     assert child.session_mode == "disabled"
     assert child.output_contract == "GroupwareReadResult"
     assert child.mcp_servers == ("groupware-read",)
-    assert composition.policy.root_session_only is True
     assert composition.policy.delegated_identity_required is True
     assert composition.policy.write_enabled is False
+    assert [item.domain for item in composition.targets] == ["GROUPWARE", "ORGANIZATION_CONTEXT"]
     binding = AgentRuntimeBindingCatalog(ROOT).resolve(root)
-    assert binding.execution_path == "sqlite-session-stateless-groupware-subagent-execution-v1"
-    assert binding.session_policy["groupware_session_delegation"]["max_depth"] == 1
-    assert binding.agent_tool_policy["child_output_contract"] == "GroupwareReadResult"
-    assert binding.mcp_servers[0]["owner_agent_id"] == "groupware-read-agent"
+    assert binding.execution_path == "sqlite-session-bounded-cross-domain-read-subagent-execution-v1"
+    assert binding.session_policy["cross_domain_session_delegation"]["max_depth"] == 1
+    assert [item["domain"] for item in binding.agent_tool_policy["targets"]] == ["GROUPWARE", "ORGANIZATION_CONTEXT"]
+    assert {item["owner_agent_id"] for item in binding.mcp_servers} == {"groupware-read-agent", "organization-context-read-agent"}
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.78.2"
+    assert info.step == "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE"
     assert info.main_assistant_groupware_session_delegation_implemented is True
     assert info.main_assistant_groupware_live_openai_provider_verified is False
     assert info.step087_windows_deterministic_accepted is False

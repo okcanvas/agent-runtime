@@ -17,10 +17,13 @@ from okcanvas_agent_runtime.domain.sessions import SessionRuntimeError
 from okcanvas_agent_runtime.domain.project_snapshots.errors import ProjectSnapshotError
 from okcanvas_agent_runtime.application.submissions.protected_payload import ProtectedPayloadContent
 from okcanvas_agent_runtime.application.mcp_access import DelegatedMCPIdentity, MCPAccessCatalog, MCPAccessContractError
-from okcanvas_agent_runtime.application.groupware_read import (
-    GroupwareSessionDelegationCatalog,
-    GroupwareSessionDelegationContractError,
-    requires_groupware_session_delegation,
+from okcanvas_agent_runtime.application.assistant_routing.cross_domain_session import (
+    CrossDomainSessionContractError,
+    CrossDomainSessionDelegationCatalog,
+)
+from okcanvas_agent_runtime.application.assistant_interpretation import (
+    extract_grounded_routing_context,
+    grounded_structured_delegation_requested,
 )
 from okcanvas_agent_runtime.application.organization_context import (
     OrganizationContextSessionDelegationCatalog,
@@ -116,11 +119,12 @@ class RunSubmissionBoundaryService:
         mcp_server_ids = list(definition.mcp_servers)
         if definition.agent_id == "organization-assistant-session-agent":
             try:
-                groupware_binding = GroupwareSessionDelegationCatalog(self._project_root).resolve(definition)
-            except GroupwareSessionDelegationContractError as exc:
+                cross_domain_binding = CrossDomainSessionDelegationCatalog(self._project_root).resolve(definition)
+                cross_domain_target = cross_domain_binding.target_for_request(normalized)
+            except CrossDomainSessionContractError as exc:
                 raise RunSubmissionValidationError(str(exc)) from exc
-            if requires_groupware_session_delegation(normalized):
-                mcp_server_ids.append(groupware_binding.mcp_server_id)
+            if cross_domain_target is not None:
+                mcp_server_ids.append(cross_domain_target.mcp_server_id)
         elif definition.agent_id == "organization-context-session-agent":
             try:
                 context_binding = OrganizationContextSessionDelegationCatalog(self._project_root).resolve(definition)
@@ -129,21 +133,32 @@ class RunSubmissionBoundaryService:
             if requires_organization_context_session_delegation(normalized):
                 mcp_server_ids.append(context_binding.mcp_server_id)
         mcp_servers = self._mcp.resolve_many(tuple(mcp_server_ids))
+        grounded_identity_required = bool(
+            definition.agent_id == "organization-assistant-session-agent"
+            and grounded_structured_delegation_requested(
+                extract_grounded_routing_context(normalized)
+            )
+        )
         delegated_identity = None
-        if any(item.requires_delegated_identity for item in mcp_servers):
+        if any(item.requires_delegated_identity for item in mcp_servers) or grounded_identity_required:
             if ownership_transition is None:
                 raise RunSubmissionAuthorityError(
-                    "Delegated Remote MCP requires an authenticated service principal"
+                    "Delegated or grounded Session read requires an authenticated service principal"
                 )
             delegated_identity = DelegatedMCPIdentity.create(
                 tenant_id=ownership_transition.tenant_id,
                 principal_id=ownership_transition.principal_id,
                 roles=ownership_transition.roles,
             )
-            try:
-                self._mcp_access.bind_many(mcp_servers, delegated_identity)
-            except MCPAccessContractError as exc:
-                raise RunSubmissionAuthorityError(str(exc)) from exc
+            # Grounded interpretation needs authenticated principal identity before the legacy
+            # route has selected a child, but it must not pre-bind every possible execution MCP.
+            # Existing selected MCPs are still access-validated here; hint and lazy child MCPs bind
+            # later at their own bounded Runtime boundaries.
+            if mcp_servers:
+                try:
+                    self._mcp_access.bind_many(mcp_servers, delegated_identity)
+                except MCPAccessContractError as exc:
+                    raise RunSubmissionAuthorityError(str(exc)) from exc
         function_tools = self._function_tools.resolve_many(definition.tools)
         runtime_binding = self._runtime_bindings.resolve(definition)
         approval_modes = {item.approval_mode for item in function_tools}
@@ -187,7 +202,7 @@ class RunSubmissionBoundaryService:
                 "sqlite-session-native-handoff-execution-v1",
                 "sqlite-session-native-guardrail-execution-v1",
                 "sqlite-session-native-agent-tool-execution-v1",
-                "sqlite-session-stateless-groupware-subagent-execution-v1",
+                "sqlite-session-bounded-cross-domain-read-subagent-execution-v1", "sqlite-session-stateless-groupware-subagent-execution-v1",
                 "sqlite-session-stateless-organization-context-subagent-execution-v1",
                 "sqlite-session-native-mcp-execution-v1",
             }:
@@ -212,6 +227,9 @@ class RunSubmissionBoundaryService:
             elif runtime_binding.execution_path == "sqlite-session-native-agent-tool-execution-v1":
                 mode = self._policy.read_only_execution_mode
                 reasons = ("sqlite-session-native-agent-tool-turn",)
+            elif runtime_binding.execution_path == "sqlite-session-bounded-cross-domain-read-subagent-execution-v1":
+                mode = self._policy.read_only_execution_mode
+                reasons = ("sqlite-session-bounded-cross-domain-read-subagent-turn",)
             elif runtime_binding.execution_path == "sqlite-session-stateless-groupware-subagent-execution-v1":
                 mode = self._policy.read_only_execution_mode
                 reasons = ("sqlite-session-stateless-groupware-subagent-turn",)

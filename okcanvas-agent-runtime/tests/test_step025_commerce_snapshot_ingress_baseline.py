@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_step025_runtime_baseline() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.commerce_snapshot_ingress_implemented is True
     assert info.commerce_snapshot_ingress_mode == "product-owned-loopback-http-before-preflight"
     assert info.commerce_snapshot_ingress_adapter_id == "controlled-commerce-http"

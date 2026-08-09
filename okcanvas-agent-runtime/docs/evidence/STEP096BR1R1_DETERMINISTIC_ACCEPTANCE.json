@@ -1,0 +1,43 @@
+{
+  "schema_version": "okcanvas-step096br1r1-deterministic-acceptance-v1",
+  "step": "STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+  "version": "2.80.1",
+  "validation_mode": "LOCAL_DETERMINISTIC_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+  "state": "PASSED",
+  "checks": {
+    "step096br1r1_static_contract": true,
+    "python_compileall": true,
+    "focused_regression_pytest": true,
+    "focused_regression_exact_pass_count": true,
+    "diagnostic_only_no_live_claim": true,
+    "broad_historical_suite_not_claimed": true
+  },
+  "passed_checks": 6,
+  "total_checks": 6,
+  "static": {
+    "state": "PASSED",
+    "step": "STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+    "version": "2.80.1",
+    "parent_step": "STEP096B_GROUNDED_LLM_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+    "parent_version": "2.80.0",
+    "checks": {
+      "identity_exact": true,
+      "step096b_behavior_retained_except_identity": true,
+      "model_completed_records_content_free_item_type_counts": true,
+      "model_behavior_error_has_bounded_safe_categories": true,
+      "generic_sdk_failure_persists_safe_diagnostic_only": true,
+      "focused_diagnostic_tests_are_content_free": true,
+      "functional_semantics_not_claimed_changed": true,
+      "windows_live_rerun_required": true
+    },
+    "passed_checks": 8,
+    "total_checks": 8
+  },
+  "focused_pytest": {
+    "returncode": 0,
+    "summary": "66 passed in 1.08s",
+    "stderr_present": false
+  },
+  "compileall_returncode": 0,
+  "windows_live": "NOT_RUN"
+}

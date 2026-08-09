@@ -30,4 +30,4 @@ def test_registry_step080a_records_are_historical_after_step081() -> None:
         "sh_run_step080a_acceptance.cmd",
         "sh_run_step080a_live_acceptance.cmd",
     }.issubset(historical)
-    assert payload["current_step"] == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert payload["current_step"] == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"

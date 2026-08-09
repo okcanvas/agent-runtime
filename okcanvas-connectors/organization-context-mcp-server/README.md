@@ -1,8 +1,8 @@
 # OKCanvas Organization Context MCP Server
 
 ```text
-Step: CONNECTOR_ORGANIZATION_CONTEXT_STEP002R1_RUNTIME_WIRING_CONTRACT_ALIGNMENT
-Version: 0.2.1
+Step: CONNECTOR_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE
+Version: 0.3.0
 Production: true
 Read-only: true
 Production SOT: external Organization Context database
@@ -23,6 +23,6 @@ get_organization_catalog_state
 get_organization_changes
 ```
 
-The first three Tools support unified entities and relationships. The retained five Tools preserve the STEP001 Glossary contract. No create/update/delete MCP Tool exists; external product administration remains outside the Agent boundary.
+`get_organization_entity` returns one stable entity, normalized relationships, and explicit completeness metadata: total relation count, returned count and a truncation flag. Missing or inconsistent completeness evidence fails closed before the response is exposed as MCP Tool evidence.
 
-The optional Example is located at `okcanvas-connector-examples/organization-context/organization-context-api-fake`. It is a construction guide, not a Connector dependency.
+The Connector has no create/update/delete MCP Tool. The optional Example under `okcanvas-connector-examples/organization-context` is a construction guide, not a production dependency.

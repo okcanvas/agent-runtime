@@ -1,0 +1,25 @@
+{
+  "broad_historical_tests": "NOT_CLAIMED_STALE_FIXTURES_RECORDED",
+  "focused_cross_domain_parent_live": "R10E_24_OF_24_USER_REPORTED_RETAINED_HISTORICAL_EVIDENCE",
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "next_agent_native_step": "STEP096B_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+  "parent_package_sha256": "b840758a000c79e076d361c27dd39c4f57884e1c7cbd8011107f7a9395e28270",
+  "parent_workspace_step": "WORKSPACE_STEP008R4R10ER1_CROSS_DOMAIN_LIVE_ACCEPTANCE_PROMOTION_CLOSURE",
+  "parent_workspace_version": "0.8.4-r10er1",
+  "promotion": "CANDIDATE_LOCAL_DETERMINISTIC_ACCEPTED_LIVE_NOT_RUN",
+  "runtime_product_source_changed": true,
+  "runtime_step": "STEP096A_GROUNDED_LLM_INTERPRETATION_CONTEXT_SHADOW_FOUNDATION",
+  "runtime_version": "2.79.0",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "LOCAL_DETERMINISTIC_ACCEPTED_LIVE_NOT_RUN",
+  "step095a_memory_audit": "SEPARATE_BACKLOG_NOT_IMPLEMENTED",
+  "step096a_deterministic": {
+    "checks": "6/6",
+    "focused_pytest": "48/48",
+    "runtime_static": "19/19",
+    "state": "PASSED"
+  },
+  "step096a_windows_live": "NOT_RUN",
+  "workspace_step": "WORKSPACE_STEP008R4R11_RUNTIME_STEP096A_GROUNDED_LLM_INTERPRETATION_CONTEXT_SHADOW_FOUNDATION",
+  "workspace_version": "0.8.4-r11"
+}

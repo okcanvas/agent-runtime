@@ -1,0 +1,62 @@
+{
+  "projects": [
+    {
+      "baseline": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+      "environment": ".venv",
+      "kind": "python-service",
+      "path": "okcanvas-agent-runtime",
+      "production": true,
+      "project_id": "agent-runtime",
+      "version": "2.78.2"
+    },
+    {
+      "baseline": "CLI_STEP001R1_WINDOWS_NODE_TEST_RUNNER_PATH_SPACE_CLOSURE",
+      "environment": "node_modules",
+      "implementation_state": "PRODUCT_READY",
+      "kind": "node-client",
+      "path": "okcanvas-agent-cli",
+      "production": true,
+      "project_id": "agent-service-cli",
+      "version": "0.2.1"
+    },
+    {
+      "baseline": "CONNECTOR_STEP002_STABLE_ORGANIZATION_CONTEXT_REFERENCE_FILTER",
+      "environment": ".venv",
+      "kind": "python-service",
+      "path": "okcanvas-connectors/groupware-mcp-server",
+      "production": true,
+      "project_id": "groupware-mcp-connector",
+      "version": "0.2.0"
+    },
+    {
+      "baseline": "EXAMPLE_STEP002_GROUPWARE_STABLE_CONTEXT_REFERENCE_FIXTURE",
+      "environment": "node_modules",
+      "kind": "node-example",
+      "path": "okcanvas-connector-examples/groupware/groupware-api-fake",
+      "production": false,
+      "project_id": "groupware-api-fake-example",
+      "version": "0.2.0"
+    },
+    {
+      "baseline": "CONNECTOR_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE",
+      "environment": ".venv",
+      "kind": "python-service",
+      "path": "okcanvas-connectors/organization-context-mcp-server",
+      "production": true,
+      "project_id": "organization-context-mcp-connector",
+      "version": "0.3.0"
+    },
+    {
+      "baseline": "EXAMPLE_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE",
+      "environment": "node_modules",
+      "kind": "node-example",
+      "path": "okcanvas-connector-examples/organization-context/organization-context-api-fake",
+      "production": false,
+      "project_id": "organization-context-api-fake-example",
+      "version": "0.3.0"
+    }
+  ],
+  "schema_version": "okcanvas-agent-platform-project-catalog-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+  "workspace_version": "0.8.4-r10e"
+}

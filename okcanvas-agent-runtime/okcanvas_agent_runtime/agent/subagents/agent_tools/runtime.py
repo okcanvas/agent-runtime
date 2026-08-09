@@ -98,6 +98,9 @@ def build_sdk_agent_tool(
     hooks: Any,
     on_stream: Callable[[Any], Awaitable[None]],
     custom_output_extractor: Callable[[Any], Awaitable[str]],
+    parameters: type[Any] | None = None,
+    input_builder: Callable[[dict[str, Any]], Any] | None = None,
+    tool_description: str | None = None,
 ) -> Any:
     if policy.inherit_parent_run_config:
         raise AgentToolContractError("STEP042 forbids implicit parent RunConfig inheritance")
@@ -106,8 +109,11 @@ def build_sdk_agent_tool(
     return child_sdk_agent.as_tool(
         tool_name=agent_tool_name(child_definition),
         tool_description=(
-            f"Invoke the declared {child_definition.name} specialist exactly once and return its "
-            "bounded structured result to the parent Agent."
+            tool_description
+            or (
+                f"Invoke the declared {child_definition.name} specialist exactly once and return its "
+                "bounded structured result to the parent Agent."
+            )
         ),
         custom_output_extractor=custom_output_extractor,
         on_stream=on_stream,
@@ -117,4 +123,7 @@ def build_sdk_agent_tool(
         session=None,
         failure_error_function=None,
         needs_approval=False,
+        parameters=parameters,
+        input_builder=input_builder,
+        include_input_schema=False,
     )

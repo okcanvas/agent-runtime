@@ -1,68 +1,16 @@
 # OKCanvas Agent Runtime HANDOFF
 
-```text
-Current Workspace: WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING
-Workspace Version: 0.8.4-r7a1
-Current Runtime: STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE
-Runtime Version: 2.75.0
-State: RUNTIME_PRODUCT_UNCHANGED_STEP091D_OBJECT_STORAGE_LIVE_PENDING
-Promotion: NOT_READY_AT_WORKSPACE_R7A1
-```
+Current Workspace: WORKSPACE_STEP008R4R12R4_STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE
+Workspace Version: 0.8.4-r12r4
+Current Runtime: STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE
+Runtime Version: 2.80.2
 
-## Runtime status
+State: LOCAL_DETERMINISTIC_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
 
-Runtime Product identity remains `STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE / 2.75.0`.
-STEP008R4R7A1 changes Workspace Git metadata/governance surfaces only. It does not introduce a new
-Runtime Product Step. The nested Runtime `.gitignore` now explicitly re-includes the retained
-`clients/cli/dist/` artifact for fresh Git repositories.
+## STEP096BR1R2 correction
 
-STEP091D retains:
+The grounded Session Root may need Organization SOT hints before legacy route-v2 has selected a specialist. Submission preflight therefore creates delegated identity from the authenticated service-principal ownership transition whenever the explicit grounded structured-delegation marker is present. This identity is protected Runtime state; it is not a model-generated canonical ID and it does not grant every MCP access. Existing selected MCPs are still bound normally, while Hint and lazy child MCPs bind later at their own boundaries.
 
-```text
-ArtifactBlobStorePort                    retained
-ObjectStorageArtifactBlobStore           retained
-S3-compatible boto3 deployment client    implemented
-Environment composition                  implemented
-Default Artifact backend                 local-filesystem-artifact-v1
-Default Product topology                 sqlite-local-v1
-Real Object Storage live                 DEFERRED until MinIO is prepared
-```
+The hint provider exposes a bounded diagnostic code for unavailable states. The Root lifecycle event may record that code plus identity/capability booleans, but raw errors, credentials and Tool payloads remain excluded.
 
-Parent STEP091B3R1 real PostgreSQL acceptance remains historical and accepted 19/19.
-
-## Current-document SOT correction
-
-The full-code audit found this Runtime HANDOFF/README were current but `PLANS.md` was stale at
-STEP091B3R1. Current identity is now centralized in `../specs/workspace/current-baseline.json` and
-all three Runtime current documents carry the same exact Workspace/Runtime marker block.
-
-Historical STEP091B3R1/STEP091C/STEP091D evidence files keep their original identity and must not be
-bulk-rewritten to the newest Workspace corrective Step.
-
-## Retained Product-owned capability identities
-
-```text
-Product-owned Skill package     document-review-v1
-Function Tool                   local_text_fingerprint
-Function Tool                   local_text_metrics
-Function Tool                   project_readonly_inspect
-Function Tool                   sandbox_project_readonly_inspect
-Reference capability            reference-catalog
-Organization Context Connector  organization-context-read
-Groupware Connector boundary    groupware-read
-Groupware deployment mode       external-connector-service
-Groupware Connector project     okcanvas-connectors/groupware-mcp-server
-Groupware Example class         EXAMPLE_TEMPLATE_ONLY
-```
-
-## Open implementation boundaries
-
-```text
-MinIO/Object Storage live         DEFERRED_BY_USER
-Artifact orphan inventory / GC    NOT_IMPLEMENTED
-Production DB migration           NOT_IMPLEMENTED
-Distributed Session history       NOT_IMPLEMENTED
-API/Worker physical split         NOT_IMPLEMENTED
-Worker heartbeat/lease renewal    NOT_IMPLEMENTED
-Distributed Worker lease          NOT_IMPLEMENTED
-```
+No change is made in this corrective to `model_can_answer_without_child`. The next Windows Live rerun first proves that the grounded hint plane is actually active; only then may specialist-use policy be evaluated.

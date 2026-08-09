@@ -1,0 +1,260 @@
+{
+  "schema_version": "okcanvas-session-context-relation-follow-up-policy-v1",
+  "policy_id": "session-context-relation-follow-up-v1",
+  "version": "1.0.0",
+  "max_results": 20,
+  "source_references": [
+    {
+      "entity_types": [
+        "EMPLOYEE"
+      ],
+      "expressions": [
+        "그 사람",
+        "그 사람이",
+        "그 직원",
+        "그 직원이",
+        "그 담당자",
+        "그 담당자가",
+        "해당 직원",
+        "해당 직원이",
+        "해당 담당자",
+        "해당 담당자가",
+        "그분",
+        "그분이",
+        "그 사람의",
+        "그 직원의",
+        "그 담당자의",
+        "해당 직원의",
+        "해당 담당자의",
+        "그분의"
+      ]
+    },
+    {
+      "entity_types": [
+        "PRODUCT"
+      ],
+      "expressions": [
+        "그 제품",
+        "그 제품이",
+        "해당 제품",
+        "해당 제품이",
+        "그 제품의",
+        "해당 제품의"
+      ]
+    },
+    {
+      "entity_types": [
+        "CLIENT"
+      ],
+      "expressions": [
+        "그 고객",
+        "그 고객이",
+        "해당 고객",
+        "해당 고객이",
+        "그 거래처",
+        "그 거래처가",
+        "해당 거래처",
+        "해당 거래처가",
+        "그 고객의",
+        "해당 고객의",
+        "그 거래처의",
+        "해당 거래처의"
+      ]
+    },
+    {
+      "entity_types": [
+        "PROJECT"
+      ],
+      "expressions": [
+        "그 프로젝트",
+        "그 프로젝트가",
+        "해당 프로젝트",
+        "해당 프로젝트가",
+        "그 프로젝트의",
+        "해당 프로젝트의"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "pattern_id": "employee-managed-products-v1",
+      "source_entity_types": [
+        "EMPLOYEE"
+      ],
+      "relation_type": "EMPLOYEE_MANAGES_PRODUCT",
+      "direction": "OUTBOUND",
+      "result_entity_types": [
+        "PRODUCT"
+      ],
+      "forms": [
+        "담당하는 제품",
+        "담당하는 제품은",
+        "담당 제품",
+        "담당 제품은",
+        "관리하는 제품",
+        "관리하는 제품은"
+      ]
+    },
+    {
+      "pattern_id": "employee-managed-clients-v1",
+      "source_entity_types": [
+        "EMPLOYEE"
+      ],
+      "relation_type": "EMPLOYEE_MANAGES_CLIENT",
+      "direction": "OUTBOUND",
+      "result_entity_types": [
+        "CLIENT"
+      ],
+      "forms": [
+        "담당하는 고객",
+        "담당하는 고객은",
+        "담당 고객",
+        "담당 고객은",
+        "담당 거래처",
+        "담당 거래처는",
+        "관리하는 고객",
+        "관리하는 고객은"
+      ]
+    },
+    {
+      "pattern_id": "employee-managed-projects-v1",
+      "source_entity_types": [
+        "EMPLOYEE"
+      ],
+      "relation_type": "EMPLOYEE_MANAGES_PROJECT",
+      "direction": "OUTBOUND",
+      "result_entity_types": [
+        "PROJECT"
+      ],
+      "forms": [
+        "담당하는 프로젝트",
+        "담당하는 프로젝트는",
+        "담당 프로젝트",
+        "담당 프로젝트는",
+        "관리하는 프로젝트",
+        "관리하는 프로젝트는"
+      ]
+    },
+    {
+      "pattern_id": "employee-department-v1",
+      "source_entity_types": [
+        "EMPLOYEE"
+      ],
+      "relation_type": "EMPLOYEE_BELONGS_TO_DEPARTMENT",
+      "direction": "OUTBOUND",
+      "result_entity_types": [
+        "DEPARTMENT"
+      ],
+      "forms": [
+        "소속 부서",
+        "소속 부서는"
+      ]
+    },
+    {
+      "pattern_id": "employee-manager-v1",
+      "source_entity_types": [
+        "EMPLOYEE"
+      ],
+      "relation_type": "EMPLOYEE_REPORTS_TO_EMPLOYEE",
+      "direction": "OUTBOUND",
+      "result_entity_types": [
+        "EMPLOYEE"
+      ],
+      "forms": [
+        "상사",
+        "상사는",
+        "보고 대상",
+        "보고 대상은"
+      ]
+    },
+    {
+      "pattern_id": "product-owner-department-v1",
+      "source_entity_types": [
+        "PRODUCT"
+      ],
+      "relation_type": "PRODUCT_OWNED_BY_DEPARTMENT",
+      "direction": "OUTBOUND",
+      "result_entity_types": [
+        "DEPARTMENT"
+      ],
+      "forms": [
+        "담당 부서",
+        "담당 부서는",
+        "소유 부서",
+        "소유 부서는"
+      ]
+    },
+    {
+      "pattern_id": "product-client-users-v1",
+      "source_entity_types": [
+        "PRODUCT"
+      ],
+      "relation_type": "CLIENT_USES_PRODUCT",
+      "direction": "INBOUND",
+      "result_entity_types": [
+        "CLIENT"
+      ],
+      "forms": [
+        "고객사",
+        "고객사는",
+        "사용 고객",
+        "사용 고객은",
+        "도입 고객",
+        "도입 고객은"
+      ]
+    },
+    {
+      "pattern_id": "client-used-products-v1",
+      "source_entity_types": [
+        "CLIENT"
+      ],
+      "relation_type": "CLIENT_USES_PRODUCT",
+      "direction": "OUTBOUND",
+      "result_entity_types": [
+        "PRODUCT"
+      ],
+      "forms": [
+        "사용 제품",
+        "사용 제품은",
+        "도입 제품",
+        "도입 제품은"
+      ]
+    },
+    {
+      "pattern_id": "client-projects-v1",
+      "source_entity_types": [
+        "CLIENT"
+      ],
+      "relation_type": "PROJECT_FOR_CLIENT",
+      "direction": "INBOUND",
+      "result_entity_types": [
+        "PROJECT"
+      ],
+      "forms": [
+        "프로젝트",
+        "프로젝트는",
+        "관련 프로젝트",
+        "관련 프로젝트는"
+      ]
+    },
+    {
+      "pattern_id": "project-client-v1",
+      "source_entity_types": [
+        "PROJECT"
+      ],
+      "relation_type": "PROJECT_FOR_CLIENT",
+      "direction": "OUTBOUND",
+      "result_entity_types": [
+        "CLIENT"
+      ],
+      "forms": [
+        "고객사",
+        "고객사는",
+        "고객",
+        "고객은",
+        "거래처",
+        "거래처는"
+      ]
+    }
+  ]
+}

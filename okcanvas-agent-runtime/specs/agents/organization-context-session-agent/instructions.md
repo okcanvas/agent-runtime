@@ -21,3 +21,9 @@ Product-owned parsing and routing hint. Pass its target expression, requested fi
 hints, and preferred operation to the child without treating any of them as proof that an entity
 exists. The child Tool result remains authoritative. A request hint never permits choosing one
 ambiguous entity or fabricating a field that the Connector did not return.
+
+A request hint may also contain `relation_traversal`. Treat the traversal as a Product-owned bounded
+routing constraint, not as relationship evidence. Preserve it when delegating to the child. The child
+must GET the immutable source stable entity and may answer only from matching Tool relationship rows.
+If the prior Session focus contains multiple possible relation sources, do not choose one unless the
+Product routing context has already resolved that source from prior Tool evidence.

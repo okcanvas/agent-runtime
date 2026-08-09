@@ -1,0 +1,11 @@
+{
+  "promotion": "NOT_READY",
+  "reason": "STEP093 focused relation Live acceptance must be re-run after the R9A launcher correction; MinIO/Object Storage Live remains independently deferred.",
+  "runtime_product_source_changed": false,
+  "runtime_step": "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL",
+  "runtime_version": "2.77.0",
+  "schema_version": "okcanvas-workspace-step008r4r9a-promotion-marker-v1",
+  "state": "CORRECTIVE_LAUNCHER_STATIC_VALIDATED_LIVE_RERUN_REQUIRED",
+  "workspace_step": "WORKSPACE_STEP008R4R9A_STEP093_RELATION_LIVE_LAUNCHER_RUNTIME_VENV_CLOSURE",
+  "workspace_version": "0.8.4-r9a"
+}

@@ -7,8 +7,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_step021_runtime_baseline() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.local_approval_inbox_api_implemented is True
     assert info.local_approval_inbox_console_implemented is True
     assert info.local_approval_inbox_read_only is True

@@ -1,7 +1,5 @@
 {
-  "schema_version": "okcanvas-parent-file-manifest-v1",
-  "project_path": "okcanvas-connector-examples/organization-context/organization-context-api-fake",
-  "file_count": 50,
+  "file_count": 51,
   "files": [
     {
       "path": ".gitignore",
@@ -10,13 +8,13 @@
     },
     {
       "path": "HANDOFF.md",
-      "sha256": "2efc5b6517f77274be26a4f50a60d43d5d062a887bae5ee0d5ee2f74aaea5121",
-      "size": 948
+      "sha256": "1b52104f5a7221bb4da04d6f75132fd84a3404105333de0d690d520f63d0b615",
+      "size": 1098
     },
     {
       "path": "README.md",
-      "sha256": "68be1c2fbba217ae77ff4be25ecfb079a1b8904367b7c0644fac90e1ed7ce236",
-      "size": 1719
+      "sha256": "2672513ae332d2e58f3bc5f4d9673c8d282eb4859753e0595231e11463da9b9d",
+      "size": 2119
     },
     {
       "path": "docs/01-PRODUCT-API-CONTRACT.md",
@@ -190,13 +188,13 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "6060e77232b966117763407d850601565be2a220f5bf3d80fe19402606129e68",
+      "sha256": "00dffd4eac6eb7d846a0a141759c1c7614e93e018863697ca2e62e04d9ccbdaa",
       "size": 827
     },
     {
       "path": "package.json",
-      "sha256": "ddb5241c9cc02fc3515351453a67e72bb7ef28c262ef781654531d0abd3b7255",
-      "size": 775
+      "sha256": "fa81b3920198f5b333a04dece0087da22e7dc51a2261923b6ab10c1546b9bc84",
+      "size": 783
     },
     {
       "path": "scripts/package-source.mjs",
@@ -209,9 +207,14 @@
       "size": 11161
     },
     {
+      "path": "scripts/run-step003-acceptance.ts",
+      "sha256": "f2b53059abbd7aca82529c010abc39df40339e941fc5e3cc0686a4f8d38239f6",
+      "size": 11473
+    },
+    {
       "path": "src/context-resolver.ts",
-      "sha256": "0ecf9c451001fe79413463625196a417e394c09fc71c1933e82b4193e9f74f07",
-      "size": 11610
+      "sha256": "7556149260e15cccf61016552fdaa805aacf8e98c108ea0b3447b30b70ee86f9",
+      "size": 11899
     },
     {
       "path": "src/fixture-loader.ts",
@@ -225,7 +228,7 @@
     },
     {
       "path": "src/server.ts",
-      "sha256": "abec1cfeed9bf68aa667c4522e69ac2a722ae431dc1b62d8b51c3a61dd730de7",
+      "sha256": "b771924daff790453702929a8c796ec4740de287bcb2ebc9ded94526570c20fc",
       "size": 20485
     },
     {
@@ -240,8 +243,8 @@
     },
     {
       "path": "test/server.test.ts",
-      "sha256": "0777331aef1024d3e70ae206e3dc6bedd33a0cafc60d099eec3d9736c0e54fbe",
-      "size": 13849
+      "sha256": "3a4e71d0cbf5764b262e939bd22ece48db7854f2203fe0006f48a50894dfa1e9",
+      "size": 14180
     },
     {
       "path": "tsconfig.json",
@@ -253,5 +256,7 @@
       "sha256": "4b867378e82e75791492505f2ed1b986a6c04b2196f78179d01670862444550a",
       "size": 4250406
     }
-  ]
+  ],
+  "project_path": "okcanvas-connector-examples/organization-context/organization-context-api-fake",
+  "schema_version": "okcanvas-parent-file-manifest-v1"
 }

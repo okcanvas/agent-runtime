@@ -1,6 +1,6 @@
 [project]
 name = "okcanvas-agent-runtime"
-version = "2.75.0"
+version = "2.80.2"
 description = "Evidence-first OpenAI Agents runtime with a single Product-owned Generic Agent control plane, explicit developer-only legacy/Codex execution boundaries, governed execution, immutable Artifacts, read-only MCP, Sandbox, capability topology, and machine-validated distribution contracts"
 readme = "README.md"
 requires-python = ">=3.10"

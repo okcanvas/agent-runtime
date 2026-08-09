@@ -22,6 +22,7 @@ from okcanvas_agent_runtime.core.contracts import (
 from okcanvas_agent_runtime.application.orchestration import BoundedOrchestrationResult
 from okcanvas_agent_runtime.application.execution.nested_output import NestedResultNormalization
 from okcanvas_agent_runtime.application.organization_context.result_normalization import normalize_organization_context_nested_result
+from okcanvas_agent_runtime.application.groupware_read.result_normalization import normalize_groupware_nested_result
 
 from okcanvas_agent_runtime.application.execution.contracts import GenericExecutionErrorCode
 from okcanvas_agent_runtime.application.execution.errors import GenericExecutionFailure
@@ -167,7 +168,10 @@ _OUTPUT_CONTRACTS: dict[str, OutputContractRuntime] = {
     "GroupwareReadResult": OutputContractRuntime(
         contract_name="GroupwareReadResult",
         output_type=GroupwareReadResult,
-        implementation_id="groupware-read-result-runtime-v1",
+        nested_result_normalizer=normalize_groupware_nested_result,
+        nested_normalization_strategy="product-owned-cross-domain-mcp-evidence-normalization-v1",
+        runtime_version="1.1.0",
+        implementation_id="groupware-read-result-runtime-v2",
     ),
     "HostedWebSearchResult": OutputContractRuntime(
         contract_name="HostedWebSearchResult",

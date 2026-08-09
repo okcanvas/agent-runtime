@@ -28,22 +28,22 @@ class HttpGroupwareClient:
         self._client = client
 
     async def search_notices(
-        self, *, identity: DelegatedIdentity, query: str, limit: int, request_id: str
+        self, *, identity: DelegatedIdentity, query: str, limit: int, context_ref: dict[str, str] | None, request_id: str
     ) -> list[dict[str, Any]]:
         return await self._post(
             self._settings.notices_path,
             identity=identity,
-            body={"query": query, "limit": limit},
+            body={"query": query, "limit": limit, "context_ref": context_ref},
             request_id=request_id,
         )
 
     async def search_mail(
-        self, *, identity: DelegatedIdentity, query: str, limit: int, request_id: str
+        self, *, identity: DelegatedIdentity, query: str, limit: int, context_ref: dict[str, str] | None, request_id: str
     ) -> list[dict[str, Any]]:
         return await self._post(
             self._settings.mail_path,
             identity=identity,
-            body={"query": query, "limit": limit},
+            body={"query": query, "limit": limit, "context_ref": context_ref},
             request_id=request_id,
         )
 
@@ -54,9 +54,10 @@ class HttpGroupwareClient:
         start_at: str | None,
         end_at: str | None,
         limit: int,
+        context_ref: dict[str, str] | None,
         request_id: str,
     ) -> list[dict[str, Any]]:
-        body: dict[str, Any] = {"limit": limit}
+        body: dict[str, Any] = {"limit": limit, "context_ref": context_ref}
         if start_at is not None and end_at is not None:
             body.update({"start_at": start_at, "end_at": end_at})
         return await self._post(

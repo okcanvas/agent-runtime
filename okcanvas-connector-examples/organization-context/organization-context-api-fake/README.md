@@ -1,8 +1,8 @@
 # Organization Context API Reference Example
 
 ```text
-Step: EXAMPLE_ORGANIZATION_CONTEXT_STEP002R2_REFERENCE_RELATION_FACT_CONSISTENCY_CLOSURE
-Version: 0.2.2
+Step: EXAMPLE_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE
+Version: 0.3.0
 Status: EXAMPLE_TEMPLATE_ONLY
 Production SOT: DATABASE
 Example SOT: COMMITTED_JSON_FIXTURES
@@ -38,6 +38,10 @@ NOT THE PRODUCTION DATASTORE
 ## STEP002R2 consistency closure
 
 The loader now verifies that employee scalar records and relationship facts agree exactly for department, position set and manager whenever the tenant fixture contains relationships. The previously contradictory `employee-0017` and `employee-0034` records are corrected, including the missing second position relation for `employee-0034`.
+
+## STEP003 relation completeness evidence
+
+Detailed entity GET responses now publish `relation_count`, `relations_returned_count`, and `relations_truncated`. The Example currently bounds returned relationship rows to 100 while preserving the total count so downstream consumers can distinguish complete from truncated evidence. Runtime STEP093 refuses truncated relationship evidence for relation-aware follow-up.
 
 ## Product APIs
 

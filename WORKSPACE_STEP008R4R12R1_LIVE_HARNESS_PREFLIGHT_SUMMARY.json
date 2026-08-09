@@ -1,0 +1,21 @@
+{
+  "schema_version": "okcanvas-workspace-step008r4r12r1-live-harness-preflight-summary-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R12R1_STEP096B_GROUNDED_STRUCTURED_DELEGATION_LIVE_ACCEPTANCE_HARNESS",
+  "workspace_version": "0.8.4-r12r1",
+  "runtime_step": "STEP096B_GROUNDED_LLM_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+  "runtime_version": "2.80.0",
+  "mode": "ANALYSIS_CONTAINER_FAIL_CLOSED_PREFLIGHT_ONLY",
+  "state": "EXPECTED_FAILED_NO_LOCAL_LIVE_ENVIRONMENT",
+  "identity_and_harness_checks": "6/6 PASSED",
+  "live_environment_checks": "5/5 NOT_READY_AS_EXPECTED",
+  "openai_live_run_executed": false,
+  "windows_live_run_executed": false,
+  "safe_error_category": "LIVE_ENVIRONMENT_NOT_READY",
+  "secret_values_persisted": false,
+  "required_windows_command": "sh_run_workspace_step008r4r12r1_grounded_structured_delegation_live_acceptance",
+  "notes": [
+    "The source package intentionally contains no .env, .env.local, or .env.local.cmd.",
+    "No OpenAI Live PASS is claimed from this preflight.",
+    "Only the Windows entrypoint may load the local environment and enable the explicit BR1 Live gate."
+  ]
+}

@@ -8,11 +8,12 @@
       "subject": "Project update"
     }
   ],
-  "result_schema_version": "okcanvas-groupware-search-mail-result-v1",
+  "result_schema_version": "okcanvas-groupware-search-mail-result-v2",
   "roles": [
     "agent-user"
   ],
   "schema_version": "okcanvas-groupware-read-provider-fixture-v1",
   "tenant_id": "fixture-tenant",
-  "tool_name": "search_mail"
+  "tool_name": "search_mail",
+  "context_ref": null
 }

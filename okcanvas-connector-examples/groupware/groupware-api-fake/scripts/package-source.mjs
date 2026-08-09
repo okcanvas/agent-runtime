@@ -7,7 +7,7 @@ import { deflateRawSync } from "node:zlib";
 const here = dirname(fileURLToPath(import.meta.url));
 const project = resolve(here, "..");
 const repository = resolve(project, "../..");
-const output = resolve(process.argv[2] ?? join(dirname(repository), "okcanvas-connector-examples-groupware-api-fake-step001r1.zip"));
+const output = resolve(process.argv[2] ?? join(dirname(repository), "okcanvas-connector-examples-groupware-api-fake-step002.zip"));
 if (process.argv[2]?.startsWith("-")) throw new Error("package-source accepts one positional output path");
 
 const excluded = new Set(["node_modules", "dist", ".git"]);

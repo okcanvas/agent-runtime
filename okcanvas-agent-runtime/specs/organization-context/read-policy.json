@@ -24,9 +24,9 @@
   "required_roles": [
     "agent-user"
   ],
-  "root_agent_id": "organization-context-session-agent",
+  "root_agent_id": "organization-assistant-session-agent",
   "schema_version": "okcanvas-organization-context-read-policy-v1",
   "server_id": "organization-context-read",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "write_enabled": false
 }

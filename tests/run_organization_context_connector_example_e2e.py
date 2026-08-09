@@ -173,6 +173,7 @@ async def execute(connector_root: Path, example_root: Path) -> dict[str, object]
             "same_name_ambiguity_preserved": same_name_structured["ambiguous"] is True and [item["entity_id"] for item in same_name_structured["records"][:2]] == ["employee-0017", "employee-0034"],
             "similar_client_ambiguity_preserved": clients_structured["ambiguous"] is True and len(clients_structured["records"]) >= 4,
             "entity_relationships_normalized": any(item["relation_type"] == "EMPLOYEE_MANAGES_CLIENT" for item in client_record["relations"]) and any(item["relation_type"] == "CLIENT_USES_PRODUCT" for item in client_record["relations"]),
+            "entity_relation_completeness_metadata_exact": client_record.get("relation_count") == client_record.get("relations_returned_count") == len(client_record.get("relations", [])) and client_record.get("relations_truncated") is False,
             "glossary_compatibility_retained": glossary_structured["resolved"] is True and glossary_structured["records"][0]["term_id"] == "term.performance-index",
             "catalog_revision_observed": state_structured["catalog_revision"] == 500,
             "mutable_product_change_visible_through_read_only_connector": created_response.status_code == 201 and created["catalog_revision"] == 501 and change_structured["changes"][0]["change_type"] == "CREATE" and new_structured["records"][0]["term_id"] == "term.okr",
@@ -184,8 +185,8 @@ async def execute(connector_root: Path, example_root: Path) -> dict[str, object]
             "checks": checks,
             "passed_checks": sum(value is True for value in checks.values()),
             "total_checks": len(checks),
-            "connector_step": "CONNECTOR_ORGANIZATION_CONTEXT_STEP002R2_BOUNDED_CONTEXT_RESPONSE_ALIGNMENT",
-            "example_step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP002R2_REFERENCE_RELATION_FACT_CONSISTENCY_CLOSURE",
+            "connector_step": "CONNECTOR_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE",
+            "example_step": "EXAMPLE_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE",
         }
     finally:
         process.terminate()

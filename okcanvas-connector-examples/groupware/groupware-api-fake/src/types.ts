@@ -1,5 +1,12 @@
 export type Role = "agent-user" | "employee" | "manager" | "admin";
 
+export type OrganizationContextEntityType = "EMPLOYEE" | "PROJECT" | "CLIENT" | "PRODUCT" | "DEPARTMENT";
+
+export interface ContextRef {
+  entity_type: OrganizationContextEntityType;
+  entity_id: string;
+}
+
 export interface FakeClock {
   now: string;
 }
@@ -7,6 +14,7 @@ export interface FakeClock {
 export interface NoticeRecord {
   record_id: string;
   tenant_id: string;
+  context_refs: ContextRef[];
   title: string;
   body: string;
   visible_to_roles: Role[];
@@ -15,6 +23,7 @@ export interface NoticeRecord {
 export interface MailRecord {
   record_id: string;
   tenant_id: string;
+  context_refs: ContextRef[];
   owner_principal_id: string;
   subject: string;
   body: string;
@@ -23,6 +32,7 @@ export interface MailRecord {
 export interface CalendarRecord {
   record_id: string;
   tenant_id: string;
+  context_refs: ContextRef[];
   owner_principal_id: string;
   title: string;
   start_at: string;

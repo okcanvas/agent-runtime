@@ -1,0 +1,31 @@
+{
+  "allowed_tools": [
+    "search_organization_context",
+    "search_organization_terms"
+  ],
+  "authorization_mode": "delegated-bearer-ref",
+  "cache_tools_list": true,
+  "circuit_breaker_failure_threshold": 2,
+  "circuit_breaker_reset_seconds": 30.0,
+  "cleanup_timeout_seconds": 5.0,
+  "connect_timeout_seconds": 10.0,
+  "credential_ref": "organization-context-read-credential",
+  "endpoint_mode": "tenant-template",
+  "health_mode": "passive",
+  "http_timeout_seconds": 15.0,
+  "kind": "remote-streamable-http",
+  "max_result_chars": 16000,
+  "max_retry_attempts": 0,
+  "name": "OKCanvas Organization Context Interpretation Hints MCP",
+  "read_only": true,
+  "required_roles": [
+    "agent-user"
+  ],
+  "retry_backoff_seconds_base": 1.0,
+  "schema_version": "okcanvas-mcp-server-v3",
+  "server_id": "organization-context-interpretation-hints",
+  "sse_read_timeout_seconds": 120.0,
+  "tool_timeout_seconds": 15.0,
+  "url_template": "https://organization-context.example.invalid/tenants/{tenant_id}/mcp",
+  "version": "1.0.0"
+}

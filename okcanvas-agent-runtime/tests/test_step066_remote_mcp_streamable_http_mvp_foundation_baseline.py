@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_step066_remote_mcp_remains_implemented_and_windows_accepted() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.mcp_mode == "allowlisted-read-only-local-stdio-and-remote-streamable-http"
     assert info.remote_mcp_streamable_http_implemented is True
     assert info.remote_mcp_streamable_http_mode == "v2-single-exact-or-v3-multi-tenant-delegated-read-only"

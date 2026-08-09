@@ -143,8 +143,8 @@ def _raw_envelopes(path: Path, session_id: str) -> list[dict[str, object]]:
 
 def test_step065_runtime_info_is_exact() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.bounded_encrypted_sqlite_session_compaction_windows_live_accepted is True
     assert info.step064_focused_tests_windows_live_accepted is True
     assert info.sqlite_session_key_rotation_implemented is True

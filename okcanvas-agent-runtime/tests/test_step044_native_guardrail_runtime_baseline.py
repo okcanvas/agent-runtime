@@ -32,8 +32,8 @@ def test_step044_assets_exist() -> None:
 
 def test_step044_runtime_info_is_current() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.sqlite_session_windows_live_accepted is True
     assert info.native_guardrail_runtime_implemented is True
     assert info.native_guardrail_input_supported is True

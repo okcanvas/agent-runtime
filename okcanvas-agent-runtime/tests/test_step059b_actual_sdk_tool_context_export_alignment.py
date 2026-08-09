@@ -115,8 +115,8 @@ def test_fake_sdk_mirrors_real_export_and_full_agent_construction(monkeypatch) -
 
 def test_step059b_runtime_info_and_handoff_documents() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.actual_sdk_tool_context_export_alignment_implemented is True
     assert info.actual_sdk_tool_context_import_path == "agents.tool_context.ToolContext"
     assert info.actual_sdk_tool_context_top_level_export_expected is False

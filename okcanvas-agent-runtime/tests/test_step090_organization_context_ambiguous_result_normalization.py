@@ -119,6 +119,26 @@ def test_ambiguous_tool_evidence_is_deterministically_normalized() -> None:
         "tool_reexecuted": False,
         "model_output_persisted": False,
         "tool_result_persisted": False,
+        "session_context_focus": {
+            "schema_version": "okcanvas-session-context-focus-observation-v1",
+            "domain": "ORGANIZATION_CONTEXT",
+            "state": "AMBIGUOUS",
+            "candidates": [
+                {
+                    "entity_type": "EMPLOYEE",
+                    "entity_id": "employee-0017",
+                    "label": "김민수",
+                    "qualifiers": ["플랫폼개발팀", "선임"],
+                },
+                {
+                    "entity_type": "EMPLOYEE",
+                    "entity_id": "employee-0034",
+                    "label": "김민수",
+                    "qualifiers": ["기업영업팀", "팀장", "책임"],
+                },
+            ],
+            "catalog_revision": 500,
+        },
     }
 
 
@@ -159,6 +179,20 @@ def test_nonambiguous_answer_wording_is_retained_and_provenance_aligned() -> Non
     ]
     assert normalized.metadata["strategy"] == "tool-evidence-provenance-alignment-v1"
     assert normalized.metadata["tool_reexecuted"] is False
+    assert normalized.metadata["session_context_focus"] == {
+        "schema_version": "okcanvas-session-context-focus-observation-v1",
+        "domain": "ORGANIZATION_CONTEXT",
+        "state": "RESOLVED",
+        "candidates": [
+            {
+                "entity_type": "EMPLOYEE",
+                "entity_id": "employee-0017",
+                "label": "김민수",
+                "qualifiers": ["플랫폼개발팀", "선임"],
+            }
+        ],
+        "catalog_revision": 500,
+    }
 
 
 def test_ambiguous_evidence_without_two_stable_ids_fails_closed() -> None:

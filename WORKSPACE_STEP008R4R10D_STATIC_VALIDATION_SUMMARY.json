@@ -1,0 +1,61 @@
+{
+  "schema_version": "okcanvas-workspace-step008r4r10d-static-validation-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R10D_RUNTIME_STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "workspace_version": "0.8.4-r10d",
+  "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "runtime_version": "2.78.2",
+  "state": "STATIC_VALIDATED_FOCUSED_LIVE_RERUN_REQUIRED",
+  "promotion": "NOT_READY",
+  "tests_executed_for_r10d": false,
+  "focused_cross_domain_live_rerun_executed_for_r10d": false,
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "actual_parent_r10c_windows_failure": {
+    "state": "FAILED",
+    "passed_checks": 6,
+    "total_checks": 7,
+    "failure_stage": "execute_establish-employee-focus",
+    "cli_returncode": 0,
+    "cli_one_request_completed": false,
+    "runtime_run_count": 0,
+    "product_error": "RUN_SUBMISSION_INVALID / Root Agent must declare exactly the Groupware read Sub-agent"
+  },
+  "canonical_correction": {
+    "submission_admission_owner": "CrossDomainSessionDelegationCatalog",
+    "runtime_binding_owner": "CrossDomainSessionDelegationCatalog",
+    "gateway_owner": "CrossDomainSessionDelegationCatalog",
+    "selected_mcp_per_turn": 1,
+    "session_binding_weakened": false,
+    "alias_or_fallback_used": false
+  },
+  "static_checks": {
+    "current_document_sot": "PASSED",
+    "workspace_r10d_contract": "16/16 PASSED",
+    "runtime_step094r2_contract": "15/15 PASSED",
+    "launcher_registry": "7/7 PASSED",
+    "architecture": "40/40 PASSED",
+    "first_party_python_ast": "1014/1014",
+    "first_party_json_parse": "875/875",
+    "historical_evidence_common_files": 979,
+    "historical_evidence_changed": 0,
+    "runtime_product_python_files": 355,
+    "runtime_product_python_changed_vs_r10c": 4,
+    "runtime_product_python_snapshot_method": "SHA256(sorted relative_path NUL file_bytes NUL)",
+    "runtime_product_python_snapshot_sha256": "ce63244331505380843a9174d9c6dca085af4153211505461c82db6c8bd4d969",
+    "workspace_manifest": "4848/4848 EXACT",
+    "parent_manifests": {
+      "runtime": "4327/4327 EXACT",
+      "groupware_connector": "31/31 EXACT / CONNECTOR_STEP002 / 0.2.0",
+      "groupware_example": "19/19 EXACT / EXAMPLE_STEP002 / 0.2.0",
+      "organization_context_connector": "34/34 EXACT",
+      "organization_context_example": "51/51 EXACT"
+    }
+  },
+  "next_action": "RERUN_FOCUSED_CROSS_DOMAIN_WINDOWS_LIVE_ON_CLEAN_R10D",
+  "current_source_manifest_repair": {
+    "issue": "WORKSPACE-ISSUE-055",
+    "r10c_to_r10d_groupware_source_changed": false,
+    "groupware_connector_stale_hashes_repaired": 14,
+    "groupware_example_stale_hashes_repaired": 10,
+    "historical_accepted_parent_artifacts_changed": false
+  }
+}

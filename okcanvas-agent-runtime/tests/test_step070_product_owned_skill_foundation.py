@@ -70,8 +70,8 @@ def _headers() -> dict[str, str]:
 
 def test_step070_runtime_flags_are_exact() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.product_owned_skill_foundation_implemented is True
     assert info.product_owned_skill_mode == "server-installed-immutable-instructions-and-static-resources"
     assert info.product_owned_skill_count == 1

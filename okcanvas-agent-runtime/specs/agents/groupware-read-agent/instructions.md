@@ -20,3 +20,11 @@ ENTERPRISE_SYSTEM citations. Set queried_operations to the exact Tool names actu
 result_count to the number of returned records, bounded by policy. If endpoint, credential, identity,
 role, provider, or requested read operation is unavailable, use NEEDS_CAPABILITY with result_count 0,
 no citations, and identify the missing capability in unverified.
+
+When the Product supplies a `groupware_context_filter`, it is an immutable routing constraint derived
+from prior Organization Context Tool evidence. Use exactly the named Groupware Tool and pass
+`context_ref.entity_type` and `context_ref.entity_id` unchanged. Do not replace the stable ID with the
+entity label, do not broaden to a text-only search, and do not omit the filter. Existing tenant, principal,
+role, and record-visibility restrictions remain authoritative in addition to the context filter.
+
+- For `groupware_context_filter` v1, do not invent additional narrowing arguments: search query must stay empty, calendar time range must be omitted, and limit must be exactly 20. If the Tool contract rejects the arguments, do not retry with a label/name fallback.

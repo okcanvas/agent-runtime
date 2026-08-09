@@ -26,6 +26,6 @@ def test_step040_runtime_and_plan_assets_exist() -> None:
 def test_step040_baseline_identifiers_are_current() -> None:
     baseline = (legacy_source_contract(ROOT, "okcanvas_agent_runtime/baseline.py")).read_text(encoding="utf-8")
     pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
-    assert 'PROJECT_VERSION = "2.75.0"' in baseline
-    assert 'CURRENT_STEP = "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"' in baseline
-    assert 'version = "2.75.0"' in pyproject
+    assert 'PROJECT_VERSION = "2.77.0"' in baseline
+    assert 'CURRENT_STEP = "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"' in baseline
+    assert 'version = "2.77.0"' in pyproject

@@ -24,7 +24,7 @@ def main() -> int:
     runtime_contract = json.loads((ROOT / "contracts/runtime-provider-contract.json").read_text(encoding="utf-8"))
     connector_binding = json.loads((ROOT / "contracts/connector-binding-contract.json").read_text(encoding="utf-8"))
     checks = {
-        "runtime_contract_v2_exact": runtime_contract.get("schema_version") == "okcanvas-groupware-read-provider-contract-v2"
+        "runtime_contract_v3_exact": runtime_contract.get("schema_version") == "okcanvas-groupware-read-provider-contract-v3"
         and runtime_contract.get("external_connector_project_path") == "okcanvas-connectors/groupware-mcp-server"
         and runtime_contract.get("credential_reference_transmitted") is False,
         "connector_binding_contract_exact": connector_binding.get("required_role") == "agent-user"
@@ -45,18 +45,19 @@ def main() -> int:
             token in (ROOT / "groupware_mcp_server/mcp_protocol.py").read_text(encoding="utf-8")
             for token in ("search_notices", "search_mail", "list_calendar_events")
         ),
+        "stable_context_ref_filter_declared": (ROOT / "groupware_mcp_server/mcp_protocol.py").read_text(encoding="utf-8").count('"context_ref"') >= 3,
     }
     payload = {
-        "schema_version": "okcanvas-groupware-connector-step001r1-acceptance-v1",
-        "step": "CONNECTOR_STEP001R1_ASYNC_TEST_RUNNER_DEPENDENCY_CLOSURE",
-        "version": "0.1.1",
+        "schema_version": "okcanvas-groupware-connector-step002-acceptance-v1",
+        "step": "CONNECTOR_STEP002_STABLE_ORGANIZATION_CONTEXT_REFERENCE_FILTER",
+        "version": "0.2.0",
         "state": "PASSED" if all(checks.values()) else "FAILED",
         "checks": checks,
         "passed_checks": sum(value is True for value in checks.values()),
         "total_checks": len(checks),
         "processes": results,
     }
-    output = ROOT / "docs/evidence/CONNECTOR_STEP001R1_ACCEPTANCE.json"
+    output = ROOT / "docs/evidence/CONNECTOR_STEP002_ACCEPTANCE.json"
     output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(payload, indent=2, sort_keys=True))
     return 0 if payload["state"] == "PASSED" else 1

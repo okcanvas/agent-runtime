@@ -1,6 +1,6 @@
 {
-  "current_step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
-  "current_step_token": "091D",
+  "current_step": "STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE",
+  "current_step_token": "096BR1R2",
   "records": [
     {
       "classification": "HISTORICAL",
@@ -2152,32 +2152,158 @@
       "step_token": "091B3R1"
     },
     {
-      "classification": "CURRENT",
+      "classification": "HISTORICAL",
       "kind": "python-script",
       "mode": "DETERMINISTIC",
       "path": "scripts/run_step091d_acceptance.py",
       "step_token": "091D"
     },
     {
-      "classification": "CURRENT",
+      "classification": "HISTORICAL",
       "kind": "windows-launcher",
       "mode": "DETERMINISTIC",
       "path": "sh_run_step091d_acceptance.cmd",
       "step_token": "091D"
     },
     {
-      "classification": "CURRENT",
+      "classification": "HISTORICAL",
       "kind": "python-script",
       "mode": "LIVE",
       "path": "scripts/run_step091d_object_storage_live_acceptance.py",
       "step_token": "091D"
     },
     {
-      "classification": "CURRENT",
+      "classification": "HISTORICAL",
       "kind": "windows-launcher",
       "mode": "LIVE",
       "path": "sh_run_step091d_object_storage_live_acceptance.cmd",
       "step_token": "091D"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step092_acceptance.py",
+      "step_token": "092"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step092_acceptance.cmd",
+      "step_token": "092"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step093_acceptance.py",
+      "step_token": "093"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step093_acceptance.cmd",
+      "step_token": "093"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step094_acceptance.py",
+      "step_token": "094"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step094_acceptance.cmd",
+      "step_token": "094"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step094r1_acceptance.py",
+      "step_token": "094R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step094r1_acceptance.cmd",
+      "step_token": "094R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step094r2_acceptance.py",
+      "step_token": "094R2"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step094r2_acceptance.cmd",
+      "step_token": "094R2"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step096a_acceptance.py",
+      "step_token": "096A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step096a_acceptance.cmd",
+      "step_token": "096A"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step096b_acceptance.py",
+      "step_token": "096B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step096b_acceptance.cmd",
+      "step_token": "096B"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step096br1r1_acceptance.py",
+      "step_token": "096BR1R1"
+    },
+    {
+      "classification": "HISTORICAL",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step096br1r1_acceptance.cmd",
+      "step_token": "096BR1R1"
+    },
+    {
+      "classification": "CURRENT",
+      "kind": "python-script",
+      "mode": "DETERMINISTIC",
+      "path": "scripts/run_step096br1r2_acceptance.py",
+      "step_token": "096BR1R2"
+    },
+    {
+      "classification": "CURRENT",
+      "kind": "windows-launcher",
+      "mode": "DETERMINISTIC",
+      "path": "sh_run_step096br1r2_acceptance.cmd",
+      "step_token": "096BR1R2"
     }
   ],
   "required_current_records": [
@@ -2188,14 +2314,6 @@
     {
       "kind": "windows-launcher",
       "mode": "DETERMINISTIC"
-    },
-    {
-      "kind": "python-script",
-      "mode": "LIVE"
-    },
-    {
-      "kind": "windows-launcher",
-      "mode": "LIVE"
     }
   ],
   "schema_version": "okcanvas-acceptance-launcher-registry-v2"

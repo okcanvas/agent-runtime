@@ -32,3 +32,11 @@ def test_binding_contract_keeps_example_optional_and_fake_mode_absent() -> None:
     assert contract["tool_names"] == EXPECTED_TOOLS
     assert contract["production_source_of_truth"] == "DATABASE"
     assert contract["example_source_of_truth"] == "COMMITTED_JSON_FIXTURES"
+
+
+def test_step003_get_entity_requires_relation_completeness_evidence() -> None:
+    source = (ROOT / "organization_context_mcp_server/service.py").read_text(encoding="utf-8")
+    assert "ORGANIZATION_CONTEXT_RELATION_COMPLETENESS_INVALID" in source
+    assert 'record.get("relation_count")' in source
+    assert 'record.get("relations_returned_count")' in source
+    assert 'record.get("relations_truncated")' in source

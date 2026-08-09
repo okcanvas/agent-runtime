@@ -1,0 +1,41 @@
+{
+  "acceptance": {
+    "object_storage_live_executed": false,
+    "runtime_deterministic_executed": false,
+    "runtime_full_regression_executed": false,
+    "step092_contextual_multi_turn_live_executed": false,
+    "unit_tests_executed": false,
+    "windows_live_openai_executed": false,
+    "workspace_deterministic_executed": false
+  },
+  "first_party_json_parse": {
+    "failures": 0,
+    "files": 851,
+    "vendored_jsonc_excluded": "okcanvas-agent-runtime/reference/upstream/openai-agents-python-0.19.0/.vscode/launch.json"
+  },
+  "first_party_python_ast": {
+    "failures": 0,
+    "files": 983
+  },
+  "postgresql": {
+    "current_step092_expected_tables": 16,
+    "current_step092_live_executed": false,
+    "historical_step091b3r1_live_expected_tables": 15
+  },
+  "promotion": "NOT_READY",
+  "runtime_product_source": {
+    "python_files": 350,
+    "snapshot_sha256": "78135ac64cc2b5f190ab1ae546a8dcbdae07e8c98192c7c650e8f226575274e2"
+  },
+  "schema_version": "okcanvas-step092-static-validation-summary-v1",
+  "state": "STATIC_VALIDATION_PASSED_TEST_EXECUTION_DEFERRED",
+  "static_contract": {
+    "failed_checks": [],
+    "passed_checks": 23,
+    "state": "PASSED",
+    "total_checks": 23
+  },
+  "step": "STEP092_SESSION_CONTEXTUAL_FOLLOW_UP_AND_STABLE_ENTITY_FOCUS",
+  "test_execution": "NOT_EXECUTED_BY_USER_DIRECTION_UNTIL_MINIO_READY",
+  "version": "2.76.0"
+}

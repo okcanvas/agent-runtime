@@ -66,8 +66,8 @@ def test_step086r1_windows_parent_is_preserved_and_current_runtime_is_r2() -> No
     assert evidence["version"] == "2.66.1"
     assert evidence["passed_checks"] == evidence["total_checks"] == 13
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.step086r1_windows_deterministic_accepted is True
     assert info.step086r1_windows_deterministic_passed_checks == 13
     assert info.delegated_mcp_roles_header == "X-OKCanvas-Roles"
@@ -87,7 +87,7 @@ def test_step086r2_launcher_registry_and_windows_dispatch(monkeypatch) -> None:
     registry = validate()
     assert registry["state"] == "PASSED"
     assert registry["current_step"] == (
-        "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+        "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     )
     registry_payload = __import__("json").loads(
         (ROOT / "specs/acceptance/launcher-registry.json").read_text(encoding="utf-8")

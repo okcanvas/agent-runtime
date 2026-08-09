@@ -1,0 +1,69 @@
+{
+  "acceptance": {
+    "object_storage_live_executed": false,
+    "runtime_deterministic_executed": false,
+    "runtime_full_regression_executed": false,
+    "step092_contextual_multi_turn_live_executed": false,
+    "unit_tests_executed": false,
+    "windows_live_openai_executed": false,
+    "workspace_deterministic_executed": false
+  },
+  "checks": {
+    "current_document_sot": {
+      "document_count": 7,
+      "errors": [],
+      "state": "PASSED"
+    },
+    "first_party_json_parse": {
+      "failures": 0,
+      "files": 851,
+      "vendored_jsonc_excluded": "okcanvas-agent-runtime/reference/upstream/openai-agents-python-0.19.0/.vscode/launch.json"
+    },
+    "first_party_python_ast": {
+      "failures": 0,
+      "files": 983
+    },
+    "historical_evidence_immutability": {
+      "changed_files": 0,
+      "common_files": 983
+    },
+    "launcher_registry": {
+      "current_record_count": 2,
+      "passed_checks": 7,
+      "state": "PASSED",
+      "total_checks": 7
+    },
+    "step092_static_contract": {
+      "failed_checks": [],
+      "passed_checks": 23,
+      "state": "PASSED",
+      "total_checks": 23
+    }
+  },
+  "limitations": [
+    "STEP092 behavior is implemented but not accepted until deferred tests execute.",
+    "The retained Workspace Live runner covers parent short-expression E2E and is not STEP092 contextual multi-turn live acceptance.",
+    "Relation-aware follow-up, cross-domain focus, and durable long-term user memory are not implemented by STEP092."
+  ],
+  "postgresql": {
+    "current_step092_expected_tables": 16,
+    "current_step092_live_executed": false,
+    "historical_step091b3r1_live_expected_tables": 15
+  },
+  "promotion": "NOT_READY",
+  "retained_historical_evidence": {
+    "step091b3r1_real_postgresql_live": "PASSED_19_OF_19_HISTORICAL_ONLY",
+    "step091d_object_storage_live": "DEFERRED_NOT_EXECUTED"
+  },
+  "runtime_product_source": {
+    "python_files": 350,
+    "snapshot_sha256": "78135ac64cc2b5f190ab1ae546a8dcbdae07e8c98192c7c650e8f226575274e2"
+  },
+  "runtime_step": "STEP092_SESSION_CONTEXTUAL_FOLLOW_UP_AND_STABLE_ENTITY_FOCUS",
+  "runtime_version": "2.76.0",
+  "schema_version": "okcanvas-workspace-step008r4r8-static-validation-summary-v1",
+  "state": "STATIC_VALIDATION_PASSED_TEST_EXECUTION_DEFERRED",
+  "test_execution": "NOT_EXECUTED_BY_USER_DIRECTION_UNTIL_MINIO_READY",
+  "workspace_step": "WORKSPACE_STEP008R4R8_RUNTIME_STEP092_SESSION_CONTEXTUAL_FOLLOW_UP_AND_STABLE_ENTITY_FOCUS",
+  "workspace_version": "0.8.4-r8"
+}

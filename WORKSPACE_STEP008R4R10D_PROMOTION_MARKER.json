@@ -1,0 +1,13 @@
+{
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R10D_RUNTIME_STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "workspace_version": "0.8.4-r10d",
+  "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "runtime_version": "2.78.2",
+  "state": "STATIC_AND_FRESH_PACKAGE_VALIDATED_FOCUSED_LIVE_RERUN_REQUIRED",
+  "promotion": "NOT_READY",
+  "focused_cross_domain_live": "RERUN_REQUIRED",
+  "broad_tests": "DEFERRED_BY_USER",
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "forbidden_nonfix_policy": "NO_ALIAS_NO_FALLBACK_NO_SESSION_SWITCH_NO_BINDING_WEAKENING"
+}

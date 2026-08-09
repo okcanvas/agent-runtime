@@ -84,7 +84,7 @@ def test_step071_live_summary_contract_is_secret_safe_by_construction() -> None:
     assert 'payload["total_checks"] = len(payload["checks"])' in source
     assert "SERVICE_TOKEN" not in json.dumps(
         {
-            "step": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+            "step": "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL",
             "expected_model": EXPECTED_MODEL,
         }
     )

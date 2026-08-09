@@ -1,0 +1,18 @@
+{
+  "command": "sh_run_workspace_step008r4r12r1_grounded_structured_delegation_live_acceptance",
+  "exception_message": "'dict' object has no attribute 'replace'",
+  "exception_type": "AttributeError",
+  "failure_stage": "EVIDENCE_REDACTION_SERIALIZATION",
+  "live_functional_result": "UNKNOWN_NOT_CLAIMED",
+  "observed_call": "json.dumps(redact(payload, secrets), ...)",
+  "root_cause": "Shared redact(text, secrets) is string-only, but R12R1 BR1 passed the payload dict directly.",
+  "runtime_product_defect": "NOT_ESTABLISHED",
+  "runtime_step": "STEP096B_GROUNDED_LLM_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+  "runtime_version": "2.80.0",
+  "schema_version": "okcanvas-workspace-step008r4r12r1-live-failure-user-reported-v1",
+  "secret_values_persisted": "NOT_OBSERVED_IN_USER_LOG",
+  "source": "USER_REPORTED_WINDOWS_CONSOLE",
+  "state": "HARNESS_FAILED_BEFORE_EVIDENCE_PERSISTENCE",
+  "workspace_step": "WORKSPACE_STEP008R4R12R1_STEP096B_GROUNDED_STRUCTURED_DELEGATION_LIVE_ACCEPTANCE_HARNESS",
+  "workspace_version": "0.8.4-r12r1"
+}

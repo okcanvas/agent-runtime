@@ -15,25 +15,25 @@
     "X-OKCanvas-Roles",
     "X-OKCanvas-Delegation-ID"
   ],
-  "schema_version": "okcanvas-groupware-read-provider-contract-v2",
+  "schema_version": "okcanvas-groupware-read-provider-contract-v3",
   "server_id": "groupware-read",
   "tools": [
     {
-      "input_schema_version": "okcanvas-groupware-search-notices-input-v1",
+      "input_schema_version": "okcanvas-groupware-search-notices-input-v2",
       "mutates": false,
-      "output_schema_version": "okcanvas-groupware-search-notices-result-v1",
+      "output_schema_version": "okcanvas-groupware-search-notices-result-v2",
       "tool_name": "search_notices"
     },
     {
-      "input_schema_version": "okcanvas-groupware-search-mail-input-v1",
+      "input_schema_version": "okcanvas-groupware-search-mail-input-v2",
       "mutates": false,
-      "output_schema_version": "okcanvas-groupware-search-mail-result-v1",
+      "output_schema_version": "okcanvas-groupware-search-mail-result-v2",
       "tool_name": "search_mail"
     },
     {
-      "input_schema_version": "okcanvas-groupware-list-calendar-events-input-v1",
+      "input_schema_version": "okcanvas-groupware-list-calendar-events-input-v2",
       "mutates": false,
-      "output_schema_version": "okcanvas-groupware-list-calendar-events-result-v1",
+      "output_schema_version": "okcanvas-groupware-list-calendar-events-result-v2",
       "tool_name": "list_calendar_events"
     }
   ],

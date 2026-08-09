@@ -8,7 +8,7 @@ from pathlib import Path
 PROJECT = Path(__file__).resolve().parents[1]
 REPOSITORY = PROJECT.parent
 ARCHIVE_ROOT = Path("okcanvas-connectors")
-DEFAULT_OUTPUT = REPOSITORY.parent / "okcanvas-connectors-groupware-mcp-server-step001r1.zip"
+DEFAULT_OUTPUT = REPOSITORY.parent / "okcanvas-connectors-groupware-mcp-server-step002.zip"
 FIXED_TIME = (2026, 8, 4, 0, 0, 0)
 
 

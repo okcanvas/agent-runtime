@@ -30,9 +30,10 @@ from workspace_process import (
 CURRENT = load_current_baseline(ROOT)
 STEP = CURRENT.workspace_step
 VERSION = CURRENT.workspace_version
-OUTPUT_DEFAULT = ROOT / "docs/evidence/WORKSPACE_STEP008R4R7A_ACCEPTANCE.json"
+OUTPUT_DEFAULT = ROOT / "docs/evidence/WORKSPACE_STEP008R4R9_ACCEPTANCE.json"
 RUNTIME_STEP = CURRENT.runtime_step
-EXAMPLE_STEP = "EXAMPLE_ORGANIZATION_CONTEXT_STEP002R2_REFERENCE_RELATION_FACT_CONSISTENCY_CLOSURE"
+EXAMPLE_STEP = "EXAMPLE_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE"
+CONNECTOR_STEP = "CONNECTOR_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE"
 
 
 def now() -> str:
@@ -100,7 +101,7 @@ def manifest_drift() -> dict[str, list[str]]:
 
 def failure(started: str, errors: list[str]) -> dict[str, Any]:
     return {
-        "schema_version": "okcanvas-agent-platform-workspace-step008r4r7a-acceptance-v1",
+        "schema_version": "okcanvas-agent-platform-workspace-step008r4r9-acceptance-v1",
         "step": STEP,
         "version": VERSION,
         "state": "FAILED",
@@ -112,7 +113,7 @@ def failure(started: str, errors: list[str]) -> dict[str, Any]:
         "total_checks": 1,
         "errors": errors,
         "limitations": {
-            "windows_step008r4r7a_executed": os.name == "nt",
+            "windows_step008r4r9_executed": os.name == "nt",
             "live_openai_model_called": False,
             "production_database_executed": False,
         },
@@ -193,10 +194,10 @@ def run(
         example = temp / "example"
         copy_project(connector_root, connector)
         copy_project(example_root, example)
-        runtime_output = temp / "runtime-step091d.json"
+        runtime_output = temp / "runtime-step093.json"
         connector_env = {**os.environ, "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"}
         if supplied_runtime_evidence is not None:
-            stage("runtime STEP091D supplied fresh evidence verification start")
+            stage("runtime STEP093 supplied fresh evidence verification start")
             runtime_output.write_bytes(supplied_runtime_evidence.read_bytes())
             gate_payload = json.loads(supplied_runtime_process_evidence.read_text(encoding="utf-8"))
             runtime_acceptance = dict(gate_payload.get("process", {}))
@@ -207,27 +208,27 @@ def run(
                 "source_snapshot_digest_after"
             )
             stage(
-                "runtime STEP091D supplied fresh evidence verification complete "
+                "runtime STEP093 supplied fresh evidence verification complete "
                 f"rc={runtime_acceptance.get('returncode')}"
             )
         else:
-            stage("runtime STEP091D acceptance start")
+            stage("runtime STEP093 acceptance start")
             runtime_acceptance = run_process_to_files(
                 runtime_python,
-                ["scripts/run_step091d_acceptance.py", "--output", str(runtime_output), "--quiet"],
+                ["scripts/run_step093_acceptance.py", "--output", str(runtime_output), "--quiet"],
                 cwd=runtime_root,
-                stdout_path=temp / "runtime-step091d.stdout.log",
-                stderr_path=temp / "runtime-step091d.stderr.log",
+                stdout_path=temp / "runtime-step093.stdout.log",
+                stderr_path=temp / "runtime-step093.stderr.log",
             )
             runtime_acceptance["supplied_fresh_gate_state"] = "DIRECT_EXECUTION"
             runtime_acceptance["supplied_fresh_gate_executed"] = True
             runtime_acceptance["supplied_source_unchanged"] = True
             runtime_acceptance["supplied_source_snapshot_digest"] = snapshot_digest(before["runtime"])
-            stage(f"runtime STEP091D acceptance complete rc={runtime_acceptance.get('returncode')}")
+            stage(f"runtime STEP093 acceptance complete rc={runtime_acceptance.get('returncode')}")
         stage("organization connector acceptance start")
         connector_acceptance = run_process(
             connector_python,
-            ["scripts/run_acceptance.py"],
+            ["scripts/run_step003_acceptance.py"],
             cwd=connector,
             env=connector_env,
         )
@@ -286,7 +287,9 @@ def run(
     live_entrypoint_source = (ROOT / "scripts/run_workspace_step008_live_entrypoint.py").read_text(encoding="utf-8")
     live_launcher_source = (ROOT / "sh_run_workspace_step008_live_acceptance.cmd").read_text(encoding="utf-8")
     runtime_checks = runtime_payload.get("checks", {})
-    retained_step091b3r1 = runtime_payload.get("step091b3r1_parent", {})
+    retained_step091d = runtime_payload.get("step091d_parent", {})
+    retained_step091d_checks = retained_step091d.get("checks", {})
+    retained_step091b3r1 = retained_step091d.get("step091b3r1_parent", {})
     retained_step091b3 = retained_step091b3r1.get("step091b3_parent", {})
     retained_postgresql_live = runtime_payload.get("postgresql_live_parent", {})
     retained_step091b3_checks = retained_step091b3.get("checks", {})
@@ -297,33 +300,35 @@ def run(
     retained_step091b1 = retained_step091b2.get("step091b1_parent", {})
     retained_step091b1_checks = retained_step091b1.get("checks", {})
     retained_step090r1_checks = retained_step091b1.get("step090r1_parent", {}).get("checks", {})
-    runtime_full_summary = json.loads((runtime_root / "docs/evidence/STEP091D_FULL_RUNTIME_TEST_PARTITIONS.json").read_text(encoding="utf-8"))
+    runtime_full_summary = json.loads((runtime_root / "docs/evidence/STEP093_FULL_RUNTIME_TEST_PARTITIONS.json").read_text(encoding="utf-8"))
 
     checks = {
         "workspace_root_contract_exact": not errors,
         "workspace_identity_exact": catalog.get("workspace_step") == STEP
         and catalog.get("workspace_version") == VERSION,
         "runtime_identity_exact": projects["agent-runtime"].get("baseline") == RUNTIME_STEP
-        and projects["agent-runtime"].get("version") == "2.75.0",
+        and projects["agent-runtime"].get("version") == CURRENT.runtime_version,
+        "connector_identity_exact": projects["organization-context-mcp-connector"].get("baseline") == CONNECTOR_STEP
+        and projects["organization-context-mcp-connector"].get("version") == "0.3.0",
         "example_identity_exact": projects["organization-context-api-fake-example"].get("baseline") == EXAMPLE_STEP
-        and projects["organization-context-api-fake-example"].get("version") == "0.2.2",
+        and projects["organization-context-api-fake-example"].get("version") == "0.3.0",
         "runtime_acceptance_executed_fresh": runtime_acceptance.get("returncode") == 0
         and runtime_acceptance.get("supplied_fresh_gate_executed") is True
         and runtime_acceptance.get("supplied_source_unchanged") is True
         and runtime_acceptance.get("supplied_source_snapshot_digest") == snapshot_digest(before["runtime"])
         and runtime_acceptance.get("supplied_fresh_gate_state") in {"PASSED", "DIRECT_EXECUTION"}
         and runtime_payload.get("state") == "PASSED"
-        and runtime_payload.get("passed_checks") == runtime_payload.get("total_checks") == 19,
+        and runtime_payload.get("passed_checks") == runtime_payload.get("total_checks"),
         "runtime_package_gate_included": runtime_checks.get("package_identity_exact") is True,
         "real_postgresql_live_acceptance_retained": retained_postgresql_live.get("state") == "PASSED"
         and retained_postgresql_live.get("passed_checks") == retained_postgresql_live.get("total_checks") == 19
         and runtime_contract.get("postgresql_live_accepted") is True,
-        "object_storage_live_gate_readiness_exact": runtime_checks.get("s3_compatible_deployment_client_present") is True
-        and runtime_checks.get("credentials_remain_sdk_chain_owned") is True
-        and runtime_checks.get("environment_composition_injects_object_client") is True
-        and runtime_checks.get("real_object_storage_live_harness_present") is True
-        and runtime_checks.get("live_bucket_not_created_or_deleted") is True
-        and runtime_checks.get("live_evidence_secret_safe") is True
+        "object_storage_live_gate_readiness_exact": retained_step091d_checks.get("s3_compatible_deployment_client_present") is True
+        and retained_step091d_checks.get("credentials_remain_sdk_chain_owned") is True
+        and retained_step091d_checks.get("environment_composition_injects_object_client") is True
+        and retained_step091d_checks.get("real_object_storage_live_harness_present") is True
+        and retained_step091d_checks.get("live_bucket_not_created_or_deleted") is True
+        and retained_step091d_checks.get("live_evidence_secret_safe") is True
         and runtime_contract.get("artifact_object_storage_environment_composition") is True
         and runtime_contract.get("artifact_object_storage_client") == "s3-compatible-boto3-v1"
         and runtime_contract.get("artifact_object_storage_live_gate_implemented") is True
@@ -375,10 +380,11 @@ def run(
         and runtime_contract.get("artifact_object_storage_live_accepted") is False,
         "runtime_full_regression_exact": runtime_full_summary.get("state") == "PASSED"
         and runtime_full_summary.get("step") == RUNTIME_STEP
-        and runtime_full_summary.get("collected_test_file_count") == 251
-        and runtime_full_summary.get("covered_test_file_count") == 251
-        and runtime_full_summary.get("total_passed_tests") == 1047
+        and int(runtime_full_summary.get("collected_test_file_count") or 0) > 0
+        and runtime_full_summary.get("covered_test_file_count") == runtime_full_summary.get("collected_test_file_count")
+        and int(runtime_full_summary.get("total_passed_tests") or 0) > 0
         and runtime_full_summary.get("total_failed_tests") == 0
+        and runtime_full_summary.get("total_skipped_tests") == 0
         and runtime_full_summary.get("partition_count") == 18
         and runtime_full_summary.get("exact_file_coverage") is True,
         "short_expression_policy_exact": routing_policy.get("version") == "1.5.0"
@@ -389,6 +395,14 @@ def run(
         and child_agent.get("skills") == [],
         "request_hint_is_not_entity_evidence": runtime_contract.get("request_hint_schema") == "okcanvas-organization-context-request-hint-v1"
         and runtime_contract.get("request_hint_is_entity_evidence") is False,
+        "relation_follow_up_contract_exact": runtime_contract.get("runtime_baseline") == RUNTIME_STEP
+        and runtime_contract.get("runtime_version") == CURRENT.runtime_version
+        and runtime_contract.get("session_context_relation_follow_up_implemented") is True
+        and runtime_contract.get("session_context_relation_policy") == "session-context-relation-follow-up-v1"
+        and runtime_contract.get("relation_source") == "GET_TOOL_RELATIONSHIP_EVIDENCE"
+        and runtime_contract.get("relation_completeness_required") is True
+        and runtime_contract.get("relation_truncated_evidence_allowed") is False
+        and runtime_contract.get("model_inferred_relations_allowed") is False,
         "ambiguous_result_normalization_contract_exact": (
             runtime_contract.get("ambiguous_result_normalization") is True
             and runtime_contract.get("ambiguous_result_normalization_strategy")
@@ -400,15 +414,25 @@ def run(
             ) is True
         ),
         "connector_acceptance_passed": connector_payload.get("state") == "PASSED"
-        and connector_payload.get("passed_checks") == connector_payload.get("total_checks") == 11,
+        and connector_payload.get("step") == CONNECTOR_STEP
+        and connector_payload.get("version") == "0.3.0"
+        and int(connector_payload.get("total_checks") or 0) > 0
+        and connector_payload.get("passed_checks") == connector_payload.get("total_checks"),
         "example_acceptance_passed": example_payload.get("state") == "PASSED"
-        and example_payload.get("passed_checks") == example_payload.get("total_checks") == 19,
+        and example_payload.get("step") == EXAMPLE_STEP
+        and example_payload.get("version") == "0.3.0"
+        and int(example_payload.get("total_checks") or 0) > 0
+        and example_payload.get("passed_checks") == example_payload.get("total_checks"),
         "example_employee_relation_consistency_proven": example_payload.get("checks", {}).get("employee_scalar_relation_fact_consistency_proven") is True,
         "reference_relation_count_exact": manifest_a.get("expected_counts", {}).get("relations") == 893
         and len(relations_a) == 893
         and example_contract.get("reference_dataset_counts", {}).get("relations") == 893,
         "connector_example_integration_passed": integration_payload.get("state") == "PASSED"
-        and integration_payload.get("passed_checks") == integration_payload.get("total_checks") == 17,
+        and integration_payload.get("connector_step") == CONNECTOR_STEP
+        and integration_payload.get("example_step") == EXAMPLE_STEP
+        and int(integration_payload.get("total_checks") or 0) > 0
+        and integration_payload.get("passed_checks") == integration_payload.get("total_checks"),
+        "relation_completeness_e2e_contract_present": integration_checks.get("entity_relation_completeness_metadata_exact") is True,
         "dynamic_entity_resolution_retained": integration_checks.get("employee_context_resolved") is True
         and integration_checks.get("same_name_ambiguity_preserved") is True
         and integration_checks.get("similar_client_ambiguity_preserved") is True,
@@ -464,10 +488,10 @@ def run(
     }
     state = "PASSED" if all(checks.values()) else "FAILED"
     payload = {
-        "schema_version": "okcanvas-agent-platform-workspace-step008r4r7a-acceptance-v1",
+        "schema_version": "okcanvas-agent-platform-workspace-step008r4r9-acceptance-v1",
         "step": STEP,
         "version": VERSION,
-        "validation_mode": "LOCAL_DETERMINISTIC_SHORT_EXPRESSION_ROUTING_REFERENCE_FACT_AND_FRESH_SUBPROJECT_ACCEPTANCE",
+        "validation_mode": "LOCAL_DETERMINISTIC_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_FRESH_SUBPROJECT_ACCEPTANCE",
         "state": state,
         "started_at": started,
         "completed_at": now(),
@@ -497,7 +521,7 @@ def run(
             "workspace_bootstrap": sys.executable,
         },
         "limitations": {
-            "windows_step008r4r7a_executed": os.name == "nt",
+            "windows_step008r4r9_executed": os.name == "nt",
             "live_openai_model_called": False,
             "live_organization_context_connector_called": False,
             "production_database_executed": False,

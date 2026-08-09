@@ -132,8 +132,8 @@ def _fixture(tmp_path: Path) -> Path:
 
 def test_runtime_selects_step075_windows_live_gate() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.product_owned_docker_lifecycle_windows_live_accepted is True
     assert info.product_owned_readonly_sandbox_agent_implemented is True
     assert info.product_owned_readonly_sandbox_windows_live_accepted is True

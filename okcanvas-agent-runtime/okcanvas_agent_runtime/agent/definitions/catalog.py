@@ -280,6 +280,15 @@ class AgentDefinitionCatalog:
                 and not hosted_tools
                 and not guardrail_runtimes
             )
+            session_cross_domain_agent_tool_mode = (
+                agent_id == "organization-assistant-session-agent"
+                and agent_tools == ("groupware-read-agent", "organization-context-read-agent")
+                and not tools
+                and not handoffs
+                and not mcp_servers
+                and not hosted_tools
+                and not guardrail_runtimes
+            )
             if orchestration_children:
                 raise AgentDefinitionContractError("SQLite Session cannot use bounded orchestration")
             if workspace_access != "none":
@@ -288,9 +297,9 @@ class AgentDefinitionCatalog:
                 raise AgentDefinitionContractError(
                     "STEP050 SQLite Session composition permits exactly one read-only MCP server"
                 )
-            if agent_tools and not session_agent_tool_mode:
+            if agent_tools and not (session_agent_tool_mode or session_cross_domain_agent_tool_mode):
                 raise AgentDefinitionContractError(
-                    "STEP049 SQLite Session composition permits exactly one terminal Agent-as-Tool child"
+                    "SQLite Session Agent-as-Tool composition is outside the declared single-child or cross-domain boundary"
                 )
             if handoffs and not session_handoff_mode:
                 raise AgentDefinitionContractError(

@@ -1,121 +1,31 @@
 # OKCanvas Agent Runtime Productization Master Plan
 
-```text
-Current Workspace: WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING
-Workspace Version: 0.8.4-r7a1
-Current Runtime: STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE
-Runtime Version: 2.75.0
-State: CURRENT_PLAN_ALIGNED_BY_STEP008R4R7A1
-Promotion: NOT_READY
-MinIO/Object Storage Live: DEFERRED_BY_USER
-```
+Current Workspace: WORKSPACE_STEP008R4R12R4_STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE
+Workspace Version: 0.8.4-r12r4
+Current Runtime: STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE
+Runtime Version: 2.80.2
 
-## Principle
+State: LOCAL_DETERMINISTIC_CORRECTIVE_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Promotion: CANDIDATE_FOCUSED_WINDOWS_LIVE_HINT_ACTIVATION_RERUN_PENDING
 
-Audit current code first, preserve existing Product semantics, and implement the smallest closed
-boundary. Historical evidence keeps its original identity. Current package identity is read from
-`specs/workspace/current-baseline.json` and current documents are validated independently.
+## Current correction
 
-## Phase 0 — Current package and documentation closure
+R12R3 Windows Live proved four Root Runs could complete with zero specialist requests while grounded Organization hints were `UNAVAILABLE`. Code audit found the grounded Session marker did not receive a delegated MCP identity when legacy route-v2 had selected no Remote MCP. STEP096BR1R2 fixes that authority boundary without adding aliases, keyword parsers, fallback routing, new MCP Tools, DB schema, or stable-ID authority.
 
-- STEP091A Product storage READ_ONLY audit — complete.
-- STEP091B1 typed persistence ports / transaction ownership — complete.
-- STEP091B2 PostgreSQL Product + Submission atomic store — complete.
-- STEP091C Artifact blob store / SDK-neutral Object Storage boundary — complete.
-- STEP091B3 Approval / Evaluation / Session metadata PostgreSQL adapters — complete.
-- STEP091B3R1 real PostgreSQL isolated-schema acceptance — 19/19 accepted on parent promoted R6.
-- STEP091D Object Storage deployment composition + live gate implementation — complete; real
-  MinIO/S3-compatible live execution pending.
-- STEP008R4R7A current-document SOT alignment + per-file identity gate — retained.
-- STEP008R4R7A1 Git repository hygiene + retained Runtime dist tracking — implemented/static-validated;
-  tests remain deferred by user until MinIO is prepared.
+Authenticated grounded Session turns now materialize delegated tenant/principal/role identity before legacy child selection. Hint MCP access and selected execution MCP access remain separately bound at their bounded Runtime edges. Runtime does not pre-bind every possible MCP.
 
-## Phase 1 — Pre-production network boundary
+`interpretation.context.prepared` now records only bounded operational diagnostics: hint diagnostic code, whether delegated identity was present, and capability availability. Those diagnostic fields are not added to model context.
 
-Physically separate externally reachable Service API traffic from loopback-only Admin/operator
-traffic. Do not rely on one externally bound listener carrying both route families.
+The R12R4 Live harness also fixes its cleanup helper call to the exact `(removed, error_types)` contract.
 
-Exit: non-loopback Service bind cannot expose Admin routes; Admin listener is independently
-loopback-owned and regression covered.
+## Next proof
 
-## Phase 2 — Versioned PostgreSQL schema evolution
-
-Add a Product-owned ordered migration catalog/runner, schema-version preflight, upgrade policy,
-transaction/backup/restore rules and retained-old-schema upgrade evidence.
-
-Exit: an existing retained PostgreSQL schema upgrades deterministically to current without relying
-only on `CREATE TABLE IF NOT EXISTS` / `ADD COLUMN IF NOT EXISTS` initialization.
-
-## Phase 3 — Dependency-aware service readiness
-
-Split liveness from readiness. Readiness must use bounded, secret-safe checks for dependencies
-required by the selected topology (database, Artifact storage, Session ownership and required
-connectors).
-
-## Phase 4 — Service credential lifecycle
-
-Move beyond startup-static bearer JSON toward expiry/revocation/rotation or an external OIDC/JWT
-identity boundary while retaining tenant/principal/role authorization semantics.
-
-## Phase 5 — Object Storage lifecycle, after real MinIO/S3 live acceptance
-
-- Execute STEP091D isolated-prefix live gate against the prepared real server.
-- Add bounded blob inventory and global metadata storage-reference inventory.
-- Add age threshold, quarantine/recheck and idempotent orphan deletion.
-- Pin only operational retry/timeout/TLS/encryption controls justified by live deployment evidence.
-
-Exit: crashes/failed compensation cannot create permanently undiscoverable blobs and deletion is
-never based on one unconfirmed scan.
-
-## Phase 6 — API / Worker physical separation and HA
-
-Reuse the existing durable claim owner/token/acquired/expires/recovery fields. Add physical Worker,
-heartbeat/lease renewal, lost-Worker reconciliation and forced-termination acceptance. Then decide
-distributed Session history versus explicit sticky ownership/recovery.
-
-Exit: forced Worker loss recovers without duplicate execution.
-
-## Phase 7 — Governed enterprise write
-
-Implement separate action Agent/MCP credentials, durable Command ledger, hash-bound Approval,
-idempotency/expected revision, unknown-outcome reconciliation and read-after-write verification.
-Current `enterprise-action-write-v1` routing remains proposal-only until this boundary exists.
-
-## Phase 8 — Durable Automation
-
-Implement a restart-safe Automation registry/scheduler that creates governed Submissions with
-schedule/condition dedupe and execution-time approval. Current `durable-automation-v1` routing
-remains proposal-only until this boundary exists.
-
-## Phase 9 — Product UI / Skill Platform / operations
-
-After execution and production boundaries stabilize: versioned Skill registry/search, Product
-Conversation/Run/Artifact/Approval/Automation UI, metrics/tracing, backup/restore, load/soak/failure
-injection, dependency lock, SBOM/security audit and owned deployment automation.
-
-## Immediate ordered backlog
+Run on clean Windows:
 
 ```text
-P0 STEP008R4R7A current-document SOT correction      IMPLEMENTED / TESTS DEFERRED
-P0 Admin / Service listener physical isolation       NEXT MINIO-INDEPENDENT CANDIDATE
-P0 Versioned PostgreSQL migration lifecycle          AFTER NETWORK BOUNDARY
-P1 Dependency-aware livez/readyz                     OPEN
-P1 Service credential lifecycle                      OPEN
-P1 STEP091D real MinIO/Object Storage live           DEFERRED UNTIL MINIO READY
-P1 Artifact inventory/quarantine/GC                  AFTER OBJECT STORAGE LIVE
-P2 Physical Worker + heartbeat/lease renewal         OPEN LATER
-P2 Distributed Session history / HA                  OPEN LATER
-P2 Governed Groupware write                          PROPOSAL_ONLY TODAY
-P2 Durable Automation                                PROPOSAL_ONLY TODAY
-P3 Product UI / Skill V2 / production operations     OPEN LATER
+sh_run_workspace_step008r4r12r4_grounded_structured_delegation_live_acceptance
 ```
 
-## Guardrails
+Do not promote until the generated R12R4 Live evidence is PASSED. The first expected diagnostic improvement is `delegated_identity_present=true`; with healthy loopback connectors, Organization hint capability should become available and hint state should no longer be `UNAVAILABLE` because identity is missing. If hints are available but the Root still chooses direct answers, child-selection policy is a separate next decision and must not be guessed in this corrective.
 
-- never infer production readiness from deterministic adapters alone;
-- never rewrite historical evidence to the newest current Step;
-- never build a second Worker claim system when durable claim state already exists;
-- never delete Artifact blobs from a single unconfirmed orphan scan;
-- never expose credential-bearing Admin/operator routes merely because the Service listener must
-  become externally reachable;
-- do not run MinIO/Object Storage tests until the user-provided MinIO environment is ready.
+R10ER1/STEP094R2 remains the last Windows-focused Live-promoted baseline. STEP095A durable-memory audit remains separate backlog.

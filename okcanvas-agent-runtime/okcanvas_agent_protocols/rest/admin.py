@@ -240,6 +240,18 @@ class AssistantCapabilityRequirementResponse(StrictModel):
     side_effect: str
 
 
+class OrganizationContextRelationTraversalHintResponse(StrictModel):
+    schema_version: Literal["okcanvas-organization-context-relation-traversal-hint-v1"] = (
+        "okcanvas-organization-context-relation-traversal-hint-v1"
+    )
+    source_entity_type: str
+    source_entity_id: str
+    relation_type: str
+    direction: Literal["OUTBOUND", "INBOUND"]
+    result_entity_types: list[str]
+    max_results: int = Field(ge=1, le=20)
+
+
 class OrganizationContextRequestHintResponse(StrictModel):
     schema_version: Literal["okcanvas-organization-context-request-hint-v1"] = (
         "okcanvas-organization-context-request-hint-v1"
@@ -249,7 +261,39 @@ class OrganizationContextRequestHintResponse(StrictModel):
     target_expression: str
     entity_type_hints: list[str]
     requested_fields: list[str]
-    preferred_operation: Literal["RESOLVE", "SEARCH"]
+    preferred_operation: Literal["RESOLVE", "SEARCH", "GET"]
+    relation_traversal: OrganizationContextRelationTraversalHintResponse | None = None
+
+
+class GroupwareContextFilterHintResponse(StrictModel):
+    schema_version: Literal["okcanvas-groupware-context-filter-hint-v1"] = (
+        "okcanvas-groupware-context-filter-hint-v1"
+    )
+    pattern_id: str
+    resource_kind: Literal["NOTICE", "MAIL", "CALENDAR"]
+    tool_name: Literal["search_notices", "search_mail", "list_calendar_events"]
+    entity_type: Literal["EMPLOYEE", "PROJECT", "CLIENT", "PRODUCT", "DEPARTMENT"]
+    entity_id: str
+    label: str
+    qualifiers: list[str]
+    catalog_revision: int | None = None
+    max_results: int = Field(ge=1, le=20)
+
+
+class GroundedInterpretationRouteShadowResponse(StrictModel):
+    schema_version: Literal["okcanvas-assistant-route-v3"] = "okcanvas-assistant-route-v3"
+    interpretation_mode: Literal["LLM_GROUNDED"] = "LLM_GROUNDED"
+    request_class: None = None
+    side_effect: None = None
+    status: Literal["EXECUTABLE"] = "EXECUTABLE"
+    selected_agent_definition_id: str
+    executable_now: Literal[True] = True
+    matched_rule_id: str
+    reasons: list[str]
+    authoritative: Literal[False] = False
+    legacy_authoritative_route_schema: Literal["okcanvas-assistant-route-v2"] = (
+        "okcanvas-assistant-route-v2"
+    )
 
 
 class AssistantRouteResponse(StrictModel):
@@ -280,6 +324,8 @@ class AssistantRouteResponse(StrictModel):
     grounding_effective_at: str | None
     grounding: list[OrganizationContextMatchResponse]
     organization_context_request_hint: OrganizationContextRequestHintResponse | None = None
+    groupware_context_filter: GroupwareContextFilterHintResponse | None = None
+    grounded_interpretation_shadow: GroundedInterpretationRouteShadowResponse | None = None
 
 
 class AssistantRunPreflightResponse(StrictModel):

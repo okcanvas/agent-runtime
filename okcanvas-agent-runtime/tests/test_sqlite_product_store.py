@@ -198,7 +198,7 @@ def test_artifact_blob_missing_and_mismatch_are_detected(store: SQLiteProductSto
 
 
 def test_raw_input_and_api_key_are_not_store_inputs(store: SQLiteProductStore) -> None:
-    sentinel = "sk-test-never-persist-this-secret"
+    sentinel = "openai-test-key-never-persist-this-secret"
     task = store.create_task(
         task_type="TEST",
         input_sha256=digest(sentinel),

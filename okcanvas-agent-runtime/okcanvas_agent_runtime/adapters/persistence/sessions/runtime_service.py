@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 import sqlite3
 import uuid
 from contextlib import contextmanager
@@ -14,6 +15,11 @@ from okcanvas_agent_runtime.domain.sessions.compaction import BoundedEncryptedCo
 from okcanvas_agent_runtime.adapters.storage.session_history import SessionHistoryKey, StrictEncryptedSession
 from okcanvas_agent_runtime.domain.sessions.errors import SessionBusyError, SessionConfigurationError, SessionIntegrityError, SessionNotFound, SessionPolicyError, SessionStateError
 from okcanvas_agent_runtime.domain.sessions.models import ProductSessionRecord, ProductSessionState, SQLiteSessionPolicy
+from okcanvas_agent_runtime.domain.sessions.context_focus import (
+    SessionContextFocusObservation,
+    SessionContextFocusRecord,
+    SessionContextFocusState,
+)
 from okcanvas_agent_runtime.adapters.persistence.sessions.rotation import SessionKeyRotationResult, SQLiteSessionHistoryRotator
 from okcanvas_agent_runtime.domain.sessions.rotation_policy import SQLiteSessionKeyRotationPolicy
 
@@ -44,6 +50,19 @@ CREATE TABLE IF NOT EXISTS product_session_key_rotation (
     updated_at TEXT NOT NULL,
     FOREIGN KEY(session_id) REFERENCES product_session(session_id)
 );
+CREATE TABLE IF NOT EXISTS product_session_context_focus (
+    session_id TEXT PRIMARY KEY,
+    domain TEXT NOT NULL,
+    state TEXT NOT NULL,
+    context_json TEXT NOT NULL,
+    context_sha256 TEXT NOT NULL,
+    source_run_id TEXT NOT NULL,
+    source_turn_count INTEGER NOT NULL,
+    updated_at TEXT NOT NULL,
+    FOREIGN KEY(session_id) REFERENCES product_session(session_id)
+);
+CREATE INDEX IF NOT EXISTS idx_product_session_context_focus_updated
+ON product_session_context_focus(updated_at DESC, session_id DESC);
 """
 
 
@@ -145,9 +164,18 @@ class SQLiteSessionRuntimeService:
             and not definition.guardrails
             and definition.workspace_access == "none"
         )
+        session_cross_domain_agent_tool_mode = (
+            definition.agent_id == "organization-assistant-session-agent"
+            and definition.agent_tools == ("groupware-read-agent", "organization-context-read-agent")
+            and not definition.tools
+            and not definition.mcp_servers
+            and not definition.handoffs
+            and not definition.guardrails
+            and definition.workspace_access == "none"
+        )
         if (
             (definition.mcp_servers and not session_mcp_mode)
-            or (definition.agent_tools and not session_agent_tool_mode)
+            or (definition.agent_tools and not (session_agent_tool_mode or session_cross_domain_agent_tool_mode))
             or (definition.handoffs and not session_handoff_mode)
         ):
             raise SessionStateError("SQLite Session Agent has an unsupported child or MCP composition")
@@ -183,6 +211,77 @@ class SQLiteSessionRuntimeService:
                 (limit,),
             ).fetchall()
         return tuple(self._from_row(row) for row in rows)
+
+    def get_context_focus(self, session_id: str) -> SessionContextFocusRecord | None:
+        with self._connection() as conn:
+            session_row = conn.execute(
+                "SELECT * FROM product_session WHERE session_id=?", (session_id,)
+            ).fetchone()
+            if session_row is None:
+                raise SessionNotFound(f"Session not found: {session_id}")
+            session_record = self._from_row(session_row)
+            if session_record.state is not ProductSessionState.ACTIVE:
+                return None
+            self._validate_record_key(session_record)
+            row = conn.execute(
+                "SELECT * FROM product_session_context_focus WHERE session_id=?", (session_id,)
+            ).fetchone()
+        if row is None:
+            return None
+        try:
+            payload = json.loads(str(row["context_json"]))
+            if not isinstance(payload, dict):
+                raise ValueError("Session context focus payload is not an object")
+            observation = SessionContextFocusObservation.from_mapping(payload)
+        except Exception as exc:
+            raise SessionIntegrityError("Session context focus payload is invalid") from exc
+        if observation.sha256 != str(row["context_sha256"]):
+            raise SessionIntegrityError("Session context focus integrity hash changed")
+        if observation.domain != str(row["domain"]) or observation.state.value != str(row["state"]):
+            raise SessionIntegrityError("Session context focus indexed fields disagree with payload")
+        try:
+            record = SessionContextFocusRecord(
+                session_id=session_id,
+                observation=observation,
+                source_run_id=str(row["source_run_id"]),
+                source_turn_count=int(row["source_turn_count"]),
+                updated_at=str(row["updated_at"]),
+            )
+            if record.source_turn_count != session_record.turn_count:
+                return None
+            return record
+        except ValueError as exc:
+            raise SessionIntegrityError("Session context focus indexed metadata is invalid") from exc
+
+    @staticmethod
+    def _commit_context_focus(
+        conn,
+        *,
+        session_id: str,
+        run_id: str,
+        observation: SessionContextFocusObservation,
+        source_turn_count: int,
+        now: str,
+    ) -> None:
+        if observation.state is SessionContextFocusState.EMPTY:
+            conn.execute(
+                "DELETE FROM product_session_context_focus WHERE session_id=?", (session_id,)
+            )
+            return
+        payload = observation.canonical_json()
+        conn.execute(
+            """INSERT INTO product_session_context_focus(
+                   session_id,domain,state,context_json,context_sha256,source_run_id,source_turn_count,updated_at
+               ) VALUES(?,?,?,?,?,?,?,?)
+               ON CONFLICT(session_id) DO UPDATE SET
+                   domain=excluded.domain, state=excluded.state, context_json=excluded.context_json,
+                   context_sha256=excluded.context_sha256, source_run_id=excluded.source_run_id,
+                   source_turn_count=excluded.source_turn_count, updated_at=excluded.updated_at""",
+            (
+                session_id, observation.domain, observation.state.value, payload, observation.sha256,
+                run_id, source_turn_count, now,
+            ),
+        )
 
     def validate_binding(self, *, session_id: str, definition: AgentDefinition, runtime_binding_sha256: str) -> ProductSessionRecord:
         record = self.get(session_id)
@@ -243,7 +342,8 @@ class SQLiteSessionRuntimeService:
 
     def release_turn(
         self, *, session_id: str, run_id: str, succeeded: bool | None = None,
-        committed: bool | None = None, item_count: int
+        committed: bool | None = None, item_count: int,
+        context_focus: SessionContextFocusObservation | None = None,
     ) -> ProductSessionRecord:
         with self._connection() as conn:
             conn.execute("BEGIN IMMEDIATE")
@@ -269,6 +369,11 @@ class SQLiteSessionRuntimeService:
                    WHERE session_id=?""",
                 (turn_count, max(0, int(item_count)), now, session_id),
             )
+            if should_commit and context_focus is not None:
+                self._commit_context_focus(
+                    conn, session_id=session_id, run_id=run_id, observation=context_focus,
+                    source_turn_count=turn_count, now=now
+                )
             conn.commit()
         return self.get(session_id)
 
@@ -708,6 +813,9 @@ class SQLiteSessionRuntimeService:
                 raise SessionNotFound(f"Session not found: {session_id}")
             record = self._from_row(row)
             if record.state is ProductSessionState.CLEARED:
+                conn.execute(
+                    "DELETE FROM product_session_context_focus WHERE session_id=?", (session_id,)
+                )
                 conn.commit()
                 return record
             if record.state is ProductSessionState.CLEARING:
@@ -782,6 +890,9 @@ class SQLiteSessionRuntimeService:
                 conn.execute(
                     "DELETE FROM product_session_key_rotation WHERE session_id=?", (session_id,)
                 )
+            conn.execute(
+                "DELETE FROM product_session_context_focus WHERE session_id=?", (session_id,)
+            )
             conn.commit()
         return self.get(session_id)
 

@@ -25,8 +25,8 @@ def test_step052_assets_exist() -> None:
 
 def test_step052_runtime_info_declares_exact_boundary() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.immutable_model_route_windows_live_accepted is True
     assert info.immutable_model_retry_policy_implemented is True
     assert info.immutable_model_runner_managed_max_retries == 0

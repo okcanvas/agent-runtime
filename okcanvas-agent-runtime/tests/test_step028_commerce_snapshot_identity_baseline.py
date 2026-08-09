@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_step028_runtime_baseline() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.commerce_snapshot_failure_matrix_windows_live_accepted is True
     assert info.commerce_snapshot_response_identity_bound is True
     assert info.commerce_snapshot_identity_mismatch_code == "COMMERCE_SNAPSHOT_IDENTITY_MISMATCH"

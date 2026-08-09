@@ -28,8 +28,8 @@ def test_step043_runtime_and_session_assets_exist() -> None:
 
 def test_step043_baseline_identifiers_are_current() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.agent_as_tool_windows_live_accepted is True
     assert info.generic_agent_sessions_enabled is True
     assert info.sqlite_session_runtime_implemented is True

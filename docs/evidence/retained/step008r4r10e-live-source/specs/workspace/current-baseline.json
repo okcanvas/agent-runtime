@@ -1,0 +1,49 @@
+{
+  "cross_domain_authorization_rule": "CONTEXT_REF_IS_ADDITIVE_FILTER_NEVER_AUTHORITY",
+  "cross_domain_binding_fence": "EXECUTABLE_ROUTE_SELECTED_AGENT_MUST_EQUAL_BOUND_SESSION_AGENT",
+  "cross_domain_groupware_stable_focus": "IMPLEMENTED_TEST_PENDING",
+  "cross_domain_live_diagnostic_contract": "ALWAYS_PERSIST_LAST_REDACTED_CLI_AND_RUNTIME_RUN_CARDINALITY_BEFORE_POST_CLI_ASSERTIONS",
+  "cross_domain_live_identity_provenance": "BASELINE_CATALOG_EXECUTABLE_RUNTIME_PYPROJECT_AND_SERVICE_VERSION_MUST_MATCH_BEFORE_ACCEPTANCE",
+  "cross_domain_live_status": "FUNCTIONAL_PASS_PROVENANCE_INVALID_R10D_MIXED_TREE_EVIDENCE_R10E_RERUN_REQUIRED",
+  "cross_domain_session_children": [
+    "groupware-read-agent",
+    "organization-context-read-agent"
+  ],
+  "cross_domain_session_execution_path": "sqlite-session-bounded-cross-domain-read-subagent-execution-v1",
+  "cross_domain_session_root": "organization-assistant-session-agent",
+  "cross_domain_submission_admission_owner": "CROSS_DOMAIN_SESSION_DELEGATION_CATALOG",
+  "cross_domain_submission_target_rule": "IMMUTABLE_ROUTING_CONTEXT_SELECTS_AT_MOST_ONE_MCP_PER_TURN",
+  "current_documents": [
+    "README.md",
+    "HANDOFF.md",
+    "PLANS.md",
+    "okcanvas-agent-runtime/README.md",
+    "okcanvas-agent-runtime/HANDOFF.md",
+    "okcanvas-agent-runtime/PLANS.md",
+    "docs/plans/OKCANVAS_AGENT_RUNTIME_PRODUCTIZATION_MASTER_PLAN.md"
+  ],
+  "historical_evidence_policy": "IMMUTABLE_DO_NOT_REWRITE_HISTORICAL_STEP_IDENTITY",
+  "identity_markers": {
+    "runtime_step_label": "Current Runtime",
+    "runtime_version_label": "Runtime Version",
+    "workspace_step_label": "Current Workspace",
+    "workspace_version_label": "Workspace Version"
+  },
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "parent_workspace_step": "WORKSPACE_STEP008R4R10D_RUNTIME_STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "parent_workspace_version": "0.8.4-r10d",
+  "promotion": "NOT_READY",
+  "relation_live_failure_fence": "EXCEPTION_MUST_REMAIN_FAILED_AFTER_CLEANUP",
+  "relation_live_launcher_correction": "RUNTIME_VENV_AND_BYTECODE_ISOLATION_REQUIRED",
+  "relation_live_parent_status": "USER_REPORTED_SUMMARY_PASSED_19_OF_19",
+  "relation_route_protocol_correction": "TYPED_RELATION_TRAVERSAL_RESPONSE_REQUIRED",
+  "runtime_product_source_changed": false,
+  "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "runtime_version": "2.78.2",
+  "schema_version": "okcanvas-agent-platform-current-baseline-v1",
+  "source_release_sha256": "e4e0603c0fd1ac9135cd5e530cb2511fc46891d5b160bc6e4a6af6efdd4143b8",
+  "state": "R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE_STATIC_VALIDATED_LIVE_RERUN_REQUIRED",
+  "test_execution": "DEFERRED_BY_USER_MINIO_HOLD_STATIC_ONLY",
+  "workspace_step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+  "workspace_version": "0.8.4-r10e"
+}

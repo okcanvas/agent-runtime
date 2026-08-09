@@ -1,0 +1,35 @@
+{
+  "actual_r9a_relation_live_effective_state": "FAILED_INVALID_FALSE_POSITIVE",
+  "launcher_registry": {
+    "passed_checks": 7,
+    "state": "PASSED",
+    "total_checks": 7
+  },
+  "promotion": "NOT_READY",
+  "runtime_parent_manifest_file_count": 4305,
+  "runtime_product_python_file_count": 367,
+  "runtime_product_python_snapshot_sha256": "8364cb4a8b7cf250e5dfb9cffdc7856615e743fa66938dbf231510a36bfec399",
+  "runtime_step": "STEP093R1_RELATION_ROUTE_PROTOCOL_AND_LIVE_FALSE_POSITIVE_CLOSURE",
+  "runtime_step093r1_static_contract": {
+    "passed_checks": 28,
+    "state": "PASSED",
+    "total_checks": 28
+  },
+  "runtime_version": "2.77.1",
+  "schema_version": "okcanvas-workspace-step008r4r9b-static-validation-summary-v1",
+  "state": "STATIC_VALIDATION_PASSED_RELATION_LIVE_RERUN_REQUIRED",
+  "tests": {
+    "corrected_relation_live_rerun_executed": false,
+    "minio_object_storage_live_executed": false,
+    "new_deterministic_acceptance_executed": false,
+    "new_unit_tests_executed": false
+  },
+  "workspace_manifest_file_count": 4784,
+  "workspace_r9b_static_contract": {
+    "passed_checks": 15,
+    "state": "PASSED",
+    "total_checks": 15
+  },
+  "workspace_step": "WORKSPACE_STEP008R4R9B_RUNTIME_STEP093R1_RELATION_ROUTE_PROTOCOL_AND_LIVE_FALSE_POSITIVE_CLOSURE",
+  "workspace_version": "0.8.4-r9b"
+}

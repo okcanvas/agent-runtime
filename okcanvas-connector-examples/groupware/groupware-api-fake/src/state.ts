@@ -26,6 +26,10 @@ export class FakeState {
       {
         record_id: "notice-001",
         tenant_id: "tenant-a",
+        context_refs: [
+          { entity_type: "EMPLOYEE", entity_id: "employee-0017" },
+          { entity_type: "PROJECT", entity_id: "project-001" },
+        ],
         title: "Maintenance notice",
         body: "Service maintenance at 18:00.",
         visible_to_roles: ["agent-user", "employee", "manager", "admin"],
@@ -33,6 +37,7 @@ export class FakeState {
       {
         record_id: "notice-tenant-b-001",
         tenant_id: "tenant-b",
+        context_refs: [{ entity_type: "PROJECT", entity_id: "project-b-001" }],
         title: "Tenant B notice",
         body: "Tenant B only.",
         visible_to_roles: ["agent-user", "employee", "manager", "admin"],
@@ -42,6 +47,10 @@ export class FakeState {
       {
         record_id: "mail-001",
         tenant_id: "tenant-a",
+        context_refs: [
+          { entity_type: "EMPLOYEE", entity_id: "employee-0017" },
+          { entity_type: "PROJECT", entity_id: "project-001" },
+        ],
         owner_principal_id: "user-001",
         subject: "Project update",
         body: "The project is on track.",
@@ -49,6 +58,7 @@ export class FakeState {
       {
         record_id: "mail-002",
         tenant_id: "tenant-a",
+        context_refs: [{ entity_type: "DEPARTMENT", entity_id: "department.management-support" }],
         owner_principal_id: "manager-001",
         subject: "Management update",
         body: "Manager private mail.",
@@ -58,6 +68,10 @@ export class FakeState {
       {
         record_id: "event-001",
         tenant_id: "tenant-a",
+        context_refs: [
+          { entity_type: "EMPLOYEE", entity_id: "employee-0017" },
+          { entity_type: "PROJECT", entity_id: "project-001" },
+        ],
         owner_principal_id: "user-001",
         title: "Weekly review",
         start_at: "2026-08-05T10:00:00+09:00",
@@ -66,6 +80,7 @@ export class FakeState {
       {
         record_id: "event-002",
         tenant_id: "tenant-a",
+        context_refs: [{ entity_type: "DEPARTMENT", entity_id: "department.management-support" }],
         owner_principal_id: "manager-001",
         title: "Manager review",
         start_at: "2026-08-05T12:00:00+09:00",

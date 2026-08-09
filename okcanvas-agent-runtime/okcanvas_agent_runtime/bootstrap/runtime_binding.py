@@ -29,7 +29,7 @@ from okcanvas_agent_runtime.domain.sessions import SQLiteSessionApprovalPolicyCa
 from okcanvas_agent_runtime.agent.guardrails import GuardrailRuntimeCatalog
 from okcanvas_agent_runtime.core.governance import resolve_architecture_constitution
 from okcanvas_agent_runtime.application.orchestration import BoundedOrchestrationPolicyCatalog, validate_bounded_orchestration_definitions
-from okcanvas_agent_runtime.application.groupware_read import GroupwareSessionDelegationCatalog
+from okcanvas_agent_runtime.application.assistant_routing.cross_domain_session import CrossDomainSessionDelegationCatalog
 from okcanvas_agent_runtime.application.organization_context import OrganizationContextSessionDelegationCatalog
 from okcanvas_agent_runtime.agent.tools.function import FunctionToolApprovalMode, FunctionToolRuntimeCatalog
 
@@ -228,8 +228,9 @@ class AgentRuntimeBindingCatalog:
             )
         groupware_session_binding = None
         organization_context_session_binding = None
+        cross_domain_session_binding = None
         if definition.agent_id == "organization-assistant-session-agent":
-            groupware_session_binding = GroupwareSessionDelegationCatalog(
+            cross_domain_session_binding = CrossDomainSessionDelegationCatalog(
                 self.project_root
             ).resolve(definition)
         elif definition.agent_id == "organization-context-session-agent":
@@ -240,7 +241,9 @@ class AgentRuntimeBindingCatalog:
             groupware_session_binding or organization_context_session_binding
         )
         mcp_server_ids = list(definition.mcp_servers)
-        if delegated_session_binding is not None:
+        if cross_domain_session_binding is not None:
+            mcp_server_ids.extend(item.mcp_server_id for item in cross_domain_session_binding.targets)
+        elif delegated_session_binding is not None:
             mcp_server_ids.append(delegated_session_binding.mcp_server_id)
         mcp_definitions = self._mcp.resolve_many(tuple(mcp_server_ids))
         mcp_entries: list[dict[str, str]] = []
@@ -255,7 +258,15 @@ class AgentRuntimeBindingCatalog:
                 "definition_sha256": server.definition_sha256,
                 "factory_sha256": mcp_factory_sha,
             }
-            if delegated_session_binding is not None:
+            if cross_domain_session_binding is not None:
+                owner = next(
+                    (item.child.agent_id for item in cross_domain_session_binding.targets if item.mcp_server_id == server.server_id),
+                    None,
+                )
+                if owner is None:
+                    raise RuntimeError("Cross-domain MCP server has no declared child owner")
+                entry["owner_agent_id"] = owner
+            elif delegated_session_binding is not None:
                 entry["owner_agent_id"] = delegated_session_binding.child.agent_id
             if server.is_local_stdio:
                 if not server.module:
@@ -386,6 +397,7 @@ class AgentRuntimeBindingCatalog:
             and not definition.guardrails
             and definition.workspace_access == "none"
         )
+        sqlite_session_cross_domain_delegation = cross_domain_session_binding is not None
         sqlite_session_groupware_delegation = groupware_session_binding is not None
         sqlite_session_organization_context_delegation = (
             organization_context_session_binding is not None
@@ -689,6 +701,54 @@ class AgentRuntimeBindingCatalog:
                 "okcanvas_agent_runtime.adapters.streaming.broker",
                 *session_modules,
                 *handoff_modules,
+                "okcanvas_agent_runtime.application.execution.output_registry",
+                "okcanvas_agent_runtime.bootstrap.runtime_binding",
+            )
+        elif sqlite_session_cross_domain_delegation:
+            assert cross_domain_session_binding is not None
+            session_policy = SQLiteSessionPolicyCatalog(self.project_root).resolve()
+            composition_policy = cross_domain_session_binding.policy
+            session_modules = (
+                "okcanvas_agent_runtime.domain.sessions.models",
+                "okcanvas_agent_runtime.domain.sessions.policy",
+                "okcanvas_agent_runtime.adapters.storage.session_history",
+                "okcanvas_agent_runtime.domain.sessions.compaction",
+                "okcanvas_agent_runtime.adapters.persistence.sessions.runtime_service",
+            )
+            cross_domain_modules = (
+                "okcanvas_agent_runtime.application.assistant_routing.cross_domain_session",
+                "okcanvas_agent_runtime.application.groupware_read.models",
+                "okcanvas_agent_runtime.application.groupware_read.catalog",
+                "okcanvas_agent_runtime.application.groupware_read.request_execution",
+                "okcanvas_agent_runtime.application.organization_context.remote_models",
+                "okcanvas_agent_runtime.application.organization_context.remote_catalog",
+                "okcanvas_agent_runtime.application.organization_context.request_execution",
+                "okcanvas_agent_runtime.agent.subagents.agent_tools.runtime",
+                "okcanvas_agent_runtime.adapters.mcp.clients.openai_factory",
+                "okcanvas_agent_runtime.application.mcp_access.catalog",
+            )
+            session_runtime_sha = _combined_source_sha(
+                tuple(_module_file(name) for name in session_modules)
+            )
+            agent_tool_runtime_sha = _combined_source_sha(
+                tuple(_module_file(name) for name in cross_domain_modules)
+            )
+            session_policy_payload = {
+                "sqlite_session": session_policy.to_binding_dict(),
+                "cross_domain_session_delegation": composition_policy.to_binding_dict(),
+            }
+            agent_tool_policy_payload = composition_policy.to_binding_dict()
+            execution_path = "sqlite-session-bounded-cross-domain-read-subagent-execution-v1"
+            engine_modules = (
+                "okcanvas_agent_runtime.application.submissions.service",
+                "okcanvas_agent_runtime.application.submissions.execution",
+                "okcanvas_agent_runtime.application.execution.service",
+                "okcanvas_agent_runtime.adapters.openai.generic_gateway",
+                "okcanvas_agent_runtime.adapters.streaming.adapter",
+                "okcanvas_agent_runtime.adapters.streaming.broker",
+                "okcanvas_agent_runtime.application.invocations.service",
+                *session_modules,
+                *cross_domain_modules,
                 "okcanvas_agent_runtime.application.execution.output_registry",
                 "okcanvas_agent_runtime.bootstrap.runtime_binding",
             )

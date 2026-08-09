@@ -1,0 +1,38 @@
+{
+  "candidate_fresh": {
+    "architecture_static": "PASSED",
+    "current_document_sot": "PASSED",
+    "launcher_registry": "PASSED",
+    "manifest": "4805/4805 exact",
+    "step094_static_contract": "PASSED"
+  },
+  "focused_live_source_prepared": "sh_run_workspace_step008r4r10_cross_domain_live_acceptance.cmd",
+  "local_static": {
+    "architecture_static": "40/40 PASSED",
+    "current_document_sot": "PASSED",
+    "historical_evidence": "992 common / 0 changed",
+    "json_parse": "851/851 PASSED",
+    "launcher_registry": "7/7 PASSED",
+    "python_ast": "1003/1003 PASSED",
+    "step094_static_contract": "39/39 PASSED"
+  },
+  "parent_r9b_relation_live": "USER_REPORTED_SUMMARY_PASSED_19_OF_19",
+  "promotion": "NOT_READY",
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "runtime_version": "2.78.0",
+  "schema_version": "okcanvas-workspace-step008r4r10-final-static-verification-v1",
+  "state": "STATIC_AND_FRESH_PACKAGE_VALIDATED_TEST_PENDING",
+  "test_execution": {
+    "connector_acceptance": false,
+    "example_acceptance": false,
+    "full_runtime_regression": false,
+    "object_storage_minio_live": false,
+    "runtime_deterministic": false,
+    "step094_cross_domain_live": false,
+    "unit": false,
+    "windows_live_openai": false,
+    "workspace_acceptance": false
+  },
+  "workspace_step": "WORKSPACE_STEP008R4R10_RUNTIME_STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "workspace_version": "0.8.4-r10"
+}

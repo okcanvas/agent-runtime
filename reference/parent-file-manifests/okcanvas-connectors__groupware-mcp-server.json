@@ -8,13 +8,13 @@
     },
     {
       "path": "HANDOFF.md",
-      "sha256": "9da9cc50f6cc0737b64efe19eb72de9f98b0f33628cfc872733815e22c91e2c8",
-      "size": 2926
+      "sha256": "4c06247a05345f9b418c797f9fd14ac28a52a453c6d087156db7034f02288880",
+      "size": 866
     },
     {
       "path": "README.md",
-      "sha256": "d02657060188c34b49cc0e5c341385cb9a2669f870e91de69953726bfdafb496",
-      "size": 2023
+      "sha256": "cd2ed9862122c95b7aa52547188000d63564cce3e3bb6017e88a3065eae82dba",
+      "size": 1506
     },
     {
       "path": "contracts/connector-binding-contract.json",
@@ -28,7 +28,7 @@
     },
     {
       "path": "contracts/runtime-provider-contract.json",
-      "sha256": "f12f58d53909e6402864cff9c5fa54f659a093489fc0bcc1c898cdb397cbf5cd",
+      "sha256": "5863fdc5e75ef0b8eab9caa99250e5c8abdd8bb7646f4cccda1076d6495a7cc2",
       "size": 1336
     },
     {
@@ -78,8 +78,8 @@
     },
     {
       "path": "groupware_mcp_server/baseline.py",
-      "sha256": "c7dde79a6247023d70654faeb9ce9601525932ae92ba376e8df46fdbdf044d91",
-      "size": 147
+      "sha256": "bb58e9b371cf5b5233255f4012f8565e2e05c6b3ea28760af2ba20d0270b13f3",
+      "size": 153
     },
     {
       "path": "groupware_mcp_server/config.py",
@@ -88,13 +88,13 @@
     },
     {
       "path": "groupware_mcp_server/contracts.py",
-      "sha256": "ba1c4f4e7e434a2e910a2a4f793d8ad094a6486d11bba3395b3f87e87c134d66",
-      "size": 1590
+      "sha256": "75e5d49fbfa9713842c8d154d5c4e077b53883159b2cf0b6c8939753d07e52e5",
+      "size": 2391
     },
     {
       "path": "groupware_mcp_server/groupware_client.py",
-      "sha256": "507c52cfb99f631523d22d00302253cbbfb0077b0b726fb182df6a499c7e8594",
-      "size": 5395
+      "sha256": "1dfe583036c3f42093fed88b3396364f531baad3d50dcf79f417c9241ccb959c",
+      "size": 5595
     },
     {
       "path": "groupware_mcp_server/identity.py",
@@ -103,38 +103,38 @@
     },
     {
       "path": "groupware_mcp_server/mcp_protocol.py",
-      "sha256": "5eac00a13a72202a3a37bf186a4f89de844f3e4df8477d3df2d137d26a8a4798",
-      "size": 7249
+      "sha256": "6b4347dc2b616cfaa3e8ee4087e2e05760e154b651881a725512bcbb2fd9a595",
+      "size": 8323
     },
     {
       "path": "groupware_mcp_server/service.py",
-      "sha256": "ce2cdf86ab9a47f9577f8d94995302c65b52122e3922f624e380c3fa0672f3e2",
-      "size": 3593
+      "sha256": "c5461a8508b700b19cc46021a236a988f92ad8a3744042292e40199d58202aba",
+      "size": 4332
     },
     {
       "path": "pyproject.toml",
-      "sha256": "194278eadb2031aa36e5afd289cd2991b32b0fb658fa2a465e7c5d8c3f0cd810",
+      "sha256": "f48966399c8817c0f0667c715cb68debc342e39b3180591ed7ff6fd60e024812",
       "size": 693
     },
     {
       "path": "scripts/package_source.py",
-      "sha256": "db4dedc8864aa7094f16485fa8b350d863ef645d673b901fd80cb8cee4dda681",
-      "size": 2228
+      "sha256": "64f635eda75efa6079d6f4a559df478f6f4e2ee9288e5167f69a7a3566630b43",
+      "size": 2226
     },
     {
       "path": "scripts/run_acceptance.py",
-      "sha256": "69ce30e0f420f4338442022b4cce92fe972b34fb87ad915de2730f7c1cd54f64",
-      "size": 3042
+      "sha256": "5b4d527a2a8b9856255b466b25e5fc70120509d0fbeb905320e8edb63a6f62b0",
+      "size": 3195
     },
     {
       "path": "scripts/run_optional_example_integration.py",
-      "sha256": "95af98a47d207faaf58d199034ffded1098f8453be3031ebfdc5191fba4e057e",
-      "size": 6751
+      "sha256": "c315a05a76e8b4bc849f79749a3b7f831086f1975ce08b9ea6962d0c856979fb",
+      "size": 6755
     },
     {
       "path": "tests/test_contracts.py",
-      "sha256": "9d59b07c71859855cf3ed4e727a64fa879b010a25c729dd35a4a88af8537988f",
-      "size": 2047
+      "sha256": "d510af03a9f33d5e2c96dc605da166d8c02a1de984703e5962a3ad4bf2b3112b",
+      "size": 3129
     },
     {
       "path": "tests/test_error_mapping.py",
@@ -148,7 +148,7 @@
     },
     {
       "path": "tests/test_mcp_protocol.py",
-      "sha256": "1cb718fde0ab531f45ffc8cec34b20825289707bdf535b7d75665128d6e2c262",
+      "sha256": "6ff74affa946289e562fa139c4475130f1744afcd3a03bd5a4cc21d5325018a4",
       "size": 5403
     },
     {
@@ -159,6 +159,6 @@
   ],
   "project_path": "okcanvas-connectors/groupware-mcp-server",
   "schema_version": "okcanvas-parent-project-file-manifest-v1",
-  "step": "CONNECTOR_STEP001R1_ASYNC_TEST_RUNNER_DEPENDENCY_CLOSURE",
-  "version": "0.1.1"
+  "step": "CONNECTOR_STEP002_STABLE_ORGANIZATION_CONTEXT_REFERENCE_FILTER",
+  "version": "0.2.0"
 }

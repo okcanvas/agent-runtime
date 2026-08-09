@@ -1,0 +1,17 @@
+{
+  "actual_r9a_relation_live_evidence": "FAILED_INVALID_FALSE_POSITIVE",
+  "corrected_relation_live_accepted": false,
+  "minio_object_storage_live_accepted": false,
+  "r9b_static_contract_passed": true,
+  "reasons": [
+    "CORRECTED_STEP093_RELATION_LIVE_RERUN_REQUIRED",
+    "MINIO_OBJECT_STORAGE_LIVE_DEFERRED_BY_USER"
+  ],
+  "runtime_step": "STEP093R1_RELATION_ROUTE_PROTOCOL_AND_LIVE_FALSE_POSITIVE_CLOSURE",
+  "runtime_step093r1_static_contract_passed": true,
+  "runtime_version": "2.77.1",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "NOT_READY",
+  "workspace_step": "WORKSPACE_STEP008R4R9B_RUNTIME_STEP093R1_RELATION_ROUTE_PROTOCOL_AND_LIVE_FALSE_POSITIVE_CLOSURE",
+  "workspace_version": "0.8.4-r9b"
+}

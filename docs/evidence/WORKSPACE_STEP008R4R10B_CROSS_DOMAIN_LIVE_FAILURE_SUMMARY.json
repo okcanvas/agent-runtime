@@ -1,0 +1,23 @@
+{
+  "schema_version": "okcanvas-workspace-r10b-cross-domain-live-failure-summary-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R10B_POST_CLI_REQUEST_COMPLETION_AND_RUN_CARDINALITY_DIAGNOSTIC_CLOSURE",
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "state": "FAILED",
+  "passed_checks": 6,
+  "total_checks": 7,
+  "failure_stage": "execute_establish-employee-focus",
+  "safe_error_category": "LIVE_EXECUTION_FAILED",
+  "safe_error_type": "RuntimeError",
+  "cli": {
+    "case_id": "establish-employee-focus",
+    "returncode": 0,
+    "one_request_completed": false,
+    "product_error_code": "RUN_SUBMISSION_INVALID",
+    "product_error_message": "Session Agent or Runtime binding changed"
+  },
+  "runtime": {
+    "run_count": 0
+  },
+  "root_cause": "BOUND_SESSION_AGENT_AND_ROUTED_AGENT_DIVERGED",
+  "alias_or_fallback_used": false
+}

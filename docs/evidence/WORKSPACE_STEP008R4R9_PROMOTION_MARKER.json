@@ -1,0 +1,28 @@
+{
+  "schema_version": "okcanvas-workspace-step008r4r9-promotion-marker-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R9_RUNTIME_STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL",
+  "workspace_version": "0.8.4-r9",
+  "runtime_step": "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL",
+  "runtime_version": "2.77.0",
+  "state": "IMPLEMENTED_STATIC_VALIDATED_TEST_PENDING",
+  "promotion": "NOT_READY",
+  "tests_deferred_by_user": true,
+  "step093_deterministic_accepted": false,
+  "step093_full_regression_accepted": false,
+  "step093_relation_multi_turn_live_source_prepared": true,
+  "step093_relation_multi_turn_live_accepted": false,
+  "step093_windows_live_accepted": false,
+  "step093_postgresql_live_accepted": false,
+  "step091d_object_storage_live_accepted": false,
+  "parent_step091b3r1_real_postgresql_live_accepted": true,
+  "parent_step091b3r1_real_postgresql_live_checks": "19/19",
+  "historical_postgresql_table_count": 15,
+  "current_postgresql_expected_table_count": 16,
+  "promotion_requirements": [
+    "Execute deferred STEP093 unit/deterministic/full-regression gates.",
+    "Execute current Windows deterministic regression.",
+    "Execute the dedicated STEP093 relation-aware multi-turn Windows Live OpenAI gate.",
+    "Execute current STEP093 PostgreSQL regression against the 16-table topology when the test hold is lifted.",
+    "Execute retained STEP091D real Object Storage live gate when MinIO/S3 is prepared."
+  ]
+}

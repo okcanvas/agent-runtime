@@ -1,0 +1,27 @@
+{
+  "actual_r10_live": {
+    "failure_stage": "execute_establish-employee-focus",
+    "passed_checks": 6,
+    "state": "FAILED",
+    "total_checks": 7
+  },
+  "next_action": "RERUN_FOCUSED_CROSS_DOMAIN_LIVE_AND_INSPECT_FAILURE_DIAGNOSTICS",
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "runtime_version": "2.78.0",
+  "schema_version": "okcanvas-workspace-step008r4r10a-static-validation-v1",
+  "state": "STATIC_VALIDATED_LIVE_RERUN_REQUIRED",
+  "static_checks": {
+    "current_document_sot": "PASSED",
+    "diagnostic_contract": "10/10 PASSED",
+    "json_parse": "879/879",
+    "launcher_registry": "7/7 PASSED",
+    "python_ast": "1913/1913",
+    "runtime_product_python_byte_identical_to_r10": true,
+    "runtime_product_python_files": 354,
+    "runtime_product_python_snapshot_sha256": "b73051daa163e18fdd80740df9e96a203c92126fd1ba0da1b96bc563e9245888",
+    "workspace_manifest": "4811/4811 exact"
+  },
+  "tests_executed_for_r10a": false,
+  "workspace_step": "WORKSPACE_STEP008R4R10A_CROSS_DOMAIN_LIVE_FAILURE_DIAGNOSTIC_CLOSURE",
+  "workspace_version": "0.8.4-r10a"
+}

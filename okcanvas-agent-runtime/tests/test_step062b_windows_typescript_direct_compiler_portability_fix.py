@@ -16,8 +16,8 @@ CLI = ROOT / "clients" / "cli"
 
 def test_step062b_runtime_baseline_and_flags_are_exact() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.windows_typescript_direct_compiler_fix_implemented is True
     assert info.windows_typescript_build_uses_node_direct_compiler is False
     assert info.windows_typescript_build_avoids_npm_batch is True

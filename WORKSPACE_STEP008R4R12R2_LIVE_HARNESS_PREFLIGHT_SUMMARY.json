@@ -1,0 +1,11 @@
+{
+  "environment_checks": "0/5 PASSED",
+  "identity_and_harness_checks": "6/6 PASSED",
+  "openai_live_run_executed": false,
+  "overall": "6/11",
+  "r12r1_failure": "EVIDENCE_REDACTION_SERIALIZATION_ATTRIBUTEERROR_FUNCTIONAL_RESULT_UNKNOWN",
+  "r12r2_correction": "SERIALIZE_PAYLOAD_BEFORE_STRING_REDACTION",
+  "schema_version": "okcanvas-workspace-step008r4r12r2-live-harness-preflight-summary-v1",
+  "secret_values_persisted": false,
+  "state": "EXPECTED_FAIL_CLOSED_NO_LOCAL_LIVE_ENVIRONMENT"
+}

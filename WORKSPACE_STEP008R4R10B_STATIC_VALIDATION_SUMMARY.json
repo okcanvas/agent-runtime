@@ -1,0 +1,29 @@
+{
+  "schema_version": "okcanvas-workspace-step008r4r10b-static-validation-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R10B_POST_CLI_REQUEST_COMPLETION_AND_RUN_CARDINALITY_DIAGNOSTIC_CLOSURE",
+  "workspace_version": "0.8.4-r10b",
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "runtime_version": "2.78.0",
+  "state": "STATIC_VALIDATED_LIVE_RERUN_REQUIRED",
+  "actual_r10a_live": {
+    "state": "FAILED",
+    "passed_checks": 6,
+    "total_checks": 7,
+    "failure_stage": "execute_establish-employee-focus",
+    "failure_diagnostics_cli": null,
+    "failure_diagnostics_runtime": null,
+    "control_flow_conclusion": "POST_CLI_REQUEST_COMPLETION_OR_RUN_CARDINALITY_PATH"
+  },
+  "static_checks": {
+    "current_document_sot": "PASSED",
+    "r10b_diagnostic_contract": "12/12 PASSED",
+    "launcher_registry": "7/7 PASSED",
+    "python_ast": "1914/1914",
+    "json_parse": "868/868",
+    "runtime_product_python_files": 354,
+    "runtime_product_python_byte_identical_to_r10a": true,
+    "runtime_product_python_snapshot_sha256": "b73051daa163e18fdd80740df9e96a203c92126fd1ba0da1b96bc563e9245888"
+  },
+  "tests_executed_for_r10b": false,
+  "next_action": "RERUN_FOCUSED_CROSS_DOMAIN_LIVE_AND_INSPECT_ALWAYS_PERSISTED_CLI_AND_RUN_CARDINALITY_DIAGNOSTICS"
+}

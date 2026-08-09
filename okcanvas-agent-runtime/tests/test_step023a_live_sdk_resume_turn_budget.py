@@ -194,8 +194,8 @@ def test_runtime_baseline_exposes_fix_without_claiming_live_acceptance() -> None
     from okcanvas_agent_runtime.core.runtime_info import RuntimeInfo
 
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.governed_local_tool_resume_turn_budget == 2
     assert info.governed_local_tool_resume_turn_budget_fix_implemented is True
     assert info.acceptance_child_process_diagnostics_implemented is True

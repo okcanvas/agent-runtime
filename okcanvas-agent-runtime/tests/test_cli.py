@@ -7,7 +7,7 @@ def test_info_cli(capsys) -> None:
     assert main(["info"]) == 0
     payload = json.loads(capsys.readouterr().out)
     assert payload["project"] == "okcanvas-agent-runtime"
-    assert payload["step"] == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert payload["step"] == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert payload["codex_readonly_implemented"] is True
     assert payload["codex_live_accepted"] is True
     assert payload["workspace_write_implemented"] is True

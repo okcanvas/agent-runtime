@@ -48,8 +48,8 @@ def _install_exact_fake_sdk(monkeypatch):
 
 def test_step059a_runtime_info_and_documents() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.actual_sdk_function_tool_output_alignment_implemented is True
     assert info.actual_sdk_function_tool_output_type_only is True
     assert info.actual_sdk_function_tool_output_json_schema_dual_binding is False

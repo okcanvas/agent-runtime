@@ -1,0 +1,53 @@
+{
+  "focused_cross_domain_live_rerun_executed_for_r10e": false,
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "next_action": "RERUN_FOCUSED_CROSS_DOMAIN_WINDOWS_LIVE_ON_CLEAN_R10E_AND_REQUIRE_PROVENANCE_PLUS_FUNCTIONAL_CHECKS",
+  "prior_user_live_evidence": {
+    "functional_cross_domain_behavior_proven": true,
+    "functional_state": "PASSED_19_OF_19",
+    "promotion_evidence_valid": false,
+    "reason": "CLI_EXECUTED_RUNTIME_2_78_2_BUT_EVIDENCE_FOOTER_RETAINED_R10C_STEP094R1_2_78_1",
+    "retained_file": "docs/evidence/WORKSPACE_STEP008R4R10D_CROSS_DOMAIN_LIVE_FUNCTIONAL_PASS_PROVENANCE_INVALID_USER_REPORTED.json"
+  },
+  "promotion": "NOT_READY",
+  "provenance_correction": {
+    "alias_or_fallback_used": false,
+    "focused_live_harness_sha_recorded": true,
+    "live_service_runtime_version_checked": true,
+    "mixed_tree_fails_before_functional_turns": true,
+    "runtime_executable_baseline_sha_recorded": true,
+    "runtime_pyproject_sha_recorded": true,
+    "workspace_baseline_sha_recorded": true,
+    "workspace_project_catalog_sha_recorded": true
+  },
+  "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "runtime_version": "2.78.2",
+  "schema_version": "okcanvas-workspace-step008r4r10e-static-validation-v1",
+  "state": "STATIC_VALIDATED_CLEAN_FOCUSED_LIVE_RERUN_REQUIRED",
+  "static_checks": {
+    "architecture": "40/40 PASSED",
+    "current_document_sot": "PASSED",
+    "first_party_json_parse": "878/878",
+    "first_party_python_ast": "1015/1015",
+    "historical_evidence_changed": 0,
+    "historical_evidence_common_files": 92,
+    "launcher_registry": "7/7 PASSED",
+    "parent_manifests": {
+      "groupware_connector": "31/31 EXACT",
+      "groupware_example": "19/19 EXACT",
+      "organization_context_connector": "34/34 EXACT",
+      "organization_context_example": "51/51 EXACT",
+      "runtime": "4327/4327 EXACT"
+    },
+    "runtime_product_python_changed_vs_r10d": 0,
+    "runtime_product_python_files": 355,
+    "runtime_product_python_snapshot_method": "SHA256(sorted relative_path NUL file_bytes NUL)",
+    "runtime_product_python_snapshot_sha256": "ce63244331505380843a9174d9c6dca085af4153211505461c82db6c8bd4d969",
+    "runtime_step094r2_contract": "15/15 PASSED",
+    "workspace_manifest": "4856/4856 EXACT",
+    "workspace_r10e_contract": "19/19 PASSED"
+  },
+  "tests_executed_for_r10e": false,
+  "workspace_step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+  "workspace_version": "0.8.4-r10e"
+}

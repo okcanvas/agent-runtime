@@ -1,0 +1,33 @@
+{
+  "command": "sh_run_workspace_step008r4r12r3_grounded_structured_delegation_live_acceptance",
+  "failure_stage": "fixture_stable-focus-calendar-cross-domain",
+  "interpretation": "DO_NOT_TREAT_AS_MCP_SERVER_FAILURE_OR_LIVE_PASS; CODE_AUDIT_REQUIRED",
+  "observed": {
+    "all_shown_runs_agent_tool_requested_count": 0,
+    "all_shown_runs_mcp_tool_count": 0,
+    "all_shown_runs_succeeded_individually": true,
+    "diagnostic_run_count": 4,
+    "shown_entity_hint_count": 0,
+    "shown_entity_hint_state": "UNAVAILABLE",
+    "shown_interpretation_hint_state": "UNAVAILABLE",
+    "shown_model_output_item_type_counts": {
+      "function_call": 0,
+      "message": 1,
+      "other": 0,
+      "reasoning": 0
+    },
+    "shown_term_hint_count": 0,
+    "shown_term_hint_state": "UNAVAILABLE"
+  },
+  "passed_checks": 12,
+  "runtime_step": "STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+  "runtime_version": "2.80.1",
+  "schema_version": "okcanvas-user-reported-live-evidence-v1",
+  "source": "USER_REPORTED_CONSOLE_AND_GENERATED_EVIDENCE_JSON",
+  "source_attachment_sha256": "9624529393665036bf52daa775268e5d95e6582773f8fc5627bab5b7ecc4647e",
+  "source_attachment_size": 18003,
+  "state": "FAILED",
+  "total_checks": 14,
+  "workspace_step": "WORKSPACE_STEP008R4R12R3_STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+  "workspace_version": "0.8.4-r12r3"
+}

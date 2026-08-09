@@ -20,7 +20,9 @@ from okcanvas_agent_runtime.domain.runs.ports import ProductStore
 from okcanvas_agent_runtime.domain.attachments import LocalAttachmentPolicyCatalog, MultimodalModelPolicyCatalog
 from okcanvas_agent_runtime.domain.attachments.models import PreparedLocalAttachment
 from okcanvas_agent_runtime.domain.project_snapshots.models import PreparedProjectSnapshot
-from okcanvas_agent_runtime.domain.sessions import SessionBusyError, SessionIntegrityError, SessionRuntimeError
+from okcanvas_agent_runtime.domain.sessions import (
+    SessionBusyError, SessionIntegrityError, SessionRuntimeError, SessionContextFocusObservation,
+)
 from okcanvas_agent_runtime.application.ports import SessionRuntimePort
 from okcanvas_agent_runtime.application.artifacts import ArtifactService
 
@@ -207,6 +209,7 @@ class GenericAgentExecutionService:
                     "sqlite-session-native-handoff-execution-v1",
                     "sqlite-session-native-guardrail-execution-v1",
                     "sqlite-session-native-agent-tool-execution-v1",
+                    "sqlite-session-bounded-cross-domain-read-subagent-execution-v1",
                     "sqlite-session-stateless-groupware-subagent-execution-v1",
                     "sqlite-session-stateless-organization-context-subagent-execution-v1",
                     "sqlite-session-native-mcp-execution-v1",
@@ -306,6 +309,7 @@ class GenericAgentExecutionService:
             expected_agent_tool_paths = {"agent-as-tool-execution-v1"}
             if definition.session_mode == "sqlite-v1":
                 expected_agent_tool_paths.add("sqlite-session-native-agent-tool-execution-v1")
+                expected_agent_tool_paths.add("sqlite-session-bounded-cross-domain-read-subagent-execution-v1")
                 expected_agent_tool_paths.add("sqlite-session-stateless-groupware-subagent-execution-v1")
                 expected_agent_tool_paths.add("sqlite-session-stateless-organization-context-subagent-execution-v1")
             if binding.execution_path not in expected_agent_tool_paths:
@@ -708,6 +712,7 @@ class GenericAgentExecutionService:
         run_id = prepared.run_id
         session_acquired = False
         session_item_count_before = 0
+        session_context_focus: SessionContextFocusObservation | None = None
         rollback_failed_session_turn = bool(
             definition.session_mode == "sqlite-v1"
             and (definition.handoffs or definition.guardrails or definition.agent_tools or definition.mcp_servers)
@@ -889,10 +894,20 @@ class GenericAgentExecutionService:
             async def lifecycle_sink(event: GatewayLifecycleEvent) -> None:
                 nonlocal handoff_child_invocation_id, handoff_parent_usage
                 nonlocal agent_tool_child_invocation_id, agent_tool_usage_before
-                nonlocal agent_tool_child_usage
+                nonlocal agent_tool_child_usage, session_context_focus
                 try:
                     self._require_execution_fence(prepared)
                     payload = dict(event.payload)
+                    if event.event_type == "agent.tool.output.normalized":
+                        focus_payload = payload.get("session_context_focus")
+                        if isinstance(focus_payload, dict):
+                            observed_focus = SessionContextFocusObservation.from_mapping(focus_payload)
+                            if session_context_focus is not None and session_context_focus != observed_focus:
+                                raise GenericExecutionFailure(
+                                    GenericExecutionErrorCode.PRODUCT_STATE_FAILED,
+                                    "One Session Turn observed conflicting context-focus evidence",
+                                )
+                            session_context_focus = observed_focus
                     if event.event_type.startswith("orchestration.child."):
                         ordinal = int(payload.get("ordinal", 0) or 0)
                         agent_id_value = str(payload.get("agent_id", ""))
@@ -1313,6 +1328,7 @@ class GenericAgentExecutionService:
                     run_id=run_id,
                     succeeded=True,
                     item_count=item_count,
+                    context_focus=session_context_focus,
                 )
                 session_acquired = False
                 self._store.append_event(
@@ -1325,6 +1341,11 @@ class GenericAgentExecutionService:
                         "item_count": session_record.item_count,
                         "history_persisted_in_product_events": False,
                         "history_persisted_in_product_db": False,
+                        "context_focus_updated": session_context_focus is not None,
+                        "context_focus_state": (
+                            session_context_focus.state.value if session_context_focus is not None else None
+                        ),
+                        "context_focus_raw_tool_result_persisted": False,
                     },
                     payload_schema_version="okcanvas-session-turn-completed-v1",
                     require_active_run=True,

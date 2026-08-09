@@ -19,6 +19,7 @@ TOOLS: tuple[dict[str, Any], ...] = (
             "properties": {
                 "query": {"type": "string", "maxLength": 500, "default": ""},
                 "limit": {"type": "integer", "minimum": 1, "maximum": 50, "default": 20},
+                "context_ref": {"anyOf": [{"type": "object", "additionalProperties": False, "required": ["entity_type", "entity_id"], "properties": {"entity_type": {"type": "string", "enum": ["EMPLOYEE", "PROJECT", "CLIENT", "PRODUCT", "DEPARTMENT"]}, "entity_id": {"type": "string", "minLength": 1, "maxLength": 200}}}, {"type": "null"}], "default": None},
             },
         },
         "annotations": {"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True},
@@ -32,6 +33,7 @@ TOOLS: tuple[dict[str, Any], ...] = (
             "properties": {
                 "query": {"type": "string", "maxLength": 500, "default": ""},
                 "limit": {"type": "integer", "minimum": 1, "maximum": 50, "default": 20},
+                "context_ref": {"anyOf": [{"type": "object", "additionalProperties": False, "required": ["entity_type", "entity_id"], "properties": {"entity_type": {"type": "string", "enum": ["EMPLOYEE", "PROJECT", "CLIENT", "PRODUCT", "DEPARTMENT"]}, "entity_id": {"type": "string", "minLength": 1, "maxLength": 200}}}, {"type": "null"}], "default": None},
             },
         },
         "annotations": {"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True},
@@ -46,6 +48,7 @@ TOOLS: tuple[dict[str, Any], ...] = (
                 "start_at": {"type": ["string", "null"], "maxLength": 64, "default": None},
                 "end_at": {"type": ["string", "null"], "maxLength": 64, "default": None},
                 "limit": {"type": "integer", "minimum": 1, "maximum": 50, "default": 20},
+                "context_ref": {"anyOf": [{"type": "object", "additionalProperties": False, "required": ["entity_type", "entity_id"], "properties": {"entity_type": {"type": "string", "enum": ["EMPLOYEE", "PROJECT", "CLIENT", "PRODUCT", "DEPARTMENT"]}, "entity_id": {"type": "string", "minLength": 1, "maxLength": 200}}}, {"type": "null"}], "default": None},
             },
         },
         "annotations": {"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True},

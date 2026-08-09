@@ -276,8 +276,8 @@ def test_service_preflight_selects_groupware_agent_and_persists_governed_submiss
 
 def test_runtime_info_records_exact_step086_limits_without_claiming_live_enterprise() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.step085_windows_deterministic_accepted is True
     assert info.groupware_read_only_vertical_implemented is True
     assert info.groupware_read_integration_boundary_implemented is True

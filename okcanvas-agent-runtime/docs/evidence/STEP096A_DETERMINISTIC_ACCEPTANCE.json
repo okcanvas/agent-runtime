@@ -1,0 +1,56 @@
+{
+  "schema_version": "okcanvas-step096a-deterministic-acceptance-v1",
+  "step": "STEP096A_GROUNDED_LLM_INTERPRETATION_CONTEXT_SHADOW_FOUNDATION",
+  "version": "2.79.0",
+  "validation_mode": "LOCAL_DETERMINISTIC_GROUNDED_LLM_INTERPRETATION_CONTEXT_SHADOW",
+  "state": "PASSED",
+  "checks": {
+    "step096a_static_contract": true,
+    "python_compileall": true,
+    "focused_regression_pytest": true,
+    "focused_regression_exact_pass_count": true,
+    "windows_live_not_claimed": true,
+    "broad_historical_suite_not_claimed": true
+  },
+  "passed_checks": 6,
+  "total_checks": 6,
+  "static": {
+    "state": "PASSED",
+    "step": "STEP096A_GROUNDED_LLM_INTERPRETATION_CONTEXT_SHADOW_FOUNDATION",
+    "version": "2.79.0",
+    "checks": {
+      "identity_exact": true,
+      "parent_step094r2_behavior_contract_retained_except_successor_identity": true,
+      "unified_root_still_exact_two_children_and_no_direct_mcp": true,
+      "hint_profile_exact_two_search_tools_read_only": true,
+      "hint_profile_shares_execution_authority_boundary": true,
+      "hint_server_registered_without_root_tool_exposure": true,
+      "raw_utterance_forwarded_unchanged_to_bounded_searches": true,
+      "runtime_does_not_add_language_parser_alias_suffix_fallback": true,
+      "model_projection_omits_stable_entity_ids": true,
+      "hint_text_is_non_authoritative_untrusted_turn_local": true,
+      "hint_context_uses_model_input_filter_not_system_instruction_append": true,
+      "retained_sdk_proves_filter_after_prepared_input_and_original_session_persistence": true,
+      "route_v3_is_nested_shadow_only": true,
+      "legacy_v2_route_remains_top_level_authority": true,
+      "hint_preparation_observability_redacts_content": true,
+      "root_instructions_preserve_authority_and_treat_hints_as_data": true,
+      "runtime_info_declares_shadow_not_live_accepted": true,
+      "focused_regression_covers_raw_query_projection_partial_revision_and_filter": true,
+      "connector_product_source_unchanged_by_step096a": true
+    },
+    "passed_checks": 19,
+    "total_checks": 19,
+    "parent_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+    "parent_version": "2.78.2",
+    "parent_identity_expected_to_differ": true
+  },
+  "focused_pytest": {
+    "returncode": 0,
+    "summary": "48 passed in 1.07s",
+    "stderr_present": false
+  },
+  "compileall_returncode": 0,
+  "windows_live": "NOT_RUN",
+  "broad_regression": "NOT_CLAIMED_HISTORICAL_STALE_TESTS_RECORDED_SEPARATELY"
+}

@@ -42,7 +42,7 @@ TOOLS: tuple[dict[str, Any], ...] = (
     },
     {
         "name": "get_organization_entity",
-        "description": "Get one published organization entity and its relationships by stable type and ID.",
+        "description": "Get one published organization entity and its relationships by stable type and ID, including explicit relationship completeness metadata.",
         "inputSchema": {
             "type": "object", "additionalProperties": False, "required": ["entity_type", "entity_id"],
             "properties": {

@@ -1,0 +1,24 @@
+{
+  "acceptance_evidence_output_policy": "FRESH_STEP096B_ACCEPTANCE_OUTPUT_REDIRECTED_OUTSIDE_SOURCE_TREE",
+  "broad_historical_regression": "NOT_CLAIMED",
+  "required_checks": {
+    "acceptance_launcher_registry": "7/7 PASSED",
+    "architecture_constitution": "16/16 PASSED",
+    "current_architecture": "39/40 EXPECTED_HISTORICAL_STEP081_IDENTITY_ONLY; CURRENT PHYSICAL/RUNTIMEINFO EXACT",
+    "current_document_sot": "PASSED",
+    "deterministic_repack": "BYTE_IDENTICAL",
+    "runtime_step096b_acceptance": "6/6 PASSED WITH 63/63 FOCUSED",
+    "runtime_step096b_static": "20/20 PASSED",
+    "secret_env_files": "0",
+    "secret_like_literals": "0",
+    "workspace_manifest": "EXACT",
+    "workspace_r12_static": "31/31 PASSED"
+  },
+  "runtime_step": "STEP096B_GROUNDED_LLM_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+  "runtime_version": "2.80.0",
+  "schema_version": "okcanvas-workspace-step008r4r12-fresh-validation-v1",
+  "state": "FRESH_VALIDATION_REQUIRED_AND_VERIFIED_BEFORE_RELEASE",
+  "windows_live": "NOT_RUN",
+  "workspace_step": "WORKSPACE_STEP008R4R12_RUNTIME_STEP096B_GROUNDED_LLM_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+  "workspace_version": "0.8.4-r12"
+}

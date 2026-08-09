@@ -36,8 +36,8 @@ def _sha256(path: Path) -> str:
 
 def test_step064a_runtime_info_and_baseline_are_exact() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.step064_async_test_portability_fix_implemented is True
     assert info.step064_focused_tests_require_pytest_asyncio is False
     assert info.step064_focused_tests_use_asyncio_run is True

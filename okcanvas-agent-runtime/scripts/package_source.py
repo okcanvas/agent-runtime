@@ -11,9 +11,9 @@ if str(ROOT) not in sys.path:
 
 from scripts.step081_product_inventory import included_relative_path
 
-DEFAULT_OUTPUT = ROOT.parent / "okcanvas-agent-runtime-step091d-object-storage-deployment-composition-and-live-acceptance-gate.zip"
+DEFAULT_OUTPUT = ROOT.parent / "okcanvas-agent-runtime-step096a-grounded-llm-interpretation-context-shadow-foundation.zip"
 ARCHIVE_ROOT = Path("okcanvas-agent-runtime")
-PACKAGE_STEP = "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+PACKAGE_STEP = "STEP096A_GROUNDED_LLM_INTERPRETATION_CONTEXT_SHADOW_FOUNDATION"
 
 
 

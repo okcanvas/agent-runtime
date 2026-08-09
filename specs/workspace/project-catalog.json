@@ -1,13 +1,13 @@
 {
   "projects": [
     {
-      "baseline": "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE",
+      "baseline": "STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE",
       "environment": ".venv",
       "kind": "python-service",
       "path": "okcanvas-agent-runtime",
       "production": true,
       "project_id": "agent-runtime",
-      "version": "2.75.0"
+      "version": "2.80.2"
     },
     {
       "baseline": "CLI_STEP001R1_WINDOWS_NODE_TEST_RUNNER_PATH_SPACE_CLOSURE",
@@ -20,43 +20,43 @@
       "version": "0.2.1"
     },
     {
-      "baseline": "CONNECTOR_STEP001R1_ASYNC_TEST_RUNNER_DEPENDENCY_CLOSURE",
+      "baseline": "CONNECTOR_STEP002_STABLE_ORGANIZATION_CONTEXT_REFERENCE_FILTER",
       "environment": ".venv",
       "kind": "python-service",
       "path": "okcanvas-connectors/groupware-mcp-server",
       "production": true,
       "project_id": "groupware-mcp-connector",
-      "version": "0.1.1"
+      "version": "0.2.0"
     },
     {
-      "baseline": "EXAMPLE_STEP001R1_TYPESCRIPT_BUILD_DEPENDENCY_CLOSURE",
+      "baseline": "EXAMPLE_STEP002_GROUPWARE_STABLE_CONTEXT_REFERENCE_FIXTURE",
       "environment": "node_modules",
       "kind": "node-example",
       "path": "okcanvas-connector-examples/groupware/groupware-api-fake",
       "production": false,
       "project_id": "groupware-api-fake-example",
-      "version": "0.1.1"
+      "version": "0.2.0"
     },
     {
-      "baseline": "CONNECTOR_ORGANIZATION_CONTEXT_STEP002R2_BOUNDED_CONTEXT_RESPONSE_ALIGNMENT",
+      "baseline": "CONNECTOR_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE",
       "environment": ".venv",
       "kind": "python-service",
       "path": "okcanvas-connectors/organization-context-mcp-server",
       "production": true,
       "project_id": "organization-context-mcp-connector",
-      "version": "0.2.2"
+      "version": "0.3.0"
     },
     {
-      "baseline": "EXAMPLE_ORGANIZATION_CONTEXT_STEP002R2_REFERENCE_RELATION_FACT_CONSISTENCY_CLOSURE",
+      "baseline": "EXAMPLE_ORGANIZATION_CONTEXT_STEP003_RELATION_COMPLETENESS_EVIDENCE",
       "environment": "node_modules",
       "kind": "node-example",
       "path": "okcanvas-connector-examples/organization-context/organization-context-api-fake",
       "production": false,
       "project_id": "organization-context-api-fake-example",
-      "version": "0.2.2"
+      "version": "0.3.0"
     }
   ],
   "schema_version": "okcanvas-agent-platform-project-catalog-v1",
-  "workspace_step": "WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING",
-  "workspace_version": "0.8.4-r7a1"
+  "workspace_step": "WORKSPACE_STEP008R4R12R4_STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE",
+  "workspace_version": "0.8.4-r12r4"
 }

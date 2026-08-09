@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_runtime_selects_step075a_windows_live_rerun_gate() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.product_owned_readonly_sandbox_agent_implemented is True
     assert info.product_owned_readonly_sandbox_windows_live_accepted is True
     assert info.product_owned_readonly_sandbox_tmpfs_semantic_validation_implemented is True

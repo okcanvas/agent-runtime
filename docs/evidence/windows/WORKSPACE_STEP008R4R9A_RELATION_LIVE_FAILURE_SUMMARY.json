@@ -1,0 +1,15 @@
+{
+  "acceptance_evidence_valid": false,
+  "effective_state": "FAILED_INVALID_FALSE_POSITIVE",
+  "failure_surface": "AssistantRouteResponse.organization_context_request_hint.relation_traversal",
+  "failure_type": "pydantic_extra_forbidden",
+  "limitations": [
+    "The separate JSON file referenced by the harness output was not uploaded; this summary is derived only from the uploaded combined Windows log."
+  ],
+  "log_sha256": "e81868e9181a4ee6841837cc6351aead3682ecc444f886a0013d7cdff3c3e330",
+  "observed_asgi_exception": true,
+  "observed_reported_summary_passed_6_of_6": true,
+  "runtime_step": "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL",
+  "schema_version": "okcanvas-workspace-step008r4r9a-relation-live-failure-evidence-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R9A_STEP093_RELATION_LIVE_LAUNCHER_RUNTIME_VENV_CLOSURE"
+}

@@ -1,0 +1,25 @@
+{
+  "current_postgresql_expected_table_count": 16,
+  "historical_postgresql_table_count": 15,
+  "parent_step091b3r1_real_postgresql_live_accepted": true,
+  "parent_step091b3r1_real_postgresql_live_checks": "19/19",
+  "postgresql_current_topology_changed_since_parent_live": true,
+  "promotion": "NOT_READY",
+  "promotion_requirements": [
+    "Execute deferred STEP092 deterministic/full regression gates.",
+    "Execute current Windows deterministic regression.",
+    "Add and execute STEP092 contextual multi-turn Windows Live OpenAI coverage.",
+    "Execute retained STEP091D real Object Storage live gate when MinIO/S3 environment is ready."
+  ],
+  "runtime_step": "STEP092_SESSION_CONTEXTUAL_FOLLOW_UP_AND_STABLE_ENTITY_FOCUS",
+  "runtime_version": "2.76.0",
+  "schema_version": "okcanvas-workspace-step008r4r8-promotion-marker-v1",
+  "state": "IMPLEMENTED_STATIC_VALIDATED_TEST_PENDING",
+  "step091d_object_storage_live_accepted": false,
+  "step092_contextual_multi_turn_live_accepted": false,
+  "step092_deterministic_accepted": false,
+  "step092_windows_live_accepted": false,
+  "tests_deferred_by_user": true,
+  "workspace_step": "WORKSPACE_STEP008R4R8_RUNTIME_STEP092_SESSION_CONTEXTUAL_FOLLOW_UP_AND_STABLE_ENTITY_FOCUS",
+  "workspace_version": "0.8.4-r8"
+}

@@ -5,6 +5,12 @@
   "authorization_value_must_not_be_recorded": true,
   "base_path": "/api/v1",
   "catalog_revision_required": true,
+  "get_entity_relation_completeness_fields": [
+    "relation_count",
+    "relations_returned_count",
+    "relations_truncated"
+  ],
+  "get_entity_relation_completeness_required": true,
   "production_source_of_truth": "DATABASE",
   "read_endpoints": [
     "POST /context/resolve",

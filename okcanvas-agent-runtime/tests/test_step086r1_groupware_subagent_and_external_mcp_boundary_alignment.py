@@ -187,8 +187,8 @@ def test_groupware_provider_contract_rejects_write_tool_and_internal_provider_cl
 
 def test_runtime_info_corrects_step086_overclaim_and_promotes_windows_parent() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.step086_windows_deterministic_accepted is True
     assert info.step086_windows_deterministic_passed_checks == 14
     assert info.step086_windows_deterministic_total_checks == 14

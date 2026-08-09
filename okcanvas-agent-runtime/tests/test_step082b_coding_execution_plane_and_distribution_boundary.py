@@ -7,8 +7,8 @@ from okcanvas_agent_runtime.core.runtime_info import RuntimeInfo
 from scripts.step081_architecture import EXPECTED_RUNTIME_INFO_FIELDS
 from scripts.validate_step082b_execution_plane import validate as validate_execution_plane
 ROOT=Path(__file__).resolve().parents[1]
-STEP='STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE'
-VERSION='2.75.0'
+STEP='STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL'
+VERSION='2.77.0'
 
 def test_step082b_identity_and_step081d_live_promotion_are_exact() -> None:
     info=RuntimeInfo()

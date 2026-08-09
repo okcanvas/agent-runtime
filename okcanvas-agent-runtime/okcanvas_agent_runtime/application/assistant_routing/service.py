@@ -7,6 +7,7 @@ from pathlib import Path
 from okcanvas_agent_runtime.agent.definitions import AgentDefinitionCatalog
 from okcanvas_agent_runtime.application.groupware_read import GroupwareReadCatalog, GroupwareReadState
 from okcanvas_agent_runtime.application.mcp_access import DelegatedMCPIdentity
+from okcanvas_agent_runtime.domain.sessions.context_focus import SessionContextFocusRecord
 from okcanvas_agent_runtime.application.organization_context import (
     OrganizationAccessContext,
     OrganizationCatalogState,
@@ -16,12 +17,27 @@ from okcanvas_agent_runtime.application.organization_context import (
 )
 
 from .catalog import AssistantRoutingPolicyCatalog
+from .grounded_delegation import grounded_structured_delegation_context
 from .models import (
     AssistantCapability,
     AssistantRouteDecision,
     AssistantRouteStatus,
     CapabilityAvailability,
     OrganizationContextRequestHint,
+    GroupwareContextFilterHint,
+    GroundedSessionRouteShadow,
+)
+from .session_context import (
+    SessionContextFollowUpPolicyCatalog,
+    SessionContextFollowUpResolver,
+    SessionContextResolutionStatus,
+)
+from .relation_context import (
+    SessionContextRelationPolicyCatalog,
+    SessionContextRelationResolver,
+)
+from .cross_domain_context import (
+    CrossDomainGroupwarePolicyCatalog, CrossDomainGroupwareResolver,
 )
 
 
@@ -44,6 +60,18 @@ class OrganizationAssistantRoutingService:
         organization_catalog_root: str | Path | None = None,
     ) -> None:
         self._policy = AssistantRoutingPolicyCatalog(project_root).resolve()
+        self._session_context_policy = SessionContextFollowUpPolicyCatalog(project_root).resolve()
+        self._session_context_resolver = SessionContextFollowUpResolver(
+            self._session_context_policy, self._policy
+        )
+        self._session_relation_policy = SessionContextRelationPolicyCatalog(project_root).resolve()
+        self._session_relation_resolver = SessionContextRelationResolver(
+            self._session_relation_policy, self._session_context_policy
+        )
+        self._cross_domain_groupware_policy = CrossDomainGroupwarePolicyCatalog(project_root).resolve()
+        self._cross_domain_groupware_resolver = CrossDomainGroupwareResolver(
+            self._cross_domain_groupware_policy
+        )
         self._definitions = AgentDefinitionCatalog(project_root)
         self._organization_context = OrganizationContextService(
             project_root,
@@ -68,6 +96,14 @@ class OrganizationAssistantRoutingService:
         return self._policy
 
     @property
+    def session_context_policy(self):
+        return self._session_context_policy
+
+    @property
+    def session_relation_policy(self):
+        return self._session_relation_policy
+
+    @property
     def organization_context(self) -> OrganizationContextService:
         return self._organization_context
 
@@ -79,6 +115,9 @@ class OrganizationAssistantRoutingService:
     def organization_remote(self) -> OrganizationContextReadCatalog:
         return self._organization_remote
 
+    def grounded_session_route_shadow(self) -> GroundedSessionRouteShadow:
+        return GroundedSessionRouteShadow(selected_agent_id=self._policy.session_agent_id)
+
     def route(
         self,
         *,
@@ -89,6 +128,7 @@ class OrganizationAssistantRoutingService:
         tenant_id: str | None = None,
         principal_id: str | None = None,
         roles: tuple[str, ...] = (),
+        session_context_focus: SessionContextFocusRecord | None = None,
     ) -> AssistantRouteDecision:
         canonical = " ".join(request.strip().split())
         normalized = canonical.casefold()
@@ -115,6 +155,66 @@ class OrganizationAssistantRoutingService:
                 reasons=("immutable-project-snapshot-present", "repository-analysis-read-only"),
                 session_id=session_id,
             )
+        if (
+            session_id is not None and session_context_focus is not None and groupware
+            and not has("write_action") and not has("draft_action") and not has("automation")
+        ):
+            cross_domain = self._cross_domain_groupware_resolver.resolve(
+                request=canonical, focus=session_context_focus
+            )
+            if cross_domain is not None:
+                if cross_domain.ambiguous:
+                    capability = self._policy.capabilities[self._groupware.policy.capability_id]
+                    return self._raw_decision(
+                        request_class="READ_SYSTEM", capability=capability,
+                        status=AssistantRouteStatus.AMBIGUOUS, selected_agent_id=None,
+                        matched_rule_id="groupware-session-cross-domain-focus-ambiguous-v1",
+                        reasons=cross_domain.reasons,
+                    )
+                if cross_domain.hint is not None:
+                    return self._groupware_decision(
+                        tenant_id=tenant_id, principal_id=principal_id, roles=roles,
+                        session_id=session_id, context_filter=cross_domain.hint,
+                        contextual_reasons=cross_domain.reasons,
+                    )
+
+        if session_id is not None and session_context_focus is not None:
+            contextual = self._session_relation_resolver.resolve(
+                request=canonical, focus=session_context_focus
+            )
+            if contextual is None:
+                contextual = self._session_context_resolver.resolve(
+                    request=canonical, focus=session_context_focus
+                )
+            if contextual is not None:
+                if contextual.status is SessionContextResolutionStatus.AMBIGUOUS:
+                    capability = self._policy.capabilities[
+                        self._organization_remote.policy.capability_id
+                    ]
+                    return self._raw_decision(
+                        request_class="SEARCH_KNOWLEDGE",
+                        capability=capability,
+                        status=AssistantRouteStatus.AMBIGUOUS,
+                        selected_agent_id=None,
+                        matched_rule_id="organization-context-session-follow-up-ambiguous-v1",
+                        reasons=(
+                            *contextual.reasons,
+                            "session-context-focus-derived-only-from-prior-tool-evidence",
+                        ),
+                    )
+                if contextual.hint is not None:
+                    return self._organization_short_read_decision(
+                        hint=contextual.hint,
+                        tenant_id=tenant_id,
+                        principal_id=principal_id,
+                        roles=roles,
+                        session_id=session_id,
+                        contextual_reasons=(
+                            *contextual.reasons,
+                            "session-context-focus-derived-only-from-prior-tool-evidence",
+                        ),
+                    )
+
         if (
             session_id is not None
             and has("session_reference")
@@ -279,6 +379,36 @@ class OrganizationAssistantRoutingService:
                 "do_not_select_one_ambiguous_entity": True,
                 "tool_result_remains_authoritative": True,
             }
+            relation_traversal = decision.organization_context_request_hint.relation_traversal
+            if relation_traversal is not None:
+                context["organization_context_relation_traversal_rules"] = {
+                    "source_stable_id_must_be_used_for_get": True,
+                    "source_entity_type_must_match": True,
+                    "relation_type_and_direction_are_immutable": True,
+                    "related_entities_must_come_from_get_tool_relations": True,
+                    "relationship_evidence_must_be_complete": True,
+                    "truncated_relationship_evidence_must_fail_closed": True,
+                    "do_not_infer_inverse_or_unlisted_relations": True,
+                    "max_related_entities": relation_traversal.max_results,
+                }
+        if decision.grounded_interpretation_shadow is not None:
+            context["grounded_structured_delegation"] = grounded_structured_delegation_context()
+        if decision.groupware_context_filter is not None:
+            context["groupware_context_filter"] = decision.groupware_context_filter.to_public_dict()
+            context["groupware_context_filter_rules"] = {
+                "routing_only": True,
+                "stable_entity_from_prior_tool_evidence": True,
+                "exact_tool_name_required": True,
+                "exact_entity_type_and_id_must_be_forwarded": True,
+                "tool_result_must_confirm_applied_filter": True,
+                "returned_records_must_carry_exact_context_ref": True,
+                "canonical_context_filter_arguments_only": True,
+                "search_query_must_be_empty": True,
+                "calendar_time_range_must_be_omitted": True,
+                "limit_must_equal": decision.groupware_context_filter.max_results,
+                "preserve_anchor_only_after_exact_tool_filter_evidence": True,
+                "do_not_fallback_to_label_search": True,
+            }
         if any(
             item.capability_id == self._groupware.policy.capability_id
             for item in decision.required_capabilities
@@ -318,6 +448,8 @@ class OrganizationAssistantRoutingService:
         principal_id: str | None,
         roles: tuple[str, ...],
         session_id: str | None,
+        context_filter: GroupwareContextFilterHint | None = None,
+        contextual_reasons: tuple[str, ...] = (),
     ) -> AssistantRouteDecision:
         identity = None
         if tenant_id and principal_id:
@@ -342,6 +474,7 @@ class OrganizationAssistantRoutingService:
                 "groupware-read-intent-detected",
                 "delegated-tenant-principal-role-bound",
                 "read-only-mcp-tool-allowlist-bound",
+                *contextual_reasons,
             ]
             rule = "groupware-read-configured-v1"
             if session_id is not None:
@@ -358,8 +491,9 @@ class OrganizationAssistantRoutingService:
                 selected_agent_id=selected_agent_id,
                 matched_rule_id=rule,
                 reasons=tuple(reasons),
+                groupware_context_filter=context_filter,
             )
-        reasons = ("groupware-read-intent-detected", *readiness.reasons)
+        reasons = ("groupware-read-intent-detected", *contextual_reasons, *readiness.reasons)
         if readiness.state is GroupwareReadState.ACCESS_DENIED:
             capability = replace(configured, availability=CapabilityAvailability.DISABLED)
             rule = "groupware-read-access-denied-v1"
@@ -373,6 +507,7 @@ class OrganizationAssistantRoutingService:
             selected_agent_id=None,
             matched_rule_id=rule,
             reasons=reasons,
+            groupware_context_filter=context_filter,
         )
 
     def _organization_short_read_decision(
@@ -383,6 +518,7 @@ class OrganizationAssistantRoutingService:
         principal_id: str | None,
         roles: tuple[str, ...],
         session_id: str | None,
+        contextual_reasons: tuple[str, ...] = (),
     ) -> AssistantRouteDecision:
         identity = None
         if tenant_id and principal_id:
@@ -397,6 +533,7 @@ class OrganizationAssistantRoutingService:
             "organization-context-short-read-pattern-matched",
             "structured-request-hint-created-without-entity-guessing",
             f"organization-context-pattern:{hint.pattern_id}",
+            *contextual_reasons,
             *readiness.reasons,
         )
         if readiness.state is OrganizationContextReadState.READY:
@@ -415,6 +552,7 @@ class OrganizationAssistantRoutingService:
                 "organization-context-short-read-pattern-matched",
                 "structured-request-hint-created-without-entity-guessing",
                 f"organization-context-pattern:{hint.pattern_id}",
+                *contextual_reasons,
                 "production-database-sot-boundary-selected",
                 "delegated-tenant-principal-role-bound",
                 "read-only-mcp-tool-allowlist-bound",
@@ -583,6 +721,7 @@ class OrganizationAssistantRoutingService:
         proposal_only: bool = False,
         grounding=None,
         organization_context_request_hint: OrganizationContextRequestHint | None = None,
+        groupware_context_filter: GroupwareContextFilterHint | None = None,
     ) -> AssistantRouteDecision:
         capability = self._policy.capabilities[capability_id]
         selected_agent_id = capability.selected_agent_id
@@ -598,6 +737,7 @@ class OrganizationAssistantRoutingService:
                 reasons=(*reasons, "requested-session-cannot-compose-with-selected-capability"),
                 grounding=grounding,
                 organization_context_request_hint=organization_context_request_hint,
+                groupware_context_filter=groupware_context_filter,
             )
         if capability.availability is CapabilityAvailability.AVAILABLE and selected_agent_id:
             self._definitions.resolve(selected_agent_id)
@@ -617,6 +757,7 @@ class OrganizationAssistantRoutingService:
             reasons=reasons,
             grounding=grounding,
             organization_context_request_hint=organization_context_request_hint,
+            groupware_context_filter=groupware_context_filter,
         )
 
     def _raw_decision(
@@ -630,6 +771,7 @@ class OrganizationAssistantRoutingService:
         reasons: tuple[str, ...],
         grounding=None,
         organization_context_request_hint: OrganizationContextRequestHint | None = None,
+        groupware_context_filter: GroupwareContextFilterHint | None = None,
     ) -> AssistantRouteDecision:
         return AssistantRouteDecision(
             request_class=request_class,
@@ -644,4 +786,5 @@ class OrganizationAssistantRoutingService:
             policy_sha256=self._policy.policy_sha256,
             grounding=grounding,
             organization_context_request_hint=organization_context_request_hint,
+            groupware_context_filter=groupware_context_filter,
         )

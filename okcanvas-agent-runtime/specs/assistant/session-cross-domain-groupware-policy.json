@@ -1,0 +1,61 @@
+{
+  "schema_version": "okcanvas-session-cross-domain-groupware-policy-v1",
+  "policy_id": "session-cross-domain-groupware-v1",
+  "version": "1.0.0",
+  "allowed_source_entity_types": [
+    "EMPLOYEE",
+    "PROJECT",
+    "CLIENT",
+    "PRODUCT",
+    "DEPARTMENT"
+  ],
+  "entity_reference_terms": {
+    "EMPLOYEE": [
+      "그 사람",
+      "그분",
+      "그 직원"
+    ],
+    "PROJECT": [
+      "그 프로젝트"
+    ],
+    "CLIENT": [
+      "그 고객사",
+      "그 거래처"
+    ],
+    "PRODUCT": [
+      "그 제품"
+    ],
+    "DEPARTMENT": [
+      "그 부서"
+    ]
+  },
+  "resource_rules": [
+    {
+      "resource_kind": "NOTICE",
+      "terms": [
+        "공지",
+        "notice"
+      ],
+      "tool_name": "search_notices"
+    },
+    {
+      "resource_kind": "MAIL",
+      "terms": [
+        "메일",
+        "mailbox"
+      ],
+      "tool_name": "search_mail"
+    },
+    {
+      "resource_kind": "CALENDAR",
+      "terms": [
+        "일정",
+        "calendar"
+      ],
+      "tool_name": "list_calendar_events"
+    }
+  ],
+  "max_results": 20,
+  "preserve_anchor_only_after_exact_tool_filter_evidence": true,
+  "multiple_focus_must_not_guess": true
+}

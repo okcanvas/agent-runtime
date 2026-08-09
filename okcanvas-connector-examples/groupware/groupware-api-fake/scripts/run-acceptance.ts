@@ -20,9 +20,9 @@ const headers = {
   "X-Request-ID": "acceptance-001",
 };
 const notice = await fetch(`${baseUrl}/api/v1/notices/search`, {
-  method: "POST", headers, body: JSON.stringify({ query: "maintenance", limit: 5 }),
+  method: "POST", headers, body: JSON.stringify({ query: "maintenance", limit: 5, context_ref: { entity_type: "EMPLOYEE", entity_id: "employee-0017" } }),
 });
-const noticePayload = await notice.json() as { records: Array<{ record_id: string }> };
+const noticePayload = await notice.json() as { records: Array<{ record_id: string; context_refs: Array<{ entity_type: string; entity_id: string }> }> };
 const requests = await (await fetch(`${baseUrl}/_fake/requests`)).json() as { requests: Array<Record<string, unknown>> };
 const source = await import("../src/server.js");
 const packageJson = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8")) as {
@@ -36,12 +36,13 @@ const typescriptDependency = packageJson.devDependencies?.typescript;
 const lockedTypeScript = packageLock.packages?.["node_modules/typescript"];
 const checks = {
   typescript_build_dependency_closed:
-    packageJson.version === "0.1.1" &&
+    packageJson.version === "0.2.0" &&
     typescriptDependency === "file:vendor/typescript-5.8.3.tgz" &&
     lockedTypeScript?.version === "5.8.3" &&
     lockedTypeScript?.resolved === "file:vendor/typescript-5.8.3.tgz" &&
     existsSync(resolve(root, "vendor/typescript-5.8.3.tgz")),
   product_api_passed: notice.status === 200 && noticePayload.records[0]?.record_id === "notice-001",
+  stable_context_ref_filter_passed: noticePayload.records.length === 1 && noticePayload.records[0]?.context_refs.some((item) => item.entity_type === "EMPLOYEE" && item.entity_id === "employee-0017") === true,
   request_capture_redacts_authorization: requests.requests[0]?.authorization_value_recorded === false && !JSON.stringify(requests).includes("example-groupware-api-token"),
   deterministic_identity: requests.requests[0]?.tenant_id === "tenant-a" && requests.requests[0]?.principal_id === "user-001",
   no_mcp_export: !("mcp" in source),
@@ -49,15 +50,15 @@ const checks = {
 };
 await new Promise<void>((resolveClose, reject) => server.close((error) => error ? reject(error) : resolveClose()));
 const payload = {
-  schema_version: "okcanvas-connector-example-step001r1-acceptance-v1",
-  step: "EXAMPLE_STEP001R1_TYPESCRIPT_BUILD_DEPENDENCY_CLOSURE",
-  version: "0.1.1",
+  schema_version: "okcanvas-connector-example-step002-acceptance-v1",
+  step: "EXAMPLE_STEP002_GROUPWARE_STABLE_CONTEXT_REFERENCE_FIXTURE",
+  version: "0.2.0",
   state: Object.values(checks).every(Boolean) ? "PASSED" : "FAILED",
   checks,
   passed_checks: Object.values(checks).filter(Boolean).length,
   total_checks: Object.keys(checks).length,
 };
-const output = resolve(root, "docs/evidence/EXAMPLE_STEP001_ACCEPTANCE.json");
+const output = resolve(root, "docs/evidence/EXAMPLE_STEP002_ACCEPTANCE.json");
 mkdirSync(dirname(output), { recursive: true });
 writeFileSync(output, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
 console.log(JSON.stringify(payload, null, 2));

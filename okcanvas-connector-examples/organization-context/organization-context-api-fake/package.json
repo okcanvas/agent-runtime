@@ -1,6 +1,6 @@
 {
   "name": "@okcanvas/organization-context-api-fake-example",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "private": true,
   "description": "Executable DB-SOT organization-context API construction guide with committed JSON reference fixtures",
   "type": "module",
@@ -10,7 +10,7 @@
     "pretest": "npm run setup",
     "test": "npm run build && node --test dist/test/*.test.js",
     "preacceptance": "npm run setup",
-    "acceptance": "npm run build && node dist/scripts/run-acceptance.js",
+    "acceptance": "npm run build && node dist/scripts/run-step003-acceptance.js",
     "start": "node dist/src/main.js",
     "package:source": "node scripts/package-source.mjs"
   },

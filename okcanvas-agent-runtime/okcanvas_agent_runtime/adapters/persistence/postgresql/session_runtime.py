@@ -45,6 +45,19 @@ CREATE TABLE IF NOT EXISTS product_session_key_rotation (
     updated_at TEXT NOT NULL,
     FOREIGN KEY(session_id) REFERENCES product_session(session_id)
 );
+CREATE TABLE IF NOT EXISTS product_session_context_focus (
+    session_id TEXT PRIMARY KEY,
+    domain TEXT NOT NULL,
+    state TEXT NOT NULL,
+    context_json TEXT NOT NULL,
+    context_sha256 TEXT NOT NULL,
+    source_run_id TEXT NOT NULL,
+    source_turn_count INTEGER NOT NULL,
+    updated_at TEXT NOT NULL,
+    FOREIGN KEY(session_id) REFERENCES product_session(session_id)
+);
+CREATE INDEX IF NOT EXISTS idx_product_session_context_focus_updated
+ON product_session_context_focus(updated_at DESC, session_id DESC);
 """
 
 

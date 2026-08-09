@@ -7,8 +7,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_step007_runtime_capabilities_are_explicit() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.agent_definition_catalog_implemented is True
     assert info.generic_agent_execution_implemented is True
     assert info.generic_agent_execution_live_accepted is True

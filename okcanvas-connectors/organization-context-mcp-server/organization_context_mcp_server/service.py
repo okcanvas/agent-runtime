@@ -26,6 +26,34 @@ class ToolInvocationError(RuntimeError):
         self.payload = payload
 
 
+def _validate_get_entity_relation_completeness(record: object, *, request_id: str) -> None:
+    if not isinstance(record, dict):
+        raise ToolInvocationError(ToolError(
+            error_code="ORGANIZATION_CONTEXT_RELATION_COMPLETENESS_INVALID",
+            message="Organization Context entity response lacks relationship completeness evidence",
+            retryable=False, request_id=request_id,
+        ))
+    relations = record.get("relations")
+    relation_count = record.get("relation_count")
+    returned_count = record.get("relations_returned_count")
+    truncated = record.get("relations_truncated")
+    valid = (
+        isinstance(relations, list)
+        and isinstance(relation_count, int) and not isinstance(relation_count, bool) and relation_count >= 0
+        and isinstance(returned_count, int) and not isinstance(returned_count, bool) and returned_count >= 0
+        and isinstance(truncated, bool)
+        and returned_count == len(relations)
+        and relation_count >= returned_count
+        and ((relation_count > returned_count) == truncated)
+    )
+    if not valid:
+        raise ToolInvocationError(ToolError(
+            error_code="ORGANIZATION_CONTEXT_RELATION_COMPLETENESS_INVALID",
+            message="Organization Context entity response has inconsistent relationship completeness evidence",
+            retryable=False, request_id=request_id,
+        ))
+
+
 class OrganizationContextReadService:
     def __init__(self, client: HttpOrganizationContextClient) -> None:
         self._client = client
@@ -68,6 +96,7 @@ class OrganizationContextReadService:
                     identity=identity, entity_type=parsed.entity_type, entity_id=parsed.entity_id, request_id=request_id,
                 )
                 record = payload.get("record")
+                _validate_get_entity_relation_completeness(record, request_id=request_id)
                 records = [record] if isinstance(record, dict) else []
                 changes = []
                 resolved = None

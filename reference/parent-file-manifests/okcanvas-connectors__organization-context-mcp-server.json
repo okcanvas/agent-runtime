@@ -1,5 +1,5 @@
 {
-  "file_count": 33,
+  "file_count": 34,
   "files": [
     {
       "path": ".gitignore",
@@ -8,23 +8,23 @@
     },
     {
       "path": "HANDOFF.md",
-      "sha256": "e7347d10d1d9617d9ffaf8c33f2c57f913223925fd1d6f5ef1f2b0c0b25d739c",
-      "size": 726
+      "sha256": "f38143de4c37100e698c469782ed2d5a393822171a8a5fad957df3b691cdc0ce",
+      "size": 1014
     },
     {
       "path": "README.md",
-      "sha256": "e2b37f095b0ba70b33022feb755b406f0ac789f98833d7b57eddbb6414e8cc30",
-      "size": 1049
+      "sha256": "f06dfca2a419118ffd7a6afe3617e481aea183b76db392bd7880a5e698da5f40",
+      "size": 1103
     },
     {
       "path": "contracts/connector-binding-contract.json",
-      "sha256": "75340d9aa36116a3389d1a1ce4611f5c27f4d416ab88e0acf720d91d61e5633f",
-      "size": 959
+      "sha256": "812bb5526e4ac9362a529fa591de29b652eafe3dff06e46adf4d053c8b368713",
+      "size": 1144
     },
     {
       "path": "contracts/organization-context-http-api-v1.json",
-      "sha256": "55daa34ba05dac4dae114d862dde5638b904d2c3b7d49dd23fb47fe84d9aaa8f",
-      "size": 911
+      "sha256": "7cd5a90bc1ed11e68debcbd180029c9931e61d2286aed8b11be79908cc58ac3e",
+      "size": 1096
     },
     {
       "path": "contracts/runtime-provider-contract.json",
@@ -88,8 +88,8 @@
     },
     {
       "path": "organization_context_mcp_server/baseline.py",
-      "sha256": "2806a39736c8d11115266274e11578a7e4f12a6054cf198d5ed897ee4e1449cd",
-      "size": 119
+      "sha256": "6d0fbab86d134ae0e40f885cf87996b7e1b264622bbc03762303336f561f47e7",
+      "size": 113
     },
     {
       "path": "organization_context_mcp_server/config.py",
@@ -108,8 +108,8 @@
     },
     {
       "path": "organization_context_mcp_server/mcp_protocol.py",
-      "sha256": "5781b5534ea6b921a5378591d62faf1adabd6740576d797e4c9653f073750ee1",
-      "size": 9230
+      "sha256": "f3679012569a35aaba87fdc99c603f7c10ccfcb2debcede5737d2b34dbb38134",
+      "size": 9285
     },
     {
       "path": "organization_context_mcp_server/organization_context_client.py",
@@ -118,12 +118,12 @@
     },
     {
       "path": "organization_context_mcp_server/service.py",
-      "sha256": "ee807c7ffbc21e5d35bec7afc44edbda536b20e326def5b30074a27b5ab499ca",
-      "size": 8551
+      "sha256": "dbf1e593529f8950583dfddd45d4b424d5f23dfb06f412a00e0df32a29287a09",
+      "size": 10038
     },
     {
       "path": "pyproject.toml",
-      "sha256": "76b3a493a77187a343b1e562f0391f76271cf26e7f2da2cc3897783dbcd2a56a",
+      "sha256": "a82c2473f3d4b52c810330557517c935ff3ab2ee966c3fb090b3819da892e6cd",
       "size": 744
     },
     {
@@ -142,14 +142,19 @@
       "size": 10541
     },
     {
+      "path": "scripts/run_step003_acceptance.py",
+      "sha256": "8960401aeafd317d868054cd69cf4a3e8ad778092a61ef96a6b43a151d80d87f",
+      "size": 4556
+    },
+    {
       "path": "tests/test_client_and_error_mapping.py",
       "sha256": "3c5399c81ba2f02740d36380e12ccdd0afff976a5c1108e6e872db25ebaa8944",
       "size": 3774
     },
     {
       "path": "tests/test_contracts.py",
-      "sha256": "1c442016f0196c7584489d0dc4b204f68424f9095880f2e9b5e7bbb2ab09d5c5",
-      "size": 1362
+      "sha256": "f5e319ffa55b8e7d618641fbe2944d5fe518773471d00b8e346a173e4406a88a",
+      "size": 1783
     },
     {
       "path": "tests/test_identity.py",

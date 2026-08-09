@@ -69,8 +69,8 @@ def test_step073_windows_acceptance_is_closed_as_predecessor() -> None:
 
 def test_current_runtime_preserves_step073_foundation_under_step075() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.product_owned_sandbox_runtime_foundation_implemented is True
     assert info.product_owned_sandbox_foundation_deterministic_accepted is True
     assert info.product_owned_sandbox_foundation_windows_accepted is True

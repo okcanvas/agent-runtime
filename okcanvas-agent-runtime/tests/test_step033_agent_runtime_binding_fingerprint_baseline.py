@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_step033_runtime_baseline() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.commerce_snapshot_bounded_quantities_windows_live_accepted is True
     assert info.agent_output_contract_runtime_registry_windows_live_accepted is True
     assert info.agent_runtime_binding_fingerprint_implemented is True

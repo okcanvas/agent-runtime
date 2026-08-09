@@ -176,4 +176,4 @@ def test_step080a_compliance_validator_closes_every_changed_file_and_gate() -> N
     assert result["passed_checks"] == result["total_checks"] == 8
     assert result["summary"]["gate_result_count"] == 32
     assert result["summary"]["pending_external_gate_count"] == 1
-    assert result["superseding_step"] == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert result["superseding_step"] == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"

@@ -1,63 +1,15 @@
 # Groupware API Fake Example HANDOFF
 
 ```text
-Step: EXAMPLE_STEP001R1_TYPESCRIPT_BUILD_DEPENDENCY_CLOSURE
-Version: 0.1.1
-State: LOCAL_DETERMINISTIC_ACCEPTED
+Step: EXAMPLE_STEP002_GROUPWARE_STABLE_CONTEXT_REFERENCE_FIXTURE
+Version: 0.2.0
+State: IMPLEMENTED_TEST_PENDING
 Status: EXAMPLE_TEMPLATE_ONLY
 Path: okcanvas-connector-examples/groupware/groupware-api-fake
 ```
 
-This Node.js/TypeScript template emulates the Groupware **product REST/API**, not MCP. It must never
-replace or bypass `okcanvas-connectors/groupware-mcp-server`.
+STEP002 keeps the same product-like read endpoints and adds stable `context_refs` fixture data plus additive `context_ref` filtering. Mail ownership, notice roles and calendar owner/manager/admin visibility remain authoritative before the context filter.
 
-Implemented example endpoints:
+No MCP endpoint exists here. The real Connector must remain in the path.
 
-```text
-POST /api/v1/notices/search
-POST /api/v1/mail/search
-POST /api/v1/calendar/events/list
-POST /_fake/reset
-PUT  /_fake/clock
-PUT  /_fake/faults
-GET  /_fake/requests
-GET  /_fake/state
-```
-
-Properties:
-
-- fixed clock and deterministic IDs;
-- tenant/principal/role filtering;
-- request capture with Authorization redaction;
-- deterministic fault injection;
-- product API and `/_fake/**` controls separated;
-- no MCP route, MCP Tool or Connector import;
-- importing `server.ts` does not open a listener; only `main.ts` starts the process.
-
-Validation:
-
-```text
-Node tests: 4/4 PASS (clean offline install)
-Example acceptance: 6/6 PASS
-Connector-driven optional integration: 7/7 PASS (recorded in Connector evidence)
-```
-
-Issues:
-
-```text
-EXAMPLE-ISSUE-001 a fake MCP would bypass the actual Connector
-EXAMPLE-ISSUE-002 server import initially opened a listener and kept tests alive
-EXAMPLE-ISSUE-003 TypeScript build required undeclared global tsc and failed in a clean Windows workspace
-```
-
-This template is optional and must not be listed as a Runtime or production Connector dependency.
-
-
-Dependency closure:
-
-```text
-TypeScript 5.8.3 is an exact local devDependency.
-package-lock.json is retained.
-vendor/typescript-5.8.3.tgz enables deterministic offline npm ci.
-npm test and npm run acceptance install dependencies automatically.
-```
+Executable validation is deferred under the current workspace test hold.

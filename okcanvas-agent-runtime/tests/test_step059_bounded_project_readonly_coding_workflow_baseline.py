@@ -13,8 +13,8 @@ CLI = ROOT / "clients" / "cli"
 
 def test_step059_runtime_baseline() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.node_agent_cli_tool_sub_agent_workflow_windows_live_accepted is True
     assert info.function_tool_runtime_registry_count == 4
     assert info.bounded_project_readonly_coding_workflow_implemented is True

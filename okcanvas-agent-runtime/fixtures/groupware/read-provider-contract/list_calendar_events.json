@@ -8,11 +8,12 @@
       "title": "Weekly review"
     }
   ],
-  "result_schema_version": "okcanvas-groupware-list-calendar-events-result-v1",
+  "result_schema_version": "okcanvas-groupware-list-calendar-events-result-v2",
   "roles": [
     "agent-user"
   ],
   "schema_version": "okcanvas-groupware-read-provider-fixture-v1",
   "tenant_id": "fixture-tenant",
-  "tool_name": "list_calendar_events"
+  "tool_name": "list_calendar_events",
+  "context_ref": null
 }

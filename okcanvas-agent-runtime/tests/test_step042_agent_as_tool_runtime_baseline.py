@@ -29,8 +29,8 @@ def test_step042_runtime_and_agent_tool_assets_exist() -> None:
 
 def test_step042_baseline_identifiers_are_current() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.handoffs_enabled is True
     assert info.generic_agent_tools_enabled is True
     assert info.native_handoff_windows_live_accepted is True

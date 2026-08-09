@@ -1,0 +1,60 @@
+{
+  "acceptance": {
+    "focused_step093_relation_live_executed_after_correction": false,
+    "focused_step093_relation_live_first_windows_attempt": "FAILED_BEFORE_HARNESS_IMPORT_WRONG_PYTHON_ENVIRONMENT",
+    "minio_object_storage_live_executed": false,
+    "runtime_full_regression_executed_for_r9a": false,
+    "workspace_deterministic_executed_for_r9a": false
+  },
+  "checks": {
+    "current_document_sot": {
+      "document_count": 7,
+      "state": "PASSED"
+    },
+    "first_party_json_parse": {
+      "failures": 0,
+      "files": 856
+    },
+    "first_party_python_ast": {
+      "failures": 0,
+      "files": 993
+    },
+    "historical_evidence_immutability": {
+      "changed_files": 0,
+      "common_files": 84
+    },
+    "launcher_contract": {
+      "passed_checks": 9,
+      "state": "PASSED",
+      "total_checks": 9
+    },
+    "organization_connector_parent_manifest": {
+      "files": 34,
+      "parity_expected": true
+    },
+    "organization_example_parent_manifest": {
+      "files": 51,
+      "parity_expected": true
+    },
+    "runtime_parent_manifest": {
+      "files": 4304,
+      "parity_expected": true
+    },
+    "runtime_product_source_byte_identical_to_r9": true
+  },
+  "correction": {
+    "base_live_launcher_contract": "RUNTIME_VENV_PLUS_WORKSPACE_PYTHON_BYTECODE_ISOLATION",
+    "first_windows_failure": "ModuleNotFoundError: No module named 'uvicorn'",
+    "issue": "WORKSPACE-ISSUE-047",
+    "relation_live_launcher_before": "WORKSPACE_VENV_OR_SYSTEM_PYTHON_FALLBACK",
+    "relation_live_launcher_now": "RUNTIME_VENV_PLUS_WORKSPACE_PYTHON_BYTECODE_ISOLATION"
+  },
+  "parent_release_sha256": "43a9d970fcef36c602c972f0dc1f460150a36d8ed25aa31057fc1ca86dda5c02",
+  "promotion": "NOT_READY",
+  "runtime_step": "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL",
+  "runtime_version": "2.77.0",
+  "schema_version": "okcanvas-workspace-step008r4r9a-static-validation-summary-v1",
+  "state": "STATIC_VALIDATION_PASSED_FOCUSED_RELATION_LIVE_RERUN_REQUIRED",
+  "workspace_step": "WORKSPACE_STEP008R4R9A_STEP093_RELATION_LIVE_LAUNCHER_RUNTIME_VENV_CLOSURE",
+  "workspace_version": "0.8.4-r9a"
+}

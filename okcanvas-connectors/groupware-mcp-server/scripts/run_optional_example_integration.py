@@ -148,7 +148,7 @@ async def run(example_root: Path) -> dict[str, object]:
             "checks": checks,
             "passed_checks": sum(value is True for value in checks.values()),
             "total_checks": len(checks),
-            "connector_step": "CONNECTOR_STEP001R1_ASYNC_TEST_RUNNER_DEPENDENCY_CLOSURE",
+            "connector_step": "CONNECTOR_STEP002_STABLE_ORGANIZATION_CONTEXT_REFERENCE_FILTER",
             "example_step": "EXAMPLE_STEP001_GROUPWARE_API_FAKE_TEMPLATE",
         }
     finally:
@@ -163,7 +163,7 @@ async def run(example_root: Path) -> dict[str, object]:
 def main() -> int:
     example = Path(os.environ.get("OKCANVAS_GROUPWARE_EXAMPLE_ROOT", str(DEFAULT_EXAMPLE))).resolve()
     payload = asyncio.run(run(example))
-    output = ROOT / "docs/evidence/CONNECTOR_STEP001R1_OPTIONAL_EXAMPLE_INTEGRATION.json"
+    output = ROOT / "docs/evidence/CONNECTOR_STEP002_OPTIONAL_EXAMPLE_INTEGRATION.json"
     output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(payload, indent=2, sort_keys=True))
     return 0 if payload["state"] == "PASSED" else 1

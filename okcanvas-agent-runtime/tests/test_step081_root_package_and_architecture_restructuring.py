@@ -38,8 +38,8 @@ def test_step081_architecture_validator_closes_all_static_gates() -> None:
 
 
 def test_step081_identity_root_packages_and_runtime_info_groups_are_exact() -> None:
-    assert CURRENT_STEP == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert PROJECT_VERSION == "2.75.0"
+    assert CURRENT_STEP == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert PROJECT_VERSION == "2.77.0"
     assert STEP == "STEP081D_WINDOWS_SOURCE_IDENTITY_ROUTER_REGISTRATION_AND_WORKSPACE_RESIDUE_NORMALIZATION"
     assert VERSION == "2.61.4"
     assert not (ROOT / "src/okcanvas_agent_runtime").exists()

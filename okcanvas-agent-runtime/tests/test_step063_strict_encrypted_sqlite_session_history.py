@@ -80,8 +80,8 @@ def _runtime(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
 def test_step063_runtime_info_and_policy_are_exact() -> None:
     info = RuntimeInfo()
     policy = SQLiteSessionPolicyCatalog(ROOT).resolve()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.strict_encrypted_sqlite_session_history_implemented is True
     assert info.strict_encrypted_sqlite_session_history_policy_id == "local-strict-encrypted-sqlite-session-v1"
     assert info.strict_encrypted_sqlite_session_history_envelope_version == 1

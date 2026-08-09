@@ -1,49 +1,31 @@
-# OKCanvas Agent Platform Plans
+# OKCanvas Agent Platform PLANS
+
+Current Workspace: WORKSPACE_STEP008R4R12R4_STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE
+Workspace Version: 0.8.4-r12r4
+Current Runtime: STEP096BR1R2_GROUNDED_SESSION_DELEGATED_IDENTITY_HINT_ACTIVATION_CLOSURE
+Runtime Version: 2.80.2
+
+State: LOCAL_DETERMINISTIC_CORRECTIVE_ACCEPTED_WINDOWS_LIVE_RERUN_PENDING
+Promotion: CANDIDATE_FOCUSED_WINDOWS_LIVE_HINT_ACTIVATION_RERUN_PENDING
+
+## Current correction
+
+R12R3 Windows Live proved four Root Runs could complete with zero specialist requests while grounded Organization hints were `UNAVAILABLE`. Code audit found the grounded Session marker did not receive a delegated MCP identity when legacy route-v2 had selected no Remote MCP. STEP096BR1R2 fixes that authority boundary without adding aliases, keyword parsers, fallback routing, new MCP Tools, DB schema, or stable-ID authority.
+
+Authenticated grounded Session turns now materialize delegated tenant/principal/role identity before legacy child selection. Hint MCP access and selected execution MCP access remain separately bound at their bounded Runtime edges. Runtime does not pre-bind every possible MCP.
+
+`interpretation.context.prepared` now records only bounded operational diagnostics: hint diagnostic code, whether delegated identity was present, and capability availability. Those diagnostic fields are not added to model context.
+
+The R12R4 Live harness also fixes its cleanup helper call to the exact `(removed, error_types)` contract.
+
+## Next proof
+
+Run on clean Windows:
 
 ```text
-Current Workspace: WORKSPACE_STEP008R4R7A1_GIT_REPOSITORY_HYGIENE_AND_RETAINED_RUNTIME_DIST_TRACKING
-Workspace Version: 0.8.4-r7a1
-Current Runtime: STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE
-Runtime Version: 2.75.0
-State: IMPLEMENTED_STATIC_VALIDATED_TEST_EXECUTION_DEFERRED_BY_USER_MINIO_PENDING
-Promotion: NOT_READY
-MinIO/Object Storage Live: DEFERRED_BY_USER
+sh_run_workspace_step008r4r12r4_grounded_structured_delegation_live_acceptance
 ```
 
-## Current corrective closure
+Do not promote until the generated R12R4 Live evidence is PASSED. The first expected diagnostic improvement is `delegated_identity_present=true`; with healthy loopback connectors, Organization hint capability should become available and hint state should no longer be `UNAVAILABLE` because identity is missing. If hints are available but the Root still chooses direct answers, child-selection policy is a separate next decision and must not be guessed in this corrective.
 
-STEP008R4R7A1 adds Git repository metadata without changing Runtime Product semantics. It retains
-R7A's current-document SOT correction and closes the fresh-repository ignore conflict recorded as
-`WORKSPACE-ISSUE-041` and the full-tree unanchored-ignore collision recorded as `WORKSPACE-ISSUE-042`.
-
-```text
-R7A current-document SOT correction              RETAINED
-Root .gitattributes                               IMPLEMENTED
-Root .gitignore hygiene                          IMPLEMENTED
-Runtime retained clients/cli/dist tracking       IMPLEMENTED
-Fresh Git ignore/attribute sentinel checks       STATIC_VALIDATED
-Unit / deterministic / live tests                DEFERRED_BY_USER_UNTIL_MINIO_READY
-Promotion                                         NOT_READY
-```
-
-## Current production-gap ordering
-
-MinIO-independent work after this corrective candidate is accepted:
-
-1. Admin / Service listener physical isolation.
-2. Versioned PostgreSQL migration lifecycle.
-3. Dependency-aware `/livez` / `/readyz` boundary.
-4. Service credential expiry/revocation/rotation lifecycle.
-
-MinIO-dependent sequence:
-
-1. STEP091D real Object Storage isolated-prefix live acceptance.
-2. Artifact blob inventory + global metadata inventory.
-3. age threshold + quarantine/recheck + idempotent orphan GC.
-4. only then pin required S3 retry/timeout/TLS/encryption policies from observed deployment needs.
-
-Scale/Product candidates remain later: physical Worker + heartbeat/lease renewal using the existing
-claim ledger, distributed Session history/HA, governed Groupware write, durable Automation, and
-Product UI/Skill Platform V2.
-
-Do not select a new implementation merely from this list without checking the then-current code.
+R10ER1/STEP094R2 remains the last Windows-focused Live-promoted baseline. STEP095A durable-memory audit remains separate backlog.

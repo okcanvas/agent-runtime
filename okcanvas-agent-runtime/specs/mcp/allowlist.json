@@ -1,6 +1,7 @@
 {
   "allowed_server_ids": [
     "groupware-read",
+    "organization-context-interpretation-hints",
     "organization-context-read",
     "reference-catalog"
   ],

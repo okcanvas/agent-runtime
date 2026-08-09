@@ -1,0 +1,20 @@
+{
+  "schema_version": "okcanvas-workspace-step008r4r10-cross-domain-live-failure-summary-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R10_RUNTIME_STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "workspace_version": "0.8.4-r10",
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "runtime_version": "2.78.0",
+  "state": "FAILED",
+  "passed_checks": 6,
+  "total_checks": 7,
+  "failure_stage": "execute_establish-employee-focus",
+  "safe_error": {
+    "category": "LIVE_EXECUTION_FAILED",
+    "type": "RuntimeError"
+  },
+  "environment_model": "gpt-4.1",
+  "environment_file_loaded": true,
+  "cleanup_completed": true,
+  "interpretation": "FIRST_ROUTE_COMPLETED_FIRST_PRODUCT_CLI_EXECUTION_FAILED_CROSS_DOMAIN_TURNS_NOT_REACHED",
+  "source": "USER_PROVIDED_WINDOWS_EVIDENCE_JSON"
+}

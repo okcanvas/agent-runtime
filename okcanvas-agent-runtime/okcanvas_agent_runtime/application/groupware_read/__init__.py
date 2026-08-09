@@ -39,4 +39,9 @@ __all__ = [
     "GroupwareSessionDelegationPolicy",
     "parse_product_routing_context",
     "requires_groupware_session_delegation",
+    "groupware_context_filter",
+    "groupware_named_tool_choice",
+    "groupware_operation_hint",
 ]
+
+from .request_execution import groupware_context_filter, groupware_named_tool_choice, groupware_operation_hint

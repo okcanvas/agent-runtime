@@ -1,0 +1,15 @@
+{
+  "blocking_conditions": [
+    "STEP094 executable deterministic/full regression not executed",
+    "STEP094 cross-domain focused Live not executed",
+    "MinIO/Object Storage Live deferred independently"
+  ],
+  "parent_relation_live": "USER_REPORTED_PASSED_19_OF_19",
+  "promotion": "NOT_READY",
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "runtime_version": "2.78.0",
+  "schema_version": "okcanvas-workspace-promotion-marker-v1",
+  "state": "TEST_PENDING",
+  "workspace_step": "WORKSPACE_STEP008R4R10_RUNTIME_STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "workspace_version": "0.8.4-r10"
+}

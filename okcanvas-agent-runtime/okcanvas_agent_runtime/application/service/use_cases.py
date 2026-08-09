@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import hmac
 import json
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
@@ -430,7 +431,7 @@ class ServiceUseCases:
                 "sqlite-session-execution-v1", "sqlite-session-approval-execution-v1",
                 "sqlite-session-native-handoff-execution-v1", "sqlite-session-native-guardrail-execution-v1",
                 "sqlite-session-native-agent-tool-execution-v1",
-                "sqlite-session-stateless-groupware-subagent-execution-v1", "sqlite-session-stateless-organization-context-subagent-execution-v1", "sqlite-session-native-mcp-execution-v1",
+                "sqlite-session-bounded-cross-domain-read-subagent-execution-v1", "sqlite-session-stateless-groupware-subagent-execution-v1", "sqlite-session-stateless-organization-context-subagent-execution-v1", "sqlite-session-native-mcp-execution-v1",
             }:
                 raise SessionStateError("Agent is not executable through SQLite Session Runtime")
             record = self._sessions.create(definition=definition, runtime_binding_sha256=binding.runtime_binding_sha256)
@@ -536,9 +537,20 @@ class ServiceUseCases:
             principal,
         )
 
-    def assistant_route(
+    def _assistant_session_focus(self, session_id: str | None):
+        if session_id is None:
+            return None
+        try:
+            return self._sessions.get_context_focus(session_id)
+        except SessionNotFound:
+            return None
+        except SessionRuntimeError as exc:
+            _raise_session_error(exc)
+        raise AssertionError("unreachable")
+
+    def _assistant_route_decision(
         self, request: AssistantRouteRequest, principal: ServicePrincipal
-    ) -> AssistantRouteResponse:
+    ):
         self._reconcile_expired_ingress_slots()
         if request.session_id:
             self._ownership.require_principal(
@@ -554,6 +566,8 @@ class ServiceUseCases:
                 resource_type="project-snapshot-slot",
                 resource_id=request.project_snapshot_id,
             )
+        session_context_focus = self._assistant_session_focus(request.session_id)
+        session_record = self._sessions.get(request.session_id) if request.session_id else None
         try:
             decision = self._assistant.route(
                 request=request.input,
@@ -563,9 +577,33 @@ class ServiceUseCases:
                 tenant_id=principal.tenant_id,
                 principal_id=principal.principal_id,
                 roles=tuple(role.value for role in principal.roles),
+                session_context_focus=session_context_focus,
             )
+            if request.session_id and decision.executable_now and decision.selected_agent_id is not None:
+                assert session_record is not None
+                if decision.selected_agent_id != session_record.agent_definition_id:
+                    raise ControlAPIError(409, "ASSISTANT_SESSION_BINDING_MISMATCH", "Assistant route selected an Agent outside the bound Session")
+            if (
+                request.session_id
+                and session_record is not None
+                and session_record.agent_definition_id == self._assistant.policy.session_agent_id
+                and request.attachment_id is None
+                and request.project_snapshot_id is None
+            ):
+                decision = replace(
+                    decision,
+                    grounded_interpretation_shadow=self._assistant.grounded_session_route_shadow(),
+                )
+            return decision
+        except ControlAPIError:
+            raise
         except Exception as exc:
             raise ControlAPIError(422, "ASSISTANT_ROUTING_FAILED", str(exc)) from exc
+
+    def assistant_route(
+        self, request: AssistantRouteRequest, principal: ServicePrincipal
+    ) -> AssistantRouteResponse:
+        decision = self._assistant_route_decision(request, principal)
         return AssistantRouteResponse(**decision.to_public_dict())
 
     def assistant_preflight(
@@ -577,18 +615,10 @@ class ServiceUseCases:
             attachment_id=request.attachment_id,
             project_snapshot_id=request.project_snapshot_id,
         )
-        route = self.assistant_route(route_request, principal)
+        decision = self._assistant_route_decision(route_request, principal)
+        route = AssistantRouteResponse(**decision.to_public_dict())
         if not route.executable_now or route.selected_agent_definition_id is None:
             return AssistantRunPreflightResponse(route=route, submission=None)
-        decision = self._assistant.route(
-            request=request.input,
-            session_id=request.session_id,
-            attachment_id=request.attachment_id,
-            project_snapshot_id=request.project_snapshot_id,
-            tenant_id=principal.tenant_id,
-            principal_id=principal.principal_id,
-            roles=tuple(role.value for role in principal.roles),
-        )
         model_input = request.input
         if route.selected_agent_definition_id in {
             self._assistant.policy.default_agent_id,

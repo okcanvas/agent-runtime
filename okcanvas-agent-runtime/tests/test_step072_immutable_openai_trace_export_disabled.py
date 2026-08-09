@@ -108,8 +108,8 @@ def test_step071_windows_live_closure_and_step072_runtime_flags_are_exact() -> N
     assert "Tracing client error 400" in summary["observed_non_fatal_sdk_diagnostic"]
 
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.product_owned_skill_live_provider_accepted is True
     assert info.openai_trace_export_policy_implemented is True
     assert info.openai_agents_sdk_tracing_disabled is True

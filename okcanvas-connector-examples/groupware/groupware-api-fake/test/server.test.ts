@@ -84,3 +84,18 @@ test("importing server module has no listener side effect", async () => {
   const module = await import("../src/server.js");
   assert.equal(typeof module.createGroupwareFake, "function");
 });
+
+
+test("stable context_ref filter is additive to delegated visibility", async () => {
+  await withServer(async (baseUrl) => {
+    const response = await fetch(`${baseUrl}/api/v1/calendar/events/list`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ limit: 20, context_ref: { entity_type: "EMPLOYEE", entity_id: "employee-0017" } }),
+    });
+    const payload = await response.json() as { records: Array<{ record_id: string; context_refs: Array<{ entity_type: string; entity_id: string }> }> };
+    assert.equal(response.status, 200);
+    assert.deepEqual(payload.records.map((item) => item.record_id), ["event-001"]);
+    assert.equal(payload.records[0]?.context_refs.some((item) => item.entity_type === "EMPLOYEE" && item.entity_id === "employee-0017"), true);
+  });
+});

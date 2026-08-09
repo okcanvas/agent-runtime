@@ -1,0 +1,52 @@
+{
+  "schema_version": "okcanvas-workspace-step008r4r9-static-validation-summary-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R9_RUNTIME_STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL",
+  "workspace_version": "0.8.4-r9",
+  "runtime_step": "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL",
+  "runtime_version": "2.77.0",
+  "state": "STATIC_VALIDATION_PASSED_TEST_EXECUTION_DEFERRED",
+  "promotion": "NOT_READY",
+  "test_execution": "NOT_EXECUTED_BY_USER_DIRECTION_UNTIL_MINIO_READY",
+  "checks": {
+    "current_document_sot": {"state": "PASSED", "document_count": 7, "errors": []},
+    "step093_static_contract": {"state": "PASSED", "passed_checks": 26, "total_checks": 26, "failed_checks": []},
+    "launcher_registry": {"state": "PASSED", "passed_checks": 7, "total_checks": 7, "current_record_count": 2},
+    "focused_relation_live_source": {"prepared": true, "executed": false, "canonical_cmd_lf": true, "turn_count": 3},
+    "first_party_python_ast": {"files": 991, "failures": 0},
+    "first_party_json_parse": {"files": 854, "failures": 0, "vendored_jsonc_excluded": "okcanvas-agent-runtime/reference/upstream/openai-agents-python-0.19.0/.vscode/launch.json"},
+    "historical_evidence_immutability": {"parent_files": 82, "common_files": 82, "changed_files": 0, "missing_parent_files": 0},
+    "runtime_parent_manifest": {"files": 4304, "parity_expected": true},
+    "organization_connector_parent_manifest": {"files": 34, "parity_expected": true},
+    "organization_example_parent_manifest": {"files": 51, "parity_expected": true},
+    "expected_final_workspace_manifest_file_count": 4765,
+    "expected_package_file_count": 4766
+  },
+  "runtime_product_source": {
+    "python_files": 351,
+    "snapshot_sha256": "8cf28fa543607f477eb48d28e082a6dd332ac79ca07d7f0016e85afe436d23cb"
+  },
+  "postgresql": {
+    "historical_step091b3r1_live_expected_tables": 15,
+    "historical_step091b3r1_live": "PASSED_19_OF_19_HISTORICAL_ONLY",
+    "current_step093_expected_tables": 16,
+    "current_step093_live_executed": false
+  },
+  "acceptance": {
+    "unit_tests_executed": false,
+    "runtime_deterministic_executed": false,
+    "runtime_full_regression_executed": false,
+    "connector_acceptance_executed": false,
+    "example_acceptance_executed": false,
+    "workspace_deterministic_executed": false,
+    "windows_live_openai_executed": false,
+    "step093_relation_multi_turn_live_executed": false,
+    "postgresql_step093_live_executed": false,
+    "object_storage_live_executed": false
+  },
+  "limitations": [
+    "STEP093 behavior is implemented but not accepted until deferred executable gates run.",
+    "The dedicated relation-chain Live harness is source-prepared only and has not been executed.",
+    "Cross-domain stable focus and bounded durable memory are not implemented by STEP093.",
+    "MinIO/Object Storage live acceptance remains deferred by user direction."
+  ]
+}

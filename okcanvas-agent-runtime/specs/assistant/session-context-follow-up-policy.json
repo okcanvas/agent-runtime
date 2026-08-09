@@ -1,0 +1,164 @@
+{
+  "schema_version": "okcanvas-session-context-follow-up-policy-v1",
+  "policy_id": "session-contextual-follow-up-stable-entity-v1",
+  "version": "1.0.0",
+  "deictic_references": [
+    {
+      "entity_types": [
+        "EMPLOYEE"
+      ],
+      "expressions": [
+        "그 사람",
+        "그 사람의",
+        "그분",
+        "그분의",
+        "그 직원",
+        "그 직원의",
+        "해당 직원",
+        "해당 직원의",
+        "그 담당자",
+        "그 담당자의",
+        "해당 담당자",
+        "해당 담당자의"
+      ]
+    },
+    {
+      "entity_types": [
+        "PRODUCT"
+      ],
+      "expressions": [
+        "그 제품",
+        "그 제품의",
+        "해당 제품",
+        "해당 제품의"
+      ]
+    },
+    {
+      "entity_types": [
+        "CLIENT"
+      ],
+      "expressions": [
+        "그 고객",
+        "그 고객의",
+        "해당 고객",
+        "해당 고객의",
+        "그 거래처",
+        "그 거래처의",
+        "해당 거래처",
+        "해당 거래처의"
+      ]
+    },
+    {
+      "entity_types": [
+        "PROJECT"
+      ],
+      "expressions": [
+        "그 프로젝트",
+        "그 프로젝트의",
+        "해당 프로젝트",
+        "해당 프로젝트의"
+      ]
+    },
+    {
+      "entity_types": [],
+      "expressions": [
+        "그 대상",
+        "그 대상의",
+        "해당 대상",
+        "해당 대상의",
+        "그 항목",
+        "그 항목의",
+        "해당 항목",
+        "해당 항목의"
+      ]
+    }
+  ],
+  "targetless_forms": [
+    {
+      "pattern_id": "organization-context-entity-detail-short-v1",
+      "forms": [
+        "정보",
+        "정보는",
+        "정보 알려줘",
+        "정보를 알려줘",
+        "자세히",
+        "자세히 알려줘"
+      ]
+    },
+    {
+      "pattern_id": "organization-context-contact-field-short-v1",
+      "forms": [
+        "연락처",
+        "연락처는",
+        "연락처 알려줘",
+        "연락처를 알려줘",
+        "전화번호",
+        "전화번호는",
+        "전화번호 알려줘",
+        "이메일",
+        "이메일은",
+        "이메일 알려줘"
+      ]
+    },
+    {
+      "pattern_id": "organization-context-position-field-short-v1",
+      "forms": [
+        "직책",
+        "직책은",
+        "직책 알려줘",
+        "직책을 알려줘",
+        "직급",
+        "직급은",
+        "직급 알려줘"
+      ]
+    }
+  ],
+  "ordinal_selectors": [
+    {
+      "ordinal": 1,
+      "expressions": [
+        "첫 번째",
+        "첫번째",
+        "1번"
+      ]
+    },
+    {
+      "ordinal": 2,
+      "expressions": [
+        "두 번째",
+        "두번째",
+        "2번"
+      ]
+    },
+    {
+      "ordinal": 3,
+      "expressions": [
+        "세 번째",
+        "세번째",
+        "3번"
+      ]
+    },
+    {
+      "ordinal": 4,
+      "expressions": [
+        "네 번째",
+        "네번째",
+        "4번"
+      ]
+    },
+    {
+      "ordinal": 5,
+      "expressions": [
+        "다섯 번째",
+        "다섯번째",
+        "5번"
+      ]
+    }
+  ],
+  "max_candidates": 20,
+  "continuation_prefixes": [
+    "그럼",
+    "그러면",
+    "그렇다면"
+  ]
+}

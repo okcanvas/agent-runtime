@@ -253,8 +253,8 @@ def test_step088_exact_composition_and_runtime_binding() -> None:
     assert binding.agent_tool_policy["child_output_contract"] == "OrganizationContextReadResult"
     assert binding.mcp_servers[0]["owner_agent_id"] == "organization-context-read-agent"
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     assert info.main_assistant_organization_context_session_delegation_implemented is True
     assert info.main_assistant_organization_context_live_openai_provider_verified is False
     assert info.step088_windows_deterministic_accepted is False

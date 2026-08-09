@@ -1,0 +1,1911 @@
+{
+  "file_count": 379,
+  "files": [
+    {
+      "path": "okcanvas_agent_runtime/__init__.py",
+      "sha256": "62d21d512d59d3fb56e6b336b9aa7da620c077bfa2d0dc7ef01dd8c7261f7aeb",
+      "size": 276
+    },
+    {
+      "path": "okcanvas_agent_runtime/__main__.py",
+      "sha256": "c921fcb6d20143146020edb92f552e4940012c434908b5d2ce18be0216c32b75",
+      "size": 129
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/__init__.py",
+      "sha256": "a88e3845f307b2a1fb36fc5b21c57c8365d4bfefc2f9da84fd09ac2bed0ab4dd",
+      "size": 58
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/evidence/__init__.py",
+      "sha256": "a92cc1a73f967a42d6a68bca021d7ce2b0109e9919612ee323d01632cd981951",
+      "size": 456
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/evidence/jsonl.py",
+      "sha256": "cd35e4dd4289d6c0bc08270a6cf64d60d0cf7385a40f4fe08e1dfa7e064e6868",
+      "size": 3709
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/evidence/thread_state.py",
+      "sha256": "462ab4538c76108e70c8a990eb56b143de2af376589454c65e5e53e4d4ee72cb",
+      "size": 2418
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/evidence/writer.py",
+      "sha256": "a6079510d51bd3c7f0a874d7200dcde2a0fbf8e0ecc41049f1a5f394c0ca6dfe",
+      "size": 1260
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/mcp/__init__.py",
+      "sha256": "9c7ec5ae1af7f83a67da607e9564c0ccb1dd22792723bdae8a1225241e2759f0",
+      "size": 62
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/mcp/clients/__init__.py",
+      "sha256": "c9f2cb4cddd777c489bfbb3492ac3e1e23c788d66e96d65fa3785dcc3f7af10a",
+      "size": 489
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/mcp/clients/openai_factory.py",
+      "sha256": "1bd9d5b72b941429a7aaf5f0a491b0218d1fc13e98b65d930b3f7f7cb9a7ecbd",
+      "size": 11726
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/mcp/organization_interpretation_hints.py",
+      "sha256": "bf800adbddcb2dfe503588d98b2ded2d845ef274c825ffdfe047657e6c81d2cf",
+      "size": 17421
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/mcp/servers/__init__.py",
+      "sha256": "30c4f59db379d39ec36fb53d83b2b2df37776005d3e3992d818d773c3dc1f474",
+      "size": 93
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/mcp/servers/reference_catalog.py",
+      "sha256": "a90da9ee6b6adbc531cba75df8a5ca804e64084458f1e593909eafc87b3ee15c",
+      "size": 4741
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/__init__.py",
+      "sha256": "82525ee267bca33a95f7b503f359d1137b0c49a85102ce11a387d89028ce8685",
+      "size": 65
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/generic_gateway.py",
+      "sha256": "d49a7c9e684ffe21139f3f25db54e73d1c275e7b56a5e065321d48afea5179e7",
+      "size": 130427
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/local_tool_approval.py",
+      "sha256": "cc0016082e6a906a58d0e3de403f5a2922cfa8bb649e491c99dda24c2c1df5a4",
+      "size": 14196
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/__init__.py",
+      "sha256": "7910a0e8489f76c67ff0e009de630c8b162f5e99eb6f905cd8ce1c834b0b358b",
+      "size": 1088
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/codex_approval_gateway.py",
+      "sha256": "62e0e88bd8d18aaa4b896b32e72643ff93019a5f2115b45929958f367dfd416e",
+      "size": 9370
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/codex_approval_service.py",
+      "sha256": "461c572e5fec0148ae1aea6f0eea0ad4c928ddb884f6d9f6ce9dd46a27b866e8",
+      "size": 23473
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/codex_gateway.py",
+      "sha256": "7430490dbc850f6fa48570116f19aa189ac2e25184b031ad0ff9484cb344b764",
+      "size": 8949
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/codex_readiness.py",
+      "sha256": "2e7ac5d4ac7cad856b8c6ab11a325798b3750c4fbd3be677b1f8fd809a1d192e",
+      "size": 5829
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/codex_service.py",
+      "sha256": "9e8c718b9b8fe7d74526ea30dafb65256a51457f96b7feceb0654ed01150b90e",
+      "size": 18601
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/codex_write_gateway.py",
+      "sha256": "47dec80c4d336b72774ec13d6e403192e22aea45ff979da3b4d9218a60bc1d7b",
+      "size": 8863
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/codex_write_service.py",
+      "sha256": "1610f6c3135a7685993699b1e51c0e1e3ec41577f818aedc06a6e9894865ac84",
+      "size": 17593
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/gateway.py",
+      "sha256": "8eafb08043920c8eff02ea1c07c3d31e47569d4ef36cb7a9fe365795baaeb731",
+      "size": 600
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/openai_gateway.py",
+      "sha256": "4f69a321ba1003b26bcf03a1acbe835ba85b498638ac3fcf81d9a4d412f3ca62",
+      "size": 4529
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/sdk_readiness.py",
+      "sha256": "a8bf91104ddb9bdb9e2f114305311b89897b9b1052ffa79658e99c53b4dafc4f",
+      "size": 3062
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/openai/runtime/service.py",
+      "sha256": "757538eb8be9a045a71fd01e09dc23a452a535074a0aa6daabf1d2ee103d2b5e",
+      "size": 4352
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/__init__.py",
+      "sha256": "c9be64c7d73e20db4a3f127b3c218722d186f9246d449ffe7350553ffc081ec1",
+      "size": 70
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/postgresql/__init__.py",
+      "sha256": "8506298d693141e98679b5391e28351dc739f0ca05980fb7466486393561db50",
+      "size": 1214
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/postgresql/driver.py",
+      "sha256": "bee2f10c0b41eecfc3f0f88f265dcd2763dbc4095d7fa9c3f31524e8ff95b118",
+      "size": 10890
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/postgresql/evaluation_store.py",
+      "sha256": "e3726de5179810b8520f2db70ec7351d8d0d0513d281f7434ceba99e674382ff",
+      "size": 4116
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/postgresql/product_store.py",
+      "sha256": "340a9f1f398b95d47180e45942dbfee0dbbd1bfadf0edb34a45e7688bf87ac41",
+      "size": 3378
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/postgresql/run_submission.py",
+      "sha256": "d368ba0122767792298712f8133e11a203503d12c1554cb5371947dce1f114fc",
+      "size": 3376
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/postgresql/service_ownership.py",
+      "sha256": "dcda85e4fe78d29a78a021d65826eeaf5454e4087107e2c83623d98b4cd0518b",
+      "size": 3245
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/postgresql/session_runtime.py",
+      "sha256": "b7723baea26680266990feb6001c66a2007cf0c3ecd86d6a29e797691cdf6995",
+      "size": 4079
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/postgresql/tool_approval.py",
+      "sha256": "0394e914094c48d4f3393cf01b97e742632074b8549f7f3d500737f866a07ee7",
+      "size": 2235
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/product/__init__.py",
+      "sha256": "06b0076cedcb22c71d56f31ba485ee5bad4e547fbf059f8270dd7f5fb250c5c8",
+      "size": 130
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/product/sqlite_store.py",
+      "sha256": "64c85bcea8e09ca757f24dc07170326bebbaec1db701bd487f6032970612ec86",
+      "size": 41514
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/run_submission.py",
+      "sha256": "6c56298f8e45b5569a597167a1448c101b29885088bda3467d9588b61ac888a9",
+      "size": 71594
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/service_ownership.py",
+      "sha256": "d067a8aa6598650700b6b7e219cb60511ea4de4fb15e7488820167c782b9db91",
+      "size": 7510
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/sessions/__init__.py",
+      "sha256": "0bdfe7e1d4689200907cd57f43ed3b0f7ac9992d0f53715702d108918c227e5e",
+      "size": 79
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/sessions/rotation.py",
+      "sha256": "d4dc48a63e0229823bdbc6f523faadbed5696dd448b2c49970f7e96390469739",
+      "size": 9623
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/sessions/runtime_service.py",
+      "sha256": "cbfa90ae19ac76caf726875f7164828bd481338c2adb409b7012c9b2ca605e91",
+      "size": 42072
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/persistence/tool_approval.py",
+      "sha256": "0228f1de23fe729572313ff738203f7029b2f41080611fb9d9782d0ce5d31639",
+      "size": 16128
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/reference_catalog/__init__.py",
+      "sha256": "9e3b64d7fb335b99985180d168e8aea18cf4f1f26d878e3e027cfb9719c79144",
+      "size": 1160
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/reference_catalog/errors.py",
+      "sha256": "863cce7ca2c86939c18c3e469145852e2f2003f4745289e7474a7b10f5c753e6",
+      "size": 885
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/reference_catalog/evidence.py",
+      "sha256": "de05dd989ef0510b7317fcc906ebdb4020c2bec8db4c56e3b3f7499979a6cb5e",
+      "size": 1770
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/reference_catalog/models.py",
+      "sha256": "382a34f88f98c595b3affb0200d34b815453de826a5487ac655ef448294334b0",
+      "size": 3262
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/reference_catalog/service.py",
+      "sha256": "c2d9c077d330ab64737db861d74d65c9464ed2e1b02a0cf4756a4ae2db6081db",
+      "size": 21384
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/sandbox/__init__.py",
+      "sha256": "c0bf4869c40d30f559558b62b7fc41121f2d3b857e3165161ec45b4af823e014",
+      "size": 66
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/sandbox/docker/__init__.py",
+      "sha256": "4c911a0a5739c99524b3c79d9d75b5898f220d3a249addf1a52d83ad1a8805e0",
+      "size": 1758
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/sandbox/docker/catalog.py",
+      "sha256": "69df5d0b645ead996344a7870f9e08eeda2efb4bb4c7a1edc02fba5ac80f53f3",
+      "size": 20612
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/sandbox/docker/docker_cli.py",
+      "sha256": "ffa7fdb598e5a336f325ed9ae2a5d4ef4e39553d2566bb8e9300933278448832",
+      "size": 25099
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/sandbox/docker/errors.py",
+      "sha256": "ee796bb7ad2d986d0ec497ced05538e67ddf431b5774df06db8436ae4555a9c6",
+      "size": 1935
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/sandbox/docker/models.py",
+      "sha256": "d78a16ae5dd215299a29248761850f6e45df23d022a599f7b50f4489addde87d",
+      "size": 13384
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/sandbox/docker/read_only_workspace.py",
+      "sha256": "0801653cf664686dffbfa8d7fad7b8686f878c5c9d3b4026259466a6b3eaa94d",
+      "size": 32693
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/sandbox/docker/service.py",
+      "sha256": "3d7950d11a47e7925c8733a92c360a5813fc0a105916d415fb7035cbf779dede",
+      "size": 1343
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/__init__.py",
+      "sha256": "da8cb42403617c0e7391ab638662b1eaf2279f063e9a33ed27229bcd295fd2b4",
+      "size": 66
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/artifacts/__init__.py",
+      "sha256": "b2b42b2a022076dbffaafa69b1c4e5a8574a1b3d7b604c337ca3ca3cd8dae8e5",
+      "size": 518
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/artifacts/local_filesystem.py",
+      "sha256": "c4eab99502b5c120b74247b89f64266df4bb3ee0a841b3b62da067d9b3a5db5e",
+      "size": 5237
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/artifacts/object_storage.py",
+      "sha256": "1a975644a84479758fec6052ae388b21022d3d4efe76c2aecc700fe5b63ee7c3",
+      "size": 8325
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/artifacts/s3_compatible.py",
+      "sha256": "92c7d7eafc96b764644291a6093c5748b78424dd94b7c9e938f9c657e3fa6a32",
+      "size": 4426
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/attachments.py",
+      "sha256": "fabb19ce33dd302f283cf7c09a4854a9afa68abc8063108e59e3c7c2fe58d7e1",
+      "size": 13686
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/project_snapshots.py",
+      "sha256": "5d3ba6c87b44f802157e6e48f246bdf9fb9bb21a738ebec2ce207caf20fad231",
+      "size": 15534
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/protected_payload/__init__.py",
+      "sha256": "3fb47b42304453e09456142eeec246ba4e041cd037673fbb27d6558b2b89f625",
+      "size": 853
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/protected_payload/store.py",
+      "sha256": "701e256d744594c70cf907f7a07b20de4f06eb7e8ea6de85fdbcbe9b135efb46",
+      "size": 18935
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/run_state.py",
+      "sha256": "9e66876f255e22d806d1112b977083e05467aa9ca73e7fe980cee23be3319db9",
+      "size": 7273
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/storage/session_history.py",
+      "sha256": "f4db876df227fe9162b756d795952bf02445cad42d0b3779d5194812e0366f00",
+      "size": 8554
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/streaming/__init__.py",
+      "sha256": "0aea3e475d7d6ce282c505249a8ac7b9c51ac54d8f28450c001f9cb44d2c1285",
+      "size": 481
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/streaming/adapter.py",
+      "sha256": "859ad2d6612e33402033f6570f3109873e38ddcfbb68b826593a6f60bf5bbb94",
+      "size": 1797
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/streaming/broker.py",
+      "sha256": "2df2778da3bdb7a85e8c62d03fd301b1bc67d78c8623bf213b9e324b4d0b3ef5",
+      "size": 5265
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/streaming/models.py",
+      "sha256": "31daf38e5a5572a93207a76848a4caa01536d114a08e7d21a8ef61a6d9f4a205",
+      "size": 1282
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/streaming/sse.py",
+      "sha256": "8465dca4db99c538d58edb198b6a1b24e1dabc0755aa825206752a5275038b2e",
+      "size": 718
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/workspace/__init__.py",
+      "sha256": "5eb43de8508845d96da43a6d1d9ae57c4a5d25b5de7087bdfe4ebd089385f780",
+      "size": 518
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/workspace/git_diff.py",
+      "sha256": "72298c73812487c8f7f2b78a28df15abe31448dd2107a476eb3d1db5f1a04e0f",
+      "size": 4103
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/workspace/invocation_workspace.py",
+      "sha256": "ffad3689730b8e2b680f644e81be4f13874ecce46956562dfdba0ec83c965d84",
+      "size": 1254
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/workspace/project_snapshot_materialization.py",
+      "sha256": "b4776ac0dcb2d59da6fd1a5e7af15d930b78ab030b6f3a566b231bf0a9cfecb7",
+      "size": 2424
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/workspace/read_only_project.py",
+      "sha256": "0990c2bd4f4bfa28c58805ab609eac6c420e895c8380ec4f69bcc6758a1ab2d8",
+      "size": 17114
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/workspace/tool_inspection.py",
+      "sha256": "d78f48d4189df1e1c650b1602d546ed0409d81ba34a38f17e80b9e4400ea3e50",
+      "size": 3655
+    },
+    {
+      "path": "okcanvas_agent_runtime/adapters/workspace/tree_hash.py",
+      "sha256": "6c36e102b3ae5d315eac6daf9e824c7e0ccf010dc2bf2cd14e9920839fd58394",
+      "size": 1870
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/__init__.py",
+      "sha256": "8c245d049bcbd690495591b7b66bdb8c343d2acb66be0bdfd6a557fb66d1e38c",
+      "size": 55
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/capabilities/__init__.py",
+      "sha256": "b62f49c4bcb5533214a6771d789b7d4ec734f977a48948a147486291c7d3892d",
+      "size": 68
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/capabilities/topology/__init__.py",
+      "sha256": "c347f3c0b401f22385e23f938a976b2515e2c5e08ddad03d1ae8c8adcce32ee0",
+      "size": 1229
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/capabilities/topology/catalog.py",
+      "sha256": "d33f5d09b87a4401b54cec40b82d00d321c5344391414d4fafdf0f924dba94e1",
+      "size": 15348
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/capabilities/topology/errors.py",
+      "sha256": "7a985c402780ec72af27de0878afe955c7d3be136a9209eadc2e7145c69fa620",
+      "size": 111
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/capabilities/topology/examples.py",
+      "sha256": "cf0ac1c8a1f9adde55700cfafc09d0adf824e7fbfac5f865fb45e32c7c9f3ef3",
+      "size": 7394
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/capabilities/topology/models.py",
+      "sha256": "c6d342b3e17a4fd86e3f6f227f9d72407c60d1139a41dc700920712d02bd7f1b",
+      "size": 7298
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/capabilities/topology/policy.py",
+      "sha256": "5c1f676459ac4f879210a20b69dc73cec161a5815abde842b219c13da46ef427",
+      "size": 9101
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/definitions/__init__.py",
+      "sha256": "7953a590fb30de65586dc3b79793a7a49fde99fec1a68fbd3d590de2f957cf94",
+      "size": 537
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/definitions/catalog.py",
+      "sha256": "18edc24d9e3e16fb43dc328cd7c06d147f838db1623fa254d8d79279b3cb7b8f",
+      "size": 22290
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/definitions/errors.py",
+      "sha256": "b2a382b3bdbdbf33f970b96b35ce9c35790edbfc1bef95d02455072193ff4884",
+      "size": 353
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/definitions/models.py",
+      "sha256": "81d289be8b0f89c2bf2375208462bd6e5643d718ce95c9d0d7069fee0c59f441",
+      "size": 2509
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/guardrails/__init__.py",
+      "sha256": "f7b2640345048636bbf7bdb3154c0244e1885303814349ba3f681e258012f7e5",
+      "size": 763
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/guardrails/catalog.py",
+      "sha256": "1fe31993b859782ae51732191696bc0082849513c9c9d96c7534acf76b0f6e89",
+      "size": 6146
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/guardrails/errors.py",
+      "sha256": "68cbd83eff103fdcbe1bf0908bb8b44b677e479486baa513316a19f307c764f3",
+      "size": 275
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/guardrails/models.py",
+      "sha256": "150ff9b83e921d965138c1ea71a657e82694336ccad59afb7e45834561b53889",
+      "size": 1552
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/guardrails/runtime.py",
+      "sha256": "566243e980efb2ce126077dcf294dbaf2f49967a672dda26d89a8487cee15021",
+      "size": 4049
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/mcp/__init__.py",
+      "sha256": "6d0090c45baeeb5fe0a5fc2342181a65077d79ff0bafb348974ba18c80eebd34",
+      "size": 59
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/mcp/definitions/__init__.py",
+      "sha256": "358e466993d4b4e4214b769a16f132893a87db1bec98944480958324e9296906",
+      "size": 529
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/mcp/definitions/catalog.py",
+      "sha256": "fe19b95214ee2e010f1c7d093e224674fd9600eec839fa0a53c3df7ab5c03853",
+      "size": 18620
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/mcp/definitions/errors.py",
+      "sha256": "0ceaf5c5af36e7a2327b148c00ec3afd63932956ec5eeff174ee2170ab42491a",
+      "size": 336
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/mcp/definitions/models.py",
+      "sha256": "a64f7174b9f5f863bbf3b34428a48ca2b6ace6058e6eb14d26e41f0980a84f21",
+      "size": 3318
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/__init__.py",
+      "sha256": "c36429e448bd493e49f1b19047cc395bef7b9a355890d013df1062650d9d4397",
+      "size": 61
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/provider_identity/__init__.py",
+      "sha256": "0be5c3e1f48e5426fd9fb055ec15056aaf604f06b6b0d418405dce394663edf7",
+      "size": 631
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/provider_identity/catalog.py",
+      "sha256": "91faa6620af2574d3266ca2224d3dc9f647bc93e2241ed446f70a25dd0c321df",
+      "size": 3333
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/provider_identity/errors.py",
+      "sha256": "222226b7c6b1dce6823b0fc3858293b971c1bf914068e2ebcfc5a41d780e646d",
+      "size": 140
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/provider_identity/models.py",
+      "sha256": "7159f8bd457673f9a2003e506079653f991a5aae98ee2c30a45792002d447f7d",
+      "size": 763
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/provider_identity/runtime.py",
+      "sha256": "42c7fdba0b5d2189da1ca4905921a2bf321538415766435677c50c74d7b48bb9",
+      "size": 764
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/reasoning_evidence/__init__.py",
+      "sha256": "b6f369bc96f55098ff6b31c308889609187068e3b0014eb71017c4f77ab01bb9",
+      "size": 633
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/reasoning_evidence/catalog.py",
+      "sha256": "1ef19bfc06723ed6eab5eafe3a032596fbcbea97f9769c8ff4c8c106330c0d92",
+      "size": 3705
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/reasoning_evidence/errors.py",
+      "sha256": "8ece03de6d534da6b283c8e1cac9bbfa009725feb275e1b2d17d745843a23c9c",
+      "size": 131
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/reasoning_evidence/models.py",
+      "sha256": "32f34ce69d0ba660a67175e4e13e23a58af16e8bb254b17cc48fdb12c7d1c403",
+      "size": 1260
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/reasoning_evidence/runtime.py",
+      "sha256": "6798a37b4c84426a1a321296051755998f7b45472703c01ba46bd6dc94ecc4a4",
+      "size": 969
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/response_storage/__init__.py",
+      "sha256": "5b1c7566debce5f933f7736850ae20fbea810cf0eb40d4cf6ab967b949cf9051",
+      "size": 583
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/response_storage/catalog.py",
+      "sha256": "e62917dfb81440ae6dd7f9da0d133e76c2193a0a551fc641f6f18736c93cb97f",
+      "size": 2804
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/response_storage/errors.py",
+      "sha256": "5224038a7c671ca55708bfaf38a44e0e8c825c93f34da6e215142f05e02bb32c",
+      "size": 134
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/response_storage/models.py",
+      "sha256": "4963a2675cc268801e74c783afe77fa9d01fca9bdf0373b3c66bb77fce4bb841",
+      "size": 572
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/response_storage/runtime.py",
+      "sha256": "740bdb0bb720a664f6fdd8633ceada168c1e1318644a63f0c9059f7d39f436bf",
+      "size": 474
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/retry/__init__.py",
+      "sha256": "01af7bb87c8d138182d4b13331182383612335a654225b4b3001ebea822d9697",
+      "size": 473
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/retry/catalog.py",
+      "sha256": "714ddf4e156fc7e914b57cce67a23c0b187566e1c3856c5acef6c12c9a4a01ab",
+      "size": 4048
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/retry/errors.py",
+      "sha256": "ec58fc2bc70541228329cada5f199b62f1d6681f94462d821cea4de7e15e731e",
+      "size": 131
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/retry/models.py",
+      "sha256": "e077e466ba94d63d33d3652d16dbe2225cc93e3d482198bb3e04397064a56497",
+      "size": 1095
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/retry/runtime.py",
+      "sha256": "f0651a0f19d17cbc6c4200300650083c15d681841139b0c7875e90388a47bdbe",
+      "size": 693
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/routing/__init__.py",
+      "sha256": "cde50a04a7536b7787d5cdc01bdcdc721593dada1e9161e86c6e2e9408839b7f",
+      "size": 634
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/routing/catalog.py",
+      "sha256": "3a496c94b62576d61458b59b8afe5eba3f5d2a353b79952a45809852ddab5db4",
+      "size": 5459
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/routing/errors.py",
+      "sha256": "0399588dd66a77d2a5ca42f7d9659b9f659debd3e036837d5844f5118bb72350",
+      "size": 392
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/routing/models.py",
+      "sha256": "fc4295b225c64ec519141d0ce46883fbf8db91d8dad718a7b9c605200f409bf8",
+      "size": 1888
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/routing/provider.py",
+      "sha256": "c7ddb2602cfdc8ba9d8197a99b5c5a64e91109e055a9c27298f3b422475a9dbc",
+      "size": 2178
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/trace_export/__init__.py",
+      "sha256": "2e7f03e98c160f43d875de6f52f72f5660d79a389ca7e402863769b7ef4ddc0d",
+      "size": 513
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/trace_export/catalog.py",
+      "sha256": "fcb244235d9de6b37d5284edfbe076cdf322b5bcf0378213a540d13388ed88de",
+      "size": 3387
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/trace_export/errors.py",
+      "sha256": "9c05e076405f00a819fd5c5e982740713a84bd61303b901085bffc92c7a6e531",
+      "size": 126
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/trace_export/models.py",
+      "sha256": "d877745bc14a9b73d41d43068cabc00ae93f022ca9a3daa787bfd1dc2ce8af80",
+      "size": 895
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/model/trace_export/runtime.py",
+      "sha256": "21a5212eef1ee17b9a73910385009472c72ee412a81f78475c9e42a3bdefbce7",
+      "size": 666
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/runtime/__init__.py",
+      "sha256": "a9b62bd396b3e069f45b6e557ff2fccfd8e32793af7c87b94f4f62638a29c601",
+      "size": 236
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/runtime/binding.py",
+      "sha256": "32f89bf5eff17d7ff1771b2b17222e546ad72b3ae2099164c05452bde40b33bd",
+      "size": 6329
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/sdk/__init__.py",
+      "sha256": "d73b0de810a189ff02479a51f2e75ab2c4320446d1112fb2a74413807f11479d",
+      "size": 48
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/sdk/codex_readonly_agent.py",
+      "sha256": "e7021c75f474ab075392606b51b0d561c3c7f324d1323f51cbfce8a133c77501",
+      "size": 1182
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/sdk/codex_write_agent.py",
+      "sha256": "12382181b395d48275787edc2cfbd1873c4fd24f6888eeb1601326296bc0a597",
+      "size": 1409
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/sdk/coding_agent.py",
+      "sha256": "1af184650d133be1ee99c0fd7c2e4d0d4a00a6e0a0758967c379a89f5a1ac414",
+      "size": 940
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/skills/__init__.py",
+      "sha256": "4922a5c4394f6cfdaa2b668f5ceb34795d39c2a94b48a490ffad4f14293b7ce9",
+      "size": 737
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/skills/catalog.py",
+      "sha256": "0fcecae7da4d7b59d0fb2e578d8565a60d60b15de69bf4386c0aa4f8c73eb9d0",
+      "size": 17777
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/skills/errors.py",
+      "sha256": "16ac632fd603a8e397769d289efb55dde1b12aba7307eb0b24ce60bc4ad8c811",
+      "size": 321
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/skills/models.py",
+      "sha256": "b3486e9dcfbb22842c7311b717e7778111a0895ed58a8a8e1773aa3ca2fb833b",
+      "size": 2477
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/skills/runtime.py",
+      "sha256": "7a29e2758fff1157ff1aa22e7a145e2d623110682e958da9aa7eb9228aad66a4",
+      "size": 1839
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/__init__.py",
+      "sha256": "3061a478d2f9952572dbe690fd3d01e44134aeaf7001e9ea6a7a6698c73e4954",
+      "size": 201
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/agent_tools/__init__.py",
+      "sha256": "93df53571b55945ad9f0a815e1de211c78b1f2d5611bf8cb1ff62a075c3acb53",
+      "size": 864
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/agent_tools/errors.py",
+      "sha256": "6a8b4ec4b429793cc4e7d64e21aa307a831e8ca59dd23d8433362f78220cc066",
+      "size": 157
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/agent_tools/models.py",
+      "sha256": "028257f4c03ab640931f775338baf840506e7d6896ed818c8f05949dc4e16481",
+      "size": 1279
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/agent_tools/policy.py",
+      "sha256": "16424f0eac62b9aa49168449ed64c7effc15676c5a0651e33e7e2330a61bb832",
+      "size": 4571
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/agent_tools/runtime.py",
+      "sha256": "030f8f0f31a2bd71668eefc8e2a8fd37dfced64a16671e61c62a3999e317e52e",
+      "size": 5776
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/handoffs/__init__.py",
+      "sha256": "babaf79595921176b9f4c3fc17e9eb6dde180ffb783c218a9af84ad9d87c90fa",
+      "size": 790
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/handoffs/errors.py",
+      "sha256": "ed2bed14b0715a6f6bf18cfc7ad8263ad01c49a618bd5238562f3e017bcb8725",
+      "size": 177
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/handoffs/models.py",
+      "sha256": "3b6e136c125c20d8755e3cd7c032e93a541f651f4a9ea0ca700a248f7e61ae83",
+      "size": 1142
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/handoffs/policy.py",
+      "sha256": "9c1f1925148820d05278726b9fedaef897bdcb4f4024979e0785c1dbbb1466f6",
+      "size": 4231
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/handoffs/runtime.py",
+      "sha256": "838601bdb8a6e2140ca75eed9f78ff6f7d57c84103b04353c3658c5acadbefa7",
+      "size": 4072
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/subagents/invocation_graph.py",
+      "sha256": "ebb97da965a384eec7db4671d93a21343a2186375b4cb96c28d5efb98750f642",
+      "size": 4404
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/__init__.py",
+      "sha256": "c152d255e15eef492276653aaffac21835ec95f97841cf05f190d516916d086e",
+      "size": 61
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/codex/__init__.py",
+      "sha256": "732b2edb7b45beb4eabd289b6e9bd346ebe3edb94e1950caab8e52ed2e4644bc",
+      "size": 67
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/codex/approval_contracts.py",
+      "sha256": "f9be2dc1252ea8aed1d4d4f7d80d54c91ad66b9ce3b8b31a8b07dbf724e35696",
+      "size": 5192
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/codex/readonly_contracts.py",
+      "sha256": "092fa4879cb85438a3786d646ee818a8dd163de12fdb9a0fcab2317238f6acaf",
+      "size": 4510
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/codex/readonly_errors.py",
+      "sha256": "7076c412b8ee98d011921e6a11c45a324101ea10d5aa7f6d91cc0253cc2c33fb",
+      "size": 404
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/codex/write_contracts.py",
+      "sha256": "73513cf80a93d81ae2ba17c059adb7449806947d53fc59992de44ff8c40b3527",
+      "size": 5192
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/codex/write_errors.py",
+      "sha256": "51faa7237a75f4b71aea161b41f4df9427951bb1eff5e6a61674c17f625eea7d",
+      "size": 392
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/function/__init__.py",
+      "sha256": "c60c7f653fb834ebeff68249ca2144154ecb0206dfb27487463b234969215e15",
+      "size": 1207
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/function/catalog.py",
+      "sha256": "f235aae5d59f925155d09b7d324846704f34e7a8802d401d2972237285ec1676",
+      "size": 13579
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/function/errors.py",
+      "sha256": "08cfa843450b3b7b25bfd9536516f0d2fd30306a5a1a7ff7c121bd797990dc51",
+      "size": 467
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/function/factories.py",
+      "sha256": "0c7be26157f177ba5fb82c1701810d4a1792bd45cfaf8bc4b90c1aee8457cab7",
+      "size": 4964
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/function/implementations.py",
+      "sha256": "298e2515e0d9e0c0b99a08760d17a900a0c577622c2c9d85bb4bd7458d5c2013",
+      "size": 1850
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/function/models.py",
+      "sha256": "e7a06c0c657cea83be6e56da2ff63aea53454790579c9fa59dcc0afe16871a0d",
+      "size": 3987
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/hosted_search/__init__.py",
+      "sha256": "384c992da3bb1dd7e255d6f632f1789a73ad387e9a095768bd3545387ba93759",
+      "size": 1159
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/hosted_search/catalog.py",
+      "sha256": "16a97849ca045478c68cb3145b5b27e4e5ef0347315a89a227fa983e3ca31b2a",
+      "size": 6808
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/hosted_search/errors.py",
+      "sha256": "46f1957b9fd6c7d067e0fb196a65520728090432a109fedf5ab93c6c56f70e44",
+      "size": 443
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/hosted_search/models.py",
+      "sha256": "4cbab652d6088eefd130c4f63a91205bef84a37eeccee1429b17b33bd47c6e13",
+      "size": 3442
+    },
+    {
+      "path": "okcanvas_agent_runtime/agent/tools/hosted_search/runtime.py",
+      "sha256": "12d3262e58c23dc70e16300ea8eb0678f65a6a1079e451453a7ffc921790678f",
+      "size": 7655
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/__init__.py",
+      "sha256": "7c253f09ea7fdf913bd5a23503a10e525afe4d59e767f3ddad538781484745b5",
+      "size": 61
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/admin/__init__.py",
+      "sha256": "8e94f933e07111117a504393e378b6e1cd07f38f7d7fd806d09016da72a16743",
+      "size": 106
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/admin/projections.py",
+      "sha256": "90998d617862e773979aedf1f50b567ffe3a25f3a6dbbe362a78194b7e9e4ef7",
+      "size": 4993
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/admin/use_cases.py",
+      "sha256": "c3900177d65f50fad0a92270b92a2c4b8f35f9a8321be36b0eb69e89d1e69b82",
+      "size": 46664
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/approvals/__init__.py",
+      "sha256": "d4604688e47eaf8bd696b97b5a1857b67227f06ce7b86abfe5d9dc1267e3d901",
+      "size": 2633
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/approvals/errors.py",
+      "sha256": "b87b4f43c96241fc89740df41571a7edf345704c81fa62fc14696a318c994468",
+      "size": 453
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/approvals/gateway.py",
+      "sha256": "5023d4aa3db13c8a1c4b1f8a3bae74227cab7c5244265421e8cafbbd0e023afa",
+      "size": 2851
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/approvals/models.py",
+      "sha256": "fd81c526fe97e4ca4158a73da24b7fd5bc30034b9ffb081654573ff9c088c281",
+      "size": 2564
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/approvals/service.py",
+      "sha256": "0526b1825706d0a260c9c4534af9aa3b0d1a00d83c65b870d842fba47a7230da",
+      "size": 33273
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/approvals/testing.py",
+      "sha256": "ab127229bcc55d1d79697cd3324183144030c45464bd853cadd4e125affca7e1",
+      "size": 5785
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/artifacts/__init__.py",
+      "sha256": "c8949e2ed96accf801dc288d755a6be3cf9f446bdd49bd7679698add4024939b",
+      "size": 239
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/artifacts/models.py",
+      "sha256": "8f54b0f0b5f9c749b799000cc08b9e0b99fcc33487ecfec4d3e1a50a4c4ecd60",
+      "size": 300
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/artifacts/ports.py",
+      "sha256": "4675e2bcf35feb405d7be8f539b47f6cce8b787c38832a211449a71a28d5c96d",
+      "size": 1050
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/artifacts/service.py",
+      "sha256": "065bdfedaa3989c4d406ef132895542f99045090bd7ed1a55244d40fedd1cef0",
+      "size": 3283
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_interpretation/__init__.py",
+      "sha256": "b1ec6a0f8677e4048d9667ba5f5c54bff44cd466158cb817c4d2f35c856e3545",
+      "size": 1482
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_interpretation/delegation.py",
+      "sha256": "b253b0388a1c70c6afe1aa1e348a205cf2811cd5cdb888006e3973ef7bf7b0bb",
+      "size": 13290
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_interpretation/envelope.py",
+      "sha256": "822f5b91de3ab826d32ad6839e649d388319a8491dc17bf35e53de75b02a7f3c",
+      "size": 1522
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_interpretation/models.py",
+      "sha256": "1f046c3571fc85ed6100652889dda269cbcf4d82c9e8fd03abb6b926a41b7f94",
+      "size": 6290
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_interpretation/projection.py",
+      "sha256": "28e1ced8e46464f5d6ba2dce75f8f6385e967151ba40e517548296e045e63ac3",
+      "size": 1132
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_interpretation/provider.py",
+      "sha256": "a9481ad8b8c7e150bfdf413177ad5459a3bd9f3391648e533d9ff62a34fc8651",
+      "size": 609
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/__init__.py",
+      "sha256": "1c24902a9418f0d6700241ba45552aba62342871030f88f5828e20d609403edf",
+      "size": 1120
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/catalog.py",
+      "sha256": "815ca0274aea875afe2dec67b51b31cebb0874616c96362a04f71e507c9028d3",
+      "size": 13660
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/cross_domain_context.py",
+      "sha256": "ca0ac5f1340e6e3a34802dc952b044021b11b86fbf735740ddf664a9f5a136fd",
+      "size": 7258
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/cross_domain_session.py",
+      "sha256": "e95397d11349ded99a31d572fec188da69831a6751edede6cde61b9487162516",
+      "size": 12840
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/grounded_delegation.py",
+      "sha256": "8e1b4462518252616bd6481f670be756eac0b37e460f2893a1f37678efa2bfd5",
+      "size": 1374
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/models.py",
+      "sha256": "24aa8a4e7c0aadcadd89ab46e4610e9ed20decea38bfa09d0604e32f2ac586bb",
+      "size": 7815
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/relation_context.py",
+      "sha256": "9435af267241f8970358190514902d256c520a06c2a990bd62589f9ac610a3ad",
+      "size": 18011
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/service.py",
+      "sha256": "cf4de4a36779bee9f44086736405d95f71a5c7a5a4be6353662d26ace9212533",
+      "size": 35373
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/assistant_routing/session_context.py",
+      "sha256": "4cf8d8403810b021ba5c0adb99cc5714d6139b4fef24bec3db34876b139ffbff",
+      "size": 19281
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/errors.py",
+      "sha256": "385a7dfb48beeba4e2966ee542feab368b724cac9bd77063b225cd8ccdec97e4",
+      "size": 541
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/evaluation/__init__.py",
+      "sha256": "c7f272ef95b87eedb4c954b82bcd416a2df6c2076bca0ea8ca4949b7d2734cfa",
+      "size": 1294
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/evaluation/application.py",
+      "sha256": "d87a7f1a0d01e83f7ce1501c74f4d2841b9a16e6cedbbe8c5d9bef3f679a449c",
+      "size": 18446
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/evaluation/models.py",
+      "sha256": "af779e134b8983b05dd8fef9eb9100828afc7bef401e3e19e199e88259798c6f",
+      "size": 697
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/evaluation/service.py",
+      "sha256": "8f1465dedd7f464da0f2564b6b74a8ec415cefc0553b9264fc073109da4cc4e8",
+      "size": 20616
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/evaluation/suite.py",
+      "sha256": "3a6d7ad3fdab94b9ff3e24951af5610a588b14996e8b7574cb7e47211c9fe756",
+      "size": 20793
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/events/__init__.py",
+      "sha256": "2074253296671f59824bb8cf4d58a74d5f7dbaf9b4edd81fd3b772a92406f397",
+      "size": 184
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/events/subscription.py",
+      "sha256": "b3d76f79c4898f10ad3c8dc561b80ef1da63bcde7b06ea592e56c09c676122d7",
+      "size": 1678
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/__init__.py",
+      "sha256": "415c7be804f0ba0d3c6c2a509ad9274042c6118952116283fbc63292620a855e",
+      "size": 2275
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/contracts.py",
+      "sha256": "f051ebc9f22338b92b0ecdcccb8683e1ec6682a9a4b5119d2d3fd0d02aeffd2e",
+      "size": 3355
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/coordinator.py",
+      "sha256": "98b80403283d7418982a7fef267b09c3875564c632a2f05c507e926598080b7f",
+      "size": 4607
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/errors.py",
+      "sha256": "f61f735d2aa48e585893313e34adc4e5fa4cae7c122ff38a6e68ee5f86eb8c4b",
+      "size": 919
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/gateway.py",
+      "sha256": "a19cab0d2ad455d6757d77f2232b1f288a0213d6e95bc4e24a23987154a21ddf",
+      "size": 1320
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/nested_output.py",
+      "sha256": "eef53a92608b4b51ac48ab7d27f7326d838808be57cbc45ecfcd1e14e4a7d66f",
+      "size": 299
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/output_registry.py",
+      "sha256": "72aa5bdba5ae3f7e45629fdcbef80099d7623a1e1f3ec6bfcb2834967533a2b0",
+      "size": 12782
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/sandbox_answer_completeness.py",
+      "sha256": "a2dd20e4e43125fb7ea586452118e608ef9a8874efb1ef90c6b8fc6374e228c8",
+      "size": 10896
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/execution/service.py",
+      "sha256": "3d2e22693d0400b65a2b88c0df882c1237a974fc0c9502f7acfc9040c1eae402",
+      "size": 77366
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/groupware_read/__init__.py",
+      "sha256": "f22877af6dc80ba9aa89690d3afd39d645d02e14acac2b74b2809f298eeb3b16",
+      "size": 1510
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/groupware_read/catalog.py",
+      "sha256": "d3baf4e01552cbe4510708666d26b767d8945df461a883b923a75811361660d6",
+      "size": 10473
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/groupware_read/deployment.py",
+      "sha256": "973370890b1305a1c94c306b0fecdb3a5fd26ef6c09af3009e6093ca1dccab9e",
+      "size": 17349
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/groupware_read/models.py",
+      "sha256": "f3626bce64111a88f52ffcc78abe9cdcb2f634ccd07f9bdf88bf1692f23d9abe",
+      "size": 2599
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/groupware_read/request_execution.py",
+      "sha256": "4f2e5205eea80f3e790063399cb8e4fb632f6e727b7210024c04adc205ab221c",
+      "size": 1435
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/groupware_read/result_normalization.py",
+      "sha256": "a367e50abfd76ebfb2dfb0dc9a0a55c4c93c1cfd4b00bb8a333146c6cb26d20d",
+      "size": 10754
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/groupware_read/session_delegation.py",
+      "sha256": "3f45bc02fb246e1abc13f53432cf926c98246704c99671873385d7dfe753c70b",
+      "size": 11567
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/invocations/__init__.py",
+      "sha256": "498332ffcdc8018282c8089c9c82eb8fa07e0cf3faee535e49fdc91d81d5e151",
+      "size": 73
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/invocations/service.py",
+      "sha256": "47c2425230c7ee57781053799ff6c5072c0cfdcf90c9bc7b24bee329e8b5cd0a",
+      "size": 15885
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/mcp_access/__init__.py",
+      "sha256": "a7014f186e8cd35f3872bb5c771202eb455184fe4badae5596b956c5a12e7a6e",
+      "size": 551
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/mcp_access/catalog.py",
+      "sha256": "bcb980a56277f24911abf315d03ef7e8e650cddfb03db942c7a54d293e642b1e",
+      "size": 7198
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/mcp_access/models.py",
+      "sha256": "f8abcb0c8da4e55e201cba155755fcd0674675791638d4ad6332b0f40f008c21",
+      "size": 4825
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/mcp_access/service.py",
+      "sha256": "e53e70917fa582bd2d17441165c60700ed3926beef4b1050705d41d874933c52",
+      "size": 1844
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/operations/__init__.py",
+      "sha256": "62e063658d34ca5a534eb3577b856e8a0ef6abc127dd72575e71eb912b0cbdd6",
+      "size": 561
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/operations/ports.py",
+      "sha256": "4ad267d81517a1b03f66beff06267ebae3781b3e21488cb56d25faa4810d728e",
+      "size": 843
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/operations/snapshot_service.py",
+      "sha256": "b9f743f2c40de135e9fc945a712ed7a23a6a6d61f0412672da537b469fa28f4a",
+      "size": 4114
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/orchestration/__init__.py",
+      "sha256": "ba73046f8ba89991bab32c1c6838ddc9b36ec8f845470858a4cc6b40e2ea6f8d",
+      "size": 942
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/orchestration/errors.py",
+      "sha256": "ae731f5b4b91d1fde86a109fdcf5b29f310f0875dff28bedf79a044d86a41fa1",
+      "size": 212
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/orchestration/models.py",
+      "sha256": "733066a030f7b638b7eb9ab6afb85c12b11d35af69402ea2ee6a9791068ca4ab",
+      "size": 3631
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/orchestration/openai_runtime.py",
+      "sha256": "459db5100ebf20198dcbcf17a4056c06afaa06ecf3090717980a05ccce73ea99",
+      "size": 22739
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/orchestration/policy.py",
+      "sha256": "342459f1f4c68b5a04d9080c343a169b9afdd6552d64db6ff94306a8e43c2165",
+      "size": 3216
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/orchestration/runtime.py",
+      "sha256": "593c8a9eedbcd1b2f59a0b21b38f87c3bb23b6b3943a98946db73b46b7619d1f",
+      "size": 4217
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/__init__.py",
+      "sha256": "2b51ea119b03c86fef0b1ed767f3fec509bcdcbcf55e50481bd06c4fc2e4b20f",
+      "size": 1818
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/catalog.py",
+      "sha256": "a768974779d6e4def86d19cce016abce93b45d23142746bbd12498050bfe704b",
+      "size": 15947
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/models.py",
+      "sha256": "80c159d9e78b9e6666c06a7b8333e5dfe4c6b2c747472238eb2fa617d7107b47",
+      "size": 3100
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/remote_catalog.py",
+      "sha256": "5d85431bda969e518a5df324fce30b672e364d78332c3b5a8b37d4ca992f9845",
+      "size": 10511
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/remote_models.py",
+      "sha256": "5b30a78a0f2e3bf94708796f7173a6c2a56626e2a57e76ad3e4bb8d80a60483b",
+      "size": 2880
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/remote_session_delegation.py",
+      "sha256": "3101917b72d4523a67d7013ccea1621c7fa417f1ff91921840bbee589d5218a2",
+      "size": 11383
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/request_execution.py",
+      "sha256": "8d25467660021c96841cd5067477224875b39a9339c79dd37ff76a8ec8dadfb3",
+      "size": 1739
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/result_normalization.py",
+      "sha256": "fae4289109ff7be595473fe889e164ca69eaa1bf36f32c5a74b3910f4db2e408",
+      "size": 24065
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/organization_context/service.py",
+      "sha256": "a3a8e09fe091eea0433d3ab54c1ad69d3f1ec48a0cb22876cf6733a84ee8d7fc",
+      "size": 5964
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/ports/__init__.py",
+      "sha256": "f288f71b1f718b14ea97d0f47fa3563b2b343a52dbdbac7a81e518141e8d3179",
+      "size": 746
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/ports/stores.py",
+      "sha256": "505d5097f517bb1167323f9732b37e9a3965fbf964205efc5bdbeac51dca8e7d",
+      "size": 14057
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/scenarios/__init__.py",
+      "sha256": "efbf4fcc0debaad3ad90705bf45903513f8557b61c2bc767c8401bd8635f4312",
+      "size": 378
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/scenarios/catalog.py",
+      "sha256": "0052752fa0dc6b31755a332d57151ad0107bbcb457335609c1eff69ea714fd41",
+      "size": 9284
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/scenarios/models.py",
+      "sha256": "bb62106cff77254ade8493a92a5b274216432548cf4658b300c6935f12ae849b",
+      "size": 1652
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/service/__init__.py",
+      "sha256": "c94b1f3631bc4b84ca14f36fbfdcc2d8e536825f048d4c7c3fc3f7e5bf818a34",
+      "size": 112
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/service/use_cases.py",
+      "sha256": "4f5a15bd64e79b992fbbd5e4a212924384086877e87bd70828733e61743aba81",
+      "size": 51327
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/__init__.py",
+      "sha256": "884da34c6a0535bfa9490cc7740fbf790a7cddca21f92763adee3713893cc8ff",
+      "size": 4248
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/errors.py",
+      "sha256": "aea00993a44f213904b18b02acf7375d6300a6957c724914c5b458ee13b7af38",
+      "size": 912
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/execution.py",
+      "sha256": "a253cdd70326a7b45796ff56066eec91447eebafa4912311a0de811877398de1",
+      "size": 16719
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/lifecycle.py",
+      "sha256": "a105bdf2ce952e6507b2fdd85dba80b7551c6c76e450eb4a120e14a7a5c0a859",
+      "size": 13657
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/models.py",
+      "sha256": "dd6ab14fa1b353d4afdc1f9094f04828874da87ad3ffb53ccb63e6182f85bda3",
+      "size": 8452
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/policy.py",
+      "sha256": "f6d292c95ef2d7b3cb610723870520757219df84d65a6afb8abe3f80b7208336",
+      "size": 5688
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/protected_payload.py",
+      "sha256": "fed25b918ef8321406bf7b2468979e92a38720e8f167eef1d4faa4d74110cc7e",
+      "size": 1755
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/protected_payload_errors.py",
+      "sha256": "046bd37057ac862117ad3828c79d9616f443d3ced34f4130cd7c103a556ac3e8",
+      "size": 528
+    },
+    {
+      "path": "okcanvas_agent_runtime/application/submissions/service.py",
+      "sha256": "c7375ac0b55d6cc5631e6c437e7495dc7af8df062822c45b68133a1428d1d313",
+      "size": 33491
+    },
+    {
+      "path": "okcanvas_agent_runtime/bootstrap/__init__.py",
+      "sha256": "094f4e57ab702cb7b72021d45af289a16e3b67a8575844ec6f66446e19bf0b24",
+      "size": 59
+    },
+    {
+      "path": "okcanvas_agent_runtime/bootstrap/application.py",
+      "sha256": "675397c1b1f680046ac8acf06f45f8776d06f8a39f8e4e0462213232eeb4816b",
+      "size": 29832
+    },
+    {
+      "path": "okcanvas_agent_runtime/bootstrap/development_cli/__init__.py",
+      "sha256": "2e1600ea2d5252b5723aa6f3a1fdad172c51ec1084185a0f36be5d2c3afe1170",
+      "size": 83
+    },
+    {
+      "path": "okcanvas_agent_runtime/bootstrap/development_cli/main.py",
+      "sha256": "cfb7114eb5b48a7ac7a25e99cbb35a8ab99e59080d9c850b3f0e2f119d084dec",
+      "size": 50757
+    },
+    {
+      "path": "okcanvas_agent_runtime/bootstrap/router_registration.py",
+      "sha256": "fd50108ce3debc1b34013fac092e992231add474ea414b84ede5c4c237704889",
+      "size": 4555
+    },
+    {
+      "path": "okcanvas_agent_runtime/bootstrap/runtime_binding.py",
+      "sha256": "6c96e0c1cdd8c94ba1453afb18bdfa5bbe8cf842fcf440f292053705980bbd23",
+      "size": 68881
+    },
+    {
+      "path": "okcanvas_agent_runtime/bootstrap/storage_topology.py",
+      "sha256": "4b75412b15101fc6c82c24ce099a8381b82c64249baf482c6dc0cf37d72277c4",
+      "size": 9073
+    },
+    {
+      "path": "okcanvas_agent_runtime/compatibility/__init__.py",
+      "sha256": "7bbe454c97946f070ad83b2cec2e9448a49749572d49bd8a3dcdd6d200fd9513",
+      "size": 707
+    },
+    {
+      "path": "okcanvas_agent_runtime/compatibility/import_aliases.py",
+      "sha256": "ac16542beeca75e0034d2b6fe0fad769cc09ef0d91bd9621c2a76258a430e289",
+      "size": 1599
+    },
+    {
+      "path": "okcanvas_agent_runtime/compatibility/legacy_api.py",
+      "sha256": "b4440bd2936e0314d3578e48f3539d185e4348ea4921ed7a9ca880144ef9e34c",
+      "size": 89
+    },
+    {
+      "path": "okcanvas_agent_runtime/compatibility/legacy_control_api/__init__.py",
+      "sha256": "8430f978ef9e300f29faacda5d0c13bcb22d67156267b5ca89350a0bc647d15e",
+      "size": 1755
+    },
+    {
+      "path": "okcanvas_agent_runtime/compatibility/legacy_policy.py",
+      "sha256": "37ec4fa4084e14bc28bd26763754573691b4bdd1c8a4cd72e2a4af0d62bf54b9",
+      "size": 92
+    },
+    {
+      "path": "okcanvas_agent_runtime/compatibility/legacy_service_clients/__init__.py",
+      "sha256": "306a044bc181b9407c1434183a7e2efe83af47a72d27107a184b1ff303b75852",
+      "size": 640
+    },
+    {
+      "path": "okcanvas_agent_runtime/compatibility/source_contracts.py",
+      "sha256": "bba5c87a27a7bad9e5ac04db259ab33f499dcd92e760368b5e46accbac57815a",
+      "size": 9788
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/__init__.py",
+      "sha256": "7eba74ff77743fa1607fee944786e1ebb3f86c020724c5fd021af7d738df1e63",
+      "size": 54
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/baseline.py",
+      "sha256": "62cfb9e0f7b955193475f605447643509dc2dcccdf97caaf24117fe7ef601d54",
+      "size": 232
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/config.py",
+      "sha256": "6fe25e2be93f040412eb725a0b3ff67c6aa3c5a7558182cf354a61dfcd07acf4",
+      "size": 3547
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/contracts.py",
+      "sha256": "a04481eede21cccb4389cdb3945ed51b35d4427639f36b9c92b41d1e6bcc6475",
+      "size": 17021
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/errors.py",
+      "sha256": "b89f45d225aa3c82c3fb2aa16db6d98f7685465478a305baf4c5d74cb1af2e9f",
+      "size": 364
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/governance/__init__.py",
+      "sha256": "fc5cf621d275c08b26879d5e9823254fbdb65d58f3a5b753b01a9bc07b45c2af",
+      "size": 578
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/governance/architecture_constitution.py",
+      "sha256": "4fb5599de86896a606124c425df38ae680173b327c7ec177c474bd75fa1aecde",
+      "size": 6381
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/governance/resources/__init__.py",
+      "sha256": "f7d074ba0bb1eb49bbdbc031c11f94f77a6ca680e44d942f785d46c15f011f60",
+      "size": 62
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/governance/step_compliance.py",
+      "sha256": "fc596b6c3d6aadc3d7abef34bbfd94f19dc64c8d55e4c0365a75f1cfa0656a07",
+      "size": 8394
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/paths.py",
+      "sha256": "1c87d848ee179c58922c8e3eeff3cf680d82bddfb24fb5a1b977ab0bc67e40a6",
+      "size": 920
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/replenishment_limits.py",
+      "sha256": "ad460bff1f6452e1cb717f695f0bc9cbe8d3fde620c063a0158f8698202cb4cf",
+      "size": 298
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/runtime_info/__init__.py",
+      "sha256": "da848b3ff95d55f4aa02df632bd19a2607b0a41c43b91c0a335414e9dec463e5",
+      "size": 440
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/runtime_info/agent_session.py",
+      "sha256": "35be62281ffde8286c9d34af4fee305aeef6d43ed5b03f2319f0ca0dba958518",
+      "size": 8348
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/runtime_info/clients.py",
+      "sha256": "5b4f3f6720a74b8cc3bf3dd84832e174fe7fbfc432851c2afe5f431527e658f1",
+      "size": 6077
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/runtime_info/foundation.py",
+      "sha256": "7ea44c8bf52772b080901a6c0bb176a72953267125ee970e4d0ac464a8a0dd4d",
+      "size": 33708
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/runtime_info/model.py",
+      "sha256": "45c5343ad8dc9ba901d1e3f2085c180aa70f6bfd34d67ee2593e3e604aac5483",
+      "size": 2768
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/runtime_info/product.py",
+      "sha256": "3843ac8af4550722fb05feab94896ebb9d1f2ce772b83616fbeadf0512996311",
+      "size": 15504
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/runtime_info/validation.py",
+      "sha256": "126bd1d521bfdca661a0ff19038988e6ff20cb54ee7c137f7c328e1fca4d1246",
+      "size": 5613
+    },
+    {
+      "path": "okcanvas_agent_runtime/core/service_identity.py",
+      "sha256": "f624989b4c52f2ba3f20a412b643e27350494ab3b27d935f3d91d97a1f38fab4",
+      "size": 838
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/__init__.py",
+      "sha256": "756664a62c01fe720ca79089a30b0fd6114de09d6d61c41de54c42336c658268",
+      "size": 56
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/attachments/__init__.py",
+      "sha256": "bd5bc7a6cdce3958c70cd229cea746291e2e636a778c01b77b2a533652492e12",
+      "size": 2195
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/attachments/errors.py",
+      "sha256": "e01c3cc3ccbee20b4150d2a90c9045a88980947be87bc8c412f7f6940bf7e432",
+      "size": 315
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/attachments/model_policy.py",
+      "sha256": "8f50d00317ccf521b5373cb98930a6ffd2645d7effbf9754e9896afb4a383031",
+      "size": 3923
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/attachments/models.py",
+      "sha256": "e6c5af39ce82c9840766a42540b492553b519a895d1c241869e7fa49c4738708",
+      "size": 3816
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/attachments/policy.py",
+      "sha256": "d34ba99ea065ce00068a13f559db942427f7137f59af110a27037975fce58aa9",
+      "size": 4867
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/attachments/validation.py",
+      "sha256": "fd0bd79d788ba3bd9c5c4454a3907b712b9588ee6426e1b9ad1073bd772e6e18",
+      "size": 5943
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/invocations/__init__.py",
+      "sha256": "3b8f18ae25d4251e3b8563a47a6b9792a849951118b22e3bdda9007badf976bb",
+      "size": 2020
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/invocations/errors.py",
+      "sha256": "b8a01cc63ada5fc73ae457a61ce891410b380783df9d55dfe9ecfa7ee43724c9",
+      "size": 300
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/invocations/models.py",
+      "sha256": "fd1f477a5b198ab6d4d741ad41b012d6e91ff5c6e58929af8a1290837a7c8d97",
+      "size": 3896
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/invocations/policy.py",
+      "sha256": "fc1b3951fb400bcd41e9f529522ddebae3f9ed7e82c952dbb52dd8de9ce37bc0",
+      "size": 3631
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/project_snapshots/__init__.py",
+      "sha256": "039cc98b5ea3002d038689ec9bce2fd90385175c3aca45233838bdd99172ab8a",
+      "size": 2401
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/project_snapshots/errors.py",
+      "sha256": "6659b0f5afa51f1c69ad772fc6b02c4538b59b6dea0a83efab2f520b47b01899",
+      "size": 360
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/project_snapshots/models.py",
+      "sha256": "7aec3e3226cec903c20dd00c0c5d4a3dc9bc9a9e64447161143808a77eb6ed14",
+      "size": 5821
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/project_snapshots/policy.py",
+      "sha256": "cf861ce4d06182791b1deb51b43a9551dfc5f55a2779c7e6ed1d430ee8b0055f",
+      "size": 3835
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/project_snapshots/validation.py",
+      "sha256": "e2d27af65f6eb16c0e79ca039c4f80b8db261d93e2f994c6abdda2752097c5ce",
+      "size": 6330
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/runs/__init__.py",
+      "sha256": "57f9415596622c84847392b476e6e72e178301b249c5b83b5b0f9d6ad54e7f56",
+      "size": 915
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/runs/errors.py",
+      "sha256": "c65028349e2bed60f2d84cbcd5a7cb06c3552eb2b0ad99874c7393378f0a7d81",
+      "size": 759
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/runs/models.py",
+      "sha256": "0fa57cd9093f987f5f6525dabe24dd69e331cc5a845bc5bd47a1994e9b0f01f6",
+      "size": 2246
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/runs/ports.py",
+      "sha256": "5a8115ca093a9986046e82a14c0f07a54708c76b3405aec81500054afe4acac6",
+      "size": 3940
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/runs/transitions.py",
+      "sha256": "544426de83bef08e4cd34049ccf536a8550dc766a7256286645a3bb470d8f6d7",
+      "size": 2039
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/__init__.py",
+      "sha256": "6df69d2c89d13945bf5f2fd2469cb186d32013ce4ebc86d2944546a43fcce7a3",
+      "size": 4845
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/agent_tool_policy.py",
+      "sha256": "6c317c1cbfa2e9d01d8aee2a19a07a8f0808f7d8d02e520b6bff9748915f9d91",
+      "size": 4474
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/approval_policy.py",
+      "sha256": "034f5cbb8db90f1371d39f7aee926eeca9fac6c7722cfbc7a168c4ea4ac3cae3",
+      "size": 3399
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/compaction.py",
+      "sha256": "e2f288a91c1d51665f97f8240137802f7b49c754a4f8c55c49905595d908f2f4",
+      "size": 7910
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/context_focus.py",
+      "sha256": "4b540dd1a2ca016547c8303a68e770334ea1a71644811099e737d2cfac82a3ca",
+      "size": 8514
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/errors.py",
+      "sha256": "f1fff775095b3b462c99a43b2090b4cf08a6243178e1b700d22c010f1b0adbba",
+      "size": 582
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/guardrail_policy.py",
+      "sha256": "db1be68762e6bed70f2c541759f596c5946424d9797db680665918178de5716a",
+      "size": 3715
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/handoff_policy.py",
+      "sha256": "0af5d9cc9743c8a53e3f119cd483b3560654e3999c8de800f1b0d90712adbb63",
+      "size": 4215
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/mcp_policy.py",
+      "sha256": "630820452de132aed302f122bd1731118d089e1050a2883d6984023fc442b1ec",
+      "size": 4180
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/models.py",
+      "sha256": "5ccae33f425d3c9cc710fd75f7a37ae3224e0cbfc6318d871fa26cc65458ac6f",
+      "size": 1740
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/policy.py",
+      "sha256": "474616f7d662d5b559860af59ecfb24881c7ce3828bb1ad20ba5db5a96d189d9",
+      "size": 5837
+    },
+    {
+      "path": "okcanvas_agent_runtime/domain/sessions/rotation_policy.py",
+      "sha256": "e8d80c8d843940fbf18407375f4b0973d30b12a40c031cbe3bebe3bc6c128cb3",
+      "size": 4703
+    },
+    {
+      "path": "okcanvas_agent_runtime/support/__init__.py",
+      "sha256": "e088af16d5dc09a3c232c63fa556564b46548c552ab02ef0f3cc859956c82bf7",
+      "size": 57
+    },
+    {
+      "path": "okcanvas_agent_runtime/support/acceptance/__init__.py",
+      "sha256": "b1bd9ed969a0567552551d09d6d18948c3a17dc3dcde12b66a16d389339b031e",
+      "size": 217
+    },
+    {
+      "path": "okcanvas_agent_runtime/support/acceptance/workspace.py",
+      "sha256": "ce2d0c79d352e43e92570e04779249474ffc5a6314b1fc0de5746ea5bc1b64b7",
+      "size": 10805
+    },
+    {
+      "path": "okcanvas_agent_runtime/support/validation/__init__.py",
+      "sha256": "b537681fc931fddf1827beded04983298eca0d91e28ba4b15c8e0ffea358a2eb",
+      "size": 225
+    },
+    {
+      "path": "okcanvas_agent_runtime/support/validation/pytest_validator.py",
+      "sha256": "9653bf1126a2a1e566665bcc4497f2ebaf00b84df84344c665076cdbc6768de7",
+      "size": 3799
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/__init__.py",
+      "sha256": "431c6021b63dc69c0245b35656a01ad68409915660b43a415c0cefa908fda4ba",
+      "size": 59
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/admin/__init__.py",
+      "sha256": "38dba28ea0acd8ee87b1200c4779761786d155efb1ae96089043c90e5cb77d03",
+      "size": 65
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/admin/rest/__init__.py",
+      "sha256": "6c59e7f48c64339672f08f5b897a0797b5d8bab441ab8d41ff6326200e7072f9",
+      "size": 70
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/admin/rest/auth.py",
+      "sha256": "13f8fe0c9ceffed6bea878054cd3f2836d2775c348e833c98154e8c993aa241f",
+      "size": 2484
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/admin/rest/routes.py",
+      "sha256": "66a6b707bec1e239680b3b582da3a8440c3d7ab6345819a554345b354cba6337",
+      "size": 22970
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/admin/sse/__init__.py",
+      "sha256": "db5bf170c746182981c64f0ae66e52f426a86a753f45a2120ef07b0c4395668c",
+      "size": 69
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/admin/sse/native.py",
+      "sha256": "a39561cb38cfe106db36a0a80f2ce0036e7ad27aae07e03c496d484a5136c7d1",
+      "size": 759
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/admin/sse/stream.py",
+      "sha256": "a88e5c77f3b451853eaa83498dd8662728135bcd2a46a3d74aefdd5bc3d4f1f9",
+      "size": 1749
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/common/__init__.py",
+      "sha256": "646125601a94bd1abd248b94144691633834acf80276a7bed77b62c47711f371",
+      "size": 66
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/common/errors.py",
+      "sha256": "3fdbba2d7dd84cbc389e647fded911b928ac266729d2d66d88d5606a14f39038",
+      "size": 230
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/service/__init__.py",
+      "sha256": "2e07eca01bb5c7049497f8c1bf531e71417bb496e68784f3b8ed34ecae17f169",
+      "size": 67
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/service/models.py",
+      "sha256": "6b5ea041407e1cc74ff0de887ca8fea4e660830a56d7d6a6cad0872197e3f94c",
+      "size": 205
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/service/rest/__init__.py",
+      "sha256": "aea4b32725ca6e7a040743407c1e2d8a01384a9a8a2f96c6d5fc1ab57167642e",
+      "size": 72
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/service/rest/auth.py",
+      "sha256": "2783fb1d0d8e80438aa17075f0416905be67742f232b481b28658b4453289bbc",
+      "size": 5531
+    },
+    {
+      "path": "okcanvas_agent_runtime/transport/service/rest/routes.py",
+      "sha256": "d3397025d3541106228ec930f67abbecd07fc6fe48b0bd1796eac940e6b85ae3",
+      "size": 15808
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/__init__.py",
+      "sha256": "31caa734ae0137be158d088714632efe5a368be459b841ef27445d1b5d198942",
+      "size": 59
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/__init__.py",
+      "sha256": "070e614ac191aaad6d78dfb8c3da0af93bf4175085abc7feaf0326c4e6b1bbe7",
+      "size": 1582
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/catalog.py",
+      "sha256": "0bf0b49eaebfae26fffa8243147e4733e441c0c64038d02be7cf731277f96754",
+      "size": 9570
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/errors.py",
+      "sha256": "88309cdccb14da6666a32d4a984cff268e4adfbe617863ad2a2d274cc958d781",
+      "size": 1392
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/http_adapter.py",
+      "sha256": "ef91524c32778cf4a00a896f78e2b80debf0664ce776b52d8f54bbd6cced3e5a",
+      "size": 9256
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/models.py",
+      "sha256": "e757e374a7133168c2f174dce9816b9b6a3ccbb9c6df68e178589615bf091387",
+      "size": 1678
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/commerce_snapshot_ingress/service.py",
+      "sha256": "a5960b1d452c4bc397b3a125853f40f5152c82e7ff8b3740fdc28ec206d24646",
+      "size": 6544
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/store_replenishment/__init__.py",
+      "sha256": "c86d05cb39a6c7acc9077fdfd0779ef9e741bf585bc203c2762233d05bd30456",
+      "size": 730
+    },
+    {
+      "path": "okcanvas_agent_runtime/verticals/store_replenishment/store_replenishment.py",
+      "sha256": "abcbe23f9dc8c43843489cba05707cc99d4db93d737159c1875dcacc088a5e15",
+      "size": 6120
+    },
+    {
+      "path": "okcanvas_agent_protocols/__init__.py",
+      "sha256": "17857fff96bceb13ca71efaf1ca79b4780b061de4837aacf1355ffd25c54a244",
+      "size": 67
+    },
+    {
+      "path": "okcanvas_agent_protocols/approval.py",
+      "sha256": "9a53bbffce1203f31a1f422feb80876e2f4405431c8eda31e3125752f549e7e2",
+      "size": 395
+    },
+    {
+      "path": "okcanvas_agent_protocols/rest/__init__.py",
+      "sha256": "7ea529a6e690b6777315b56ad3a94e7090f95ad9412835aa7912ced171996041",
+      "size": 56
+    },
+    {
+      "path": "okcanvas_agent_protocols/rest/admin.py",
+      "sha256": "57f18d403e1626595d85e3de0687a5e93784471ddae7211abc05d5a210466b54",
+      "size": 28743
+    },
+    {
+      "path": "okcanvas_agent_protocols/rest/service.py",
+      "sha256": "f98b854f4080a0e42af69444662167f2be1b03b1601843d879727afa67db44ba",
+      "size": 11006
+    },
+    {
+      "path": "okcanvas_agent_clients/__init__.py",
+      "sha256": "844b156cb7c87314f219977f8536624b21859383a2f71965b972fa823db5fd31",
+      "size": 69
+    },
+    {
+      "path": "okcanvas_agent_clients/common/__init__.py",
+      "sha256": "5e941f45499dcf29997888a30de203004cd1522f2cf7e5084f69ba6d4de6d92f",
+      "size": 34
+    },
+    {
+      "path": "okcanvas_agent_clients/dev_console/__init__.py",
+      "sha256": "90bda53183548c3b7244a892a207105b27a46ec760b3768bfc4f6c0312688054",
+      "size": 47
+    },
+    {
+      "path": "okcanvas_agent_clients/dev_runner/__init__.py",
+      "sha256": "03cea46259853a8580c2a800ce8ea1d859c0eef1f6958915eb93df5c1255b89b",
+      "size": 60
+    },
+    {
+      "path": "okcanvas_agent_clients/operator/__init__.py",
+      "sha256": "051f578ca39e231982022904dea0b6243319444fd1439a2937537f960289d7cc",
+      "size": 307
+    },
+    {
+      "path": "okcanvas_agent_clients/operator/client.py",
+      "sha256": "07401cf30c149d9222f5893019d6f88ebd5627e8cc7bb48b9b07fb038013184b",
+      "size": 11471
+    },
+    {
+      "path": "okcanvas_agent_clients/tui/__init__.py",
+      "sha256": "3b4b99aeed304c6b9afd02c7c63bf6199c4f3b4df0014473d892b4c8836f9089",
+      "size": 815
+    },
+    {
+      "path": "okcanvas_agent_clients/tui/app.py",
+      "sha256": "cf3a57e4893b6c5bc1ba12381edafaae8c9bd8360a4ae14247acbbca1159d71c",
+      "size": 15368
+    },
+    {
+      "path": "okcanvas_agent_clients/tui/client.py",
+      "sha256": "78a49db59346df09db6c85dade089b199e5c578b13b124099e87a3a89910e40b",
+      "size": 7557
+    },
+    {
+      "path": "okcanvas_agent_clients/tui/config.py",
+      "sha256": "b5a834bdcf0fd15523ec34a705b3356162dcd24a31260403ce9db71ce853cfc1",
+      "size": 4241
+    },
+    {
+      "path": "okcanvas_agent_clients/tui/sse.py",
+      "sha256": "899acde8d1a26902fcc1e4f2b0931db8a8424016e1e22716285fe082bc651590",
+      "size": 2200
+    }
+  ],
+  "parent_package_sha256": "4322e7fc7a862efc99af2c95a407aed7040b1bdea1bd817bb59ae7096e38484a",
+  "parent_workspace_step": "WORKSPACE_STEP008R4R12_RUNTIME_STEP096B_GROUNDED_LLM_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+  "parent_workspace_version": "0.8.4-r12",
+  "roots": [
+    "okcanvas_agent_runtime",
+    "okcanvas_agent_protocols",
+    "okcanvas_agent_clients"
+  ],
+  "runtime_step": "STEP096B_GROUNDED_LLM_STRUCTURED_DELEGATION_ADMISSION_FOUNDATION",
+  "runtime_version": "2.80.0",
+  "schema_version": "okcanvas-parent-product-python-manifest-v1"
+}

@@ -30,3 +30,10 @@ for choosing among the three allowed Tools: use the target expression as the que
 for response projection, entity type hints only as bounded search hints, and preferred operation only
 when it agrees with the Tool policy above. The hint is never entity evidence. Tool output is the sole
 authority for existence, identity, fields, relationships, ambiguity, and catalog revision.
+
+When `organization_context_request_hint.relation_traversal` is present, call
+`get_organization_entity` for the immutable source entity type and ID. Answer only from relationship
+rows whose relation type, direction, and related entity type match the bounded traversal hint. Do not
+substitute another relation, infer a missing inverse, or choose one related entity when multiple are
+returned. The Runtime normalizer independently revalidates the source stable ID and projects the
+related stable entities from Tool evidence.

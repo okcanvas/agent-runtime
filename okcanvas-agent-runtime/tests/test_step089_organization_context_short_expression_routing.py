@@ -19,7 +19,7 @@ from scripts.package_source import DEFAULT_OUTPUT, PACKAGE_STEP
 
 ROOT = Path(__file__).resolve().parents[1]
 ORG_CONTEXT_ENV = "OKCANVAS_ORGANIZATION_CONTEXT_READ_BEARER"
-STEP = "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+STEP = "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
 
 
 def _configured_project(tmp_path: Path) -> Path:
@@ -186,7 +186,7 @@ def test_step089_short_read_policy_rejects_duplicate_suffix(tmp_path: Path) -> N
 def test_step089_source_packager_identity_and_default_output_are_current() -> None:
     assert PACKAGE_STEP == STEP
     assert DEFAULT_OUTPUT.name == (
-        "okcanvas-agent-runtime-step091d-object-storage-deployment-composition-and-live-acceptance-gate.zip"
+        "okcanvas-agent-runtime-step093-relation-aware-contextual-follow-up-and-evidence-bound-traversal.zip"
     )
 
 

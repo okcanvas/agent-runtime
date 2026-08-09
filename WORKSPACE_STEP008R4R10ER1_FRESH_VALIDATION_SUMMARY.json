@@ -1,0 +1,33 @@
+{
+  "final_package_expected_entry_count_including_root_directory": 4873,
+  "final_package_expected_file_count": 4872,
+  "final_packaging_rule": "REGENERATE_WORKSPACE_MANIFEST_AND_PACKAGE_AFTER_THIS_SUMMARY_THEN_REPEAT_NON_MUTATING_FRESH_CHECKS",
+  "final_workspace_manifest_expected_file_count": 4871,
+  "full_generated_windows_live_evidence_json_embedded": false,
+  "package_exclusion_checks": {
+    "local_env_absent": true,
+    "mutable_cross_domain_live_output_absent": true,
+    "node_modules_absent": true,
+    "python_cache_absent": true,
+    "retained_r10e_identity_present": true,
+    "step095a_audit_present": true,
+    "user_reported_live_summary_present": true
+  },
+  "package_sha256_storage": "EXTERNAL_SHA256_SIDECAR_TO_AVOID_SELF_REFERENTIAL_ARCHIVE_HASH",
+  "pre_recording_candidate_validation": {
+    "current_document_sot": "PASSED",
+    "deterministic_repack_byte_equality": "PASSED",
+    "launcher_registry": "7/7 PASSED",
+    "package_exclusions": "PASSED",
+    "runtime_step094r2_static_contract": "15/15 PASSED",
+    "workspace_manifest": "EXACT",
+    "workspace_r10er1_static_contract": "28/28 PASSED"
+  },
+  "runtime_product_source_changed": false,
+  "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "runtime_version": "2.78.2",
+  "schema_version": "okcanvas-workspace-step008r4r10er1-fresh-validation-v1",
+  "state": "FRESH_DETERMINISTIC_VALIDATED",
+  "workspace_step": "WORKSPACE_STEP008R4R10ER1_CROSS_DOMAIN_LIVE_ACCEPTANCE_PROMOTION_CLOSURE",
+  "workspace_version": "0.8.4-r10er1"
+}

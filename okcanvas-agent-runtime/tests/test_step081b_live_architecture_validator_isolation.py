@@ -73,8 +73,8 @@ def test_step081b_runtime_info_and_live_check_contract_are_exact() -> None:
     from okcanvas_agent_runtime.core.runtime_info import RuntimeInfo
 
     info = RuntimeInfo()
-    assert CURRENT_STEP == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert PROJECT_VERSION == "2.75.0"
+    assert CURRENT_STEP == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert PROJECT_VERSION == "2.77.0"
     assert info.architecture_live_validator_process_isolation_implemented is True
     assert info.architecture_live_validator_diagnostic_payload_preserved is True
     assert info.architecture_live_validator_failure_fail_closed is True

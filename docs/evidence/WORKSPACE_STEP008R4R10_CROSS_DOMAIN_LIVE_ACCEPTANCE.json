@@ -1,0 +1,385 @@
+{
+  "checks": {
+    "all_runtime_runs_succeeded": true,
+    "dedicated_session_created": true,
+    "environment_file_loaded": true,
+    "exactly_three_runtime_runs_created": true,
+    "expected_mcp_tool_sequence_observed": true,
+    "explicit_cross_domain_live_gate": true,
+    "focus_is_preserved_across_groupware_turns_only_after_evidence": true,
+    "groupware_authorization_redacted": true,
+    "groupware_context_ref_and_canonical_arguments_exact": true,
+    "groupware_paths_exact": true,
+    "harness_cleanup_completed": true,
+    "harness_execution_completed_without_exception": true,
+    "model_loaded_from_environment_file": true,
+    "model_name_safe": true,
+    "openai_key_loaded_from_environment_file": true,
+    "organization_connector_called_once": true,
+    "runtime_service_version_matches_workspace_baseline": true,
+    "secrets_absent_from_evidence": true,
+    "three_cli_turns_completed": true,
+    "three_routes_resolved_after_prior_turn_commit": true,
+    "workspace_catalog_identity_matches_current_baseline": true,
+    "workspace_runtime_identity_matches_executable_runtime": true,
+    "workspace_runtime_identity_matches_project_catalog": true,
+    "workspace_runtime_version_matches_runtime_package_metadata": true
+  },
+  "cleanup": {
+    "cleanup_error_types": [],
+    "completed": true,
+    "transient_removal_error_types": []
+  },
+  "cli_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:31863",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_e1521d978a0f438784ed857107ef5674",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step094-cross-domain-live-dpadax5m\\prompt-1.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stderr_encoding": "empty",
+      "stdout": "============================================================\n OKCanvas Agent Service CLI · Product HTTP/SSE Client\n============================================================\nRuntime 2.78.2 · tenant tenant-a · principal user-001\nSession session_e1…ef5674 · Model gpt-4.1\n/help 명령으로 사용법을 확인하세요.\n\nuser-001 [session_e1…ef5674]> 김선임 연락처\n라우팅 및 실행 준비 중...\nRoute: SEARCH_KNOWLEDGE · EXECUTABLE · agent organization-assistant-session-agent\nReasons: organization-context-short-read-pattern-matched, structured-request-hint-created-without-entity-guessing, organization-context-pattern:organization-context-contact-field-short-v1, production-database-sot-boundary-selected, delegated-tenant-principal-role-bound, read-only-mcp-tool-allowlist-bound, session-owned-organization-context-root-retained, stateless-organization-context-subagent-selected, child-session-persistence-disabled\n[1] run.created {\"attempt\":1,\"governed\":true,\"submission_id\":\"submission_b0f8fdd9cc2e4eb984ac860e12cf1c94\",\"task_id\":\"task_bad46184bb4a4d629eeca1630461fe9d\"}\n[2] run.started {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_version\":\"1.2.0\",\"claim_attempt\":1,\"governed\":true,\"submission_id\":\"submission_b0f8fdd9cc2e4eb984ac860e12cf1c94\"}\n[3] session.turn.started {\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"session_id\":\"session_e1521d978a0f438784ed857107ef5674\",\"turn_ordinal\":1,\"workspace_access\":\"none\"}\n[4] agent.definition.resolved {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_sha256\":\"35accda616f425769f3f82929a3e26a2ecd484162fd68d1765de5838623413c4\",\"agent_definition_version\":\"1.2.0\",\"agent_tool_count\":2,\"guardrail_count\":0,\"guardrail_ids\":[],\"handoff_count\":0,\"local_tool_count\":0,\"local_tool_names\":[],\"mcp_server_count\":0,\"mcp_server_ids\":[],\"orchestration_child_count\":0,\"orchestration_child_ids\":[],\"output_contract\":\"OrganizationAssistantResult\",\"root_invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\",\"runtime_binding_sha256\":\"f5d74c98c708373c97b302ab2e825b34f7620c6254992aaa553541cd7f7c58e8\",\"session_id_present\":true,\"session_mode\":\"sqlite-v1\",\"workspace_access\":\"none\"}\n[5] agent.started {\"agent_id\":\"organization-assistant-session-agent\",\"agent_name\":\"OKCanvas Organization Assistant Session\",\"invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\"}\n[6] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":1,\"invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[7] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[8] agent.tool.started {\"arguments_persisted\":false,\"child_agent_definition_sha256\":\"8a3828d611d73bb9f7c35daaeb0fd22175a8d7c9bad3436f8c6b2df26852e4a4\",\"child_agent_definition_version\":\"1.1.0\",\"child_runtime_binding_sha256\":\"f415cec6417ea2b045576ac6e04f1e46f73487761e715be1b8e61fa0dd874484\",\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\",\"input_mode\":\"MODEL_GENERATED_TEXT\",\"output_mode\":\"BOUNDED_STRUCTURED_JSON\",\"result_persisted\":false,\"run_config_inherited\":false,\"to_agent_id\":\"organization-context-read-agent\",\"to_invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_organization_context_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[9] agent.started {\"agent_id\":\"organization-context-read-agent\",\"agent_name\":\"OKCanvas Organization Context Read-only Assistant\",\"invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\"}\n[10] model.started {\"agent_id\":\"organization-context-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":1,\"invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[11] model.completed {\"agent_id\":\"organization-context-read-agent\",\"invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[12] tool.started {\"arguments_persisted\":false,\"server_id\":\"organization-context-read\",\"tool_call_id_present\":true,\"tool_name\":\"resolve_organization_context\"}\n[13] tool.completed {\"result_persisted\":false,\"result_present\":true,\"server_id\":\"organization-context-read\",\"tool_call_id_present\":true,\"tool_name\":\"resolve_organization_context\"}\n[14] model.started {\"agent_id\":\"organization-context-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":3,\"invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[15] model.completed {\"agent_id\":\"organization-context-read-agent\",\"invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[16] agent.completed {\"agent_id\":\"organization-context-read-agent\",\"invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\",\"output_contract\":\"OrganizationContextReadResult\"}\n[17] agent.tool.output.normalized {\"agent_id\":\"organization-context-read-agent\",\"ambiguous\":false,\"candidate_count\":1,\"clarification_applied\":false,\"invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\",\"model_calls_added\":0,\"model_output_persisted\":false,\"normalization_strategy\":\"product-owned-mcp-evidence-normalization-v1\",\"output_contract\":\"OrganizationContextReadResult\",\"requested_field_count\":1,\"session_context_focus\":{\"candidates\":[{\"entity_id\":\"employee-0017\",\"entity_type\":\"EMPLOYEE\",\"label\":\"김민수\",\"qualifiers\":[\"플랫폼개발팀\",\"선임\"]}],\"catalog_revision\":500,\"domain\":\"ORGANIZATION_CONTEXT\",\"schema_version\":\"okcanvas-session-context-focus-observation-v1\",\"state\":\"RESOLVED\"},\"strategy\":\"tool-evidence-provenance-alignment-v1\",\"tool_name\":\"resolve_organization_context\",\"tool_reexecuted\":false,\"tool_result_persisted\":false}\n[18] agent.tool.completed {\"arguments_persisted\":false,\"child_usage\":{\"cached_input_tokens\":0,\"input_tokens\":3311,\"output_tokens\":155,\"reasoning_tokens\":0,\"requests\":0,\"total_tokens\":3466},\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\",\"parent_control_retained\":true,\"result_persisted\":false,\"result_present\":true,\"to_agent_id\":\"organization-context-read-agent\",\"to_invocation_id\":\"invocation_e46dedd7e0114255810d93d62c695602\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_organization_context_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[19] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":3,\"invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[20] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[21] agent.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_31c432c7881340f2b3c94335ecbe7738\",\"output_contract\":\"OrganizationAssistantResult\"}\n[22] artifact.created {\"artifact_id\":\"artifact_4af1eacfa5d442d795aad8f10cac56cf\",\"artifact_type\":\"agent.final-output\",\"byte_length\":528,\"media_type\":\"application/json\",\"sha256\":\"8b8b38371293ba629d679cf8f155775f8f97f0c2ea37d3641b99e9ce47ab4d17\"}\n[23] session.turn.completed {\"context_focus_raw_tool_result_persisted\":false,\"context_focus_state\":\"RESOLVED\",\"context_focus_updated\":true,\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"item_count\":4,\"session_id\":\"session_e1521d978a0f438784ed857107ef5674\",\"turn_count\":1}\n[24] run.completed {\"artifact_id\":\"artifact_4af1eacfa5d442d795aad8f10cac56cf\",\"from_status\":\"RUNNING\",\"hosted_search_evidence_artifact_id\":null,\"response_id\":null,\"sdk_version\":\"0.19.0\",\"to_status\":\"SUCCEEDED\",\"trace_id\":\"trace_0b6f5221809b4af799b747d58b69abf7\",\"usage\":{\"cached_input_tokens\":1280,\"input_tokens\":6152,\"output_tokens\":304,\"reasoning_tokens\":0,\"requests\":4,\"total_tokens\":6456}}\n[25] payload.retention.applied {\"reason\":\"successful-run\",\"state\":\"DELETED\"}\n\n\"김선임\"은 플랫폼개발팀 소속의 선임 직원 \"김민수\"(employee-0017)로 확인됩니다. 연락처 이메일은 user0017@tenant-a.example 입니다.\n\n근거\n- 김민수 (employee-0017)\n\n완료 · 6456 tokens · run run_417206…9bcf4a\n\nuser-001 [session_e1…ef5674]> /quit\n\n종료 · 1개 요청 완료\n",
+      "stdout_encoding": "utf-8"
+    },
+    {
+      "case_id": "employee-calendar-cross-domain",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:31863",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_e1521d978a0f438784ed857107ef5674",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step094-cross-domain-live-dpadax5m\\prompt-2.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stderr_encoding": "empty",
+      "stdout": "============================================================\n OKCanvas Agent Service CLI · Product HTTP/SSE Client\n============================================================\nRuntime 2.78.2 · tenant tenant-a · principal user-001\nSession session_e1…ef5674 · Model gpt-4.1\n/help 명령으로 사용법을 확인하세요.\n\nuser-001 [session_e1…ef5674]> 그 사람 일정은?\n라우팅 및 실행 준비 중...\nRoute: READ_SYSTEM · EXECUTABLE · agent organization-assistant-session-agent\nReasons: groupware-read-intent-detected, delegated-tenant-principal-role-bound, read-only-mcp-tool-allowlist-bound, cross-domain-groupware-reference-detected, stable-organization-context-focus-bound, exact-groupware-context-ref-required, session-owned-main-assistant-retained, stateless-groupware-subagent-selected, child-session-persistence-disabled\n[1] run.created {\"attempt\":1,\"governed\":true,\"submission_id\":\"submission_17ff4146c42547a2b1910fc055aa4802\",\"task_id\":\"task_3b4891d7e10948a89032c0e7eee8d881\"}\n[2] run.started {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_version\":\"1.2.0\",\"claim_attempt\":1,\"governed\":true,\"submission_id\":\"submission_17ff4146c42547a2b1910fc055aa4802\"}\n[3] session.turn.started {\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"session_id\":\"session_e1521d978a0f438784ed857107ef5674\",\"turn_ordinal\":2,\"workspace_access\":\"none\"}\n[4] agent.definition.resolved {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_sha256\":\"35accda616f425769f3f82929a3e26a2ecd484162fd68d1765de5838623413c4\",\"agent_definition_version\":\"1.2.0\",\"agent_tool_count\":2,\"guardrail_count\":0,\"guardrail_ids\":[],\"handoff_count\":0,\"local_tool_count\":0,\"local_tool_names\":[],\"mcp_server_count\":0,\"mcp_server_ids\":[],\"orchestration_child_count\":0,\"orchestration_child_ids\":[],\"output_contract\":\"OrganizationAssistantResult\",\"root_invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\",\"runtime_binding_sha256\":\"f5d74c98c708373c97b302ab2e825b34f7620c6254992aaa553541cd7f7c58e8\",\"session_id_present\":true,\"session_mode\":\"sqlite-v1\",\"workspace_access\":\"none\"}\n[5] agent.started {\"agent_id\":\"organization-assistant-session-agent\",\"agent_name\":\"OKCanvas Organization Assistant Session\",\"invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\"}\n[6] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":5,\"invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[7] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[8] agent.tool.started {\"arguments_persisted\":false,\"child_agent_definition_sha256\":\"5d05f773f4041d86e4edcfe380e1e27d0c34085c7f11fae46dc727fda8519278\",\"child_agent_definition_version\":\"1.1.0\",\"child_runtime_binding_sha256\":\"67138e1e18303315219204a983ed9781118134079f7da651e4b1de4036067d76\",\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\",\"input_mode\":\"MODEL_GENERATED_TEXT\",\"output_mode\":\"BOUNDED_STRUCTURED_JSON\",\"result_persisted\":false,\"run_config_inherited\":false,\"to_agent_id\":\"groupware-read-agent\",\"to_invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_groupware_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[9] agent.started {\"agent_id\":\"groupware-read-agent\",\"agent_name\":\"OKCanvas Groupware Read-only Assistant\",\"invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\"}\n[10] model.started {\"agent_id\":\"groupware-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":1,\"invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[11] model.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[12] tool.started {\"arguments_persisted\":false,\"server_id\":\"groupware-read\",\"tool_call_id_present\":true,\"tool_name\":\"list_calendar_events\"}\n[13] tool.completed {\"result_persisted\":false,\"result_present\":true,\"server_id\":\"groupware-read\",\"tool_call_id_present\":true,\"tool_name\":\"list_calendar_events\"}\n[14] model.started {\"agent_id\":\"groupware-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":3,\"invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[15] model.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[16] agent.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\",\"output_contract\":\"GroupwareReadResult\"}\n[17] agent.tool.output.normalized {\"agent_id\":\"groupware-read-agent\",\"context_entity_id\":\"employee-0017\",\"context_entity_type\":\"EMPLOYEE\",\"context_filter_applied\":true,\"context_filtered_record_count\":1,\"invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\",\"model_output_persisted\":false,\"normalization_strategy\":\"product-owned-cross-domain-mcp-evidence-normalization-v1\",\"output_contract\":\"GroupwareReadResult\",\"session_context_focus\":{\"candidates\":[{\"entity_id\":\"employee-0017\",\"entity_type\":\"EMPLOYEE\",\"label\":\"김민수\",\"qualifiers\":[\"플랫폼개발팀\",\"선임\"]}],\"catalog_revision\":500,\"domain\":\"ORGANIZATION_CONTEXT\",\"schema_version\":\"okcanvas-session-context-focus-observation-v1\",\"state\":\"RESOLVED\"},\"strategy\":\"groupware-cross-domain-stable-context-filter-v1\",\"tool_name\":\"list_calendar_events\",\"tool_result_persisted\":false}\n[18] agent.tool.completed {\"arguments_persisted\":false,\"child_usage\":{\"cached_input_tokens\":0,\"input_tokens\":2638,\"output_tokens\":151,\"reasoning_tokens\":0,\"requests\":0,\"total_tokens\":2789},\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\",\"parent_control_retained\":true,\"result_persisted\":false,\"result_present\":true,\"to_agent_id\":\"groupware-read-agent\",\"to_invocation_id\":\"invocation_fbb591ef1f244b828ddbd224faa6c018\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_groupware_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[19] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":7,\"invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[20] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[21] agent.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_ffe5dee22d1645288c24f4facfe1615d\",\"output_contract\":\"OrganizationAssistantResult\"}\n[22] artifact.created {\"artifact_id\":\"artifact_ea49ae5b3ec745cab33560c4accc8ca6\",\"artifact_type\":\"agent.final-output\",\"byte_length\":493,\"media_type\":\"application/json\",\"sha256\":\"6d87079d996e4d1e806caafdcbbbb3e4ae112783c22a82007f151e70feb1d0ba\"}\n[23] session.turn.completed {\"context_focus_raw_tool_result_persisted\":false,\"context_focus_state\":\"RESOLVED\",\"context_focus_updated\":true,\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"item_count\":8,\"session_id\":\"session_e1521d978a0f438784ed857107ef5674\",\"turn_count\":2}\n[24] run.completed {\"artifact_id\":\"artifact_ea49ae5b3ec745cab33560c4accc8ca6\",\"from_status\":\"RUNNING\",\"hosted_search_evidence_artifact_id\":null,\"response_id\":null,\"sdk_version\":\"0.19.0\",\"to_status\":\"SUCCEEDED\",\"trace_id\":\"trace_5119415a4ebe49bb8c4a8844246bc459\",\"usage\":{\"cached_input_tokens\":1920,\"input_tokens\":6894,\"output_tokens\":297,\"reasoning_tokens\":0,\"requests\":4,\"total_tokens\":7191}}\n[25] payload.retention.applied {\"reason\":\"successful-run\",\"state\":\"DELETED\"}\n\nemployee-0017(김민수)의 캘린더 일정으로는 \"Weekly review\"가 2026년 8월 5일 10:00부터 11:00까지 등록되어 있습니다.\n\n근거\n- Weekly review (event-001)\n\n완료 · 7191 tokens · run run_0dbe9f…52ef03\n\nuser-001 [session_e1…ef5674]> /quit\n\n종료 · 1개 요청 완료\n",
+      "stdout_encoding": "utf-8"
+    },
+    {
+      "case_id": "employee-notice-cross-domain",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:31863",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_e1521d978a0f438784ed857107ef5674",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step094-cross-domain-live-dpadax5m\\prompt-3.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stderr_encoding": "empty",
+      "stdout": "============================================================\n OKCanvas Agent Service CLI · Product HTTP/SSE Client\n============================================================\nRuntime 2.78.2 · tenant tenant-a · principal user-001\nSession session_e1…ef5674 · Model gpt-4.1\n/help 명령으로 사용법을 확인하세요.\n\nuser-001 [session_e1…ef5674]> 그 사람 관련 공지 알려줘\n라우팅 및 실행 준비 중...\nRoute: READ_SYSTEM · EXECUTABLE · agent organization-assistant-session-agent\nReasons: groupware-read-intent-detected, delegated-tenant-principal-role-bound, read-only-mcp-tool-allowlist-bound, cross-domain-groupware-reference-detected, stable-organization-context-focus-bound, exact-groupware-context-ref-required, session-owned-main-assistant-retained, stateless-groupware-subagent-selected, child-session-persistence-disabled\n[1] run.created {\"attempt\":1,\"governed\":true,\"submission_id\":\"submission_1129ee1c971b4c23a6195366a320e137\",\"task_id\":\"task_b937afa85c1c41c8b0d5ec5fb5e68e43\"}\n[2] run.started {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_version\":\"1.2.0\",\"claim_attempt\":1,\"governed\":true,\"submission_id\":\"submission_1129ee1c971b4c23a6195366a320e137\"}\n[3] session.turn.started {\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"session_id\":\"session_e1521d978a0f438784ed857107ef5674\",\"turn_ordinal\":3,\"workspace_access\":\"none\"}\n[4] agent.definition.resolved {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_sha256\":\"35accda616f425769f3f82929a3e26a2ecd484162fd68d1765de5838623413c4\",\"agent_definition_version\":\"1.2.0\",\"agent_tool_count\":2,\"guardrail_count\":0,\"guardrail_ids\":[],\"handoff_count\":0,\"local_tool_count\":0,\"local_tool_names\":[],\"mcp_server_count\":0,\"mcp_server_ids\":[],\"orchestration_child_count\":0,\"orchestration_child_ids\":[],\"output_contract\":\"OrganizationAssistantResult\",\"root_invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\",\"runtime_binding_sha256\":\"f5d74c98c708373c97b302ab2e825b34f7620c6254992aaa553541cd7f7c58e8\",\"session_id_present\":true,\"session_mode\":\"sqlite-v1\",\"workspace_access\":\"none\"}\n[5] agent.started {\"agent_id\":\"organization-assistant-session-agent\",\"agent_name\":\"OKCanvas Organization Assistant Session\",\"invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\"}\n[6] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":9,\"invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[7] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[8] agent.tool.started {\"arguments_persisted\":false,\"child_agent_definition_sha256\":\"5d05f773f4041d86e4edcfe380e1e27d0c34085c7f11fae46dc727fda8519278\",\"child_agent_definition_version\":\"1.1.0\",\"child_runtime_binding_sha256\":\"67138e1e18303315219204a983ed9781118134079f7da651e4b1de4036067d76\",\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\",\"input_mode\":\"MODEL_GENERATED_TEXT\",\"output_mode\":\"BOUNDED_STRUCTURED_JSON\",\"result_persisted\":false,\"run_config_inherited\":false,\"to_agent_id\":\"groupware-read-agent\",\"to_invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_groupware_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[9] agent.started {\"agent_id\":\"groupware-read-agent\",\"agent_name\":\"OKCanvas Groupware Read-only Assistant\",\"invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\"}\n[10] model.started {\"agent_id\":\"groupware-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":1,\"invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[11] model.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[12] tool.started {\"arguments_persisted\":false,\"server_id\":\"groupware-read\",\"tool_call_id_present\":true,\"tool_name\":\"search_notices\"}\n[13] tool.completed {\"result_persisted\":false,\"result_present\":true,\"server_id\":\"groupware-read\",\"tool_call_id_present\":true,\"tool_name\":\"search_notices\"}\n[14] model.started {\"agent_id\":\"groupware-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":3,\"invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[15] model.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[16] agent.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\",\"output_contract\":\"GroupwareReadResult\"}\n[17] agent.tool.output.normalized {\"agent_id\":\"groupware-read-agent\",\"context_entity_id\":\"employee-0017\",\"context_entity_type\":\"EMPLOYEE\",\"context_filter_applied\":true,\"context_filtered_record_count\":1,\"invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\",\"model_output_persisted\":false,\"normalization_strategy\":\"product-owned-cross-domain-mcp-evidence-normalization-v1\",\"output_contract\":\"GroupwareReadResult\",\"session_context_focus\":{\"candidates\":[{\"entity_id\":\"employee-0017\",\"entity_type\":\"EMPLOYEE\",\"label\":\"김민수\",\"qualifiers\":[\"플랫폼개발팀\",\"선임\"]}],\"catalog_revision\":500,\"domain\":\"ORGANIZATION_CONTEXT\",\"schema_version\":\"okcanvas-session-context-focus-observation-v1\",\"state\":\"RESOLVED\"},\"strategy\":\"groupware-cross-domain-stable-context-filter-v1\",\"tool_name\":\"search_notices\",\"tool_result_persisted\":false}\n[18] agent.tool.completed {\"arguments_persisted\":false,\"child_usage\":{\"cached_input_tokens\":0,\"input_tokens\":2608,\"output_tokens\":144,\"reasoning_tokens\":0,\"requests\":0,\"total_tokens\":2752},\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\",\"parent_control_retained\":true,\"result_persisted\":false,\"result_present\":true,\"to_agent_id\":\"groupware-read-agent\",\"to_invocation_id\":\"invocation_19c5e38aea584044aad3a9b1a6bce2cd\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_groupware_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[19] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":11,\"invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[20] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[21] agent.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_a3c32eb2a0aa46a4b82705c4b6f7bcd5\",\"output_contract\":\"OrganizationAssistantResult\"}\n[22] artifact.created {\"artifact_id\":\"artifact_9bdf3fb386e04e1e900589b847030a72\",\"artifact_type\":\"agent.final-output\",\"byte_length\":507,\"media_type\":\"application/json\",\"sha256\":\"621fbfe1badb7c879944e0f004bf63db312c71bc2f5a64fe3afc4f32e6507dee\"}\n[23] session.turn.completed {\"context_focus_raw_tool_result_persisted\":false,\"context_focus_state\":\"RESOLVED\",\"context_focus_updated\":true,\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"item_count\":12,\"session_id\":\"session_e1521d978a0f438784ed857107ef5674\",\"turn_count\":3}\n[24] run.completed {\"artifact_id\":\"artifact_9bdf3fb386e04e1e900589b847030a72\",\"from_status\":\"RUNNING\",\"hosted_search_evidence_artifact_id\":null,\"response_id\":null,\"sdk_version\":\"0.19.0\",\"to_status\":\"SUCCEEDED\",\"trace_id\":\"trace_ea49b2cdaa0f4f35868012386b9f4365\",\"usage\":{\"cached_input_tokens\":4736,\"input_tokens\":8241,\"output_tokens\":280,\"reasoning_tokens\":0,\"requests\":4,\"total_tokens\":8521}}\n[25] payload.retention.applied {\"reason\":\"successful-run\",\"state\":\"DELETED\"}\n\nemployee-0017(김민수)과 관련된 공지로 'Maintenance notice' 제목의 공지가 있으며, 내용은 'Service maintenance at 18:00.'입니다.\n\n근거\n- Maintenance notice (notice-001)\n\n완료 · 8521 tokens · run run_fcddcc…75d2f3\n\nuser-001 [session_e1…ef5674]> /quit\n\n종료 · 1개 요청 완료\n",
+      "stdout_encoding": "utf-8"
+    }
+  ],
+  "completed_at": "2026-08-08T10:30:38.483592Z",
+  "connector_examples": {
+    "groupware_paths": [
+      "/api/v1/calendar/events/list",
+      "/api/v1/notices/search"
+    ],
+    "groupware_request_count": 2,
+    "organization_request_count": 1
+  },
+  "environment": {
+    "loaded_key_names": [
+      "OKCANVAS_AGENT_MODEL",
+      "OKCANVAS_API_HOST",
+      "OKCANVAS_API_PORT",
+      "OKCANVAS_ARTIFACT_ROOT",
+      "OKCANVAS_CODEX_MODEL",
+      "OKCANVAS_CONTROL_ADMIN_KEY",
+      "OKCANVAS_CONTROL_BASE_URL",
+      "OKCANVAS_DEFAULT_AGENT_ID",
+      "OKCANVAS_DIRECT_RUN_API_ENABLED",
+      "OKCANVAS_EVALUATION_DB",
+      "OKCANVAS_PRODUCT_DB",
+      "OKCANVAS_PROJECT_ROOT",
+      "OKCANVAS_PROTECTED_PAYLOAD_KEY",
+      "OKCANVAS_PROTECTED_PAYLOAD_ROOT",
+      "OKCANVAS_READONLY_WORKSPACE_ROOT",
+      "OKCANVAS_RUN_STATE_ROOT",
+      "OKCANVAS_RUN_SUBMITTER_KEY",
+      "OKCANVAS_SANDBOX_READONLY_IMAGE",
+      "OKCANVAS_SANDBOX_TEMP_ROOT",
+      "OKCANVAS_SESSION_HISTORY_KEY",
+      "OKCANVAS_SESSION_ROOT",
+      "OPENAI_API_KEY"
+    ],
+    "model": "gpt-4.1",
+    "openai_api_key_present": true,
+    "secret_values_persisted": false,
+    "source_name": ".env.local"
+  },
+  "identity_provenance": {
+    "focused_live_harness": {
+      "sha256": "a1953c4a66612c9331b63b523ae2efc178669a5694cc558252b00eff90fd7e9c"
+    },
+    "runtime_executable_baseline": {
+      "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+      "runtime_version": "2.78.2",
+      "sha256": "1d00cbabf3abccd4453428f01953f3f3d86f3480719dc0f079f0691cbc502ddb"
+    },
+    "runtime_package_metadata": {
+      "runtime_version": "2.78.2",
+      "sha256": "ecbe598fbdad7876244dde9954312a704a9116aae4d5c4f5b0a606c39fdfc78c"
+    },
+    "runtime_service": {
+      "runtime_version": "2.78.2",
+      "schema_version": "okcanvas-service-client-capabilities-v1"
+    },
+    "workspace_current_baseline": {
+      "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+      "runtime_version": "2.78.2",
+      "sha256": "68c03b0862664e911b3e543b26677edb560a287c5958acffccd41fcde0bc1004",
+      "workspace_step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+      "workspace_version": "0.8.4-r10e"
+    },
+    "workspace_project_catalog": {
+      "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+      "runtime_version": "2.78.2",
+      "sha256": "c38310b0024aefe9270b5b1e923f833cb1f276c9d9c3f521e25bf4da304c2db9",
+      "workspace_step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+      "workspace_version": "0.8.4-r10e"
+    }
+  },
+  "limitations": {
+    "object_storage_live_executed": false,
+    "production_database_executed": false,
+    "production_groupware_called": false
+  },
+  "passed_checks": 24,
+  "route_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "exact": true,
+      "groupware_context_filter": null,
+      "matched_rule_id": "organization-context-short-read-session-stateless-subagent-v1",
+      "organization_context_request_hint": {
+        "entity_type_hints": [],
+        "intent": "ENTITY_FIELD_LOOKUP",
+        "pattern_id": "organization-context-contact-field-short-v1",
+        "preferred_operation": "RESOLVE",
+        "relation_traversal": null,
+        "requested_fields": [
+          "CONTACT"
+        ],
+        "schema_version": "okcanvas-organization-context-request-hint-v1",
+        "target_expression": "김선임"
+      },
+      "status": "EXECUTABLE"
+    },
+    {
+      "case_id": "employee-calendar-cross-domain",
+      "exact": true,
+      "groupware_context_filter": {
+        "catalog_revision": 500,
+        "entity_id": "employee-0017",
+        "entity_type": "EMPLOYEE",
+        "label": "김민수",
+        "max_results": 20,
+        "pattern_id": "session-cross-domain-groupware-context-ref-v1",
+        "qualifiers": [
+          "플랫폼개발팀",
+          "선임"
+        ],
+        "resource_kind": "CALENDAR",
+        "schema_version": "okcanvas-groupware-context-filter-hint-v1",
+        "tool_name": "list_calendar_events"
+      },
+      "matched_rule_id": "groupware-read-session-stateless-subagent-v1",
+      "organization_context_request_hint": null,
+      "status": "EXECUTABLE"
+    },
+    {
+      "case_id": "employee-notice-cross-domain",
+      "exact": true,
+      "groupware_context_filter": {
+        "catalog_revision": 500,
+        "entity_id": "employee-0017",
+        "entity_type": "EMPLOYEE",
+        "label": "김민수",
+        "max_results": 20,
+        "pattern_id": "session-cross-domain-groupware-context-ref-v1",
+        "qualifiers": [
+          "플랫폼개발팀",
+          "선임"
+        ],
+        "resource_kind": "NOTICE",
+        "schema_version": "okcanvas-groupware-context-filter-hint-v1",
+        "tool_name": "search_notices"
+      },
+      "matched_rule_id": "groupware-read-session-stateless-subagent-v1",
+      "organization_context_request_hint": null,
+      "status": "EXECUTABLE"
+    }
+  ],
+  "run_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "normalization": {
+        "agent_id": "organization-context-read-agent",
+        "ambiguous": false,
+        "candidate_count": 1,
+        "clarification_applied": false,
+        "invocation_id": "invocation_e46dedd7e0114255810d93d62c695602",
+        "model_calls_added": 0,
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-mcp-evidence-normalization-v1",
+        "output_contract": "OrganizationContextReadResult",
+        "requested_field_count": 1,
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "employee-0017",
+              "entity_type": "EMPLOYEE",
+              "label": "김민수",
+              "qualifiers": [
+                "플랫폼개발팀",
+                "선임"
+              ]
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "RESOLVED"
+        },
+        "strategy": "tool-evidence-provenance-alignment-v1",
+        "tool_name": "resolve_organization_context",
+        "tool_reexecuted": false,
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_417206db6e2040ea9e43548c319bcf4a",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "resolve_organization_context"
+      ]
+    },
+    {
+      "case_id": "employee-calendar-cross-domain",
+      "normalization": {
+        "agent_id": "groupware-read-agent",
+        "context_entity_id": "employee-0017",
+        "context_entity_type": "EMPLOYEE",
+        "context_filter_applied": true,
+        "context_filtered_record_count": 1,
+        "invocation_id": "invocation_fbb591ef1f244b828ddbd224faa6c018",
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-cross-domain-mcp-evidence-normalization-v1",
+        "output_contract": "GroupwareReadResult",
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "employee-0017",
+              "entity_type": "EMPLOYEE",
+              "label": "김민수",
+              "qualifiers": [
+                "플랫폼개발팀",
+                "선임"
+              ]
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "RESOLVED"
+        },
+        "strategy": "groupware-cross-domain-stable-context-filter-v1",
+        "tool_name": "list_calendar_events",
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_0dbe9fe2b5094ebba6c346dd3e52ef03",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "list_calendar_events"
+      ]
+    },
+    {
+      "case_id": "employee-notice-cross-domain",
+      "normalization": {
+        "agent_id": "groupware-read-agent",
+        "context_entity_id": "employee-0017",
+        "context_entity_type": "EMPLOYEE",
+        "context_filter_applied": true,
+        "context_filtered_record_count": 1,
+        "invocation_id": "invocation_19c5e38aea584044aad3a9b1a6bce2cd",
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-cross-domain-mcp-evidence-normalization-v1",
+        "output_contract": "GroupwareReadResult",
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "employee-0017",
+              "entity_type": "EMPLOYEE",
+              "label": "김민수",
+              "qualifiers": [
+                "플랫폼개발팀",
+                "선임"
+              ]
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "RESOLVED"
+        },
+        "strategy": "groupware-cross-domain-stable-context-filter-v1",
+        "tool_name": "search_notices",
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_fcddcc2b6d594f75b8789ec20075d2f3",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "search_notices"
+      ]
+    }
+  ],
+  "runtime_step": "STEP094R2_CROSS_DOMAIN_RUN_SUBMISSION_ADMISSION_OWNER_CLOSURE",
+  "runtime_version": "2.78.2",
+  "schema_version": "okcanvas-workspace-step008r4r10-cross-domain-live-acceptance-v2",
+  "started_at": "2026-08-08T10:28:45.949293Z",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP008R4R10E_CROSS_DOMAIN_LIVE_EVIDENCE_PROVENANCE_IDENTITY_CLOSURE",
+  "total_checks": 24,
+  "validation_mode": "WINDOWS_LIVE_OPENAI_ORGANIZATION_TO_GROUPWARE_STABLE_FOCUS_E2E",
+  "version": "0.8.4-r10e"
+}

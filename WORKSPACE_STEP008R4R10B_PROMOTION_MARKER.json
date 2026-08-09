@@ -1,0 +1,12 @@
+{
+  "schema_version": "okcanvas-workspace-step008r4r10b-promotion-marker-v1",
+  "workspace_step": "WORKSPACE_STEP008R4R10B_POST_CLI_REQUEST_COMPLETION_AND_RUN_CARDINALITY_DIAGNOSTIC_CLOSURE",
+  "workspace_version": "0.8.4-r10b",
+  "runtime_step": "STEP094_CROSS_DOMAIN_STABLE_FOCUS_AND_GROUPWARE_CONTEXT_FILTER",
+  "runtime_version": "2.78.0",
+  "promotion": "NOT_READY",
+  "focused_cross_domain_live": "RERUN_REQUIRED",
+  "minio_object_storage_live": "DEFERRED_BY_USER",
+  "runtime_product_source_changed": false,
+  "reason": "R10A actual Windows run still failed at first-Turn execution and did not preserve post-CLI success-exit diagnostics. R10B closes diagnostics only."
+}

@@ -462,7 +462,7 @@ class AdminUseCases:
         try:
             definition = self._definitions.resolve(request.agent_definition_id)
             binding = self._runtime_bindings.resolve(definition)
-            if binding.execution_path not in {'sqlite-session-execution-v1', 'sqlite-session-approval-execution-v1', 'sqlite-session-native-handoff-execution-v1', 'sqlite-session-native-guardrail-execution-v1', 'sqlite-session-native-agent-tool-execution-v1', 'sqlite-session-stateless-groupware-subagent-execution-v1', 'sqlite-session-stateless-organization-context-subagent-execution-v1', 'sqlite-session-native-mcp-execution-v1'}:
+            if binding.execution_path not in {'sqlite-session-execution-v1', 'sqlite-session-approval-execution-v1', 'sqlite-session-native-handoff-execution-v1', 'sqlite-session-native-guardrail-execution-v1', 'sqlite-session-native-agent-tool-execution-v1', 'sqlite-session-bounded-cross-domain-read-subagent-execution-v1', 'sqlite-session-stateless-groupware-subagent-execution-v1', 'sqlite-session-stateless-organization-context-subagent-execution-v1', 'sqlite-session-native-mcp-execution-v1'}:
                 raise SessionStateError('Agent is not executable through SQLite Session Runtime')
             return ProductSessionResponse(**self._session_runtime.create(definition=definition, runtime_binding_sha256=binding.runtime_binding_sha256).to_public_dict())
         except (AgentDefinitionContractError, AgentDefinitionIntegrityError, AgentDefinitionNotFoundError) as exc:
@@ -504,43 +504,63 @@ class AdminUseCases:
             )
         )
 
-    async def assistant_route(
-        self, *, request: AssistantRouteRequest
-    ) -> AssistantRouteResponse:
+    def _assistant_session_focus(self, session_id: str | None):
+        if session_id is None:
+            return None
+        try:
+            return self._session_runtime.get_context_focus(session_id)
+        except SessionNotFound:
+            return None
+        except SessionRuntimeError as exc:
+            _raise_session_error(exc)
+        raise AssertionError("unreachable")
+
+    def _assistant_route_decision(self, request: AssistantRouteRequest):
+        session_context_focus = self._assistant_session_focus(request.session_id)
         try:
             decision = self._assistant.route(
                 request=request.input,
                 session_id=request.session_id,
                 attachment_id=request.attachment_id,
                 project_snapshot_id=request.project_snapshot_id,
+                session_context_focus=session_context_focus,
             )
+            if request.session_id and decision.executable_now and decision.selected_agent_id is not None:
+                session_record = self._session_runtime.get(request.session_id)
+                if decision.selected_agent_id != session_record.agent_definition_id:
+                    raise ControlAPIError(409, "ASSISTANT_SESSION_BINDING_MISMATCH", "Assistant route selected an Agent outside the bound Session")
+            return decision
+        except ControlAPIError:
+            raise
         except Exception as exc:
             raise ControlAPIError(422, "ASSISTANT_ROUTING_FAILED", str(exc)) from exc
+
+    async def assistant_route(
+        self, *, request: AssistantRouteRequest
+    ) -> AssistantRouteResponse:
+        decision = self._assistant_route_decision(request)
         return AssistantRouteResponse(**decision.to_public_dict())
 
     async def assistant_preflight(
         self, *, request: AssistantRunPreflightRequest
     ) -> AssistantRunPreflightResponse:
-        route = await self.assistant_route(
-            request=AssistantRouteRequest(
-                input=request.input,
-                session_id=request.session_id,
-                attachment_id=request.attachment_id,
-                project_snapshot_id=request.project_snapshot_id,
-            )
-        )
-        if not route.executable_now or route.selected_agent_definition_id is None:
-            return AssistantRunPreflightResponse(route=route, submission=None)
-        decision = self._assistant.route(
-            request=request.input,
+        route_request = AssistantRouteRequest(
+            input=request.input,
             session_id=request.session_id,
             attachment_id=request.attachment_id,
             project_snapshot_id=request.project_snapshot_id,
         )
+        decision = self._assistant_route_decision(route_request)
+        route = AssistantRouteResponse(**decision.to_public_dict())
+        if not route.executable_now or route.selected_agent_definition_id is None:
+            return AssistantRunPreflightResponse(route=route, submission=None)
         model_input = request.input
         if route.selected_agent_definition_id in {
             self._assistant.policy.default_agent_id,
             self._assistant.policy.session_agent_id,
+            self._assistant.groupware.policy.agent_id,
+            self._assistant.organization_remote.policy.root_agent_id,
+            self._assistant.organization_remote.policy.agent_id,
         }:
             model_input = self._assistant.build_model_request(decision, request.input)
         submission = await self.preflight_governed_run(

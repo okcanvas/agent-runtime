@@ -12,11 +12,13 @@ SCRIPTS = ROOT / "scripts"
 if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 
+from current_workspace_baseline import load_current_baseline
 from workspace_inventory import snapshot_files
 from workspace_process import resolve_project_python, run_process_to_files, write_json_stdout
 
 RUNTIME_ROOT = ROOT / "okcanvas-agent-runtime"
-RUNTIME_STEP = "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+CURRENT = load_current_baseline(ROOT)
+RUNTIME_STEP = CURRENT.runtime_step
 
 
 def now() -> str:
@@ -41,7 +43,7 @@ def run(*, runtime_evidence: Path, process_evidence: Path, stdout_log: Path, std
         fallback_executable=sys.executable,
         allow_fallback=sys.platform != "win32",
     )
-    command = ["scripts/run_step091d_acceptance.py", "--output", str(runtime_evidence), "--quiet"]
+    command = ["scripts/run_step093_acceptance.py", "--output", str(runtime_evidence), "--quiet"]
     process = run_process_to_files(
         runtime_python,
         command,
@@ -60,13 +62,13 @@ def run(*, runtime_evidence: Path, process_evidence: Path, stdout_log: Path, std
         "PASSED"
         if process.get("returncode") == 0
         and runtime_payload.get("state") == "PASSED"
-        and runtime_payload.get("passed_checks") == runtime_payload.get("total_checks") == 19
+        and runtime_payload.get("passed_checks") == runtime_payload.get("total_checks")
         and runtime_payload.get("step") == RUNTIME_STEP
         and unchanged
         else "FAILED"
     )
     payload = {
-        "schema_version": "okcanvas-workspace-step008r4r7-runtime-gate-process-v1",
+        "schema_version": "okcanvas-workspace-step008r4r9-runtime-gate-process-v1",
         "state": state,
         "started_at": started,
         "completed_at": now(),

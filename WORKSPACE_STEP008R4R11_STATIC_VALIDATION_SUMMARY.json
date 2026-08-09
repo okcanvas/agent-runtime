@@ -1,0 +1,31 @@
+{
+  "broad_historical_regression": "NOT_CLAIMED_STALE_FIXTURES_RECORDED",
+  "checks": {
+    "connector_parent_manifests": {
+      "groupware_connector": "31/31 EXACT",
+      "groupware_example": "19/19 EXACT",
+      "organization_context_connector": "34/34 EXACT",
+      "organization_context_example": "51/51 EXACT"
+    },
+    "current_document_sot": "PASSED",
+    "runtime_acceptance_launcher_registry": "7/7 PASSED",
+    "runtime_architecture_constitution": "16/16 PASSED",
+    "runtime_current_architecture": "40/40 PASSED",
+    "runtime_focused_regression": "48/48 PASSED",
+    "runtime_parent_manifest": "GENERATED_FROM_FINAL_RUNTIME_TREE_AND_VERIFIED_BY_R11_GATE",
+    "runtime_step096a_acceptance": "6/6 PASSED",
+    "runtime_step096a_static": "19/19 PASSED",
+    "workspace_manifest": "GENERATED_AFTER_THIS_SUMMARY_AND_VERIFIED_EXACT",
+    "workspace_r11_contract": "29/29 PASSED"
+  },
+  "parent_live_baseline": "R10ER1_STEP094R2_RETAINED_AS_LAST_WINDOWS_FOCUSED_LIVE_PROMOTED_BASELINE",
+  "promotion": "CANDIDATE_LOCAL_DETERMINISTIC_ACCEPTED_LIVE_NOT_RUN",
+  "runtime_product_source_changed": true,
+  "runtime_step": "STEP096A_GROUNDED_LLM_INTERPRETATION_CONTEXT_SHADOW_FOUNDATION",
+  "runtime_version": "2.79.0",
+  "schema_version": "okcanvas-workspace-step008r4r11-static-validation-v1",
+  "state": "LOCAL_DETERMINISTIC_ACCEPTED_LIVE_NOT_RUN",
+  "windows_live": "NOT_RUN",
+  "workspace_step": "WORKSPACE_STEP008R4R11_RUNTIME_STEP096A_GROUNDED_LLM_INTERPRETATION_CONTEXT_SHADOW_FOUNDATION",
+  "workspace_version": "0.8.4-r11"
+}

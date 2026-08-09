@@ -8,11 +8,12 @@
       "title": "Maintenance notice"
     }
   ],
-  "result_schema_version": "okcanvas-groupware-search-notices-result-v1",
+  "result_schema_version": "okcanvas-groupware-search-notices-result-v2",
   "roles": [
     "agent-user"
   ],
   "schema_version": "okcanvas-groupware-read-provider-fixture-v1",
   "tenant_id": "fixture-tenant",
-  "tool_name": "search_notices"
+  "tool_name": "search_notices",
+  "context_ref": null
 }

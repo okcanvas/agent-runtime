@@ -1,0 +1,348 @@
+{
+  "checks": {
+    "all_runtime_runs_succeeded": true,
+    "dedicated_session_created": true,
+    "environment_file_loaded": true,
+    "exactly_three_runtime_runs_created": true,
+    "expected_mcp_tool_sequence_observed": true,
+    "explicit_cross_domain_live_gate": true,
+    "focus_is_preserved_across_groupware_turns_only_after_evidence": true,
+    "groupware_authorization_redacted": true,
+    "groupware_context_ref_and_canonical_arguments_exact": true,
+    "groupware_paths_exact": true,
+    "harness_cleanup_completed": true,
+    "harness_execution_completed_without_exception": true,
+    "model_loaded_from_environment_file": true,
+    "model_name_safe": true,
+    "openai_key_loaded_from_environment_file": true,
+    "organization_connector_called_once": true,
+    "secrets_absent_from_evidence": true,
+    "three_cli_turns_completed": true,
+    "three_routes_resolved_after_prior_turn_commit": true
+  },
+  "cleanup": {
+    "cleanup_error_types": [],
+    "completed": true,
+    "transient_removal_error_types": []
+  },
+  "cli_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:27130",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_f2a2e346bf4148e1934191d60eb847ff",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step094-cross-domain-live-hv8cqqlh\\prompt-1.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stderr_encoding": "empty",
+      "stdout": "============================================================\n OKCanvas Agent Service CLI 쨌 Product HTTP/SSE Client\n============================================================\nRuntime 2.78.2 쨌 tenant tenant-a 쨌 principal user-001\nSession session_f2?쫇847ff 쨌 Model gpt-4.1\n/help 紐낅졊?쇰줈 ?ъ슜踰뺤쓣 ?뺤씤?섏꽭??\n\nuser-001 [session_f2?쫇847ff]> 源?좎엫 ?곕씫泥?n?쇱슦??諛??ㅽ뻾 以鍮?以?..\nRoute: SEARCH_KNOWLEDGE 쨌 EXECUTABLE 쨌 agent organization-assistant-session-agent\nReasons: organization-context-short-read-pattern-matched, structured-request-hint-created-without-entity-guessing, organization-context-pattern:organization-context-contact-field-short-v1, production-database-sot-boundary-selected, delegated-tenant-principal-role-bound, read-only-mcp-tool-allowlist-bound, session-owned-organization-context-root-retained, stateless-organization-context-subagent-selected, child-session-persistence-disabled\n[1] run.created {\"attempt\":1,\"governed\":true,\"submission_id\":\"submission_d72da3963a2d47578d630d2ada8e1652\",\"task_id\":\"task_b04fa80de0d44de2af8072063d15346d\"}\n[2] run.started {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_version\":\"1.2.0\",\"claim_attempt\":1,\"governed\":true,\"submission_id\":\"submission_d72da3963a2d47578d630d2ada8e1652\"}\n[3] session.turn.started {\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"session_id\":\"session_f2a2e346bf4148e1934191d60eb847ff\",\"turn_ordinal\":1,\"workspace_access\":\"none\"}\n[4] agent.definition.resolved {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_sha256\":\"35accda616f425769f3f82929a3e26a2ecd484162fd68d1765de5838623413c4\",\"agent_definition_version\":\"1.2.0\",\"agent_tool_count\":2,\"guardrail_count\":0,\"guardrail_ids\":[],\"handoff_count\":0,\"local_tool_count\":0,\"local_tool_names\":[],\"mcp_server_count\":0,\"mcp_server_ids\":[],\"orchestration_child_count\":0,\"orchestration_child_ids\":[],\"output_contract\":\"OrganizationAssistantResult\",\"root_invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\",\"runtime_binding_sha256\":\"290bd11629b279d37c07c091444ad979229af69a859c1abffa31f521ba7fcb3e\",\"session_id_present\":true,\"session_mode\":\"sqlite-v1\",\"workspace_access\":\"none\"}\n[5] agent.started {\"agent_id\":\"organization-assistant-session-agent\",\"agent_name\":\"OKCanvas Organization Assistant Session\",\"invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\"}\n[6] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":1,\"invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[7] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[8] agent.tool.started {\"arguments_persisted\":false,\"child_agent_definition_sha256\":\"8a3828d611d73bb9f7c35daaeb0fd22175a8d7c9bad3436f8c6b2df26852e4a4\",\"child_agent_definition_version\":\"1.1.0\",\"child_runtime_binding_sha256\":\"b7cf7822614547e4b3475db3e74a5ba82790d88c33970a8ad0b8ee7c02350438\",\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\",\"input_mode\":\"MODEL_GENERATED_TEXT\",\"output_mode\":\"BOUNDED_STRUCTURED_JSON\",\"result_persisted\":false,\"run_config_inherited\":false,\"to_agent_id\":\"organization-context-read-agent\",\"to_invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_organization_context_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[9] agent.started {\"agent_id\":\"organization-context-read-agent\",\"agent_name\":\"OKCanvas Organization Context Read-only Assistant\",\"invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\"}\n[10] model.started {\"agent_id\":\"organization-context-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":1,\"invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[11] model.completed {\"agent_id\":\"organization-context-read-agent\",\"invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[12] tool.started {\"arguments_persisted\":false,\"server_id\":\"organization-context-read\",\"tool_call_id_present\":true,\"tool_name\":\"resolve_organization_context\"}\n[13] tool.completed {\"result_persisted\":false,\"result_present\":true,\"server_id\":\"organization-context-read\",\"tool_call_id_present\":true,\"tool_name\":\"resolve_organization_context\"}\n[14] model.started {\"agent_id\":\"organization-context-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":3,\"invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[15] model.completed {\"agent_id\":\"organization-context-read-agent\",\"invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[16] agent.completed {\"agent_id\":\"organization-context-read-agent\",\"invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\",\"output_contract\":\"OrganizationContextReadResult\"}\n[17] agent.tool.output.normalized {\"agent_id\":\"organization-context-read-agent\",\"ambiguous\":false,\"candidate_count\":1,\"clarification_applied\":false,\"invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\",\"model_calls_added\":0,\"model_output_persisted\":false,\"normalization_strategy\":\"product-owned-mcp-evidence-normalization-v1\",\"output_contract\":\"OrganizationContextReadResult\",\"requested_field_count\":1,\"session_context_focus\":{\"candidates\":[{\"entity_id\":\"employee-0017\",\"entity_type\":\"EMPLOYEE\",\"label\":\"源誘쇱닔\",\"qualifiers\":[\"?뚮옯?쇨컻諛쒗?\",\"?좎엫\"]}],\"catalog_revision\":500,\"domain\":\"ORGANIZATION_CONTEXT\",\"schema_version\":\"okcanvas-session-context-focus-observation-v1\",\"state\":\"RESOLVED\"},\"strategy\":\"tool-evidence-provenance-alignment-v1\",\"tool_name\":\"resolve_organization_context\",\"tool_reexecuted\":false,\"tool_result_persisted\":false}\n[18] agent.tool.completed {\"arguments_persisted\":false,\"child_usage\":{\"cached_input_tokens\":0,\"input_tokens\":3304,\"output_tokens\":154,\"reasoning_tokens\":0,\"requests\":0,\"total_tokens\":3458},\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\",\"parent_control_retained\":true,\"result_persisted\":false,\"result_present\":true,\"to_agent_id\":\"organization-context-read-agent\",\"to_invocation_id\":\"invocation_a3d742a3472b416aa1111fa637a71b7d\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_organization_context_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[19] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":3,\"invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[20] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[21] agent.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_93f16c02690942d291336fa6226a1e40\",\"output_contract\":\"OrganizationAssistantResult\"}\n[22] artifact.created {\"artifact_id\":\"artifact_8388f605e1254fdab33848ac4a665df1\",\"artifact_type\":\"agent.final-output\",\"byte_length\":525,\"media_type\":\"application/json\",\"sha256\":\"800dce5d712086ae8f36e8e5a910884177e8b6b19b75db70f8aeab808b30cad1\"}\n[23] session.turn.completed {\"context_focus_raw_tool_result_persisted\":false,\"context_focus_state\":\"RESOLVED\",\"context_focus_updated\":true,\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"item_count\":4,\"session_id\":\"session_f2a2e346bf4148e1934191d60eb847ff\",\"turn_count\":1}\n[24] run.completed {\"artifact_id\":\"artifact_8388f605e1254fdab33848ac4a665df1\",\"from_status\":\"RUNNING\",\"hosted_search_evidence_artifact_id\":null,\"response_id\":null,\"sdk_version\":\"0.19.0\",\"to_status\":\"SUCCEEDED\",\"trace_id\":\"trace_46759cc34c9c45e28d8366aacc42ec04\",\"usage\":{\"cached_input_tokens\":1280,\"input_tokens\":6146,\"output_tokens\":305,\"reasoning_tokens\":0,\"requests\":4,\"total_tokens\":6451}}\n[25] payload.retention.applied {\"reason\":\"successful-run\",\"state\":\"DELETED\"}\n\n'源?좎엫'? ?뚮옯?쇨컻諛쒗? ?뚯냽??源誘쇱닔 ?좎엫(吏곸썝踰덊샇 E-0017)?쇰줈 ?뺤씤?⑸땲?? ?곕씫泥??대찓????user0017@tenant-a.example ?낅땲??\n\n洹쇨굅\n- 源誘쇱닔 (employee-0017)\n\n?꾨즺 쨌 6451 tokens 쨌 run run_7bed66??cbb04\n\nuser-001 [session_f2?쫇847ff]> /quit\n\n醫낅즺 쨌 1媛??붿껌 ?꾨즺\n",
+      "stdout_encoding": "utf-8"
+    },
+    {
+      "case_id": "employee-calendar-cross-domain",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:27130",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_f2a2e346bf4148e1934191d60eb847ff",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step094-cross-domain-live-hv8cqqlh\\prompt-2.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stderr_encoding": "empty",
+      "stdout": "============================================================\n OKCanvas Agent Service CLI 쨌 Product HTTP/SSE Client\n============================================================\nRuntime 2.78.2 쨌 tenant tenant-a 쨌 principal user-001\nSession session_f2?쫇847ff 쨌 Model gpt-4.1\n/help 紐낅졊?쇰줈 ?ъ슜踰뺤쓣 ?뺤씤?섏꽭??\n\nuser-001 [session_f2?쫇847ff]> 洹??щ엺 ?쇱젙??\n?쇱슦??諛??ㅽ뻾 以鍮?以?..\nRoute: READ_SYSTEM 쨌 EXECUTABLE 쨌 agent organization-assistant-session-agent\nReasons: groupware-read-intent-detected, delegated-tenant-principal-role-bound, read-only-mcp-tool-allowlist-bound, cross-domain-groupware-reference-detected, stable-organization-context-focus-bound, exact-groupware-context-ref-required, session-owned-main-assistant-retained, stateless-groupware-subagent-selected, child-session-persistence-disabled\n[1] run.created {\"attempt\":1,\"governed\":true,\"submission_id\":\"submission_e9349c8f7f944ab780ce977515783575\",\"task_id\":\"task_40f09ff7704c429cb88c191d999edc88\"}\n[2] run.started {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_version\":\"1.2.0\",\"claim_attempt\":1,\"governed\":true,\"submission_id\":\"submission_e9349c8f7f944ab780ce977515783575\"}\n[3] session.turn.started {\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"session_id\":\"session_f2a2e346bf4148e1934191d60eb847ff\",\"turn_ordinal\":2,\"workspace_access\":\"none\"}\n[4] agent.definition.resolved {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_sha256\":\"35accda616f425769f3f82929a3e26a2ecd484162fd68d1765de5838623413c4\",\"agent_definition_version\":\"1.2.0\",\"agent_tool_count\":2,\"guardrail_count\":0,\"guardrail_ids\":[],\"handoff_count\":0,\"local_tool_count\":0,\"local_tool_names\":[],\"mcp_server_count\":0,\"mcp_server_ids\":[],\"orchestration_child_count\":0,\"orchestration_child_ids\":[],\"output_contract\":\"OrganizationAssistantResult\",\"root_invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\",\"runtime_binding_sha256\":\"290bd11629b279d37c07c091444ad979229af69a859c1abffa31f521ba7fcb3e\",\"session_id_present\":true,\"session_mode\":\"sqlite-v1\",\"workspace_access\":\"none\"}\n[5] agent.started {\"agent_id\":\"organization-assistant-session-agent\",\"agent_name\":\"OKCanvas Organization Assistant Session\",\"invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\"}\n[6] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":5,\"invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[7] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[8] agent.tool.started {\"arguments_persisted\":false,\"child_agent_definition_sha256\":\"5d05f773f4041d86e4edcfe380e1e27d0c34085c7f11fae46dc727fda8519278\",\"child_agent_definition_version\":\"1.1.0\",\"child_runtime_binding_sha256\":\"7ba80f0f48c0a35e2d02c49608f3692c0c36f03cbf2b7d96f1610e50b9997c1e\",\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\",\"input_mode\":\"MODEL_GENERATED_TEXT\",\"output_mode\":\"BOUNDED_STRUCTURED_JSON\",\"result_persisted\":false,\"run_config_inherited\":false,\"to_agent_id\":\"groupware-read-agent\",\"to_invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_groupware_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[9] agent.started {\"agent_id\":\"groupware-read-agent\",\"agent_name\":\"OKCanvas Groupware Read-only Assistant\",\"invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\"}\n[10] model.started {\"agent_id\":\"groupware-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":1,\"invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[11] model.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[12] tool.started {\"arguments_persisted\":false,\"server_id\":\"groupware-read\",\"tool_call_id_present\":true,\"tool_name\":\"list_calendar_events\"}\n[13] tool.completed {\"result_persisted\":false,\"result_present\":true,\"server_id\":\"groupware-read\",\"tool_call_id_present\":true,\"tool_name\":\"list_calendar_events\"}\n[14] model.started {\"agent_id\":\"groupware-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":3,\"invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[15] model.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[16] agent.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\",\"output_contract\":\"GroupwareReadResult\"}\n[17] agent.tool.output.normalized {\"agent_id\":\"groupware-read-agent\",\"context_entity_id\":\"employee-0017\",\"context_entity_type\":\"EMPLOYEE\",\"context_filter_applied\":true,\"context_filtered_record_count\":1,\"invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\",\"model_output_persisted\":false,\"normalization_strategy\":\"product-owned-cross-domain-mcp-evidence-normalization-v1\",\"output_contract\":\"GroupwareReadResult\",\"session_context_focus\":{\"candidates\":[{\"entity_id\":\"employee-0017\",\"entity_type\":\"EMPLOYEE\",\"label\":\"源誘쇱닔\",\"qualifiers\":[\"?뚮옯?쇨컻諛쒗?\",\"?좎엫\"]}],\"catalog_revision\":500,\"domain\":\"ORGANIZATION_CONTEXT\",\"schema_version\":\"okcanvas-session-context-focus-observation-v1\",\"state\":\"RESOLVED\"},\"strategy\":\"groupware-cross-domain-stable-context-filter-v1\",\"tool_name\":\"list_calendar_events\",\"tool_result_persisted\":false}\n[18] agent.tool.completed {\"arguments_persisted\":false,\"child_usage\":{\"cached_input_tokens\":0,\"input_tokens\":2639,\"output_tokens\":159,\"reasoning_tokens\":0,\"requests\":0,\"total_tokens\":2798},\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\",\"parent_control_retained\":true,\"result_persisted\":false,\"result_present\":true,\"to_agent_id\":\"groupware-read-agent\",\"to_invocation_id\":\"invocation_a3ef8c9c263f4788ba0feb604d8dd3cc\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_groupware_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[19] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":7,\"invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[20] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[21] agent.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_a48175136c5c4668bfb608936a56bf11\",\"output_contract\":\"OrganizationAssistantResult\"}\n[22] artifact.created {\"artifact_id\":\"artifact_ed8b1157779d46e3ba9221043b6c223a\",\"artifact_type\":\"agent.final-output\",\"byte_length\":539,\"media_type\":\"application/json\",\"sha256\":\"134886ad17bb6c55d1985c9099d24814554d2e44f5cbe9359f8139647fc29d90\"}\n[23] session.turn.completed {\"context_focus_raw_tool_result_persisted\":false,\"context_focus_state\":\"RESOLVED\",\"context_focus_updated\":true,\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"item_count\":8,\"session_id\":\"session_f2a2e346bf4148e1934191d60eb847ff\",\"turn_count\":2}\n[24] run.completed {\"artifact_id\":\"artifact_ed8b1157779d46e3ba9221043b6c223a\",\"from_status\":\"RUNNING\",\"hosted_search_evidence_artifact_id\":null,\"response_id\":null,\"sdk_version\":\"0.19.0\",\"to_status\":\"SUCCEEDED\",\"trace_id\":\"trace_dc787845f686421a9630d8cea1caa948\",\"usage\":{\"cached_input_tokens\":1920,\"input_tokens\":6908,\"output_tokens\":317,\"reasoning_tokens\":0,\"requests\":4,\"total_tokens\":7225}}\n[25] payload.retention.applied {\"reason\":\"successful-run\",\"state\":\"DELETED\"}\n\nemployee-0017(源誘쇱닔 ?좎엫)??罹섎┛?붿뿉??珥?1媛쒖쓽 ?쇱젙???뺤씤?섏뿀?듬땲?? ?덉떆 ?쇱젙: 2026??8??5??10:00~11:00??'Weekly review'媛 ?깅줉?섏뼱 ?덉뒿?덈떎.\n\n洹쇨굅\n- Weekly review (event-001)\n\n?꾨즺 쨌 7225 tokens 쨌 run run_757492?쫆1590b\n\nuser-001 [session_f2?쫇847ff]> /quit\n\n醫낅즺 쨌 1媛??붿껌 ?꾨즺\n",
+      "stdout_encoding": "utf-8"
+    },
+    {
+      "case_id": "employee-notice-cross-domain",
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:27130",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_f2a2e346bf4148e1934191d60eb847ff",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step094-cross-domain-live-hv8cqqlh\\prompt-3.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stderr_encoding": "empty",
+      "stdout": "============================================================\n OKCanvas Agent Service CLI 쨌 Product HTTP/SSE Client\n============================================================\nRuntime 2.78.2 쨌 tenant tenant-a 쨌 principal user-001\nSession session_f2?쫇847ff 쨌 Model gpt-4.1\n/help 紐낅졊?쇰줈 ?ъ슜踰뺤쓣 ?뺤씤?섏꽭??\n\nuser-001 [session_f2?쫇847ff]> 洹??щ엺 愿??怨듭? ?뚮젮以?n?쇱슦??諛??ㅽ뻾 以鍮?以?..\nRoute: READ_SYSTEM 쨌 EXECUTABLE 쨌 agent organization-assistant-session-agent\nReasons: groupware-read-intent-detected, delegated-tenant-principal-role-bound, read-only-mcp-tool-allowlist-bound, cross-domain-groupware-reference-detected, stable-organization-context-focus-bound, exact-groupware-context-ref-required, session-owned-main-assistant-retained, stateless-groupware-subagent-selected, child-session-persistence-disabled\n[1] run.created {\"attempt\":1,\"governed\":true,\"submission_id\":\"submission_8c00b7bb645644228afa1ca91da1d7f7\",\"task_id\":\"task_85a6a389be1d46eab4eeb9525aae7263\"}\n[2] run.started {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_version\":\"1.2.0\",\"claim_attempt\":1,\"governed\":true,\"submission_id\":\"submission_8c00b7bb645644228afa1ca91da1d7f7\"}\n[3] session.turn.started {\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"session_id\":\"session_f2a2e346bf4148e1934191d60eb847ff\",\"turn_ordinal\":3,\"workspace_access\":\"none\"}\n[4] agent.definition.resolved {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_sha256\":\"35accda616f425769f3f82929a3e26a2ecd484162fd68d1765de5838623413c4\",\"agent_definition_version\":\"1.2.0\",\"agent_tool_count\":2,\"guardrail_count\":0,\"guardrail_ids\":[],\"handoff_count\":0,\"local_tool_count\":0,\"local_tool_names\":[],\"mcp_server_count\":0,\"mcp_server_ids\":[],\"orchestration_child_count\":0,\"orchestration_child_ids\":[],\"output_contract\":\"OrganizationAssistantResult\",\"root_invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\",\"runtime_binding_sha256\":\"290bd11629b279d37c07c091444ad979229af69a859c1abffa31f521ba7fcb3e\",\"session_id_present\":true,\"session_mode\":\"sqlite-v1\",\"workspace_access\":\"none\"}\n[5] agent.started {\"agent_id\":\"organization-assistant-session-agent\",\"agent_name\":\"OKCanvas Organization Assistant Session\",\"invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\"}\n[6] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":9,\"invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[7] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[8] agent.tool.started {\"arguments_persisted\":false,\"child_agent_definition_sha256\":\"5d05f773f4041d86e4edcfe380e1e27d0c34085c7f11fae46dc727fda8519278\",\"child_agent_definition_version\":\"1.1.0\",\"child_runtime_binding_sha256\":\"7ba80f0f48c0a35e2d02c49608f3692c0c36f03cbf2b7d96f1610e50b9997c1e\",\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\",\"input_mode\":\"MODEL_GENERATED_TEXT\",\"output_mode\":\"BOUNDED_STRUCTURED_JSON\",\"result_persisted\":false,\"run_config_inherited\":false,\"to_agent_id\":\"groupware-read-agent\",\"to_invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_groupware_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[9] agent.started {\"agent_id\":\"groupware-read-agent\",\"agent_name\":\"OKCanvas Groupware Read-only Assistant\",\"invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\"}\n[10] model.started {\"agent_id\":\"groupware-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":1,\"invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[11] model.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[12] tool.started {\"arguments_persisted\":false,\"server_id\":\"groupware-read\",\"tool_call_id_present\":true,\"tool_name\":\"search_notices\"}\n[13] tool.completed {\"result_persisted\":false,\"result_present\":true,\"server_id\":\"groupware-read\",\"tool_call_id_present\":true,\"tool_name\":\"search_notices\"}\n[14] model.started {\"agent_id\":\"groupware-read-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":3,\"invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[15] model.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[16] agent.completed {\"agent_id\":\"groupware-read-agent\",\"invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\",\"output_contract\":\"GroupwareReadResult\"}\n[17] agent.tool.output.normalized {\"agent_id\":\"groupware-read-agent\",\"context_entity_id\":\"employee-0017\",\"context_entity_type\":\"EMPLOYEE\",\"context_filter_applied\":true,\"context_filtered_record_count\":1,\"invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\",\"model_output_persisted\":false,\"normalization_strategy\":\"product-owned-cross-domain-mcp-evidence-normalization-v1\",\"output_contract\":\"GroupwareReadResult\",\"session_context_focus\":{\"candidates\":[{\"entity_id\":\"employee-0017\",\"entity_type\":\"EMPLOYEE\",\"label\":\"源誘쇱닔\",\"qualifiers\":[\"?뚮옯?쇨컻諛쒗?\",\"?좎엫\"]}],\"catalog_revision\":500,\"domain\":\"ORGANIZATION_CONTEXT\",\"schema_version\":\"okcanvas-session-context-focus-observation-v1\",\"state\":\"RESOLVED\"},\"strategy\":\"groupware-cross-domain-stable-context-filter-v1\",\"tool_name\":\"search_notices\",\"tool_result_persisted\":false}\n[18] agent.tool.completed {\"arguments_persisted\":false,\"child_usage\":{\"cached_input_tokens\":0,\"input_tokens\":2611,\"output_tokens\":128,\"reasoning_tokens\":0,\"requests\":0,\"total_tokens\":2739},\"from_agent_id\":\"organization-assistant-session-agent\",\"from_invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\",\"parent_control_retained\":true,\"result_persisted\":false,\"result_present\":true,\"to_agent_id\":\"groupware-read-agent\",\"to_invocation_id\":\"invocation_3e9c6b0173bf44edba943b11174e0ea7\",\"tool_call_id_present\":true,\"tool_name\":\"invoke_groupware_read_agent\",\"workspace_access\":\"none\",\"workspace_materialized\":false}\n[19] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":11,\"invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[20] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\",\"output_item_count\":1,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[21] agent.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_1453fff4d79443929b0fef036902ecde\",\"output_contract\":\"OrganizationAssistantResult\"}\n[22] artifact.created {\"artifact_id\":\"artifact_7678cc6061ee464c8bb2a7f993341d71\",\"artifact_type\":\"agent.final-output\",\"byte_length\":484,\"media_type\":\"application/json\",\"sha256\":\"c3a69a1ecbe0c5e045c5cc8ebabdc33c7e7816b50850e17841c7fea13ecf017f\"}\n[23] session.turn.completed {\"context_focus_raw_tool_result_persisted\":false,\"context_focus_state\":\"RESOLVED\",\"context_focus_updated\":true,\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"item_count\":12,\"session_id\":\"session_f2a2e346bf4148e1934191d60eb847ff\",\"turn_count\":3}\n[24] run.completed {\"artifact_id\":\"artifact_7678cc6061ee464c8bb2a7f993341d71\",\"from_status\":\"RUNNING\",\"hosted_search_evidence_artifact_id\":null,\"response_id\":null,\"sdk_version\":\"0.19.0\",\"to_status\":\"SUCCEEDED\",\"trace_id\":\"trace_935d71c4aefd475f8a9017089d7b02cb\",\"usage\":{\"cached_input_tokens\":2048,\"input_tokens\":8283,\"output_tokens\":259,\"reasoning_tokens\":0,\"requests\":4,\"total_tokens\":8542}}\n[25] payload.retention.applied {\"reason\":\"successful-run\",\"state\":\"DELETED\"}\n\nemployee-0017(源誘쇱닔 ?좎엫) 愿??怨듭??ы빆?쇰줈 \"Maintenance notice\"(Service maintenance at 18:00.)媛 ?덉뒿?덈떎.\n\n洹쇨굅\n- Maintenance notice (notice-001)\n\n?꾨즺 쨌 8542 tokens 쨌 run run_35d8e9?쫉d344c\n\nuser-001 [session_f2?쫇847ff]> /quit\n\n醫낅즺 쨌 1媛??붿껌 ?꾨즺\n",
+      "stdout_encoding": "utf-8"
+    }
+  ],
+  "completed_at": "2026-08-08T09:37:43.424088Z",
+  "connector_examples": {
+    "groupware_paths": [
+      "/api/v1/calendar/events/list",
+      "/api/v1/notices/search"
+    ],
+    "groupware_request_count": 2,
+    "organization_request_count": 1
+  },
+  "environment": {
+    "loaded_key_names": [
+      "OKCANVAS_AGENT_MODEL",
+      "OKCANVAS_API_HOST",
+      "OKCANVAS_API_PORT",
+      "OKCANVAS_ARTIFACT_ROOT",
+      "OKCANVAS_CODEX_MODEL",
+      "OKCANVAS_CONTROL_ADMIN_KEY",
+      "OKCANVAS_CONTROL_BASE_URL",
+      "OKCANVAS_DEFAULT_AGENT_ID",
+      "OKCANVAS_DIRECT_RUN_API_ENABLED",
+      "OKCANVAS_EVALUATION_DB",
+      "OKCANVAS_PRODUCT_DB",
+      "OKCANVAS_PROJECT_ROOT",
+      "OKCANVAS_PROTECTED_PAYLOAD_KEY",
+      "OKCANVAS_PROTECTED_PAYLOAD_ROOT",
+      "OKCANVAS_READONLY_WORKSPACE_ROOT",
+      "OKCANVAS_RUN_STATE_ROOT",
+      "OKCANVAS_RUN_SUBMITTER_KEY",
+      "OKCANVAS_SANDBOX_READONLY_IMAGE",
+      "OKCANVAS_SANDBOX_TEMP_ROOT",
+      "OKCANVAS_SESSION_HISTORY_KEY",
+      "OKCANVAS_SESSION_ROOT",
+      "OPENAI_API_KEY"
+    ],
+    "model": "gpt-4.1",
+    "openai_api_key_present": true,
+    "secret_values_persisted": false,
+    "source_name": ".env.local"
+  },
+  "limitations": {
+    "object_storage_live_executed": false,
+    "production_database_executed": false,
+    "production_groupware_called": false
+  },
+  "passed_checks": 19,
+  "route_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "exact": true,
+      "groupware_context_filter": null,
+      "matched_rule_id": "organization-context-short-read-session-stateless-subagent-v1",
+      "organization_context_request_hint": {
+        "entity_type_hints": [],
+        "intent": "ENTITY_FIELD_LOOKUP",
+        "pattern_id": "organization-context-contact-field-short-v1",
+        "preferred_operation": "RESOLVE",
+        "relation_traversal": null,
+        "requested_fields": [
+          "CONTACT"
+        ],
+        "schema_version": "okcanvas-organization-context-request-hint-v1",
+        "target_expression": "源?좎엫"
+      },
+      "status": "EXECUTABLE"
+    },
+    {
+      "case_id": "employee-calendar-cross-domain",
+      "exact": true,
+      "groupware_context_filter": {
+        "catalog_revision": 500,
+        "entity_id": "employee-0017",
+        "entity_type": "EMPLOYEE",
+        "label": "源誘쇱닔",
+        "max_results": 20,
+        "pattern_id": "session-cross-domain-groupware-context-ref-v1",
+        "qualifiers": [
+          "?뚮옯?쇨컻諛쒗?",
+          "?좎엫"
+        ],
+        "resource_kind": "CALENDAR",
+        "schema_version": "okcanvas-groupware-context-filter-hint-v1",
+        "tool_name": "list_calendar_events"
+      },
+      "matched_rule_id": "groupware-read-session-stateless-subagent-v1",
+      "organization_context_request_hint": null,
+      "status": "EXECUTABLE"
+    },
+    {
+      "case_id": "employee-notice-cross-domain",
+      "exact": true,
+      "groupware_context_filter": {
+        "catalog_revision": 500,
+        "entity_id": "employee-0017",
+        "entity_type": "EMPLOYEE",
+        "label": "源誘쇱닔",
+        "max_results": 20,
+        "pattern_id": "session-cross-domain-groupware-context-ref-v1",
+        "qualifiers": [
+          "?뚮옯?쇨컻諛쒗?",
+          "?좎엫"
+        ],
+        "resource_kind": "NOTICE",
+        "schema_version": "okcanvas-groupware-context-filter-hint-v1",
+        "tool_name": "search_notices"
+      },
+      "matched_rule_id": "groupware-read-session-stateless-subagent-v1",
+      "organization_context_request_hint": null,
+      "status": "EXECUTABLE"
+    }
+  ],
+  "run_summaries": [
+    {
+      "case_id": "establish-employee-focus",
+      "normalization": {
+        "agent_id": "organization-context-read-agent",
+        "ambiguous": false,
+        "candidate_count": 1,
+        "clarification_applied": false,
+        "invocation_id": "invocation_a3d742a3472b416aa1111fa637a71b7d",
+        "model_calls_added": 0,
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-mcp-evidence-normalization-v1",
+        "output_contract": "OrganizationContextReadResult",
+        "requested_field_count": 1,
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "employee-0017",
+              "entity_type": "EMPLOYEE",
+              "label": "源誘쇱닔",
+              "qualifiers": [
+                "?뚮옯?쇨컻諛쒗?",
+                "?좎엫"
+              ]
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "RESOLVED"
+        },
+        "strategy": "tool-evidence-provenance-alignment-v1",
+        "tool_name": "resolve_organization_context",
+        "tool_reexecuted": false,
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_7bed6676008a4918a8771559cb1cbb04",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "resolve_organization_context"
+      ]
+    },
+    {
+      "case_id": "employee-calendar-cross-domain",
+      "normalization": {
+        "agent_id": "groupware-read-agent",
+        "context_entity_id": "employee-0017",
+        "context_entity_type": "EMPLOYEE",
+        "context_filter_applied": true,
+        "context_filtered_record_count": 1,
+        "invocation_id": "invocation_a3ef8c9c263f4788ba0feb604d8dd3cc",
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-cross-domain-mcp-evidence-normalization-v1",
+        "output_contract": "GroupwareReadResult",
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "employee-0017",
+              "entity_type": "EMPLOYEE",
+              "label": "源誘쇱닔",
+              "qualifiers": [
+                "?뚮옯?쇨컻諛쒗?",
+                "?좎엫"
+              ]
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "RESOLVED"
+        },
+        "strategy": "groupware-cross-domain-stable-context-filter-v1",
+        "tool_name": "list_calendar_events",
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_75749297d843476588d351fc3da1590b",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "list_calendar_events"
+      ]
+    },
+    {
+      "case_id": "employee-notice-cross-domain",
+      "normalization": {
+        "agent_id": "groupware-read-agent",
+        "context_entity_id": "employee-0017",
+        "context_entity_type": "EMPLOYEE",
+        "context_filter_applied": true,
+        "context_filtered_record_count": 1,
+        "invocation_id": "invocation_3e9c6b0173bf44edba943b11174e0ea7",
+        "model_output_persisted": false,
+        "normalization_strategy": "product-owned-cross-domain-mcp-evidence-normalization-v1",
+        "output_contract": "GroupwareReadResult",
+        "session_context_focus": {
+          "candidates": [
+            {
+              "entity_id": "employee-0017",
+              "entity_type": "EMPLOYEE",
+              "label": "源誘쇱닔",
+              "qualifiers": [
+                "?뚮옯?쇨컻諛쒗?",
+                "?좎엫"
+              ]
+            }
+          ],
+          "catalog_revision": 500,
+          "domain": "ORGANIZATION_CONTEXT",
+          "schema_version": "okcanvas-session-context-focus-observation-v1",
+          "state": "RESOLVED"
+        },
+        "strategy": "groupware-cross-domain-stable-context-filter-v1",
+        "tool_name": "search_notices",
+        "tool_result_persisted": false
+      },
+      "normalization_exact": true,
+      "run_id": "run_35d8e983c1b14a329064bf63b5dd344c",
+      "run_status": "SUCCEEDED",
+      "tool_names": [
+        "search_notices"
+      ]
+    }
+  ],
+  "runtime_step": "STEP094R1_UNIFIED_CROSS_DOMAIN_SESSION_ROOT_AND_BINDING_CLOSURE",
+  "runtime_version": "2.78.1",
+  "schema_version": "okcanvas-workspace-step008r4r10-cross-domain-live-acceptance-v1",
+  "started_at": "2026-08-08T09:35:19.770607Z",
+  "state": "PASSED",
+  "step": "WORKSPACE_STEP008R4R10C_RUNTIME_STEP094R1_UNIFIED_CROSS_DOMAIN_SESSION_ROOT_AND_BINDING_CLOSURE",
+  "total_checks": 19,
+  "validation_mode": "WINDOWS_LIVE_OPENAI_ORGANIZATION_TO_GROUPWARE_STABLE_FOCUS_E2E",
+  "version": "0.8.4-r10c"
+}

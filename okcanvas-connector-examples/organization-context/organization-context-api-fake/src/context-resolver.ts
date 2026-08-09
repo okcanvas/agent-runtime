@@ -66,7 +66,7 @@ function related(dataset: ReferenceDataset, entityType: EntityType, entityId: st
   const relations = dataset.relations.filter((item) =>
     (item.from_entity_type === entityType && item.from_entity_id === entityId) ||
     (item.to_entity_type === entityType && item.to_entity_id === entityId));
-  return relations.slice(0, 100).map((item) => {
+  return relations.map((item) => {
     const outbound = item.from_entity_type === entityType && item.from_entity_id === entityId;
     const relatedType = String(outbound ? item.to_entity_type : item.from_entity_type) as EntityType;
     const relatedId = String(outbound ? item.to_entity_id : item.from_entity_id);
@@ -82,6 +82,8 @@ function publicRecord(dataset: ReferenceDataset, type: EntityType, record: Refer
   const entityId = id(record, idField);
   const displayName = String(record.canonical_name ?? record.name ?? record.display_name ?? record.legal_name ?? record.capability_id ?? record.system_id ?? entityId);
   const department = departmentEvidence(dataset, record, "");
+  const allRelations = includeDetails ? related(dataset, type, entityId) : [];
+  const boundedRelations = allRelations.slice(0, 100);
   return {
     entity_type: type,
     entity_id: entityId,
@@ -103,7 +105,12 @@ function publicRecord(dataset: ReferenceDataset, type: EntityType, record: Refer
       catalog_revision: dataset.catalog_revision,
       row_version: record.row_version ?? 1,
     },
-    ...(includeDetails ? { relations: related(dataset, type, entityId) } : {}),
+    ...(includeDetails ? {
+      relations: boundedRelations,
+      relation_count: allRelations.length,
+      relations_returned_count: boundedRelations.length,
+      relations_truncated: allRelations.length > boundedRelations.length,
+    } : {}),
   };
 }
 

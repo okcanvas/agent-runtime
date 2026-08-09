@@ -1,29 +1,26 @@
 # OKCanvas Groupware MCP Server
 
-`CONNECTOR_STEP001R1_ASYNC_TEST_RUNNER_DEPENDENCY_CLOSURE` / `0.1.1`
+`CONNECTOR_STEP002_STABLE_ORGANIZATION_CONTEXT_REFERENCE_FILTER` / `0.2.0`
 
-This is the real external Connector product for the Runtime-owned `groupware-read-agent`.
-It is not packaged as Runtime product code and it does not contain a fake mode.
+This is the external read-only Groupware MCP Connector used by OKCanvas Agent Runtime. It does not contain a fake mode.
 
-```text
-okcanvas-agent-runtime
-  -> Streamable HTTP MCP
-okcanvas-connectors/groupware-mcp-server
-  -> Groupware REST/API
-configured Groupware product
-```
-
-Implemented read Tools:
+Implemented Tools:
 
 - `search_notices`
 - `search_mail`
 - `list_calendar_events`
 
-The Connector authenticates the Runtime bearer, validates tenant/principal/roles/delegation,
-recomputes the delegation fingerprint, requires `agent-user`, calls the configured Groupware API,
-normalizes responses and maps downstream errors into secret-free MCP Tool errors.
+STEP002 adds an optional exact `context_ref` to all three Tool contracts:
 
-## Required environment
+```json
+{"entity_type":"EMPLOYEE","entity_id":"employee-0017"}
+```
+
+The reference is an additional content filter. Existing tenant/principal/role visibility remains authoritative and the reference never grants access or impersonates an Organization employee.
+
+The Connector validates the Runtime bearer and delegated identity, calls the configured Groupware REST/API, and echoes the validated applied `context_ref` in its Tool result so Runtime can verify evidence end-to-end.
+
+## Environment
 
 ```text
 OKCANVAS_CONNECTOR_MCP_BEARER=<runtime-to-connector bearer>
@@ -31,43 +28,12 @@ GROUPWARE_BASE_URL=https://groupware.company.com
 GROUPWARE_API_BEARER=<connector-to-groupware bearer>
 ```
 
-Local example use may set `GROUPWARE_ALLOW_INSECURE_HTTP=1` and point `GROUPWARE_BASE_URL` at the
-optional `okcanvas-connector-examples/groupware/groupware-api-fake` template.
-
-## Setup and validation
-
-Windows clean environment:
-
-```cmd
-py -3 -m venv .venv
-.venv\Scripts\python.exe -m pip install --upgrade pip
-.venv\Scripts\python.exe -m pip install -e . pytest
-.venv\Scripts\python.exe scripts\run_acceptance.py
-```
-
-Canonical development-extra installation is also available:
-
-```cmd
-.venv\Scripts\python.exe -m pip install -e ".[test]"
-```
-
-The async HTTP scenarios use the Python standard-library `asyncio.run()` runner.
-`pytest-asyncio` is not required for Connector acceptance.
-
-## Run
-
-```bash
-python -m groupware_mcp_server
-```
-
-Default endpoint:
-
-```text
-POST /tenants/{tenant_id}/mcp
-```
+Local Example use may enable insecure HTTP and point at `okcanvas-connector-examples/groupware/groupware-api-fake`.
 
 ## Boundary
 
-The connector does not own Agent instructions, routing, final-output contracts, approvals or
-future write authority. Future writes require a separate `groupware-action-agent`, separate MCP
-server and separate credential.
+Read-only only. No Groupware write Tool, Agent routing, final-output authority, approval policy or stable-ID name fallback lives here.
+
+## Validation state
+
+STEP002 source is implemented but current executable acceptance remains deferred by the workspace test hold. Historical STEP001R1 evidence remains historical only.

@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_step070_product_owned_skill_package_baseline() -> None:
     info = RuntimeInfo()
-    assert info.version == "2.75.0"
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
+    assert info.version == "2.77.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
     skill = ProductSkillCatalog(ROOT).resolve("document-review-v1")
     definition = AgentDefinitionCatalog(ROOT).resolve("skill-document-review-agent")
     binding = AgentRuntimeBindingCatalog(ROOT).resolve(definition)

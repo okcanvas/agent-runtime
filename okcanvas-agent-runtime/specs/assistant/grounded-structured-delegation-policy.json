@@ -1,0 +1,25 @@
+{
+  "allowed_capabilities": [
+    "groupware-read-v1",
+    "organization-context-read-v1"
+  ],
+  "child_mcp_connection": "LAZY_AFTER_ADMISSION",
+  "compound_multi_child_enabled": false,
+  "groupware_input_schema": "GroupwareReadDelegationInput",
+  "legacy_child_selection_authoritative": false,
+  "max_child_calls_per_turn": 1,
+  "max_child_requests_per_turn": 1,
+  "model_can_answer_without_child": true,
+  "organization_input_schema": "OrganizationReadDelegationInput",
+  "policy_id": "grounded-structured-delegation-v1",
+  "root_agent_id": "organization-assistant-session-agent",
+  "root_direct_mcp_enabled": false,
+  "runtime_admission_required": true,
+  "schema_version": "okcanvas-grounded-structured-delegation-policy-v1",
+  "side_effects_allowed": [
+    "READ"
+  ],
+  "stable_ids_from_model_accepted": false,
+  "version": "1.0.0",
+  "write_enabled": false
+}

@@ -1,0 +1,290 @@
+{
+  "checks": {
+    "environment_file_loaded": true,
+    "explicit_grounded_structured_delegation_live_gate": true,
+    "focused_live_entrypoint_present": true,
+    "focused_live_launcher_present": true,
+    "harness_cleanup_completed": false,
+    "harness_execution_completed_without_exception": false,
+    "model_loaded_from_environment_file": true,
+    "model_name_safe": true,
+    "openai_key_loaded_from_environment_file": true,
+    "runtime_service_version_matches_workspace_baseline": true,
+    "workspace_catalog_identity_matches_current_baseline": true,
+    "workspace_runtime_identity_matches_executable_runtime": true,
+    "workspace_runtime_identity_matches_project_catalog": true,
+    "workspace_runtime_version_matches_runtime_package_metadata": true
+  },
+  "cleanup": {
+    "completed": false,
+    "error_types": [
+      "TypeError"
+    ],
+    "transient_removal_error_types": []
+  },
+  "completed_at": "2026-08-09T02:35:16.564160Z",
+  "environment": {
+    "loaded_key_names": [
+      "OKCANVAS_AGENT_MODEL",
+      "OKCANVAS_API_HOST",
+      "OKCANVAS_API_PORT",
+      "OKCANVAS_ARTIFACT_ROOT",
+      "OKCANVAS_CODEX_MODEL",
+      "OKCANVAS_CONTROL_ADMIN_KEY",
+      "OKCANVAS_CONTROL_BASE_URL",
+      "OKCANVAS_DEFAULT_AGENT_ID",
+      "OKCANVAS_DIRECT_RUN_API_ENABLED",
+      "OKCANVAS_EVALUATION_DB",
+      "OKCANVAS_PRODUCT_DB",
+      "OKCANVAS_PROJECT_ROOT",
+      "OKCANVAS_PROTECTED_PAYLOAD_KEY",
+      "OKCANVAS_PROTECTED_PAYLOAD_ROOT",
+      "OKCANVAS_READONLY_WORKSPACE_ROOT",
+      "OKCANVAS_RUN_STATE_ROOT",
+      "OKCANVAS_RUN_SUBMITTER_KEY",
+      "OKCANVAS_SANDBOX_READONLY_IMAGE",
+      "OKCANVAS_SANDBOX_TEMP_ROOT",
+      "OKCANVAS_SESSION_HISTORY_KEY",
+      "OKCANVAS_SESSION_ROOT",
+      "OPENAI_API_KEY"
+    ],
+    "model": "gpt-4.1",
+    "openai_api_key_present": true,
+    "secret_values_persisted": false,
+    "source_name": ".env.local"
+  },
+  "failure_diagnostics": {
+    "cli": {
+      "command": [
+        "C:\\Users\\User\\AppData\\Roaming\\nvm\\v24.18.0\\node.exe",
+        "src/cli.mjs",
+        "--base-url",
+        "http://127.0.0.1:16865",
+        "--bearer",
+        "[REDACTED]",
+        "--model",
+        "gpt-4.1",
+        "--session-id",
+        "session_ecbd9a91c3444474bf8a7efc819afe7b",
+        "--script",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\okcanvas-workspace-step096br1-live-6_3wx43a\\prompt-819afe7b-4.txt",
+        "--yes",
+        "--debug"
+      ],
+      "one_request_completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "============================================================\n OKCanvas Agent Service CLI · Product HTTP/SSE Client\n============================================================\nRuntime 2.80.1 · tenant tenant-a · principal user-001\nSession session_ec…9afe7b · Model gpt-4.1\n/help 명령으로 사용법을 확인하세요.\n\nuser-001 [session_ec…9afe7b]> 플랫폼팀 김민수 선임 연락처 알려줘\n라우팅 및 실행 준비 중...\nRoute: ANSWER · EXECUTABLE · agent organization-assistant-session-agent\nReasons: no-external-capability-required\n[1] run.created {\"attempt\":1,\"governed\":true,\"submission_id\":\"submission_28e235daa05b4179ac081237e0ff5651\",\"task_id\":\"task_13e4825e0ba74631a252e55bd2a1bc50\"}\n[2] run.started {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_version\":\"1.4.0\",\"claim_attempt\":1,\"governed\":true,\"submission_id\":\"submission_28e235daa05b4179ac081237e0ff5651\"}\n[3] session.turn.started {\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"session_id\":\"session_ecbd9a91c3444474bf8a7efc819afe7b\",\"turn_ordinal\":1,\"workspace_access\":\"none\"}\n[4] agent.definition.resolved {\"agent_definition_id\":\"organization-assistant-session-agent\",\"agent_definition_sha256\":\"266550664adf963167fd93eba1c112a646e8d547f6908e7f9aa15a2894697f2e\",\"agent_definition_version\":\"1.4.0\",\"agent_tool_count\":2,\"guardrail_count\":0,\"guardrail_ids\":[],\"handoff_count\":0,\"local_tool_count\":0,\"local_tool_names\":[],\"mcp_server_count\":0,\"mcp_server_ids\":[],\"orchestration_child_count\":0,\"orchestration_child_ids\":[],\"output_contract\":\"OrganizationAssistantResult\",\"root_invocation_id\":\"invocation_71637e88309b4c04af5c9411e4cb0ab4\",\"runtime_binding_sha256\":\"d5bbf6d420907f90359dbb6c17e240a3b4b1cd5bdb6621644da41318fb3b3c30\",\"session_id_present\":true,\"session_mode\":\"sqlite-v1\",\"workspace_access\":\"none\"}\n[5] interpretation.context.prepared {\"authoritative_for_execution\":false,\"catalog_revision_consistent\":true,\"entity_hint_count\":0,\"entity_hint_state\":\"UNAVAILABLE\",\"hint_content_persisted\":false,\"hint_state\":\"UNAVAILABLE\",\"raw_tool_results_persisted\":false,\"schema_version\":\"okcanvas-grounded-interpretation-context-v1\",\"stable_entity_ids_exposed_to_model\":false,\"term_hint_count\":0,\"term_hint_state\":\"UNAVAILABLE\"}\n[6] agent.started {\"agent_id\":\"organization-assistant-session-agent\",\"agent_name\":\"OKCanvas Organization Assistant Session\",\"invocation_id\":\"invocation_71637e88309b4c04af5c9411e4cb0ab4\"}\n[7] model.started {\"agent_id\":\"organization-assistant-session-agent\",\"api\":\"responses\",\"automatic_fallback\":false,\"hosted_search_response_include_count\":0,\"input_item_count\":2,\"invocation_id\":\"invocation_71637e88309b4c04af5c9411e4cb0ab4\",\"model\":\"gpt-4.1\",\"model_retry_policy_id\":\"local-openai-zero-retry-v1\",\"model_retry_policy_sha256\":\"143fca994a5a0b40221a2573f0f47987d4f6834f59471b6b350deb0113ee18aa\",\"model_route_id\":\"openai:responses:http\",\"provider_id\":\"openai\",\"provider_identifier_policy_id\":\"local-openai-provider-identifier-minimization-v1\",\"provider_identifier_policy_sha256\":\"d1eecc54eaa8c67248ad0a6ddb56574e2f9ff55e970838a456da6cca09fa0bfc\",\"provider_identifier_presence_persisted\":true,\"provider_managed_max_retries\":0,\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_evidence_policy_id\":\"local-openai-reasoning-evidence-minimization-v1\",\"reasoning_evidence_policy_sha256\":\"6f51c83e520254287e57fae134c16e73abab03f4d989dd806b863abc155db81b\",\"reasoning_response_include_count\":0,\"reasoning_summary_requested\":false,\"reasoning_token_count_persisted\":true,\"response_storage_policy_id\":\"local-openai-response-storage-disabled-v1\",\"response_storage_policy_sha256\":\"004e560a27102d4a9d54d48d63a27c86862e27995042dc090329ba8a1b939afe\",\"response_store_requested\":false,\"runner_managed_max_retries\":0,\"transport\":\"http\"}\n[8] model.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_71637e88309b4c04af5c9411e4cb0ab4\",\"output_item_content_persisted\":false,\"output_item_count\":1,\"output_item_type_counts\":{\"function_call\":0,\"message\":1,\"other\":0,\"reasoning\":0},\"provider_request_id_persisted\":false,\"provider_response_id_persisted\":false,\"reasoning_content_persisted\":false,\"reasoning_item_count\":0,\"reasoning_item_ids_persisted\":false,\"reasoning_provider_data_persisted\":false,\"reasoning_summary_persisted\":false,\"request_id_present\":true,\"response_id_present\":true}\n[9] agent.completed {\"agent_id\":\"organization-assistant-session-agent\",\"invocation_id\":\"invocation_71637e88309b4c04af5c9411e4cb0ab4\",\"output_contract\":\"OrganizationAssistantResult\"}\n[10] artifact.created {\"artifact_id\":\"artifact_613d8055e4c64b47ba1b4740fa167ce3\",\"artifact_type\":\"agent.final-output\",\"byte_length\":608,\"media_type\":\"application/json\",\"sha256\":\"6cdf13c1cb07e10b473bc8562e2d6de72c1692b08d7f26408a8b556c0741eec5\"}\n[11] session.turn.completed {\"context_focus_raw_tool_result_persisted\":false,\"context_focus_state\":null,\"context_focus_updated\":false,\"history_persisted_in_product_db\":false,\"history_persisted_in_product_events\":false,\"item_count\":2,\"session_id\":\"session_ecbd9a91c3444474bf8a7efc819afe7b\",\"turn_count\":1}\n[12] run.completed {\"artifact_id\":\"artifact_613d8055e4c64b47ba1b4740fa167ce3\",\"from_status\":\"RUNNING\",\"hosted_search_evidence_artifact_id\":null,\"response_id\":null,\"sdk_version\":\"0.19.0\",\"to_status\":\"SUCCEEDED\",\"trace_id\":\"trace_fc9cdabde8f44f9fa27a975ce9dcd4d1\",\"usage\":{\"cached_input_tokens\":0,\"input_tokens\":2275,\"output_tokens\":139,\"reasoning_tokens\":0,\"requests\":1,\"total_tokens\":2414}}\n[13] payload.retention.applied {\"reason\":\"successful-run\",\"state\":\"DELETED\"}\n\n죄송합니다. 현재 조직 내 인물 정보, 연락처 등 개인정보 조회 권한이 제공되어 있지 않아 '플랫폼팀 김민수 선임'님의 연락처를 알려드릴 수 없습니다. 해당 정보가 필요한 경우 조직 내 공식 경로(인사팀 또는 내부 연락망 등)를 이용해 문의해 주시기 바랍니다.\n\n완료 · 2414 tokens · run run_32ed77…a104d6\n\nuser-001 [session_ec…9afe7b]> /quit\n\n종료 · 1개 요청 완료\n"
+    },
+    "runtime": {
+      "run_count": 4,
+      "runs": [
+        {
+          "agent_tool_admitted": [],
+          "agent_tool_denied": [],
+          "agent_tool_requested": [],
+          "event_types": [
+            "run.created",
+            "run.started",
+            "session.turn.started",
+            "agent.definition.resolved",
+            "interpretation.context.prepared",
+            "agent.started",
+            "model.started",
+            "model.completed",
+            "agent.completed",
+            "artifact.created",
+            "session.turn.completed",
+            "run.completed",
+            "payload.retention.applied"
+          ],
+          "mcp_tool_names": [],
+          "run": {
+            "agent_definition_id": "organization-assistant-session-agent",
+            "agent_definition_version": "1.4.0",
+            "attempt": 1,
+            "completed_at": "2026-08-09T02:34:45.507476Z",
+            "created_at": "2026-08-09T02:34:31.761334Z",
+            "input_tokens": 2270,
+            "output_tokens": 211,
+            "run_id": "run_16dc9969c3644d46b758aaf08e258285",
+            "schema_version": "okcanvas-control-run-v1",
+            "started_at": "2026-08-09T02:34:32.647953Z",
+            "status": "SUCCEEDED",
+            "task_id": "task_258defb0efb74201ae85e1e9e310bf06",
+            "total_tokens": 2481,
+            "trace_id": "trace_bc1e3e0e17924800876efe22a70c59fb"
+          },
+          "run_failed": []
+        },
+        {
+          "agent_tool_admitted": [],
+          "agent_tool_denied": [],
+          "agent_tool_requested": [],
+          "event_types": [
+            "run.created",
+            "run.started",
+            "session.turn.started",
+            "agent.definition.resolved",
+            "interpretation.context.prepared",
+            "agent.started",
+            "model.started",
+            "model.completed",
+            "agent.completed",
+            "artifact.created",
+            "session.turn.completed",
+            "run.completed",
+            "payload.retention.applied"
+          ],
+          "mcp_tool_names": [],
+          "run": {
+            "agent_definition_id": "organization-assistant-session-agent",
+            "agent_definition_version": "1.4.0",
+            "attempt": 1,
+            "completed_at": "2026-08-09T02:34:55.313548Z",
+            "created_at": "2026-08-09T02:34:50.842227Z",
+            "input_tokens": 2271,
+            "output_tokens": 88,
+            "run_id": "run_96a4d318eb264854ad96b1e83f926ca3",
+            "schema_version": "okcanvas-control-run-v1",
+            "started_at": "2026-08-09T02:34:51.768522Z",
+            "status": "SUCCEEDED",
+            "task_id": "task_5189ac8a9b494875a1cc3382e4994a42",
+            "total_tokens": 2359,
+            "trace_id": "trace_4b9c614434d94257b5ef7f1f3dcb0e45"
+          },
+          "run_failed": []
+        },
+        {
+          "agent_tool_admitted": [],
+          "agent_tool_denied": [],
+          "agent_tool_requested": [],
+          "event_types": [
+            "run.created",
+            "run.started",
+            "session.turn.started",
+            "agent.definition.resolved",
+            "interpretation.context.prepared",
+            "agent.started",
+            "model.started",
+            "model.completed",
+            "agent.completed",
+            "artifact.created",
+            "session.turn.completed",
+            "run.completed",
+            "payload.retention.applied"
+          ],
+          "mcp_tool_names": [],
+          "run": {
+            "agent_definition_id": "organization-assistant-session-agent",
+            "agent_definition_version": "1.4.0",
+            "attempt": 1,
+            "completed_at": "2026-08-09T02:35:05.664845Z",
+            "created_at": "2026-08-09T02:35:01.699897Z",
+            "input_tokens": 2267,
+            "output_tokens": 227,
+            "run_id": "run_5ec166f10367430f84c8ff821a2b9fd7",
+            "schema_version": "okcanvas-control-run-v1",
+            "started_at": "2026-08-09T02:35:02.402469Z",
+            "status": "SUCCEEDED",
+            "task_id": "task_74d423b2846f4275b0ce1f9ee4906f37",
+            "total_tokens": 2494,
+            "trace_id": "trace_22e89e7309f646adb059dca3365f7c17"
+          },
+          "run_failed": []
+        },
+        {
+          "agent_tool_admitted": [],
+          "agent_tool_denied": [],
+          "agent_tool_requested": [],
+          "event_types": [
+            "run.created",
+            "run.started",
+            "session.turn.started",
+            "agent.definition.resolved",
+            "interpretation.context.prepared",
+            "agent.started",
+            "model.started",
+            "model.completed",
+            "agent.completed",
+            "artifact.created",
+            "session.turn.completed",
+            "run.completed",
+            "payload.retention.applied"
+          ],
+          "mcp_tool_names": [],
+          "run": {
+            "agent_definition_id": "organization-assistant-session-agent",
+            "agent_definition_version": "1.4.0",
+            "attempt": 1,
+            "completed_at": "2026-08-09T02:35:14.905988Z",
+            "created_at": "2026-08-09T02:35:11.517858Z",
+            "input_tokens": 2275,
+            "output_tokens": 139,
+            "run_id": "run_32ed776f679241dba0bd3e858ca104d6",
+            "schema_version": "okcanvas-control-run-v1",
+            "started_at": "2026-08-09T02:35:12.149337Z",
+            "status": "SUCCEEDED",
+            "task_id": "task_13e4825e0ba74631a252e55bd2a1bc50",
+            "total_tokens": 2414,
+            "trace_id": "trace_fc9cdabde8f44f9fa27a975ce9dcd4d1"
+          },
+          "run_failed": []
+        }
+      ]
+    }
+  },
+  "failure_stage": "fixture_stable-focus-calendar-cross-domain",
+  "identity_provenance": {
+    "focused_live_entrypoint": {
+      "sha256": "041ed69ddea13eac89394b89e604ca315252959748899666a94d4932f39dbfab"
+    },
+    "focused_live_harness": {
+      "sha256": "6175bd2f4fc7020c04a8c39848eafca63de1be53a08df490b590ae4a24c06e01"
+    },
+    "focused_live_launcher": {
+      "sha256": "f8a0b32b82392810bc5d5ff0728724171b9c20cfe12aad6f068ad758d2640046"
+    },
+    "runtime_executable_baseline": {
+      "runtime_step": "STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+      "runtime_version": "2.80.1",
+      "sha256": "fe6944a78ec076ba9c3a752a237bb9c9ad18f6383bc178873aa9985d1b94f5ca"
+    },
+    "runtime_package_metadata": {
+      "runtime_version": "2.80.1",
+      "sha256": "bba860d45183b4058dade443a226dc57616afad51ec06e676960fdb88df26fd7"
+    },
+    "runtime_service": {
+      "runtime_version": "2.80.1",
+      "schema_version": "okcanvas-service-client-capabilities-v1"
+    },
+    "workspace_current_baseline": {
+      "runtime_step": "STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+      "runtime_version": "2.80.1",
+      "sha256": "cd43295cdd89a15e545be251facdd74b8a542ef72ef8948c9c50d65ab66693d9",
+      "workspace_step": "WORKSPACE_STEP008R4R12R3_STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+      "workspace_version": "0.8.4-r12r3"
+    },
+    "workspace_project_catalog": {
+      "runtime_step": "STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+      "runtime_version": "2.80.1",
+      "sha256": "290f1917afecbf95911a92de63ea7a7a05242920d9502369e2c7c9e60e7fba6e",
+      "workspace_step": "WORKSPACE_STEP008R4R12R3_STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+      "workspace_version": "0.8.4-r12r3"
+    }
+  },
+  "passed_checks": 12,
+  "runtime_step": "STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+  "runtime_version": "2.80.1",
+  "safe_error": {
+    "category": "LIVE_EXECUTION_FAILED",
+    "type": "RuntimeError"
+  },
+  "schema_version": "okcanvas-workspace-step008r4r12r3-grounded-structured-delegation-live-acceptance-v1",
+  "started_at": "2026-08-09T02:33:27.298738Z",
+  "state": "FAILED",
+  "step": "WORKSPACE_STEP008R4R12R3_STEP096BR1R1_MODEL_BEHAVIOR_LIVE_DIAGNOSTIC_CLOSURE",
+  "total_checks": 14,
+  "validation_mode": "WINDOWS_LIVE_OPENAI_GROUNDED_HINT_STRUCTURED_DELEGATION_ADMISSION_E2E",
+  "version": "0.8.4-r12r3"
+}

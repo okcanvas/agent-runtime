@@ -3,8 +3,8 @@ from okcanvas_agent_runtime.core.runtime_info import RuntimeInfo
 
 def test_step019_runtime_baseline() -> None:
     info = RuntimeInfo()
-    assert info.step == "STEP091D_OBJECT_STORAGE_DEPLOYMENT_COMPOSITION_AND_LIVE_ACCEPTANCE_GATE"
-    assert info.version == "2.75.0"
+    assert info.step == "STEP093_RELATION_AWARE_CONTEXTUAL_FOLLOW_UP_AND_EVIDENCE_BOUND_TRAVERSAL"
+    assert info.version == "2.77.0"
     assert info.governed_execution_claim_restart_recovery_implemented is True
     assert info.governed_execution_claim_generation_fencing_implemented is True
     assert info.governed_execution_claim_recovery_mode == "explicit-local-operator"
